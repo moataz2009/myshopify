@@ -1,0 +1,929 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+{% assign base_name = "wallet" %}
+<div class="section0 pt-flex pt-flex-center pt-flex-column bg-black">
+    <div class="pt-section-content width-100 pt-text-center">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400 font-upper">Modular Life</h3>
+    </div>
+    <picture> 
+      <source data-srcset="{{ base_name | prepend: 'product-section0-' | append:'.png' | asset_url }}"
+        media="(min-width: 769px)" />
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-section0-' | append:'-m.png' | asset_url }}"
+        class="img-responsive lazyload" />
+    </picture>
+  </div>
+  
+  <div class="pt-video-container">
+    <video loop muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+      x5-video-orientation="portraint" class="lazyload" preload="none"
+      data-poster="{{ base_name | prepend: 'product-magez-' | append:'-cover.jpg' | asset_url }}" autoplay
+      style="object-fit: fill;">
+      <source src="{{ base_name | prepend: 'product-magez-' | append:'.mp4' | asset_url }}" type="video/mp4" />
+      <source src="{{ base_name | prepend: 'product-magez-' | append:'.webm' | asset_url }}" type="video/webm" />
+    </video>
+  </div>
+  
+  <div class="pt-section section2 pt-flex pt-flex-center  bg-black">
+    <div class="pt-section-content">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Secure Card Storage</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Not only do magnets hold the carbon wallet layers together, but each layer
+        is designed to hold a card securely, even when dropped or turned upside
+        down.
+      </p>
+    </div>
+    <div class="pt-section-picture">
+      <div class="wallet-section relative">
+        <img src="{{ placeholder_gif }}"
+          data-src="{{ 'product-section2-wallet-bg.png' | asset_url }}" class="absolute pt-position-center lazyload" />
+        <ul class="wallet-animation">
+          <li style="top: 5%; z-index: 4;">
+            <img src="{{ placeholder_gif }}"
+              data-src="{{ base_name | prepend: 'product-section2-' | append:'-1.png' | asset_url }}"
+              class="img-responsive lazyload" />
+          </li>
+          <li style="top: 15%; z-index: 3;">
+            <img src="{{ placeholder_gif }}"
+              data-src="{{ base_name | prepend: 'product-section2-' | append:'-2.png' | asset_url }}"
+              class="img-responsive lazyload" />
+          </li>
+          <li style="top: 25%; z-index: 2;">
+            <img src="{{ placeholder_gif }}"
+              data-src="{{ base_name | prepend: 'product-section2-' | append:'-3.png' | asset_url }}"
+              class="img-responsive lazyload" />
+          </li>
+          <li style="top: 35%; z-index: 1;">
+            <img src="{{ placeholder_gif }}"
+              data-src="{{ base_name | prepend: 'product-section2-' | append:'-4.png' | asset_url }}"
+              class="img-responsive lazyload" />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section3 relative">
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-section3-' | append:'.jpg' | asset_url }}"
+        media="(min-width: 769px)" />
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-section3-' | append:'-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload" />
+    </picture>
+    <div class="pt-section-content absolute pt-position-right">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Fast, Easy Access to Cards</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Simply flick open the carbon fiber wallet with a single hand and slide out
+        the card.
+      </p>
+    </div>
+  </div>
+  
+  <div class="pt-section section4 pt-flex pt-flex-center pt-flex-column" id="section4">
+    <div class="pt-section-content width-62 pt-text-center">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Add extra layers</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-medium">
+        Customise this modular wallet with extra layers whenever you need them.
+        Add and remove modules such as the box layer to store keys and sim cards,
+        or the money clip to hold your cash.
+      </p>
+    </div>
+  
+    <div class="pt-section-container pt-flex pt-flex-center">
+      <div class="modules-content">
+        {% if base_name == 'wallet-ue' %}
+        <div id="i1" class="content-item">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product-section4-wallet-1.gif' | asset_url }}" class="img-responsive lazyload" />
+        </div>
+        <div id="i2" class="content-item">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product-section4-wallet-2.gif' | asset_url }}" class="img-responsive lazyload" />
+        </div>
+        <div id="i3" class="content-item">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product-section4-wallet-3.gif' | asset_url }}" class="img-responsive lazyload" />
+        </div>
+        <div id="i4" class="content-item">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product-section4-wallet-4.png' | asset_url }}" class="img-responsive lazyload" />
+        </div>
+        {% else %}
+        <div id="i1" class="content-item active">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product-section4-wallet-4.png' | asset_url }}" class="img-responsive lazyload" />
+        </div>
+  
+        <div id="i2" class="content-item">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product-section4-wallet-3.gif' | asset_url }}" class="img-responsive lazyload" />
+        </div>
+  
+        <div id="i3" class="content-item">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product-section4-wallet-2.gif' | asset_url }}" class="img-responsive lazyload" />
+        </div>
+        {% endif %}
+      </div>
+      <div class="modules-btns-wrapper pt-flex">
+        <ul class="modules-btns">
+          <li data-id="i1" class="thumb-ico relative{% if base_name == 'wallet-ue' %} dark{% endif %}">
+            {{ 'product-wallet-hex.png' | asset_url | img_tag }}
+            <div class="hex absolute">
+              {{ 'product-wallet-hex-active.png' | asset_url | img_tag }}
+            </div>
+            <div class="absolute pt-position-center">
+              {% if base_name == 'wallet-ue' %}
+              {{ 'product-section4-ico-wallet-1.png' | asset_url | img_tag }}
+              {% else %}
+              {{ 'product-section4-ico-wallet-4.png' | asset_url | img_tag }}
+              {% endif %}
+            </div>
+          </li>
+          <li data-id="i2" class="thumb-ico relative">
+            {{ 'product-wallet-hex.png' | asset_url | img_tag }}
+            <div class="hex absolute">
+              {{ 'product-wallet-hex-active.png' | asset_url | img_tag }}
+            </div>
+            <div class="absolute pt-position-center">
+              {% if base_name == 'wallet-ue' %}
+              {{ 'product-section4-ico-wallet-2.png' | asset_url | img_tag }}
+              {% else %}
+              {{ 'product-section4-ico-wallet-3.png' | asset_url | img_tag }}
+              {% endif %}
+            </div>
+          </li>
+          <li data-id="i3" class="thumb-ico relative">
+            {{ 'product-wallet-hex.png' | asset_url | img_tag }}
+            <div class="hex absolute">
+              {{ 'product-wallet-hex-active.png' | asset_url | img_tag }}
+            </div>
+            <div class="absolute pt-position-center">
+              {% if base_name == 'wallet-ue' %}
+              {{ 'product-section4-ico-wallet-3.png' | asset_url | img_tag }}
+              {% else %}
+              {{ 'product-section4-ico-wallet-2.png' | asset_url | img_tag }}
+              {% endif %}
+            </div>
+          </li>
+          {% if base_name == 'wallet-ue' %}
+          <li data-id="i4" class="thumb-ico relative">
+            {{ 'product-wallet-hex.png' | asset_url | img_tag }}
+            <div class="hex absolute">
+              {{ 'product-wallet-hex-active.png' | asset_url | img_tag }}
+            </div>
+            <div class="absolute pt-position-center">
+              {{ 'product-section4-ico-wallet-4.png' | asset_url | img_tag }}
+            </div>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="pt-section section5 pt-flex pt-flex-center pt-flex-column bg-black">
+    <div class="pt-section-container pt-flex pt-flex-center pt-margin-bottom-small">
+      <div class="pt-section-picture">
+        <picture>
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ base_name | prepend: 'product-section5-' | append: '-1.jpg' | asset_url }}"
+            class="img-responsive lazyload" />
+        </picture>
+      </div>
+      <div class="pt-section-content">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Compact, Lightweight and Durable</h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          Crafted with carbon fiber and weighing a little over 50g, the MagEZ
+          Wallet is not only extremely lightweight but also longlasting. The
+          carbon fiber wallet is compact and slim enough to fit comfortably into
+          your pocket.
+        </p>
+      </div>
+    </div>
+    <div class="pt-section-container pt-flex pt-flex-center">
+      <div class="pt-section-content">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+          RFID (Radio Frequency IDentification) Blocking
+        </h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          {% if base_name contains 'ue' %} This carbon fiber RFID blocking wallet
+          disrupts signals from RFID readers, preventing card skimming, and
+          ensuring personal card data safety. The anti-degaussing module for the
+          MagEZ Wallet UE protects your magnetic strip cards against the erasing
+          of data. {% else %} This carbon fiber RFID blocking wallet disrupts
+          signals from RFID readers, preventing card skimming, and ensuring
+          personal card data safety. {% endif %}
+        </p>
+      </div>
+      <div class="pt-section-picture">
+        <picture>
+          <img src="{{ placeholder_gif }}"
+            data-src="{{  base_name | prepend: 'product-section5-' | append:'-2.jpg' | asset_url }}"
+            class="img-responsive lazyload" />
+        </picture>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section1">
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-section1-' | append:'.jpg' | asset_url }}"
+        media="(min-width: 769px)" />
+      <img src="{{ placeholder_gif }}"
+        data-src="{{  base_name | prepend: 'product-section1-' | append:'-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload" />
+    </picture>
+  </div>
+  <!-- media -->
+  <div class="section6 pt-section bg-black">
+    <div class="pt-section-container pt-flex pt-flex-center pt-flex-column">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Our Credits
+      </h3>
+      <div class="product-media">
+        <div class="itemsBox">
+          <div class="mquotes" text="“">“</div>
+          <div class="m-content" id="contentBox">
+            <div id="i11" class="content-item active">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="http://www.bestslimwallet.com/pitaka-carbon-fiber-wallet/" target="_blank">The way that the
+                  PITAKA Carbon Fiber Wallet works is rather
+                  unique. To access your wallet contents, you fan out the other
+                  end of the wallet by sliding the layers apart with your fingers.
+                  With a little practice you should be able to do this single
+                  handedly. In terms of coolness level, this one is right up
+                  there. It is bound to attract quite some attention when you use
+                  it in public or among friends.</a>
+              </p>
+            </div>
+            <div id="i12" class="content-item">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="https://www.digitaltrends.com/cool-tech/pitaka-carbon-fiber-wallet/" target="_blank">Most slim
+                  wallets are just variations on the same design and
+                  the same material. But if you’re looking to stand out and make a
+                  statement with what’s in your pocket, the PITAKA may be the
+                  wallet for you.</a>
+              </p>
+            </div>
+            <div id="i13" class="content-item">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="https://9to5toys.com/2017/08/24/pitaka-new-wallet/" target="_blank">I am honestly excited to get
+                  my hands on the PITAKA New Wallet,
+                  as it looks like something that could finally replace my aging
+                  and thick leather wallet I carry around with me everywhere.</a>
+              </p>
+            </div>
+            <div id="i14" class="content-item">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="https://thegadgetflow.com/blog/pitaka-new-fresh-carbon-fiber-take/" target="_blank">The PITAKA
+                  New is well designed; it’s tough, slim, good
+                  looking, secure, and fun to use. The modularity lets me adjust
+                  the wallet layout to fit my exact needs so I’ll always have what
+                  I need. The New offers a great value and head turning
+                  aesthetics.</a>
+              </p>
+            </div>
+            <div id="i5" class="content-item">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="https://the-gadgeteer.com/2017/03/01/pitaka-carbon-fiber-magnetic-wallet-review/"
+                  target="_blank">Have you been shopping for a new minimalistic wallet but don't
+                  want one with the same old tired style as everyone else's
+                  minimal wallet? Then look no further my friends because I have a
+                  wallet that you'll want to check out. It's the PITAKA carbon
+                  fiber magnetic wallet and it's definitely unique.</a>
+              </p>
+            </div>
+  
+            <div id="i6" class="content-item">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="http://thefunnybeaver.com/pitaka-slim-carbon-fiber-wallet/" target="_blank">PITAKA makes some of
+                  the best slim wallets around. The slim
+                  magnetic design allows you to slip it into your pocket with ease
+                  while the divided storage allows you to carry all the
+                  knick-knacks. The multilayered magnetic storage compartments are
+                  a perfect fit for your cards, money, keys, sim-cards and coins
+                  while also being RFID blocking for good measure.</a>
+              </p>
+            </div>
+            <div id="i7" class="content-item">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="http://nextluxury.com/mens-style-and-fashion/best-rfid-wallet-for-men/" target="_blank">
+                  Not just the choice of built material, but the design of PITAKA
+                  carbon fiber wallet is unique as well. It features a modular
+                  design so that no matter how thick your wallet regularly is, the
+                  PITAKA carbon fiber wallet will suit all your needs.
+                </a>
+              </p>
+            </div>
+            <div id="i8" class="content-item">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="https://www.forbes.com/sites/bradmoon/2017/11/08/pitaka-magwallet-ue-the-minimalst-modular-rfid-blocking-carbon-fiber-wallet/#2a06a8b21662"
+                  target="_blank">There’s no denying the high tech, cool factor of the PITAKA
+                  MagEZ Wallet UE --especially when you add in those optional
+                  extra modules. It can be a very sleek alternative to a
+                  traditional wallet.
+                </a>
+              </p>
+            </div>
+  
+            <div id="i9" class="content-item">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="https://www.techora.net/2017/04/pitaka-carbon-fiber-wallet-review.html" target="_blank">Not just
+                  the choice of built material, but the design of PITAKA
+                  carbon fiber wallet is unique as well. It features a modular
+                  design so that no matter how thick your wallet regularly is, the
+                  PITAKA carbon fiber wallet will suit all your needs.</a>
+              </p>
+            </div>
+            <div id="i10" class="content-item">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="https://gadgets-reviews.com/review/828-best-rfid-wallets.html" target="_blank">
+                  It is manufactured by PITAKA, a Hong Kong-based company that is
+                  focused on the production of innovative accessories, using
+                  hi-tech quality materials and latest technologies.
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="arrowBox">
+            <div id="arrow_prev" class="arrow arrow_perv">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 44">
+                <path d="M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z" fill="#F5F7F7" />
+              </svg>
+            </div>
+            <div id="arrow_next" class="arrow arrow_next">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 44">
+                <path d="M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z" fill="#F5F7F7" />
+              </svg>
+            </div>
+          </div>
+        </div>
+  
+        <div class="logoBox">
+          <ul class="media-logos">
+            <li data-id="i11" class="thumb-ico m-item active">
+              {{
+                'm-bestslimwallet.svg'
+                  | asset_url
+                  | img_tag: 'MagEZ Wallet review by BestSlimWallet'
+              }}
+            </li>
+            <li data-id="i12" class="thumb-ico m-item">
+              {{
+                'm-trends.svg'
+                  | asset_url
+                  | img_tag: 'MagEZ Wallet review by Trends'
+              }}
+            </li>
+            <li data-id="i13" class="thumb-ico m-item">
+              {{
+                '9to5toys-logo.svg'
+                  | asset_url
+                  | img_tag: 'MagEZ Wallet review by 9to5toys'
+              }}
+            </li>
+            <li data-id="i14" class="thumb-ico m-item">
+              {{
+                'gadgetflow.svg'
+                  | asset_url
+                  | img_tag: 'MagEZ Wallet review by Gadgetflow'
+              }}
+            </li>
+            <li data-id="i5" class="thumb-ico m-item">
+              {{
+                'm-gatgeter.svg'
+                  | asset_url
+                  | img_tag: 'MagEZ Wallet review by Gatgeter'
+              }}
+            </li>
+            <li data-id="i6" class="thumb-ico m-item">
+              {{
+                'm-beaver.svg'
+                  | asset_url
+                  | img_tag: 'MagEZ Wallet review by Beaver'
+              }}
+            </li>
+            <li data-id="i7" class="thumb-ico m-item">
+              {{
+                'm-nextluxury.svg'
+                  | asset_url
+                  | img_tag: 'MagEZ Wallet review by NextLuxury'
+              }}
+            </li>
+            <li data-id="i8" class="thumb-ico m-item">
+              {{
+                'forbes-logo.svg'
+                  | asset_url
+                  | img_tag: 'MagEZ Wallet review by Forbes'
+              }}
+            </li>
+            <li data-id="i9" class="thumb-ico m-item">
+              {{
+                'm-echora.svg'
+                  | asset_url
+                  | img_tag: 'MagEZ Wallet review by Echora'
+              }}
+            </li>
+            <li data-id="i10" class="thumb-ico m-item">
+              {{
+                'm-gadgets-reviews.svg'
+                  | asset_url
+                  | img_tag: 'MagEZ Wallet review by GadgetsReviews'
+              }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- media -->
+  
+  <!-- modules wrapper -->
+  <style>
+    .content-item.active {
+    display: block;
+}
+.content-item {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+    .modules-btns-wrapper {
+      width: 20%;
+      justify-content: flex-end;
+      margin-left: 20%;
+      margin-right: -20%;
+    }
+  
+    .modules-content {
+      width: 80%;
+    }
+  
+    .modules-btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+    }
+  
+    .modules-btns .thumb-ico {
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .modules-btns .thumb-ico:nth-child(1),
+    .modules-btns .thumb-ico:nth-child(3) {
+      margin-left: 20%;
+      margin-right: -20%;
+      /* margin-top: -80px; */
+    }
+  
+    .modules-btns .thumb-ico:nth-child(3) {
+      margin-top: -25px;
+    }
+  
+    .modules-btns .thumb-ico:nth-child(2),
+    .modules-btns .thumb-ico:nth-child(4) {
+      margin-left: -40%;
+      margin-top: -25px;
+    }
+  
+    .thumb-ico img {
+      display: block;
+    }
+  
+    .thumb-ico .hex {
+      margin: 0;
+    }
+  
+    .thumb-ico .hex img,
+    .thumb-ico>img {
+      transform: rotate(0deg);
+    }
+  
+    .thumb-ico .hex.absolute {
+      width: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .thumb-ico .pt-position-center {
+      width: 102px;
+    }
+  
+    .thumb-ico:hover .hex.absolute,
+    .thumb-ico.active .hex.absolute {
+      opacity: 1;
+    }
+  
+    .hex {
+      margin-top: 1em;
+    }
+  
+    .thumb-ico .pt-position-center {
+      width: 60%;
+    }
+  
+    .modules-btns .thumb-ico {
+      width: 100%;
+    }
+  
+    @media screen and (max-width: 1439px) {
+  
+      .thumb-ico .hex img,
+      .thumb-ico>img {
+        width: 92%;
+      }
+  
+      .modules-btns-wrapper {
+        margin-left: 10%;
+        margin-right: -10%;
+      }
+    }
+  
+    @media screen and (max-width: 1024px) {
+      .modules-btns-wrapper {
+        padding-right: 0;
+      }
+  
+      .modules-btns-wrapper {
+        margin-left: 5%;
+        margin-right: 0;
+      }
+  
+      .modules-btns .thumb-ico:nth-child(2),
+      .modules-btns .thumb-ico:nth-child(4),
+      .modules-btns .thumb-ico:nth-child(3) {
+        margin-top: -18px;
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      .modules-content {
+        order: 2;
+        width: 100%;
+      }
+  
+      .modules-btns-wrapper {
+        order: 1;
+        padding: 0;
+        margin: 0;
+        width: auto;
+      }
+  
+      .modules-btns .thumb-ico {
+        width: 100px;
+      }
+  
+      .modules-btns {
+        flex-direction: row;
+        margin-top: -50px;
+        justify-content: center;
+      }
+  
+      .thumb-ico .hex img,
+      .thumb-ico>img {
+        transform: none;
+        width: 100%;
+      }
+  
+      .modules-btns .thumb-ico:nth-child(1),
+      .modules-btns .thumb-ico:nth-child(3) {
+        margin: 0;
+      }
+  
+      .modules-btns .thumb-ico:nth-child(2),
+      .modules-btns .thumb-ico:nth-child(4) {
+        margin-top: 84px;
+        margin-left: -25px;
+      }
+  
+      .modules-btns .thumb-ico:nth-child(3) {
+        margin-left: -25px;
+      }
+    }
+  </style>
+  <!-- end modules wrapper -->
+  
+  <style>
+    .section0 .pt-section-content {
+      transform: translateY(100%);
+      width: 100%;
+    }
+  
+    .section2 {
+      overflow: hidden;
+    }
+  
+    .section2 .pt-section-picture {
+      width: 50%;
+    }
+  
+    .section5 .pt-section-picture {
+      width: 60%;
+    }
+  
+    .section5 .pt-section-container:last-child .pt-section-picture {
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    .section2 .pt-section-content,
+    .section5 .pt-section-container:last-child .pt-section-content {
+      padding-right: 10%;
+      padding-left: 5%;
+    }
+  
+    .section3 .pt-section-content,
+    .section5 .pt-section-container:first-child .pt-section-content {
+      padding-bottom: 5em;
+      padding-left: 10%;
+      padding-right: 5%;
+    }
+  
+    .section5 .pt-section-container:first-child .pt-section-content {
+      padding-left: 7%;
+      padding-bottom: 0;
+    }
+  
+    .section5 .pt-section-container:last-child .pt-section-content {
+      padding-right: 7%;
+    }
+  
+    .section3 .pt-section-content {
+      top: 50%;
+    }
+  
+    .wallet-section {
+      background: none;
+      width: 100%;
+    }
+  
+    .wallet-section>img.absolute {
+      max-width: 150%;
+      top: 30%;
+    }
+  
+    .wallet-animation {
+      width: 100%;
+      height: 100%;
+      max-height: 820px;
+    }
+  
+    .hex {
+      margin-top: 1em;
+    }
+  
+    @media screen and (min-width:1025px) {
+      .section4>.pt-section-container {
+        align-items: stretch;
+      }
+    }
+  
+    @media screen and (max-width: 1439px) {}
+  
+    @media screen and (max-width: 1024px) {
+  
+      .section3 .pt-section-content,
+      .section5 .pt-section-container:first-child .pt-section-content {
+        padding-right: 0;
+        padding-left: 7%;
+      }
+  
+      .section2 .pt-section-content,
+      .section5 .pt-section-container:last-child .pt-section-content {
+        padding-right: 7%;
+        padding-left: 0;
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      .section0 .pt-section-content {
+        transform: none;
+      }
+  
+      .section2 .pt-section-picture {
+        order: 2;
+        width: 100%;
+      }
+  
+      .section2 .pt-section-content {
+        padding: 0 3% 4em;
+        order: 1;
+        text-align: center;
+      }
+  
+      .section3 {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+  
+      .section3 .pt-section-content {
+        position: static;
+        padding: 4em 20%;
+        width: 100%;
+        text-align: center;
+      }
+  
+      .section5 {
+        padding-left: 0;
+        padding-right: 0;
+      }
+  
+      .section5 .pt-section-container:last-child {
+        margin-top: 4em;
+      }
+  
+      .section5 .pt-section-picture {
+        width: 100%;
+      }
+  
+      .section5 .pt-section-content {
+        text-align: center;
+        order: 1;
+        padding: 0 7% 3em !important;
+      }
+  
+      .section5 .pt-section-picture {
+        order: 2;
+      }
+    }
+  
+    @media screen and (max-width: 414px) {
+      .section2 .pt-section-content {
+        padding: 0 3% 3em;
+        order: 1;
+        text-align: center;
+      }
+  
+      .section3 .pt-section-content {
+        padding: 3em 10%;
+      }
+  
+      .section5 .pt-section-container:last-child {
+        margin-top: 3em;
+      }
+  
+      .section5 .pt-section-content {
+        padding: 0 7% 2em !important;
+      }
+    }
+  </style>
+  
+  <script>
+    $(function () {
+      var $win = $(window)
+      if ($('.wallet-animation').length) {
+        var whw = $('.wallet-animation').height()
+        $(document).scroll(walletPartsHandler)
+        $win.resize(walletPartsHandler)
+  
+        function walletPartsHandler() {
+          var wlwrpheight =
+            ($('.wallet-animation').offset().top - $win.scrollTop()) * 2
+          // whw + ($win.scrollTop() - $('.wallet-animation').offset().top) * 3;
+  
+          if (window.innerWidth < 600)
+            if (wlwrpheight > 450) wlwrpheight = 450
+          if (window.innerWidth > 601 && window.innerWidth < 800)
+            if (wlwrpheight > 600) wlwrpheight = 600
+          if (window.innerWidth > 801 && window.innerWidth < 1024)
+            if (wlwrpheight > 600) wlwrpheight = 600
+          $('.wallet-animation').css('height', wlwrpheight)
+        }
+      }
+  
+      let allBtns = $('.modules-btns')
+      let allGifContents = $('.modules-content>div')
+  
+      allBtns.on('click', 'li', (e) => {
+        let clickedBtn = e.currentTarget
+        let clickedBtnId = $(clickedBtn).data('id')
+  
+        $(clickedBtn).addClass('active').siblings().removeClass('active')
+        $('#' + clickedBtnId)
+          .addClass('active')
+          .siblings()
+          .removeClass('active')
+  
+        // console.log(clickedBtn.classList);
+        let active_class_list = clickedBtn.classList
+        if (active_class_list.contains('dark')) {
+          $('#section4').css('background', '#121212')
+        } else {
+          $('#section4').css('background', '#191919')
+        }
+      })
+  
+      allBtns.find("li[data-id='i1']").click()
+      if ($('.modules-btns li.active').hasClass('dark')) {
+        $('#section4').css('background', '#121212')
+      } else {
+        $('#section4').css('background', '#191919')
+      }
+    })
+  </script>
+  
+  <!-- media css-->
+  {{ 'collection-media-slide.css' | asset_url | stylesheet_tag }}
+  <style>
+    .section6 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  
+    .product-media .m-content {
+      height: 200px;
+    }
+  
+    .product-media .content-item p {
+      font-size: unset;
+    }
+  
+    @media screen and (min-width: 1025px) {
+      @supports (display: grid) {
+  
+        /* individual logo width setting */
+        .media-logos li[data-id='i1'] {
+          width: 70%;
+        }
+  
+        .media-logos li[data-id='i9'] {
+          width: 68%;
+        }
+  
+        .media-logos li[data-id='i2'] {
+          width: 125%;
+        }
+      }
+    }
+  
+    @media screen and (max-width: 1024px) {
+      .product-media {
+        width: 100%;
+      }
+  
+      .product-media .m-content {
+        height: 250px;
+        width: 1100% !important;
+      }
+  
+      .product-media .m-content .content-item {
+        width: 9.09%;
+      }
+  
+      .thumb-ico.m-item.active {
+        justify-content: center;
+      }
+  
+      .product-media .arrowBox .arrow {
+        top: calc(50% + 60px);
+      }
+  
+      /* individual logo width setting */
+      .product-media .logoBox .media-logos li.m-item[id='i1'] img {
+        width: 70%;
+      }
+  
+      .product-media .logoBox .media-logos li.m-item[id='i9'] img {
+        width: 55%;
+      }
+    }
+  
+    @media screen and (max-width: 640px) {
+      .product-media .m-content {
+        height: 300px;
+      }
+  
+      .product-media .media-logos {
+        padding-bottom: 0;
+      }
+    }
+  </style>
+  
+  {{ 'collection-media-slide.js' | asset_url | script_tag }}
+  <script>
+    $(document).ready(function () {
+      $('.thumb-ico').click(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+        var modid = $(this).data('id')
+        $('#' + modid)
+          .addClass('active')
+          .siblings()
+          .removeClass('active')
+      })
+    })
+  </script>
+  <!-- end media -->

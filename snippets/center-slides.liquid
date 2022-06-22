@@ -1,0 +1,244 @@
+{%- comment -%}
+必传参数：
+  name（产品名称）
+可选参数：
+  picSuffix（图片格式后缀）：如不传，则默认为.jpg
+  sliderTitles（轮播描述标题,以 | 隔开）
+  sliderTitles_pos（描述标题位置,默认为图片上方）
+  sliderDescs（轮播描述,以 | 隔开）
+  count（轮播数量）：如不传，则默认为3
+  picName(图片名称)：如不传，则默认为name的handlize转换
+  slideIndex(初始化时slide的索引):如不传，则默认为0,显示第一个
+  textBg：pc端文案背景,如不传，则默认为false
+{%- endcomment -%}
+{% unless picName %}
+  {% assign picName = name | handleize | remove: 'for-' | prepend: 'slider-' %}
+{% endunless %}
+
+{% unless count %}
+  {% assign count = 3 %}
+{% endunless %}
+
+{% unless slideIndex %}
+  {% assign slideIndex = 0 %}
+{% endunless %}
+
+{% unless picSuffix %}
+  {% assign picSuffix = '.jpg' %}
+{% endunless %}
+
+{% assign desc_list = sliderDescs | split: ' | ' %}
+
+{% if sliderTitles %}
+{% assign title_list = sliderTitles | split: ' | ' %}
+{% endif %}
+
+<div class="swiper-container w-full center-slides">
+  <div class="swiper-wrapper">
+    {% for i in (1..count) %}
+    {% assign index = i | minus: 1 %}
+    <div class="swiper-slide px-6 sm:px-0">
+      <div class="w-full">
+        {% if sliderTitles %}
+        {% unless sliderTitles_pos %}
+          <div class="mx-auto mb-12 w-4/5 text-center">
+            <h3 class="text-2xl md:text-3xl font-bold">
+              {{title_list[index]}}
+            </h3>
+          </div>
+        {% endunless %}
+        {% endif %}
+        <picture>
+          <source data-srcset="{{ picName | append: '-' | append: i | append: picSuffix | asset_url}}" media="(min-width: 768px)">
+          <img src="{{ placeholder_gif }}" data-src="{{picName | append: '-' | append: i | append: '-s' | append: picSuffix | asset_url}}"
+            alt="{{name}}" class="block cursor-pointer w-full h-full lazyload">
+        </picture>
+        {% if sliderDescs %}
+          <div class="swiper-content swiper-no-swiping py-6 sm:px-6{% if textBg %} sm:bg-gray-850{% else %} sm:bg-gray-800{% endif %} flex sm:items-center {% if sliderTitles_pos == 'top' %}h-full sm:h-44 md:h-36{% else %}h-32 md:h-40{% endif %}">
+            <div class="content-box">
+              {% if sliderTitles_pos == 'top' %}
+                <h3 class="text-xl md:text-2xl font-bold mb-2">
+                  {{title_list[index]}}
+                </h3>
+                <p class="text-sm sm:text-base">
+                  {{desc_list[index]}}
+                </p>
+              {% else %}
+                <p class="text-sm sm:text-base sm:text-lg xl:text-xl">
+                  {{desc_list[index]}}
+                </p>
+              {% endif %}
+              
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="swiper-pagination"></div>
+
+  <div class="swiper-button-prev swiper-button-white"></div>
+  <div class="swiper-button-next swiper-button-white"></div>
+</div>
+
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}
+{{'swiper-bundle.min.js' | asset_url | script_tag }}
+
+<style>
+  .center-slides {
+    padding-bottom: 2rem;
+  }
+
+  .center-slides .swiper-slide {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    transition: 300ms;
+    transform: scale(0.89);
+  }
+
+  .center-slides .swiper-slide .swiper-content {
+    opacity: 0;
+    transition: all .5s;
+  }
+
+  .center-slides .swiper-slide-prev,
+  .center-slides .swiper-slide-duplicate-prev {
+    transform-origin: right center;
+  }
+
+  .center-slides .swiper-slide-next,
+  .center-slides .swiper-slide-duplicate-next {
+    transform-origin: left center;
+  }
+
+  .center-slides .swiper-slide-active,
+  .center-slides .swiper-slide-duplicate-active {
+    transform: scale(1);
+  }
+
+  .center-slides .swiper-slide-active .swiper-content,
+  .center-slides .swiper-slide-duplicate-active .swiper-content {
+    opacity: 1;
+  }
+
+  .center-slides .swiper-slide img {
+    object-fit: cover;
+  }
+
+  .center-slides .swiper-slide-prev img,
+  .center-slides .swiper-slide-duplicate-prev img {
+    object-position: right top;
+  }
+
+  .center-slides .swiper-slide-next img,
+  .center-slides .swiper-slide-duplicate-next img {
+    object-position: left top;
+  }
+
+  .center-slides>div[role="button"] {
+    top: 45%;
+    width: 12px;
+    height: 16px;
+  }
+
+  .center-slides>div[role="button"]:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url({{'triggle_pixel.svg' | asset_url}}) no-repeat;
+    background-size: contain;
+  }
+
+  .center-slides .swiper-button-next {
+    right: 0;
+  }
+
+  .center-slides .swiper-button-prev {
+    left: 0;
+    transform: rotate(-180deg);
+  }
+
+  .center-slides .swiper-pagination-bullets {
+    display: flex;
+    justify-content: center;
+    margin: 0 -0.4rem;
+  }
+
+  .center-slides .square-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #565557;
+    display: block;
+    margin: 0 .4rem;
+  }
+
+  .center-slides .swiper-pagination-bullet-active {
+    background-color: #fff;
+  }
+
+  @media screen and (min-width:768px) {
+    .center-slides {
+      margin: 0;
+      padding-bottom: 4rem;
+    }
+
+    .center-slides>div[role="button"] {
+      top: unset;
+      bottom: 6px;
+      margin: 0;
+    }
+
+    .center-slides .swiper-button-next {
+      right: calc(50% - 153.2px);
+    }
+
+    .center-slides .swiper-button-prev {
+      left: calc(50% - 153.2px);
+    }
+  }
+</style>
+
+<script>
+  var index = {{slideIndex}};
+  var swiper = new Swiper('.center-slides', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    initialSlide: index,
+    centeredSlides: true,
+    slideToClickedSlide: true,
+    noSwiping : true,
+    breakpoints: {
+      768: {
+        slidesPerView: 1.5,
+        spaceBetween: 16
+      },
+      1280: {
+        slidesPerView: 1.5,
+        spaceBetween: 24
+      }
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      bulletClass: 'square-bullet',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+</script>

@@ -1,0 +1,627 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}   
+
+<div class="section-default section0 relative">
+    <picture>
+      <source data-srcset="{{ 'product-section0-charging-kit.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-section0-charging-kit-m.jpg' | asset_url }}"
+        alt="MagEZ Wireless Charging Kit for iPhone 12 Series" class="lazyload width-100 img-responsive">
+    </picture>
+    <div class="pt-section-content absolute pt-position-centerX text-center">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400 font-upper">
+        Make a Magnetic Match
+      </h3>
+    </div>
+  </div>
+  
+  <div class="section-default section1 relative">
+    <picture>
+      <source data-srcset="{{ 'product-section1-charging-kit.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-section1-charging-kit-m.jpg' | asset_url }}"
+        alt="MagEZ Wireless Charging Kit for iPhone 12 Series" class="lazyload width-100 img-responsive">
+    </picture>
+    <div class="pt-section-content absolute pt-position-centerY">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        MagEZ Case for<br>
+        iPhone 12 Series
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Crafted using aerospace-grade aramid fiber, the slim MagEZ Case offers protection with minimalist design. With
+        embedded metal strips, attach the MagEZ Case to the MagEZ range of mounts and chargers.
+      </p>
+    </div>
+  </div>
+  
+  <div class="section-default section2 relative">
+    <picture>
+      <source data-srcset="{{ 'product-section2-charging-kit.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-section2-charging-kit-m.jpg' | asset_url }}"
+        alt="MagEZ Wireless Charging Kit for iPhone 12 Series" class="lazyload width-100 img-responsive">
+    </picture>
+    <div class="pt-section-content absolute pt-position-centerY pt-position-right">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        MagEZ Mount Qi
+  
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        A magnetic wireless
+        in-car charger that can be mounted to fit your needs.
+      </p>
+    </div>
+  </div>
+  
+  <div id="trigger_sec"></div>
+  <div class="section-default pt-section section3 pt-flex pt-flex-center bg-black">
+    <div class="pt-section-content">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Attach and Wireless Charge
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Simply attach the ultra-slim MagEZ Case to the magnetic car phone charger for super-stable wireless charging even
+        on the bumpiest of roads.
+      </p>
+    </div>
+    <div class="pt-section-picture pt-anim-container">
+      <div class="pt-anim-pictures relative">
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-case-section3-qi.png' | asset_url }}" class="lazyload">
+        <div class="pt-anim-case absolute" id="anim-case">
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-case-section3-iphone12.png' | asset_url }}"
+            alt="MagEZ Case for iPhone 12" class="lazyload">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section-default section4 relative">
+    <picture>
+      <source data-srcset="{{ 'product-section4-charging-kit.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-section4-charging-kit-m.jpg' | asset_url }}"
+        alt="MagEZ Wireless Charging Kit for iPhone 12 Series" class="lazyload width-100 img-responsive">
+    </picture>
+    <div class="pt-section-content absolute pt-position-centerY pt-position-right">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Wireless Charging Friendly
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Use the MagEZ Case for iPhone 12 with any Qi-certified wireless charger, including the MagEZ Mount Qi.
+      </p>
+    </div>
+  </div>
+  
+  <div class="section-default section5 relative">
+    <div class="pt-section-container">
+      <div id="feature_1" class="relative">
+        <div class="pt-section-content absolute pt-position-centerX text-center">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+            A Safe and Reliable Wireless Charging Mount
+          </h3>
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            Charge your device quickly and efficiently with the 10W* magnetic cell phone charger. Thanks to a built-in
+            cooling fan and a range of safety sensors, your smartphone will remain protected while ensuring a reliable
+            wireless charging experience.
+          </p>
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 fw-500 pt-margin-top-mini">
+            *iPhone 7.5W/Samsung 10W
+          </p>
+        </div>
+  
+        <picture>
+          <source data-srcset="{{ 'product-section5-charging-kit-1.jpg' | asset_url }}" media="(min-width: 1280px)">
+          <source data-srcset="{{ 'product-section5-charging-kit-1-m.jpg' | asset_url }}" media="(min-width: 769px)">
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-section5-charging-kit-1-s.jpg' | asset_url }}"
+            alt="MagEZ Wireless Charging Kit for iPhone 12 Series" class="lazyload width-100 img-responsive">
+        </picture>
+      </div>
+  
+      <div id="feature_2" class="relative">
+        <div class="pt-section-content absolute pt-position-centerX text-center">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+            Strong Magnetic Attachment
+          </h3>
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            Powerful N52-T magnets offer the stability needed for even the bumpiest of roads. The magnetic function
+            auto-aligns your device to keep it secure while driving.
+          </p>
+        </div>
+  
+        <picture>
+          <source data-srcset="{{ 'product-section5-charging-kit-2.jpg' | asset_url }}" media="(min-width: 1280px)">
+          <source data-srcset="{{ 'product-section5-charging-kit-2-m.jpg' | asset_url }}" media="(min-width: 769px)">
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-section5-charging-kit-2-s.jpg' | asset_url }}"
+            alt="MagEZ Wireless Charging Kit for iPhone 12 Series" class="lazyload width-100 img-responsive">
+        </picture>
+      </div>
+    </div>
+  
+    <div class="pt-section-content absolute pt-position-centerX pt-position-bottom text-center">
+      <div class="pt-tab-container pt-flex pt-flex-between">
+        <div class="pt-tab active" data-target="#feature_1">
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-section5-feature-1.png' | asset_url }}"
+            class="lazyload img-responsive mx-auto">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 large pt-margin-top-small">
+            Safe and Reliable
+          </p>
+        </div>
+        <div class="pt-tab" data-target="#feature_2">
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-section5-feature-2.png' | asset_url }}"
+            class="lazyload img-responsive mx-auto">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 large pt-margin-top-small">
+            Strong Magnetic Attachment
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section-default section6 swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <picture class="width-100">
+          <source data-srcset="{{ 'product-section6-charging-kit-1.jpg' | asset_url }}" media="(min-width: 769px )">
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-section6-charging-kit-1-m.jpg' | asset_url }}"
+            class="img-responsive width-100 lazyload" alt="MagEZ Wireless Charging Kit for iPhone 12 Series">
+        </picture>
+        <div class="swiper-content absolute pt-position-left pt-position-bottom">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6 fw-500">
+            Air Vent Clip
+          </h3>
+          <p class="pt-text-small">
+            Easily attach the Mount Qi to a horizontal air vent using the specially designed clip.
+          </p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <picture class="width-100">
+          <source data-srcset="{{ 'product-section6-charging-kit-2.jpg' | asset_url }}" media="(min-width: 769px )">
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-section6-charging-kit-2-m.jpg' | asset_url }}"
+            class="img-responsive width-100 lazyload" alt="MagEZ Wireless Charging Kit for iPhone 12 Series">
+        </picture>
+        <div class="swiper-content absolute pt-position-left pt-position-bottom">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6 fw-500">
+            Suction Cup Base
+          </h3>
+          <p class="pt-text-small">
+            A reusable suction cup that sticks conveniently to the dash.
+          </p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <picture class="width-100">
+          <source data-srcset="{{ 'product-section6-charging-kit-3.jpg' | asset_url }}" media="(min-width: 769px )">
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-section6-charging-kit-3-m.jpg' | asset_url }}"
+            class="img-responsive width-100 lazyload" alt="MagEZ Wireless Charging Kit for iPhone 12 Series">
+        </picture>
+        <div class="swiper-content absolute pt-position-left pt-position-bottom">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6 fw-500">
+            Universal Mount
+          </h3>
+          <p class="pt-text-small">
+            A single-use mount for your dashboard.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  
+  <div class="section-default section7 relative">
+    <picture>
+      <source data-srcset="{{ 'product-section7-charging-kit.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-section7-charging-kit-m.jpg' | asset_url }}"
+        alt="MagEZ Wireless Charging Kit for iPhone 12 Series" class="lazyload width-100 img-responsive">
+    </picture>
+    <div class="pt-section-content absolute pt-position-left pt-position-bottom">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Package Contents
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        <span class="pt-block">
+          1. MagEZ Case for iPhone 12 Series
+        </span>
+        <span class="pt-block">
+          2. MagEZ Mount Qi
+        </span>
+        <span class="pt-block">
+          3. Air Vent Clip
+        </span>
+        <span class="pt-block">
+          4. Suction Cup Base
+        </span>
+        <span class="pt-block">
+          5. Universal Mount
+        </span>
+        <span class="pt-block">
+          6. USB A to Type C Cable
+        </span>
+      </p>
+    </div>
+  </div>
+  
+  <style>
+    .pt-position-bottom {
+      bottom: 15%;
+    }
+  
+    .section5 .pt-position-bottom {
+      bottom: 5%;
+    }
+  
+    .pt-section-content {
+      max-width: 468px;
+    }
+  
+    .pt-section-content.pt-position-centerX {
+      max-width: unset;
+    }
+  
+    .section2 .pt-section-content {
+      padding-right: 5em;
+    }
+  
+    .section3 {
+      padding-top: 10em;
+      padding-bottom: 10em;
+    }
+  
+    .section3.pt-flex-center {
+      justify-content: space-around;
+    }
+  
+    .section5 {
+      overflow: hidden;
+    }
+  
+    .section5 .pt-section-container {
+      width: 200%;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-shrink: 0;
+      transition: all .3s ease;
+    }
+  
+    .section5 .pt-section-container img {
+      width: 100vw;
+    }
+  
+    .section5 .pt-tab {
+      opacity: 0.6;
+    }
+  
+    .section5 .pt-tab.active {
+      opacity: 1;
+    }
+  
+    @media screen and (max-width:1600px) {
+      .pt-section-content {
+        max-width: 420px;
+      }
+  
+      .section5 .pt-section-content {
+        width: 60%;
+      }
+    }
+  
+    @media screen and (max-width:1280px) {
+      .pt-section .pt-section-content {
+        padding-left: 3vw;
+      }
+  
+      .pt-section-content {
+        max-width: 380px;
+      }
+  
+      .section2 .pt-section-content {
+        padding-right: 2em;
+      }
+  
+      .section5 .pt-section-content {
+        width: 70%;
+      }
+    }
+  
+    @media screen and (max-width:768px) {
+      .section-default:not(.section3) {
+        min-height: 164vw;
+      }
+  
+      .section6 .swiper-content,
+      .section5 .pt-section-content,
+      .section2 .pt-section-content,
+      .pt-section-content {
+        text-align: center;
+        width: 100%;
+        padding: 4em 20% 0;
+        top: 0;
+        left: 0;
+        transform: none;
+        max-width: unset;
+      }
+  
+      .section3 {
+        padding-top: 4em;
+        padding-bottom: 4em;
+      }
+  
+      .pt-section .pt-section-content {
+        width: 100%;
+        padding: 0 13vw;
+      }
+  
+      .section5>.pt-section-content {
+        top: unset;
+        bottom: 10%;
+      }
+  
+      .section5 .pt-tab-container {
+        flex-direction: row;
+      }
+  
+      .section7 .pt-section-content {
+        text-align: left;
+        bottom: unset;
+        top: 8em;
+      }
+    }
+  
+    @media screen and (max-width:414px) {
+  
+      .section6 .swiper-content,
+      .section2 .pt-section-content,
+      .section5 .pt-section-content,
+      .pt-section-content {
+        padding: 3em 10% 0;
+      }
+  
+      .pt-section .pt-section-content {
+        padding: 0 3vw;
+      }
+  
+      .section5>.pt-section-content {
+        bottom: 3em;
+      }
+  
+      .section5 .pt-tab {
+        width: 45%;
+      }
+  
+      .section5 .pt-tab img {
+        width: 60px;
+      }
+  
+      .section7 .pt-section-content {
+        top: 1em;
+      }
+  
+      .product_content-title .pt-section-title-large{
+        font-size: 1.05em;
+      }
+    }
+  </style>
+  
+  <script>
+    $(function () {
+      $(".pt-tab").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+        const tab_target = $(this).data("target");
+        const index = $(tab_target).index();
+        var translate_x = index === 0 ? "translateX(0)" : "translateX(-50%)";
+        $(this).closest(".pt-section-content").prev().css({
+          "transform": translate_x
+        })
+      })
+    })
+  </script>
+  
+  <!-- swiper css -->
+  <style>
+    .swiper-container>div[role="button"]:after {
+    background: url({{'triggle_pixel.svg' | asset_url}}) no-repeat;
+    background-size:contain;
+  }
+  .swiper-container .swiper-button-prev {
+    transform: rotate(-180deg);
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    background: none !important;
+    visibility: hidden;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    color: rgba(0, 0, 0, 0);
+    display: block !important;
+  }
+  .swiper-button-prev{
+    left: 50px;
+  }
+  .swiper-button-next{
+    right: 50px;
+  }
+  
+    .swiper-pagination-bullet {
+      background-color: #fff;
+    }
+  
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      --swiper-navigation-size: 30px;
+      --swiper-theme-color: #0BBCD4;
+    }
+  
+    .swiper-container:hover .swiper-button-next,
+    .swiper-container:hover .swiper-button-prev {
+      visibility: visible;
+    }
+  
+    .swiper-slide {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      width: 100% !important;
+    }
+  
+    .pagination-custom .swiper-pagination-bullet {
+      border-radius: 0;
+      width: 40px;
+      height: 4px;
+    }
+  
+    @media screen and (max-width:1024px) {
+      .swiper-container {
+        --swiper-navigation-size: 30px;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        visibility: visible;
+      }
+      .swiper-button-prev{
+    left: 16px;
+  }
+  .swiper-button-next{
+    right: 16px;
+  }
+    }
+  
+    @media screen and (max-width:414px) {
+      .swiper-container {
+        --swiper-navigation-size: 30px;
+      }
+    }
+  </style>
+  
+  {{ 'swiper-bundle.min.js' | asset_url | script_tag }}
+  <script>
+    var galleryTop = new Swiper('.swiper-container', {
+      autoplay: {
+        delay: 5000,
+        stopOnLastSlide: false,
+        disableOnInteraction: true,
+      },
+      loop: true,
+      observer:true,
+      observeParents:true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    })
+  </script>
+  
+  <!-- anim-pictures -->
+  <style>
+    .pt-anim-container {
+      display: flex;
+      justify-content: space-around;
+      flex-shrink: 0;
+    }
+  
+    .pt-anim-case {
+      top: 0;
+      right: 0;
+    }
+  
+    .pt-anim-pictures {
+      width: 792px;
+      margin: 0 2em;
+      flex-shrink: 0;
+    }
+  
+    .pt-anim-pictures img {
+      display: block;
+    }
+  
+    .pt-anim-content {
+      padding: 0 10%;
+    }
+  
+    @media screen and (max-width:1600px) {
+      .pt-anim-container {
+        transform: scale(0.9);
+      }
+    }
+  
+    @media screen and (max-width:1280px) {
+      .pt-anim-container {
+        transform: scale(0.75);
+      }
+    }
+  
+    @media screen and (max-width:1024px) {
+      .pt-anim-container {
+        width: 100%;
+      }
+    }
+  
+    @media screen and (max-width:768px) {
+      .pt-anim-container {
+        flex-direction: column;
+        align-items: center;
+        transform: scale(0.75);
+      }
+  
+      .pt-anim-pictures {
+        margin: 5em 0 0;
+      }
+    }
+  
+    @media screen and (max-width:414px) {
+      .pt-anim-container {
+        margin-top: -50%;
+        margin-bottom: -50%;
+        transform: scale(0.45);
+      }
+    }
+  </style>
+  
+  {{ 'TweenMax.min.js' | asset_url | script_tag }}
+  {{ 'ScrollMagic.js' | asset_url | script_tag }}
+  {{ 'animation.gsap.min.js' | asset_url | script_tag }}
+  
+  <script>
+    $(function () {
+      // init controller
+      var controller = new ScrollMagic.Controller();
+  
+      // build tween
+      var tween = TweenMax.to("#anim-case", 0.5, {
+        x: -250,
+        y: 50,
+        ease: Linear.easeNone
+      });
+      if (window.innerWidth > 768) {
+        var scene = new ScrollMagic.Scene({
+            triggerElement: "#trigger_sec",
+            offset: -100,
+            duration: 200,
+            triggerHook: "onLeave",
+          })
+          .setTween(tween)
+          .addTo(controller);
+  
+      } else {
+        var scene = new ScrollMagic.Scene({
+            triggerElement: "#trigger_sec",
+            offset: 100,
+            duration: 100,
+            triggerHook: "onLeave",
+          })
+          .setTween(tween)
+          .addTo(controller);
+      }
+    });
+  </script>

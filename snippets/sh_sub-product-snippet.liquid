@@ -1,0 +1,11 @@
+<script>
+	var SUBParams = {
+		"id" : "40c9e3df2f75ff294a7d91f01ecff811",
+        "app_id" : "1",		"product" : {{ product | json }},
+		"moneyFormat" : "{{ shop.money_with_currency_format }}",
+		"productView": "sub-json"
+	};
+</script>
+{%- comment -%}
+<script src="{% if shop.metafields.sh_sub['debug_mode'] == '1' %}https://s3.amazonaws.com/shopify-extensions/upsell-bundles/js/common.js{% else %}https://s3.amazonaws.com/shopify-extensions/upsell-bundles/js/common.min.js{% endif %}"></script>
+{%- endcomment -%}

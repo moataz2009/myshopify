@@ -1,0 +1,181 @@
+{% assign wClass_8 = 'w-full sm:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+
+{% assign wClass_6 = 'w-full sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+
+{% assign pdClass = 'px-6 lg:px-0 py-16 sm:py-20 lg:py-28' %}
+
+{% assign collection_handle = collection.handle %}
+
+{% assign mount_model = collection_handle %}
+{% assign compare_items = 'MagEZ Car Mount, MagEZ Mount' | split: ',' %}
+{% assign compare_lines = 'Description,Compatibility,Wireless Charging Capability,Design & Tech' | split: ',' %}
+
+<div class="{{wClass_6}} {{pdClass}} text-center divide-y divide-white divide-opacity-20 divide-solid">
+  <div class="mx-auto w-11/12 sm:w-4/5 pb-12">
+    <h1 class="text-2xl xl:text-3xl">
+      Compare PITAKA Car Phone Holders
+    </h1>
+    <p class="color-gray-400 text-sm mt-8 xl:text-base">
+      Our magnetic car phone holders with a minimalist aesthetic are made to keep your phone firmly held in place or 
+      even charge it at the same time while you drive. So enjoy a snap-and-drive, grab-and-go experience.
+    </p>
+  </div>
+
+  <div class="product-box grid grid-cols-2 gap-x-6 md:gap-0">
+    {% assign name_list = 'MagEZ Car Mount,MagEZ Mount' | split: ',' %}
+    {% for name in name_list %}
+    <div name="{{name | handleize}}">
+      <div class="tag-container flex justify-center h-14 md:h-10 pt-4">
+        <div class="cursor-pointer h-full flex items-center leading-tight px-3 mx-0 sm:mx-4 text-xs bg-gray-800 text-gray-400 active" data-target="charging">
+          Charging
+        </div>
+        <div class="cursor-pointer h-full flex items-center leading-tight px-3 mx-0 sm:mx-4 text-xs bg-gray-800 text-gray-400"
+          data-target="non_charging">Non-Charging</div>
+      </div>
+      <div class="products-container">
+        {% for product in collection.products %}
+          {% if product.handle contains 'pro' or product.handle contains 'qi' %}
+            {% assign product_charging = 'charging' %}
+          {% else %}
+            {% assign product_charging = 'non_charging' %}
+          {% endif %}
+
+          {% assign product_mountType = product.title %}
+          {% if product_mountType contains name %}
+            <div class="product-card{% unless product_charging == 'charging' %} hidden{% endunless %}"
+              data-product="{{product_charging}}">
+              {% render 'grid-product-item', product: product, title_pos_top: true, desc_no: true, link_buy_btn: true, sm_layout_2:true %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% for lineItem in compare_lines %}
+  <div class="specs-box grid grid-cols-2 gap-x-6 md:gap-0">
+
+    {% for item in compare_items %}
+      {% assign data_handle = item | handleize %}
+      <div class="w-full md:w-5/6 lg:w-4/5 xl:w-2/3 mx-auto py-8" name="{{data_handle}}">
+        <div class="w-full product-line-card" data-product="charging">
+          <p class="text-white text-opacity-40 text-xs mb-2">
+            {{ lineItem }}
+          </p>
+          <h3 class="text-2s sm:text-sm sm:text-base font-bold">
+            {% assign compareData = settings.compare_data[data_handle]['pro'] %}
+
+            {% assign lineLabel = lineItem | strip_html | handleize %}
+  
+            {% for lineData in compareData %}
+            {% assign dataArr = lineData | split: '--' %}
+            {% assign data_l = dataArr | first %}
+            {% if lineLabel contains data_l %}
+            {{ dataArr | last }}
+            {% endif %}
+            {% endfor %}
+  
+          </h3>
+        </div>
+        <div class="w-full hidden product-line-card" data-product="non_charging">
+          <p class="text-white text-opacity-40 text-xs mb-2">
+            {{ lineItem }}
+          </p>
+          <h3 class="text-2s sm:text-sm sm:text-base font-bold">
+            {% assign lineLabel = lineItem | strip_html | handleize %}
+  
+            {% assign compareData = settings.compare_data[data_handle]['lite'] %}
+  
+            {% for lineData in compareData %}
+            {% assign dataArr = lineData | split: '--' %}
+            {% assign data_l = dataArr | first %}
+            {% if lineLabel contains data_l %}
+            {{ dataArr | last }}
+            {% endif %}
+            {% endfor %}
+  
+          </h3>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+
+</div>
+
+<style>
+  .grid-item>h3{
+    white-space: nowrap;
+  }
+  .tag-container>div.active,
+  .tag-container>div:hover {
+    color: #000;
+    background-color: #fff;
+  }
+
+  .toggleCategory {
+    min-width: max-content;
+  }
+
+  .toggleCategory h3::after {
+    position: absolute;
+    content: '';
+    width: 14px;
+    height: 14px;
+    right: 0;
+    top: 3px;
+    transform: rotate(90deg);
+    background:url({{'triggle_pixel.svg' | asset_url }}) no-repeat center center;
+    background-size: contain;
+    transition: all .3s ease;
+  }
+
+  h3.active::after {
+    transform: rotate(-90deg);
+  }
+</style>
+
+<script>
+  $(function () {
+    function showToggle(itemType) {
+      $('.product-box>div').hide();
+      $('.specs-box>div').hide();
+      $('.tag-container').remove();
+      $('.type-box').each(function () {
+        const type = $(this).find('h3').data('name');
+        $(`[name='${type}']`).show().css('order', ($(this).index() + 1));
+        let tagHTML = `<div class="tag-container flex justify-between h-14 pb-2">
+            <div class="cursor-pointer h-full flex items-center px-3 text-xs bg-gray-800 text-gray-400 active" data-target="charging">
+              Charging
+            </div>
+            <div class="cursor-pointer h-full flex items-center px-3 text-xs bg-gray-800 text-gray-400"
+              data-target="non_charging">Non-Charging</div>
+          </div>`;
+        $(this).prepend(tagHTML);
+      });
+    }
+    
+    
+    $('.tag-container>div').on('click', function () {
+      $(this).addClass('active').siblings().removeClass('active');
+      const data_product = $(this).data('target');
+      // console.log(data_product)
+      let handle_name = $(this).parent('.tag-container').parent().attr('name');
+      let $target_product = $(this).parent().next('.products-container').find('.product-card').filter(
+      function () {
+        return $(this).data('product') == data_product
+      });
+      $target_product.removeClass('hidden').siblings().addClass('hidden');
+
+      let $target_product_line = $('.specs-box>div').filter(
+      function () {
+        return $(this).attr('name') == handle_name
+      }).find('.product-line-card').filter(
+      function () {
+        return $(this).data('product') == data_product
+      });
+      $target_product_line.removeClass('hidden').siblings().addClass('hidden');
+    });
+  })
+</script>

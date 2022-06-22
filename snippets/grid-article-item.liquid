@@ -1,0 +1,124 @@
+{%- comment -%}
+  博客article组件:
+  传入参数: 
+  （必需）：
+  article
+  （可选）：
+  isHorizontal：是否左右布局
+  isReverse：默认false:左图右文
+  blockTag: 是否为文本块
+{%- endcomment -%}
+{% if isHorizontal %}
+<div class="{{hiddenClass}} flex flex-col-reverse sm:flex-row">
+
+  <a href="{{ article.url }}" class="block w-full sm:w-1/2 md:w-3/5{% if isReverse %} order-2{% endif %}">
+    <img src="{{ article.image.src | img_url: '1024x1024' }}" alt="{{article.title}}" 
+      class="block w-full h-80 sm:h-full object-cover">
+  </a>
+  <div class="{% if isReverse %} order-1{% endif %} p-6 md:p-12 w-full sm:w-1/2 md:w-2/5">
+    <div class="text-gray-400 mb-4 text-base leading-none">
+      <span>{{article.created_at | date: format: 'abbreviated_date'}}</span>
+      <span class="ml-4">By 
+        {% if article.id == 556170444870 or article.id == 384566689862 
+          or article.id == 383582568518 
+          or article.id == 383582830662 or article.id == 383424036934 
+          or article.id == 383424004166 or article.id == 383543640134 
+          or article.id == 383319932998 or article.id == 383292637254 
+          or article.id == 383262392390 or article.id == 30680711238 
+          or article.id == 30572904518 or article.id == 30525161542 
+          or article.id == 30354047046 or article.id == 29922426950 
+          or article.id == 29746626630 or article.id == 29746659398 
+          or article.id == 212734994 or article.id == 214428946 
+          or article.id == 215933586 or article.id == 769425436 
+          or article.id == 989102108 or article.id == 1481932828 
+          or article.id == 5296586790 or article.id == 5355405350 
+          or article.id == 5368447014 or article.id == 5580652582 
+          or article.id == 29186818118 or article.id == 29258940486 
+          or article.id == 29582032966 or article.id == 29722837062 
+          or article.id == 29722804294 %}
+        PITAKA Team
+       {% elsif article.id < 216476817 %}
+        Rebecca
+        {% elsif article.id > 216476817 and article.id < 30680711238 %}
+        Lily
+        {% elsif article.id > 30680711238 and article.id < 556131221573 and article.id != 383262457926 %}
+        Claire
+        {% elsif article.id == 383262457926 %}
+        James
+         {% elsif article.id > 556131221572 and article.id < 556227625031 %}
+        {% unless article.id == 556170444870 %}
+        by Alistair
+        {% endunless %}
+        {% else %}
+          Claire
+        {% endif %}
+      </span>
+    </div>
+    <h3 class="text-xl sm:text-2xl font-bold mb-6">
+      <a href="{{ article.url }}" class="line-clamp-2">{{ article.title }}</a>
+    </h3>
+    <p class="text-base text-gray-400 mb-8 sm:mb-12 line-clamp-3">
+      {{ article.content | strip_html | truncate: 150 }}
+    </p>
+
+    {% render 'link-button',link_url: article.url, link_title:'Learn More' %}
+  </div>
+</div>
+
+{% else %}
+  <div class="{{hiddenClass}}">
+    <a href="{{ article.url }}" class="block w-full">
+      <img src="{{ article.image.src | img_url: '1024x1024' }}" alt="{{article.title}}" 
+        class="block w-full h-80 object-cover">
+    </a>
+    <div class="{%if blockTag %}bg-gray-800 p-6 {% else %}mt-4{% endif %}" >
+      <div class="text-gray-400 mb-4 text-base leading-none">
+        <span>{{article.created_at | date: format: 'abbreviated_date'}}</span>
+        <span class="ml-4">By 
+          {% if article.id ==  556170444870 or article.id == 384566689862 
+            or article.id == 383582568518 
+            or article.id == 383582830662 or article.id == 383424036934 
+            or article.id == 383424004166 or article.id == 383543640134 
+            or article.id == 383319932998 or article.id == 383292637254 
+            or article.id == 383262392390 or article.id == 30680711238 
+            or article.id == 30572904518 or article.id == 30525161542 
+            or article.id == 30354047046 or article.id == 29922426950 
+            or article.id == 29746626630 or article.id == 29746659398 
+            or article.id == 212734994 or article.id == 214428946 
+            or article.id == 215933586 or article.id == 769425436 
+            or article.id == 989102108 or article.id == 1481932828 
+            or article.id == 5296586790 or article.id == 5355405350 
+            or article.id == 5368447014 or article.id == 5580652582 
+            or article.id == 29186818118 or article.id == 29258940486 
+            or article.id == 29582032966 or article.id == 29722837062 
+            or article.id == 29722804294 %}
+          PITAKA Team
+          {% elsif article.id < 216476817 %}
+        Rebecca
+        {% elsif article.id > 216476817 and article.id < 30680711238 %}
+        Lily
+        {% elsif article.id > 30680711238 and article.id < 556131221571 and article.id != 383262457926 %}
+        Claire
+        {% elsif article.id == 383262457926 %}
+        James
+        {% elsif article.id > 556131221572 and article.id < 556227625031 %}
+        {% unless article.id == 556170444870 %}
+        by Alistair
+        {% endunless %}
+        {% else %}
+          Claire
+          {% endif %}
+        </span>
+      </div>
+      <h3 class="text-xl sm:text-2xl font-bold mb-6">
+        <a href="{{ article.url }}" class="line-clamp-2">{{ article.title }}</a>
+      </h3>
+      <p class="text-base text-gray-400 mb-8 sm:mb-12 line-clamp-3">
+        {{ article.content | strip_html | truncate: 150 }}
+      </p>
+
+      {% render 'link-button',link_url: article.url, link_title:'Learn More' %}
+    </div>
+  </div>
+{% endif %}
+

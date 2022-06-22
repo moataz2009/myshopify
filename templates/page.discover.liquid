@@ -1,0 +1,374 @@
+{%- comment -%}容器尺寸(初始占10格){%- endcomment -%}
+{% assign wClass = 'w-full lg:w-11/12 xl:w-11/12 max-w-screen-xl mx-auto' %}
+{%- comment -%}容器尺寸(初始占8格){%- endcomment -%}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-11/12 xl:w-11/12 max-w-screen-xl mx-auto' %}
+{%- comment -%}容器内边距{%- endcomment -%}
+{% assign pdClass = 'px-6 lg:px-0 py-20 sm:py-28' %}
+{%- comment -%}主标题h1尺寸{%- endcomment -%}
+{% assign titleSize = 'text-2xl sm:text-3xl font-bold' %}
+{%- comment -%}主标题h1距底部距离（紧）{%- endcomment -%}
+{% assign titleMb_tight = 'mb-6 sm:mb-6' %}
+{%- comment -%}主标题h1距底部距离（松）{%- endcomment -%}
+{% assign titleMb_loose = 'mb-12' %}
+{%- comment -%}正文p尺寸颜色{%- endcomment -%}
+{% assign descSize = 'text-base text-gray-400' %}
+{%- comment -%}正文p距底部距离{%- endcomment -%}
+{% assign descMb = 'mb-12' %}
+{%- comment -%}居中显示主文本容器尺寸及距底部距离{%- endcomment -%}
+{% assign titleBox_center= 'mx-auto text-center mb-24 sm:mb-16 w-11/12 sm:w-2/3 xl:w-2/5' %}
+{%- comment -%}居左显示主文本容器尺寸及距底部距离{%- endcomment -%}
+{% assign titleBox_left= 'mx-auto text-left mb-12 w-11/12 sm:w-2/3 xl:w-2/5' %}
+{%- comment -%}副标题h3尺寸及垂直外边距{%- endcomment -%}
+{% assign subTitleClass = 'text-xl sm:txet-2xl font-bold my-6' %}
+{%- comment -%}副标题下正文p尺寸及距底部距离{%- endcomment -%}
+{% assign subDescClass = 'text-base text-gray-400 mb-8 sm:mb-12' %}
+{%- comment -%}grig排版分布及间距{%- endcomment -%}
+{% assign gapClass = 'grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2' %}
+{%- comment -%}标题修饰图片尺寸及垂直外边距{%- endcomment -%}
+{% assign titleDecoMy = 'block mt-4 mb-6' %}
+
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}
+
+{%- comment -%}
+section0---start
+{%- endcomment -%}
+<div class="w-full relative">
+    <picture>
+      <source srcset="{{'page-discover-seciton0.jpg' | asset_url}}" media="(min-width: 1025px)">
+      <source srcset="{{'page-discover-seciton0-m.jpg' | asset_url}}" media="(min-width: 768px)">
+      <img srcset="{{'page-discover-seciton0-s.jpg' | asset_url}}" alt="discover-seciton0"
+        class="img-responsive w-full">
+    </picture>
+</div>
+
+<div class="{{pdClass}} bg-transparent sm:bg-gray-850 pt-0 pb-16 sm:pb-16 md:pb-28">
+    <div class="{{wClass_8}} md:px-0 pt-14 sm:pt-0 border-t border-solid border-gray-750 sm:border-0">
+      {%- comment -%}
+      <div class="{{titleBox_left}}">
+        <h3 class="{{titleSize}} {{titleMb_tight}}">Portable Power Bank Wireless Charging Dock</h3>
+        <p class="{{descSize}} {{ titleMb_tight}}">       <img src="{{'triggle_pixel-d.svg' | asset_url}}" class="inline-block transform"></p>
+        <p class="{{descSize}} {{ titleMb_loose}}"> 
+            The MagEZ Juice eliminates the need to carry a bulky power bank and cable. When you’re at home or in the office, simply attach your phone
+        </p>
+      </div>
+      <div class="w-full border-b border-gray-500 mb-16 md:mb-28"></div> 
+      {%- endcomment -%}      
+      <div class="{{titleBox_center}}">
+        <h3 class="{{titleSize}} {{titleMb_loose}}">New Releases</h3>
+      </div>      
+      <div class="w-full">
+        <div class="multiple-slider swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide relative">
+                <picture>
+                    <source srcset="{{'page-discover-seciton1-slider-1.jpg' | asset_url}}" media="(min-width: 1025px)">
+                    <source srcset="{{'page-discover-seciton1-slider-1.jpg' | asset_url}}" media="(min-width: 768px)">
+                    <img srcset="{{'page-discover-seciton1-slider-1-s.jpg' | asset_url}}" alt="MagEZ Slider"
+                      class="block w-full h-full object-cover"> 
+                </picture>
+                <div class="absolute  bottom-0 left-8 text-left max-w-sm">
+                  <h4 class="{{subTitleClass}} mt-0 md:mt-6">MagEZ Stand For Tablets Series
+                  </h4>
+                  <p class="{{subDescClass}} block sm:hidden   "> 
+                    A magnetic, adjustable stand with a 15W smartphone wireless charging pad.
+                  </p>                            
+                </div>
+            </div>
+            <div class="swiper-slide relative">
+                <picture>
+                    <source srcset="{{'page-discover-seciton1-slider-2.jpg' | asset_url}}" media="(min-width: 1025px)">
+                    <source srcset="{{'page-discover-seciton1-slider-2.jpg' | asset_url}}" media="(min-width: 768px)">
+                    <img srcset="{{'page-discover-seciton1-slider-2-s.jpg' | asset_url}}" alt="MagEZ Slider"
+                      class="block w-full h-full object-cover"> 
+                </picture>
+                <div class="absolute  bottom-0 left-8 text-left max-w-sm">
+                  <h4 class="{{subTitleClass}} mt-0 md:mt-6">MagEZ Case 2
+                    For iPad Pro 2021 Serles
+                  </h4>
+                  <p class="{{subDescClass}}  hidden ">
+        Magnetic, ultra-thin, and fully compatible with the Apple Magic Keyboard and Pita!Flow accessories.
+                  </p>
+                </div>
+            </div>
+            <div class="swiper-slide relative">
+                <picture>
+                    <source srcset="{{'page-discover-seciton1-slider-3.jpg' | asset_url}}" media="(min-width: 1025px)">
+                    <source srcset="{{'page-discover-seciton1-slider-3.jpg' | asset_url}}" media="(min-width: 768px)">
+                    <img srcset="{{'page-discover-seciton1-slider-3-s.jpg' | asset_url}}" alt="MagEZ Slider"
+                      class="block w-full h-full object-cover"> 
+                </picture>
+                <div class="absolute  bottom-0 left-8 text-left max-w-sm">
+                  <h4 class="{{subTitleClass}} mt-0 md:mt-6">
+                    MagEZ Wallet 2                  
+                  </h4>
+                  <p class="{{subDescClass}}  hidden  "> 
+                    Modular, carbon fiber wallets that attach to MagEZ and MagSafe Cases.
+                  </p>                            
+                </div>
+            </div>            
+          </div>
+          <!-- Add Pagination -->
+          <!-- <div class="swiper-pagination"></div> -->
+    
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="{{pdClass}} bg-transparent sm:bg-gray-800 pt-0 pb-16 sm:pb-16 md:pb-28">
+    <div class="{{wClass_8}} md:px-0 pt-14 sm:pt-0 border-t border-solid border-gray-750 sm:border-0">
+      <div class="{{titleBox_center}}">
+        <h3 class="{{titleSize}} {{titleMb_loose}}">About PITAKA</h3>
+      </div>      
+      <div class="w-full">
+        <div class="flex flex-row flex-nowrap items-stretch justify-between">
+            <div class="w-0 mr-0 sm:w-2/5 sm:mr-32 lg:mr-32">
+              <!-- <img src="{{'index-section3-grid-1.jpg' | asset_url}}" alt="PITAKA Pita!Flow" class="block w-full"> -->
+              <div class="hidden sm:block mt-8 sm:-mr-28 lg:mr-0">
+                <h3 class="{{titleSize}} {{titleMb_tight}}">Portable Power Bank 
+                    Wireless Charging Dock
+                    </h3>
+                <p class="{{subDescClass}}">
+                  PITAKA prides itself on crafting unique and functional tech accessories using specialized materials, such as our signature aramid fiber. PITAKA offers alternative gadgets to simplify the lives of those with a modern on-the-go lifestyle while inspiring us to stand out. Our multi-national team is made up of experts across multiple fields, these include research and development (R&D), marketing, sales, and customer service. Each is dedicated in their own way to making PITAKA a valuable part of modern life. 
+                </p>
+                {% render 'link-button',link_url: '/pages/about-us', link_title:'Learn More' %}
+              </div>
+            </div>
+        
+            <div class="sm:w-3/5">
+              <img src="{{'page-discover-seciton2-1.jpg' | asset_url}}" alt="PITAKA Pita!Flow" class="block w-full">
+              <!-- <img src="{{'page-discover-seciton2-2.jpg' | asset_url}}" alt="PITAKA Pita!Flow" class="block w-full"> -->
+            </div>
+        
+            <!-- <div class="">
+              <img src="{{'page-discover-seciton2-3.jpg' | asset_url}}" alt="PITAKA Pita!Flow" class="block w-full">
+              <img src="{{'page-discover-seciton2-4.jpg' | asset_url}}" alt="PITAKA Pita!Flow" class="block w-full">
+            </div>  -->
+        
+  
+        
+          </div>
+          <div class="block sm:hidden w-full bg-gray-800 px-8 pt-8 pb-12">
+            <h4 class="{{titleSize}}  {{titleMb_tight}}">Portable Power Bank 
+              Wireless Charging Dock</h4>
+            <p class="{{subDescClass}} max-w-full md:max-w-sm">
+              At NIKE, Inc., we see a world where everybody is an athlete—united in the joy of movement. Driven by our passion for sport and our instinct for innovation, we aim to elevate human potential. Whether our job is designing the ultimate sneaker or coding a revolutionary app, we’re united by the same mission: to bring inspiration and innovation to every athlete in the world. That means you. Because, as Bill Bowerman—Nike’s co-founder and legendary coach—once said, “If you have a body, you are an athlete.” Every day, we are demanding a better future for ourselves, our athletes, and our communities. We believe that diversity fosters creativity and accelerates innovation. We believe in protecting a planet where all athletes can thrive. And we believe every kid, everywhere, should have access to sport.
+            </p>
+            {% render 'link-button',link_url: '/collections/pitaka-pita-flow', link_title:'Learn More' %}
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="{{pdClass}} bg-transparent sm:bg-gray-850 pt-0 pb-16 sm:pb-16 md:pb-28">
+    <div class="{{wClass_8}} md:px-0 pt-14 sm:pt-0 border-t border-solid border-gray-750 sm:border-0">
+      <div class="{{titleBox_center}}">
+        <h3 class="{{titleSize}} {{titleMb_loose}}">Community</h3>
+      </div>      
+      <div class="w-full relative">
+        <div
+        class="absolute transform w-4/5  left-10 bottom-12 sm:left-16 sm:bottom-12 ">
+        <h3 class="text-2xl xl:text-3xl font-bold mb-2">MagEZ Case 2 for iPhone 13 Series coming!</h3>
+        <div
+        class="block sm:hidden">
+        {% render 'link-button',link_url: '/collections/magez-case-2-for-iphone-13', link_title:'Learn More' %}
+      </div>
+      </div>
+      <div
+      class="hidden sm:block absolute transform bottom-12 sm:right-16 xl:right-40 ">  
+      {% render 'link-button',link_url: '/collections/magez-case-2-for-iphone-13', link_title:'Learn More' %}
+    </div>
+      <picture>
+        <source srcset="{{'page-discover-seciton3.jpg' | asset_url}}" media="(min-width: 1025px)">
+        <source srcset="{{'page-discover-seciton3-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img srcset="{{'page-discover-seciton3-s.jpg' | asset_url}}" alt="MagEZ Slider"
+          class="block w-full h-full object-cover"> 
+      </picture>
+      </div>
+    </div>
+  </div>
+{%- comment -%}PITAKA Journal{%- endcomment -%}
+<div class="{{pdClass}} bg-gray-800">
+  <div class="{{wClass}}">
+    <div class="{{titleBox_center}}">
+      <h3 class="{{titleSize}} {{titleMb_tight}}">PITAKA Journal</h3>
+      <p class="{{descSize}} {{descMb}}">
+        Visit the PITAKA Journal to learn more about our designs, concepts, and processes. You’ll also find articles about new technology, where we get inspiration from, and our love of great design!
+      </p>
+      {% render 'link-button',link_url: '/blogs/news', link_title:'View all articles' %}
+    </div>
+  
+    <div class="{{gapClass}} md:grid-cols-3">
+      {% assign articles =  blogs.news.articles | sort: 'id' | reverse %}
+      {% for item in articles limit: 3 %}
+        {% if forloop.last == true %}
+          {% render 'grid-article-item', article: item, hiddenClass:'block sm:hidden md:block' %}
+        {% else %}
+          {% render 'grid-article-item', article: item %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+  {{'swiper-bundle.min.js' | asset_url | script_tag }}
+
+<style>
+  .swiper-slide>div{
+    display:none;
+  }
+  .swiper-slide.swiper-slide-active>div{
+    display: block;
+  }
+  .swiper-slide.swiper-slide-active:hover>div>p{
+    display: block;
+  }
+  .multiple-slider .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    /* transform: scale(0.9); */
+    }
+    /* .multiple-slider .swiper-slide.swiper-slide-next,
+    .multiple-slider .swiper-slide.swiper-slide-duplicate-next{
+      transform: scale(1);
+	} */
+  .multiple-slider>div[role="button"],
+  .gallery-top>div[role="button"]{
+    width: 12px;
+    height: 16px;
+  }
+
+  .multiple-slider>div[role="button"]:after,
+  .gallery-top>div[role="button"]:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url({{'triggle_pixel.svg' | asset_url}}) no-repeat;
+    background-size: contain;
+  }
+
+  .gallery-top .swiper-button-prev {
+    transform: rotate(-180deg);
+    left: 0;
+  }
+  .gallery-top .swiper-button-next {
+    right: 0;
+  }
+
+  .multiple-slider .swiper-button-next {
+    right: calc(50% - 450px);
+  }
+
+  .multiple-slider .swiper-button-prev {
+    left: calc(50% - 450px);
+    transform: rotate(-180deg);
+  }
+
+  .multiple-slider .swiper-pagination-bullets {
+    display: none;
+  }
+
+  .multiple-slider .square-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #565557;
+    display: block;
+    margin: 0 .4rem;
+  }
+
+  .multiple-slider .swiper-pagination-bullet-active {
+    background-color: #fff;
+  }
+  @media screen and (max-width:768px) {
+    .multiple-slider .swiper-button-next {
+    right: calc(50% - 300px);
+  }
+
+  .multiple-slider .swiper-button-prev {
+    left: calc(50% - 300px);
+    transform: rotate(-180deg);
+  }
+  }
+  @media screen and (min-width:768px) {
+    .multiple-slider {
+      padding-bottom: 4rem;
+    }
+    .multiple-slider .swiper-button-next,
+    .multiple-slider .swiper-button-prev {
+      top: 40%; 
+      bottom: 6px;
+      margin: 0;
+    }
+    .multiple-slider .swiper-pagination-bullets{
+      display: flex;
+      justify-content: center;
+      margin: 0 -0.4rem;
+    }
+    .swiper-slide {height: 560px !important; margin-top: 16px;}
+    .swiper-slide img {height: 560px !important; margin-top: 0px;}
+
+    .swiper-slide.swiper-slide-active {width: 948px !important;height:593px !important;margin-top: 0px;}
+    .swiper-slide.swiper-slide-active img {width: 948px !important;height:593px !important;margin-top: 0px;}
+
+</style>
+
+<script>
+  var swiper = new Swiper('.multiple-slider', {
+    loop:true,
+    slidesPerView: 1,
+    spaceBetween: 24,
+    slidesOffsetBefore :0,
+    breakpoints: { 
+      769: {
+        slidesPerView:1,
+        slidesOffsetBefore : 0, 
+      },
+      1020: {
+        slidesPerView: 3,
+        slidesOffsetBefore : 12
+      },
+      1025: {
+        slidesPerView: 3,
+        slidesOffsetBefore : 186
+      },
+      1279: {
+        slidesPerView: 3,
+        slidesOffsetBefore : 108
+      },
+      1439: {
+        slidesPerView: 3,
+        slidesOffsetBefore : 188
+      },
+      1441: {
+        slidesPerView: 3,
+        slidesOffsetBefore : 324,
+      }
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      bulletClass: 'square-bullet',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>

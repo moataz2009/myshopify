@@ -1,0 +1,2164 @@
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-6 md:px-0 py-12 sm:py-16 md:py-20 lg:py-28' %}
+{% assign titleSize = 'text-2xl sm:text-3xl font-bold' %}
+
+{% assign descSize = 'text-sm sm:text-base text-gray-400' %}
+{% assign descSize_lg = 'text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-gray-400' %}
+{%- comment -%}
+{% assign titleSize_md = 'text-3xl md:text-5xl lg:text-6xl xl:text-8md font-bold' %}
+{%- endcomment -%}
+{% assign titleSize_lg = 'text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold' %}
+
+{% assign scaleSize = 'transform scale-30 sm:scale-60 lg:scale-85 xl:scale-100' %}
+{% assign scaleSize_lg = 'transform scale-50 sm:scale-60 lg:scale-85 xl:scale-100' %}
+
+{% assign scaleSize_m = 'transform scale-30 sm:scale-40 laptop:scale-65 lg:scale-75 xl:scale-100' %}
+{% assign scaleSize_l = 'transform scale-35 sm:scale-50 laptop:scale-70 lg:scale-80 xl:scale-100' %}
+
+{% assign toggleClass_hero = 'toggle-element block absolute lg:opacity-0 transform transition-all duration-500 delay-500 origin-bottom' %}
+
+{% assign shopBtnClass = 'text-sm sm:text-base rounded-sm px-4 py-2 xl:px-5 xl:py-2.5 font-bold transform transition duration-300 ease-in-out bg-cyan hover:bg-white hover:text-black' %}
+<div class="section-hero {{pdClass}} flex flex-col justify-between">
+  <div class="{{wClass}} relative z-10">
+    <div class="w-full px-6 pt-6 text-center sm:text-left md:px-0 sm:w-4/5 md:w-3/5 lg:w-1/2">
+      <h1 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
+        Fusion Weaving™ Series
+      </h1>
+      <h3 class="text-lg sm:text-xl md:text-2xl font-normal mb-8 sm:mb-12">
+        Classic. On the Next Level.
+      </h3>
+      {%- comment -%}
+      <p class="{{descSize}} mb-8 sm:mb-12">
+        The first 100 purchases will be eligible for a $10 PITAKA gift card.
+      </p>
+      {%- endcomment -%}
+
+      <a href="/collections/pitaka-cases?t=iphone-cases#case-for-iphone-13"
+        class="block hover:opacity-100 mx-auto sm:mx-0">
+        <button class="{{shopBtnClass}}">
+          Shop Now
+        </button>
+      </a>
+    </div>
+  </div>
+  <div id="trigger_hero"></div>
+  <div class="w-full relative mt-28 sm:mt-20 lg:mt-16 xl:-mt-12">
+    <picture>
+      <source srcset="{{ 'fusion-weaving-section0-lines.svg' | asset_url }}" media="(min-width: 1024px)">
+      <img src="{{'fusion-weaving-section0-lines-m.svg' | asset_url }}"
+        class="toggle-element duration-1000 w-full transform transition -translate-y-16 laptop:translate-y-0 lg:-translate-x-full block" />
+    </picture>
+
+    <div class="hero-products absolute inset-0">
+      <picture>
+        <source srcset="{{ 'fusion-weaving-section0-product-1.png' | asset_url }}" media="(min-width: 1024px)">
+        <img src="{{'fusion-weaving-section0-product-1-m.png' | asset_url }}"
+          alt="Fusion Weaving MagEZ Case for AirPods Pro"
+          class="{{toggleClass_hero}} lg:-translate-y-6 sm:-translate-y-12 laptop:origin-bottom-left left-1/4 bottom-3/4 sm:left-2/5 sm:bottom-7/10 laptop:left-1/12 laptop:bottom-6 {{scaleSize_m}}" />
+      </picture>
+      <picture>
+        <source srcset="{{ 'fusion-weaving-section0-product-2.png' | asset_url }}" media="(min-width: 1024px)">
+        <img src="{{'fusion-weaving-section0-product-2-m.png' | asset_url }}"
+          alt="Fusion Weaving MagEZ Case for iPad Pro"
+          class="{{toggleClass_hero}} lg:-translate-y-12 laptop:origin-bottom-left -left-16 sm:left-0 bottom-2/5 laptop:left-1/3 laptop:bottom-1/10 {{scaleSize_l}}" />
+      </picture>
+      <picture>
+        <source srcset="{{ 'fusion-weaving-section0-product-3.png' | asset_url }}" media="(min-width: 1024px)">
+        <img src="{{'fusion-weaving-section0-product-3-m.png' | asset_url }}"
+          alt="Fusion Weaving Air Pal mini for AirPods Pro"
+          class="{{toggleClass_hero}} lg:translate-y-12 laptop:origin-bottom-left left-0 bottom-0 sm:bottom-0 laptop:left-7/12 laptop:bottom-1/6 {{scaleSize_m}}" />
+      </picture>
+      <picture>
+        <source srcset="{{ 'fusion-weaving-section0-product-4.png' | asset_url }}" media="(min-width: 1024px)">
+        <img src="{{'fusion-weaving-section0-product-4-m.png' | asset_url }}" alt="Fusion Weaving MagEZ Slider"
+          class="{{toggleClass_hero}} lg:-translate-y-12 hidden sm:block laptop:origin-bottom-right -right-6 bottom-1/6 laptop:right-1/4 laptop:bottom-7/12 {{scaleSize_m}}" />
+      </picture>
+      <picture>
+        <source srcset="{{ 'fusion-weaving-section0-product-5.png' | asset_url }}" media="(min-width: 1024px)">
+        <img src="{{'fusion-weaving-section0-product-5-m.png' | asset_url }}"
+          alt="Fusion Weaving MagEZ Case for iPhone 13"
+          class="{{toggleClass_hero}} lg:translate-y-12 laptop:origin-bottom-right right-2 -bottom-6 sm:right-3/10 laptop:right-1/12 laptop:bottom-6 {{scaleSize_l}}" />
+      </picture>
+    </div>
+  </div>
+</div>
+
+<div class="long-container w-full mt-10 relative overflow-hidden">
+  {%- comment -%}part1{%- endcomment -%}
+  <div class="{{wClass}} {{pdClass}} relative -mt-12 z-10">
+    <h1 class="w-full sm:w-6/8 lg:w-5/8 {{titleSize_lg}}">
+      Music Runs In<br>
+      The Blood
+    </h1>
+    <div class="w-full flex justify-end">
+      <div id="trigger-1_1" class="trigger-point"></div>
+      <div class="w-10/12 sm:w-9/10 lg:w-7/10 relative mt-14 sm:mt-28">
+        <img src="{{'fusion-weaving-section1-1.svg' | asset_url }}" class="relative w-full block z-30" />
+
+        <div class="section-blocks absolute inset-0 z-20" name="1_1">
+
+          <div
+            class="bg-red-dark w-20 h-24 absolute origin-top-left sm:origin-center top-1/2 left-4 sm:left-12 opacity-80 z-10 {{scaleSize}}">
+          </div>
+          <div
+            class="bg-green w-20 h-36 absolute origin-top-left sm:origin-center top-1/3 left-3/8 sm:left-5/8 opacity-90 z-20 {{scaleSize}}">
+          </div>
+          <div
+            class="bg-blue w-28 h-44 absolute origin-top-right sm:origin-center top-1/3 right-1/10 sm:right-1/6 opacity-70 {{scaleSize}}">
+          </div>
+
+          <div
+            class="bg-blue w-88 h-32 absolute origin-top-left sm:origin-center top-7/12 left-1/5 opacity-90 z-10 {{scaleSize}}">
+          </div>
+          <div
+            class="bg-orange w-96 h-16 absolute origin-bottom-right sm:origin-center bottom-1/10 right-3/10 opacity-80 z-20 {{scaleSize}}">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full sm:w-10/12 lg:w-8/10 mx-auto flex justify-between items-center mt-32 sm:mt-40 lg:mt-56 relative">
+      <div id="trigger-1_2" class="trigger-point"></div>
+      <div class="w-7/10 sm:w-3/8 relative">
+        <img src="{{'fusion-weaving-section1-2.svg' | asset_url }}"
+          class="relative block w-3/5 lg:w-1/2 mx-auto z-30" />
+        <div class="section-blocks absolute inset-0 z-20" name="1_2">
+          <div
+            class="bg-red w-9 h-32 absolute origin-top-left sm:origin-center -top-16 sm:-top-40 left-0 lg:-left-1/3 opacity-70 {{scaleSize}}">
+          </div>
+
+          <div
+            class="bg-green w-28 h-72 absolute origin-top-right sm:origin-center top-1/3 right-2/5 sm:right-3/10 opacity-80 {{scaleSize}}">
+          </div>
+          <div
+            class="bg-orange w-full sm:w-7/10 h-12 sm:h-16 absolute origin-top-left sm:origin-center top-3/4 left-1/10 sm:left-4/10 opacity-70 z-10 {{scaleSize}}">
+          </div>
+          <div
+            class="bg-blue w-4/5 sm:w-1/3 h-10 absolute origin-bottom-left sm:origin-center bottom-10 left-1/6 opacity-70 {{scaleSize}}">
+          </div>
+        </div>
+      </div>
+      <div class="w-full sm:w-1/2 xl:w-3/8">
+        <h3 class="{{descSize_lg}}">
+          What does music mean to you? How does music affect your life?
+        </h3>
+      </div>
+    </div>
+
+    <div class="w-full flex flex-wrap items-stretch justify-between items-center mt-32 sm:mt-40 lg:mt-56">
+      <div class="w-6/10 sm:w-5/10 lg:w-4/10 xl:w-3/10">
+        <h3 class="{{descSize_lg}}">
+          To a 5-year-old, the first time he understood what music truly stands for was watching a band performing in a
+          mall. Music is happiness.
+        </h3>
+      </div>
+      <div id="trigger-1_3" class="trigger-point"></div>
+      <div class="w-4/10 sm:w-5/10 xl:w-6/10 relative">
+        <div class="section-blocks absolute inset-0 z-10" name="1_3">
+          <div class="bg-green w-4/5 sm:w-3/5 h-2.5 absolute top-1/2 right-1/5 opacity-80 {{scaleSize_lg}}"></div>
+          <div
+            class="bg-green hidden sm:block w-3/5 sm:w-1/2 h-2.5 absolute top-1/3 right-0  opacity-80 {{scaleSize_lg}}">
+          </div>
+          <div class="bg-orange w-1/2 h-20 absolute top-6/10 right-0 rotate-45 opacity-70 z-10 {{scaleSize}}">
+          </div>
+          <div class="bg-blue w-1/2 sm:w-1/3 h-16 absolute bottom-0 right-1/4 -rotate-45 opacity-70 {{scaleSize_lg}}">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full sm:w-10/12 lg:w-8/10 mx-auto mt-36 sm:mt-48 md:mt-64 xl:mt-88">
+      <div class="w-full lg:w-7/8 relative z-20">
+        <h3 class="{{descSize_lg}}">
+          When he turned 18, he was into rock ‘n’ roll, and decided to put everything he had into making indie rock.
+          Music inspired him to "do something different" and led him to a path less traveled.
+        </h3>
+      </div>
+      <div class="w-full relative pl-8 mt-32 sm:mt-44 md:mt-52 xl:mt-72">
+        <img src="{{'fusion-weaving-section1-4.svg' | asset_url }}" class="relative block w-full z-30" />
+        <div id="trigger-1_4" class="trigger-point"></div>
+        <div class="section-blocks absolute inset-0 z-10" name="1_4">
+          <div
+            class="bg-blue w-10 h-12 absolute origin-top-left sm:origin-center -top-1/4 sm:top-1/4 left-12 opacity-60 {{scaleSize_lg}}">
+          </div>
+          <div
+            class="bg-orange w-64 h-24 absolute origin-bottom-right sm:origin-center bottom-8 right-2/3 opacity-80 {{scaleSize}}">
+          </div>
+
+          <div
+            class="bg-green w-12 h-14 absolute origin-top-left sm:origin-center top-1/2 left-1/2 z-20 opacity-80 transform">
+          </div>
+          <div
+            class="bg-blue w-60 h-28 absolute origin-top-right sm:origin-center top-2/3 right-1/4 opacity-70 z-10 {{scaleSize}}">
+          </div>
+          <div
+            class="bg-red-dark w-28 h-52 absolute origin-bottom-left sm:origin-center -bottom-6 sm:-bottom-10 left-7/10 opacity-70 {{scaleSize}}">
+          </div>
+
+          <div
+            class="bg-green w-1/2 h-2.5 absolute origin-top-left sm:origin-center -top-1/2 sm:-top-12 left-5/8 opacity-70 rotate-45 {{scaleSize}}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {%- comment -%}part2{%- endcomment -%}
+  <div class="{{wClass}} {{pdClass}} relative z-10 mt-0 sm:mt-24 md:mt-32 xl:mt-40">
+    <div class="w-full relative">
+      <div id="trigger-2_1" class="trigger-point"></div>
+      <h1 class="w-full transform sm:transform-none translate-y-1/2 sm:w-4/5 lg:w-3/5 {{titleSize_lg}}">
+        The Dream<br>
+        Continues
+      </h1>
+      <div class="w-full flex justify-end mt-44 sm:mt-66 lg:mt-76 relative z-20">
+        <h3 class="w-full sm:w-7/10 xl:w-6/10 {{descSize_lg}}">
+          His music career came to an end due to the lack of support and other factors. He became a product designer,
+          and built PITAKA, a brand driven by innovation to provide alternative gadgets in helping and inspiring
+          people to live a simple, quality life.
+        </h3>
+      </div>
+      <div class="w-full flex justify-end mt-12 sm:mt-28 mr-8 relative z-20">
+        <div class="w-4/5 sm:w-7/10 xl:w-6/10 relative">
+          <img src="{{'fusion-weaving-section2-1.svg' | asset_url }}" class="block w-full z-30" />
+
+          <img src="{{'fusion-weaving-section2-2.svg' | asset_url }}"
+            class="musical-note opacity-100 block absolute w-1/8 lg:w-1/10 xl:w-1/12 top-0 right-0 {{scaleSize_lg}}" />
+
+          <img src="{{'fusion-weaving-section2-3.svg' | asset_url }}"
+            class="musical-note opacity-100 block absolute w-1/6 lg:w-1/8 xl:w-1/10 top-1/3 right-0 md:-right-12 {{scaleSize_lg}}" />
+
+          <img src="{{'fusion-weaving-section2-4.svg' | asset_url }}"
+            class="musical-note opacity-100 block absolute w-1/8 lg:w-1/10 xl:w-1/12 top-1/2 right-1/6 {{scaleSize_lg}}" />
+
+          <img src="{{'fusion-weaving-section2-3.svg' | asset_url }}"
+            class="musical-note opacity-100 block absolute w-1/6 lg:w-1/8 xl:w-1/10 top-1/3 right-full {{scaleSize_lg}}" />
+
+          <img src="{{'fusion-weaving-section2-2.svg' | asset_url }}"
+            class="musical-note opacity-100 block absolute w-1/8 lg:w-1/10 xl:w-1/12 bottom-8 -left-1/4 {{scaleSize_lg}}" />
+        </div>
+      </div>
+
+      <div class="section-blocks absolute inset-0 z-10" name="2_1">
+        <div
+          class="bg-red w-5/10 sm:w-3/10 h-20 rotate-15 skew-x-3 absolute origin-top-right sm:origin-center top-0 sm:top-12 md:top-28 right-12 sm:right-20 opacity-50 z-20 {{scaleSize}}">
+        </div>
+        <div
+          class="bg-red-dark w-6/10 sm:w-3/10 h-2.5 rotate-60 absolute origin-top-right sm:origin-center top-6 right-16 sm:top-24 md:right-12 {{scaleSize}}">
+        </div>
+        <div
+          class="bg-red-dark w-8/10 sm:w-4/10 h-2.5 rotate-60 absolute origin-top-right sm:origin-center top-14 sm:top-1/12 right-8 sm:right-0 {{scaleSize}}">
+        </div>
+
+        <div
+          class="bg-green w-32 h-36 absolute origin-top-right sm:origin-center top-1/6 right-1/3 opacity-80 {{scaleSize}}">
+        </div>
+        <div
+          class="bg-orange w-4 h-12 rotate-45 absolute origin-top-left sm:origin-center top-1/4 left-1/5 opacity-70 transform">
+        </div>
+        <div class="bg-red w-28 h-14 absolute origin-top-left sm:origin-center top-1/2 left-8 opacity-60 {{scaleSize}}">
+        </div>
+        <div
+          class="bg-red-dark hidden sm:block w-24 h-8 md:h-12 absolute origin-bottom-left sm:origin-center bottom-1/3 left-28 opacity-70 {{scaleSize}}">
+        </div>
+        <div
+          class="bg-green w-2/3 sm:w-1/3 md:w-1/4 h-6 absolute origin-bottom-left sm:origin-center bottom-6 left-0 md:left-1/3 opacity-80 z-20 {{scaleSize}}">
+        </div>
+
+        <div
+          class="bg-blue w-8 h-8 md:h-12 lg:w-16 lg:h-24 absolute origin-bottom-right sm:origin-center bottom-36 right-1/2 opacity-70 z-10 transform">
+        </div>
+        <div
+          class="bg-orange w-80 h-16 absolute origin-bottom-right md:origin-center bottom-8 md:bottom-24 right-1/3 opacity-70 z-20 {{scaleSize}}">
+        </div>
+        <div
+          class="bg-red w-36 h-16 -skew-x-3 absolute origin-bottom-right sm:origin-center bottom-6 md:bottom-20 right-1/10 opacity-70 z-20 {{scaleSize}}">
+        </div>
+        {%- comment -%}
+        <div class="bg-green w-36 h-10 absolute bottom-1/5 right-1/10 opacity-80 z-20 -rotate-45 {{scaleSize}}">
+        </div>
+        {%- endcomment -%}
+      </div>
+    </div>
+
+    <div class="w-full sm:w-10/12 lg:w-8/10 mx-auto mt-16 sm:mt-32 lg:mt-56">
+      <h3 class="w-full sm:w-7/8 xl:w-6/8 {{descSize_lg}}">
+        At the same time, he never gives up on music, a passion he truly upholds. He still plays rock and listens to
+        symphonies, for relaxation and finding inspirations. Music has, and always been a part of his life, no matter
+        what he does.
+      </h3>
+    </div>
+    <div class="w-full sm:w-7/10 xl:w-7/12 mx-auto mt-8 sm:mt-32 lg:mt-56">
+      <div id="trigger-2_2" class="trigger-point"></div>
+      <div class="section-blocks w-full sm:w-3/5 lg:w-2/5 mx-auto h-32 relative" name="2_2">
+        <div
+          class="bg-blue w-1/2 h-6 absolute origin-top-right sm:origin-center top-0 right-1/3 sm:right-8 opacity-70 {{scaleSize}}">
+        </div>
+        <div
+          class="bg-orange w-1/2 h-6 absolute origin-top-left sm:origin-center top-4 left-1/3 sm:left-12 opacity-70 z-20 {{scaleSize}}">
+        </div>
+        <div
+          class="bg-green w-1/2 h-6 absolute origin-top-right sm:origin-center top-8 sm:top-16 right-1/3 sm:-right-8 opacity-80 {{scaleSize}}">
+        </div>
+        <div
+          class="bg-red w-1/2 h-6 absolute origin-top-right sm:origin-center top-12 sm:top-20 righ-1/2 sm:right-12 opacity-80 z-20 {{scaleSize}}">
+        </div>
+      </div>
+      <h3 class="w-full {{descSize_lg}} mt-0 mb-4 sm:mt-20 sm:mb-14 lg:mt-28 lg:mb-20">
+        One day, an idea struck his mind:<br>
+        “why not infuse music<br>
+        into my design?"
+      </h3>
+      <img src="{{'fusion-weaving-section2-2.png' | asset_url }}" class="block w-4/5 sm:w-full mx-auto" />
+    </div>
+  </div>
+  {%- comment -%}part3{%- endcomment -%}
+  <div class="w-full px-6 md:px-0 pb-12 sm:pb-16 md:pb-20 lg:pb-28 relative z-10">
+    <div class="w-full">
+      <div class="marquee-overflow flex pb-2 sm:pb-4">
+        <h1 class="marquee-text {{titleSize_lg}}">
+          &nbsp;The Born of Fusion Weaving™&nbsp;
+        </h1>
+        <h1 class="marquee-text {{titleSize_lg}}">
+          &nbsp;The Born of Fusion Weaving™&nbsp;
+        </h1>
+        <h1 class="marquee-text {{titleSize_lg}}">
+          &nbsp;The Born of Fusion Weaving™&nbsp;
+        </h1>
+      </div>
+      <div class="flex justify-end">
+        <div class="w-4/5 border-b border-gray-400 border-opacity-70"></div>
+      </div>
+    </div>
+    <div class="w-full">
+      <div class="marquee-overflow flex pb-2 sm:pb-4">
+        <h1 class="marquee-text inverse {{titleSize_lg}} text-opacity-0">&nbsp;The Born of Fusion Weaving™&nbsp;
+        </h1>
+        <h1 class="marquee-text inverse {{titleSize_lg}} text-opacity-0">&nbsp;The Born of Fusion Weaving™&nbsp;
+        </h1>
+        <h1 class="marquee-text inverse {{titleSize_lg}} text-opacity-0">&nbsp;The Born of Fusion Weaving™&nbsp;
+        </h1>
+      </div>
+      <div class="w-4/5 border-b border-gray-400 border-opacity-70"></div>
+    </div>
+
+    <div class="{{wClass}} py-12 sm:py-16 md:py-20 lg:py-28">
+      <div id="trigger-video-1"></div>
+      <div class="w-full relative video-container">
+        <div class="video-cover relative">
+          <div class="absolute left-0 top-0 transform w-full h-full flex justify-center items-center hidden">
+            <div class="play-btn rounded-full w-9 h-9 bg-white flex justify-center items-center">
+              {{ 'triggle_pixel-black.svg' | asset_url | img_tag:'','block' }}
+            </div>
+          </div>
+          <picture>
+            <img src="{{ placeholder_gif }}" data-src="{{ 'fusion-weaving-section3-1-cover.jpg' | asset_url }}"
+              class="block w-full lazyload" />
+          </picture>
+        </div>
+        <div class="modal-container absolute w-full h-full opacity-0 inset-0 transition">
+          <video muted loop playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+            x5-video-orientation="portraint" class="w-full h-full block object-cover">
+            <source src="{{ 'fusion-weaving-section3-1-video.mp4' | asset_url }}" type="video/mp4" />
+            <source src="{{ 'fusion-weaving-section3-1-video.webm' | asset_url }}" type="video/webm" />
+          </video>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap justify-end mt-12 pb-56 sm:pb-72 xl:pb-96 relative">
+        <h3 class="w-full lg:w-8/10 {{descSize_lg}} mb-16 relative z-20">
+          PITAKA is known to many for making aramid fiber phone cases. The unique material, also PITAKA's signature,
+          is what made the brand stand out from the crowd. That is why we started experimenting with new techniques on
+          the iPhone 13 series cases.
+        </h3>
+        <h3 class="w-full lg:w-8/10 {{descSize_lg}} relative z-20">
+          James led the team in tons of research, and even visited some craftsmen to understand and study the concept
+          behind fabrics weaving. Eventually, we found this new technique to weave aramid fiber in our cases.
+        </h3>
+        <div id="trigger-3_1" class="trigger-point"></div>
+        <div class="section-blocks absolute inset-0 z-10" name="3_1">
+          <div
+            class="bg-red w-32 h-8 md:w-56 md:h-14 -rotate-30 absolute top-1/4 sm:top-1/5 left-1/2 sm:left-3/4 opacity-70 z-20 {{scaleSize}}">
+          </div>
+
+          <div
+            class="bg-green w-16 h-16 md:w-24 md:h-24 rotate-15 absolute top-5/6 right-7/10 sm:right-8/10 opacity-80 z-30 transform">
+          </div>
+
+          <div
+            class="bg-blue w-3/10 h-2.5 sm:w-2/10 md:h-3 -rotate-3 absolute bottom-36 left-1/10 opacity-70 z-20 transform">
+          </div>
+          <div
+            class="bg-orange w-3/10 h-2 md:h-6 sm:w-1/5 sm:h-7 rotate-4 absolute bottom-1/8 sm:bottom-4 origin-bottom-left left-12 opacity-70 transform">
+          </div>
+
+          <div
+            class="bg-blue w-24 h-24 md:w-36 md:h-36 -rotate-30 absolute -bottom-40 left-1/2 sm:left-2/3 opacity-70 z-20 {{scaleSize}}">
+          </div>
+          <div
+            class="bg-green w-48 h-7 sm:h-10 -rotate-12 absolute -bottom-20 sm:-bottom-40 md:-bottom-60 right-1/5 sm:right-1/6 opacity-80 z-20 {{scaleSize}}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {%- comment -%}part4{%- endcomment -%}
+  <div class="w-full relative z-10">
+    <div class="{{wClass}} px-6 md:px-0 py-8 sm:py-12 lg:py-20">
+      <h1 class="w-full sm:w-8/10 xl:w-7/10 {{titleSize_lg}}">
+        The Art of<br>
+        Fusion Weaving™
+      </h1>
+    </div>
+
+    <div class="space-y-28 sm:space-y-14 lg:space-y-24">
+
+      <div id="trigger-material-plain"></div>
+      <div class="material-box w-full flex border-t border-b border-gray-400 lg:transform -translate-x-full">
+        <div class="border-r border-gray-400 flex self-end flex-shrink-0">
+          <h1
+            class="w-full flex self-end sm:w-3/5 mx-10 font-bold text-opacity-0 transform origin-bottom-left -rotate-90">
+            <span class="large_2x opacity-20">PITAKA</span>
+          </h1>
+        </div>
+        <div class="flex items-center border-r border-gray-400">
+          <h1 class="w-full sm:w-4/5 mx-auto {{titleSize_lg}} font-bold">
+            Plain
+          </h1>
+        </div>
+        <div class="material-blocks flex flex-wrap relative flex-shrink-0">
+          {% for l in (1..32) %}
+          {% for h in (1..32) %}
+          {% assign lm_2 = l | modulo: 2 %}
+          {% assign hm_2 = h | modulo: 2 %}
+          {% capture bgColor %}
+          {% if lm_2 == hm_2 %}
+          bg-gray-23
+          {% else %}
+          bg-gray-14
+          {% endif %}
+          {% endcapture %}
+
+          {% capture hiddenClass %}
+          {% if l > 28 or h > 28 %}
+          hidden xl:block
+          {% elsif l > 24 or h > 24 %}
+          hidden lg:block
+          {% elsif l > 20 or h > 20 %}
+          hidden laptop:block
+          {% elsif l > 18 or h > 18 %}
+          hidden sm:block
+          {% else %}
+          block
+          {% endif %}
+          {% endcapture %}
+
+          <span
+            class="material-block lg:opacity-0 {{hiddenClass}} {{bgColor}} w-4 h-4 laptop:w-5 laptop:h-5 xl:w-6 xl:h-6"></span>
+
+          {% endfor %}
+          {% endfor %}
+        </div>
+      </div>
+
+      <div id="trigger-material-twill"></div>
+      <div class="material-box w-full flex border-t border-b border-gray-400 lg:transform translate-x-full">
+        <div class="border-r border-gray-400 flex self-end flex-shrink-0">
+          <h1
+            class="w-full flex self-end sm:w-3/5 mx-10 font-bold text-opacity-0 transform origin-bottom-left -rotate-90">
+            <span class="large_2x opacity-20">PITAKA</span>
+          </h1>
+        </div>
+        <div class="flex items-center border-r border-gray-400">
+          <h1 class="w-full sm:w-4/5 mx-auto {{titleSize_lg}} font-bold">
+            Twill
+          </h1>
+        </div>
+        <div class="material-blocks flex flex-wrap relative flex-shrink-0">
+          {% for l in (1..32) %}
+          {% for h in (1..32) %}
+          {% assign lm_4 = l | modulo: 4 %}
+          {% assign hm_4 = h | modulo: 4 %}
+          {% if lm_4 == 1 %}
+          {% capture bgColor %}
+          {% if hm_4 > 1 %}
+          bg-gray-23
+          {% else %}
+          bg-gray-14
+          {% endif %}
+          {% endcapture %}
+
+          {% elsif lm_4 == 2 %}
+          {% capture bgColor %}
+          {% if hm_4 == 1 or hm_4 == 2 %}
+          bg-gray-23
+          {% else %}
+          bg-gray-14
+          {% endif %}
+          {% endcapture %}
+
+          {% elsif lm_4 == 3 %}
+          {% capture bgColor %}
+          {% if hm_4 < 2 %}
+          bg-gray-23
+          {% else %}
+          bg-gray-14
+          {% endif %}
+          {% endcapture %}
+          {% elsif lm_4 == 0 %}
+          {% capture bgColor %}
+          {% if hm_4 == 0 or hm_4 == 3 %}
+          bg-gray-23
+          {% else %}
+          bg-gray-14
+          {% endif %}
+          {% endcapture %}
+          {% endif %}
+
+          {% capture hiddenClass %}
+          {% if l > 28 or h > 28 %}
+          hidden xl:block
+          {% elsif l > 24 or h > 24 %}
+          hidden lg:block
+          {% elsif l > 20 or h > 20 %}
+          hidden laptop:block
+          {% elsif l > 18 or h > 18 %}
+          hidden sm:block
+          {% else %}
+          block
+          {% endif %}
+          {% endcapture %}
+
+          <span
+            class="material-block lg:opacity-0 {{hiddenClass}} {{bgColor}} w-4 h-4 laptop:w-5 laptop:h-5 xl:w-6 xl:h-6"></span>
+
+          {% endfor %}
+          {% endfor %}
+        </div>
+      </div>
+
+      <div id="trigger-material-fusion"></div>
+      <div class="material-box w-full flex border-t border-b border-gray-400 lg:transform -translate-x-full">
+        <div class="border-r border-gray-400 flex self-end flex-shrink-0">
+          <h1
+            class="w-full flex self-end sm:w-3/5 mx-10 font-bold text-opacity-0 transform origin-bottom-left -rotate-90">
+            <span class="large_2x opacity-20">PITAKA</span>
+          </h1>
+        </div>
+        <div class="flex items-center border-r border-gray-400">
+          <h1 class="w-full sm:w-4/5 mx-auto {{titleSize_lg}} font-bold">
+            Fusion<br>
+            Weaving
+          </h1>
+        </div>
+        <div class="material-blocks flex flex-wrap relative flex-shrink-0">
+          {% for l in (1..32) %}
+          {% for h in (1..32) %}
+          {% assign lm_2 = l | modulo: 2 %}
+          {% assign lm_4 = l | modulo: 4 %}
+          {% assign hm_4 = h | modulo: 4 %}
+          {% if lm_4 == 1 %}
+          {% capture bgColor %}
+          {% if hm_4 > 1 %}
+          bg-gray-23
+          {% else %}
+          bg-gray-14
+          {% endif %}
+          {% endcapture %}
+
+          {% elsif lm_4 == 2 %}
+          {% capture bgColor %}
+          {% if hm_4 == 1 or hm_4 == 2 %}
+          bg-gray-23
+          {% else %}
+          bg-gray-14
+          {% endif %}
+          {% endcapture %}
+
+          {% elsif lm_4 == 3 %}
+          {% capture bgColor %}
+          {% if hm_4 < 2 %}
+          bg-gray-23
+          {% else %}
+          bg-gray-14
+          {% endif %}
+          {% endcapture %}
+          {% elsif lm_4 == 0 %}
+          {% capture bgColor %}
+          {% if hm_4 == 0 or hm_4 == 3 %}
+          bg-gray-23
+          {% else %}
+          bg-gray-14
+          {% endif %}
+          {% endcapture %}
+          {% endif %}
+
+          {% capture fusionColor %}
+          {% if h == 9 and lm_2 == 0 %}
+          bg-blue
+          {% elsif h == 10 and lm_2 == 1 %}
+          bg-green
+          {% elsif h == 11 and lm_2 == 0 %}
+          bg-orange
+          {% elsif h == 12 and lm_2 == 1 %}
+          bg-red
+          {% elsif h == 13 and lm_2 == 0 %}
+          bg-red-dark
+          {% else %}
+          {{bgColor}}
+          {% endif %}
+          {% endcapture %}
+
+          {% capture hiddenClass %}
+          {% if l > 28 or h > 28 %}
+          hidden xl:block
+          {% elsif l > 24 or h > 24 %}
+          hidden lg:block
+          {% elsif l > 20 or h > 20 %}
+          hidden laptop:block
+          {% elsif l > 18 or h > 18 %}
+          hidden sm:block
+          {% else %}
+          block
+          {% endif %}
+          {% endcapture %}
+
+          <span
+            class="material-block lg:opacity-0 {{hiddenClass}} {{fusionColor}} w-4 h-4 laptop:w-5 laptop:h-5 xl:w-6 xl:h-6"></span>
+
+          {% endfor %}
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+
+    <div class="{{wClass}} {{pdClass}}">
+      <h3 class="w-full sm:w-9/10 xl:w-8/10 mx-auto {{descSize_lg}} mb-20">
+        Common weave styles, like plain and twill, only involve one weaving sequence, so the designs are limited.
+        <a href="/collections/fusion-weaving-series" class="text-white hover:text-cyan">Fusion Weaving™</a>, 
+        on the other hand, allows us to have intricate designs. But it is not without challenges.
+        Fusion Weaving™ involves:
+      </h3>
+
+      <div id="trigger-video-2"></div>
+      <div class="w-full relative video-container">
+        <div class="video-cover relative">
+          <div class="absolute left-0 top-0 transform w-full h-full flex justify-center items-center hidden">
+            <div class="play-btn rounded-full w-9 h-9 bg-white flex justify-center items-center">
+              {{ 'triggle_pixel-black.svg' | asset_url | img_tag:'','block' }}
+            </div>
+          </div>
+          <picture>
+            <img src="{{ placeholder_gif }}" data-src="{{ 'The-Intertwining-of-Warp-and-Weft-cover.jpg' | asset_url }}"
+              class="block w-full lazyload" />
+          </picture>
+        </div>
+        <div class="modal-container absolute w-full h-full opacity-0 inset-0 transition">
+          <video muted loop playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+            x5-video-orientation="portraint" class="w-full h-full block object-cover">
+            <source src="{{ 'The-Intertwining-of-Warp-and-Weft.mp4' | asset_url }}" type="video/mp4" />
+            <source src="{{ 'The-Intertwining-of-Warp-and-Weft.webm' | asset_url }}" type="video/webm" />
+          </video>
+        </div>
+      </div>
+
+      <div class="py-12 sm:py-20">
+        <h3 class="w-full sm:w-8/10 xl:w-6/10 mx-auto {{descSize_lg}} mb-10 sm:mb-12">
+          Precise control of the fabric tension
+        </h3>
+        <h3 class="w-full sm:w-8/10 xl:w-6/10 mx-auto {{descSize_lg}}">
+          Warp and weft fibers of different colors intertwining at various layers
+        </h3>
+      </div>
+
+      <div id="trigger-4_1" class="trigger-point"></div>
+      <div class="section-blocks w-full h-2 lg:h-32 relative" name="4_1">
+        <div
+          class="bg-orange w-3/10 sm:w-1/8 h-3 sm:h-6 absolute bottom-4 sm:bottom-24 origin-bottom-right sm:origin-center right-1/2 opacity-70 {{scaleSize_lg}}">
+        </div>
+        <div
+          class="bg-green w-1/3 sm:w-1/6 h-3 sm:h-6 absolute bottom-1 sm:bottom-10 origin-bottom-right sm:origin-center right-4/10 opacity-80 {{scaleSize_lg}}">
+        </div>
+        <div
+          class="bg-red w-3/10 sm:w-1/8 h-3 sm:h-6 absolute bottom-0 sm:bottom-8 origin-bottom-left sm:origin-center left-4/10 opacity-70 z-20 transform scale-50 sm:scale-70 z-20 {{scaleSize_lg}}">
+        </div>
+      </div>
+
+    </div>
+
+    <div id="trigger_counter"></div>
+    <div class="count-container text-center flex flex-col justify-center mt-16 lg:mt-24 xl:mt-32 relative z-10">
+      <h1 class="{{titleSize_lg}} mb-8">
+        <span id="count" class="large_2x">10215</span>
+      </h1>
+      <div class="rounded-full w-max border mx-auto border-gray-400 py-1 px-8">
+        <h3 class="{{descSize_lg}}">
+          hours of testing
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  {%- comment -%}part5{%- endcomment -%}
+  <div class="{{pdClass}} z-10 relative mt-10 xl:mt-28">
+    <div id="trigger-5_1" class="trigger-point"></div>
+    <div class="{{wClass}} relative z-30">
+      <div class="w-full md:w-9/10 xl:w-8/10 mx-auto flex items-center justify-end">
+        <h4
+          class="text-xs sm:text-base md:text-xl xl:text-2xl text-gray-400 font-bold pr-1 sm:pr-2 md:pr-4 pb-12 md:pb-24">
+          Delicate polishing by hands
+        </h4>
+        <div class="w-full sm:w-7/10 xl:w-5/10">
+          <img src="{{'fusion-weaving-section5-1.jpg' | asset_url }}" class="block w-full" />
+        </div>
+      </div>
+
+      <div class="w-full">
+        <h1 class="{{titleSize_lg}} transform -translate-y-full">
+          Thousand times<br>
+          of molding
+        </h1>
+        <div class="flex items-center justify-end mb-0 sm:mb-12">
+          <div class="w-full sm:w-8/10 lg:w-7/10">
+            <h3 class="{{descSize_lg}}">
+              After numerous attempts, we managed to blend two or more weaving styles onto one loom, which is the
+              reason
+              why Fusion Weaving™ cases appear to be much more beautiful, with stronger three-dimensional effects and
+              better grip.
+            </h3>
+          </div>
+        </div>
+        <div class="w-full py-12 sm:py-16 md:py-20 lg:py-28">
+          <div id="trigger-video-3"></div>
+          <div class="w-full relative video-container">
+            <div class="video-cover relative">
+              <div class="absolute left-0 top-0 transform w-full h-full flex justify-center items-center hidden">
+                <div class="play-btn rounded-full w-9 h-9 bg-white flex justify-center items-center">
+                  {{ 'triggle_pixel-black.svg' | asset_url | img_tag:'','block' }}
+                </div>
+              </div>
+              <picture>
+                <img src="{{ placeholder_gif }}" data-src="{{ 'Three-Dimensional-Effect-cover.jpg' | asset_url }}"
+                  class="block w-full lazyload" />
+              </picture>
+            </div>
+            <div class="modal-container absolute w-full h-full opacity-0 inset-0 transition">
+              <video muted loop playsinline webkit-playsinline x5-video-player-type="h5"
+                x5-video-player-fullscreen="true" x5-video-orientation="portraint"
+                class="w-full h-full block object-cover">
+                <source src="{{ 'Three-Dimensional-Effect.mp4' | asset_url }}" type="video/mp4" />
+                <source src="{{ 'Three-Dimensional-Effect.webm' | asset_url }}" type="video/webm" />
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <h1 class="{{titleSize_lg}} mb-16">
+          Music Inspired<br>
+          Cases
+        </h1>
+        <div class="w-full sm:w-9/10">
+          <h3 class="{{descSize_lg}} mb-10 sm:mb-20">
+            Be intrigued by the aramid fiber strands of various colors dancing on the loom. It reminds us of the
+            string family, the guitar, harp, and violin. The dots and lines on the Fusion Weaving™ cases look similar to
+            the notes on a stave - both compose a beautiful symphony.
+          </h3>
+          <h3 class="{{descSize_lg}}">
+            How do the four designs blend into the four movements of a masterpiece in a symphony?
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-blocks absolute inset-0 z-20" name="5_1">
+
+      <div class="bg-green w-20 h-20 absolute -top-20 lg:top-6 right-1/8 lg:right-1/12 opacity-80 {{scaleSize}}"></div>
+      <div
+        class="bg-orange w-76 h-16 -rotate-30 absolute top-28 right-1/8 lg:top-1/10 lg:right-1/12 opacity-70 {{scaleSize}}">
+      </div>
+      <div class="bg-blue w-36 h-20 absolute top-1/6 -right-6 lg:right-12 opacity-70 {{scaleSize}}"></div>
+      <div
+        class="bg-green w-40 h-44 lg:w-44 lg:h-48 absolute top-1/8 sm:top-1/4 md:top-1/5 right-1/3 lg:right-5/12 opacity-80 {{scaleSize}}">
+      </div>
+
+      <div class="bg-orange w-16 h-2 sm:h-4 -rotate-30 absolute top-1/3 left-1/10 opacity-70 transform"></div>
+    </div>
+
+    <div class="absolute right-0 inset-y-0 w-1/2 h-1/4 sm:w-1/3 sm:h-1/3 lg:w-1/2 lg:h-1/3 z-10">
+      <img src="{{'fusion-weaving-section4-bg-grid.svg' | asset_url }}" class="block w-full object-cover h-full" />
+    </div>
+  </div>
+
+  {%- comment -%}part6{%- endcomment -%}
+  <div class="{{wClass}} {{pdClass}} z-10 relative mt-0 md:mt-12 xl:mt-32">
+    <div id="trigger-6_1" class="trigger-point"></div>
+    <div class="flex flex-wrap justify-between items-center z-20 relative">
+      <div class="w-full px-3 sm:px-0 sm:w-5/10 lg:w-5/12 relative z-20">
+        <h1 class="{{titleSize_lg}} mb-4 sm:mb-8">
+          Overture
+        </h1>
+        <h3 class="{{descSize_lg}}">
+          Enter a boundless journey of time and space.
+        </h3>
+
+        <div class="w-full flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-8 mt-6 sm:mt-8">
+          {% capture magez_overture_id %}
+          {% if shop.domain == 'eu.ipitaka.com' %}
+          41039712190641
+          {% elsif shop.domain == 'global.ipitaka.com' %}
+          40753762926764
+          {% else %}
+          39572532297798
+          {% endif %}
+          {% endcapture %}
+
+          {% capture air_overture_id %}
+          {% if shop.domain == 'eu.ipitaka.com' %}
+          41039713468593
+          {% elsif shop.domain == 'global.ipitaka.com' %}
+          40754269126828
+          {% else %}
+          39572655931462
+          {% endif %}
+          {% endcapture %}
+
+          {% assign magez_overture_link = magez_overture_id | strip | prepend: '/products/fusion-weaving-magez-case-2-for-iphone-13?variant=' %}
+          {% assign air_overture_link = air_overture_id | strip | prepend: '/products/fusion-weaving-air-case-for-iphone-13?variant=' %}
+
+          {% render 'link-button',link_url: magez_overture_link, link_title:'MagEZ Case 2' %}
+          {% render 'link-button',link_url: air_overture_link, link_title:'Air Case' %}
+        </div>
+      </div>
+      <div class="w-full sm:w-5/10 relative z-20 mt-24 sm:mt-0" name="6_1">
+        <img src="{{'fusion-weaving-section6-product-1.png' | asset_url }}"
+          class="section6-product block w-3/5 sm:w-4/5 lg:w-3/5 mx-auto" />
+      </div>
+
+      <div class="section-blocks absolute inset-0 z-10 mt-8 sm:mt-0" name="6_1">
+        <div class="bg-green w-32 h-16 -rotate-60 absolute top-1/8 sm:top-1/12 right-16 opacity-80 {{scaleSize}}">
+        </div>
+        <div class="bg-red w-32 h-5 -rotate-60 absolute top-1/6 sm:top-1/8 right-0 opacity-60 {{scaleSize}}"></div>
+
+        <div
+          class="bg-green w-4/10 sm:w-2/10 h-2.5 rotate-30 absolute bottom-1/12 sm:bottom-2/10 left-0 sm:left-1/2 opacity-80 transform">
+        </div>
+        <div
+          class="bg-red w-full sm:w-3/10 h-2.5 rotate-40 absolute bottom-6 sm:bottom-0 right-1/3 sm:right-1/4 opacity-60 {{scaleSize}}">
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap-reverse justify-between items-center mt-12 sm:mt-20 z-30 relative">
+      <div id="trigger-6_4" class="trigger-point"></div>
+
+      <div class="w-full sm:w-5/10 lg:w-4/10 mt-24 sm:mt-0" name="6_4">
+        <img src="{{'fusion-weaving-section6-product-2.png' | asset_url }}"
+          class="section6-product block w-3/4 sm:w-auto max-w-full mx-auto" />
+      </div>
+
+      <div class="w-full sm:w-5/10 lg:w-6/10">
+        <div class="w-full px-3 sm:px-0 sm:w-9/10 xl:w-3/4 sm:mx-auto transform translate-y-1/4">
+          <h1 class="{{titleSize_lg}} mb-4 sm:mb-8">
+            Concerto
+          </h1>
+          <h3 class="{{descSize_lg}}">
+            A harmony of personality and functionality.
+          </h3>
+
+          <div class="w-full flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-8 mt-6 sm:mt-8">
+            {% capture magez_concerto_id %}
+            {% if shop.domain == 'eu.ipitaka.com' %}
+            41039712026801
+            {% elsif shop.domain == 'global.ipitaka.com' %}
+            40753762893996
+            {% else %}
+            39572532265030
+            {% endif %}
+            {% endcapture %}
+
+            {% capture air_concerto_id %}
+            {% if shop.domain == 'eu.ipitaka.com' %}
+            41039713435825
+            {% elsif shop.domain == 'global.ipitaka.com' %}
+            40754269159596
+            {% else %}
+            39572655964230
+            {% endif %}
+            {% endcapture %}
+
+            {% assign magez_concerto_link = magez_concerto_id | strip | prepend: '/products/fusion-weaving-magez-case-2-for-iphone-13?variant=' %}
+            {% assign air_concerto_link = air_concerto_id | strip | prepend: '/products/fusion-weaving-air-case-for-iphone-13?variant=' %}
+
+            {% render 'link-button',link_url: magez_concerto_link, link_title:'MagEZ Case 2' %}
+            {% render 'link-button',link_url: air_concerto_link, link_title:'Air Case' %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full lg:w-8/10 mx-auto flex flex-wrap mt-20 sm:mt-36 lg:mt-56 pt-12 sm:pt-0 z-20 relative">
+      <div id="trigger-6_2" class="trigger-point"></div>
+      <div class="w-full px-3 sm:px-0 xl:w-3/4 mt-10 lg:mt-16 order-1 sm:order-2 relative z-20">
+        <h1 class="{{titleSize_lg}} mb-4 sm:mb-8">
+          Rhapsody
+        </h1>
+        <h3 class="{{descSize_lg}}">
+          Tune up to integration of passion and enthusiastic expression of feeling.
+        </h3>
+        <div class="w-full flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-8 mt-6 sm:mt-8">
+          {% capture magez_rhapsody_id %}
+          {% if shop.domain == 'eu.ipitaka.com' %}
+          41039711994033
+          {% elsif shop.domain == 'global.ipitaka.com' %}
+          40753762861228
+          {% else %}
+          39572532232262
+          {% endif %}
+          {% endcapture %}
+
+          {% capture air_rhapsody_id %}
+          {% if shop.domain == 'eu.ipitaka.com' %}
+          41039713271985
+          {% elsif shop.domain == 'global.ipitaka.com' %}
+          40754269225132
+          {% else %}
+          39572655898694
+          {% endif %}
+          {% endcapture %}
+
+          {% assign magez_rhapsody_link = magez_rhapsody_id | strip | prepend: '/products/fusion-weaving-magez-case-2-for-iphone-13?variant=' %}
+          {% assign air_rhapsody_link = air_rhapsody_id | strip | prepend: '/products/fusion-weaving-air-case-for-iphone-13?variant=' %}
+
+          {% render 'link-button',link_url: magez_rhapsody_link, link_title:'MagEZ Case 2' %}
+          {% render 'link-button',link_url: air_rhapsody_link, link_title:'Air Case' %}
+        </div>
+      </div>
+
+      <div class="w-full flex justify-end order-2 sm:order-1 relative z-20 mt-24 sm:mt-0">
+        <div class="w-full sm:w-7/10" name="6_2">
+          <img src="{{'fusion-weaving-section6-product-3.png' | asset_url }}"
+            class="section6-product block w-11/12 sm:w-auto max-w-full mx-auto" />
+        </div>
+      </div>
+
+      <div class="section-blocks absolute inset-0 z-10 -mt-14 sm:mt-0" name="6_2">
+        <div
+          class="bg-blue w-44 h-7 absolute -top-12 -left-12 opacity-70 transform scale-50 sm:scale-70 lg:scale-85 xl:scale-100">
+        </div>
+        <div
+          class="bg-orange w-44 h-7 absolute top-1/12 left-1/12 opacity-70 transform scale-50 sm:scale-70 lg:scale-85 xl:scale-100">
+        </div>
+        <div class="bg-green w-9 h-9 absolute top-0 sm:-top-12 right-1/5 opacity-80 transform"></div>
+        <div
+          class="bg-green w-56 h-4 sm:h-7 absolute bottom-1/2 left-3/10 sm:left-1/10 opacity-70 z-10 transform scale-50 sm:scale-70 lg:scale-85 xl:scale-100">
+        </div>
+        <div
+          class="bg-red w-56 h-4 sm:h-7 absolute top-1/2 left-1/4 sm:left-1 opacity-60 transform scale-50 sm:scale-70 lg:scale-85 xl:scale-100">
+        </div>
+        <div
+          class="bg-red-dark w-14 h-10 absolute bottom-2/3 -right-24 opacity-80 transform scale-50 sm:scale-70 lg:scale-85 xl:scale-100">
+        </div>
+        <div
+          class="bg-orange w-14 h-14 absolute top-full md:top-2/3 -right-12 md:-right-32 opacity-70 transform scale-50 sm:scale-70 lg:scale-85 xl:scale-100">
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap justify-between items-center mt-12 sm:mt-20 relative">
+      <div class="w-full px-3 sm:px-0 sm:w-5/10 lg:w-4/10 transform sm:translate-y-1/2 relative z-20">
+        <h1 class="{{titleSize_lg}} mb-4 sm:mb-8">
+          Sonata
+        </h1>
+        <h3 class="{{descSize_lg}}">
+          Indulge in the rhythm.
+        </h3>
+        <div class="w-full flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-8 mt-6 sm:mt-8">
+          {% capture magez_sonata_id %}
+          {% if shop.domain == 'eu.ipitaka.com' %}
+          41039712092337
+          {% elsif shop.domain == 'global.ipitaka.com' %}
+          40753762959532
+          {% else %}
+          39572532330566
+          {% endif %}
+          {% endcapture %}
+
+          {% capture air_sonata_id %}
+          {% if shop.domain == 'eu.ipitaka.com' %}
+          41039713501361
+          {% elsif shop.domain == 'global.ipitaka.com' %}
+          40754269192364
+          {% else %}
+          39572655996998
+          {% endif %}
+          {% endcapture %}
+
+          {% assign magez_sonata_link = magez_sonata_id | strip | prepend: '/products/fusion-weaving-magez-case-2-for-iphone-13?variant=' %}
+          {% assign air_sonata_link = air_sonata_id | strip | prepend: '/products/fusion-weaving-air-case-for-iphone-13?variant=' %}
+
+          {% render 'link-button',link_url: magez_sonata_link, link_title:'MagEZ Case 2' %}
+          {% render 'link-button',link_url: air_sonata_link, link_title:'Air Case' %}
+        </div>
+      </div>
+      <div class="w-full sm:w-5/10 md:pl-12 relative z-20 my-24 sm:my-0" name="6_3">
+        <img src="{{'fusion-weaving-section6-product-4.png' | asset_url }}"
+          class="section6-product block w-4/5 sm:w-auto max-w-full mx-auto" />
+      </div>
+
+      <div id="trigger-6_3" class="trigger-point"></div>
+      <div class="section-blocks absolute inset-0 z-10" name="6_3">
+        <div class="bg-green w-32 h-12 -rotate-3 absolute bottom-20 left-1/5 opacity-70 {{scaleSize}}">
+        </div>
+        <div class="bg-green w-8 h-8 absolute bottom-1/12 left-6/10 opacity-70 transform"></div>
+        <div class="bg-green w-14 h-14 absolute top-11/12 left-5/10 opacity-80 {{scaleSize}}"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <img src="{{'fusion-weaving-section-lines.svg' | asset_url }}"
+    class="block absolute w-full h-full sm:object-right-top object-cover top-0 right-0 opacity-80" id="section-lines" />
+</div>
+
+<div class="last-section {{pdClass}} bg-black">
+  <div id="trigger_last"></div>
+  <div class="{{wClass_8}}">
+    <h1 class="{{titleSize_lg}} mb-8">
+      Weave Your Style
+    </h1>
+    <div class="w-full relative">
+      <h3 class="absolute opacity-0 lg:opacity-100 top-0 {{descSize_lg}}" id="typewriting">
+        <span aria-hidden="true"></span>
+      </h3>
+      <h3 class="lg:opacity-0 {{descSize_lg}}">
+        Fusion Weaving™ series is an embodiment of PITAKA's pursuit of craftsmanship and commitment to innovation. This
+        new design can bring you an experience like you never had before, and be inspired, as always.
+      </h3>
+    </div>
+
+    <div class="w-full bg-gray-850 text-center mt-16 md:mt-24 xl:mt-32 py-12 md:py-16 xl:py-20">
+      <div class="px-6 md:px-16">
+        {{'index-joinus-icon.svg' | asset_url | img_tag:'Join Us','block w-20 mx-auto mb-12' }}
+        <h3 class="{{titleSize}} mb-6">Join Us</h3>
+        <p class="{{descSize}} mb-12">
+          Sign up to be a part of our global community, offering you a world of exclusive benefits.
+        </p>
+      </div>
+      <div class="privy-embed-form px-6 md:px-12" data-campaign="2651818"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .section-blocks>div {
+    transition: all 1s ease-in-out;
+  }
+
+  @media screen and (min-width:1280px) {
+    .section-blocks>div.active {
+      transform-origin: center;
+    }
+  }
+
+  .section-blocks[name='1_1']>div:first-child.active {
+    --tw-translate-x: -100%;
+  }
+
+  .section-blocks[name='1_1']>div:nth-child(3).active {
+    --tw-translate-y: -60%;
+  }
+
+  .section-blocks[name='1_1']>div:nth-child(4).active {
+    --tw-translate-x: -30%;
+  }
+
+  .section-blocks[name='1_1']>div:nth-child(5).active {
+    --tw-translate-y: 30%;
+  }
+
+  .section-blocks[name='1_2']>div:first-child.active {
+    --tw-translate-y: -10%;
+    --tw-rotate: 10deg;
+  }
+
+  .section-blocks[name='1_2']>div:nth-child(2).active {
+    --tw-translate-y: -20%;
+  }
+
+  .section-blocks[name='1_2']>div:nth-child(3).active {
+    --tw-rotate: 5deg;
+  }
+
+  .section-blocks[name='1_2']>div:nth-child(4).active {
+    --tw-translate-x: -100%;
+  }
+
+  .section-blocks[name='1_3']>div:first-child.active {
+    --tw-rotate: 15deg;
+  }
+
+  .section-blocks[name='1_3']>div:nth-child(2).active {
+    --tw-rotate: -10deg;
+  }
+
+  .section-blocks[name='1_3']>div:nth-child(3).active {
+    --tw-translate-y: -100%;
+  }
+
+  .section-blocks[name='1_3']>div:nth-child(4).active {
+    --tw-rotate: -20deg;
+  }
+
+  .section-blocks[name='1_4']>div:first-child.active {
+    --tw-rotate: -60deg;
+    --tw-scale-x: 1.5;
+  }
+
+  .section-blocks[name='1_4']>div:nth-child(2).active {
+    --tw-translate-y: -100%;
+  }
+
+  .section-blocks[name='1_4']>div:nth-child(3).active {
+    --tw-rotate: 90deg;
+    --tw-scale-x: 2;
+    --tw-scale-y: 2;
+  }
+
+  .section-blocks[name='1_4']>div:nth-child(4).active {
+    --tw-rotate: -30deg;
+  }
+
+  .section-blocks[name='1_4']>div:nth-child(5).active {
+    --tw-translate-y: -80%;
+    --tw-translate-x: 20%;
+  }
+
+  .section-blocks[name='1_4']>div:nth-child(6).active {
+    --tw-rotate: 15deg;
+  }
+
+  .section-blocks[name='2_1']>div:first-child.active {
+    --tw-translate-y: -100%;
+  }
+
+  .section-blocks[name='2_1']>div:nth-child(2).active {
+    --tw-rotate: -30deg;
+  }
+
+  .section-blocks[name='2_1']>div:nth-child(3).active {
+    --tw-rotate: -15deg;
+  }
+
+  .section-blocks[name='2_1']>div:nth-child(4).active {
+    --tw-translate-x: 100%;
+  }
+
+  .section-blocks[name='2_1']>div:nth-child(5).active {
+    --tw-rotate: 405deg;
+    --tw-scale-x: 3;
+    --tw-scale-y: 3;
+  }
+
+  .section-blocks[name='2_1']>div:nth-child(6).active {
+    --tw-translate-y: -200%;
+  }
+
+  .section-blocks[name='2_1']>div:nth-child(7).active {
+    --tw-translate-y: 200%;
+    --tw-scale-x: 1.5;
+    --tw-scale-y: 1.5;
+  }
+
+  .section-blocks[name='2_1']>div:nth-child(8).active {
+    --tw-translate-x: -60%;
+  }
+
+  .section-blocks[name='2_1']>div:nth-child(9).active {
+    --tw-rotate: -90deg;
+    --tw-scale-x: 3;
+    --tw-scale-y: 3;
+  }
+
+  .section-blocks[name='2_1']>div:nth-child(10).active {
+    --tw-translate-y: -10%;
+  }
+
+  .section-blocks[name='2_1']>div:nth-child(11).active {
+    --tw-rotate: 360deg;
+  }
+
+  .section-blocks[name='2_2']>div:first-child.active {
+    --tw-translate-x: -50%;
+    --tw-translate-y: 100%;
+  }
+
+  .section-blocks[name='2_2']>div:nth-child(2).active {
+    --tw-translate-x: 100%;
+  }
+
+  .section-blocks[name='2_2']>div:nth-child(3).active {
+    --tw-translate-x: -50%;
+    --tw-translate-y: -20%;
+  }
+
+  .section-blocks[name='2_2']>div:nth-child(4).active {
+    --tw-rotate: 40deg;
+  }
+
+  .section-blocks[name='3_1']>div:first-child.active {
+    --tw-rotate: 330deg;
+    --tw-scale-x: 1.5;
+    --tw-scale-y: 1.5;
+  }
+
+  .section-blocks[name='3_1']>div:nth-child(2).active {
+    --tw-scale-x: 2;
+    --tw-scale-y: 2;
+    --tw-rotate: 30deg;
+    transition: all 1.5s ease-in-out 0.2s;
+  }
+
+  .section-blocks[name='3_1']>div:nth-child(3).active {
+    --tw-rotate: 5deg;
+    --tw-scale-x: 2;
+    --tw-scale-y: 2;
+    transition: all 1.5s ease-in-out 0.3s;
+  }
+
+  .section-blocks[name='3_1']>div:nth-child(4).active {
+    --tw-rotate: -5deg;
+    --tw-scale-x: 2;
+    transition: all 1s ease-in-out 0.5s;
+  }
+
+  .section-blocks[name='3_1']>div:nth-child(5).active {
+    --tw-translate-y: -100%;
+    --tw-rotate: 330deg;
+    --tw-scale-x: 0.8;
+    --tw-scale-y: 0.8;
+  }
+
+  .section-blocks[name='3_1']>div:nth-child(6).active {
+    --tw-translate-x: 50%;
+    --tw-translate-y: -110%;
+    transition: all 1s ease-in-out 0.5s;
+  }
+
+  .section-blocks[name='4_1']>div:first-child.active {
+    --tw-rotate: 60deg;
+    --tw-translate-y: 400%;
+  }
+
+  .section-blocks[name='4_1']>div:nth-child(2).active {
+    --tw-rotate: -15deg;
+    --tw-translate-y: 400%;
+  }
+
+  .section-blocks[name='4_1']>div:nth-child(3).active {
+    --tw-rotate: 30deg;
+    --tw-translate-y: 400%;
+  }
+
+  .section-blocks[name='5_1']>div:first-child.active {
+    --tw-translate-x: 100%;
+  }
+
+  .section-blocks[name='5_1']>div:nth-child(2).active {
+    --tw-translate-y: -150%;
+  }
+
+  .section-blocks[name='5_1']>div:nth-child(3).active {
+    --tw-translate-y: -200%;
+  }
+
+  .section-blocks[name='5_1']>div:nth-child(4).active {
+    --tw-rotate: 60deg;
+    --tw-translate-y: 50%;
+    transition: all 1s ease-in-out 0.5s;
+  }
+
+  .section-blocks[name='5_1']>div:nth-child(5).active {
+    --tw-rotate: 15deg;
+    --tw-scale-x: 3;
+    --tw-scale-y: 3;
+    transition: all 1s ease-in-out 1s;
+  }
+
+  .section-blocks[name='6_1']>div:first-child.active {
+    --tw-translate-y: -100%;
+  }
+
+  .section-blocks[name='6_1']>div:nth-child(2).active {
+    --tw-rotate: -30deg;
+  }
+
+  .section-blocks[name='6_1']>div:nth-child(3).active {
+    --tw-translate-x: -50%;
+    --tw-translate-y: 400%;
+    --tw-scale-y: 2;
+    --tw-rotate: 30deg;
+    transition: all 1s ease-in-out 0.5s;
+  }
+
+  .section-blocks[name='6_1']>div:nth-child(4).active {
+    --tw-rotate: 35deg;
+    --tw-translate-x: -10%;
+    --tw-translate-y: 500%;
+  }
+
+  .section-blocks[name='6_2']>div:first-child.active {
+    --tw-translate-y: -100%;
+  }
+
+  .section-blocks[name='6_2']>div:nth-child(2).active {
+    --tw-translate-y: 100%;
+  }
+
+  .section-blocks[name='6_2']>div:nth-child(3).active {
+    --tw-scale-x: 1.25;
+    --tw-rotate: 180deg;
+  }
+
+  .section-blocks[name='6_2']>div:nth-child(4).active {
+    --tw-rotate: 45deg;
+  }
+
+  .section-blocks[name='6_2']>div:nth-child(5).active {
+    --tw-rotate: 15deg;
+  }
+
+  .section-blocks[name='6_2']>div:nth-child(6).active {
+    --tw-translate-y: -100px;
+  }
+
+  .section-blocks[name='6_2']>div:nth-child(7).active {
+    --tw-translate-x: -100px;
+  }
+
+  .section-blocks[name='6_3']>div:first-child.active {
+    --tw-translate-y: -700%;
+  }
+
+  .section-blocks[name='6_3']>div:nth-child(2).active {
+    --tw-rotate: 45deg;
+    --tw-scale-x: 2;
+    --tw-scale-y: 2;
+  }
+
+  .section-blocks[name='6_3']>div:nth-child(3).active {
+    --tw-translate-y: -100%;
+  }
+
+  @media screen and (max-width:1024px) {
+    .section-blocks[name='6_3']>div:first-child.active {
+      --tw-translate-y: -500%;
+    }
+  }
+
+  @media screen and (max-width:767px) {
+    .section-blocks[name='6_3']>div:first-child.active {
+      --tw-translate-y: -100%;
+      --tw-translate-x: -40%;
+    }
+
+    .section-blocks[name='6_3']>div:nth-child(3).active {
+      --tw-translate-x: -100%;
+      --tw-translate-y: 0%;
+    }
+  }
+
+  @media screen and (max-width:767px) {
+    .section-blocks[name='1_1']>div:first-child.active {
+      --tw-translate-x: -50%;
+    }
+
+    .section-blocks[name='1_1']>div:nth-child(3).active {
+      --tw-translate-y: -30%;
+    }
+
+    .section-blocks[name='1_1']>div:nth-child(4).active {
+      --tw-translate-x: -15%;
+    }
+
+    .section-blocks[name='1_1']>div:nth-child(5).active {
+      --tw-translate-y: 30px;
+    }
+
+    .section-blocks[name='1_2']>div:nth-child(2).active {
+      --tw-translate-y: -10%;
+    }
+
+    .section-blocks[name='1_2']>div:nth-child(4).active {
+      --tw-translate-x: -10%;
+      --tw-translate-y: -20%;
+    }
+
+    .section-blocks[name='1_4']>div:first-child.active {
+      --tw-scale-x: 1;
+      --tw-translate-x: -100%;
+    }
+
+    .section-blocks[name='1_4']>div:nth-child(2).active {
+      --tw-translate-y: 30%;
+      --tw-translate-x: 10%;
+    }
+
+    .section-blocks[name='1_4']>div:nth-child(3).active {
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-translate-x: 30%;
+    }
+
+    .section-blocks[name='1_4']>div:nth-child(5).active {
+      --tw-translate-y: -40%;
+    }
+
+    .section-blocks[name='2_1']>div:first-child.active {
+      --tw-translate-y: -10%;
+    }
+
+    .section-blocks[name='2_1']>div:nth-child(2).active {
+      --tw-translate-y: 50%;
+    }
+
+    .section-blocks[name='2_1']>div:nth-child(3).active {
+      --tw-translate-y: -100%;
+    }
+
+    .section-blocks[name='2_1']>div:nth-child(4).active {
+      --tw-translate-x: 50%;
+    }
+
+    .section-blocks[name='2_1']>div:nth-child(5).active {
+      --tw-translate-y: -100%;
+      --tw-scale-x: 1.5;
+      --tw-scale-y: 1.2;
+      --tw-rotate: 30deg;
+    }
+
+    .section-blocks[name='2_1']>div:nth-child(8).active {
+      --tw-translate-x: 20%;
+    }
+
+    .section-blocks[name='2_1']>div:nth-child(9).active {
+      --tw-scale-x: 2;
+      --tw-scale-y: 1.5;
+    }
+
+    .section-blocks[name='2_2']>div:first-child.active {
+      --tw-translate-x: -30%;
+      --tw-translate-y: 50%;
+    }
+
+    .section-blocks[name='2_2']>div:nth-child(2).active {
+      --tw-translate-x: 20%;
+    }
+
+    .section-blocks[name='2_2']>div:nth-child(4).active {
+      --tw-translate-y: 50%;
+    }
+
+    .section-blocks[name='3_1']>div:first-child.active {
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+    }
+
+    .section-blocks[name='3_1']>div:nth-child(2).active {
+      --tw-scale-x: 1.25;
+      --tw-scale-y: 1.25;
+      --tw-translate-y: -50%;
+    }
+
+    .section-blocks[name='3_1']>div:nth-child(3).active {
+      --tw-scale-x: 1.5;
+      --tw-scale-y: 1;
+    }
+
+    .section-blocks[name='3_1']>div:nth-child(5).active {
+      --tw-scale-x: 0.5;
+      --tw-scale-y: 0.5;
+      --tw-translate-y: -120%;
+    }
+
+    .section-blocks[name='5_1']>div:first-child.active {
+      --tw-translate-x: 50%;
+    }
+
+    .section-blocks[name='5_1']>div:nth-child(2).active {
+      --tw-translate-y: -200%;
+    }
+
+    .section-blocks[name='5_1']>div:nth-child(4).active {
+      --tw-scale-x: 0.25;
+      --tw-scale-y: 0.25;
+    }
+
+    .section-blocks[name='5_1']>div:nth-child(5).active {
+      --tw-scale-x: 1.5;
+      --tw-scale-y: 2;
+    }
+
+    .section-blocks[name='6_1']>div:first-child.active {
+      --tw-translate-y: 100%;
+    }
+
+    .section-blocks[name='6_1']>div:nth-child(2).active {
+      --tw-translate-y: 500%;
+      --tw-translate-x: -50%;
+    }
+
+    .section-blocks[name='6_1']>div:nth-child(3).active {
+      --tw-translate-x: 20%;
+      --tw-scale-y: 1;
+    }
+
+    .section-blocks[name='6_1']>div:nth-child(4).active {
+      --tw-translate-x: 10%;
+    }
+
+    .section-blocks[name='6_2']>div:nth-child(5).active {
+      --tw-translate-x: 10%;
+      --tw-translate-y: 200%;
+    }
+
+    .section-blocks[name='6_2']>div:nth-child(7).active {
+      --tw-translate-y: 400%;
+    }
+  }
+</style>
+
+<style>
+  .z-10 {
+    z-index: 5;
+  }
+
+  .section-hero {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @keyframes bounce {
+
+    0%,
+    100% {
+      transform: translateY(-10%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  @keyframes bounce_m {
+
+    0%,
+    100% {
+      transform: translateY(-5%) scale(0.3);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+      transform: translateY(0) scale(0.3);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  @keyframes bounce_l {
+
+    0%,
+    100% {
+      transform: translateY(-5%) scale(0.4);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+      transform: translateY(0) scale(0.4);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  .hero-products .toggle-element.scale-30.active {
+    animation: bounce_m 8.5s infinite;
+  }
+
+  .hero-products .toggle-element.scale-35.active {
+    animation: bounce_l 8s infinite;
+  }
+
+  .section6-product.active {
+    animation: bounce 8s infinite;
+  }
+
+  .toggle-element.lg\:-translate-x-full.active {
+    --tw-translate-x: 0;
+  }
+
+  .toggle-element.active.-translate-y-12,
+  .toggle-element.active.translate-y-12 {
+    --tw-translate-y: 0;
+  }
+
+  .toggle-element.lg\:opacity-0.active {
+    opacity: 100;
+  }
+
+  h1.font-bold {
+    line-height: 1.05;
+  }
+
+  h3.font-semibold {
+    line-height: 1.65;
+  }
+
+  .bg-gray-23 {
+    background-color: #232323;
+  }
+
+  .bg-gray-14 {
+    background-color: #141414;
+  }
+
+  .large_2x {
+    font-size: 200%;
+    line-height: 0.8;
+  }
+
+  .text-opacity-0 {
+    -webkit-text-stroke: 1px #FFFFFF;
+    text-stroke: 1px #FFFFFF;
+    color: transparent;
+  }
+
+  .text-opacity-0.mx-10 {
+    margin-left: 2.5em;
+  }
+
+  .marquee-overflow {
+    width: 1000vw;
+  }
+
+  .marquee-text {
+    display: inline-block;
+    animation: marquee 20s linear infinite running;
+    transform: translate(0%);
+  }
+
+  .marquee-text.inverse {
+    animation: marquee-inverse 20s linear infinite running;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes marquee-inverse {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .count-container {
+    background: url("{{'fusion-weaving-section5-bg-plus.svg' | asset_url }}") no-repeat;
+    background-size: 250%;
+    height: 35vh;
+  }
+
+  .count-container span {
+    letter-spacing: .3em;
+    margin-left: 20px;
+  }
+
+  #typewriting span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1, end) infinite;
+    margin-left: 2px;
+  }
+
+  @keyframes caret {
+    50% {
+      border-color: #fff;
+    }
+
+    100% {
+      border-color: transparent;
+    }
+  }
+
+  .material-box>div:first-child {
+    width: calc(100vw - 288px);
+    height: 288px;
+  }
+
+  .material-box>div:first-child h1 {
+    font-size: 36px;
+  }
+
+  .material-box>div:nth-child(2) {
+    width: 0;
+  }
+
+  .material-box .material-blocks {
+    width: 288px;
+    height: 288px;
+  }
+
+  @media screen and (min-width:768px) {
+    @keyframes bounce_m {
+
+      0%,
+      100% {
+        transform: translateY(-8%) scale(0.4);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      }
+
+      50% {
+        transform: translateY(0) scale(0.4);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      }
+    }
+
+    @keyframes bounce_l {
+
+      0%,
+      100% {
+        transform: translateY(-8%) scale(0.5);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      }
+
+      50% {
+        transform: translateY(0) scale(0.5);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      }
+    }
+
+    .hero-products .toggle-element.sm\:scale-50.active {
+      animation-name: bounce_l;
+    }
+
+    .hero-products .toggle-element.sm\:scale-40.active {
+      animation-name: bounce_m;
+    }
+
+    .sm\:block {
+      display: block;
+    }
+
+    .material-box>div:first-child {
+      width: 110px;
+      height: 320px;
+    }
+
+    .material-box>div:first-child h1 {
+      font-size: 40px;
+    }
+
+    .material-box>div:nth-child(2) {
+      width: calc(100vw - 430px);
+    }
+
+    .material-box .material-blocks {
+      width: 320px;
+      height: 320px;
+    }
+
+    .count-container {
+      background-size: cover;
+      height: 40vh;
+    }
+
+    .count-container span {
+      letter-spacing: .25em;
+    }
+  }
+
+  @media screen and (min-width:1024px) {
+    @keyframes bounce_m {
+
+      0%,
+      100% {
+        transform: translateY(-10%) scale(0.65);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      }
+
+      50% {
+        transform: translateY(0) scale(0.65);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      }
+    }
+
+    @keyframes bounce_l {
+
+      0%,
+      100% {
+        transform: translateY(-10%) scale(0.7);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      }
+
+      50% {
+        transform: translateY(0) scale(0.7);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      }
+    }
+
+    .hero-products .toggle-element.laptop\:scale-70.active {
+      animation-name: bounce_l;
+    }
+
+    .hero-products .toggle-element.laptop\:scale-65.active {
+      animation-name: bounce_m;
+    }
+
+    .laptop\:block {
+      display: block;
+    }
+
+    .material-box>div:first-child {
+      width: 170px;
+      height: 480px;
+    }
+
+    .material-box>div:first-child h1 {
+      font-size: 61px;
+    }
+
+    .material-box>div:nth-child(2) {
+      width: calc(100vw - 640px);
+    }
+
+    .material-box .material-blocks {
+      width: 480px;
+      height: 480px;
+    }
+  }
+
+  @media screen and (min-width:1025px) {
+    .md\:block {
+      display: block;
+    }
+
+    
+  }
+
+  @media screen and (min-width:1280px) {
+    @keyframes bounce_m {
+
+      0%,
+      100% {
+        transform: translateY(-10%) scale(0.75);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      }
+
+      50% {
+        transform: translateY(0) scale(0.75);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      }
+    }
+
+    @keyframes bounce_l {
+
+      0%,
+      100% {
+        transform: translateY(-10%) scale(0.8);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      }
+
+      50% {
+        transform: translateY(0) scale(0.8);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      }
+    }
+
+    .hero-products .toggle-element.lg\:scale-80.active {
+      animation-name: bounce_l;
+    }
+
+    .hero-products .toggle-element.lg\:scale-75.active {
+      animation-name: bounce_m;
+    }
+
+    .lg\:block {
+      display: block;
+    }
+
+    .text-opacity-0.mx-10 {
+      margin-left: 2.35em;
+    }
+
+    .material-box>div:first-child {
+      width: 180px;
+      height: 560px;
+    }
+
+    .material-box>div:first-child h1 {
+      font-size: 71px;
+    }
+
+    .material-box>div:nth-child(2) {
+      width: calc(100vw - 740px);
+    }
+
+    .material-box .material-blocks {
+      width: 560px;
+      height: 560px;
+    }
+
+    .count-container {
+      height: 768px;
+    }
+  }
+
+  @media screen and (min-width:1596px) {
+    .section-hero {
+      height: 100vh;
+    }
+
+    .hero-products .toggle-element.xl\:scale-100.active {
+      animation-name: bounce;
+    }
+
+    .xl\:block {
+      display: block;
+    }
+
+    .text-opacity-0.mx-10 {
+      margin-left: 2.25em;
+    }
+
+    .material-box>div:first-child {
+      width: 220px;
+      height: 768px;
+    }
+
+    .material-box>div:first-child h1 {
+      font-size: 96px;
+    }
+
+    .material-box>div:nth-child(2) {
+      width: calc(100vw - 988px);
+    }
+
+    .material-box .material-blocks {
+      width: 768px;
+      height: 768px;
+    }
+  }
+
+  @media screen and (max-width:767px) {
+    .section-hero>.w-full:last-child {
+      height: 50%;
+    }
+
+    .section-hero>.w-full:last-child>picture img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .material-box>div:nth-child(2) {
+      transform: translateX(-56px);
+      order: 0;
+      margin-top: -95%;
+      border-right: none;
+    }
+  }
+</style>
+
+{{ "TweenMax.min.js" | asset_url | script_tag }}
+{{ "ScrollMagic.js" | asset_url | script_tag }}
+{{ "animation.gsap.min.js" | asset_url | script_tag }}
+{{ 'TimelineLite.min.js' | asset_url | script_tag }}
+
+<script>
+  // init controller
+  var controller = new ScrollMagic.Controller();
+  var videoList = document.querySelectorAll(".video-container");
+
+  videoList.forEach(item => {
+    var video = item.querySelector('video');
+    var playBtn = item.querySelector('.play-btn');
+    var modal = item.querySelector(".modal-container");
+    playBtn.onclick = function () {
+      video.play();
+      $(modal).css({
+        'opacity': 1,
+        'z-index': 1
+      });
+      $(modal).prev('.video-cover').css({
+        'opacity': 0
+      });
+    }
+
+    const triggerName = '#' + $(item).prev().attr('id');
+    new ScrollMagic.Scene({
+        triggerElement: triggerName,
+        offset: 150
+      })
+      .on('enter leave', function (e) {
+        if (e.type == "enter") {
+          playBtn.click();
+        } else {
+          video.pause();
+          $(modal).css({
+            'opacity': 0,
+            'z-index': -1
+          });
+          $(modal).prev('.video-cover').css({
+            'opacity': 1
+          });
+        }
+      })
+      .addTo(controller)
+  })
+
+  if (window.innerWidth > 1279) {
+    var materialList = document.querySelectorAll('.material-box');
+    materialList.forEach(item => {
+      var blocks = item.querySelector('.material-blocks').querySelectorAll('.material-block');
+      let tl_material = new TimelineMax();
+      tl_material
+        .set(blocks, {
+          x: -100,
+          y: -100
+        })
+        .to(item, 0.5, {
+          x: 0
+        })
+        .staggerTo(blocks, 0.00001, {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          ease: Linear.easeNone
+        }, 0.001);
+
+      const triggerName = '#' + $(item).prev().attr('id');
+      new ScrollMagic.Scene({
+          triggerElement: triggerName,
+          offset: -150
+        })
+        .setTween(tl_material)
+        .addTo(controller)
+    });
+
+    var caseList = document.querySelectorAll('.section6-product');
+    caseList.forEach(item => {
+      const triggerName = '#trigger-' + $(item).parent().attr('name');
+      new ScrollMagic.Scene({
+          triggerElement: triggerName,
+          offset: -150
+        })
+        .setClassToggle(item, 'active')
+        .addTo(controller)
+    })
+
+    var tl_note = new TimelineMax();
+    var noteList = document.querySelectorAll('.musical-note');
+    noteList.forEach(note => {
+      let tween = TweenMax.fromTo(note, 2.5, {
+        opacity: 1,
+        y: 0
+      }, {
+        opacity: 0,
+        y: '-100%',
+        ease: Power0.easeOut
+      }).repeat(-1);
+
+      tl_note.add(tween)
+    });
+
+    var heroElements = document.getElementsByClassName('toggle-element');
+    for (var i = 0; i < heroElements.length; i++) {
+      new ScrollMagic.Scene({
+          triggerElement: '#trigger_hero',
+          offset: 50,
+          triggerHook: 1.2,
+          duration: "150%",
+        })
+        .setClassToggle(heroElements[i], 'active')
+        .addTo(controller)
+    }
+
+    var el = document.getElementById('typewriting');
+    var string = el.nextElementSibling.innerHTML;
+    var str = string.split("");
+    const strLen = str.length - 1;
+
+    function animate() {
+      var start = function () {
+        if (str.length > 0)
+          el.querySelector('span').remove();
+        if (str.length == 1) {
+          el.innerHTML += str.shift();
+        } else {
+          el.innerHTML += str.shift() + '<span aria-hidden="true"></span>';
+        }
+      }
+      str.length > 0 ? start() : clearTimeout(running);
+      var running = setTimeout(animate, 50);
+    };
+
+    new ScrollMagic.Scene({
+        triggerElement: "#trigger_last"
+      })
+      .on('enter', function (e) {
+        animate();
+      })
+      .addTo(controller)
+  }
+
+  const counterAnim = (qSelector, start = 0, end, duration = 1000) => {
+    const target = document.querySelector(qSelector);
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      target.innerText = Math.floor(progress * (end - start) + start);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  };
+
+  new ScrollMagic.Scene({
+      triggerElement: "#trigger_counter",
+      offset: 150
+    })
+    .on('enter', function (e) {
+      counterAnim("#count", 0, 10215, 1000);
+    })
+    .addTo(controller)
+  //#endregion - end of - number counter animation
+
+  var blockList = document.querySelectorAll('.section-blocks');
+  blockList.forEach(item => {
+    var blocks = item.querySelectorAll('.absolute');
+    let offsetH = -150;
+    if (window.innerWidth < 1024) {
+      offsetH = 0;
+    }
+    blocks.forEach(block => {
+      const trigger_name = "#trigger-" + $(block).parent().attr('name');
+      new ScrollMagic.Scene({
+          triggerElement: trigger_name,
+          offset: offsetH,
+          duration: "200%",
+        })
+        .setClassToggle(block, 'active')
+        .addTo(controller)
+    });
+  })
+</script>

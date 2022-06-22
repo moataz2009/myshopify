@@ -1,0 +1,637 @@
+<!-- /templates/index.liquid -->
+{% comment %}
+Define your section markup, using `section.settings.[setting_name]` to access specific settings.
+* Sections do not have access to global liquid variables.
+{% endcomment %}
+
+{%- comment -%}容器尺寸(初始占10格){%- endcomment -%}
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{%- comment -%}容器尺寸(初始占8格){%- endcomment -%}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{%- comment -%}容器内边距{%- endcomment -%}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28' %}
+{%- comment -%}主标题h1尺寸{%- endcomment -%}
+{% assign titleSize = 'text-2xl sm:text-3xl font-bold' %}
+{%- comment -%}主标题h1距底部距离（紧）{%- endcomment -%}
+{% assign titleMb_tight = 'mb-6' %}
+{%- comment -%}主标题h1距底部距离（松）{%- endcomment -%}
+{% assign titleMb_loose = 'mb-12' %}
+{%- comment -%}正文p尺寸颜色{%- endcomment -%}
+{% assign descSize = 'text-base text-gray-400' %}
+{%- comment -%}正文p距底部距离{%- endcomment -%}
+{% assign descMb = 'mb-12' %}
+{%- comment -%}居中显示主文本容器尺寸及距底部距离{%- endcomment -%}
+{% assign titleBox_center= 'mx-auto text-center mb-12 w-11/12 sm:w-5/6 md:w-2/3 xl:w-2/5' %}
+{%- comment -%}副标题h3尺寸及垂直外边距{%- endcomment -%}
+{% assign subTitleClass = 'text-xl md:text-2xl font-bold my-6' %}
+{%- comment -%}副标题下正文p尺寸及距底部距离{%- endcomment -%}
+{% assign subDescClass = 'text-base text-gray-400 mb-8 sm:mb-12' %}
+{%- comment -%}grig排版分布及间距{%- endcomment -%}
+{% assign gapClass = 'grid grid-cols-1 gap-6 sm:gap-4 md:gap-6 sm:grid-cols-2' %}
+{%- comment -%}标题修饰图片尺寸及垂直外边距{%- endcomment -%}
+{% assign titleDecoMy = 'block mt-4 mb-6' %}
+
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}
+
+{% comment %}
+<span class="hidden" id="openModal"></span>
+{% section 'pop-modal' %}
+
+{{'jquery.cookie.js' | asset_url | script_tag }}
+<script>
+  $(function () {
+    $("#openModal").on('click', function () {
+      //       console.log(123)
+      $("#6th-modal").show();
+      $('.6th-modal-cover').show();
+      $.cookie("hasOpen", "yes", {
+        expires: 1
+      });
+      //       console.log($.cookie("hasOpen"))
+    })
+    if ($.cookie("hasOpen") != 'yes') {
+      $("#openModal").click();
+    }
+  })
+</script>
+
+<span class="hidden" id="openModal"></span>
+{% section 'pop-modal-christmas' %}
+
+{{'jquery.cookie.js' | asset_url | script_tag }}
+<script>
+  $(function () {
+    $("#openModal").on('click', function () {
+      //       console.log(123)
+      $("#6th-modal").show();
+      $('.6th-modal-cover').show();
+      $.cookie("hasOpenChristmas", "yes", {
+        expires: 1
+      });
+      console.log($.cookie("hasOpenChristmas"))
+    })
+    if ($.cookie("hasOpenChristmas") != 'yes') {
+      $("#openModal").click();
+    }
+  })
+</script>
+{% endcomment %}
+{% section 'slider-show' %}
+
+<div class="{{wClass}} {{pdClass}}">
+  <div class="{{titleBox_center}}">
+    <h3 class="{{titleSize}} {{titleMb_tight}}">About Us</h3>
+    <p class="{{descSize}} {{descMb}}">
+      PITAKA is founded by a team of designers, engineers, and creatives across multiple fields with an alternative
+      approach
+      to all things technology. We help people be successful and confident by making protective casing to care for their
+      daily
+      essentials. We are a company dedicated to advancing science and style in this specialist area. We focus on
+      distinct materials,
+      and we have become a large and successful company selling cases, wallets and covers for the essentials of modern
+      life around the world.
+    </p>
+    {% render 'link-button',link_url: '/pages/about-us', link_title:'Learn More' %}
+  </div>
+
+  <div class="{{gapClass}}">
+    <div>
+      <img src="{{'index-section1-pitaflow-phones.jpg' | asset_url}}" alt="PITAKA Pita!Flow for Phones" class="w-full">
+      <div class="bg-gray-800 px-3 sm:px-6 pt-8 pb-12 md:bg-transparent md:p-0">
+        <h4 class="{{subTitleClass}} mt-0 md:mt-6">Pita!Flow for Phones</h4>
+        <p class="{{subDescClass}}">
+          Pita!Flow for Phones is an ecosystem of magnetic products that help you use your mobile literally anytime and
+          anywhere to streamline your life. It is built on
+          MagEZ<sup>&reg;</sup> 2.0 technology.<sup><a href="/collections/magez-system"
+              title="Learn More about Our MagEZ System">
+              <span class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</span>
+            </a>
+          </sup>
+
+        </p>
+        {% render 'link-button',link_url: '/collections/pitaflow-for-phones', link_title:'Learn More' %}
+      </div>
+    </div>
+
+    <div>
+      <img src="{{'index-section1-watch-band.jpg' | asset_url}}" alt="PITAKA Pita!Flow" class="w-full">
+      <div class="bg-gray-800 px-3 sm:px-6 pt-8 pb-12 md:bg-transparent md:p-0">
+        <h4 class="{{subTitleClass}} mt-0 md:mt-6">Carbon Fiber Watch Band</h4>
+        <p class="{{subDescClass}}">
+          Two striking Apple Watch bands made from 100% carbon fiber bracelet links, adjustable to fit most wrists.
+        </p>
+
+        {% render 'link-button',link_url: '/collections/carbon-fiber-watch-band', link_title:'Learn More' %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="{{pdClass}} bg-transparent sm:bg-gray-800 pt-0 pb-16 sm:pb-16 md:pb-28">
+  <div class="{{wClass_8}} px-6 sm:px-0 pt-14 sm:pt-0 border-t border-solid border-gray-750 sm:border-0">
+    <div class="{{titleBox_center}}">
+      <h3 class="{{titleSize}} {{titleMb_loose}}">Recommended Products</h3>
+    </div>
+
+    <div class="w-full">
+      <div class="multiple-slider swiper-container">
+        <div class="swiper-wrapper items-stretch">
+          {% assign productList = 'magez-case-2-for-samsung-galaxy-s22,magez-car-mount-pro,fusion-weaving-magez-case-2-for-iphone-13,magez-case-for-airpods-3,air-case-for-apple-watch-series-7,magez-case-2-for-ipad-pro-2021' | split: ',' %}
+          {% for name in productList %}
+          {% assign product = all_products[name] %}
+          {% assign suffix = name | remove: 'magez-' | remove: 'air-' | remove: 'case-for-' | append: '.jpg' %}
+
+          {% if name contains 's22' %}
+          {% assign suffix = 'galaxy-s22.jpg' %}
+          {% elsif name contains 'watch-series-7' %}
+          {% assign suffix = 'watch-case.jpg' %}
+          {% elsif name contains 'airpods-3' %}
+          {% assign suffix = 'airpods3-case.jpg' %}
+          {% elsif name contains 'car-mount-pro' %}
+          {% assign suffix = 'mount-pro.jpg' %}
+          {% elsif name contains 'wallet-2-pro' %}
+          {% assign suffix = 'wallet2-pro.jpg' %}
+          {% elsif name contains 'fusion-weaving' %}
+          {% assign suffix = 'iphone-13.jpg' %}
+          {% elsif name contains 'ipad-pro-2021' %}
+          {% assign suffix = 'ipadpro-2021.jpg' %}
+          {% endif %}
+          <div class="swiper-slide text-center lg:cursor-pointer">
+            <img srcset="{{ suffix | prepend: 'index-section2-products-' | asset_url }}" alt="{{product.title}}"
+              class="bg-transparent block w-full h-full object-cover opacity-0 lg:opacity-100 lg:hover:opacity-0">
+
+            <div
+              class="absolute w-full sm:h-full bg-gray-850 transition duration-500 opacity-100 lg:opacity-0 lg:hover:opacity-100">
+              {% render 'grid-product-item', product: product, between_tag: true %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- comment -%}
+<div class="{{wClass}} {{pdClass}} pt-0 sm:pt-6 md:pt-28">
+  <div class="flex flex-row flex-wrap md:flex-nowrap md:items-stretch md:justify-between">
+    <div class="w-1/2 mr-0 md:w-2/5 md:mr-4 lg:mr-6">
+      <img src="{{'index-section3-grid-1.jpg' | asset_url}}" alt="Our Technology & Materials" class="block w-full">
+
+      <div class="hidden md:block mt-8 md:-mr-28 lg:mr-0">
+        <h3 class="{{titleSize}} {{titleMb_tight}}">Our Technology & Materials</h3>
+        <p class="{{subDescClass}} max-w-sm">
+          PITAKA is constantly developing new innovative technologies and combining them with cutting-edge materials,
+          such as aramid fiber. Whether the aim is to save space, keep your device charged at all times, or providing
+          unbeatable protection, PITAKA allows you to experience a world of total convenience.
+        </p>
+
+        {% render 'link-button',link_url: '/pages/technology', link_title:'Learn More' %}
+
+      </div>
+    </div>
+
+    <div class="self-center w-1/2 mr-0 md:w-2/5 md:mr-4 md:-mt-28 lg:mt-0 lg:mr-6">
+      <img src="{{'index-section3-grid-2.jpg' | asset_url}}" alt="Our Technology & Materials" class="block w-full">
+    </div>
+
+    <div class="flex flex-col items-end w-full md:w-3/5">
+      <img src="{{'index-section3-grid-3.jpg' | asset_url}}" alt="Our Technology & Materials" class="block w-full">
+      <img src="{{'index-section3-grid-4.jpg' | asset_url}}" alt="Our Technology & Materials"
+        class="hidden mt-4 lg:mt-6 md:block w-11/12 max-w-max">
+    </div>
+
+    <div class="block md:hidden w-full bg-gray-800 px-3 pt-8 pb-6">
+      <h4 class="{{titleSize}} {{titleMb_tight}} leading-tight">Our Technology & Materials</h4>
+      <p class="{{subDescClass}} max-w-full md:max-w-sm">
+        PITAKA is constantly developing new innovative technologies and combining them with cutting-edge materials, such
+        as aramid fiber. Whether the aim is to save space, keep your device charged at all times, or providing
+        unbeatable protection, PITAKA allows you to experience a world of total convenience.
+      </p>
+
+      {% render 'link-button',link_url: '/pages/technology', link_title:'Learn More' %}
+
+    </div>
+  </div>
+</div>
+{%- endcomment -%}
+
+<div class="{{wClass}} {{pdClass}} pt-0 sm:pt-6 md:pt-28">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-0 md:gap-x-4 xl:gap-x-6 md:auto-rows-fr">
+    <div class="col-span-2 order-3 md:order-1">
+      <div class="block w-full md:mb-6 vBox">
+        {% render 'video-set', name:'index-section3-fusion-weaving-v', noBtnModel: true, minHeight: true, no_webm: true %}
+      </div>
+      <div class="bg-gray-800 md:bg-transparent px-3 py-6 sm:p-6 md:pb-0 md:px-0">
+        <h3 class="text-xl sm:text-2xl font-bold mb-6">
+          What is Fusion Weaving™?
+        </h3>
+        <p class="text-base text-gray-400 mb-8 xl:mb-12">
+          Fusion Weaving™ is a new aramid fiber weave style created by PITAKA. By adjusting the sequences of different
+          raw aramid fiber strands of various colors, our engineers managed to blend two or more weaving methods on one
+          loom, so the surface of the fabric appears two or more weaving designs and more colors.
+        </p>
+        {% render 'link-button',link_url: '/collections/fusion-weaving-series', link_title:'Learn More' %}
+      </div>
+    </div>
+    <div class="col-span-1 order-1 md:order-2">
+      <picture>
+        <source data-srcset="{{'index-section3-grid-fw-2.jpg' | asset_url}}" media="(min-width: 769px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'index-section3-grid-fw-2-s.jpg' | asset_url}}"
+          alt="PITAKA Fusion Weaving™" class="block w-full sm:h-full object-cover lazyload">
+      </picture>
+    </div>
+    <div class="col-span-1 order-2 md:order-3">
+      <picture>
+        <source data-srcset="{{'index-section3-grid-fw-3.jpg' | asset_url}}" media="(min-width: 769px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'index-section3-grid-fw-3-s.jpg' | asset_url}}"
+          alt="PITAKA Fusion Weaving™" class="block w-full sm:h-full object-cover lazyload">
+      </picture>
+    </div>
+  </div>
+</div>
+
+<div class="{{pdClass}} px-6 bg-gray-800">
+  <div class="{{wClass}}">
+    <div class="{{titleBox_center}} w-full">
+      <h3 class="{{titleSize}} {{titleMb_tight}}">PITAKA Journal</h3>
+      <p class="{{descSize}} {{descMb}}">
+        Visit the PITAKA Journal to learn more about our designs, concepts, and processes. You’ll also find articles
+        about new technology, where we get inspiration from, and our love of great design!
+      </p>
+      {% render 'link-button',link_url: '/blogs/news', link_title:'View all articles' %}
+    </div>
+
+    <div class="{{gapClass}} md:grid-cols-3">
+      {% assign articles =  blogs.news.articles | sort: 'id' | reverse %}
+      {% for item in articles limit: 3 %}
+      {% unless item.title contains 'Shipping' %}
+      {% if forloop.last == true %}
+      {% render 'grid-article-item', article: item, hiddenClass:'hidden md:block' %}
+      {% else %}
+      {% render 'grid-article-item', article: item %}
+      {% endif %}
+      {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="w-full sm:w-10/12 xl:w-8/12 mx-auto {{pdClass}} px-6">
+  <div class="mb-12 text-center">
+    <h3 class="{{titleSize}} {{titleMb_tight}}">Testimonials</h3>
+    <img src="{{'triggle_pixel.svg' | asset_url}}" class="inline-block transform rotate-90">
+  </div>
+  <div class="swiper-container gallery-top">
+    <div class="swiper-wrapper text-center text-sm md:text-base md:leading-loose">
+      <!-- cultofmac -->
+      <div class="swiper-slide">
+        <a href="https://www.cultofmac.com/440570/bulletproof-iphone-case-pitaka-aramid-iphone-case-reviews/"
+          target="_blank" class="block w-full sm:w-5/6 md:w-2/3 mx-auto text-gray-400 italic hover:underline"
+          rel="noopener noreferrer">
+          This case is a pleasure to hold, with a soft almost rubberized feel and thanks to how thin it is, my iPhone
+          almost feels naked.
+        </a>
+      </div>
+      <!-- bgr -->
+      <div class="swiper-slide">
+        <a href="https://bgr.com/deals/best-wireless-charger-for-iphone-airpods-pro-apple-watch/" target="_blank"
+          class="block w-full sm:w-5/6 md:w-2/3 mx-auto text-gray-400 italic hover:underline" rel="noopener noreferrer">
+          The Pitaka Air Omni is a fantastic charging station that truly covers all the bases. It’s a must-have device
+          for any Apple fan.
+        </a>
+      </div>
+      <!-- the verge -->
+      <div class="swiper-slide">
+        <a href="https://www.theverge.com/22671534/best-magsafe-iphone-13-cases-iphone-pro" target="_blank"
+          class="block w-full sm:w-5/6 md:w-2/3 mx-auto text-gray-400 italic hover:underline" rel="noopener noreferrer">
+          Not only is this case strong and durable, it supports MagSafe and Qi-charging, and it works with a family of
+          other products like magnetic wallets and mounts.
+        </a>
+      </div>
+      <!-- cnet -->
+      <div class="swiper-slide">
+        <a href="https://www.cnet.com/tech/mobile/get-this-6-in-1-bedside-wireless-charging-station-for-135/"
+          target="_blank" class="block w-full sm:w-5/6 md:w-2/3 mx-auto text-gray-400 italic hover:underline"
+          rel="noopener noreferrer">
+          Air Omni is a very cleverly designed gadget. I've been using this charging station for a few weeks now,
+          and I love the way it consolidates everything I need to charge in a single device.
+        </a>
+      </div>
+      <!-- trends -->
+      <div class="swiper-slide">
+        <p class="block w-full sm:w-5/6 md:w-2/3 mx-auto text-gray-400 italic">
+          For one of the thinnest cases on the market (if not the thinnest), consider the PITAKA Air.
+        </p>
+      </div>
+      <!-- the_gadgeteer -->
+      <div class="swiper-slide">
+        <a href="https://the-gadgeteer.com/2021/11/01/pitaka-magez-magez-pro-and-air-iphone-13-cases-review/"
+          target="_blank" class="block w-full sm:w-5/6 md:w-2/3 mx-auto text-gray-400 italic hover:underline"
+          rel="noopener noreferrer">
+          They are lightweight fibers with exceptional strength and thermal stability,
+          making this material a perfect choice for an iPhone case like these new iPhone MagEZ Cases from PITAKA.
+        </a>
+      </div>
+      <!-- yd -->
+      <div class="swiper-slide">
+        <a href="https://www.yankodesign.com/2020/05/19/heres-that-all-in-one-charging-dock-apple-should-have-made-for-its-products/"
+          target="_blank" class="block w-full sm:w-5/6 md:w-2/3 mx-auto text-gray-400 italic hover:underline"
+          rel="noopener noreferrer">
+          The Air Omni stands out as perhaps the one true product that Apple hopes it had tried to push out.
+        </a>
+      </div>
+      <!-- flossy_carter -->
+      <div class="swiper-slide">
+        <a href="https://www.youtube.com/watch?v=sO6eSdaqbi4" target="_blank"
+          class="block w-full sm:w-5/6 md:w-2/3 mx-auto text-gray-400 italic hover:underline" rel="noopener noreferrer">
+          This is a major major major go, if you got a bunch of Apple products, you need this Air Omni.
+        </a>
+      </div>
+      <!-- forbes -->
+      <div class="swiper-slide">
+        <a href="https://www.forbes.com/sites/bradmoon/2017/11/08/pitaka-magwallet-ue-the-minimalst-modular-rfid-blocking-carbon-fiber-wallet/?sh=2f712e2e1662"
+          target="_blank" class="block w-full sm:w-5/6 md:w-2/3 mx-auto text-gray-400 italic hover:underline"
+          rel="noopener noreferrer">
+          There’s no denying the high tech, cool factor of the PITAKA MagEZ Wallet UE --especially when you add in those
+          optional extra modules. It can be a very sleek alternative to a traditional wallet.
+        </a>
+      </div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-white"></div>
+  </div>
+  <div class="swiper-container gallery-thumbs border-b border-gray-400 border-none md:border-solid">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide cursor-pointer" style="background-image:url({{'credits-cultofmac.svg' | asset_url}})">
+      </div>
+      <div class="swiper-slide cursor-pointer" style="background-image:url({{'credits-bgr.svg' | asset_url}})"></div>
+      <div class="swiper-slide cursor-pointer" style="background-image:url({{'credits-the_verge.svg' | asset_url}})">
+      </div>
+      <div class="swiper-slide cursor-pointer" style="background-image:url({{'credits-cnet.png' | asset_url}})"></div>
+      <div class="swiper-slide cursor-pointer" style="background-image:url({{'credits-trends.svg' | asset_url}})"></div>
+      <div class="swiper-slide cursor-pointer"
+        style="background-image:url({{'credits-the_gadgeteer.svg' | asset_url}})"></div>
+      <div class="swiper-slide cursor-pointer" style="background-image:url({{'credits-yd.png' | asset_url}})"></div>
+      <div class="swiper-slide cursor-pointer" style="background-image:url({{'credits-flossy.svg' | asset_url}})"></div>
+      <div class="swiper-slide cursor-pointer" style="background-image:url({{'credits-forbes.svg' | asset_url}})"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J0SER4YGV4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J0SER4YGV4');
+</script>
+
+{{'swiper-bundle.min.js' | asset_url | script_tag }}
+
+<style>
+  /* .multiple-slider {
+    padding: 0 1.5rem 3em;
+    margin: 0 -1.5rem;
+  } */
+  .multiple-slider .swiper-slide {
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .multiple-slider>div[role="button"] {
+    top: 45%;
+  }
+
+  .multiple-slider>div[role="button"],
+  .gallery-top>div[role="button"] {
+    width: 12px;
+    height: 16px;
+  }
+
+  .multiple-slider>div[role="button"]:after,
+  .gallery-top>div[role="button"]:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url({{'triggle_pixel.svg' | asset_url}}) no-repeat;
+    background-size: contain;
+  }
+
+  .gallery-top .swiper-button-prev {
+    transform: rotate(-180deg);
+    left: 0;
+  }
+
+  .gallery-top .swiper-button-next {
+    right: 0;
+  }
+
+  .multiple-slider .swiper-button-next {
+    right: 0;
+  }
+
+  .multiple-slider .swiper-button-prev {
+    left: 0;
+    transform: rotate(-180deg);
+  }
+
+  .multiple-slider .swiper-pagination-bullets {
+    display: none;
+  }
+
+  .multiple-slider .square-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #565557;
+    display: block;
+    margin: 0 .4rem;
+  }
+
+  .multiple-slider .swiper-pagination-bullet-active {
+    background-color: #fff;
+  }
+
+  .gallery-top {
+    height: 80%;
+    width: 100%;
+  }
+
+  .gallery-top .swiper-slide {
+    padding: 0 1.5rem;
+  }
+
+  .gallery-thumbs {
+    height: 45px;
+    box-sizing: content-box;
+    padding-top: 60px;
+  }
+
+  .gallery-thumbs .swiper-slide {
+    width: 20%;
+    height: 100%;
+    opacity: 0.4;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .gallery-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
+  @media screen and (min-width:768px) {
+
+    .multiple-slider .swiper-slide {
+      min-height: 586px;
+    }
+
+    .multiple-slider {
+      padding: 0;
+      margin: 0;
+      padding-bottom: 4rem;
+    }
+
+    .multiple-slider>div[role="button"] {
+      top: unset;
+      bottom: 6px;
+      margin: 0;
+    }
+
+    .multiple-slider .swiper-button-next {
+      right: calc(50% - 153.2px);
+    }
+
+    .multiple-slider .swiper-button-prev {
+      left: calc(50% - 153.2px);
+    }
+
+    .multiple-slider .swiper-pagination-bullets {
+      display: flex;
+      justify-content: center;
+      margin: 0 -0.4rem;
+    }
+
+    .gallery-top .swiper-slide {
+      padding: 0;
+    }
+
+    .gallery-thumbs {
+      padding-bottom: 36px;
+    }
+  }
+
+  @media screen and (min-width:1025px) {
+    .gallery-thumbs {
+      padding: 90px 0 42px;
+    }
+  }
+
+  @media screen and (min-width:1280px) {
+    .multiple-slider .swiper-slide {
+      min-height: 586px;
+    }
+
+    .gallery-thumbs {
+      padding: 120px 0 54px;
+    }
+
+    .gallery-top>div[role="button"] {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width:414px) {
+    .vBox {
+      height: 253px;
+    }
+  }
+</style>
+
+<script>
+  var swiper = new Swiper('.multiple-slider', {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 0,
+    roundLengths: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 16
+      },
+      1025: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 16
+      },
+      1280: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 24
+      }
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      bulletClass: 'square-bullet',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  var galleryThumbs = new Swiper('.gallery-thumbs', {
+    spaceBetween: 10,
+    slidesPerView: 2,
+    // freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+      769: {
+        slidesPerView: 3
+      },
+      1025: {
+        slidesPerView: 4
+      },
+      1280: {
+        slidesPerView: 5
+      }
+    },
+  });
+
+  var galleryTop = new Swiper('.gallery-top', {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+      swiper: galleryThumbs
+    }
+  });
+</script>
+
+{%- comment -%}
+{{ content_for_index }}
+{%- endcomment -%}

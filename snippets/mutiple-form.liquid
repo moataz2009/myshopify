@@ -1,0 +1,118 @@
+{%- comment -%}
+必传参数：
+form_title：link名称
+form_product（产品）
+form_index（表单序号）
+可选参数：
+formClass(表单额外样式)：如不传，则默认为空
+submitHidden(表单提交按钮)：如不传，则默认为显示
+variantDefault(产品有无变量)：如不传，则默认为有
+{%- endcomment -%}
+
+{% assign form_variant = form_product.selected_or_first_available_variant %}
+
+<form action="/cart/add" class="{{formClass}} flex flex-wrap justifty-between h-full relative" enctype="multipart/form-data" method="post">
+  <input class="hidden product_type" type="text" value="{{form_product.type}}" />
+  <div class="images-container w-4/5 mx-auto">
+    <div class="product-single__photos featured-image-div">
+      <a href="{{ form_product.url }}">
+        {% if variantDefault %}
+        {% assign imageSrc = form_product.featured_image | img_url: '400x400' %}
+        {% else %}
+        {% assign imageSrc = form_variant.image | img_url: '400x400' | default: form_product.featured_image %}
+        {% endif %}
+        <img src="{{ placeholder_gif }}" data-src="{{ imageSrc }}" alt="{{ form_product.title | escape }}"
+          data-image-id="{{ form_variant.image.id }}" class="block max-w-full mx-auto lazyload" />
+      </a>
+    </div>
+  </div>
+  <div class="w-full">
+    <h3 class="text-sm xl:text-base font-bold my-4 h-12">
+      {% if form_title contains 'for' %}
+      {{ form_title | split: ' for ' | first }}<br>
+      <span class="text-gray-400 font-normal">for {{ form_title | split: ' for ' | last }}</span>
+      {% else %}
+      {{ form_title }}
+      {% endif %}
+    </h3>
+    {%- comment -%}
+    <p class="text-xs sm:text-sm mb-8 h-16">
+      {{ form_product.description | strip_html }}
+    </p>
+    {%- endcomment -%}
+
+    <div class="product-single__prices text-base my-6">
+      <span class="product-single__price" itemprop="price" content="{{ form_variant.price | money_without_currency }}">
+        {{ form_variant.price  | money }}
+      </span>
+      {% if form_variant.compare_at_price and form_variant.compare_at_price > form_variant.price %}
+        <span class="product-compare__price line-through text-sm"
+          content="{{ form_variant.compare_at_price | money_without_currency }}">
+          {{ form_variant.compare_at_price | money }}
+        </span>
+      {% endif %}
+    </div>
+
+    {% assign variant_length = 0 %}
+    {% for variant in form_product.variants %}
+    {% unless variant.title contains 'Card' or variant.title contains 'Form-Fitting' %}
+    {% if variant.available %}
+    {% assign variant_length = variant_length | plus: 1 %}
+    {% endif %}
+    {% endunless %}
+    {% endfor %}
+
+    <select
+      class="product-single__variants hidden w-full text-xs xl:text-sm bg-transparent{% if form_variant.title == 'Default Title' %} opacity-0{% endif %}"
+      id="productSelect_{{form_index}}"
+      {% if form_variant.title == 'Default Title' or variant_length == 1 %}readonly{% endif %} name="id">
+      {% for variant in form_product.variants %}
+      {% unless variant.title contains 'Card' or variant.title contains 'Form-Fitting' %}
+      {% if variant.available %}
+      <option value="{{ variant.id }}" data-label="{{ variant.title }}">
+        {{ variant.title | replace: 'Default Title', bundle_title }}
+      </option>
+      {% endif %}
+      {% endunless %}
+      {% endfor %}
+    </select>
+
+    <div
+      class="relative cursor-default variants-selector{% if form_variant.title == 'Default Title' %} opacity-0{% endif %} {% if form_variant.title == 'Default Title' or variant_length == 1 %}no-click{% endif %}">
+      <div class="selected-variant relative w-full mx-auto border border-white py-2 w-full text-xs xl:text-sm">
+        {{ form_variant.title }}
+      </div>
+      <ul class="variants-list h-48 overflow-auto text-black mt-0.5 absolute w-full text-xs xl:text-sm hidden transition duration-300">
+        {% for variant in form_product.variants %}
+        {% unless variant.title contains 'Card' or variant.title contains 'Form-Fitting' %}
+        {% if variant.available %}
+        <li class="bg-gray-400 p-2 text-center hover:bg-white" data-value="{{ variant.id }}">
+          {{ variant.title | replace: 'Default Title', bundle_title }}
+        </li>
+        {% endif %}
+        {% endunless %}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div
+      class="shop-btn w-full mx-auto{% if submitHidden %} opacity-0 h-0 overflow-hidden{% else %} mt-4{% endif %}">
+      <button class="bg-white AddToCart py-2 w-full" name="add" type="submit">
+        <span class="AddToCartText text-black text-base font-bold">
+          {{ 'products.product.add_to_cart' | t }}
+        </span>
+      </button>
+    </div>
+  </div>
+</form>
+
+<script>
+  jQuery(function ($) {
+    const selector = `productSelect_{{ form_index }}`;
+    new Shopify.OptionSelectors(selector, {
+      product: {{ form_product | json }},
+      onVariantSelected: selectCallback,
+      enableHistoryState: true
+    });
+  });
+</script>

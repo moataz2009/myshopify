@@ -1,0 +1,288 @@
+<div class="blog-relations py-5 px-3 md:px-6 bg-gray-800">
+  <h3 class="pt-section-title mb-4">{{ 'blogs.sidebar.recent_articles' | t }}</h3>
+  {% for article in blogs[blog.handle].articles limit:5 %}
+  <p class="text-sm my-4">
+    <a class="block mb-2 hover:opacity-100 hover:underline" href="{{ article.url }}">{{ article.title }}</a>
+    <time pubdate datetime="{{ article.published_at | date: '%Y-%m-%d' }}">
+      <em class="text-light text-2s text-gray-400">{{ article.published_at | date: '%Y-%m-%d' }}</em>
+    </time>
+  </p>
+  {% endfor %}
+</div>
+
+<div id="sidebar-sticky" class="w-full">
+  <b: section class="sticky_sidebar" id="sticky_sidebar" choice="yes" />
+  <aside id="sidebar-wrapper" class="my-10 px-3 md:px-6 bg-gray-800">
+    <h3 class="text-xl font-bold mt-4 pt-5">Hot Sale</h3>
+    <div class="hidden">
+      {% for tag in article.tags %}
+      <div class="article_tag">{{ tag }}</div>
+      {% endfor %}
+    </div>
+    <div class="hidden">
+      {% for link in linklists.hotsale-products.links %}
+      <div class="article_product">
+        <input name="imgSrc" value='//cdn.shopify.com/s/files/1/1036/4113/{{ link.object.featured_image }}' />
+        <input name="id" value='{{ link.object.id }}' />
+        <input name="url" value='{{ link.object.url }}' />
+        <input name="title" value='{{ link.title }}' data-value='{{ link.object.title }}'/>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="sidebar-hotsale my-5 py-5">
+    </div>
+
+    <h3 class="text-lg font-semibold mt-4 pt-5">Real Reviews From Real Customers</h3>
+    <div class="bar-reviews py-5">
+      <div class="review-slider"></div>
+    </div>
+  </aside>
+</div>
+
+<style type="text/css">
+  .promoted-products-box {
+    display: none !important;
+  }
+
+  .yotpo-label,
+  .questions,
+  .promoted-products-box {
+    display: none !important;
+  }
+
+  .yotpo-bottomline-box-2 {
+    display: none !important;
+  }
+
+  .yotpo-nav.reviews {
+    display: none !important;
+  }
+
+  .yotpo-bottomline {
+    padding: 0px !important;
+    height: 45px !important;
+  }
+
+  .yotpo-footer .footer-actions {
+    display: none !important;
+  }
+
+  .yotpo-footer .yotpo-helpful {
+    display: none !important;
+  }
+
+  .bx-wrapper .bx-controls-direction a {
+    top: 0 !important;
+    margin-top: 0 !important
+  }
+
+  .bx-wrapper {
+    box-shadow: none !important;
+    padding-top: 2.5em !important;
+    background: none;
+    border:none;
+  }
+
+  .yotpo.bottomLine .yotpo-bottomline .yotpo-icon-star,
+  .yotpo.bottomLine .yotpo-bottomline .yotpo-icon-half-star,
+  .yotpo.bottomLine .yotpo-bottomline .yotpo-icon-empty-star,
+  .yotpo.bottomline .yotpo-bottomline .yotpo-icon-star,
+  .yotpo.bottomline .yotpo-bottomline .yotpo-icon-half-star,
+  .yotpo.bottomline .yotpo-bottomline .yotpo-icon-empty-star,
+  .yotpo .yotpo-modal-bottom-line .yotpo-bottomline .yotpo-icon-star,
+  .yotpo .yotpo-modal-bottom-line .yotpo-bottomline .yotpo-icon-half-star,
+  .yotpo .yotpo-modal-bottom-line .yotpo-bottomline .yotpo-icon-empty-star {
+    font-size: 20px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    #sidebar-sticky {
+      float: right;
+      padding: 0;
+      margin: 0 auto;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 10px;
+    }
+  }
+
+  .bar-reviews {
+    margin-top: 1em;
+    padding-top: 1em;
+    width: 100%;
+    /* max-width: 360px; */
+  }
+  .blog-article p {margin: 1rem 0;}
+  .blog-article img {margin: 1rem 0; height:auto;}
+  .blog-article h2, .blog-article h3, .blog-article h4 {margin: 1.5rem 0;}
+  #author img {margin:4em 1em 1em 1em; max-width:120px; max-height:120px;}
+  #author.author-content {}
+</style>
+{%- comment -%}
+<script type="text/javascript">
+  var fixquery = window.matchMedia("(min-width:768px)");
+  if (fixquery.matches) {
+    jQuery(document).ready(function () {
+      var _leftheight = jQuery(".blog-content").height();
+      var _rightheight = jQuery(".blog-sidebar").height();
+      if (_leftheight > _rightheight) {
+        jQuery(".blog-sidebar").height(_leftheight);
+      } else {
+        jQuery(".blog-content").height(_rightheight);
+      }
+    })
+  }
+</script>
+{%- endcomment -%}
+
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}
+{{'swiper-bundle.min.js' | asset_url | script_tag }}
+
+<script type="text/javascript">
+  function getProducts() {
+    var re = /<a[^>]*href=['"]([^"]*)['"][^>]*>(.*?)<\/a>/g;
+    var str = `{{ article.content }}`;
+    var arr = [];
+    //如果是RegExp.$1那么匹配的就是href里的属性了!
+    while (re.exec(str) != null) {
+      arr.push(RegExp.$2 + "\n"); 
+    }
+    return arr;
+  }
+
+  function writeHtml(id) {
+    // $(".bar-reviews").prepend(
+    //   `<div class='headline'></div><div class='yotpo bottomLine' data-product-id='${headId}'></div>`);
+    var reviewStr = "";
+    $.getJSON(
+      `https://api.yotpo.com/v1/widget/j1blj6TlfDCoOKkflErQWd5DDUoq2RdHIFub5Ug7/products/${id}/reviews.json?per_page=10`,
+      function (data) {
+        //data is the JSON string
+        var reviewArr = data.response.reviews;
+        // console.log(reviewArr);
+
+        reviewArr.forEach(function (review) {
+          var reviewStar = "";
+          for (count = 0; count < review.score; count++) {
+            reviewStar += "<span><img src='{{ 'star-icon.png' | asset_url }}'></span>";
+          }
+          var date = new Date(review.created_at);
+          var reviewDate = (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
+          reviewStr += `<div class='swiper-slide review-wrapper'>
+            <div class="flex items-center justify-between"><div class='review-score flex'>${reviewStar}</div>
+            <div class='review-date text-sm'>${reviewDate}</div></div>
+            <div class='review-title mt-4 font-semibold clear-both text-left'>${review.title}</div>
+            <div class='review-content mt-4 italic text-sm'>${review.content}</div>
+            <div class='review-author mt-4 text-sm text-gray-400'>by ${review.user.display_name}</div></div>`;
+        });
+
+        const swiperHTML = `<div class='swiper-container reviews-swiper w-full'>
+          <div class="swiper-wrapper">${reviewStr}</div>
+          <div class="swiper-button-prev swiper-button-white"></div>
+          <div class="swiper-button-next swiper-button-white"></div>
+        </div>`;
+
+        $('.review-slider').html(swiperHTML);
+
+        var swiper_main = new Swiper('.reviews-swiper', {
+          roundLengths : true, 
+          autoHeight:true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }
+        });
+      });
+  }
+
+  const tagsDiv = document.querySelectorAll('.article_tag');
+  const productsDiv = document.querySelectorAll('.article_product');
+  const tags = [];
+  const products = [];
+  tagsDiv.forEach(divDom => {
+    tags.push(divDom.innerHTML);
+  })
+  $('.article_product').each(function () {
+    const productInfo = {};
+    const input = $(this).find("input");
+    input.each(function () {
+      productInfo[$(this).attr('name')] = $(this).val();
+      if($(this).data('value')){
+        productInfo.name = $(this).data('value');
+      }
+    })
+    products.push(productInfo);
+  })
+
+  let random_list = [];
+  if (tags.length > 0) {
+    for (let i = 0; i < tags.length; i++) {
+      const tag = tags[i];
+      for (let j = 0; j < products.length; j++) {
+        const product = products[j];
+        if (product.title == tag) {
+          random_list.push(product);
+        }
+      }
+    }
+  }
+  if(random_list.length == 0){
+    random_list = [{
+      imgSrc: "//cdn.shopify.com/s/files/1/0515/2342/0337/t/3/assets/card-slider.png?v=338023719570586784",
+      title: "MagEZ Slider",
+      url: "/products/magez-slider",
+      id: "6809067454534"
+    }, {
+      imgSrc: "//cdn.shopify.com/s/files/1/1036/4113/t/58/assets/card-magez-2-i13-black-grey-twill.png?v=18349905026680078459",
+      title: "MagEZ Case 2 for iPhone 13",
+      url: "/products/magez-case-2-for-iphone-13",
+      id: "6679537188934"
+    }, {
+      imgSrc: "//cdn.shopify.com/s/files/1/1036/4113/t/58/assets/card-carbon-fiber-watch-band.png?v=14359291430507750610",
+      title: "Carbon Fiber Watch Band",
+      url: "/products/carbon-fiber-watch-band",
+      id: "4835291103302"
+    }, {
+      imgSrc: "//cdn.shopify.com/s/files/1/0515/2342/0337/t/3/assets/card-air-apple-watch-series-7.png?v=7617782578665277386",
+      title: "Air Case for Apple Watch",
+      url: "/products/air-case-for-apple-watch-series-7",
+      id: "6801496965190"
+    }]
+  }
+
+  const m = random_list.length;
+  const n = Math.floor(Math.random() * m + 1);
+  const product = random_list[n % m];
+  const product_name = product.name ? product.name : product.title;
+
+  const hotsaleHTML = `<a href='${product.url}'><img class='block mx-auto' src='${product.imgSrc}' alt='hotsale'></a>
+    <h5 class="text-center my-6">${product_name}</h5><div class='barbutton text-center'><a href='${product.url}' 
+    class='block bg-white py-2 px-6 mx-auto max-w-max text-sm font-bold text-cyan leading-none'>Shop Now</a></div>`;
+
+  $(".sidebar-hotsale").html(hotsaleHTML);
+  writeHtml(product.id);
+</script>
+
+
+
+<style>
+  .reviews-swiper {
+    --swiper-navigation-size: 16px;
+    cursor: pointer;
+    padding-top: 2rem;
+  }
+
+  .reviews-swiper .swiper-button-prev {
+    left: calc(100% - 3rem);
+    top: 0;
+    transform: none;
+    margin-top:0
+  }
+
+  .reviews-swiper .swiper-button-next {
+    right: 0;
+    top: 0;
+    transform: none;
+    margin-top:0
+  }
+</style>

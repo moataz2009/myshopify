@@ -1,0 +1,76 @@
+{%- comment -%}
+  表单提交组件:
+  传入参数（必需）：url
+  传入参数（可选）：
+  bgColor：背景颜色灰度800
+  hover_tag：产品图片是否有hover效果
+  card_hover：card是否有hover效果
+  desc_no: 是否没有产品描述，默认为false
+  title_pos_top: 产品名称位置是否在图片之上，默认为false
+  link_product_no: 是否没有产品页链接，默认为false
+  link_buy_no: 是否没有购买链接，默认为false
+  link_buy_btn: 购买链接是否为按钮形式，默认为false
+  sm_layout_2:手机端是否显示2列，默认显示1列
+{%- endcomment -%}
+
+<div class="bg-gray-850">
+  <div class="{{wClass}} {{pdClass}} ">
+    <h3 class="py-4 text-2xl text-center" id="join1">
+      Share Your Ideas.<br>
+      Be Our Brand Ambassador.
+    </h3>
+    <div class="lg:w-2/5 md:w-9/12 sm:w-11/12 m-auto">
+      <!-- <div class="globo-formbuilder" data-id="Njk0Njc="></div> -->
+      <form id="share-form" class="mx-auto w-full">
+        <input type="text" name="ip" class="form-control w-full bg-gray-800 hidden" id="ip">
+        <input type="text" name="datetime" class="form-control w-full bg-gray-800 hidden" id="date_time">
+        <div class="form-group py-4">
+          <label class="font-bold" for="name"><span class="text-cyan">* </span> Your Name</label>
+          <input type="text" name="name" class="form-control w-full bg-gray-800" required placeholder="Full Name">
+        </div>
+        <div class="form-group py-4">
+          <label class="font-bold" for="email"><span class="text-cyan">* </span> Email Address</label>
+          <input type="email" name="email" class="form-control w-full bg-gray-800" required placeholder="Enter email">
+        </div>
+        <div class="form-group py-4">
+          <label class="font-bold" for="url"> Your Website</label>
+          <input type="text" name="url" class="form-control w-full bg-gray-800" placeholder="URL">
+        </div>
+        <div class="form-group py-4">
+          <label class="font-bold" for="message"><span class="text-cyan">* </span> Your Message</label> 
+          <textarea name="message" class="form-control w-full bg-gray-800" required
+            placeholder="Tell us which products you are interested in reviewing and your proposed plans."></textarea>
+        </div>
+        <button type="submit" id="submit" class="btn btn-primary block mx-auto">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{%- comment -%}
+表单提交感谢弹窗
+{%- endcomment -%}
+<div class="modal-mask opacity-0"></div>
+<div id="modal-video" class="pt-modal-container">
+  <div class="modal-background">
+    <div class="relative bg-black border-white border-2" style="width:350px; height:240px">
+      <button class="pt-modal-close absolute" type="button">
+        <span class="icon icon-x"></span>
+      </button>
+      <div id="card1" class="mx-auto text-center text-white px-auto px-4 py-8 flex flex-col items-center">
+        <h3 class="text-xl md:text-2xl">
+          Thanks for signing up!
+        </h3>
+   
+        <p class="block mt-4"></p>
+        <p class="text-sm sm:text-base">
+          We appreciate you contacting us. One of our colleagues will get in touch with you soon!
+        </p>
+        <p class="block mt-4"></p>
+        <p class="text-sm sm:text-base">
+          Have a great day!
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

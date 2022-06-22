@@ -1,0 +1,12 @@
+{%- comment -%}
+  链接按钮组件:
+  传入参数（必需）: 
+  link_url：链接地址 
+  link_title：链接文本
+  传入参数（可选）:
+  space_tight：文本与箭头间距true:紧密，默认为宽松
+  target_blank : 添加 target="_blank" 属性
+{%- endcomment -%}
+
+<a class="navLink inline-block max-w-max text-sm sm:text-base font-bold text-cyan leading-tight {% if space_tight %}pr-8{% else %}pr-12{% endif %} bg-right bg-no-repeat"
+  href="{{ link_url }}" {% if target_blank %} target="_blank" {% endif %} >{{link_title}}</a>

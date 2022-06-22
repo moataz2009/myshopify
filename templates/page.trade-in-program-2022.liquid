@@ -1,0 +1,606 @@
+{% assign wClass = 'w-full sm:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_6 = 'w-full sm:w-10/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28' %}
+{% assign titleSize = 'text-2xl sm:text-3xl font-bold' %}
+{% assign subTitleSize = 'text-xl sm:text-2xl font-bold' %}
+{% assign descSize = 'text-sm sm:text-base' %}
+
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}
+{{ 'timber-multiple.js' | asset_url | script_tag }}
+
+<div class="collection-hero bg-gray-800 {{pdClass}} relative">
+  <div class="{{wClass_6}}">
+    <div class="w-4/5 mx-auto text-center">
+      <div class="inline-block mx-auto">
+        <div class="flex items-center bg-green-standard px-8 pt-1.5 pb-1">
+          {{'trade-in-recycle.svg' | asset_url | img_tag:'PITAKA Trade-in Program','w-8 block mr-2' }}
+          <h3 class="font-normal text-xl sm:text-2xl lg:text-3xl" style="line-height: 1;">Trade In</h3>
+        </div>
+      </div>
+      <h1 class="font-bold text-3xl md:text-4xl my-2 sm:my-8">
+        Give Your Device A New Life.
+      </h1>
+      <p class="{{descSize}} text-gray-400">
+        Trade in your MagEZ Mount Qi and purchase the new charging car mount to earn your cash back. We will divert the
+        recycled devices from landfills and turn them into useful gadgets. Together, we can do something good for the
+        planet.
+      </p>
+    </div>
+
+    <div class="w-full my-8 relative">
+      {{'trade-in-recycle.svg' | asset_url | img_tag:'PITAKA Trade-in Program','block absolute w-3/8 opacity-10 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2' }}
+      <div class="flex items-end justify-between relative">
+        {{'trade-in-mount-car_vent.png' | asset_url | img_tag:'MagEZ Mount Qi','block w-1/3' }}
+        {{'trade-in-mount-suction_cup.png' | asset_url | img_tag:'MagEZ Mount Qi','block w-1/3' }}
+        {{'trade-in-mount-cd_slot.png' | asset_url | img_tag:'MagEZ Mount Qi','block w-1/3' }}
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <h3 class="{{subTitleSize}} inline-block border-b-8 border-green-standard pb-2">MagEZ Mount Qi</h3>
+    </div>
+
+  </div>
+</div>
+
+<div class="text-center py-16 sm:py-20 lg:py-28">
+  <div class="{{wClass}} px-3 sm:px-6 md:px-0">
+    <div class="w-11/12 sm:w-4/5 mx-auto mb-20">
+      <h3 class="{{titleSize}}">
+        Trade In Your Device for A New One.
+      </h3>
+      <p class="text-base sm:text-lg text-gray-400 my-8 lg:my-12">
+        <span class="block">Please make sure your product:</span>
+        <span class="block">1. Has no obvious damage on the surface;</span>
+        <span class="block">2. Has never been disassembled;</span>
+        <span class="block">3. Still charges phones.</span>
+      </p>
+      <div class="bg-green-standard inline-block mx-auto py-3 px-4 sm:px-10 border-2 border-white">
+        <p class="mb-2 {{descSize}}">
+          Note: Please enter the code at checkout; otherwise, your order is not eligible for
+          this trade-in program.
+        </p>
+        <h3 class="flex items-end justify-center {{subTitleSize}}">
+          <span class="font-normal text-sm sm:text-base">Code: </span>
+          TRADEIN
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-center">
+    <div class="swiper-container bundle-slider w-full sm:w-11/12 lg:w-10/12 max-w-screen-xl">
+      {% assign bundleList = 'magez-car-mount-pro=10/5/10.9,magez-car-mount-pro+fusion-weaving-magez-case-2-for-iphone-13=12/5/20.6,magez-car-mount-pro+magez-case-2-for-samsung-galaxy-s22=12/5/19.4,magez-car-mount-pro+magez-slider=15/5/33.35,magez-car-mount-pro+magez-slider+magez-case-2-for-samsung-galaxy-s22=15/5/42.35,magez-car-mount-pro+magez-slider+fusion-weaving-magez-case-2-for-iphone-13=15/5/43.7' | split: ',' %}
+      <div class="swiper-wrapper">
+        {% assign products_count = 0 %}
+        {% for bundle in bundleList %}
+        {% assign handleList = bundle | split: '+' %}
+
+        {% assign handle_size = handleList | size %}
+        {% assign available_size = 0 %}
+
+        {% for item in handleList %}
+        {% assign handle  = item | split: '=' | first %}
+        {% assign handle_product =  all_products[handle] %}
+        {% if handle_product.available %}
+        {% assign available_size = available_size | plus: 1 %}
+        {% endif %}
+        {% endfor %}
+
+        {% if available_size == handle_size %}
+        <div class="swiper-slide p-12 sm:bg-gray-800 block sm:grid grid-cols-1 sm:grid-cols-{{handle_size}} gap-x-12">
+          {% for handle_item in handleList %}
+          {% assign handle  = handle_item | split: '=' | first %}
+          {% assign discount_info  = handle_item | split: '=' | last | split: '/' %}
+          {% assign link_product =  all_products[handle] %}
+          {% assign products_count = products_count | plus: 1 %}
+          <div class="pt-card pb-10 w-full max-w-xs xl:max-w-sm">
+            {% assign form_class = 'block mx-auto w-full sm:w-5/6 xl:w-4/5' %}
+            {% assign link_title = link_product.title | replace: 'mini/13/13 Pro/13 Pro Max', 'Series' | replace: '/S22+/S22 Ultra', ' Series' %}
+
+            {% if link_title contains 'Slider' %}
+            {% assign variant_default = true %}
+            {% else %}
+            {% assign variant_default = false %}
+            {% endif %}
+
+            {% render 'mutiple-form', form_title: link_title, form_product: link_product, form_index: products_count, variantDefault: variant_default %}
+          </div>
+          {% endfor %}
+
+          <div class="w-full col-span-1 sm:col-span-{{handle_size}} sm:bg-gray-800 max-w-xs xl:max-w-sm mx-auto">
+            <p class="{{descSize}}">
+              {{ discount_info[0] }}% Cash Back + ${{ discount_info[1] }} for Shipping
+            </p>
+            <h3 class="text-green-standard {{subTitleSize}} mt-2">=${{discount_info[2]}} Cash Back </h3>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="swiper-button-prev swiper-button-white"></div>
+      <div class="swiper-button-next swiper-button-white"></div>
+    </div>
+  </div>
+  {%- comment -%}
+  <div class="w-full px-6 grid gap-y-12 block sm:hidden">
+    {% assign bundleList = 'magez-mount-qi=10/5/10.9,magez-car-mount-pro+fusion-weaving-magez-case-2-for-iphone-13=12/5/20.6,magez-car-mount-pro+magez-case-2-for-samsung-galaxy-s22=12/5/19.4,magez-car-mount-pro+magez-slider=15/5/33.35,magez-car-mount-pro+magez-slider+magez-case-2-for-samsung-galaxy-s22=15/5/42.35,magez-car-mount-pro+magez-slider+fusion-weaving-magez-case-2-for-iphone-13=15/5/43.7' | split: ',' %}
+    {% assign products_count = 0 %}
+    {% for bundle in bundleList %}
+    {% assign handleList = bundle | split: '+' %}
+
+    {% assign handle_size = handleList | size %}
+    {% assign available_size = 0 %}
+
+    {% for item in handleList %}
+    {% assign handle  = item | split: '=' | first %}
+    {% assign handle_product =  all_products[handle] %}
+    {% if handle_product.available %}
+    {% assign available_size = available_size | plus: 1 %}
+    {% endif %}
+    {% endfor %}
+
+    {% if available_size == handle_size %}
+    <div class="w-full px-6 grid gap-y-10">
+      {% for handle_item in handleList %}
+      {% assign handle  = handle_item | split: '=' | first %}
+      {% assign discount_info  = handle_item | split: '=' | last | split: '/' %}
+      {% assign link_product =  all_products[handle] %}
+      {% assign products_count = products_count | plus: 1 %}
+      <div class="pt-card w-full">
+        {% assign form_class = 'block mx-auto w-full sm:w-5/6 xl:w-4/5' %}
+        {% assign link_title = link_product.title | replace: 'mini/13/13 Pro/13 Pro Max', 'Series' %}
+
+        {% if link_title contains 'Slider' %}
+        {% assign variant_default = true %}
+        {% else %}
+        {% assign variant_default = false %}
+        {% endif %}
+
+        {% render 'mutiple-form', form_title: link_title, form_product: link_product, form_index: products_count, formClass:form_class, variantDefault: variant_default %}
+      </div>
+      {% endfor %}
+
+      <div class="w-full">
+        <p class="{{descSize}}">
+          {{ discount_info[0] }}% Cash Back + ${{ discount_info[1] }} for Shipping
+        </p>
+        <h3 class="text-green-standard {{subTitleSize}} mt-2">=${{discount_info[2]}} Cash Back </h3>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+  {%- endcomment -%}
+</div>
+<div class="bg-gray-800 {{pdClass}}">
+  <div class="w-4/5 sm:w-2/5 lg:w-1/3 mb-12 sm:mb-20 lg:mb-28 mx-auto text-center">
+    <h3 class="{{titleSize}} mb-2">How Does It Work</h3>
+    <p class="{{descSize}} text-gray-400">
+      We will partner with STEM to turn the recycled items into gadgets that our customers and some institutions can
+      use.
+    </p>
+  </div>
+  <div class="{{wClass}} px-3 grid grid-cols-1 sm:grid-cols-3 laptop:grid-cols-5 gap-10 sm:gap-6">
+    <div class="col-span-1 flex items-center sm:block">
+      <div
+        class="rounded-full flex-shrink-0 bg-green-standard w-20 h-20 sm:w-28 sm:w-28 lg:w-32 lg:h-32 mx-auto flex items-center justify-center">
+        {{ 'trade-in-work-pick.svg' | asset_url | img_tag:'PITAKA Trade-in Program','block w-1/2'}}
+      </div>
+      <div class="w-full mt-0 ml-4 sm:ml-0 sm:mt-4 text-left sm:text-center">
+        <h4 class="font-bold {{subTitleSize}}">Pick</h4>
+        <p class="text-gray-400 mt-2">Add the new device to your cart.</p>
+      </div>
+    </div>
+    <div class="col-span-1 flex items-center sm:block">
+      <div
+        class="rounded-full flex-shrink-0 bg-green-standard w-20 h-20 sm:w-28 sm:w-28 lg:w-32 lg:h-32 mx-auto flex items-center justify-center">
+        {{ 'trade-in-work-enter.svg' | asset_url | img_tag:'PITAKA Trade-in Program','block w-1/2'}}
+      </div>
+      <div class="w-full mt-0 ml-4 sm:ml-0 sm:mt-4 text-left sm:text-center">
+        <h4 class="font-bold {{subTitleSize}}">Enter</h4>
+        <p class="text-gray-400 mt-2">Enter the code TRADEIN at checkout.</p>
+      </div>
+    </div>
+    <div class="col-span-1 flex items-center sm:block">
+      <div
+        class="rounded-full flex-shrink-0 bg-green-standard w-20 h-20 sm:w-28 sm:w-28 lg:w-32 lg:h-32 mx-auto flex items-center justify-center">
+        {{ 'trade-in-work-send.svg' | asset_url | img_tag:'PITAKA Trade-in Program','block w-1/2'}}
+      </div>
+      <div class="w-full mt-0 ml-4 sm:ml-0 sm:mt-4 text-left sm:text-center">
+        <h4 class="font-bold {{subTitleSize}}">Send</h4>
+        <p class="text-gray-400 mt-2">
+          Ensure the new device works; pack the old device with the package we sent;
+          send it to us by April 30 with the email address you used to order the new device.
+        </p>
+      </div>
+    </div>
+    <div class="col-span-1 flex items-center sm:block">
+      <div
+        class="rounded-full flex-shrink-0 bg-green-standard w-20 h-20 sm:w-28 sm:w-28 lg:w-32 lg:h-32 mx-auto flex items-center justify-center">
+        {{ 'trade-in-work-check.svg' | asset_url | img_tag:'PITAKA Trade-in Program','block w-1/2'}}
+      </div>
+      <div class="w-full mt-0 ml-4 sm:ml-0 sm:mt-4 text-left sm:text-center">
+        <h4 class="font-bold {{subTitleSize}}">Check</h4>
+        <p class="text-gray-400 mt-2">
+          We will check whether your old device is eligible for this program.
+        </p>
+      </div>
+    </div>
+    <div class="col-span-1 flex items-center sm:block">
+      <div
+        class="rounded-full flex-shrink-0 bg-green-standard w-20 h-20 sm:w-28 sm:w-28 lg:w-32 lg:h-32 mx-auto flex items-center justify-center">
+        {{ 'trade-in-work-refund.svg' | asset_url | img_tag:'PITAKA Trade-in Program','block w-1/2'}}
+      </div>
+      <div class="w-full mt-0 ml-4 sm:ml-0 sm:mt-4 text-left sm:text-center">
+        <h4 class="font-bold {{subTitleSize}}">Refund</h4>
+        <p class="text-gray-400 mt-2">
+          We will send the mentioned cashback amount to your original account 14 days after receiving your package.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="{{wClass_6}} {{pdClass}}">
+  <h3 class="{{titleSize}} px-3 text-center">
+    Frequently Asked Questions
+  </h3>
+
+  <div class="px-3 mt-12 sm:mt-20 grid gap-6">
+    <div>
+      <h4 class="text-sm sm:text-base font-bold">1. What products can I trade in?</h4>
+      <p class="{{descSize}} text-gray-400">
+        Currently, you can only trade in the MagEZ Mount Qi.
+      </p>
+    </div>
+    <div>
+      <h4 class="text-sm sm:text-base font-bold">2. How can I participate in this program?</h4>
+      <p class="{{descSize}} text-gray-400">
+        Add your desired device to the cart by using buttons on this site and enter code TRADEIN. If you use any other
+        codes at checkout, you can’t participate in this trade-in program.
+      </p>
+    </div>
+    <div>
+      <h4 class="text-sm sm:text-base font-bold">
+        3. How to enter the code at checkout?
+      </h4>
+      <p class="{{descSize}} text-gray-400">
+        For PC users, click the Chekout button, then click Apply at the next page, enter the code. For mobile users,
+        enter the code at the Payment section.
+      </p>
+    </div>
+    <div>
+      <h4 class="text-sm sm:text-base font-bold">
+        4. What if I forgot to enter the code TRADEIN at checkout?
+      </h4>
+      <p class="{{descSize}} text-gray-400">
+        If you did not use any codes, please send your order number to our support team and let us know you want to
+        participate in the program.
+      </p>
+    </div>
+    <div>
+      <h4 class="text-sm sm:text-base font-bold">
+        5. How to know if my device is too damaged for trade-in?
+      </h4>
+      <p class="{{descSize}} text-gray-400">
+        Your device should wear no obvious damage on the surface, have never been disassembled, and still charge phones.
+        Also, we will check whether the device can be reused after receiving it.
+      </p>
+    </div>
+    <div>
+      <h4 class="text-sm sm:text-base font-bold">
+        6. What if my device is not eligible for the program after sending it?
+      </h4>
+      <p class="{{descSize}} text-gray-400">
+        If your device is not eligible for recycling, we will do proper disposal of it and give back US$5 as
+        compensation for the shipping fee.
+      </p>
+    </div>
+    <div>
+      <h4 class="text-sm sm:text-base font-bold">
+        7. How much should I pay for shipping my old device?
+      </h4>
+      <p class="{{descSize}} text-gray-400">
+        It depends on the service you choose and the distance. You will need to pay for the shipping fee, and we will
+        give back $5 after receiving your device.
+      </p>
+    </div>
+    <div>
+      <h4 class="text-sm sm:text-base font-bold">
+        8. When should I ship my device back?
+      </h4>
+      <p class="{{descSize}} text-gray-400">
+        Please send your old car mount back to us by April 30, 2022, and reply with the tracking number.
+      </p>
+    </div>
+    <div>
+      <h4 class="text-sm sm:text-base font-bold">
+        9. When will I receive the cashback?
+      </h4>
+      <p class="{{descSize}} text-gray-400">
+        You will receive the cashback 14 days after we receive your device.
+      </p>
+    </div>
+    <div>
+      <h4 class="text-sm sm:text-base font-bold">
+        10. Can I cancel a trade-in?
+      </h4>
+      <p class="{{descSize}} text-gray-400">
+        Once your new device is shipped, you can’t cancel your trade-in.
+      </p>
+    </div>
+    <div>
+      <h4 class="text-sm sm:text-base font-bold">
+        11. Can I bring my device to your office instead of shipping it?
+      </h4>
+      <p class="{{descSize}} text-gray-400">
+        No, the tracking number will be the only valid proof for a later transaction.
+      </p>
+    </div>
+    <div>
+      <h4 class="text-sm sm:text-base font-bold">
+        12. Do I have to use the package for the new device to pack my old device?
+      </h4>
+      <p class="{{descSize}} text-gray-400">
+        To reduce as much waste as possible, please pack your old device with the package you received. Of course, that
+        will be fine if you use other old packages.
+      </p>
+    </div>
+    <div>
+      <h4 class="text-sm sm:text-base font-bold">
+        13. Do I have to include accessories like cables?
+      </h4>
+      <p class="{{descSize}} text-gray-400">
+        You do not need to include the charging cable, but please include other accessories that come with the MagEZ
+        Mount Qi.
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .bundle-slider {
+    --swiper-navigation-size: 32px;
+    margin: 0;
+  }
+
+  .bundle-slider .swiper-wrapper{
+    display: block;
+  }
+
+  .bundle-slider .swiper-slide {
+    width: auto;
+  }
+
+  .bundle-slider .swiper-button-prev,
+  .bundle-slider .swiper-button-next {
+    display: none;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-weight: 600;
+  }
+
+  @media screen and (min-width:768px) {
+    .bundle-slider {
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+
+    .bundle-slider .swiper-button-prev,
+    .bundle-slider .swiper-button-next{
+      /* display: block; */
+      height: 100%;
+      top: 0;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      background: #212327;
+      box-sizing: content-box;
+    }
+    .bundle-slider .swiper-button-prev{
+      padding-right: 38px;
+    }
+
+    .bundle-slider .swiper-button-next{
+      padding-left: 38px;
+    }
+
+    .bundle-slider .swiper-wrapper{
+      display: flex;
+    }
+  }
+
+  @media screen and (min-width:1280px) {
+    .bundle-slider {
+      --swiper-navigation-size: 40px;
+      padding-left: 64px;
+      padding-right: 64px;
+    }
+
+    .bundle-slider .swiper-button-prev {
+      left: 0;
+    }
+
+    .bundle-slider .swiper-button-next {
+      right: 0;
+    }
+  }
+
+  .variants-list::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+  }
+
+  .variants-list::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+  }
+
+  .variants-list::-webkit-scrollbar-thumb {
+    background-color: #4b4b4b;
+  }
+
+  .selected-variant{
+    white-space: nowrap;
+    padding-right: 24px;
+    overflow: hidden;
+    padding-left: 8px;
+    text-overflow: ellipsis;
+    max-width: 240px;
+  }
+
+  .selected-variant::after {
+    position: absolute;
+    content: '';
+    width: 14px;
+    height: 14px;
+    right: 10px;
+    top: 13px;
+    transform: rotate(90deg);
+    background:url({{'triggle_pixel.svg' | asset_url }}) no-repeat center center;
+    background-size: contain;
+    transition: all .3s ease;
+  }
+
+  .selected-variant.active::after {
+    transform: rotate(-90deg);
+  }
+
+  /*Select2 ReadOnly Start*/
+  select[readonly].product-single__variants  {
+    pointer-events: none;
+    touch-action: none;
+  }
+  /*Select2 ReadOnly End*/
+
+  form .shop-btn{
+    max-width: 240px;
+  }
+
+  .AddToCart {
+    line-height: 40px;
+    padding: 0;
+    letter-spacing: 0;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .AddToCart.disabled {
+    opacity: 0.7;
+  }
+
+  .AddToCart:not(.noClick):hover {
+    background-color: #09C75A;
+  }
+
+  .AddToCart:not(.noClick):hover span {
+    color: #fff;
+  }
+
+  .AddToCart.disabled:hover .AddToCartText {
+    color: #000;
+  }
+  
+  .AddToCart.disabled:hover .AddToCartText::before {
+    content: '';
+    -webkit-mask: unset;
+  }
+
+  .pt-card .selector-wrapper {
+    display: none;
+  }
+
+  .product-single__variants {
+    /* display: block !important; */
+    border: 1px solid #a9a9a9;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .shop-btn .continue-shopping {
+    display: none !important;
+  }
+</style>
+
+{{'swiper-bundle.min.js' | asset_url | script_tag }}
+<script>
+  var selectCallback = function (variant, selector) {
+    var soldOutText = "{{ 'products.product.sold_out' | t }}";
+    if (variant) {
+      timber.productPage({
+        money_format: "{{ shop.money_format }}",
+        variant: variant,
+        selector: selector,
+        translations: {
+          add_to_cart: "{{ 'products.product.add_to_cart' | t }}",
+          sold_out: soldOutText,
+          unavailable: "{{ 'products.product.unavailable' | t }}"
+        }
+      });
+    }
+  };
+
+  function variantChange(select_id) {
+    var variant_str = $(select_id).find("option:selected").data('label');
+    if (variant_str.indexOf(" / ") == -1) {
+      $(`${select_id}-option-0`).val(variant_str).trigger("change");
+    } else {
+      var variant_arr = variant_str.split(" / ");
+      for (let i = 0; i < variant_arr.length; i = i + 1) {
+        var variant = variant_arr[i];
+        $(`${select_id}-option-${i}`).val(variant).trigger("change");
+      }
+    }
+  }
+
+  window.onload = function(){
+    if (window.innerWidth >= 768) {
+      var bundle_swiper = new Swiper(".bundle-slider", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        freeMode: true,
+        grabCursor: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: "auto",
+            spaceBetween: 18
+          },
+          1280: {
+            slidesPerView: "auto",
+            spaceBetween: 24
+          }
+        }
+      });
+    }
+  }
+
+  $(function(){
+    $(".product-single__variants").on("change", function () {
+      var select_id = "#" + $(this).attr("id");
+      variantChange(select_id);
+    });
+
+    $(".product-single__variants").each(function () {
+      $(this).val($(this).find("option:first").attr("value")).trigger("change");
+    });
+
+    $('.selected-variant').click(function(){
+      $(this).toggleClass('active');
+      $(this).next('.variants-list').slideToggle().toggleClass('hidden');
+    });
+
+    $('.variants-list').on('click','li',function(){
+      $(this).parent('.variants-list').prev('.selected-variant').html($(this).html());
+      $(this).parent('.variants-list').slideUp().addClass('hidden');
+      const variantID = $(this).data('value');
+      $(this).closest('form').find('.product-single__variants').val(variantID).trigger("change");
+    });
+  })
+</script>

@@ -1,0 +1,1332 @@
+<!-- media css -->
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+{{ 'collection-media-slide.css' | asset_url | stylesheet_tag }}
+<style>
+  .product-media .logoBox {
+    padding: 1px 0;
+  }
+
+  .product-media .mquotes {
+    margin: 30px auto;
+  }
+
+  .product-media .m-content {
+    height: 300px;
+  }
+
+  .product-media .content-item p,
+  .product-media .content-item p a,
+  .product-media .content-item p a:hover {
+    color: #fff;
+  }
+
+  .media-logos li {
+    margin: 5px 10px;
+  }
+
+  @media screen and (min-width:1025px) {
+    .media-logos li img {
+      width: 70%;
+      max-height: 100%;
+    }
+  }
+
+  @media screen and (max-width:1400px) and (min-width:1280px) {
+    .product-media .content-item p {
+      font-size: 1.2em;
+    }
+  }
+
+  @media screen and (max-width:1024px) {
+    .product-media {
+      width: 100%;
+    }
+
+    .product-media .m-content {
+      width: 1600% !important;
+    }
+
+    .product-media .media-logos {
+      padding: 0 4% 60px;
+    }
+
+
+    .product-media .m-content .content-item {
+      width: 6.25%;
+      justify-content: flex-start;
+    }
+
+    .thumb-ico.m-item.active {
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width:640px) {
+    .product-media .media-logos {
+      padding-bottom: 0;
+    }
+
+    .media-logos li {
+      margin: 10px 6px;
+    }
+  }
+</style>
+<!-- media css end -->
+
+<style>
+  picture>img {
+    display: block;
+  }
+
+  .pt-section-content {
+    max-width: 486px;
+    z-index: 10;
+  }
+
+  .section0 .pt-section-content,
+  .section1 .pt-section-content,
+  .section3 .pt-section-content,
+  .section6 .pt-section-content {
+    max-width: unset !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section4 .play-btn {
+    display: flex;
+  }
+
+  .section4 .play-btn img {
+    margin-right: 10px;
+  }
+
+  /* swap animation */
+  .swap-charging {
+    height: 100vh;
+    padding-top: 5em;
+  }
+
+  .swap-charging-img {
+    overflow: hidden;
+    width: 50%;
+  }
+
+  .swap_lightning,
+  .swap_typec {
+    z-index: 10;
+  }
+
+  .swap_typec {
+    display: none;
+  }
+
+  .swap_iphone,
+  .swap_console,
+  .swap_typec,
+  .swap_samsung,
+  .swap_game {
+    display: none;
+    z-index: 11;
+  }
+
+  /* toggle bg */
+  .toggle-sec {
+    z-index: 10;
+  }
+
+  .toggle-btns {
+    display: flex;
+  }
+
+  .toggle-btns img {
+    margin-right: 10px;
+    width: 51px;
+    height: 51px;
+  }
+
+  .toggle-btns img.active {
+    border: 2px solid #fff;
+    border-radius: 50%;
+  }
+
+  .toggle-bg {
+    display: none;
+  }
+
+  .toggle-bg.active {
+    display: block;
+  }
+
+  /* direction-sec */
+  .direction-sec {
+    /* background: url("{{ 'air-omni-direction-bg.jpg' | asset_url }}") center 0; */
+    /* background-size: cover; */
+    padding-top: 5em;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .direction-sec .anim-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    max-width: 40%;
+  }
+
+  #anim-ipad-1,
+  #anim-ipad-2 {
+    z-index: 10;
+  }
+
+  .direction-base {
+    z-index: 9;
+  }
+
+  #anim-cable {
+    z-index: 8;
+  }
+
+  #anim-holder {
+    z-index: 11;
+  }
+
+  .media-sec {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media screen and (min-width:1025px) {
+
+    /* swap animation */
+    .swap-charging-img {
+      display: flex;
+      align-items: flex-end;
+      /* margin-top: -5em; */
+    }
+  }
+
+  @media screen and (max-width:1400px) {
+    .direction-sec .anim-container {
+      max-width: 50%;
+    }
+
+    .pt-section-content {
+      max-width: 386px;
+    }
+
+    /* swap animation */
+    .swap-charging-img {
+      width: 70%;
+    }
+
+    .swap-charging {
+      padding-top: 0;
+    }
+  }
+
+  @media screen and (max-width:1279px) {
+    .pt-section-content {
+      max-width: 316px;
+    }
+  }
+
+  @media screen and (max-width:1024px) {
+
+    /* swap animation */
+    .swap-charging,
+    .direction-sec {
+      justify-content: flex-end !important;
+    }
+
+    .swap-charging .pt-section-content,
+    .direction-sec .pt-section-content {
+      margin-bottom: 20%;
+    }
+
+    .swap-charging-img {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .swap_iphone,
+    .swap_console,
+    .swap_samsung,
+    .swap_game {
+      top: 0;
+      left: 0;
+    }
+
+    .direction-sec .anim-container {
+      max-width: 60%;
+    }
+
+    .section0 .pt-section-content,
+    .section1 .pt-section-content,
+    .section3 .pt-section-content,
+    .section6 .pt-section-content {
+      width: 100%;
+      padding: 0 20%;
+    }
+
+    .section2 .pt-section-content {
+      position: static;
+      width: 100%;
+      max-width: unset;
+      padding: 5em 20%;
+      transform: none;
+
+      background: #171719;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+
+    .section0 {
+      position: relative;
+    }
+
+    .section0 .pt-section-content {
+      position: absolute;
+      top: 15%;
+    }
+
+    .pt-section-content {
+      max-width: unset;
+      padding: 0 20%;
+      width: 100%;
+      transform: none;
+      left: 0;
+      top: 10%;
+      text-align: center;
+    }
+
+    .section4 .play-btn {
+      justify-content: center;
+    }
+
+    .toggle-btns {
+      justify-content: center;
+      margin-top: 2em;
+    }
+
+    .toggle-btns img {
+      margin: 0 1em;
+    }
+
+    .direction-sec .anim-container {
+      max-width: 80%;
+    }
+
+    /* modal video */
+    .pt-modal-close {
+      font-size: 18px;
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  @media screen and (max-width:414px) {
+    .pt-section-content {
+      padding: 0 10% !important;
+      top: 10%;
+    }
+
+    .section2 .pt-section-content {
+      padding: 5em 10% !important;
+    }
+
+    .toggle-btns {
+      margin-top: 1em;
+    }
+
+    .toggle-btns img {
+      margin: 0 10px;
+      width: 32px;
+      height: 32px;
+    }
+
+    .direction-sec .anim-container {
+      max-width: 90%;
+    }
+  }
+</style>
+
+<!-- specs css -->
+<style>
+  .specs-sec {
+    background-color: #171719;
+    padding: 5em 7%;
+  }
+
+  .features-piece {
+    align-items: stretch;
+  }
+
+  .features-piece p {
+    padding: 0 15%;
+  }
+
+  .features-piece img {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+  }
+
+  .features-piece p a {
+    color: #fff;
+    font-weight: 500;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+
+  /* specs */
+  .devices-list {
+    margin: 5em 0 0;
+  }
+
+  .devices-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5em;
+  }
+
+  .devices-container img {
+    display: block;
+    margin: 3em auto 0;
+  }
+
+  .devices-grid {
+    padding-right: 3em;
+  }
+
+  .devices-grid:first-child {
+    width: 22%;
+  }
+
+  .devices-grid:nth-child(2) {
+    width: 24%;
+  }
+
+  .devices-grid:nth-child(3) {
+    width: 27%;
+  }
+
+  .devices-grid:nth-child(4) {
+    width: 27%;
+    padding: 0;
+  }
+
+  .devices-title {
+    margin-bottom: 15px;
+  }
+
+  .devices-grid .ul p {
+    margin-bottom: 0;
+    color: #fff;
+  }
+
+  .devices-grid .ul p span {
+    width: 330px;
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  @media screen and (max-width:1440px) {
+    .devices-container img {
+      max-width: 100%
+    }
+
+    .devices-grid {
+      padding-right: 1em;
+    }
+
+    .devices-grid .ul p {
+      margin-bottom: 3px;
+    }
+  }
+
+  @media screen and (max-width:1024px) {
+    .features-container {
+      flex-direction: column;
+    }
+
+    .devices-list {
+      margin-top: 0;
+    }
+
+    .wid-half {
+      width: 100%;
+      padding: 0 10%;
+    }
+
+    .features-piece:nth-child(2n+1),
+    .features-piece:nth-child(2n) {
+      padding: 0 15%;
+    }
+
+    .devices-grid {
+      margin-top: 1.5em;
+    }
+
+    .devices-container {
+      margin-bottom: 4em;
+    }
+
+    .devices-container img {
+      margin: 2em auto 0;
+    }
+
+    .devices-grid .ul p span {
+      width: auto;
+      display: initial;
+      margin-right: 15px;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .devices-grid {
+      width: 50% !important;
+    }
+
+    .features-piece:nth-child(2n+1),
+    .features-piece:nth-child(2n) {
+      padding: 0;
+    }
+  }
+</style>
+<!-- specs css end -->
+
+<div class="section-default section0">
+  <div class="pt-section-content text-center pt-margin-bottom-large">
+    <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400 font-upper">Simplified Charging</h3>
+  </div>
+  <picture>
+    <source media="(min-width: 769px)" data-srcset="{{'product-section0-omni-lite.png' | asset_url }}">
+    <img src="{{ placeholder_gif }}" data-src="{{'product-section0-omni-lite-m.jpg' | asset_url }}"
+      class="width-100 lazyload" alt="Air Omni Lite">
+  </picture>
+</div>
+
+<!---------- TOGGLE BG ------------>
+<div class="section-default section8 relative">
+  <div class="pt-section-content absolute pt-position-centerY pt-position-left">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      Save Space, Time, and Money
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      Get rid of cable clutter and effortlessly charge multiple devices simultaneously with a single charging station
+      designed for all your small gadgets.
+    </p>
+    <div class="toggle-btns pt-margin-top-small">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'omni-lite-toggle-1.png' | asset_url }}" class="active lazyload"
+        data-target="#bg_1" />
+      <img src="{{ placeholder_gif }}" data-src="{{ 'omni-lite-toggle-2.png' | asset_url }}" class="lazyload"
+        data-target="#bg_2" />
+      <img src="{{ placeholder_gif }}" data-src="{{ 'omni-lite-toggle-3.png' | asset_url }}" class="lazyload"
+        data-target="#bg_3" />
+    </div>
+  </div>
+
+  <picture class="toggle-bg active" id="bg_1">
+    <source media="(min-width: 769px)" data-srcset="{{'index-slider-omni-lite-1.jpg' | asset_url }}">
+    <img src="{{ placeholder_gif }}" data-src="{{'omni-lite-toggle_pic-1-m.jpg' | asset_url }}"
+      class="width-100 lazyload" alt="Air Omni Lite">
+  </picture>
+
+  <picture class="toggle-bg" id="bg_2">
+    <source media="(min-width: 769px)" srcset="{{'index-slider-omni-lite-2.jpg' | asset_url }}">
+    <img src="{{'omni-lite-toggle_pic-2-m.jpg' | asset_url }}" class="width-100" alt="Air Omni Lite">
+  </picture>
+
+  <picture class="toggle-bg" id="bg_3">
+    <source media="(min-width: 769px)" srcset="{{'index-slider-omni-lite-3.jpg' | asset_url }}">
+    <img src="{{'omni-lite-toggle_pic-3-m.jpg' | asset_url }}" class="width-100" alt="Air Omni Lite">
+  </picture>
+</div>
+
+<!---------- SWAP ANIMATION ------------>
+<div class="swap-charging section1 pt-flex pt-flex-column pt-flex-center pt-flex-between">
+  <div class="pt-section-content text-center">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Charge Up To Six Devices at Once</h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      From your iPhone and Android phone to earbuds, tablets, and gadgets - charging multiple devices has never been
+      simpler.
+    </p>
+  </div>
+  <div class="swap-charging-img relative">
+    <img src="{{ 'omni-lite-versatility-lightning-1.png' | asset_url }}" class="swap_lightning" alt="Air Omni Lite">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'air-omni-versatility-iphone-2.png' | asset_url }}"
+      class="swap_iphone absolute top-0 lazyload">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'air-omni-versatility-console-3.png' | asset_url }}"
+      class="swap_console absolute top-0 lazyload">
+    <img src="{{ 'omni-lite-versatility-type-c-4.png' | asset_url }}" class="swap_typec" alt="Air Omni Lite">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'air-omni-versatility-samsung-5.png' | asset_url }}"
+      class="swap_samsung absolute top-0 lazyload">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'air-omni-versatility-game-6.png' | asset_url }}"
+      class="swap_game absolute top-0 lazyload">
+  </div>
+</div>
+
+<div class="section-default section2 pt-video-container relative">
+  <div class="pt-section-content text-center absolute pt-position-centerX">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">A Unique Charging Adapter</h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      Easily switch between Lightning and Type-C ports to fast charge devices.
+    </p>
+  </div>
+  <video loop muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+    x5-video-orientation="portraint" preload="none" autoplay style="object-fit:contain" class="lazyload">
+    <source src="{{ 'product-video-omni-lite-toggle.mp4' | asset_url }}" type="video/mp4">
+    <source src="{{ 'product-video-omni-lite-toggle.webm' | asset_url }}" type="video/webm">
+  </video>
+</div>
+
+<!---------- CHARGING PAD ------------>
+<div class="section-default section3 relative">
+  <div class="pt-section-content text-center absolute pt-position-centerX">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      Designated Charging Spots
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      Experience convenient wireless charging with separate charging areas for Qi-enabled mobiles and earbuds.
+    </p>
+  </div>
+  <picture>
+    <source media="(min-width: 769px)" data-srcset="{{'product-section3-omni-lite.jpg' | asset_url }}">
+    <img src="{{ placeholder_gif }}" data-src="{{'product-section3-omni-lite-m.jpg' | asset_url }}"
+      class="width-100 lazyload" alt="Air Omni Lite">
+  </picture>
+</div>
+
+<!---------- BGV ------------>
+<div class="section-default section4 relative">
+  <div class="pt-section-content absolute pt-position-centerY pt-position-left">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      Apple Watch Charging Module
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-small">
+      Attach your Apple Watch charging cable to the mount to charge your smartwatch flat or upright.
+    </p>
+    <a href="javascript:;" data-target="#modal-video" id="modal-toggle" class="play-btn">
+      {{ 'omni-lite-play-btn.svg' | asset_url | img_tag }}
+      Watch Video
+    </a>
+  </div>
+  <picture>
+    <source media="(min-width: 769px)" data-srcset="{{'product-section4-omni-lite.jpg' | asset_url }}">
+    <img src="{{ placeholder_gif }}" data-src="{{'product-section4-omni-lite-m.jpg' | asset_url }}"
+      class="width-100 lazyload" alt="Air Omni Lite">
+  </picture>
+
+</div>
+
+<!---------- SIDE DRAWER------------>
+<div class="section-default section5 relative">
+  {%- comment -%}
+  <div class="pt-section-content absolute pt-position-centerY pt-position-right">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      Keep Your Small Items Safe
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      Store personal items such as jewelry and SD cards in the side drawer.
+    </p>
+  </div>
+  {%- endcomment -%}
+  <picture>
+    <source media="(min-width: 769px)" data-srcset="{{'product-section5-omni-lite.jpg' | asset_url }}">
+    <img src="{{ placeholder_gif }}" data-src="{{'product-section5-omni-lite-m.jpg' | asset_url }}"
+      class="width-100 lazyload" alt="Air Omni Lite">
+  </picture>
+</div>
+
+<!---------- CHARGE DIRECTION ------------>
+<div class="direction-sec section6 pt-flex pt-flex-column pt-flex-center pt-flex-between">
+  <div class="pt-section-content text-center pt-margin-bottom-small">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      Multiple Charging Positions
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      Continue to work or play while you charge. Use one of the two USB ports and magnetic stand for landscape mode or
+      the adapter to charge in portrait.
+    </p>
+  </div>
+  <div class="anim-container relative">
+    <img src="{{ placeholder_gif }}" data-src="{{'air-omni-direction-cable.png' | asset_url }}" alt="Air Omni"
+      class="absolute top-0 lazyload" id="anim-cable">
+    <img src="{{ placeholder_gif }}" data-src="{{'omni-lite-direction-base.png' | asset_url }}" alt="Air Omni"
+      class="direction-base lazyload" alt="Air Omni Lite">
+    <img src="{{ placeholder_gif }}" data-src="{{'air-omni-direction-ipad-1.png' | asset_url }}" alt="Air Omni"
+      class="absolute top-0 lazyload" id="anim-ipad-1">
+    <img src="{{ placeholder_gif }}" data-src="{{'air-omni-direction-ipad-2.png' | asset_url }}" alt="Air Omni"
+      class="absolute top-0 lazyload" id="anim-ipad-2">
+    <img src="{{ placeholder_gif }}" data-src="{{'air-omni-direction-holder.png' | asset_url }}" alt="Air Omni"
+      class="absolute top-0 lazyload" id="anim-holder">
+  </div>
+</div>
+
+<div class="section-default section7 relative">
+  {%- comment -%}
+  <div class="pt-section-content absolute pt-position-centerY pt-position-right">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      A Tabletop Charging Station for Home or Office
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      Place this versatile multi-device charging station on your nightstand to charge while you sleep or keep all your
+      electronic devices charged and ready to go in the office.
+    </p>
+  </div>
+  {%- endcomment -%}
+  <picture>
+    <source media="(min-width: 769px)" data-srcset="{{'product-section7-omni-lite.jpg' | asset_url }}">
+    <img src="{{ placeholder_gif }}" data-src="{{'product-section7-omni-lite-m.jpg' | asset_url }}"
+      class="width-100 lazyload" alt="Air Omni Lite">
+  </picture>
+</div>
+
+<!----------- warranty----------->
+<div class="pt-section relative clearfix">
+  <div class="features-container pt-flex text-center">
+    <div class="features-piece pt-flex pt-flex-column wid-half">
+      {{ 'airomni-features-material.png' | asset_url | img_tag }}
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Aerospace Material Applied</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        The material, Aramid Fiber has been used in
+        Aerospace, Racing Vehicles as well as Body Armor
+        and is loved for its excellent resistance to heat.
+      </p>
+    </div>
+    <div class="features-piece pt-flex pt-flex-column wid-half">
+      {{ 'airomni-features-warranty.png' | asset_url | img_tag }}
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">One-Year Warranty</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        We stand behind our products and commitment to
+        excellence. If you need help with the Air Omni Lite, our
+        Customer Care team is happy to help.<br>
+        <a href="/pages/shipping-warranty" target="_blank">Learn more about our product warranties.</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Specs -->
+<div class="specs-sec pt-section clearfix" id="air-omni-specs">
+  <div class="devices-container">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6 text-center">Specs & Details</h3>
+    <picture>
+      <source media="(min-width: 769px)" data-srcset="{{'model-omni-lite-line.png' | asset_url }}">
+      <img src="{{ placeholder_gif }}" data-src="{{'model-omni-lite-line-m.png' | asset_url }}" class="lazyload"
+        alt="Air Omni Lite" />
+    </picture>
+  </div>
+
+  {%- comment -%}
+  <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6 text-center">Compatible Devices</h3>
+  <div class="devices-list pt-flex">
+    <div class="devices-grid">
+      <div class="devices-title pt-section-title-small">Tablets</div>
+      <div class="ul">
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad 2</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad (3rd generation)</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad Mini</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad (4th generation)</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad Air</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad Mini 2</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad Mini 3</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad Air 2</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad Mini 4</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad Pro (1st, 12.9")</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad Pro (1st, 9.7")</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad (5th generation)</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad Pro (2nd, 10.5"/12.9")</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad (6th generation)</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad Pro (3rd, 11"/12.9")</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad Air (3rd generation)</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad Mini (5th generation)</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad (7th generation)</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPad Pro (4th, 11"/12.9")</p>
+      </div>
+    </div>
+
+    <div class="devices-grid">
+      <div class="devices-title pt-section-title-small">Phones</div>
+      <div class="ul">
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPhone 5</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPhone 5C</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPhone 5S</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPhone 6/6 Plus</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPhone 6S/6S Plus</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPhone SE</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPhone 7/7 Plus</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPhone 8/8 Plus</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPhone X</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPhone XS/XS Max</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPhone XR</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPhone 11</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPhone 11 Pro/11 Pro Max</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Galaxy S9/S9+</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Galaxy S10e/S10/S10+</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Galaxy Note 8/Note 8+</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Galaxy Note 9/Note 9+</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Galaxy Note10/Note10+ 4G/5G</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Galaxy S20/S20+/S20 Ultra</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Galaxy Note20/Note20 Ultra</p>
+      </div>
+    </div>
+
+    <div class="devices-grid">
+      <div class="devices-title pt-section-title-small">Earbuds</div>
+      <div class="ul">
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">AirPods 1/2/Pro Charging Case</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Samsung Galaxy Buds</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">BeatsX Earphones</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Powerbeats Pro Charging Case</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Beats Solo Pro Headphones</p>
+      </div>
+      <br>
+      <div class="devices-title pt-section-title-small">Other devices</div>
+      <div class="ul">
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          All other devices that have a type-c port such as
+          Switch or a lightning port such as Apple TV
+          Remote, and so on.
+        </p>
+        <br>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Apple Pencil (1st generation)</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Magic Keyboard</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Siri Remote for Apple TV (4th & 5th
+          generation)</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Magic Mouse 2, Magic Trackpad 2</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPod Touch</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">iPod Nano</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Nintendo Switch</p>
+      </div>
+    </div>
+
+    <div class="devices-grid">
+      <div class="devices-title pt-section-title-small">Apple Watch</div>
+      <div class="ul">
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Apple Watch 1</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Apple Watch 2</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Apple Watch 3</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Apple Watch 4</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Apple Watch 5</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Apple Watch 6/SE</p>
+      </div>
+      <br>
+      <div class="devices-title pt-section-title-small">Dimensions</div>
+      <div class="ul">
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Length: 8.1-in / 205.6mm</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Width: 6.7-in / 171.9mm</p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">Height: 1.2-in / 31.1mm</p>
+      </div>
+      <br>
+      <div class="devices-title pt-section-title-small">Technical Specs</div>
+      <div class="ul">
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          <span>Lightning/Type-C Connector Output</span>18W
+        </p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          <span>Qi Wireless Charging Output</span>7.5W/10W
+        </p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          <span>Earbuds Wireless Charging Output</span>5W
+        </p>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          <span>Apple Watch Wireless Charging Output</span>5W
+        </p>
+      </div>
+    </div>
+
+  </div>
+  {%- endcomment -%}
+</div>
+
+<!-- Media -->
+<div class="media-sec pt-section">
+  <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6 text-center">
+    Our Credits
+  </h3>
+  <div class="product-media">
+    <div class="itemsBox">
+      <div class="mquotes" text="“">“</div>
+      <div class="m-content" id="contentBox">
+        <div id="i1" class="content-item active">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            <a href="https://www.macrumors.com/2020/01/06/ces-unveiled-2020/" target="_blank">
+              This charger is interesting. It's definitely big, but if you're traveling and want to limit the cables. I
+              can see this being extremely useful and probably the thing that I would want to travel with rather than a
+              bunch of cables I'll just toss it in my carry-on bag.
+            </a>
+          </p>
+        </div>
+        <div id="i2" class="content-item">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            <a href="https://www.entrepreneur.com/slideshow/344652#10" target="_blank">
+              Besides supporting iOS and Android devices, the product offers a convertible lightning
+              or USB-C tablet charger and both USB-A and USB-C side charging ports.
+            </a>
+          </p>
+        </div>
+        {%- comment -%}
+        <div id="i3" class="content-item">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            <a href="https://www.benzinga.com/pressreleases/20/01/n15082055/ces-2020-pitaka-announces-air-omni-the-ultimate-mfi-certified-wireless-charger-for-up-to-6-devices"
+              target="_blank">
+              The Air Omni supports charging for a mix of up to six iOS and Android devices, including smartphones, a
+              smartwatch, wireless earbuds, a tablet, and any other MFi, USB-A, USB-C, or Lightning enabled device.
+            </a>
+          </p>
+        </div>
+        <div id="i4" class="content-item">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            <a href="https://lamanzanamordida.net/noticias/one-more-thing/ces-2020-accesorios-apple/" target="_blank">
+              El fabricante PITAKA ha presentado un accesorio para poder cargar inalámbricamente el iPhone, AirPods y
+              Apple Watch. Pero a estos equipos también se incluye un conector para cargar un tablet y varios puertos
+              para cargar otros productos de manera externa con cable.
+            </a>
+          </p>
+        </div>
+        {%- endcomment -%}
+        <div id="i5" class="content-item">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            <a href="https://www.cultofmac.com/676086/satechi-pitaka-wireless-multi-device-chargers/" target="_blank">
+              Pitaka’s Air Omni is a wireless charger for up to six devices that does away with multiple chargers and
+              cords. And it will prevent you from having to cut additional sockets into the walls of your vintage digs.
+            </a>
+          </p>
+        </div>
+        <div id="i6" class="content-item">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            <a href="https://wccftech.com/pitaka-air-omni/" target="_blank">
+              The reason why this is a 6-in-1 charger is quite simple. It has a convertible Lightning / USB-C docking
+              station, one USB-A port on the side alongside USB-C, an Apple Watch charging base and you can wirelessly
+              charge two devices at once.
+            </a>
+          </p>
+        </div>
+        <div id="i7" class="content-item">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            <a href="https://www.macitynet.it/ces-2020-pitaka-air-omni-piattaforma-di-ricarica-per-6-dispositivi-certificata-da-apple"
+              target="_blank">
+              Air Omni supporta la ricarica per un massimo di sei dispositivi iOS e Android, inclusi smartphone, uno
+              smartwatch, auricolari wireless, un tablet e qualsiasi altro dispositivo abilitato per MFi, USB-A, USB-C
+              to Lightning.
+            </a>
+          </p>
+        </div>
+        {%- comment -%}
+        <div id="i8" class="content-item ">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            <a href="https://www.channelnews.com.au/ces-unveiled-2020-a-glimpse-into-the-tech-of-the-future"
+              target="_blank">
+              Air Omni includes wireless charging options for AirPods, Apple Watch and iPhones. It comes with new
+              outputs for USB-A, USB-C and Lightning, which can put out a combined 18W of power.
+            </a>
+          </p>
+        </div>
+        <div id="i9" class="content-item ">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            <a href="https://www.i4u.com/2020/01/132883/pitaka-releases-air-omni-can-charge-6-devices-all-once"
+              target="_blank">
+              ’s Air Omni is the ultimate MFi-certified 6-in-1 wireless nightstand charger and device organizer for
+              people with multiple devices. It comes with a convertible Lightning / USB-C tablet charger, standard USB
+              type-A and USB-C side ports, as well as a hidden storage drawer.
+            </a>
+          </p>
+        </div>
+
+        <div id="i10" class="content-item ">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            <a href="https://www.idropnews.com/news/9-coolest-new-gadgets-unveiled-at-ces-2020-so-far/126337/12"
+              target="_blank">
+              The PITAKA Air Omni is a charging pad that can juice up AirPods, Apple Watches and iPhones wirelessly, but
+              also comes with a dedicated port with USB-C and Lightning adapters. It’s a sleek solution to charge all of
+              your gadgets at once.
+            </a>
+          </p>
+        </div>
+        {%- endcomment -%}
+        <div id="i11" class="content-item ">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            <a href="https://appleinsider.com/articles/20/01/06/all-of-the-best-gear-and-gadgets-from-ces-unveiled-2020"
+              target="_blank">
+              PITAKA Air Omni has an interchangeable connector so users can use it for additional devices or change if
+              they upgrade from an older iPad to a newer iPad Pro.
+            </a>
+          </p>
+        </div>
+
+        <div id="i12" class="content-item">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            <a href="https://bgr.com/2020/08/04/best-wireless-charger-for-iphone-airpods-pro-apple-watch"
+              target="_blank">
+              The Pitaka Air Omni is a fantastic charging station that truly covers all the bases. It’s a must-have
+              device for any Apple fan.
+            </a>
+          </p>
+        </div>
+
+        <div id="i13" class="content-item">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            <a href="https://www.cnet.com/news/get-this-6-in-1-bedside-wireless-charging-station-for-135"
+              target="_blank">
+              Air Omni is a very cleverly designed gadget. I've been using this charging station for a few weeks now,
+              and I love the way it consolidates everything I need to charge in a single device.
+            </a>
+          </p>
+        </div>
+
+        <div id="i14" class="content-item">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            <a href="https://www.youtube.com/watch?v=sO6eSdaqbi4&t=1s" target="_blank">
+              This is a major major major go, if you got a bunch of Apple products, you need this Air Omni.
+            </a>
+          </p>
+        </div>
+
+        <div id="i15" class="content-item">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            <a href="https://www.yankodesign.com/2020/05/19/heres-that-all-in-one-charging-dock-apple-should-have-made-for-its-products "
+              target="_blank">
+              The Air Omni stands out as perhaps the one true product that Apple hopes it had tried to push out.
+            </a>
+          </p>
+        </div>
+
+        <div id="i16" class="content-item">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            <a href="https://phandroid.com/2020/05/08/pitaka-air-omni-review-an-absolute-charging-beast "
+              target="_blank">
+              For an Apple user, this is the king of chargers. But if you’re an Android fan, as all of us are, don’t
+              sleep on this one. The USB-C ports and USB Power Delivery support all make for just as good an experience
+              for Android as it does for Apple, even if that Apple Watch charger will never see any use.
+            </a>
+          </p>
+        </div>
+
+        <div id="i17" class="content-item">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            <a href="https://www.igeeksblog.com/pitaka-air-omni-review/" target="_blank">
+              Is It The Ultimate Charging Machine?<br>
+              Absolutely! Pitaka Air Omni fulfills what is promises flawlessly. To test, I packed it with my Apple
+              Watch, AirPods Pro, iPhone, and iPad Pro. All of my devices were successfully & simultaneously
+              fast-charged.
+            </a>
+          </p>
+        </div>
+
+        <div id="i18" class="content-item">
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            <a href="https://gforgadget.com/cool-gadgets/pitaka-air-omni-charging-station/" target="_blank">
+              This is a multipurpose device charging station that can charge up to 6 devices simultaneously. It is made
+              of aramid fiber with a carbon fiber look, is very lightweight and aesthetically pleasing. It has a
+              convertible type C and lightning connector so that it is compatible with the iPhone as well as type C
+              supporting devices.
+            </a>
+          </p>
+        </div>
+
+      </div>
+      <div class="arrowBox">
+        <div id="arrow_prev" class="arrow arrow_perv">
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'>
+            <path d='M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z' fill='#ddd' /></svg>
+        </div>
+        <div id="arrow_next" class="arrow arrow_next">
+          <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'>
+            <path d='M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z' fill='#ddd' /></svg>
+        </div>
+      </div>
+    </div>
+    <div class="logoBox">
+      <ul class="media-logos">
+        <li data-id="i1" class="thumb-ico m-item active">
+          {{ 'media-macRumors-white.png' | asset_url | img_tag: 'Air Omni MacRumors' }}
+        </li>
+        <li data-id="i2" class="thumb-ico m-item">
+          {{ 'media-entrepreneur-white.png' | asset_url | img_tag: 'Air Omni Entrepreneur', 'media-svg' }}
+        </li>
+        {%- comment -%}
+        <li data-id="i3" class="thumb-ico m-item ">
+          {{ 'media-benzinga-white.png' | asset_url | img_tag: 'Air Omni Benzinga', 'media-svg' }}
+        </li>
+        <li data-id="i4" class="thumb-ico m-item">
+          {{ 'media-mordida-white.png' | asset_url | img_tag: 'Air Omni Mordida' }}
+        </li>
+        {%- endcomment -%}
+        <li data-id="i5" class="thumb-ico m-item">
+          {{ 'media-cultofmac-white.png' | asset_url | img_tag: 'Air Omni Cult of Mac', 'media-svg' }}
+        </li>
+        <li data-id="i6" class="thumb-ico m-item">
+          {{ 'media-wccftech-white.png' | asset_url | img_tag: 'Air Omni WCCFTech' }}
+        </li>
+        <li data-id="i7" class="thumb-ico m-item">
+          {{ 'media-macitynet-white.png' | asset_url | img_tag: 'Air Omni macitynet.it' }}
+        </li>
+        {%- comment -%}
+        <li data-id="i8" class="thumb-ico m-item">
+          {{ 'media-channelNews-white.png' | asset_url | img_tag: 'Air Omni Channel News' }}
+        </li>
+        <li data-id="i9" class="thumb-ico m-item">
+          {{ 'media-i4u-white.png' | asset_url | img_tag: 'Air Omni I4U', 'I4U' }}
+        </li>
+
+        <li data-id="i10" class="thumb-ico m-item">
+          {{ 'media-idrop-white.png' | asset_url | img_tag: 'Air Omni iDropNews' }}
+        </li>
+        {%- endcomment -%}
+        <li data-id="i11" class="thumb-ico m-item">
+          {{ 'media-appleinsider-white.png' | asset_url | img_tag: 'Air Omni appleinsider' }}
+        </li>
+        <li data-id="i12" class="thumb-ico m-item">
+          {{ 'media-bgr-white.png' | asset_url | img_tag: 'Air Omni BGR' }}
+        </li>
+        <li data-id="i13" class="thumb-ico m-item">
+          {{ 'media-clnet-white.png' | asset_url | img_tag: 'Air Omni Clnet' }}
+        </li>
+        <li data-id="i14" class="thumb-ico m-item">
+          {{ 'media-flossy-white.png' | asset_url | img_tag: 'Air Omni Flossy Carter' }}
+        </li>
+        <li data-id="i15" class="thumb-ico m-item">
+          {{ 'media-yd-white.png' | asset_url | img_tag: 'Air Omni YD' }}
+        </li>
+        <li data-id="i16" class="thumb-ico m-item">
+          {{ 'media-phandroid-white.png' | asset_url | img_tag: 'Air Omni PHANDROID' }}
+        </li>
+        <li data-id="i17" class="thumb-ico m-item">
+          {{ 'media-igeeksblog-white.png' | asset_url | img_tag: 'Air Omni iGeeks Blog' }}
+        </li>
+        <li data-id="i18" class="thumb-ico m-item">
+          {{ 'media-gforgadget-white.png' | asset_url | img_tag: 'Air Omni GforGadget' }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="modal-mask"></div>
+<div id="modal-video" class="pt-modal-container">
+  <div class="modal-background">
+    <div class="pt-modal-dialog relative">
+      <button class="pt-modal-close absolute" type="button">
+        <span class="icon icon-x"></span>
+      </button>
+      <video controls playsinline preload="none" class="lazyload">
+        <source src="{{ 'product-omni-lite-bgv.mp4' | asset_url }}" type="video/mp4">
+        <source src="{{ 'product-omni-lite-bgv.webm' | asset_url }}" type="video/webm">
+      </video>
+    </div>
+  </div>
+</div>
+
+<!-- scroll magic scripts -->
+{{ 'ScrollMagic-2.0.7.min.js' | asset_url | script_tag }}
+{{ 'animation-2.0.7.gsap.min.js' | asset_url | script_tag }}
+{{ 'gsap3.min.js' | asset_url | script_tag }}
+
+<script>
+  ! function () {
+    let isMobile;
+    if (window.innerWidth < 1280) {
+      isMobile = true;
+    }
+    let controller = new ScrollMagic.Controller();
+    let tl = gsap.timeline();
+    if (!isMobile) {
+      tl.set(['.swap_iphone', '.swap_console', '.swap_samsung'], {
+          x: '-90vw',
+          display: 'inline-block'
+        })
+        .set('.swap_game', {
+          x: '-120vw',
+          display: 'inline-block'
+        })
+        .from('.swap_iphone', {
+          x: '-90vw',
+          duration: 6
+        }, 0)
+        .to('.swap_iphone', {
+          x: '70vw',
+          duration: 4
+        }, '+=5')
+        .from('.swap_console', {
+          x: '-90vw',
+          duration: 6
+        }, '+=4')
+        .to('.swap_console', {
+          x: '70vw',
+          duration: 4
+        }, '+=5')
+        .set('.swap_lightning', {
+          display: 'none'
+        })
+        .set('.swap_typec', {
+          display: 'inline-block'
+        })
+        .from('.swap_samsung', {
+          x: '-90vw',
+          duration: 6
+        }, '+=0')
+        .to('.swap_samsung', {
+          x: '70vw',
+          duration: 4
+        }, '+=5')
+        .from('.swap_game', {
+          x: '-120vw',
+          duration: 6
+        }, '+=4')
+    } else {
+      let fromEffect = {
+          xPercent: -200,
+          duration: 6
+        },
+        toEffect = {
+          xPercent: 100,
+          duration: 4
+        };
+      tl.set(['.swap_iphone', '.swap_console', '.swap_samsung'], {
+          xPercent: -200,
+          display: 'inline-block'
+        })
+        .set('.swap_game', {
+          xPercent: -230,
+          display: 'inline-block'
+        })
+        .from('.swap_iphone', fromEffect, 0)
+        .to('.swap_iphone', toEffect, '+=5')
+        .from('.swap_console', fromEffect, '+=4')
+        .to('.swap_console', toEffect, '+=5')
+        .set('.swap_lightning', {
+          display: 'none'
+        })
+        .set('.swap_typec', {
+          display: 'inline-block'
+        })
+        .from('.swap_samsung', fromEffect, '+=0')
+        .to('.swap_samsung', toEffect, '+=5')
+        .from('.swap_game', fromEffect, '+=4')
+    }
+
+    let sc = new ScrollMagic.Scene({
+        triggerElement: '.swap-charging',
+        triggerHook: 0,
+        duration: '400%',
+      })
+      .setTween(tl)
+      // .addIndicators()
+      .setPin('.swap-charging')
+      .addTo(controller)
+
+    // direction animation
+    var timeline = gsap.timeline({
+      defaults: {
+        duration: 1
+      }
+    });
+    timeline
+      .from("#anim-ipad-1", {
+        y: 0,
+        duration: 0.5,
+        opacity: 1
+      })
+      .to("#anim-ipad-1", {
+        y: '-100',
+        opacity: 0
+      })
+      .from("#anim-ipad-2", {
+        x: '-200',
+        opacity: 0
+      })
+      .from("#anim-holder", {
+        duration: 0.5,
+        opacity: 0,
+        y: "-=100"
+      }, "-=0.5")
+      .from(
+        "#anim-cable", {
+          duration: 0.5,
+          opacity: 0,
+          x: "100"
+        },
+        "-=0.5"
+      )
+
+    // const controller = new ScrollMagic.Controller();
+    const scene = new ScrollMagic.Scene({
+        triggerElement: ".direction-sec",
+        triggerHook: 0,
+        duration: '100%',
+      })
+      .setPin('.direction-sec')
+      .setTween(timeline)
+      // .addIndicators({
+      //   name: "1 (duration: 0)"
+      // })
+      .addTo(controller);
+
+  }();
+</script>
+
+<!---- media scripts --->
+{{ 'collection-media-slide.js' | asset_url | script_tag }}
+<!--- media scripts end --->
+
+<script>
+  $(function () {
+    $(".toggle-btns").on("click", "img", function () {
+      var toggle_target = $(this).data('target');
+      var this_active = $(this).hasClass('active');
+      if (this_active) {
+        return;
+      } else {
+        $(this).addClass('active').siblings().removeClass('active');
+        $(toggle_target).addClass('active').siblings().removeClass('active');
+      }
+    })
+
+    $('.thumb-ico').click(function () {
+      $(this).addClass('active').siblings().removeClass('active')
+      var modid = $(this).data('id')
+      $('#' + modid)
+        .addClass('active')
+        .siblings()
+        .removeClass('active')
+    })
+  })
+</script>
+
+<!-- model scripts -->
+<script>
+  $(function () {
+    var video = document.getElementById('modal-video').querySelector('video');
+    $("#modal-toggle").click(function (e) {
+      e.stopPropagation();
+      var modal = $(this).data("target");
+      $(".modal-mask").show();
+      $(modal).addClass('open');
+      video.play();
+
+      $(document).click(function (e) {
+        var _con = $('#modal-video');
+        if (!_con.is(e.target) && _con.has(e.target).length === 0) {
+          video.pause();
+          _con.removeClass('open');
+          $(".modal-mask").hide();
+        }
+      })
+    })
+    $(".pt-modal-close").click(function (e) {
+      e.stopPropagation();
+      video.pause();
+      $('#modal-video').removeClass('open');
+      $(".modal-mask").hide();
+    })
+  })
+</script>

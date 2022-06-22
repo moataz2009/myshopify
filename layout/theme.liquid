@@ -1,0 +1,512 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <meta http-equiv="Cache-control" content="public">
+  <meta name="theme-color" content="{{ settings.color_nav_bg }}">
+  {% render 'favicons' %}
+<meta name="facebook-domain-verification" content="2he0ymkvcp6faak9mfs5w2fd77xeze" />
+
+
+
+  <meta name="google" content="nositelinkssearchbox" />
+  <meta name="google-site-verification" content="WPwyZaAMukvK1evPOWhVKq_xOSdZAKM_18ccO1myoZw" />
+  <meta name="msvalidate.01" content="0C018B287EA200C6282DCB9FF373BB60" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://www.ipitaka.com",
+      "logo": "https://cdn.shopify.com/s/files/1/1036/4113/t/38/assets/logo.svg?v=15111444366990547958"
+    }
+  </script>
+
+  <title>
+    {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+  </title>
+
+  {% if page_description %}
+    <meta name="description" content="{{ page_description | escape }}">
+  {% endif %}
+
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page_title }}">
+    <meta property="og:url" content="{{ canonical_url }}">
+    <meta property="og:description" content="{{ page_description }}">
+  {% comment %}
+    <meta property="og:image" content="http:{{ 'PITAKA-Black-Friday-Promo.jpg' | asset_img_url: 'grande' }}">
+    <meta property="og:image:secure_url" content="https:{{ 'PITAKA-Black-Friday-Promo.jpg' | asset_img_url: 'grande' }}">
+  {% endcomment %}
+  <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="600">
+   <meta name="twitter:site" content="@PitakaGallery" />
+  <meta name="twitter:card" content="summary_large_image" />
+ 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://www.ipitaka.com/",
+        "potentialAction": [{
+        "@type": "SearchAction",
+            "target": "https://www.ipitaka.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }]
+      }
+    </script>
+
+
+  {% if template contains 'product' %}
+    <link rel="canonical" href="{{ shop.url }}{{ product.url }}" />
+  <script type="text/javascript" src="https://spa.spicegems.com/js/src/latest/pitaka.myshopify.com/scriptTag.js?shop=pitaka.myshopify.com" async></script>
+  {% else %}
+    <link rel="canonical" href="{{ canonical_url }}">
+  {% endif %}
+
+  {% include 'social-meta-tags' %}
+  {% render 'css-variables' %}
+
+  {{ 'new-common-2020.css' | asset_url | stylesheet_tag }}
+
+  {{ 'tailwind.css' | asset_url | stylesheet_tag }}
+  {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'common.css' | asset_url | stylesheet_tag }}
+
+  <script>
+    window.theme = window.theme || {};
+    theme.strings = {
+      cartEmpty: {{ 'cart.general.empty' | t | json }},
+      savingHtml: {{ 'cart.general.savings_html' | t: price: '[savings]' | json }},
+      addToCart: {{ 'products.product.add_to_cart' | t | json }},
+      soldOut: {{ 'products.product.sold_out' | t | json }},
+      unavailable: {{ 'products.product.unavailable' | t | json }},
+      addressError: {{ 'map.address_error' | t | json }},
+      addressNoResults: {{ 'map.address_no_results' | t | json }},
+      addressQueryLimit: {{ 'map.address_query_limit_html' | t | json }},
+      authError: {{ 'map.auth_error_html' | t | json }}
+    };
+    theme.settings = {
+      cartType: {{ settings.cart_type | json }},
+      moneyFormat: {{ shop.money_format | json }}
+    };
+  </script>
+  
+  {% if request.page_type contains 'customers/' %}
+    <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+  {% endif %}
+
+  {{ 'vendor.js' | asset_url | script_tag }}
+  <script>
+    window.$ = jQuery.noConflict();
+  </script>
+  <script>
+    // resize event
+    const dWidth_old = window.innerWidth;
+    window.onresize = function(e){
+      const dWidth_new = window.innerWidth;
+      if(Math.abs(dWidth_old - dWidth_new) > 150){
+        window.location.reload(); 
+      }else{
+        return false;
+      }
+    };
+  </script>
+
+  {{ content_for_header }}
+
+  <script type="text/javascript">
+    (function e() {
+      var e = document.createElement("script");
+      e.type = "text/javascript",
+        e.async = true,
+        e.src = "//staticw2.yotpo.com/j1blj6TlfDCoOKkflErQWd5DDUoq2RdHIFub5Ug7/widget.js";
+      var t = document.getElementsByTagName("script")[0];
+      t.parentNode.insertBefore(e, t)
+    })();
+  </script>
+
+  <style>
+    /* #back-to-top {
+      bottom: 110px;
+    } */
+
+    #_hj_feedback_container {
+      display: none !important;
+    }
+
+    body>img:last-child {
+      display: none !important;
+    }
+  </style>
+<!--MB_OPC-->
+    <script>
+      if (window.location.pathname == '/securecheckout') {
+        document.title = 'Secure checkout';
+        var css = 'body > :not(#cartLoader) {display:none !important}',
+            head = document.head || document.getElementsByTagName('head')[0],
+            style = document.createElement('style');
+        head.appendChild(style);
+        style.appendChild(document.createTextNode(css));
+        var svg =
+            "<svg style='position:fixed;top:100px;left:50%;margin-left:-100px;' width='200px'  height='200px'  xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid' class='lds-rolling' style='background: none;'><circle cx='50' cy='50' fill='none' ng-attr-stroke='{{config.color}}' ng-attr-stroke-width='{{config.width}}' ng-attr-r='{{config.radius}}' ng-attr-stroke-dasharray='{{config.dasharray}}' stroke='#197bbd' stroke-width='2' r='15' stroke-dasharray='70.68583470577033 25.561944901923447' transform='rotate(243.197 50 50)'><animateTransform attributeName='transform' type='rotate' calcMode='linear' values='0 50 50;360 50 50' keyTimes='0;1' dur='1s' begin='0s' repeatCount='indefinite'></animateTransform></circle></svg>";
+            document.open();
+        document.write("<!doctype ht" + "ml><ht" + "ml><bo" +
+                       "dy><div id='cartLoader' style='min-height:600px;width:100%;text-align:center;background-color: rgba(255, 255, 255, .5);position:absolute;z-index:9999999999'>" +
+                       svg + "</div></b" + "ody></ht" + "ml>");
+        document.close();
+      }
+      var opcSettings = {
+        checkoutUrl: 'securecheckout',
+        enabled: true,
+        design: 1,
+        skipCart: false,
+        oneClickBuy: false,
+        customJsFile: '',
+        customCssFile: 'https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F1036%2F4113%2Ft%2F41%2Fassets%2Fsecure-checkout-css.css%3Fv%3D8189571951697859597',
+        btnSelector: '',
+        enablePopup: false,
+        popupHtml: "",
+        popupBkg: '#ffffff',
+        upsells: [],
+        boosters: {
+          "booster1": "0",
+          "booster1_text": "",
+          "booster1_text2": "",
+          "booster1_min": "0",
+          "booster2": "0",
+          "booster3": "0",
+          "booster3_heading": "",
+          "booster3_title1": "",
+          "booster3_text1": "",
+          "booster3_img1": "",
+          "booster3_title2": "",
+          "booster3_text2": "",
+          "booster3_img2": "",
+          "booster4": "0",
+          "booster4_img": ""
+        }
+      };
+      var opcLang = {
+        completeOrder: "Complete order",
+        payment: "Payment",
+        shippingMethod: "Shipping method",
+        secureCheckout: "Secure Checkout",
+        paymentNotice: "Please select shipping method in previous step to show payment methods",
+        shippingNotice: "Please submit shipping information in previous step to show shipping methods",
+        upsellTitle: "Would you like also this? (optional)",
+        upsellAdded: "Product has been successfully added to checkout"
+      };
+    </script>
+    <!--MB_OPC-->
+
+
+   {%comment %}以下一行为share a sale追踪代码{% endcomment %}
+    <script src="https://www.dwin1.com/19038.js" type="text/javascript" defer="defer"></script>
+
+
+    <!-- BEGIN PRIVY WIDGET CODE -->
+  <script type='text/javascript'> var _d_site = _d_site || 'BB3654EF708BB89EF2ED01ED'; </script>
+  <script src='https://widget.privy.com/assets/widget.js'></script>
+  <!-- END PRIVY WIDGET CODE -->
+  <script>
+(function(w,e,b,g,a,i,n,s){w['ITCLKOBJ']=a;w[a]=w[a]||function(){(w[a].q=w[a].q||[]).push(arguments)},w[a].l=1*new Date();i=e.createElement(b),n=e.getElementsByTagName(b)[0];i.async=1;i.src=g;n.parentNode.insertBefore(i,n)})(window,document,'script','https://analytics.webgains.io/clk.min.js','ITCLKQ');
+ITCLKQ('set', 'internal.cookie', true);
+ITCLKQ('set', 'internal.api', true);
+ITCLKQ('click');
+</script>
+  {% include 'cscode_discount' %}
+  <!-- WordSeed Pixel START -->
+<script type="text/javascript"> var _paq = window._paq = window._paq || []; _paq.push(['trackPageView']); _paq.push(['enableLinkTracking']); _paq.push(['enableHeartBeatTimer']); (function () { var u = "https://a.opumo.net/"; _paq.push(['setTrackerUrl', u + 'oa.php']); _paq.push(['setSiteId', '303']); var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0]; g.type = 'text/javascript'; g.async = true; g.src = u + 'oa.js'; s.parentNode.insertBefore(g, s); })(); </script> <noscript> <p><img src="https://a.opumo.net/oa.php?idsite=303&rec=1" style="border:0;" alt="" /></p> </noscript>
+<!-- WordSeed Pixel END -->
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MDDQRLV');</script>
+<!-- End Google Tag Manager -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3CMLGVCJXS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3CMLGVCJXS');
+</script>
+<!--Gem_Page_Header_Script-->
+{% include 'gem-app-header-scripts' %}
+<!--End_Gem_Page_Header_Script-->
+</head>
+
+<body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ request.page_type | handle }}">
+
+  <div id="SearchDrawer" class="search-bar drawer drawer--top">
+    <div class="search-bar__table">
+      <form action="{{ routes.search_url }}" method="get" class="search-bar__table-cell search-bar__form" role="search">
+        <div class="search-bar__table">
+          <div class="search-bar__table-cell search-bar__icon-cell">
+            <button type="submit" class="search-bar__icon-button search-bar__submit">
+              <span class="icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </span>
+              <span class="icon__fallback-text">{{ 'general.search.submit' | t }}</span>
+            </button>
+          </div>
+          <div class="search-bar__table-cell">
+            <input type="search" id="SearchInput" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.placeholder' | t }}" aria-label="{{ 'general.search.placeholder' | t }}" class="search-bar__input">
+          </div>
+        </div>
+      </form>
+      <div class="search-bar__table-cell text-right">
+        <button type="button" class="search-bar__icon-button search-bar__close js-drawer-close">
+          <span class="icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </span>
+          <span class="icon__fallback-text">{{ 'general.search.close_search' | t }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="NavDrawer" class="drawer drawer--left">
+  {% section 'sidebar-menu' %}
+  </div>
+  <div id="CartDrawer" class="drawer drawer--right drawer--has-fixed-footer">
+    <div class="drawer__header px-6 py-2">
+      <div class="drawer__title text-2xl text-white">{{ 'cart.general.title' | t }}</div>
+     <div class="drawer__close">
+        <button type="button" class="drawer__close-button js-drawer-close">
+          <span class="icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </span>
+          <span class="icon__fallback-text">{{ 'cart.general.close_cart' | t }}</span>
+        </button>
+      </div>
+    </div>
+    <div class="drawer__inner cart-drawer__inner w-full">
+      <div id="CartContainer" class="w-full">
+        {% unless template.name == 'product' %}
+          {% render 'cart-drawer' %}
+        {% endunless %}
+      </div>
+    </div>
+  </div>
+
+  <div id="PageContainer">
+    <div class="site-header-wrapper">
+      <div class="site-header-container">
+        {% section 'header' %}
+      </div>
+    </div>
+
+    <main class="main-content{% if request.page_type == blank %} main-content--no-template{% endif %}" role="main">
+      {{ content_for_layout }}
+    </main>
+
+    {% section 'footer' %}
+
+  </div>
+
+  <ul hidden>
+    <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
+    <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
+  </ul>
+
+  {% assign placeholder_gif = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' %}
+  <script src="{{ 'lazysizes.min.js' | asset_url }}" async="async"></script>
+  <script src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=Hua4gW&shop=pitaka.myshopify.com" async="async"></script>
+  {% unless template contains 'index' %}
+    <div id="back-to-top" class="fixed right-8 md:right-12 lg:right-16 bottom-36 cursor-pointer z-50">
+      <span class="block flex justify-center items-center bg-white rounded-full w-10 h-10 text-black hover:bg-black hover:text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition hover:w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+      </span>
+    </div>
+    <script type="text/javascript">
+      $('#back-to-top').on("click", function () {
+        $('html, body').animate({
+          scrollTop: 0
+        }, 'slow');
+      });
+      function showHidebackToTop() {
+        if ($(window).scrollTop() > $(window).height() / 2) {
+          $("#back-to-top").removeClass('hidden').addClass('block');
+        } else {
+          $("#back-to-top").removeClass('block').addClass('hidden');
+        }
+      }
+
+      $(window).scroll(function () {
+        showHidebackToTop();
+      });
+    </script>
+    {% unless page.handle contains 'trade-in-program' or collection.handle == 'pitaflow-for-phones' %}
+      {{ 'timber.js' | asset_url | script_tag }}
+    {% endunless %}
+  {% endunless %}
+
+  {% if template contains 'product' or page.handle contains 'trade-in-program' or collection.handle == 'pitaflow-for-phones' %}
+    {{ 'option_selection.js' | shopify_asset_url | script_tag }}
+    <script type="text/javascript"
+            src="{{shop.secure_url}}/apps/vig/liquid_factory/scripttag.js?shop={{shop.permanent_domain}}"></script>
+    
+    <script type="text/javascript">
+      jQuery(function () {
+        jQuery('.swatch :radio').change(function () {
+          var optionIndex = jQuery(this).closest('.swatch').attr('data-option-index');
+          var optionValue = jQuery(this).val();
+          jQuery(this)
+          .closest('form')
+          .find('.single-option-selector')
+          .eq(optionIndex)
+          .val(optionValue)
+          .trigger('change');
+        });
+      });
+    </script>
+  {% endif %}
+
+  {{ 'theme.js' | asset_url | script_tag }}
+
+  <script src="//cdn.codeblackbelt.com/js/modules/frequently-bought-together/main.min.js?shop=pitaka.myshopify.com" defer></script>
+  
+  {% if template contains 'product' or page.handle contains 'trade-in-program' or collection.handle == 'pitaflow-for-phones' %}
+    <script type="text/javascript">
+      var webSiteAdvantage = webSiteAdvantage || {};
+      webSiteAdvantage.yotpoRichSnippets = webSiteAdvantage.yotpoRichSnippets || [];
+      webSiteAdvantage.yotpoRichSnippets = function (n) {
+        this.initialise(n)
+      };
+      webSiteAdvantage.yotpoRichSnippets.prototype = {
+        yotpoPlaceHolder: ".yotpo-main-widget",
+        constructor: webSiteAdvantage.yotpoRichSnippets,
+        initialise: function (n) {
+          try {
+            if (typeof n != "undefined" && n != null && (this.yotpoPlaceHolder = n), document.querySelector(this
+                                                                                                            .yotpoPlaceHolder) == null && (console.log("yotpoRichSnippets: Could not find yotpoPlaceHolder " +
+              this.yotpoPlaceHolder), this.yotpoPlaceHolder = ".yotpo.placeholder", console.log(
+              "yotpoRichSnippets: Trying " + this.yotpoPlaceHolder)), this._yotpoPlaceHolderElement = document
+                .querySelector(this.yotpoPlaceHolder), this._yotpoPlaceHolderElement != null) {
+              var t = this;
+              this._observer = new MutationObserver(function (n) {
+                n.forEach(function (n) {
+                  var r = n.addedNodes,
+                      u;
+                  if (r !== null)
+                    for (i = 0; i < r.length; i++) u = r[i], typeof u.classList != "undefined" && u.classList
+                    .contains("yotpo-display-wrapper") && (t._observer.disconnect(), t._observer = null, t
+                                                          ._addMarkup())
+                      })
+              });
+              this._observer.observe(this._yotpoPlaceHolderElement, this._observerConfig)
+            } else console.log("yotpoRichSnippets: Could not find yotpoPlaceHolder " + this.yotpoPlaceHolder), console
+            .log("yotpoRichSnippets: Failed")
+              } catch (r) {
+                console.log("yotpoRichSnippets: initialise Error: " + r.message)
+              }
+        },
+        _markupAdded: !1,
+        _observer: null,
+        _observerConfig: {
+          attributes: !0,
+          childList: !0,
+          characterData: !0,
+          subtree: !0
+        },
+        _yotpoPlaceHolderElement: null,
+        _getCount: function (n) {
+          var i = document.querySelector('.yotpo-distibutions-sum-reviews span[data-score-distribution="' + n + '"]'),
+              t;
+          return i != null && (t = i.textContent, t.length >= 3) ? parseInt(t.substr(1, t.length - 2)) : 0
+        },
+        _getReviewCount: function () {
+          var t = document.querySelector(".yotpo-reviews-nav-tab-sum"),
+              n;
+          return t != null && (n = t.textContent, n.length >= 3) ? parseInt(n.substr(1, n.length - 2)) : (console.log(
+            "yotpoRichSnippets: Failed to find reviewCount. Using 0"), 0)
+        },
+        _addMarkup: function () {
+          var t, e, n, u, v;
+          if (!this._markupAdded) {
+            this._markupAdded = !0;
+            try {
+              var o = this._getCount(5),
+                  s = this._getCount(4),
+                  h = this._getCount(3),
+                  c = this._getCount(2),
+                  l = this._getCount(1),
+                  f = o + s + h + c + l,
+                  a = (o * 5 + s * 4 + h * 3 + c * 2 + l * 1) / f;
+              if (f == 0 && (f = this._getReviewCount(), a = document.querySelectorAll(
+                ".yotpo-stars-and-sum-reviews .yotpo-stars .yotpo-icon-star").length + document.querySelectorAll(
+                ".yotpo-stars-and-sum-reviews .yotpo-stars .yotpo-icon-half-star").length / 2), f > 0)
+                for (t = document.querySelector(".yotpo-stars-and-sum-reviews"), t != null ? (t.setAttribute("id",
+                                                                                                            "yotpo-aggregate-rating"), t.setAttribute("itemprop", "aggregateRating"), t.setAttribute(
+                  "itemscope", ""), t.setAttribute("itemtype", "http://schema.org/AggregateRating")) : console.log(
+                  "yotpoRichSnippets: Failed to find aggregateRating Element"), this._addItemProps(t, ".based-on",
+                                                                                                  "reviewCount", f), this._addItemProps(t, ".yotpo-stars-and-sum-reviews .yotpo-stars",
+                                                                                                                                        "ratingValue", a), this._appendItemPropMetaTag(t, "worstRating", "1"), this
+                    ._appendItemPropMetaTag(t, "bestRating", "5"), e = this._yotpoPlaceHolderElement.querySelectorAll(
+                  ".yotpo-review"), e.length == 0 && console.log("yotpoRichSnippets: Failed to find any reviews"),
+                    r = 0; r < e.length; r++) n = e[r], n.classList.contains("yotpo-hidden") || (n.setAttribute(
+                  "itemprop", "review"), n.setAttribute("itemscope", ""), n.setAttribute("itemtype",
+                                                                                        "http://schema.org/Review"), u = n.querySelector(".yotpo-review-stars"), u != null ? (u
+                  .setAttribute("itemprop", "reviewRating"), u.setAttribute("itemscope", ""), u.setAttribute(
+                  "itemtype", "http://schema.org/Rating"), v = n.querySelectorAll(".yotpo-icon-star").length,
+                  this._appendItemPropMetaTag(u, "ratingValue", v)) : console.log(
+                  "yotpoRichSnippets: Failed to find reviewRating Element for review " + i), this._addItemProps(n,
+                                                                                                                'div[itemprop="review"] > .yotpo-header .yotpo-user-name', "author"), this._addItemProps(n,
+                  'div[itemprop="review"] > .yotpo-header .content-title .yotpo-font-bold', "name"), this
+                                                                                                  ._addItemProps(n, 'div[itemprop="review"] > .yotpo-main .content-review', "reviewBody"), this
+                                                                                                  ._addItemProps(n, 'div[itemprop="review"] > .yotpo-header .yotpo-review-date', "datePublished"))
+                  } catch (y) {
+                    console.log("yotpoRichSnippets: _addMarkup Error: " + y.message)
+                  }
+          }
+        },
+        _appendItemPropMetaTag: function (n, t, i) {
+          var r = document.createElement("meta");
+          r.setAttribute("itemprop", t);
+          r.setAttribute("content", i);
+          n.appendChild(r)
+        },
+        _addItemProps: function (n, t, r, u) {
+          var e = n.querySelectorAll(t),
+              f;
+          for (i = 0; i < e.length; i++) f = e[i], f.setAttribute("itemprop", r), typeof u != "undefined" && u !=
+            null && f.setAttribute("content", u)
+            }
+      };
+      new webSiteAdvantage.yotpoRichSnippets
+    </script>
+    {{ 'product-template.js' | asset_url | script_tag }}
+    {{ 'magnific-popup.min.js' | asset_url | script_tag }}
+  {% endif %}
+  
+  {{ 'common.js' | asset_url | script_tag }}
+  {% render 'pick-an-option' %}
+
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDDQRLV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<!--Gem_Page_Footer_Script-->
+{% include 'gem-app-footer-scripts' %}
+<!--End_Gem_Page_Footer_Script-->
+</body>
+</html>

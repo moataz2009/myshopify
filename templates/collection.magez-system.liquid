@@ -1,0 +1,695 @@
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_sm = 'w-full sm:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_6 = 'w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28' %}
+{% assign pdClass_b = 'px-3 sm:px-6 md:px-0 pb-16 sm:pb-20 lg:pb-28' %}
+{% assign titleBoxClass= 'mx-auto mb-12 w-11/12 sm:w-5/6 md:w-2/3 xl:w-2/5' %}
+{% assign titleBoxClass_t= 'mx-auto mt-12 sm:mt-12 w-11/12 sm:w-5/6 md:w-2/3 xl:w-2/5' %}
+{% assign titleSize = 'text-2xl md:text-3xl font-bold' %}
+{% assign descSize = 'text-sm sm:text-base text-gray-400' %}
+{% assign titleDecoMy = 'block mt-4 mb-6' %}
+{% assign absoluteContentBoxClass_8 = 'w-full laptop:w-10/12 lg:w-8/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-0' %}
+{% assign absoluteContentBoxClass_10 = 'w-full laptop:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-0' %}
+{% assign absoluteContentBoxClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2' %}
+{% assign absoluteContentClass = 'text-center sm:text-left absolute transform w-4/5 sm:w-1/2 xl:w-3/8 top-16 left-1/2 -translate-x-1/2 max-w-md sm:translate-x-0 sm:left-6 lg:left-0 sm:top-1/2 sm:-translate-y-1/2' %}
+
+{%- comment -%}主标题h1距底部距离（紧）{%- endcomment -%}
+{% assign titleMb_tight = 'mb-6' %}
+{%- comment -%}主标题h1距底部距离（松）{%- endcomment -%}
+{% assign titleMb_loose = 'mb-12' %}
+{%- comment -%}首屏{%- endcomment -%}
+<div class="w-full relative overflow-hidden">
+  <div class="absolute {{ absoluteContentBoxClass_10 }}">
+    <div class="{{ absoluteContentClass }} absolute">
+      <h3 class="text-xl md:text-2xl font-bold md:leading-normal text-center sm:text-left">
+        Everything about<br>PITAKA MagEZ System
+      </h3>
+    </div>
+  </div>
+  <picture>
+    <source data-srcset="{{ 'magez-system-section0.jpg' | asset_url }}" media="(min-width: 768px)" />
+    <img src="{{ placeholder_gif }}" data-src="{{ 'magez-system-section0-s.jpg' | asset_url }}"
+      alt="Air Case for iPhone 13 Series" class="block w-full h-full object-cover lazyload" />
+  </picture>
+</div>
+{%- comment -%}轮播屏{%- endcomment -%}
+<div class="w-full {{ pdClass }} bg-gray-800">
+  <div class="{{ titleBoxClass }}">
+    <p class="{{ descSize }} {{titleMb_loose}}">
+      PITAKA is a pioneer of utilizing high-tech materials in conjunction with intelligent design to simplify your life.
+      Of all the materials used within PITAKA designs, magnets are an indispensable component.
+    </p>
+  </div>
+  <div class="{{ wClass_6 }}">
+    <div class="swiper-container w-full center-slides">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide px-6 sm:px-0">
+          <div class="w-full">
+            <picture>
+              <source data-srcset="{{'magez-system-section1-slider1.jpg' | asset_url }}" media="(min-width: 768px)" />
+              <img src="{{ placeholder_gif }}" data-src="{{'magez-system-section1-slider1-s.jpg' | asset_url }}"
+                alt="MagEZ System" class="block w-full h-full lazyload" />
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-slide px-6 sm:px-0">
+          <div class="w-full">
+            <picture>
+              <source data-srcset="{{
+                                    'magez-system-section1-slider2.jpg'
+                                        | asset_url
+                                }}" media="(min-width: 768px)" />
+              <img src="{{ placeholder_gif }}" data-src="{{
+                                    'magez-system-section1-slider2-s.jpg'
+                                        | asset_url
+                                }}" alt="MagEZ System" class="block w-full h-full lazyload" />
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-slide px-6 sm:px-0">
+          <div class="w-full">
+            <picture>
+              <source data-srcset="{{
+                                    'magez-system-section1-slider3.jpg'
+                                        | asset_url
+                                }}" media="(min-width: 768px)" />
+              <img src="{{ placeholder_gif }}" data-src="{{
+                                    'magez-system-section1-slider3-s.jpg'
+                                        | asset_url
+                                }}" alt="MagEZ System" class="block w-full h-full lazyload" />
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev swiper-button-white"></div>
+      <div class="swiper-button-next swiper-button-white"></div>
+    </div>
+  </div>
+  <div class="{{ titleBoxClass_t }}">
+    <p class="{{ descSize }} {{titleMb_tight}}">
+      Over these years, we have built an ecosystem based on magnets, from magnetic car mounts and magnetic wallets to
+      magnetic power banks and magnetic iPad stands.
+    </p>
+    <p class="{{ descSize }} ">
+      Through a seamless ecosystem of products, we want to offer you the convenience of magnetic connectivity, to
+      simplify your life.
+    </p>
+
+  </div>
+</div>
+{%- comment -%}视频屏{%- endcomment -%}
+{%- comment -%}
+<div class="w-full relative overflow-hidden">
+  {% render 'video-set' , name:'magez-system-section2',coverName:'magez-system-section2-cover', extraClass:'mb-12' %}
+</div>
+{%- endcomment -%}
+{%- comment -%}对比说明{%- endcomment -%}
+<div class="{{wClass_6}} {{ pdClass }}">
+  <div class=" flex flex-col sm:flex-row items-center justify-between {{titleMb_loose}}">
+    <div class="w-full sm:w-3/6">
+      <h3 class="{{titleSize}}">
+        How Does the <br><span class="text-cyan">MagEZ<sup>&reg;</sup> 1.0</span> Work ?
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}}  {{titleMb_tight}}">
+        The core of the <span class="text-cyan">MagEZ<sup>&reg;</sup> 1.0</span> is our MagEZ Case and MagEZ Case Pro
+        lineup. We embedded crescent metal
+        plates in the phone cases and put magnets in various chargers and accessories, so your smartphone wrapped in our
+        case would snap on to the chargers or accessories, removing the hassle of complex installation, unstable
+        charging because of misalignment, etc.
+      </p>
+    </div>
+    <div class="w-full sm:w-2/6">
+      <picture>
+        <source data-srcset="{{'magez-system-section3-1.png' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magez-system-section3-1.png' | asset_url}}" alt="MagEZ System"
+          class="block mx-auto w-4/5 sm:w-full  max-w-max lazyload">
+      </picture>
+    </div>
+  </div>
+  <div class="w-full">
+    <picture>
+      <source data-srcset="{{'magez-system-section3-2.jpg' | asset_url}}" media="(min-width: 768px)">
+      <img src="{{ placeholder_gif }}" data-src="{{'magez-system-section3-2.jpg' | asset_url}}" alt="MagEZ System"
+        class="block mx-auto w-full  max-w-max lazyload">
+    </picture>
+  </div>
+</div>
+{%- comment -%}左右结构{%- endcomment -%}
+<div class="w-full {{pdClass}} bg-gray-800">
+  <div class="{{wClass_6}} flex flex-col sm:flex-row items-center justify-between">
+    <div class="w-full sm:w-6/12 md:w-4/8 pb-0">
+      <h3 class="{{titleSize}} {{titleMb_tight}}">
+        Why Do We Build the <span class="text-cyan">MagEZ<sup>&reg;</sup> 2.0</span> ?
+      </h3>
+      <p class="{{descSize}} {{titleMb_tight}}">
+        We were one of the few brands out there that makes magnetic chargers and so on. Last year, Apple re-launched
+        MagSafe, a new magnetic technology similar to our MagEZ system.
+      </p>
+      <p class="{{descSize}} {{titleMb_loose}}">It’s true that upgrading to the MagSafe system means we will lose the
+        proprietary MagEZ system. But we realize that MagSafe will become the dominant trend and a lot of people will
+        embrace the MagSafe system eventually. A unified system will benefit us all, so we decide to build the <span
+          class="text-cyan">MagEZ<sup>&reg;</sup> 2.0</span> system based on MagSafe technology.</p>
+    </div>
+
+    <div class="w-full sm:w-4/12">
+      <picture>
+        <source data-srcset="{{'magez-system-section4.png' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magez-system-section4-s.png' | asset_url}}"
+          alt="Air Case for iPhone 13 Series" class="block mx-auto w-4/5 sm:w-full lazyload">
+      </picture>
+    </div>
+  </div>
+</div>
+{%- comment -%}Grid拼图屏{%- endcomment -%}
+<div class="w-full {{ pdClass }}">
+  <div class="{{ titleBoxClass }}">
+    <p class="{{ descSize }}">
+      We replace the metal plates in our magnetic cases and matching magnets in chargers and accessories with the
+      MagSafe array magnets. Thus, our new magnetic cases only work with MagSafe chargers and accessories. Our old
+      magnetic chargers and accessories do not have MagSafe magnets, so they are not compatible with the new MagSafe
+      cases.
+    </p>
+  </div>
+  <div class="{{ wClass_8 }}">
+    <div class="w-full w-full grid grid-cols-1 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+      <div class="row-span-2 col-span-2">
+        <img src="{{ placeholder_gif }}" data-src="{{
+                        'magez-system-section5-1.jpg' | asset_url
+                    }}" alt="MagEZ System" class="block w-full h-full object-cover lazyload" />
+      </div>
+      <div class="col-span-2">
+        <img src="{{ placeholder_gif }}" data-src="{{
+                        'magez-system-section5-2.jpg' | asset_url
+                    }}" alt="MagEZ System" class="block w-full h-full object-cover lazyload" />
+      </div>
+      <div class="col-span-2">
+        <img src="{{ placeholder_gif }}" data-src="{{
+                        'magez-system-section5-3.jpg' | asset_url
+                    }}" alt="MagEZ System" class="block w-full h-full object-cover lazyload" />
+      </div>
+    </div>
+  </div>
+</div>
+{%- comment -%}表格对比屏{%- endcomment -%}
+<div class="w-full {{ pdClass_b }} bg-gray-850">
+  <div class="{{ titleBoxClass }}">
+    <h3 class="{{ titleSize }} text-center">Here’s the overall compatibility list:</h3>
+  </div>
+  <div class="{{ wClass_sm }} table_wrap text-xs">
+    <table class="border-collapse   border-4 border-green-800   text-left">
+      <tbody>
+        <tr>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-l-0 border-r-0 border-b-0 z-10 w-20 sticky left-0 h-10 ">
+          </td>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-l-0 border-b-0   z-10 w-36 sticky left-20 border-r-8 border-r-20 h-10">
+          </td>
+          <td
+            class="border-opacity-100   border-4 border-gray-850  bg-gray-505255 w-96 border-r-8 border-r-20 font-bold h-10"
+            colspan="6" id="textCenter">
+            <span class="">MagEZ<sup>&reg;</sup> 1.0</span>
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850  bg-gray-505255 w-64 font-bold h-10" colspan="4"
+            id="textCenter">
+            <span class="">MagEZ<sup>&reg;</sup> 2.0</span>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-r-0 border-t-0  z-10 w-20 sticky left-0 border-b-8 border-b-20 border-l-0">
+          </td>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-l-0 border-t-0 z-10 w-36 sticky left-20 border-r-8 border-r-20 border-b-8 border-b-20">
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20">MagEZ Mount</td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20">MagEZ Mount Qi
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20">
+            MagEZ Mount Qi Desktop
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20">MagEZ Juice</td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20">MagEZ Juice 2
+          </td>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-r-8 border-r-20 border-b-8 border-b-20">
+            MagEZ Card Sleeve
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20">
+            MagEZ Card Sleeve 2
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20">
+            MagEZ Wallet 2 Series
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20">
+            MagEZ Slider
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20">
+            MagEZ Car Mount Pro/Lite
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="border-opacity-100   border-4 border-gray-850  bg-gray-505255  z-10 w-20 sticky left-0 border-b-8 border-b-20  border-l-0 border-r-0 font-bold"
+            id="textCenter" rowspan="3">
+            <span class="">MagEZ<sup>&reg;</sup> 1.0</span>
+          </td>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800 z-10 w-36 sticky left-20 border-r-8 border-r-20 border-b-8 border-b-20  border-l-0 ">
+            MagEZ Case for iPhone 12 series and older models
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 border-r-8 border-r-20 ">
+            <img src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+        </tr>
+        <tr>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800 z-10 w-36 sticky left-20 border-b-8 border-b-20 border-r-8 border-r-20  border-l-0 ">
+            MagEZ Case for Android phones
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto">
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto">
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto">
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto">
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto">
+          </td>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 border-r-8 border-r-20 ">
+            <img src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto">
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+        </tr>
+        <tr>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800 z-10 w-36 sticky left-20 border-b-8 border-b-20 border-r-8 border-r-20 border-l-0 ">
+            MagEZ Case Pro for iPhone 11 Series and older models
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 border-r-8 border-r-20 ">
+            <img src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+        </tr>
+        <tr>
+          <td
+            class="border-opacity-100   border-4 border-gray-850  bg-gray-505255  z-10 w-20 sticky left-0 border-b-8 border-b-20 border-l-0 border-r-0 font-bold"
+            id="textCenter">
+            Transition</td>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800 z-10 w-36 sticky left-20 border-b-8 border-b-20 border-r-8 border-r-20 border-l-0">
+            MagEZ Case Pro 2 for iPhone 12 Series
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 border-r-8 border-r-20 ">
+            <img src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+        </tr>
+        <tr>
+          <td
+            class="border-opacity-100   border-4 border-gray-850  bg-gray-505255  z-10 w-20 sticky left-0 border-b-8 border-b-20 border-l-0 border-r-0 border-l-0 font-bold"
+            id="textCenter" rowspan="3">
+            <span class="">MagEZ<sup>&reg;</sup> 2.0</span>
+          </td>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800  z-10 w-36 sticky left-20 border-b-8 border-b-20 border-r-8 border-r-20  border-l-0 ">
+            MagEZ Case 2 for iPhone 13 Series & Galaxy S22 Series
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 border-r-8 border-r-20 ">
+            <img src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+        </tr>
+        <tr>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800  z-10 w-36 sticky left-20 border-b-8 border-b-20 border-r-8 border-r-20  border-l-0 ">
+            New MagEZ Case Pro
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 border-r-8 border-r-20 ">
+            <img src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+        </tr>
+        <tr>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800  z-10 w-36 sticky left-20 border-b-8 border-b-20 border-r-8 border-r-20  border-l-0 ">
+            MagEZ Case for Airpods 3 & Airpods Pro 
+          </td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td
+            class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 border-r-8 border-r-20 ">
+            <img src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-error.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+          <td class="border-opacity-100   border-4 border-gray-850 bg-gray-800 border-b-8 border-b-20 "><img
+              src="{{ 'magez-system-right.svg' | asset_url }}" class="w-6 mx-auto"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{%- comment -%}最后一屏{%- endcomment -%}
+<div class="{{wClass_6}} {{ pdClass_b }}">
+  <div class="text-left md:text-center">
+    <h3 class="{{ titleSize }} {{titleMb_tight}}">More Coming to <br><span class="text-cyan">MagEZ<sup>&reg;</sup>
+        2.0</span></h3>
+    <p class="{{ descSize }} {{titleMb_loose}}">
+      Starting from the iPhone 13 cases, we are establishing a new ecosystem with the experiences we’ve had over the past few years. The new MagSafe car mount MagEZ Car Mount Pro/Lite specifically designed for iPhone 12/13 allows you to snap on and secure your phone while you drive. Our compact multi-device wireless charging solution MagEZ Slider for iPhone 12, iPhone 13 and even the Galaxy S22 models (with the MagEZ Case 2), was successfully funded on Kickstarter and is live on our website. The MagEZ Battery Pack, a portable magnetic power bank, is coming soon. You can expect more and will benefit more from our new ecosystem.
+    </p>
+    {% render 'link-button',link_url: "/collections/magsafe-collection", link_title:'Explore MagSafe Collection' %}
+  </div>
+</div>
+<div class="w-full">
+  <picture>
+    <source data-srcset="{{ 'magez-system-section6.jpg' | asset_url }}" media="(min-width: 768px)" />
+    <img src="{{ placeholder_gif }}" data-src="{{ 'magez-system-section6-s.jpg' | asset_url }}"
+      alt="Air Case for iPhone 13 Series" class="block w-full h-full object-cover lazyload" />
+  </picture>
+</div>
+
+
+{{ "swiper-bundle.min.css" | asset_url | stylesheet_tag }}
+{{ "swiper-bundle.min.js" | asset_url | script_tag }}
+
+<style>
+  .bg-gray-505255 {
+    background: #505255;
+  }
+
+  .table-wrapper tr>td {
+    text-align: left;
+    padding: 5px;
+  }
+
+  #textCenter {
+    text-align: center;
+  }
+
+  .table_wrap {
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  div::-webkit-scrollbar {
+    display: none;
+  }
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 0;
+  }
+
+  td,
+  th {
+    /* box-sizing: border-box; */
+    overflow: hidden;
+    height: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+
+    td,
+    th {
+      height: 80px;
+    }
+
+    .border-r-20 {
+      border-right-width: 20px;
+    }
+
+    .border-b-20 {
+      border-bottom-width: 20px;
+    }
+  }
+
+  .section-hero {
+    min-height: 37.5vw;
+  }
+
+  .privy-embed-form iframe {
+    margin: 0 !important;
+    max-width: 360px !important;
+  }
+
+  .center-slides {
+    padding-bottom: 2rem;
+  }
+
+  .center-slides .swiper-slide {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    transition: 300ms;
+    transform: scale(1);
+  }
+
+  .center-slides .swiper-slide .swiper-content {
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  .center-slides .swiper-slide-prev,
+  .center-slides .swiper-slide-duplicate-prev {
+    transform-origin: right center;
+  }
+
+  .center-slides .swiper-slide-next,
+  .center-slides .swiper-slide-duplicate-next {
+    transform-origin: left center;
+  }
+
+  .center-slides .swiper-slide-active,
+  .center-slides .swiper-slide-duplicate-active {
+    transform: scale(1);
+  }
+
+  .center-slides .swiper-slide-active .swiper-content,
+  .center-slides .swiper-slide-duplicate-active .swiper-content {
+    opacity: 1;
+  }
+
+  .center-slides .swiper-slide img {
+    object-fit: cover;
+  }
+
+  .center-slides .swiper-slide-prev img,
+  .center-slides .swiper-slide-duplicate-prev img {
+    object-position: right top;
+  }
+
+  .center-slides .swiper-slide-next img,
+  .center-slides .swiper-slide-duplicate-next img {
+    object-position: left top;
+  }
+
+  .center-slides>div[role="button"] {
+    top: 45%;
+    width: 12px;
+    height: 16px;
+  }
+
+  .center-slides>div[role="button"]:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url({{"triggle_pixel.svg"|asset_url}}) no-repeat;
+    background-size: contain;
+  }
+
+  .center-slides .swiper-button-next {
+    right: 0;
+  }
+
+  .center-slides .swiper-button-prev {
+    left: 0;
+    transform: rotate(-180deg);
+  }
+
+  .center-slides .swiper-pagination-bullets {
+    display: flex;
+    justify-content: center;
+    margin: 0 -0.4rem;
+  }
+
+  .center-slides .square-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #565557;
+    display: block;
+    margin: 0 0.4rem;
+  }
+
+  .center-slides .swiper-pagination-bullet-active {
+    background-color: #fff;
+  }
+
+  @media screen and (min-width: 768px) {
+    .center-slides {
+      margin: 0;
+      padding-bottom: 4rem;
+    }
+
+    .center-slides>div[role="button"] {
+      top: unset;
+      bottom: 6px;
+      margin: 0;
+    }
+
+    .center-slides .swiper-button-next {
+      right: calc(50% - 153.2px);
+    }
+
+    .center-slides .swiper-button-prev {
+      left: calc(50% - 153.2px);
+    }
+  }
+</style>
+
+<script>
+  var swiper = new Swiper(".center-slides", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    centeredSlides: true,
+    pagination: {
+      el: ".swiper-pagination",
+      bulletClass: "square-bullet",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>

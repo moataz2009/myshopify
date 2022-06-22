@@ -1,0 +1,291 @@
+{%- comment -%}
+  商品card组件(card有hover效果):
+  传入参数（必需）：product
+  传入参数（可选）：
+  bgColor：背景颜色灰度800
+  hover_tag：产品图片是否有hover效果
+  link_product_no: 是否没有产品页链接，默认为false
+  flex_between: 上下靠边对齐；
+  extraDiscount:是否额外添加产品折扣，默认为false
+  <!-- grid_h：高度值，默认80 -->
+{%- endcomment -%}
+
+{% assign no_products = 'Galaxy S10,Juice,Wallet,Digital Travel Kit,iPhone 11,iPhone X,Galaxy Note20,Galaxy S20,Galaxy Note10,Galaxy S10,HUAWEI P40,OnePlus 8,MagEZ Case & In-Car Wireless Charging Kit,Mount Qi Desktop' | split:',' %}
+{% assign new_products = 'Galaxy S22,Slider,MagEZ Case for AirPods,Apple Watch Series 7,MagEZ Car Mount,Power Dongle,iPad 2021,Charging Stand' | split:',' %}
+
+{% if product.handle contains '-case-' %}
+  {% assign product_name = product.handle | remove: 'case-' | remove: 'for-' | replace: 'pixel-', 'pixel' | replace: 'oneplus-', 'oneplus' | remove: 'samsung-galaxy-' | remove: 'google-' | remove: 'huawei-' | replace: 'iphone-','i' | replace: 'pro-2020-and-2018', '2020' %}
+{% else %}
+  {% assign product_name = product.handle | remove: 'magez-' | remove: 'air-' | remove: 'for-' | replace: 'oneplus-', 'oneplus' %}
+{% endif %}
+
+{% assign hover_effect = false %}
+{% if hover_tag %}
+  {% assign hover_effect = true %}
+{% endif %}
+
+{% assign bgClass = null %}
+{% if bgColor %}
+  {% assign bgClass = bgColor | prepend: 'bg-gray-' %}
+{% endif %}
+
+{%- comment -%}
+{% assign hClass = 'h-80' %}
+{% if grid_h %}
+  {% assign hClass = grid_h | prepend: 'h-' %}
+{% endif %}
+{%- endcomment -%}
+
+{% assign color_tag = false %}
+{% unless product.handle == 'air-omni' %}
+  {% for option in product.options %}
+    {% if option == 'Color' %}
+      {% assign color_tag = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endunless %}
+
+{% assign series_list = 'iPhone 13,iPhone 12,iPhone 11/11 Pro,iPhone Xs,Galaxy S22,Galaxy S21,Galaxy S20,Galaxy Note20,Galaxy Note10' | split: ',' %}
+{% assign series_suffix = false %}
+{% for item in series_list %}
+  {% if product.title contains item %}
+    {% assign series_suffix = true %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+{% assign magez_2_list = 'magez-wallet-2,magez-wallet-2-pro,magez-car-mount-pro,magez-car-mount-lite,magez-slider,magez-card-sleeve-3' | split: ',' %}
+{% assign magez_1_list = 'magez-mount,magez-mount-qi,magez-mount-qi-desktop,magez-wireless-charging-kit' | split: ',' %}
+
+{% assign magez_1_flag = false %}
+{% assign magez_2_flag = false %}
+
+{% if product.handle contains 'magez-case'  %}
+  {% unless product.handle contains 'for-ipad' %}
+    {% if product.handle contains 'with-magsafe' or product.handle contains 'iphone-13' or product.handle contains 'galaxy-s22' or product.handle contains 'airpods-pro' or product.handle contains 'airpods-3' %}
+      {% assign magez_2_flag = true %}
+    {% else %}
+      {% assign magez_1_flag = true %}
+    {% endif %}
+  {% endunless %}
+{% else %}
+  {% for magez_2_handle in magez_2_list %}
+    {% if product.handle contains magez_2_handle %}
+      {% assign magez_2_flag = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% for magez_1_handle in magez_1_list %}
+    {% if product.handle contains magez_1_handle %}
+      {% assign magez_1_flag = true %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<div class="grid-item w-full bg-transparent sm:{{bgClass}} box-content pt-0 pb-0 sm:pt-12 md:pb-56 cursor-pointer relative overflow-hidden card-transform{% if flex_between %} flex flex-col justify-between{% endif %}">
+  {% if extraDiscount %}
+    {% assign sale_data = 'iphone-11--35,case-pro-for-iphone-xs--50,case-for-iphone-xs--40,iphone-x--40,iphone8--50,iphone7--50,s20--40,note20--40,s10--40,note10--40,s9--50,p40--50,oneplus-8--40,juice-2--30' | split: ',' %}
+    {% for item in sale_data %}
+      {% assign sale_name = item | split: '--' | first %}
+      {% if product.handle contains sale_name %}
+        {% assign sale_discount = item | split: '--' | last %}
+      {% endif %}
+    {% endfor %}
+  
+    <div class="absolute w-max bg-cyan px-2 py-0.5 right-6 sm:right-8 xl:right-12 top-0 flex items-center">
+      <h3 class="text-white text-sm xl:text-base font-bold text-center">
+        {{sale_discount}}<span class="text-sm sm:text-base">%</span> Off
+      </h3>
+    </div>
+  {% endif %}
+
+  <div class="images-container relative w-11/12 xl:w-5/6 mx-auto pb-8">
+    {% if color_tag %}
+      {% for color_option  in product.options_by_name['Color'].values %}
+        {% assign color_prefix = color_option | handleize | prepend: '-' %}
+        <div class="images-toggle{% if forloop.first == true %} active{% endif %}" color="{{ color_option | handleize }}">
+          {% if hover_effect %}
+            <div class="hover-pictures relative">
+              {{ product_name | append: color_prefix | prepend: 'card-' | append: '.png' | asset_url | img_tag: product.title,'block max-w-full mx-auto' }}
+              <div class="absolute hover-image w-full top-0 left-0 opacity-0 transition-opacity">
+                {{ product_name | append: color_prefix | prepend: 'card-' | append: '-hover.png' | asset_url | img_tag: product.title,'block max-w-full mx-auto' }}
+              </div>
+            </div>
+          {% else %}
+            {{ product_name | append: color_prefix | prepend: 'card-' | append: '.png' | asset_url | img_tag: product.title,'block max-w-full mx-auto' }}
+          {% endif %}
+        </div>
+      {% endfor %}
+    {% else %}
+      {% if hover_effect %}
+        <div class="hover-pictures relatived">
+          {{ product_name | prepend: 'card-' | append: '.png' | asset_url | img_tag: product.title,'block max-w-full mx-auto' }}
+          <div class="absolute hover-image w-full top-0 left-0 opacity-0 transition-opacity">
+            {{ product_name | prepend: 'card-' | append: '-hover.png' | asset_url | img_tag: product.title,'block max-w-full mx-auto' }}
+          </div>
+        </div>
+      {% else %}
+        {{ product_name | prepend: 'card-' | append: '.png' | asset_url | img_tag: product.title,'block max-w-full mx-auto' }}
+      {% endif %}
+    {% endif %}
+  </div>
+
+  <div class="absolute hidden md:block bottom-0 w-80 md:w-76 xl:w-88 left-1/2 -translate-x-1/2 bg-transparent sm:{{bgClass}} pb-12 transform translate-y-0 transition duration-500 ease-in-out text-center">
+    <h3 class="text-lg mx-auto font-bold mb-4">
+      {% if product.title == 'Air Pal' or product.title == 'Air Pal Mini' %}
+        <span class="block">
+          {{ product.title }}
+        </span>
+        <span class="block text-sm sm:text-base">
+          For AirPods 1&2
+        </span>
+      {% elsif product.title contains ' for ' %}
+        {% if product.title contains 'Wireless Charging Kit' %}
+          <span class="block">
+            {{ product.title | remove: 'for iPhone 12 Series ' }}
+          </span>
+        {% else %}
+          <span class="block">
+            {{ product.title | split: ' for ' | first }}
+          </span>
+          <span class="block font-normal text-gray-400 text-sm sm:text-base">
+            {% if series_suffix %}
+              {% assign last_arr = product.title | split: ' for ' | last | remove: 'Samsung ' | split: '/' %}
+              For {{ last_arr | first | remove: ' mini' | append: ' Series' }}
+            {% else %}
+              For {{ product.title | split: ' for ' | last | remove: 'Samsung ' }}
+            {% endif %}
+          </span>
+        {% endif %}
+      {% else %}
+        <span class="block">
+          {{ product.title }}
+        </span>
+      {% endif %}
+    </h3>
+
+    <p class="text-base sm:text-sm xl:text-base text-gray-400 mb-12 h-11 line-clamp-2">
+      {% if product.description contains 'wallet-desc' %}
+        {{ product.description | split: '</span>' | first | remove: '<span id="wallet-desc">' }}
+      {% else %}
+        {{ product.description | strip_html }}
+      {% endif %}
+    </p>
+
+    <p class="text-sm -mt-8 mb-6 h-4 leading-none">
+      {% if magez_1_flag %}
+      Work with MagEZ<sup>&reg;</sup> 1.0 System
+      {% elsif magez_2_flag %}
+      Work with MagEZ<sup>&reg;</sup> 2.0 System
+      {% endif %}
+    </p>
+
+    <p class="text-sm text-gray-400 h-5">
+      {% if product.available %}
+        {{ product.first_available_variant.price | money }}
+      {% else %}
+        {{ product.price_min | money }}
+      {% endif %}
+    </p>
+  </div>
+
+  <div class="static md:absolute bottom-0 w-80 md:w-76 xl:w-88 mx-auto md:left-1/2 md:-translate-x-1/2 bg-transparent sm:{{bgClass}} pb-12 transform md:translate-y-full transition duration-500 ease-in-out text-center">
+    <h3 class="text-base lg:text-lg mx-auto font-bold mb-4">
+      {% if product.title == 'Air Pal' or product.title == 'Air Pal Mini' %}
+        <span class="block">
+          {{ product.title }}
+        </span>
+        <span class="block text-sm sm:text-base">
+          For AirPods 1&2
+        </span>
+      {% elsif product.title contains ' for ' %}
+        {% if product.title contains 'Wireless Charging Kit' %}
+          <span class="block">
+            {{ product.title | remove: 'for iPhone 12 Series ' }}
+          </span>
+        {% else %}
+          <span class="block">
+            {{ product.title | split: ' for ' | first }}
+          </span>
+          <span class="block font-normal text-gray-400 text-sm sm:text-base">
+            {% if series_suffix %}
+              {% assign last_arr = product.title | split: ' for ' | last | remove: 'Samsung ' | split: '/' %}
+              For {{ last_arr | first | remove: ' mini' | append: ' Series' }}
+            {% else %}
+              For {{ product.title | split: ' for ' | last | remove: 'Samsung ' }}
+            {% endif %}
+          </span>
+        {% endif %}
+      {% else %}
+        <span class="block">
+          {{ product.title }}
+        </span>
+      {% endif %}
+    </h3>
+
+    {% if sm_layout_2 %}
+    <div class="toggles-container swiper-container w-full flex justify-center -mx-1 mb-12 sm:h-10">
+      <div class="swiper-wrapper{% if product.options_by_name['Color'].values.length < 5 %} justify-evenly{% endif %} sm:justify-center">
+        {% if color_tag %}
+        {% for color_option  in product.options_by_name['Color'].values %}
+          {% assign color_str = color_option | downcase | replace: '/', '-' | replace: ' ', '-' | remove: '(' | remove: ')' %}
+          <div class="swiper-slide cursor-pointer">
+            <div data-color="{{color_option | handleize}}" 
+              class="toggle-item {% if forloop.first == true %}active {% endif %}rounded-full w-5 sm:mx-1 h-5 p-0.5 border border-transparent border-solid box-content hover:border-white">
+ 
+              <img src="{{ color_option | handleize | append: '.svg' | asset_url }}" 
+                alt="{{color_option}}" class="block width-full rounded-full">
+            </div>
+          </div>
+        {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+    {% else %}
+    <div class="toggles-container flex justify-center -mx-1 mb-12 sm:h-10">
+      {% if color_tag %}
+        {% for color_option  in product.options_by_name['Color'].values %}
+          {% assign color_str = color_option | downcase | replace: '/', '-' | replace: ' ', '-' | remove: '(' | remove: ')' %}
+            <div data-color="{{color_option | handleize}}" 
+              class="toggle-item {% if forloop.first == true %}active {% endif %}rounded-full w-5 h-5 mx-1 p-0.5 border border-transparent border-solid box-content hover:border-white cursor-pointer">
+
+              <img src="{{ color_option | handleize | append: '.svg' | asset_url}}"  
+                alt="{{color_option}}" class="block width-full rounded-full">
+            </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+    {% endif %}
+    
+    <div class="w-full flex justify-around">
+      {% assign shopBtn_text = 'Shop Now' %}
+      {% unless product.available %}
+        {% assign shopBtn_text = 'Sold Out' %}
+        {% for product_name in no_products %}
+          {% if product.title contains product_name %}
+            {% assign shopBtn_text = 'Discontinued' %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        {% for product_name in new_products %}
+          {% if product.title contains product_name %}
+            {% assign shopBtn_text = 'Coming Soon' %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      {% endunless %}
+
+      {% assign shop_url = product.url %}
+      
+      {% unless link_product_no %}
+        {% assign product_url = product.handle | prepend: '/collections/' %}
+        {% render 'link-button',link_url: product_url, link_title:'Learn More',space_tight:true %}
+      {% endunless %}
+      
+      {% render 'link-button',link_url: shop_url, link_title: shopBtn_text,space_tight:true %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+
+<div class="scrollContent">
+  <div class="spacer s0" id="trigger"></div>
+  <div id="imagesequence">
+    <img id="twist-item" class="img-responsive" />
+  </div>
+  
+  <script>
+    var images = [
+      "{{ 'magez-car-mount-pro-section5-1.jpg' | asset_url }}",
+      "{{ 'magez-car-mount-pro-section5-2.jpg' | asset_url }}",
+      "{{ 'magez-car-mount-pro-section5-3.jpg' | asset_url }}"
+    ];
+    var obj = {curImg: 0};
+    var tween = TweenMax.to(obj, 0.5,{
+      curImg: images.length - 1,
+      roundProps: "curImg",
+      repeat: 0,
+      immediateRender: true,
+      ease: Linear.easeNone,
+      onUpdate: function () {
+        $("#twist-item").attr("src", images[obj.curImg]);
+      }
+    });
+    var controller = new ScrollMagic.Controller();
+    var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: 360})
+    .setTween(tween)
+    .addIndicators()
+    .addTo(controller);
+  </script>
+</div>

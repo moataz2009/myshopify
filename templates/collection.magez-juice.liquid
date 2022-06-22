@@ -1,0 +1,602 @@
+
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+<style>
+    .imgBox-pc img{
+      width: 100%;
+    }
+    .imgBox-pc-banner3 {
+      /* position: relative; */
+      width: 100vw;
+      height: 46.875vw;
+      background-color: #171719;
+    }
+    .imgBox-pc-banner3 img {
+      position: absolute;
+      width: 28.8%;
+      top: 16.888%;
+      left: 14.843%;
+    }
+    .section-banner {
+      position: relative;
+    }
+    .section-banner img {
+      display: block;
+    }
+    .section-banner-text1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 35%;
+      text-align: center;
+    }
+    .section-banner-text2 {
+      position: absolute;
+      top: 62.5%;
+      left: 10%;
+      width: 35%;
+  
+    }
+    .section-banner-text3 {
+      position: absolute;
+      top: 36%;
+      left: 52%;
+      width: 35%;
+  
+    }
+    .scroll-section{
+      position: relative;
+      width: 100vw;
+      height: 35vw;
+      }
+    .section-scence {
+      position: relative;
+      width: 100vw;
+      height: 35vw;
+      /* overflow: hidden; */
+    }
+    .section-scence img {
+      display: block;
+    }
+    .section-scence .imgBox1-pc {
+      position: absolute;
+      width: 45%;
+      left: 8.764%;
+      max-width: 1000px;
+      background-color: #171719;
+    }
+    .section-scence-text1 {
+      position: absolute;
+      top: 50%;
+      left: 63.5%;
+      transform: translate(0, -50%);
+      width: 26%;
+      
+    }
+    .section-scence .imgBox2-pc {
+      position: absolute;
+      width: 52%;
+      left: 39.375%;
+      background-color: #171719;
+    }
+    /* .section-scence-text2 {
+      position: absolute;
+      top: 50%;
+      left: 8.764%;
+      transform: translate(0, -50%);
+    } */
+  </style>
+  
+  <style>
+    /* 以下为媒体查询PC端样式 */
+    @media screen and (min-width: 769px) {
+      /* .imgBox-phone {
+        display: none;
+      }
+      .imgBox1-phone {
+        display: none;
+      }
+      .imgBox2-phone {
+        display: none;
+      } */
+    }
+  </style>
+  
+  <style>
+    /* 以下为媒体查询移动端样式 */
+    @media screen and (max-width: 768px) {
+      .section-banner-text1 {
+        position: absolute;
+        top: 30.444%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 52%;
+      }
+      .section-banner-text2 {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        width: 52%;
+  
+      }
+      .imgBox-phone-banner3 {
+        /* position: relative; */
+        width: 100vw;
+        height: 120vw;
+        background-color: #171719;
+      }
+      .imgBox-phone-banner3 img {
+        position: absolute;
+        width: 61%;
+        top: 39%;
+        left: 15%;
+      }
+      .section-banner-text3 {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        width: 52%;
+  
+      }
+      .section-scence {
+        width: 100vw;
+        height: 114vw;
+        /* overflow: hidden; */
+      }
+      .section-scence img {
+        display: block;
+      }
+  
+      .section-scence .imgBox1-phone {
+        position: absolute;
+        width: 93%;
+        left: 0;
+        bottom: 0;
+        background-color: #171719;
+      }
+      .section-scence-text1 {
+        position: absolute;
+        width: 75vw;
+        top: 5%;
+        left: 25%;
+        padding-right: 7%;
+        text-align: right;
+        transform: translate(0, 0);
+      }
+      .section-scence .imgBox2-phone {
+        position: absolute;
+        width: 93%;
+        right: 0;
+        bottom: 0;
+        background-color: #171719;
+      }
+      .section-scence-text2 {
+        position: absolute;
+        width: 75vw;
+        top: 5%;
+        left: 7%;
+        padding-right: 7%;
+        text-align: left;
+        transform: translate(0, 0);
+      }
+    }
+    @media screen and (max-width: 512px) {
+      .section-banner-text1 {
+        position: absolute;
+        top: 30.444%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 52%;
+      }
+      .section-banner-text2 {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        width: 90%;
+  
+      }
+      .imgBox-phone-banner3 {
+        /* position: relative; */
+        width: 100vw;
+        height: 120vw;
+        background-color: #171719;
+      }
+      .imgBox-phone-banner3 img {
+        position: absolute;
+        width: 61%;
+        top: 39%;
+        left: 15%;
+      }
+      .section-banner-text3 {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        width: 90%;
+  
+      }
+      .section-scence {
+        width: 100vw;
+        height: 114vw;
+        /* overflow: hidden; */
+      }
+      .section-scence img {
+        display: block;
+      }
+  
+      .section-scence .imgBox1-phone {
+        position: absolute;
+        width: 93%;
+        left: 0;
+        bottom: 0;
+        background-color: #171719;
+      }
+      .section-scence-text1 {
+        position: absolute;
+        width: 95vw;     
+        top: 5%;  
+        left: 5%;
+        padding-right: 7%;
+        text-align: right;
+        transform: translate(0, 0);
+      }
+      .section-scence .imgBox2-phone {
+        position: absolute;
+        width: 93%;
+        right: 0;
+        bottom: 0;
+        background-color: #171719;
+      }
+      .section-scence-text2 {
+        position: absolute;
+        width: 90vw;
+        top: 5%;
+        left: 7%;
+        padding-right: 7%;
+        text-align: left;
+        transform: translate(0, 0);
+      }
+    }
+  </style>
+  
+    <div class="section-banner">
+      <picture>
+        <source srcset="{{ 'product_magez_juice_detail_banner1.jpg' | asset_url }}" media="(min-width: 769px)">
+        <img srcset="{{ 'product_magez_juice_detail_banner1_phone.png' | asset_url }}" class="img-responsive width-100" />
+      </picture>
+  
+      <div class="section-banner-text1  text-center">
+        <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400 font-upper">Effortlessly Energized</h3>
+      </div>
+    </div>
+    <div class="section-banner">
+      <picture>
+        <source srcset="{{ 'product_magez_juice_detail_banner2.jpg' | asset_url }}" media="(min-width: 769px)">
+        <img srcset="{{ 'product_magez_juice_detail_banner2_phone.png' | asset_url }}" class="img-responsive width-100" />
+      </picture>
+      <div class="section-banner-text2">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">A Wireless Charging Stand</h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          Use the wireless charging dock to charge while at home or in the office.
+        </p>
+      </div>
+    </div>
+    <div class="section-banner">
+      <div class="imgBox-pc-banner3 imgBox-phone-banner3">
+      <picture>
+        <source srcset="{{ 'product_magez_juice_detail_banner3.png'| asset_url }}" media="(min-width: 769px)">
+        <img srcset="{{'product_magez_juice_detail_banner3_phone.png' | asset_url }}" class="img-responsive width-100" />
+      </picture>
+    </div>
+      <div class="section-banner-text3">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6  ">
+          ...And Wireless Charging Power Bank
+        </h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          The 2000mAh magnetic, portable wireless charger provides a quick boost of power, ensuring you never run out of charge while you're out and about.
+        </p>
+      </div>
+    </div>
+  
+    <div class="section-scence">
+      <div class="imgBox1-pc imgBox1-phone">
+      <picture>
+        <source srcset="{{ 'product_magez_juice_detail_scence1.jpg'| asset_url }}" media="(min-width: 769px)">
+        <img srcset="{{'product_magez_juice_detail_scence1_phone.jpg' | asset_url }}" class="img-responsive width-100" />
+      </picture>
+    </div>
+  
+      <div class="section-scence-text1 section-scence-text2">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6  ">A Clear Screen View</h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          The MagEZ Juice provides a clear  45° angle view of your mobile's screen, allowing you to see notifications or FaceTime easily.   </p>
+      </div>
+    </div>
+    <div class="section-scence">
+      <div class="imgBox1-pc imgBox2-phone">
+      <picture>
+        <source srcset="{{ 'product_magez_juice_detail_scence2.jpg'| asset_url }}" media="(min-width: 769px)">
+        <img srcset="{{'product_magez_juice_detail_scence2_phone.jpg' | asset_url }}" class="img-responsive width-100" />
+      </picture>
+      </div>
+  
+      <div class="section-scence-text1 ">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6  ">Ergonomically Designed</h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          The compact battery fits easily into the palm of your hand, while the aramid texture provides additional grip. 
+        </p>
+      </div>
+  
+    </div>
+    <div class="section-scence">
+      <div class="imgBox1-pc imgBox1-phone">
+      <picture>
+        <source srcset="{{ 'product_magez_juice_detail_scence3.jpg'| asset_url }}" media="(min-width: 769px)">
+        <img srcset="{{'product_magez_juice_detail_scence3_phone.jpg' | asset_url }}" class="img-responsive width-100" />
+      </picture>
+      </div>
+      <div class="section-scence-text1 section-scence-text2">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6  ">
+          Your Ready-to-go Wireless <br />
+          Charging Power Bank
+        </h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          The PITAKA MagEZ Juice uses pass-through charging technology to charge the wireless power bank and your device simultaneously.
+        </p>
+      </div>
+    </div>
+    <div class="section-scence">
+      <div class="imgBox1-pc imgBox2-phone">
+      <picture>
+        <source srcset="{{ 'product_magez_juice_detail_scence4.png'| asset_url }}" media="(min-width: 769px)">
+        <img srcset="{{  'product_magez_juice_detail_scence4_phone.png' | asset_url }}" class="img-responsive width-100" />
+      </picture>
+      </div>
+      <div class="section-scence-text1 ">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6 ">
+          Compatible With Any Phone Case
+        </h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          Simply attach the metal sticker provided to your phone or case to use it with the MagEZ Juice or MagEZ Mount.
+        </p>
+      </div>
+    </div>
+
+  
+  <style type="text/css">
+    #scroll-container-left,
+    #scroll-container-right {
+      padding: 12% 0 0 0; 
+      height: 45vw;
+      width: 100%;
+      /* overflow: hidden; */
+    }
+  
+    .dot-list {
+      position: absolute;
+      width: 10px;
+      height: 120px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      z-index: 12;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+    }
+  
+    .scroll_right .dot-list {
+      left: 95%;
+    }
+  
+    .dot-list > div {
+      width: 6px;
+      height: 6px;
+      border-radius: 3px;
+      background: #bdbdbd;
+    }
+  
+    .dot-list > div.active {
+      background: #333333;
+    }
+  
+    .scroll-section {
+      width: 100%;
+      height: 100%;
+      /* display: flex; */
+      align-items: center;
+      position: absolute;
+      background: #000;
+      z-index: 11;
+    }
+  
+    .scroll-section > * {
+      /* width: 50%;
+      height: 100%;
+      padding: 0;
+      margin: 0; */
+      /* overflow: hidden; */
+    }
+  
+    .scroll-section > .section-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 10%;
+      align-items: flex-start;
+    }
+  
+    .scroll-section > .section-img img {
+      max-width: 200%;
+      height: 100%;
+      display: block;
+      width: auto;
+    }
+    .scroll_left .scroll-section > .section-img img {
+      float: right;
+    }
+  
+    .scroll-section > .section-content .sub-head {
+      font-size: 2em;
+    }
+  
+    @media screen and (max-width: 1024px) {
+      .dot-list {
+        left: 2em;
+      }
+  
+      .scroll_right .dot-list {
+        left: calc(100% - 2em);
+      }
+  
+      .scroll-section > .section-content .sub-head {
+        font-size: 20px;
+      }
+    }
+  
+    @media screen and (max-width: 767px),
+      (max-width: 1024px) and (orientation: portrait) {
+      #scroll-container-left {
+        height: 100vh;
+      }
+  
+      #scroll-container-right {
+        height: 90vh;
+      }
+  
+      .scroll-section > * {
+        width: 100%;
+      }
+  
+      .dot-list {
+        display: none;
+      }
+  
+      .scroll-section {
+        flex-direction: column;
+      }
+  
+      .scroll_right .scroll-section {
+        flex-direction: column-reverse;
+      }
+  
+      .scroll-section > .section-content {
+        padding: 3em 10%;
+        align-items: center;
+        justify-content: flex-start;
+      }
+  
+      .scroll-section > .section-content .sub-head {
+        font-size: 16px;
+        display: block;
+        text-align: center;
+      }
+  
+      .scroll_right .scroll-section {
+        flex-direction: column-reverse;
+      }
+  
+      .scroll-section > .section-img img {
+        transform: none;
+        float: none;
+      }
+    }
+  
+    @media screen and (max-width: 1024px) and (orientation: portrait) and (min-width: 769px) {
+      .scroll-section > .section-img img {
+        transform: none;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        width: 100%;
+      }
+  
+      .scroll-section > .section-content {
+        justify-content: center;
+      }
+  
+      .scroll-section > .section-content .standard-h3,
+      .scroll-section > .section-content .detail-font-xmedium {
+        text-align: center;
+      }
+    }
+  
+    @media screen and (max-width: 640px) {
+      #scroll-container-left,
+      #scroll-container-right {
+        height: auto;
+      }
+  
+      .scroll-section {
+        position: static;
+      }
+  
+      .scroll-section .section-img img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  
+    @media screen and (max-width: 480px) {
+      .scroll-section p.detail-font-xmedium {
+        font-size: 14px;
+      }
+    }
+  
+    @media screen and (max-width: 360px) {
+      .scroll-section .standard-h3 {
+        font-size: 1.2em;
+      }
+  
+      .scroll-section > .section-content .sub-head {
+        font-size: 14px;
+      }
+  
+      .scroll-section p.detail-font-xmedium {
+        font-size: 12px;
+      }
+  
+      .scroll-section > .section-content {
+        padding: 1.3em 10%;
+      }
+    }
+  
+    /* video scroll css  */
+  
+    #scroll-video {
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .video-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      position: absolute;
+      width: 100%;
+      background: rgb(0, 0, 0, 0.5);
+    }
+  
+    .video-content .inner-content {
+      width: 80%;
+      max-width: 940px;
+      color: #fff;
+      margin-top: 5em;
+    }
+  
+    .video-content h3 {
+      font-weight: 800;
+      line-height: 1.2;
+    }
+  
+    .video-content .inner-content p {
+      font-size: 1em;
+    }
+  
+  </style>
+  

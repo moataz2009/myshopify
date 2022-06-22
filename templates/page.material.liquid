@@ -1,0 +1,366 @@
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_6 = 'w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28' %}
+{% assign pdClass_b = 'px-3 sm:px-6 md:px-0 pb-16 sm:pb-20 lg:pb-28' %}
+{% assign titleBoxClass= 'mx-auto mb-12 w-11/12 sm:w-5/6 md:w-2/3 xl:w-2/5' %}
+{% assign titleSize = 'text-2xl md:text-3xl font-bold' %}
+{% assign descSize = 'text-sm sm:text-base text-gray-400' %}
+{% assign titleDecoMy = 'block mt-4 mb-6' %}
+
+{% assign absoluteContentBoxClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto px-6 lg:px-0 transform sm:left-1/2 sm:-translate-x-1/2' %}
+{% assign absoluteContentClass = 'transform w-full sm:w-2/5 xl:w-1/3 max-w-md bottom-8 sm:bottom-1/2 sm:translate-y-1/2' %}
+{% assign absoluteContentClass_center = 'absolute text-center z-10 transform w-full px-6 sm:px-0 sm:w-4/5 md:w-1/2 xl:w-1/3 max-w-lg top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 sm:left-0 sm:translate-x-0'  %}
+
+<div class="{{wClass_8}} {{pdClass}} flex flex-col sm:flex-row items-center justify-center">
+  <div class="mx-auto w-11/12 sm:w-1/2 mb-12">
+    <h3 class="{{titleSize}} mb-6">
+      What is Aramid?
+    </h3>
+    <p class="{{descSize}} mb-12">
+      Aramid is short for ‘aromatic polyamide’ and possesses unique properties in terms of being lightweight, durable,
+      and high resistance to the force of impact. It is a synthetic fiber, and its wide range of uses includes
+      military and aerospace technologies, performance automotive, and bulletproof protective gear. It is soft to the
+      touch and is molded to fit any shape and provides excellent protection for your electronic devices. PITAKA uses
+      a series of complex processes to weave, form, and polish the aramid fiber to ensure it offers longlasting
+      protection for your device.
+      Aramid fibers are thinner than a human hair with a distinct yellow color that allows it to be dyed in a variety
+      of colors.
+      <a class="text-cyan" href="/blogs/news/what-are-aramid-fibers-i">You can read more about aramid fiber in
+        our article.</a>
+    </p>
+    <div class="w-full">
+      <img src="{{ placeholder_gif }}" data-src="{{'aramid-chemical-structure.png' | asset_url}}"
+        alt="Aramid Fibre Benefits" class="block object-cover lazyload">
+    </div>
+  </div>
+  <div class="w-full sm:w-1/2 m-auto sm:pl-12 ">
+    <img src="{{ placeholder_gif }}" data-src="{{'aramid.jpg' | asset_url}}" alt="Aramid Fibre Benefits"
+      class="block object-cover lazyload">
+  </div>
+</div>
+
+<div class="w-full bg-aramid">
+  <div class="{{wClass_8}} {{pdClass}}">
+    <div class="mx-auto w-11/12 text-center mb-12">
+      <h3 class="{{titleSize}} mb-6">
+        What are the benefits of Aramid fibres?
+      </h3>
+      <p class="{{descSize}} mb-12">
+        Aramid fibres share some general characteristics that distinguish them from other
+        synthetic fibres:
+      </p>
+    </div>
+    <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-6 gap-3 sm:gap-4 md:gap-6 auto-rows-fr ">
+      <div class="w-full mb-6">
+        <div class="mb-6 flex justify-center">
+          <picture>
+            <img src="{{ placeholder_gif }}" data-src="{{'ico-strenght.png' | asset_url}}" alt="Aramid Fibre Benefits"
+              class="block object-cover lazyload">
+          </picture>
+        </div>
+        <div class="w-full text-center">
+          <p class="{{descSize}}">
+            High-strength
+          </p>
+        </div>
+      </div>
+
+      <div class="w-full mb-6">
+        <div class="mb-6 flex justify-center">
+          <picture>
+            <img src="{{ placeholder_gif }}" data-src="{{'ico-resistance.png' | asset_url}}" alt="Aramid Fibre Benefits"
+              class="block object-cover lazyload">
+          </picture>
+        </div>
+        <div class="w-full text-center">
+          <p class="{{descSize}}">
+            Good resistance to abrasion
+          </p>
+        </div>
+      </div>
+
+      <div class="w-full mb-6">
+        <div class="mb-6 flex justify-center">
+          <picture>
+            <img src="{{ placeholder_gif }}" data-src="{{'ico-organic.png' | asset_url}}" alt="Aramid Fibre Benefits"
+              class="block object-cover lazyload">
+          </picture>
+        </div>
+        <div class="w-full text-center">
+          <p class="{{descSize}}">
+            Good resistance to organic solvents
+          </p>
+        </div>
+      </div>
+
+      <div class="w-full mb-6">
+        <div class="mb-6 flex justify-center">
+          <picture>
+            <img src="{{ placeholder_gif }}" data-src="{{'ico-nonconductive.png' | asset_url}}"
+              alt="Aramid Fibre Benefits" class="block object-cover lazyload">
+          </picture>
+        </div>
+        <div class="w-full text-center">
+          <p class="{{descSize}}">
+            Non-conductive
+          </p>
+        </div>
+      </div>
+
+      <div class="w-full mb-6">
+        <div class="mb-6 flex justify-center">
+          <picture>
+            <img src="{{ placeholder_gif }}" data-src="{{'ico-melting.png' | asset_url}}" alt="Aramid Fibre Benefits"
+              class="block object-cover lazyload">
+          </picture>
+        </div>
+        <div class="w-full text-center">
+          <p class="{{descSize}}">
+            No melting point
+          </p>
+        </div>
+      </div>
+
+      <div class="w-full mb-6">
+        <div class="mb-6 flex justify-center">
+          <picture>
+            <img src="{{ placeholder_gif }}" data-src="{{'ico-fire.png' | asset_url}}" alt="Aramid Fibre Benefits"
+              class="block object-cover lazyload">
+          </picture>
+        </div>
+        <div class="w-full text-center">
+          <p class="{{descSize}}">
+            Low flammability
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="w-full">
+  <div class="{{wClass}} {{pdClass}}">
+    <div class="mx-auto w-11/12 text-center mb-12">
+      <h3 class="{{titleSize}} mb-6">
+        Is Aramid the Same as Carbon Fiber?
+      </h3>
+      <p class="{{descSize}} mb-12">
+        Aramid fiber and carbon fiber are very different materials, each with their own
+        useful properties. Even
+        though carbon is often used to make phone cases as it is exceptionally lightweight and durable, it is also
+        highly conductive, frequently blocking phone signals, which aramid does not. However, because of the
+        conductivity of carbon fiber, it is an excellent RFID blocker, which is why we use it to make our MagEZ
+        Wallets.
+      </p>
+    </div>
+    <div class="grid grid-cols-1  sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 auto-rows-fr ">
+      <div class="w-full text-center">
+        <p class="text-sm sm:text-base text-color-white mb-6 font-bold">
+          <span class="text-red-700 font-bold">01</span> Stiffness &amp; Elasticity
+        </p>
+        <div class="w-full mb-6 flex flex-row justify-evenly items-center">
+          <div class="mb-6 flex flex-col justify-center">
+            <picture>
+              <img src="{{ placeholder_gif }}" data-src="{{'vsimg-1.png' | asset_url}}" alt="Aramid Fibre Benefits"
+                class="block object-cover lazyload">
+            </picture>
+            <p class="{{descSize}}">
+              Aramid
+            </p>
+          </div>
+          <p class="text-sm sm:text-base  text-red-700 font-bold">
+            VS
+          </p>
+          <div class="mb-6 flex flex-col justify-center">
+            <picture>
+              <img src="{{ placeholder_gif }}" data-src="{{'vsimg-2.png' | asset_url}}" alt="Aramid Fibre Benefits"
+                class="block object-cover lazyload">
+            </picture>
+            <p class="{{descSize}}">
+              Carbon Fibre
+            </p>
+          </div>
+        </div>
+        <p class="{{descSize}}">
+          A carbon (karbon) phone case, as its name implies, is made of carbon fibres instead of Aramid fibres. Carbon
+          fibre is
+          extremely strong in tension and compression and is by far the stiffest of the fibres. However, it is brittle.
+          So
+          the
+          fibres aren't as tough as Aramid fibres. What does it mean to a phone case? A carbon(karbon) phone case will
+          be
+          also
+          brittle of course. On the contrary, an Aramid phone case is more tough and flexible.
+        </p>
+      </div>
+      <div class="w-full text-center">
+        <p class="text-sm sm:text-base text-color-white mb-6 font-bold">
+          <span class="text-red-700 font-bold">02</span> Electrical Conductivity
+        </p>
+        <div class="w-full mb-6 flex flex-row justify-evenly items-center">
+          <div class="mb-6 flex flex-col justify-center">
+            <picture>
+              <img src="{{ placeholder_gif }}" data-src="{{'vsimg-4.png' | asset_url}}" alt="Aramid Fibre Benefits"
+                class="block object-cover lazyload">
+            </picture>
+            <p class="{{descSize}}">
+              Aramid
+            </p>
+          </div>
+          <p class="text-sm sm:text-base  text-red-700 font-bold">
+            VS
+          </p>
+          <div class="mb-6 flex flex-col justify-center">
+            <picture>
+              <img src="{{ placeholder_gif }}" data-src="{{'vsimg-3.png' | asset_url}}" alt="Aramid Fibre Benefits"
+                class="block object-cover lazyload">
+            </picture>
+            <p class="{{descSize}}">
+              Carbon Fibre
+            </p>
+          </div>
+        </div>
+        <p class="{{descSize}}">
+          What’s more, carbon fibre is very definitely conductive, Aramid fibre do not conduct electricity. In other
+          words, a carbon (karbon)
+          phone case has interruption to your signals. While the Aramid phone cases have no interruptions at all.
+        </p>
+      </div>
+      <div class="w-full text-center"> 
+        <p class="text-sm sm:text-base text-color-white mb-6 font-bold">
+          <span class="text-red-700 font-bold">03</span> Color
+        </p>
+        <div class="w-full mb-6 flex flex-row justify-evenly items-center">
+          <div class="mb-6 flex flex-col justify-center">
+            <picture>
+              <img src="{{ placeholder_gif }}" data-src="{{'vsimg-5.png' | asset_url}}" alt="Aramid Fibre Benefits"
+                class="block object-cover lazyload">
+            </picture>
+            <p class="{{descSize}}">
+              Aramid
+            </p>
+          </div>
+          <p class="text-sm sm:text-base  text-red-700 font-bold">
+            VS
+          </p>
+          <div class="mb-6 flex flex-col justify-center">
+            <picture>
+              <img src="{{ placeholder_gif }}" data-src="{{'vsimg-6.png' | asset_url}}" alt="Aramid Fibre Benefits"
+                class="block object-cover lazyload">
+            </picture>
+            <p class="{{descSize}}">
+              Carbon Fibre
+            </p>
+          </div>
+        </div>
+        <p class="{{descSize}}">
+          Aramid in its natural state is a light golden colour. It can be coloured and many wonderful hues are now
+          available. Carbon fibre is
+          always black and by itself it cannot be coloured. This is the easiest way to tell whether it is a carbon
+          (karbon) phone case or an
+          Aramid phone case. Carbon (karbon) phone cases are always black. However, the Aramid phone cases could have
+          different colours.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="{{wClass_8}} {{pdClass}}">
+  <div class="mx-auto w-11/12 text-center mb-12">
+    <h3 class="{{titleSize}} mb-6">
+      How a bunch of aramid fiber turns to be a phone case?
+    </h3>
+  </div>
+  <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-5 gap-3 sm:gap-4 md:gap-6 auto-rows-fr ">
+    <div class="w-full mb-6">
+      <div class="mb-6 flex justify-center">
+        <picture>
+          <img src="{{ placeholder_gif }}" data-src="{{'aramid-f1.png.png' | asset_url}}" alt="our products"
+            class="block object-cover lazyload">
+        </picture>
+      </div>
+      <div class="w-full text-center">
+        <h3 class="text-xl mb-6">Weaving</h3>
+        <p class="{{descSize}}">
+          The Aramid fibres are gathered into strands, woven into a flexible fabric.
+        </p>
+      </div>
+    </div>
+    <div class="w-full mb-6">
+      <div class="mb-6 flex justify-center">
+        <picture>
+          <img src="{{ placeholder_gif }}" data-src="{{'aramid-f2.png.png' | asset_url}}" alt="our products"
+            class="block object-cover lazyload">
+        </picture>
+      </div>
+      <div class="w-full text-center">
+        <h3 class="text-xl mb-6">Hardening</h3>
+        <p class="{{descSize}}">
+          The fabric will be impregnated with epoxy resin to hold them in position.
+        </p>
+      </div>
+    </div>
+    <div class="w-full mb-6">
+      <div class="mb-6 flex justify-center">
+        <picture>
+          <img src="{{ placeholder_gif }}" data-src="{{'aramid-f3.png.png' | asset_url}}" alt="our products"
+            class="block object-cover lazyload">
+        </picture>
+      </div>
+      <div class="w-full text-center">
+        <h3 class="text-xl mb-6">Forming</h3>
+        <p class="{{descSize}}">
+          After being cut into pieces, PITAKA patented
+              integral forming craftmanship adds flexibility to fabric to exact-fit your phone's shape.
+        </p>
+      </div>
+    </div>
+    <div class="w-full mb-6">
+      <div class="mb-6 flex justify-center">
+        <picture>
+          <img src="{{ placeholder_gif }}" data-src="{{'aramid-f4.png.png' | asset_url}}" alt="our products"
+            class="block object-cover lazyload">
+        </picture>
+      </div>
+      <div class="w-full text-center">
+        <h3 class="text-xl mb-6">Cutting</h3>
+        <p class="{{descSize}}">
+          Multi-angled lasers then will be used to cut out the accurate openings for camera, buttons
+              and ports.
+        </p>
+      </div>
+    </div>
+    <div class="w-full mb-6">
+      <div class="mb-6 flex justify-center">
+        <picture>
+          <img src="{{ placeholder_gif }}" data-src="{{'aramid-f5.png.png' | asset_url}}" alt="our products"
+            class="block object-cover lazyload">
+        </picture>
+      </div>
+      <div class="w-full text-center">
+        <h3 class="text-xl mb-6">Polishing</h3>
+        <p class="{{descSize}}">
+          To ensure each product has a perfect smooth touch, we will then get all the products
+          coated with our special paint. It also makes the products being more durable and resistant to scratches.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .bg-aramid {
+    background: #1c1f24 url(//cdn.shopify.com/s/files/1/1036/4113/t/38/assets/collection-features-bg.png) no-repeat;
+    background-size: cover;
+    width: 100%;
+    clear: both;
+  }
+
+  .text-red-700{
+    --tw-text-opacity: 1;
+    color: rgba(185, 28, 28, var(--tw-text-opacity));
+  }
+</style>

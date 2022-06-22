@@ -1,0 +1,377 @@
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_6 = 'w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28' %}
+{% assign pdClass_t = 'px-3 sm:px-6 md:px-0 pt-12 sm:pt-16 lg:pt-20' %}
+{% assign titleBoxClass= 'mx-auto mb-12 w-11/12 sm:w-5/6 md:w-2/3 xl:w-2/5' %}
+{% assign titleSize = 'text-2xl md:text-3xl font-bold' %}
+{% assign descSize = 'text-sm sm:text-base text-gray-400' %}
+{% assign titleDecoMy = 'block mt-4 mb-6' %}
+
+{% assign absoluteContentBoxClass = 'w-full laptop:w-10/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-0' %}
+{% assign absoluteContentClass = 'text-center lg:text-left absolute transform w-4/5 lg:w-1/2 xl:w-3/8 top-20 left-1/2 -translate-x-1/2 max-w-md lg:translate-x-0 lg:left-0 lg:top-1/2 lg:-translate-y-1/2' %}
+
+<div class="w-full relative section-hero">
+  <div
+    class="absolute w-full sm:w-10/12 laptop:w-8/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-0">
+    <div
+      class=" absolute text-left transform w-4/5 lg:w-1/2 xl:w-3/8 max-w-md  left-4 xs:left-8 sm:left-0 bottom-8 xs:bottom-20">
+      <h3 class="{{titleSize}}">
+        Brand Ambassador
+      </h3>
+    </div>
+  </div>
+  <picture>
+    <source data-srcset="{{'pitaka-reviewer-recruitment-section1.jpg' | asset_url}}" media="(min-width: 1280px)">
+    <source data-srcset="{{'pitaka-reviewer-recruitment-section1-m.jpg' | asset_url}}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{'pitaka-reviewer-recruitment-section1-s.jpg' | asset_url}}"
+      alt="PITAKA Reviewer Recruitment" class="block w-full h-full object-cover lazyload">
+  </picture>
+</div>
+
+<div class="bg-gray-850">
+  <div class="w-full {{pdClass}}">
+    <div class="{{wClass_8}} h-full flex flex-col sm:flex-row items-center justify-between">
+      <div class="w-full sm:w-1/2 mb-6 sm:mb-0">
+        <h3 class="{{titleSize}}">
+          Who is PITAKA?
+        </h3>
+        <div class="{{titleDecoMy}}"></div>
+        <p class="{{descSize}}">
+          <span class="font-bold color-gray-400">PITAKA</span> is founded by a team of designers, engineers, and
+          creatives across multiple fields with an alternative
+          approach to all things technology. We help people be successful and confident by making protective casing to
+          care for their daily essentials. We are a company dedicated to advancing science and style in this specialist
+          area. We focus on distinct materials, and we have become a large and successful company selling cases, wallets
+          and covers for the essentials of modern life around the world.
+        </p>
+        <div class="{{titleDecoMy}}"></div>
+        {% render 'link-button',link_url: "/pages/about-us", link_title:'Learn More' %}
+      </div>
+
+      <div class="w-full sm:w-3/8">
+        <picture>
+          <source data-srcset="{{'pitaka-reviewer-recruitment-section2.jpg' | asset_url}}" media="(min-width: 768px)">
+          <img src="{{ placeholder_gif }}" data-src="{{'pitaka-reviewer-recruitment-section2-s.jpg' | asset_url}}"
+            alt="PITAKA Reviewer Recruitment" class="block w-full lazyload">
+        </picture>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="w-full relative">
+  <div
+    class="absolute w-10/12 xs:w-8/12 sm:w-full laptop:w-8/12 max-w-screen-xl mx-auto h-full absolute transform left-1/2 -translate-x-1/2 top-0 px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28">
+    <div
+      class=" absolute text-left transform w-11/12 md:w-full top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 sm:grid sm:grid-cols-2 items-center justify-around">
+      <div class="sm:w-7/8">
+        <h3 class="text-md xs:text-2xl md:text-3xl font-bold mb-3 sm:mb-6">
+          We Are Open To Any
+          Collaboration Ideas
+          And Suggestions.
+        </h3>
+        <ul class="block sm:hidden text-sm xs:text-sm sm:text-xl md:text-2xl mb-3 sm:mb-6 list-inside    list-disc ">
+          <li class="leading-6 xs:leading-10 sm:leading-8  md:leading-10">Product Reviews</li>
+          <li class="leading-6 xs:leading-10 sm:leading-8  md:leading-10">Cross-Brand Collaboration</li>
+          <li class="leading-6 xs:leading-10 sm:leading-8  md:leading-10">GiveAway Contests</li>
+          <li class="leading-6 xs:leading-10 sm:leading-8  md:leading-10">Campaign Sponsorships</li>
+          <li class="leading-6 xs:leading-10 sm:leading-8  md:leading-10">Content Contributions</li>
+          <li class="leading-6 xs:leading-10 sm:leading-8  md:leading-10">Others</li>
+        </ul>
+        <div class="mb-3 sm:mb-6"></div>
+        <p class="{{descSize}}">
+          Welcome to join us and become one of the members of our Brand Ambassador Program. You'll have the opportunity
+          to first review our upcoming products and join the referral program to earn a nice payoff.
+        </p>
+        <div class="mb-3 sm:mb-6 block  sm:hidden "></div>
+        <div class="block  sm:hidden ">
+          {% render 'link-button',link_url: "#join", link_title:'Join Now' %}
+        </div>
+
+      </div>
+      <div class="hidden sm:block text-sm xs:text-sm sm:text-xl  md:text-2xl mb-3 sm:mb-6 sm:w-full md:pl-10">
+        <ul class="list-inside    list-disc ">
+          <li class="leading-6 xs:leading-10 sm:leading-8  md:leading-10">Product Reviews</li>
+          <li class="leading-6 xs:leading-10 sm:leading-8  md:leading-10">Cross-Brand Collaboration</li>
+          <li class="leading-6 xs:leading-10 sm:leading-8  md:leading-10">GiveAway Contests</li>
+          <li class="leading-6 xs:leading-10 sm:leading-8  md:leading-10">Campaign Sponsorships</li>
+          <li class="leading-6 xs:leading-10 sm:leading-8  md:leading-10">Content Contributions</li>
+          <li class="leading-6 xs:leading-10 sm:leading-8  md:leading-10">Others</li>
+        </ul>
+        <div class="mb-3 sm:mb-6"></div>
+        {% render 'link-button',link_url: "#join", link_title:'Join Now' %}
+      </div>
+
+
+    </div>
+  </div>
+  <picture>
+    <source data-srcset="{{'pitaka-reviewer-recruitment-section3.jpg' | asset_url}}" media="(min-width: 1280px)">
+    <source data-srcset="{{'pitaka-reviewer-recruitment-section3-m.jpg' | asset_url}}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{'pitaka-reviewer-recruitment-section3-s.jpg' | asset_url}}"
+      alt="PITAKA Reviewer Recruitment" class="block w-full h-full object-cover lazyload">
+  </picture>
+</div>
+
+<div class="bg-gray-850">
+  <div class="w-full {{pdClass}}">
+    <div class="{{wClass_8}} h-full flex flex-col sm:flex-row items-center justify-between">
+      <div class="w-full sm:w-3/8 mb-6 sm:mb-0">
+        <h3 class="{{titleSize}}">
+          Yes.
+          <br>We Would Like
+          <br> To See It.
+        </h3>
+        <div class="{{titleDecoMy}}"></div>
+        <p class="{{descSize}}">
+          Whether you are reviewing the latest tech gadgets and accessories on any media such as YouTube or Instagram,
+          or good at writing blogs and articles, or a great photographer, we welcome you to join us as PITAKA brand
+          ambassador.
+        </p>
+        <div class="{{titleDecoMy}}"></div>
+        {% render 'link-button',link_url: "#join", link_title:'Join Now' %}
+      </div>
+
+      <div class="w-full sm:w-7/12 md:w-6/12">
+        <picture>
+          <source data-srcset="{{'pitaka-reviewer-recruitment-section4.jpg' | asset_url}}" media="(min-width: 768px)">
+          <img src="{{ placeholder_gif }}" data-src="{{'pitaka-reviewer-recruitment-section4-s.jpg' | asset_url}}"
+            alt="PITAKA Reviewer Recruitment" class="block w-full lazyload">
+        </picture>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-gray-800">
+
+  <div class="{{wClass}} {{pdClass}} ">
+    <h3 class="{{titleSize}} text-center pb-12 ">
+      Products for Review
+    </h3>
+    <div class="grid sm:grid-cols-3 gap-6">
+      <div>
+        <picture>
+          <img src="{{ placeholder_gif }}" data-src="{{'pitaka-reviewer-recruitment-section5-1.jpg' | asset_url}}"
+            alt="PITAKA Reviewer Recruitment" class="block w-full lazyload">
+        </picture>
+        <a href="/collections/magez-slider-sign-up" class="hover:underline underline-offset-8 text-white">
+          <h3 class="text-xl md:text-2xl font-bold text-center pt-6 pb-1">
+            MagEZ Slider
+          </h3>
+        </a>
+      </div>
+      <div>
+        <picture>
+          <img src="{{ placeholder_gif }}" data-src="{{'pitaka-reviewer-recruitment-section5-2.jpg' | asset_url}}"
+            alt="PITAKA Reviewer Recruitment" class="block w-full lazyload">
+        </picture>
+        <a href="/collections/pitaka-cases?t=airpods-cases#case-for-airpods-pro"
+          class="hover:underline underline-offset-8 text-white">
+          <h3 class="text-xl md:text-2xl font-bold text-center pt-6 pb-1">
+            MagEZ Case
+          </h3>
+          <p class="text-xl sm:2xl  text-center text-white">
+            for AirPods Pro/3
+          </p>
+        </a>
+      </div>
+      <div>
+        <picture>
+          <img src="{{ placeholder_gif }}" data-src="{{'pitaka-reviewer-recruitment-section5-3.jpg' | asset_url}}"
+            alt="PITAKA Reviewer Recruitment" class="block w-full lazyload">
+        </picture>
+        <a href="/collections/pitaka-cases-for-samsung-galaxy-s22"
+          class="hover:underline underline-offset-8 text-white">
+          <h3 class="text-xl md:text-2xl font-bold text-center pt-6 pb-1">
+            Phone Cases
+          </h3>
+          <p class="text-xl sm:2xl  text-center">
+            for Galaxy S22 Series
+          </p>
+        </a>
+      </div>
+      <div>
+        <picture>
+          <img src="{{ placeholder_gif }}" data-src="{{'pitaka-reviewer-recruitment-section5-4.jpg' | asset_url}}"
+            alt="PITAKA Reviewer Recruitment" class="block w-full lazyload">
+        </picture>
+        <a href="/collections/pitaflow-for-tablets" class="hover:underline underline-offset-8 text-white">
+          <h3 class="text-xl md:text-2xl font-bold text-center pt-6 pb-1">
+            Pita!Flow for Tablets
+          </h3>
+        </a>
+      </div>
+      <div>
+        <picture>
+          <img src="{{ placeholder_gif }}" data-src="{{'pitaka-reviewer-recruitment-section5-5.jpg' | asset_url}}"
+            alt="PITAKA Reviewer Recruitment" class="block w-full lazyload">
+        </picture>
+        <a href="/collections/carbon-fiber-watch-band" class="hover:underline underline-offset-8 text-white">
+          <h3 class="text-xl md:text-2xl font-bold text-center pt-6 pb-1">
+            Carbon Fiber Watch Band
+          </h3>
+        </a>
+      </div>
+      <div class="relative">
+        <a href="/collections/new-releases" class="">
+          <div
+            class="w-full absolute text-xl md:text-2xl font-bold text-center transform top-1/2 -translate-y-3/4 left-1/2  -translate-x-1/2">
+            <h3
+              class="text-center  text-gray-400 text-xl sm:text-base md:text-xl lg:text-2xl font-bold hover:underline underline-offset-8">
+              CLICK TO LEARN MORE<br>
+              ON OUR NEW OR<br>
+              UPCOMING PRODUCTS.
+            </h3>
+          </div>
+        </a>
+        <picture>
+          <img src="{{ placeholder_gif }}" data-src="{{'pitaka-reviewer-recruitment-section5-6.jpg' | asset_url}}"
+            alt="PITAKA Reviewer Recruitment" class="block w-full lazyload">
+        </picture>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bg-gray-850">
+  <div class="{{wClass}} {{pdClass}} ">
+    <h3 class="py-4 text-2xl text-center" id="join1">
+      Share Your Ideas.<br>
+      Be Our Brand Ambassador.
+    </h3>
+    <div class="lg:w-2/5 md:w-9/12 sm:w-11/12 m-auto">
+      <!-- <div class="globo-formbuilder" data-id="Njk0Njc="></div> -->
+      <form id="share-form" class="mx-auto w-full">
+        <input type="text" name="ip" class="form-control w-full bg-gray-800 hidden" id="ip">
+        <!-- <input type="text" name="datetime" class="form-control w-full bg-gray-800 hidden" id="date_time"> -->
+        <div class="form-group py-4">
+          <label class="font-bold" for="name"><span class="text-cyan">* </span> Your Name</label>
+          <input type="text" name="name" class="form-control w-full bg-gray-800" required placeholder="Full Name">
+        </div>
+        <div class="form-group py-4">
+          <label class="font-bold" for="email"><span class="text-cyan">* </span> Email Address</label>
+          <input type="email" name="email" class="form-control w-full bg-gray-800" required placeholder="Enter email">
+        </div>
+        <div class="form-group py-4">
+          <label class="font-bold" for="url"> Your Website</label>
+          <input type="text" name="url" class="form-control w-full bg-gray-800" placeholder="URL">
+        </div>
+        <div class="form-group py-4">
+          <label class="font-bold" for="message"><span class="text-cyan">* </span> Your Message</label>
+          <textarea name="message" class="form-control w-full bg-gray-800" required
+            placeholder="Tell us which products you are interested in reviewing and your proposed plans."></textarea>
+        </div>
+        <button type="submit" id="submit" class="btn btn-primary block mx-auto"> <span class="hidden mr-3" id="loading">
+            <svg t="1645436787483" class="icon animate-spin" viewBox="0 0 1024 1024" version="1.1"
+              xmlns="http://www.w3.org/2000/svg" p-id="2938" width="24" height="24">
+              <path
+                d="M512 170.666667v85.333333a256 256 0 1 1-223.573333 131.2L213.930667 345.6A341.333333 341.333333 0 1 0 512 170.666667z"
+                fill="#ffffff" opacity=".3" p-id="2939"></path>
+            </svg>
+          </span>
+          Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{%- comment -%}
+表单提交感谢弹窗
+{%- endcomment -%}
+<div class="modal-mask opacity-0"></div>
+<div id="modal-video" class="pt-modal-container">
+  <div class="modal-background">
+    <div class="relative bg-black border-white border-2" style="width:350px; height:240px">
+      <button class="pt-modal-close absolute" type="button">
+        <span class="icon icon-x"></span>
+      </button>
+      <div id="card1" class="mx-auto text-center text-white px-auto px-4 py-8 flex flex-col items-center">
+        <h3 class="text-xl md:text-2xl">
+          Thanks for signing up!
+        </h3>
+
+        <p class="block mt-4"></p>
+        <p class="text-sm sm:text-base">
+          We appreciate you contacting us. One of our colleagues will get in touch with you soon!
+        </p>
+        <p class="block mt-4"></p>
+        <p class="text-sm sm:text-base">
+          Have a great day!
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $("a[href*='join']").click(function () {
+    $('html,body').animate({
+      scrollTop: $('#join1').offset().top
+    }, 800);
+  });
+</script>
+
+<style>
+  .btn {
+    background-color: #0BBCD4;
+    display: block;
+    width: 300px
+  }
+</style>
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+  $(document).ready(function () {
+    $.fn.serializeObject = function () {
+      var o = {};
+      var a = this.serializeArray();
+      $.each(a, function () {
+        if (o[this.name]) {
+          if (!o[this.name].push) {
+            o[this.name] = [o[this.name]];
+          }
+          o[this.name].push(this.value || '');
+        } else {
+          o[this.name] = this.value || '';
+        }
+      });
+      return o;
+    };
+
+    var $form = $('form#share-form'),
+      url =
+      'https://script.google.com/macros/s/AKfycbx8UC3n61g-PxanHfdZ3KSBc-1UDJLKXdQVKe_Tig-_eDius5CilItBRWNfaAiGZJQ/exec';
+
+    $form.submit(function (e) {
+      // console.log($form.serializeObject())
+      $("#loading").show()
+      $("#submit").attr('disabled', true)
+      e.preventDefault();
+      $form.find('#ip').val(returnCitySN["cip"]);
+      $form.find('#date_time').val(new Date())
+      var jqxhr = $.ajax({
+        url: url,
+        method: "GET",
+        dataType: "json",
+        data: $form.serializeObject(),
+        success: function (res) { 
+          $("#loading").hide()
+          $("#submit").attr('disabled', false)
+          console.log(res);
+          $(".thanks").html("Thank you for getting in touch!").css("font-size", "4rem");
+          if (res.result == "success") {
+            $(".modal-mask").show();
+            $("#modal-video").addClass('open');
+            $(".pt-modal-close").click(function (e) {
+              e.stopPropagation();
+              $('#modal-video').removeClass('open');
+              $(".modal-mask").hide();
+            })
+          }
+        }
+      });
+    });
+  });
+</script>

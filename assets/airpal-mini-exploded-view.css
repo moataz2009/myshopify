@@ -1,0 +1,265 @@
+.animation {
+  height: 100vh;
+  width: 100%;
+  margin-left: -10%;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.animItem {
+  position: absolute;
+}
+
+.animItem img {
+  width: 100%;
+}
+
+.animItem .caption {
+  position: absolute;
+  opacity: 0;
+  font-weight: 700;
+}
+
+.caption .captionLine {
+  width: auto;
+  max-width: 120px;
+}
+
+.sideTxt {
+  vertical-align: top;
+}
+
+.sideTxtImg {
+  margin-top: 5%;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.centerX {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.centerY {
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+.body {
+  width: 10%;
+  transform: translate(-50%, -50%);
+}
+
+.fpc {
+  width: 9%;
+  transform: translate(-50%, -50%);
+}
+
+.aramidBody {
+  width: 10%;
+  transform: translate(-50%, -50%);
+  top: 46.2%;
+}
+
+.aramidCap {
+  width: 10%;
+  top: 27.2%
+}
+
+.plasticCap {
+  width: 10%;
+  top: 27.6%;
+}
+
+.coil {
+  width: 4%;
+  left: 46%;
+}
+
+.coil_r {
+  width: 4%;
+  right: 46%;
+}
+
+.plate {
+  width: 4%;
+  left: 49%;
+}
+
+.plate_r {
+  width: 4%;
+  right: 49%;
+}
+
+/* caption position */
+.coil .caption{
+  top: -2em;
+  left: -6em;
+}
+
+.coil_r .caption{
+  top:-3em;
+  right:-6em;
+}
+
+.plate .caption{
+  top:-3em;
+  left: -3em;
+}
+
+.plate_r .caption{
+  top:-3em;
+  right: -6em;
+}
+.aramidBody .caption{
+  top:2em;
+  left:-13em;
+}
+.aramidCap .caption, .plasticCap .caption{
+  top:-2em;
+  right: -12em;
+}
+
+.fpc .sideTxt,
+.aramidBody .sideTxt {
+  margin-right: 10px;
+}
+
+.aramidCap .sideTxt,
+.plasticCap .sideTxt {
+  margin-left: 10px;
+}
+
+.fpc .caption {
+  top: 0.5em;
+  right: 60%;
+  text-align: right;
+}
+
+.fpc .caption div:first-child {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/* body edge */
+.bodyEdge {
+  position: absolute;
+  top: 2%;
+  left: 0;
+}
+
+/* the ingenuity unseen text */
+.animation+div {
+  position: absolute;
+  bottom: 10%;
+  right: 7%;
+  max-width: 700px;
+  width: 30%;
+}
+
+@media screen and (max-width:1600px){
+  /* caption position */
+  .coil .caption,
+  .plate .caption {
+    top: -45%;
+    right: 49%;
+  }
+  
+  .coil_r .caption,
+  .plate_r .caption {
+    top: -45%;
+    left: 49%;
+  }
+}
+
+@media screen and (max-width:1366px) {
+  .animItem .caption {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .animation {
+    margin-left: auto;
+  }
+
+  .animItem .caption {
+    display: none;
+  }
+
+  .animation+div {
+    display: none;
+  }
+
+  .body {
+    width: 30%;
+    transform: translate(-50%, -50%);
+  }
+
+  .fpc {
+    width: 28%;
+    transform: translate(-50%, -50%);
+  }
+
+  .aramidBody {
+    width: 30%;
+    transform: translate(-50%, -50%);
+    top: 50.2%;
+  }
+
+  .centerY {
+    top: 50%;
+  }
+
+  .aramidCap {
+    width: 30%;
+    top: 33.25%;
+  }
+
+  .plasticCap {
+    width: 30%;
+    top: 33.25%;
+  }
+
+  .coil {
+    width: 12%;
+    left: 46%;
+  }
+
+  .coil_r {
+    width: 12%;
+    right: 46%;
+  }
+
+  .plate {
+    width: 12%;
+    left: 47%;
+  }
+
+  .plate_r {
+    width: 12%;
+    right: 47%;
+  }
+}
+
+@media screen and (max-width:640px) {
+
+  .aramidBody {
+    top: 50.2%;
+  }
+
+  .centerY {
+    top: 50%;
+  }
+
+  .aramidCap {
+    top: 33.25%;
+  }
+
+  .plasticCap {
+    top: 33.25%;
+  }
+}

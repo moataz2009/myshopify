@@ -1,0 +1,842 @@
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}
+{{'swiper-bundle.min.js' | asset_url | script_tag }}
+
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_6 = 'w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 ' %}
+{% assign pdClass_b = 'px-3 sm:px-6 md:px-0 pb-16 sm:pb-20 lg:pb-28' %}
+{% assign titleBoxClass= 'mx-auto mb-12 w-11/12 sm:w-5/6 md:w-2/3 xl:w-2/5' %}
+{% assign titleSize = 'text-2xl md:text-3xl font-bold' %}
+{% assign descSize = 'text-sm sm:text-base text-gray-400' %}
+{% assign titleDecoMy = 'block mt-4 mb-6' %}
+
+{% assign absoluteContentBoxClass_8 = 'w-full laptop:w-10/12 lg:w-8/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-0' %}
+{% assign absoluteContentBoxClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2' %}
+{% assign absoluteContentClass = 'text-center sm:text-left absolute transform w-4/5 sm:w-1/2 xl:w-3/8 top-3/4 left-1/2 -translate-x-1/2  max-w-xl sm:translate-x-0 sm:left-6 lg:left-0 sm:top-1/2 sm:-translate-y-1/2' %}
+
+{% assign titleSizeS1 = 'text-2xl  xs:text-3xl lg:text-4xl xl:text-5xl font-bold' %}
+{% assign descSizeS1 = 'text-base xs:text-3xl lg:text-base xl:text-2xl text-gray-400' %}
+
+{% assign titleSizeS2 = 'text-2xl  sm:text-3xl xl:text-5xl font-bold sm:font-blod' %}
+{% assign descSizeS2 = 'text-base xs:text-2xl sm:text-sm xl:text-base text-gray-400' %}
+
+{% assign titleSizeStroke = 'text-2xl  xs:text-5xl sm:text-5xl xl:text-8xl font-bold' %}
+
+<div class="w-full bg-black relative">
+  <div class="absolute {{absoluteContentBoxClass}}">
+    <div class="{{absoluteContentClass}} absolute">
+      <h3 class="{{titleSizeS1}} uppercase mb-6">
+        Fusion Weaving™
+      </h3>
+      <p class="text-base xs:text-3xl lg:text-2xl xl:text-3xl text-gray-400">
+        Weave Your Style
+      </p>
+    </div>
+  </div>
+  <picture>
+    <source data-srcset="{{'collection-fusion-weaving-section0.jpg' | asset_url}}" media="(min-width: 1280px)">
+    <source data-srcset="{{'collection-fusion-weaving-section0-m.jpg' | asset_url}}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{'collection-fusion-weaving-section0-s.jpg' | asset_url}}"
+      alt="Fusion Weaving" class="block w-full h-full object-cover lazyload">
+  </picture>
+</div>
+<div class="w-full bg-black nav-bar">
+  <div class="sm:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto hidden sm:block">
+    <div class=" grid grid-cols-1 sm:grid-cols-3 sm:gap-6  auto-rows-fr sm:text-xs md:text-sm xl:text-base"
+      id="linkCil">
+      <a href="#" id="link1" class="active block py-3 h-full  border-t-4 border-solid ">WHAT DOES IT HAVE
+        TO
+        DO WITH MUSIC?</a>
+      <a href="#" id="link2" class="block py-3 h-full  border-t-4 border-solid">WEAVING MUSIC
+        INTO
+        CASES</a>
+      <a href="#" id="link3" class="block py-3 h-full border-t-4 border-solid">SYNPHONY FROM
+        FUSION
+        WEAVING</a>
+    </div>
+  </div>
+</div>
+<div class="w-full bg-black">
+  <div class="{{wClass_6}} px-3 sm:px-6 md:px-0 pt-0 pb-20 xs:pt-0 xs:pb-56 sm:pt-20 sm:pb-0 xl:pt-32 xl:pb-0 ">
+    <div class="mx-auto  w-11/12 sm:w-5/6 md:w-2/3 xl:w-5/6">
+      <p class="{{descSizeS1}}">
+        Fusion Weaving™ series is infused with the pursuit of craftsmanship, aesthetics, and innovation of PITAKA. We
+        hope this new case style can bring you experience like never before and energy like what music does.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="w-full bg-black relative" id="part1">
+  <div class="absolute w-full  px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2">
+    <div
+      class="absolute text-center sm:text-left absolute transform w-4/5 sm:w-1/2  -top-12 xs:-top-40 left-1/2 -translate-x-1/2  max-w-4xl sm:translate-x-0 sm:left-auto sm:right-0  sm:top-1/4 sm:-translate-y-1/4">
+      <h3 class="{{titleSizeStroke}} pt-6 xs:pt-24 sm:pt-7 xl:pt-8 text-gray-400 border-t-4 border-color-505255">
+        <span class=" sm:text-3xl lg:text-4xl xl:text-5xl">WHAT DOES IT HAVE TO DO </span><br
+          class="hidden sm:inline-block">
+        WITH MUSIC?
+      </h3>
+    </div>
+  </div>
+  <picture>
+    <source data-srcset="{{'collection-fusion-weaving-section1.png' | asset_url}}" media="(min-width: 1280px)">
+    <source data-srcset="{{'collection-fusion-weaving-section1-m.png' | asset_url}}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{'collection-fusion-weaving-section1-s.png' | asset_url}}"
+      alt="Fusion Weaving" class="block w-full h-full object-cover lazyload">
+  </picture>
+</div>
+
+<div class="w-full bg-black relative pt-80 xs:pt-96 sm:pt-0">
+  <div
+    class="absolute w-full sm:w-10/12 xl:w-8/12 max-w-screen-2xl xl:max-w-screen-3xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-0 sm:-top-24">
+    <div
+      class="absolute text-left absolute transform w-4/5 sm:w-1/2 xl:w-4/8 left-1/2 -translate-x-1/2  max-w-screen-2xl xl:max-w-screen-3xl sm:translate-x-0  sm:left-0  sm:top-1/4 sm:-translate-y-1/4">
+      <h3 class="{{titleSizeS2}} mb-4 xs:mb-6 sm:mb-12 sm:border-white sm:border-l-4 sm:pl-8">
+        Music Gives Us
+        <br class="hidden sm:inline-block">
+        Energy
+      </h3>
+      <div class="sm:pl-10 laptop:pl-32">
+        <p class="{{descSizeS2}} mb-2 xs:mb-4 ">
+          Music is magical, transcending time and space. It's a great inspiration for design and creation.
+        </p>
+        <p class="{{descSizeS2}} mb-2 xs:mb-4"> Within various forms and rules, every note from all kinds of instruments
+          collides or
+          mix to compose great pieces of music and
+          energy that’s greater than our wildest dreams. </p>
+        <p class="{{descSizeS2}} mb-2 xs:mb-4 ">The energy from music is fascinating.</p>
+      </div>
+
+    </div>
+  </div>
+  <picture>
+    <source data-srcset="{{'collection-fusion-weaving-section2.png' | asset_url}}" media="(min-width: 1280px)">
+    <source data-srcset="{{'collection-fusion-weaving-section2-m.png' | asset_url}}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{'collection-fusion-weaving-section2-s.png' | asset_url}}"
+      alt="Fusion Weaving" class="block w-full h-full object-cover lazyload">
+  </picture>
+</div>
+
+<div class="w-full bg-black">
+  <div class="{{wClass_8}} {{pdClass}}">
+    <div class="flex flex-col sm:flex-row items-center justify-between">
+      <div id="split-slider" class="covered sm:w-3/8">
+        <div class="handle"></div>
+        <div class="changeable"></div>
+      </div>
+      <div class="order-first mb-8 xs:mb-16 sm:mb-0 sm:order-none sm:w-5/8 sm:pl-20 laptop:pl-32 xl:pl-40">
+        <h3 class="{{titleSizeS2}} mb-4 xs:mb-6 sm:mb-12 sm:border-white sm:border-l-4 sm:pl-8">
+          Can Music Be
+          <br class="hidden sm:inline-block">
+          Tangible?
+        </h3>
+        <div class="sm:pl-10  laptop:pl-32">
+          <p class="{{descSizeS2}} mb-2 xs:mb-4 ">
+            Can we turn those notes into something we can touch and feel? Inspired by Mondrian's musical works, we tried
+            to convert the symphony notes into dots, lines, surfaces and a mix of colors so that music can be tangible
+            and developed a brand-new weaving technique - PITAKA Fusion Weaving™.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="w-full bg-black relative pt-4 xs:pt-40 sm:pt-80 xl:pt-60" id="part2">
+  <div class="absolute w-full mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-0">
+    <div
+      class="absolute text-center sm:text-right absolute transform w-4/5 sm:w-1/2 -top-16 xs:top-0 left-1/2 -translate-x-1/2  max-w-xl xl:max-w-3xl sm:translate-x-0 sm:left-0  sm:-translate-y-1/4 sm:top-16 xl:top-32">
+      <h3
+        class="{{titleSizeStroke}} pt-6 xs:pt-12 sm:pt-7 xl:pt-8 text-gray-400 border-t-4 border-color-505255 sm:pl-40">
+        WEAVING MUSIC<br>INTO CASES
+      </h3>
+    </div>
+  </div>
+  <video loop muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+    x5-video-orientation="portraint" preload="none" autoplay style="object-fit:contain" class="w-full lazyload">
+    <source src="{{ '.mp4' | asset_url }}" type="video/mp4">
+    <source src="{{ 'collection-fusion-weaving-section4.webm' | asset_url }}" type="video/webm">
+  </video>
+</div>
+
+<div class="w-full bg-black">
+  <div class="{{wClass_8}} {{pdClass}}">
+    {% render 'video-set' , name:'collection-fusion-weaving-section5-v', coverName:'collection-fusion-weaving-section5-cover' %}
+  </div>
+</div>
+
+
+<!-- section6 -->
+<div class="w-full bg-black">
+  <div class="{{wClass}} px-3 sm:px-6 md:px-0 pb-16 sm:pb-20  bg-black sm:bg-transparent">
+    <div class="swiper-container w-full center-slides">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide px-6 sm:px-0">
+          <div class="w-full">
+            <picture>
+              <img src="{{ placeholder_gif }}" data-src="{{'Accurate-Control-of-Fabrics.jpg' | asset_url}}"
+                alt="New MagEZ Case Pro for iPhone 13 Series" class="block w-full h-full lazyload">
+            </picture>
+            <div class="swiper-content py-6 sm:px-6  h-56 xs:h-36 md:h-32">
+              <div>
+                <p class="font-normal texl-left text-2xl  md:text-3xl mt-2 mb-4 text-white">
+                  The Intertwining of Warp and Weft
+                </p>
+                <p class="text-sm sm:text-base sm:text-lg xl:text-xl text-gray-400">
+                  Adjusting the sequence of warp and weft strands of different colors to have two or more weaving styles
+                  on the same piece of aramid fiber fabric based on specific rules, like notes on a stave.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide px-6 sm:px-0">
+          <div class="w-full">
+            <video loop muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+              x5-video-orientation="portraint" poster="{{ 'The-Intertwining-of-Warp-and-Weft-cover.jpg' | asset_url }}"
+              preload="load" style="object-fit:contain" class="lazyload swiperVideo">
+              <source src="{{ 'The-Intertwining-of-Warp-and-Weft.mp4' | asset_url }}" type="video/mp4">
+              <source src="{{ 'The-Intertwining-of-Warp-and-Weft.webm' | asset_url }}" type="video/webm">
+            </video>
+            <div class="swiper-content py-6 sm:px-6   h-56 xs:h-36 md:h-32">
+              <div>
+                <p class="font-normal texl-left text-2xl  md:text-3xl mt-2 mb-4 text-white">
+                  Accurate Control of Fabrics
+                </p>
+                <p class="text-sm sm:text-base sm:text-lg xl:text-xl text-gray-400">
+                  To produce great works of art, we have to put attention to every detail and use the finest tools.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide px-6 sm:px-0">
+          <div class="w-full">
+            <video loop muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+              x5-video-orientation="portraint" poster="{{ 'Three-Dimensional-Effect-cover.jpg' | asset_url }}"
+              preload="load" style="object-fit:contain" class="lazyload swiperVideo">
+              <source src="{{ 'Three-Dimensional-Effect.mp4' | asset_url }}" type="video/mp4">
+              <source src="{{ 'Three-Dimensional-Effect.webm' | asset_url }}" type="video/webm">
+            </video>
+            <div class="swiper-content py-6 sm:px-6    h-56 xs:h-36 md:h-32">
+              <div>
+                <p class="font-normal texl-left text-2xl  md:text-3xl mt-2 mb-4 text-white">
+                  Three-Dimensional Effect
+                </p>
+                <p class="text-sm sm:text-base sm:text-lg xl:text-xl text-gray-400">
+                  Like a symphony that boasts multiple movements, Fusion Weaving™ produces multiple structures to offer
+                  more dynamics to our products.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev "></div>
+      <div class="swiper-button-next "></div>
+    </div>
+  </div>
+</div>
+
+<div class="w-full bg-black" id="part3">
+  <div class="w-full px-3 sm:px-0 md:px-0 pb-16 sm:pb-20 lg:pb-28">
+    <div class="flex flex-col sm:flex-row items-center justify-between">
+      <div class="sm:pl-20 md:pl-60 xl:pl-80">
+        <picture>
+          <source data-srcset="{{'collection-fusion-weaving-section7.png' | asset_url}}" media="(min-width: 1280px)">
+          <source data-srcset="{{'collection-fusion-weaving-section7-m.png' | asset_url}}" media="(min-width: 768px)">
+          <img src="{{ placeholder_gif }}" data-src="{{'collection-fusion-weaving-section7-s.png' | asset_url}}"
+            alt="Fusion Weaving" class="block w-full h-full object-cover lazyload">
+        </picture>
+      </div>
+      <div class="order-first mb-8 xs:mb-16 sm:mb-0 sm:order-none w-11/12 sm:w-4/8 sm:pl-10">
+        <h3
+          class="text-2xl  xs:text-5xl sm:text-5xl xl:text-8xl font-bold text-center sm:text-left  pt-12 xs:pt-12 sm:pt-7 xl:pt-8 text-gray-400 border-t-4 border-color-505255 sm:pr-40">
+          SYMPHONY<br class="hidden sm:inline-block"> FROM <br>
+          FUSION<br class="hidden sm:inline-block"> WEAVING
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="w-full bg-black">
+  <div class="{{wClass_8}} {{pdClass_b}}">
+    <div id="trigger-video2"></div>
+    <div class="w-full relative">
+      <div class="pt-section-picture relative">
+        <div class="absolute left-0 top-0 transform w-full h-full flex justify-center items-center">
+          <div id="play-btn2" class="rounded-full w-9 h-9 bg-white flex justify-center items-center"
+            data-target="#modal-video2">
+            {{ 'triggle_pixel-black.svg' | asset_url | img_tag:'','block' }}
+          </div>
+        </div>
+        <picture>
+          <img src="{{ placeholder_gif }}" data-src="{{ 'collection-fusion-weaving-section8-cover.jpg' | asset_url }}"
+            class="block w-full lazyload" />
+        </picture>
+      </div>
+      <div id="modal-video2" class="modal-container absolute w-full h-full opacity-0 inset-0 transition">
+        <video muted loop controls playsinline webkit-playsinline x5-video-player-type="h5"
+          x5-video-player-fullscreen="true" x5-video-orientation="portraint" class="w-full h-full block object-cover">
+          <source src="{{ 'collection-fusion-weaving-section8-v.mp4' | asset_url }}" type="video/mp4" />
+          <source src="{{'collection-fusion-weaving-section8-v.webm' | asset_url }}" type="video/webm" />
+
+        </video>
+      </div>
+    </div>
+    <!-- {% render 'video-set' , name:'collection-fusion-weaving-section8-v', coverName:'collection-fusion-weaving-section8-cover' %} -->
+  </div>
+</div>
+
+
+<div class="w-full bg-black">
+  <div class="{{wClass}} {{pdClass_b}}">
+    <div class="  relative pt-48 xs:pt-56 sm:pt-7 ms:pt-10 xl:pt-12">
+      <div
+        class="absolute w-full sm:w-10/12 max-w-screen-2xl xl:max-w-screen-3xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-16 sm:top-0">
+        <div
+          class="absolute text-left absolute transform w-4/5 sm:w-1/2 xl:w-4/8 left-1/2 -translate-x-1/2  max-w-screen-2xl xl:max-w-screen-3xl sm:translate-x-0  sm:left-0  sm:top-1/2 sm:-translate-y-1/2">
+          <h3 class="{{titleSize}} mb-4 xs:mb-6">
+            Overture
+          </h3>
+          <p class="text-base xs:text-2xl sm:text-sm xl:text-base text-white  mb-2 xs:mb-4 ">
+            Get ready to feel the vastness of time and space.
+          </p>
+        </div>
+      </div>
+      <picture>
+        <source data-srcset="{{'collection-fusion-weaving-section9-1.jpg' | asset_url}}" media="(min-width: 1280px)">
+        <source data-srcset="{{'collection-fusion-weaving-section9-1-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'collection-fusion-weaving-section9-1-s.jpg' | asset_url}}"
+          alt="Fusion Weaving" class="block w-full h-full object-cover lazyload">
+      </picture>
+    </div>
+    <div class="  relative pt-48 xs:pt-56 sm:pt-7 ms:pt-10 xl:pt-12">
+      <div
+        class="absolute w-full sm:w-10/12 max-w-screen-2xl xl:max-w-screen-3xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-16 sm:top-0">
+        <div
+          class="absolute text-left absolute transform w-4/5 sm:w-1/2 xl:w-4/8 left-1/2 -translate-x-1/2  max-w-screen-2xl xl:max-w-screen-3xl sm:translate-x-0  sm:left-0  sm:top-1/2 sm:-translate-y-1/2">
+          <h3 class="{{titleSize}} mb-4 xs:mb-6">
+            Rhapsody
+          </h3>
+          <p class="text-base xs:text-2xl sm:text-sm xl:text-base text-white  mb-2 xs:mb-4 ">
+            Find your passion in collisions and overlapping.
+          </p>
+        </div>
+      </div>
+      <picture>
+        <source data-srcset="{{'collection-fusion-weaving-section9-2.jpg' | asset_url}}" media="(min-width: 1280px)">
+        <source data-srcset="{{'collection-fusion-weaving-section9-2-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'collection-fusion-weaving-section9-2-s.jpg' | asset_url}}"
+          alt="Fusion Weaving" class="block w-full h-full object-cover lazyload">
+      </picture>
+    </div>
+    <div class="  relative pt-48 xs:pt-56 sm:pt-7 ms:pt-10 xl:pt-12">
+      <div
+        class="absolute w-full sm:w-10/12 max-w-screen-2xl xl:max-w-screen-3xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-16 sm:top-0">
+        <div
+          class="absolute text-left absolute transform w-4/5 sm:w-1/2 xl:w-4/8 left-1/2 -translate-x-1/2  max-w-screen-2xl xl:max-w-screen-3xl sm:translate-x-0  sm:left-0  sm:top-1/2 sm:-translate-y-1/2">
+          <h3 class="{{titleSize}} mb-4 xs:mb-6">
+            Concerto
+          </h3>
+          <p class="text-base xs:text-2xl sm:text-sm xl:text-base text-white  mb-2 xs:mb-4 ">
+            Keep your personality while living in harmony.
+          </p>
+        </div>
+      </div>
+      <picture>
+        <source data-srcset="{{'collection-fusion-weaving-section9-3.jpg' | asset_url}}" media="(min-width: 1280px)">
+        <source data-srcset="{{'collection-fusion-weaving-section9-3-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'collection-fusion-weaving-section9-3-s.jpg' | asset_url}}"
+          alt="Fusion Weaving" class="block w-full h-full object-cover lazyload">
+      </picture>
+    </div>
+    <div class="  relative pt-48 xs:pt-56 sm:pt-7 ms:pt-10 xl:pt-12">
+      <div
+        class="absolute w-full sm:w-10/12 max-w-screen-2xl xl:max-w-screen-3xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-16 sm:top-0">
+        <div
+          class="absolute text-left absolute transform w-4/5 sm:w-1/2 xl:w-4/8 left-1/2 -translate-x-1/2  max-w-screen-2xl xl:max-w-screen-3xl sm:translate-x-0  sm:left-0  sm:top-1/2 sm:-translate-y-1/2">
+          <h3 class="{{titleSize}} mb-4 xs:mb-6">
+            Sonata
+          </h3>
+          <p class="text-base xs:text-2xl sm:text-sm xl:text-base text-white mb-2 xs:mb-4 ">
+            Find your rhythm, and soar high.
+          </p>
+        </div>
+      </div>
+      <picture>
+        <source data-srcset="{{'collection-fusion-weaving-section9-4.jpg' | asset_url}}" media="(min-width: 1280px)">
+        <source data-srcset="{{'collection-fusion-weaving-section9-4-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'collection-fusion-weaving-section9-4-s.jpg' | asset_url}}"
+          alt="Fusion Weaving" class="block w-full h-full object-cover lazyload">
+      </picture>
+    </div>
+  </div>
+</div>
+
+<div class="w-full bg-black">
+  <div class="{{wClass}} {{pdClass}}">
+    <div class="text-center mx-auto mb-12 w-11/12 sm:w-5/6 md:w-2/3 xl:w-3/5">
+      <h3 class="{{titleSize}}">
+        Weave Your Unique Style Now.
+      </h3>
+      <p class="{{titleDecoMy}}"></p>
+      <p class="{{descSize}}">
+        Available in both the
+        Air Case and MagEZ Case 2.
+      </p>
+    </div>
+    <div class="text-center grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6  auto-rows-fr">
+      {% assign productList = 'fusion-weaving-air-case-for-iphone-13,fusion-weaving-magez-case-2-for-iphone-13' | split: ',' %}
+      {% for name in productList %}
+      {% assign product = all_products[name] %}
+      {% assign suffix = name | remove: 'magez-' | remove: 'air-' | remove: 'case-for-' | append: '.jpg' %}
+      <div class="w-full sm:h-full border-t border-gray-850 sm:border-none sm:bg-gray-850">
+        {% render 'grid-product-item', product: product, between_tag: true %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+<div class="w-full bg-black">
+  <div class="relative pt-0">
+    <div
+      class="absolute w-full sm:w-8/12 max-w-screen-2xl xl:max-w-screen-3xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-0 xs:top-16 sm:top-0">
+      <div
+        class="absolute text-left absolute transform w-4/5 sm:w-1/2 xl:w-3/8 left-1/2 -translate-x-1/2  max-w-screen-2xl xl:max-w-screen-3xl sm:translate-x-0  sm:left-0  sm:top-1/4 sm:-translate-y-1/2">
+        <h3 class="{{titleSize}}">
+          Coming Soon ...
+        </h3>
+        <div class="privy-embed-form w-full xs:w-8/12 sm:w-full laptop:w-8/12 xl:w-8/12" data-campaign="2887236"></div>
+      </div>
+    </div>
+    <picture>
+      <source data-srcset="{{'collection-fusion-weaving-section10.jpg' | asset_url}}" media="(min-width: 1280px)">
+      <source data-srcset="{{'collection-fusion-weaving-section10-m.jpg' | asset_url}}" media="(min-width: 768px)">
+      <img src="{{ placeholder_gif }}" data-src="{{'collection-fusion-weaving-section10-s.jpg' | asset_url}}"
+        alt="Fusion Weaving" class="block w-full h-full object-cover lazyload">
+    </picture>
+  </div>
+</div>
+
+<style>
+  .text-stroke {
+    text-stroke: 1px #DCDCDD;
+    -webkit-text-stroke: 1px #DCDCDD;
+  }
+
+  .border-color-505255 {
+    border-color: #505255;
+  }
+</style>
+
+
+<!-- split slider-->
+{{ 'coveringBad.js' | asset_url | script_tag }}
+<style>
+  /* covered */
+  .covered {
+    width: 463px;
+    height: 459px;
+    background-image: url("{{'collection-fusion-weaving-section3-front.jpg' | asset_url }}");
+    background-position: 30px 0;
+    background-repeat: no-repeat;
+    /* box-shadow: 0 0 40px 5px rgba(0, 0, 0, .4); */
+    position: relative;
+  }
+
+  .covered .changeable {
+    border-right: 2px solid rgb(11, 188, 212) !important;
+    background-position: 30px 0;
+    background-repeat: no-repeat;
+    background-image: url("{{'collection-fusion-weaving-section3-back.jpg' | asset_url }}");
+  }
+
+  .covered .handle {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    margin-left: -23px;
+    margin-top: -23px;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  .covered .handle span {
+    display: inline-block;
+    margin: 15px 1px 0;
+    color: rgb(11, 188, 212);
+    opacity: 0.8;
+    -webkit-transition: .1s ease-out;
+    -moz-transition: .1s ease-out;
+    -ms-transition: .1s ease-out;
+    -o-transition: .1s ease-out;
+    transition: .1s ease-out;
+  }
+
+  .covered .handle.vertical {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  .covered .handle:hover span {
+    opacity: 1;
+  }
+
+  .covered .draggable {
+    cursor: move;
+  }
+
+  .covered .draggable span {
+    margin: 15px 4px 0;
+    color: rgb(11, 188, 212);
+    -webkit-transition: .1s ease-out;
+    -moz-transition: .1s ease-out;
+    -ms-transition: .1s ease-out;
+    -o-transition: .1s ease-out;
+    transition: .1s ease-out;
+  }
+
+  @media screen and (max-width:1280px) {
+    .covered {
+      transform: scale(0.8);
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .covered {
+      transform: scale(1);
+    }
+  }
+
+  @media screen and (max-width:414px) {
+    .covered {
+      transform: scale(0.75);
+    }
+  }
+</style>
+
+<script>
+  $('#split-slider').coveringBad();
+</script>
+
+{%- comment -%}轮播图部分{%- endcomment -%}
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}
+{{'swiper-bundle.min.js' | asset_url | script_tag }}
+
+<style>
+  .center-slides {
+    padding-bottom: 2rem;
+  }
+
+  .center-slides .swiper-slide {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    transition: 300ms;
+    transform: scale(0.89);
+  }
+
+  .center-slides .swiper-slide .swiper-content {
+    opacity: 0;
+    transition: all .5s;
+  }
+
+  .center-slides .swiper-slide-prev,
+  .center-slides .swiper-slide-duplicate-prev {
+    transform-origin: right center;
+  }
+
+  .center-slides .swiper-slide-next,
+  .center-slides .swiper-slide-duplicate-next {
+    transform-origin: left center;
+  }
+
+  .center-slides .swiper-slide-active,
+  .center-slides .swiper-slide-duplicate-active {
+    transform: scale(1);
+  }
+
+  .center-slides .swiper-slide-active .swiper-content,
+  .center-slides .swiper-slide-duplicate-active .swiper-content {
+    opacity: 1;
+  }
+
+  .center-slides .swiper-slide img {
+    object-fit: cover;
+  }
+
+  .center-slides .swiper-slide-prev img,
+  .center-slides .swiper-slide-duplicate-prev img {
+    object-position: right top;
+  }
+
+  .center-slides .swiper-slide-next img,
+  .center-slides .swiper-slide-duplicate-next img {
+    object-position: left top;
+  }
+
+  .center-slides>div[role="button"] {
+    top: 45%;
+    width: 12px;
+    height: 16px;
+  }
+
+  .center-slides>div[role="button"]:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url({{'triggle_pixel.svg' | asset_url}}) no-repeat;
+    background-size: contain;
+  }
+
+  .center-slides .swiper-button-next {
+    right: 0;
+  }
+
+  .center-slides .swiper-button-prev {
+    left: 0;
+    transform: rotate(-180deg);
+  }
+
+  .center-slides .swiper-pagination-bullets {
+    display: flex;
+    justify-content: center;
+    margin: 0 -0.4rem;
+  }
+
+  .center-slides .square-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #565557;
+    display: block;
+    margin: 0 .4rem;
+  }
+
+  .center-slides .swiper-pagination-bullet-active {
+    background-color: #fff;
+  }
+
+  @media screen and (min-width:768px) {
+    .center-slides {
+      margin: 0;
+      padding-bottom: 4rem;
+    }
+
+    .center-slides>div[role="button"] {
+      top: unset;
+      bottom: 6px;
+      margin: 0;
+    }
+
+    .center-slides .swiper-button-next {
+      right: calc(50% - 153.2px);
+    }
+
+    .center-slides .swiper-button-prev {
+      left: calc(50% - 153.2px);
+    }
+
+
+  }
+</style>
+
+<script>
+  var swiper = new Swiper('.center-slides', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    centeredSlides: true,
+    slideToClickedSlide: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 1.5,
+        spaceBetween: 16
+      },
+      1280: {
+        slidesPerView: 1.5,
+        spaceBetween: 24
+      }
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      bulletClass: 'square-bullet',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+      init: function (swiper) {
+        this.emit("slideChangeTransitionEnd");
+      },
+      slideChangeTransitionEnd: function () {
+        console.log("enter");
+        let swiperVideo = $('.swiperVideo')
+        let playVideo = $('.swiper-slide-active div video')
+        swiperVideo[0].pause()
+        swiperVideo[1].pause()
+        swiperVideo[2].pause()
+        swiperVideo[3].pause()
+        swiperVideo[4].pause()
+        if (playVideo[0]) {
+          playVideo[0].play()
+        }
+      },
+    },
+  });
+</script>
+
+<style>
+  #linkCil a {
+    color: #595757;
+    border-color: #595757
+  }
+
+  #linkCil a.active {
+    color: #fff;
+    border-color: #fff
+  }
+</style>
+
+<script>
+  $(function () {
+    $('#linkCil a').click(function () {
+      $(this).siblings('a').removeClass('active')
+      $(this).addClass('active');
+    })
+  })
+</script>
+
+<script>
+  //锚点滚动
+  $('#link1').click(function () {
+    $('html,body').animate({
+      scrollTop: $('#part1').offset().top
+    }, 800);
+  });
+  $('#link2').click(function () {
+    $('html,body').animate({
+      scrollTop: $('#part2').offset().top
+    }, 800);
+  });
+  $('#link3').click(function () {
+    $('html,body').animate({
+      scrollTop: $('#part3').offset().top
+    }, 800);
+  });
+</script>
+<!--  -->
+<script type="text/javascript">
+  $(document).ready(function () {
+    var nav = $(".nav-bar"); //得到导航对象  
+    var win = $(window); //得到窗口对象  
+    var sc = $(document); //得到document文档对象。  
+    win.scroll(function () {
+      if (sc.scrollTop() >= $("#section0")[0].clientHeight) {
+        nav.addClass("active");
+        nav.addClass("top-0");
+        nav.addClass("fixed");
+        nav.addClass("z-50");
+        nav.removeClass("t-18");
+      } else {
+        nav.removeClass("top-0");
+        nav.removeClass("fixed");
+        nav.removeClass("z-50");
+        nav.removeClass("active");
+      }
+    })
+  })
+</script>
+
+<style>
+  .privy-embed-form iframe {
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  @media screen and (max-width:1023px) {
+    .privy-embed-form iframe {
+      margin: 0 !important;
+      transform: scale(0.85);
+      transform-origin: top left;
+    }
+  }
+
+  @media screen and (max-width:768) {
+    .privy-embed-form iframe {
+      margin: 0 !important;
+      max-width: 100% !important;
+      transform: scale(0.85);
+      transform-origin: top left;
+    }
+  }
+
+  @media screen and (max-width:414px) {
+    .privy-embed-form iframe {
+      max-width: 100% !important;
+      transform: scale(0.85);
+      transform-origin: top left;
+    }
+  }
+</style>
+
+
+{{ 'TweenMax.min.js' | asset_url | script_tag }}
+{{ 'ScrollMagic.js' | asset_url | script_tag }}
+{{ 'animation.gsap.min.js' | asset_url | script_tag }}
+
+<script>
+  $(document).ready(function () {
+    var video2 = document.getElementById("modal-video2").querySelector("video");
+    var playBtn2 = document.getElementById("play-btn2");
+
+    playBtn2.onclick = function () {
+      video2.play();
+      // console.log(video.muted)
+      var modal = $(this).data("target");
+      $(modal).css({
+        'opacity': 1,
+        'z-index': 1
+      });
+    }
+
+    // init controller
+    var controller2 = new ScrollMagic.Controller();
+
+    var scene_toggle = new ScrollMagic.Scene({
+        triggerElement: "#trigger-video2",
+        offset: 150
+      })
+      .on('enter leave', function (e) {
+        if (e.type == "enter") {
+          playBtn2.click();
+        } else {
+          video2.pause();
+          $("#modal-video2").css({
+            'opacity': 0,
+            'z-index': -1
+          });
+        }
+      })
+      .addTo(controller2)
+  });
+</script>

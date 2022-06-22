@@ -1,0 +1,436 @@
+<div class="section-top">
+  <h1 class="top-title">
+    <span class="font-regular">PITAKA</span> Manuals
+  </h1>
+  <h4>Alternative Tech Life</h4>
+</div>
+
+{% assign manual_cates = 'Chargers--Power,Mounts & Accessories--Accessories,Cases--For-AirPods,Carry & Protect--Digital-Kit' | split: ',' %}
+
+<div class="collection-div clearfix flex flex-wrap justify-evenly">
+  {% for manual_cate in manual_cates %}
+    {% assign cate_name = manual_cate | split: '--' | first %}
+    {% assign cate_type = manual_cate | split: '--' | last %}
+    <div class="manual-cate">
+      <h3>{{cate_name}}</h3>
+      <ul class="collections-product-list2 mt-2">
+        {% paginate collections.all.products by 200 %}
+        {% for product in collections.all.products %}
+        <div class="hidden">{{ product.title }}</div>
+          {% if product.type == cate_type %}
+            <li class="list-inside list-disc">
+              {% assign link_suffix =  product.title | replace: ' & ', '_' | replace: '/', '_' | replace: ' ','_' | replace: '+','_' %}
+              <a class="greycolor" target="_blank" 
+                href="https://cdn.shopify.com/s/files/1/1036/4113/files/{{link_suffix}}_User_Manual.pdf">
+                {{ product.title }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+        {% endpaginate %}
+      </ul>
+      {% if cate_name == 'Chargers' %}
+      <br>
+      *<a href="/pages/magez-slider-power-dongle-compatible-device">MagEZ Slider &amp; Power Dongle Compatible Device</a>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
+<style type="text/css">
+  .line-through {
+    text-decoration: line-through;
+    color: #666
+  }
+
+  .section-top h1.top-title {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 0;
+    line-height: 1.1;
+    margin-bottom: .5em;
+  }
+
+  select.coll-filter {
+    font-style: normal;
+    color: #000 !important;
+    font-weight: 600;
+    border: none !important;
+    border-right: 1px solid rgba(0, 0, 0, 0.14) !important;
+  }
+
+  select#filter_type {
+    border-left: 1px solid rgba(0, 0, 0, 0.14) !important;
+  }
+
+  select:hover,
+  select:focus {
+    border: none !important;
+    border-right: 1px solid rgba(0, 0, 0, 0.14) !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  select#filter_type,
+  select#filter_type:focus {
+    border-left: 1px solid rgba(0, 0, 0, 0.14) !important;
+  }
+
+  div.filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3em;
+    padding: 0 3em;
+  }
+
+  div.filter p {
+    margin: 0
+  }
+
+  .filter select.coll-filter {
+    margin: 0 0 0 20px;
+    height: 38px;
+    font-family: 'Montserrat', sans-serif !important;
+  }
+
+  @media screen and (min-width:1440px) {
+    .section-top h1.top-title {
+      font-size: 4em;
+    }
+
+    .section-top h4 {
+      font-size: 1.2em;
+    }
+
+    .collection-div {
+      width: 80%
+    }
+
+    .filter select.coll-filter {
+      width: 240px;
+    }
+
+    .manual-cate {
+      width: 25%;
+      /* float: left; */
+    }
+
+    .manual-cate li {
+      font-size: 90%;
+    }
+  }
+
+  @media screen and (min-width:1025px) and (max-width:1439px) {
+    .collections-product-list li {
+      float: left;
+      margin: 1.5em 0;
+      text-align: center;
+      width: 25%;
+      padding: 1em 2em;
+    }
+
+    .section-top h1.top-title {
+      font-size: 3.5em;
+    }
+
+    .section-top h4 {
+      font-size: 1.1em;
+    }
+
+    .collection-div {
+      width: 86%
+    }
+
+    .filter select.coll-filter {
+      width: 230px;
+    }
+
+    .manual-cate {
+      width: 40%;
+      /* float: left; */
+    }
+  }
+
+  @media screen and (min-width:601px) and (max-width:1024px) {
+    .collections-product-list li {
+      float: left;
+      margin: 1.5em 0;
+      text-align: center;
+      width: 50%;
+      padding: 1em 2em;
+    }
+
+    .section-top h1.top-title {
+      font-size: 3em;
+    }
+
+    .section-top h4 {
+      font-size: 1.1em;
+    }
+
+    .collection-div {
+      width: 90%
+    }
+
+    select {
+      font-size: .9em
+    }
+
+    .filter select.coll-filter {
+      width: 210px;
+    }
+
+    .manual-cate {
+      width: 50%;
+      /* float: left; */
+    }
+  }
+
+  @media screen and (max-width:600px) {
+    .collections-product-list li {
+      margin: 1.5em 0;
+      text-align: center;
+      padding: 1em 2em;
+      width: 100%;
+      float: none;
+    }
+
+    .section-top h1.top-title {
+      font-size: 2em;
+    }
+
+    .section-top h4 {
+      font-size: 1em;
+    }
+
+    .collection-div {
+      width: 90%
+    }
+
+    div.filter {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .filter select.coll-filter {
+      font-size: .9em;
+      border: 1px solid rgba(0, 0, 0, 0.14) !important;
+      margin: 10px 0;
+      width: 100%;
+    }
+
+    .manual-cate {
+      width: 100%;
+      /* float: none; */
+    }
+  }
+
+  .all-protitle {
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  .all-protitle h4 {
+    font-size: 1.05em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .all-protitle.product-price {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+
+
+  .collection-div {
+    margin: 2em auto;
+    padding: 1.5em;
+  }
+
+  .collection-div>ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .section-top {
+    text-align: center;
+    padding: 3em 3em 0
+  }
+
+  .product-title p {
+    margin-bottom: 8px
+  }
+
+  .more-btn.btn-soldOut {
+    background: #777;
+    border-color: #777;
+  }
+
+  .collections-product-list2 li {
+    /* list-style:url({{ 'pdf_file.png' | asset_url }}); */
+    line-height: 240%;
+    /* width: 25%; */
+    /* min-width: 480px; */
+  }
+
+  .greycolor:link,
+  .greycolor:visited,
+  .greycolor:hover,
+  .greycolor:active {
+    color: #fff;
+    margin-top: -15px;
+  }
+
+  @media screen and (max-width:640px) {
+    .collections-product-list2 li {
+      width: 100%;
+      min-width: unset;
+    }
+  }
+
+  .manual-cate {
+    margin-top: 2em;
+  }
+</style>
+
+{%- comment -%}
+<script>
+  function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]);
+    return null;
+  }
+
+  function selectValue(newTags_type, newTags_color, newTags_model) {
+    var product_list = jQuery(".collections-product-list2").find("li");
+    product_list.show();
+    newTags_model = newTags_model.trim();
+    product_list.each(function () {
+      var product_color = jQuery(this).find("h4.product-title").find("p:last-child").text();
+      var product_type = jQuery(this).find(".product_type").text();
+      var product_model = jQuery(this).find(".product_model").text().trim();
+      if (newTags_type == "Cases") {
+        if (newTags_color != "" && newTags_type != "" && newTags_model != "") {
+          if (product_color.indexOf(newTags_color) == -1 || product_type.indexOf(newTags_type) == -1 ||
+            product_model != newTags_model) {
+            jQuery(this).hide();
+          } else {
+            jQuery(this).show();
+          }
+        } else if (newTags_type != "" && newTags_model != "") {
+          if (product_type.indexOf(newTags_type) == -1 || product_model != newTags_model) {
+            jQuery(this).hide();
+          } else {
+            jQuery(this).show();
+          }
+        } else if (newTags_type != "" && newTags_color != "") {
+          if (product_type.indexOf(newTags_type) == -1 || product_color.indexOf(newTags_color) == -1) {
+            jQuery(this).hide();
+          } else {
+            jQuery(this).show();
+          }
+        } else if (newTags_color != "" && newTags_model != "") {
+          if (product_color.indexOf(newTags_color) == -1 || product_model != newTags_model) {
+            jQuery(this).hide();
+          } else {
+            jQuery(this).show();
+          }
+        } else if (newTags_color != "") {
+          if (product_color.indexOf(newTags_color) == -1) {
+            jQuery(this).hide();
+          } else {
+            jQuery(this).show();
+          }
+        } else if (newTags_type != "") {
+          if (product_type.indexOf(newTags_type) == -1) {
+            jQuery(this).hide();
+          } else {
+            jQuery(this).show();
+          }
+        } else if (newTags_model != "") {
+          if (product_model != newTags_model) {
+            jQuery(this).hide();
+          } else {
+            jQuery(this).show();
+          }
+        }
+      } else {
+        if (newTags_type != "" && newTags_model != "") {
+          if (product_type.indexOf(newTags_type) == -1 || product_model != newTags_model) {
+            jQuery(this).hide();
+          } else {
+            jQuery(this).show();
+          }
+        } else if (newTags_type != "") {
+          if (product_type.indexOf(newTags_type) == -1) {
+            jQuery(this).hide();
+          } else {
+            jQuery(this).show();
+          }
+        } else if (newTags_model != "") {
+          if (product_model != newTags_model) {
+            jQuery(this).hide();
+          } else {
+            jQuery(this).show();
+          }
+        }
+      }
+
+    })
+  }
+
+  function setModel(type) {
+    if (type == "Cases") {
+      jQuery("#filter_color").show();
+    } else {
+      jQuery("#filter_color").hide();
+    }
+    console.log($("#filter_model").find('option'));
+    jQuery("#filter_model").find("option").hide();
+    jQuery("#filter_model").find("option[name='all']").show();
+    jQuery("#filter_model").find("option[name='" + type + "']").show();
+  }
+
+  $(function () {
+    var product_type = getQueryString("type");
+    $("#filter_type").val(product_type);
+    console.log('product type-----');
+    setModel(product_type);
+    var newTags = {
+      "type": "",
+      "color": "",
+      "model": ""
+    };
+    newTags.type = jQuery('#filter_type').val();
+    newTags.color = jQuery("#filter_color").val();
+    newTags.model = jQuery("#filter_model").val();
+
+    selectValue(newTags.type, newTags.color, newTags.model);
+
+    var collFilters = jQuery('.coll-filter');
+    collFilters.change(function () {
+      var filterName = jQuery(this).attr("id");
+      if (filterName == "filter_type") {
+        newTags.type = jQuery(this).val();
+
+        setModel(newTags.type);
+        jQuery("#filter_color").val("");
+        jQuery("#filter_model").val("");
+      }
+      newTags.type = jQuery('#filter_type').val();
+      newTags.color = jQuery("#filter_color").val();
+      newTags.model = jQuery("#filter_model").val();
+      selectValue(newTags.type, newTags.color, newTags.model)
+    });
+
+  })
+</script>
+{%- endcomment -%}

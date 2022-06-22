@@ -1,0 +1,952 @@
+<style>
+  .txtLeft {
+    text-align: left;
+  }
+
+  .container {
+    padding-bottom: 10%;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: none;
+  }
+
+  .container h1 {
+    font-size: 2.25em;
+    font-weight: 800;
+  }
+
+  .container form {
+    text-align: center;
+    width: 28em;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /* hero section  */
+  .hero {
+    /* background-image: url(//cdn.shopify.com/s/files/1/1036/4113/t/35/assets/ext-warranty-hero.jpg?238708);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover; */
+    position: relative;
+  }
+
+  .hero-bg img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero h1 {
+    position: absolute;
+    color: #fff;
+    top: 25%;
+    left: 50%;
+    margin: 5% 0;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+  }
+
+  /* warranty / share section  */
+  .share-media h1,
+  .warranty-check h1 {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+
+  .share-media h1 {
+    width: 100%;
+  }
+
+  .share-media {
+    width: 85%;
+    max-width: 770px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .share-media .standard-h3 {
+    margin: 5% 0 8% 0;
+  }
+
+  .share-media ul {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin-left: -5%;
+    margin-right: auto;
+  }
+
+  .share-media li {
+    width: 33.33%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .share-media li p {
+    margin-top: .3em;
+    text-align: center;
+    width: 60%;
+    max-width: 200px;
+  }
+
+  .share-media li img {
+    max-width: 80px;
+  }
+
+  .share-btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 5%;
+  }
+
+  .share-btn div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    border-radius: 10px;
+    width: 35%;
+    max-width: 280px;
+    height: 80px;
+  }
+
+  .share-btn div:last-of-type {
+    margin-left: 5%;
+  }
+
+  .share-btn span {
+    vertical-align: super;
+    margin-left: .5em;
+  }
+
+  .share-btn img {
+    max-height: 40px;
+    vertical-align: bottom;
+  }
+
+  /* warranty check  */
+  .warranty-check .detail-font-xmedium {
+    width: 100%;
+    max-width: 770px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.25em;
+    line-height: 1.5;
+  }
+
+  select {
+    color: #000 !important;
+    font-weight: 800;
+    font-style: inherit;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' ><polygon points='0,0 100,0 50,50'/></svg>");
+    border: 1px solid #000 !important;
+    background-size: 12px;
+    font-size: .85em;
+    background-position: 97% 60%;
+    margin-top: 3px;
+  }
+
+  select:focus {
+    outline: none;
+  }
+
+  .selectModel-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 770px;
+    margin-bottom: 5%;
+  }
+
+  .selectSeries-wrapper {
+    width: 20%;
+  }
+
+  .selectProduct-wrapper,
+  .selectMainPart-wrapper {
+    margin-left: 5%;
+    width: 34%;
+  }
+
+  .selectModel-wrapper button {
+    background: #fff;
+    color: #000;
+    border-radius: 6px;
+    padding: 0.4em 1.5em;
+    margin: .5em auto .5em 3px;
+    display: block;
+    font-weight: 700;
+  }
+
+  .selectModel-wrapper button:focus {
+    outline: none;
+  }
+
+  #onDemandTable {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 5%;
+    flex-flow: column nowrap;
+  }
+
+  #onDemandTable table {
+    display: none;
+    background-color: transparent;
+    table-layout: fixed;
+  }
+
+  #onDemandTable .series-title {
+    display: none;
+    margin-bottom: 10px;
+  }
+
+  .series-title span {
+    font-weight: 700;
+  }
+
+  #onDemandTable th {
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  #onDemandTable td {
+    font-size: 16px;
+  }
+
+  #onDemandTable td,
+  #onDemandTable th {
+    padding: .6em 1em;
+    border: 1px solid #fff;
+    background: transparent;
+    text-align: center;
+  }
+
+  .warranty-check {
+    position: relative;
+    margin: 5% auto;
+    width: 90%;
+    max-width: 770px;
+  }
+
+  .warranty-check .standard-h3 {
+    margin-bottom: 5%;
+  }
+
+  /* .warranty-check::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    width: 100%;
+    max-width: 770px;
+    border-bottom: 3px solid #000;
+  } */
+
+  @media screen and (max-width:1024px) {
+    .hero .standard-h3 {
+      top: 60%;
+    }
+
+    .share-media h1,
+    .warranty-check h1 {
+      margin: 5% auto 10% auto;
+    }
+
+    .share-media li p {
+      width: 100%;
+    }
+
+    .share-btn {
+      flex-flow: row wrap;
+    }
+
+    .share-btn div {
+      width: 100%;
+      font-weight: 700;
+    }
+
+    .share-btn div:last-of-type {
+      margin-left: 5%;
+      margin-top: 0%;
+    }
+  }
+
+  @media screen and (max-width:640px) {
+
+    #onDemandTable td,
+    #onDemandTable th {
+      padding: .5em .4em;
+    }
+
+    .hero .standard-h3 {
+      font-size: 1.8em;
+      top: 45%;
+    }
+
+    h1.standard-h3 {
+      font-size: 1.3em;
+    }
+
+    .share-media li p {
+      font-size: 14px;
+      width: 90%;
+    }
+
+    .share-btn div {
+      width: 100%;
+      height: 65px;
+    }
+
+    .share-btn div:last-of-type {
+      margin-left: 0%;
+    }
+
+    .share-btn div:first-of-type img {
+      height: 25px;
+      width: auto;
+    }
+
+    .share-btn span {
+      font-size: 14px;
+    }
+
+    .share-btn img {
+      max-height: 25px;
+      vertical-align: initial;
+    }
+
+    .share-media li img {
+      max-width: 50px;
+    }
+
+    .selectSeries-wrapper,
+    .selectProduct-wrapper,
+    .selectMainPart-wrapper {
+      margin-left: 0;
+      width: 90%;
+      margin-top: 5px;
+    }
+
+    .selectModel-wrapper button {
+      margin: .5em auto;
+    }
+
+    .warranty-check .detail-font-xmedium {
+      font-size: 1.1em;
+    }
+  }
+
+  @media screen and (max-width:420px) {
+    .hero .standard-h3 {
+      font-size: 18px;
+    }
+
+    h1.standard-h3 {
+      font-size: 16px;
+    }
+
+    .share-media li p {
+      font-size: 12px;
+    }
+
+    .warranty-check .detail-font-xmedium {
+      font-size: 13px;
+    }
+
+    .share-media li img {
+      max-width: 45px;
+    }
+
+    .share-media li:nth-of-type(2) img {
+      max-width: 50px;
+    }
+
+    .share-btn {
+      justify-content: center;
+    }
+
+    #onDemandTable th {
+      font-size: 13px;
+    }
+
+    #onDemandTable td {
+      font-size: 12px;
+    }
+  }
+
+  @media screen and (max-width:360px) {
+    .hero .standard-h3 {
+      font-size: 1.4em;
+      width: 95%;
+    }
+
+    h1.standard-h3 {
+      font-size: 1em;
+    }
+
+    .share-btn span {
+      font-size: 12px;
+    }
+
+    .warranty-check .detail-font-xmedium {
+      font-size: .9em;
+    }
+  }
+
+  @media screen and (min-width:1025px) {
+    .hide-pc {
+      display: none;
+    }
+
+    .hero h1 {
+      font-size: 2.8em;
+    }
+
+    .share-media h1,
+    .warranty-check h1 {
+      font-size: 1.85em;
+    }
+
+    .share-media ul {
+      max-width: 1000px;
+      flex-flow: row nowrap;
+    }
+
+    .share-media li {
+      justify-content: flex-start;
+    }
+
+    .share-media li p {
+      margin-top: .7em;
+      width: 100%;
+    }
+
+    .warranty-check .detail-font-xmedium {
+      max-width: 770px;
+      text-align: center;
+      margin-bottom: 2em;
+      text-align: left;
+    }
+
+    .series-title {
+      font-size: 1.2em;
+    }
+  }
+
+  @media screen and (min-width:1601px) {
+    .hero h1 {
+      font-size: 3.5em;
+    }
+
+    .share-media h1,
+    .warranty-check h1 {
+      font-size: 2em;
+    }
+
+    .share-media li p:first-of-type,
+    .share-media li p:last-of-type {
+      width: 70%;
+    }
+  }
+
+  @media screen and (min-width:1367px) and (max-width:1600px) {
+    .hero h1 {
+      font-size: 2.8em;
+    }
+
+    .share-media h1,
+    .warranty-check h1 {
+      font-size: 1.85em;
+    }
+  }
+</style>
+
+<div class="container clearfix">
+  <div class="hero">
+    <div class="hero-bg">
+      <picture>
+        <source media="(min-width: 1025px)" srcset="{{ 'warranty-header.jpg' | asset_url }}">
+        <img alt="Extended Waranty" srcset="{{ 'warranty-header-m.jpg' | asset_url }}">
+      </picture>
+    </div>
+    <h1 class="standard-h3"><span class="font-regular">Extended Warranty </span><br class="hide-pc">Check</h1>
+  </div>
+  <div class="warranty-check">
+    <h1 class="standard-h3 txtLeft">Select your model to check your warranty time:</h1>
+    <!-- warranty selector -->
+    <div class="selectModel-wrapper">
+      <div class="selectSeries-wrapper">
+        <label for="selectSeries">Series:</label>
+        <select name="selectSeries" id="selectSeries">
+          <option value="">Please Select</option>
+          <option value="cases">CASES</option>
+          {%- comment -%}
+          <option value="forAirpods">FOR AIRPODS</option>
+          {%- endcomment -%}
+          <option value="power">POWER</option>
+          <option value="wallet">WALLET</option>
+          <option value="accessories">ACCESSORIES</option>
+          {%- comment -%}
+          <option value="feeling-lucky">FEELING LUCKY</option>
+          {%- endcomment -%}
+        </select>
+      </div>
+      <div class="selectProduct-wrapper">
+        <label for="selectProduct">Product:</label>
+        <select name="selectProduct" id="selectProduct" required>
+          <option value="" data-series="">Please Select</option>
+          <option value="magez-case" data-series="cases">MagEZ Case</option>
+          <option value="aircase" data-series="cases">Air Case</option>
+          <option value="magez-case-pro" data-series="cases">MagEZ Case Pro</option>
+
+          <option value="watch-case" data-series="cases">Air Case for Apple Watch Series SE/6/5/4</option>
+          <option value="ipad-case" data-series="cases">MagEZ Case for iPad Pro</option>
+
+          <option value="airpal" data-series="cases">Air Pal</option>
+          <option value="airpal-mini" data-series="cases">Air Pal Mini</option>
+          <option value="airpal-mini-pro" data-series="cases">Air Pal Mini for AirPods Pro</option>
+
+          <option value="magez-mount-qi" data-series="power">MagEZ Mount Qi</option>
+          <option value="magez-mount-qi-pc" data-series="power">MagEZ Mount Qi Desktop</option>
+          <option value="magez-bar" data-series="power">MagEZ Bar</option>
+          <option value="magez-juice" data-series="power">MagEZ Juice</option>
+          <option value="magez-juice-2" data-series="power">MagEZ Juice 2</option>
+
+          <option value="air-omni" data-series="power">Air Omni</option>
+          <option value="air-omni" data-series="power">Air Omni Lite</option>
+          <option value="air-essential" data-series="power">Air Essential</option>
+          <option value="air-quad" data-series="power">Air Quad</option>
+          <option value="air-tray" data-series="power">Air Tray</option>
+
+          <option value="magez-wallet" data-series="wallet">MagEZ Wallet</option>
+          <option value="magez-wallet-ue" data-series="wallet">MagEZ Wallet UE</option>
+          <option value="accessories" data-series="wallet">Accessories</option>
+
+          <option value="watch-band" data-series="accessories">Carbon Fiber Watch Band</option>
+          <option value="magez-mount" data-series="accessories">MagEZ Mount</option>
+          <option value="adapters" data-series="accessories">Adapter</option>
+          <option value="tempered-screen" data-series="accessories">Tempered Screen Protection Glass</option>
+          {%- comment -%}
+          <option value="case-juice-kit" data-series="feeling-lucky">Versatile Magnetic Power Bank Kit</option>
+          <option value="case-charger-kit" data-series="feeling-lucky">In-Car Wireless Charging Kit</option>
+          {%- endcomment -%}
+        </select>
+      </div>
+      <div class="selectMainPart-wrapper">
+        <label for="selectMainPart">Main Component:</label>
+        <select name="selectMainPart" id="selectMainPart" required>
+          <option value="" data-product="" data-series="">Please Select</option>
+          <option value="case" data-product="magez-case" data-series="cases">Case</option>
+          <option value="camera-ring" data-product="magez-case" data-series="cases">Camera Ring</option>
+
+          <option value="case" data-product="magez-case-pro" data-series="cases">Case</option>
+          <option value="camera-ring" data-product="magez-case-pro" data-series="cases">Camera Ring</option>
+
+          <option value="case" data-product="aircase" data-series="cases">Case</option>
+          <option value="camera-ring" data-product="aircase" data-series="cases">Camera Ring</option>
+
+          <option value="case" data-product="watch-case" data-series="cases">Case</option>
+
+          <option value="case" data-product="ipad-case" data-series="cases">Case</option>
+          <option value="card-clip" data-product="ipad-case" data-series="cases">Card Clip</option>
+
+          <option value="airpal" data-product="airpal" data-series="cases">Air Pal</option>
+          <option value="type-c" data-product="airpal" data-series="cases">Type C to Type C&plus;Lightning Cable
+          </option>
+
+          <option value="airpal-mini" data-product="airpal-mini" data-series="cases">Air Pal Mini</option>
+          <option value="clip" data-product="airpal-mini" data-series="cases">Carabiner Clip</option>
+
+          <option value="airpal-mini-pro" data-product="airpal-mini-pro" data-series="cases">Air Pal Mini for AirPods
+            Pro</option>
+
+          <option value="p-cover" data-product="magez-wallet" data-series="wallet">P Cover</option>
+          <option value="pitaka-cover" data-product="magez-wallet" data-series="wallet">PITAKA Cover</option>
+          <option value="layers" data-product="magez-wallet" data-series="wallet">Layers</option>
+          <option value="6-card-holder" data-product="magez-wallet" data-series="wallet">Standard 6 Cards Holder
+          </option>
+
+          <option value="p-cover" data-product="magez-wallet-ue" data-series="wallet">P Cover</option>
+          <option value="pitaka-cover" data-product="magez-wallet-ue" data-series="wallet">PITAKA Cover</option>
+          <option value="layers" data-product="magez-wallet-ue" data-series="wallet">Layers</option>
+          <option value="6-card-holder" data-product="magez-wallet-ue" data-series="wallet">Standard UE 6 Cards Holder
+          </option>
+
+          <option value="box-layer" data-product="accessories" data-series="wallet">Box Layer</option>
+          <option value="money-clip" data-product="accessories" data-series="wallet">Money Clip</option>
+          <option value="module" data-product="accessories" data-series="wallet">Anti-degausing Module</option>
+          <option value="magnet" data-product="accessories" data-series="wallet">Magnets</option>
+
+          <option value="main-parts" data-product="air-omni" data-series="power">Main Parts</option>
+          <option value="adapter" data-product="air-omni" data-series="power">Adapter</option>
+          <option value="travel-pouch" data-product="air-omni" data-series="power">Travel Pouch</option>
+
+          <option value="main-parts" data-product="air-omni-lite" data-series="power">Main Parts</option>
+          <option value="adapter" data-product="air-omni-lite" data-series="power">Adapter</option>
+          <option value="travel-pouch" data-product="air-omni-lite" data-series="power">Travel Pouch</option>
+
+          <option value="essential" data-product="air-essential" data-series="power">Air Essential</option>
+          <option value="a-c-cable" data-product="air-essential" data-series="power">C-C Cable</option>
+
+          <option value="quad" data-product="air-quad" data-series="power">Air Quad</option>
+          <option value="adapter" data-product="air-quad" data-series="power">Adapter</option>
+
+          <option value="tray" data-product="air-tray" data-series="power">Air Tray</option>
+          <option value="cable" data-product="air-tray" data-series="power">Charging Cable</option>
+          <option value="charger" data-product="air-tray" data-series="power">Charger</option>
+
+          <option value="all-types" data-product="magez-mount-qi" data-series="power">Car Vent/CD Slot/Suction Cup
+          </option>
+          <option value="cable" data-product="magez-mount-qi" data-series="power">Charging Cable</option>
+
+          <option value="mount-qi-pc" data-product="magez-mount-qi-pc" data-series="power">MagEZ Mount Qi Desktop
+          </option>
+          <option value="a-c-cable" data-product="magez-mount-qi-pc" data-series="power">A To C Cable</option>
+
+          <option value="bar" data-product="magez-bar" data-series="power">MagEZ Bar</option>
+          <option value="lc-cable" data-product="magez-bar" data-series="power">LC-C Cable</option>
+
+          <option value="juice" data-product="magez-juice" data-series="power">MagEZ Juice</option>
+          <option value="a-c-cable" data-product="magez-juice" data-series="power">A-C Cable</option>
+
+          <option value="juice2" data-product="magez-juice-2" data-series="power">MagEZ Juice 2</option>
+          <option value="a-c-cable" data-product="magez-juice-2" data-series="power">A-C Cable</option>
+
+          <option value="tempered-screen" data-product="tempered-screen" data-series="accessories">Tempered Glass Screen
+            Protector</option>
+          <option value="all-types" data-product="magez-mount" data-series="accessories">CarVent/CD Slot/Suction Cup
+          </option>
+          <option value="adapter" data-product="adapters" data-series="accessories">Smart Car Charger Adapter</option>
+          <option value="watch-bands" data-product="watch-band" data-series="accessories">Carbon Fiber Watch Band</option>
+        </select>
+      </div>
+    </div>
+    <div id="onDemandTable">
+      <div class="series-title">Series: <span></span></div>
+      <table width="300">
+        <thead>
+          <tr>
+            <th>Product Type</th>
+            <th>Main Component</th>
+            <th>Standard Warranty</th>
+            <th>Extended Warranty</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+    <p class="detail-font-xmedium">
+      * 1. The extended warranty does not cover wear and tear, defects or damage resulting from accident, misuse, abuse,
+      neglect, unusual physical damage, liquid damage, cosmetic damage, or unauthorized modification of the product,
+      including any change or enhancement in colour, texture or finish.
+    </p>
+    <p class="detail-font-xmedium">
+      2. In case of any dispute, PITAKA reserves the right of final decision
+    </p>
+  </div>
+  <div class="share-media">
+    <h1 class="standard-h3 txtLeft">Share PITAKA products on Instagram and tag us to win a prize.</h1>
+    <ul>
+      <li>
+        <img src="{{ 'ext-camera.svg' | asset_url }}" alt="Extended Warranty Shoot PITAKA Product" />
+        <p>Shoot PITAKA products you purchased.</p>
+      </li>
+      <li>
+        <img src="{{ 'ext-fb-ins.svg' | asset_url }}" alt="Extended Warranty Share on Media" />
+        <p>Share it on Instagram, tag us & using the hashtag #pitaka.</p>
+      </li>
+      <li>
+        <img src="{{ 'ext-lucky-draw.svg' | asset_url }}" alt="Extended Warranty Lucky Draw" />
+        <p>We’ll draw 1 winner every week and giveaway one of our Free Product.</p>
+      </li>
+    </ul>
+    <div class="share-btn">
+      <div><a class="flex items-center" href="//www.facebook.com/sharer.php?u=https://www.ipitaka.com/pages/extended-warranty-pitaka"
+          target="_blank">
+          <img src="{{ 'facebook-2.svg' | asset_url }}" alt="Facebook" />
+          <span>Share on Facebook</span>
+        </a></div>
+      <div><a class="flex items-center" href="https://www.instagram.com/ipitaka/" target="_blank">
+          <img src="{{ 'ins-2.svg' | asset_url }}" alt="Instagram" />
+          <span>Share on Instagram</span>
+        </a></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const warrantyJson = {
+    cases: {
+      "MagEZ Case": {
+        stdWty: "2 Months",
+        extWty: "2 Months"
+      },
+      "MagEZ Case Pro": {
+        stdWty: "2 Months",
+        extWty: "2 Months"
+      },
+      "Air Case": {
+        stdWty: "2 Months",
+        extWty: "2 Months"
+      },
+      "Air Pal": {
+        stdWty: "1 Year",
+        extWty: "6 Months"
+      },
+      "Air Pal Mini": {
+        stdWty: "1 Year",
+        extWty: "6 Months"
+      },
+      "Air Pal Mini for AirPods Pro": {
+        stdWty: "2 Months",
+        extWty: "2 Months"
+      },
+      "Air Case for Apple Watch Series SE/6/5/4": {
+        stdWty: "2 Months",
+        extWty: "2 Months"
+      },
+      "MagEZ Case for iPad Pro": {
+        stdWty: "2 Months",
+        extWty: "2 Months"
+      }
+    },
+    wallet: {
+      "MagEZ Wallet": {
+        stdWty: "Conditional lifetime warranty",
+        extWty: "N/A"
+      },
+      "MagEZ Wallet UE": {
+        stdWty: "Conditional lifetime warranty",
+        extWty: "N/A"
+      },
+      "Accessories": {
+        stdWty: "Conditional lifetime warranty",
+        extWty: "N/A",
+        others: {
+          "Anti-degausing Module": {
+            stdWty: "1 Year",
+            extWty: "1 Year",
+          },
+          "Magnets": {
+            stdWty: "1 Year",
+            extWty: "1 Year",
+          },
+        }
+      },
+    },
+    power: {
+      "MagEZ Mount Qi": {
+        stdWty: "1 Year",
+        extWty: "6 Months"
+      },
+      "MagEZ Mount Qi Desktop": {
+        stdWty: "1 Year",
+        extWty: "6 Months"
+      },
+      "MagEZ Bar": {
+        stdWty: "1 Year",
+        extWty: "3 Months"
+      },
+      "MagEZ Juice": {
+        stdWty: "1 Year",
+        extWty: "3 Months"
+      },
+      "MagEZ Juice 2": {
+        stdWty: "1 Year",
+        extWty: "3 Months"
+      },
+      "Air Omni": {
+        stdWty: "1 Year",
+        extWty: "3 Months",
+        others: {
+          "Travel Pouch": {
+            stdWty: "2 Months",
+            extWty: "2 Months"
+          }
+        }
+      },
+      "Air Omni Lite": {
+        stdWty: "1 Year",
+        extWty: "3 Months",
+        others: {
+          "Travel Pouch": {
+            stdWty: "2 Months",
+            extWty: "2 Months"
+          }
+        }
+      },
+      "Air Essential": {
+        stdWty: "1 Year",
+        extWty: "3 Months"
+      },
+      "Air Quad": {
+        stdWty: "1 Year",
+        extWty: "3 Months"
+      },
+      "Air Tray": {
+        stdWty: "1 Year",
+        extWty: "3 Months"
+      },
+    },
+    accessories: {
+      "Tempered Screen Protection Glass": {
+        stdWty: "2 Months",
+        extWty: "2 Months"
+      },
+      "MagEZ Mount": {
+        stdWty: "6 Months",
+        extWty: "3 Months"
+      },
+      "Adaptor": {
+        stdWty: "1 Year",
+        extWty: "6 Months"
+      },
+      "Carbon Fiber Watch Band": {
+        stdWty: "1 Year",
+        extWty: "3 Months"
+      },
+    }
+  };
+
+  let series = $('#selectSeries'),
+    prd = $('#selectProduct'),
+    mainPart = $('#selectMainPart');
+
+  let seriesOpts = series.find('option'),
+    prdOpts = prd.find('option'),
+    mainPartOpts = mainPart.find('option');
+
+  // let btn = $('.selectModel-wrapper button');
+
+  let table = $('#onDemandTable'),
+    seriesTitleArea = $('.series-title');
+
+  series.on('change', function (e) {
+    let selectedOptVal = e.currentTarget.selectedOptions[0].value;
+    let shouldOpts_prd = [];
+    let shouldOpts_mainPart = [];
+
+    for (let [idx, opt] of Object.entries(prdOpts)) {
+      if (isNaN(+idx)) continue;
+      $(opt).hide();
+      if ((opt.dataset && opt.dataset.series === selectedOptVal) || opt.dataset.series == "") {
+        $(opt).show();
+        shouldOpts_prd.push(opt);
+      }
+    };
+
+    for (let [idx, opt] of Object.entries(mainPartOpts)) {
+      if (isNaN(+idx)) continue;
+      $(opt).hide();
+      if ((opt.dataset && opt.dataset.series === selectedOptVal) || opt.dataset.series == "") {
+        $(opt).show();
+        shouldOpts_mainPart.push(opt);
+      }
+    };
+    $(shouldOpts_prd[0]).prop('selected', true);
+    $(shouldOpts_mainPart[0]).prop('selected', true);
+    // prd.trigger('change', [shouldOpts[0], true]);
+    // render();
+  });
+
+  prd.on('change', function (e, s, b) {
+    let selectedOpt = s ? s : e.currentTarget.selectedOptions[0],
+      selectedOptVal = selectedOpt.value;
+
+    let selectedOpt_ser = selectedOpt.dataset.series;
+
+    let shouldOpts = [];
+    if (!s) {
+      // prdOpts.show();
+    }
+    // for (let [idx, opt] of Object.entries(seriesOpts)) {
+    //   let val = $(opt).attr('value');
+    //   if (selectedOpt_ser === $(opt).attr('value')) {
+    //     $(opt).prop('selected', true);
+    //     break;
+    //   }
+    // };
+    for (let [idx, opt] of Object.entries(mainPartOpts)) {
+      if (isNaN(+idx)) continue;
+      $(opt).hide();
+      if ((opt.dataset && opt.dataset.product === selectedOptVal) || opt.dataset.product == "") {
+        $(opt).show();
+        shouldOpts.push(opt);
+      }
+    };
+    if (!b && b !== undefined) return;
+    $(shouldOpts[0]).prop('selected', true);
+
+    // if(selectedOpt_ser != ""){
+    //   series.trigger('change', [shouldOpts[0], false]);
+    // }
+  });
+
+  mainPart.on('change', function (e) {
+    let selectedOptVal = e.currentTarget.selectedOptions[0].dataset.product;
+    // let shouldOpts = [];
+    // for (let [idx, opt] of Object.entries(prdOpts)) {
+    //   let val = $(opt).attr('value');
+    //   if (isNaN(+idx)) continue;
+    //   if (val === selectedOptVal) {
+    //     shouldOpts.push(opt);
+    //   }
+    // };
+    // $(shouldOpts[0]).prop('selected', true);
+    if (selectedOptVal != "") {
+      // prd.trigger('change', [shouldOpts[0], false]);
+      render();
+    }
+  });
+
+  // series.trigger('change');
+
+  function render() {
+    let seriesValue = series.val();
+    let seriesTitle = series.find(':selected').eq(0).text();
+    let subOpt = {
+        product: prd.find(':selected').eq(0).text(),
+        mainPart: mainPart.find(':selected').eq(0).text()
+      },
+      warrantyObj = warrantyJson[seriesValue][subOpt.product];
+
+
+    if (seriesValue != "" && prd.val() != "" && mainPart.val() != "") {
+      if (warrantyObj["others"] && (subOpt.mainPart == "Travel Pouch" || subOpt.mainPart == "Anti-degausing Module" ||
+          subOpt.mainPart == 'Magnets')) {
+        warrantyObj = warrantyObj["others"][subOpt.mainPart];
+      }
+      subOpt = {
+        stdWty: warrantyObj.stdWty,
+        extWty: warrantyObj.extWty,
+        ...subOpt
+      };
+      renderTable(subOpt, seriesTitle);
+    }
+  }
+
+  function renderTable(subOpt, seriesTitle) {
+    let tb = table.find('table tbody');
+    tb.html(
+      `<tr><td>${subOpt.product}</td><td>${subOpt.mainPart}</td><td>${subOpt.stdWty}</td><td>${subOpt.extWty}</td></tr>`
+    );
+    table.find('table').css('display', 'block');
+    seriesTitleArea.find('span').text(seriesTitle);
+    seriesTitleArea.css('display', 'block');
+  }
+</script>

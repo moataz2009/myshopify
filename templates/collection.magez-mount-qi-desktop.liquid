@@ -1,0 +1,550 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}
+{{'swiper-bundle.min.js' | asset_url | script_tag }}
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_6 = 'w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28' %}
+{% assign pdClass_b = 'px-3 sm:px-6 md:px-0 pb-16 sm:pb-20 lg:pb-28' %}
+{% assign titleBoxClass= 'mx-auto mb-12 sm:mb-12 w-11/12 sm:w-5/6 md:w-2/3 xl:w-2/5' %}
+{% assign titleSize = 'text-2xl md:text-3xl font-bold' %}
+{% assign descSize = 'text-sm sm:text-base text-gray-400' %}
+{% assign titleDecoMy = 'block mt-4 mb-6' %}
+
+{% assign absoluteContentBoxClass_8 = 'w-full laptop:w-10/12 lg:w-8/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-0' %}
+{% assign absoluteContentBoxClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2' %}
+{% assign absoluteContentClass = 'text-center sm:text-left absolute transform w-4/5 sm:w-1/2 xl:w-3/8 top-16 left-1/2 -translate-x-1/2  max-w-md sm:translate-x-0 sm:left-6 lg:left-0 sm:top-1/2 sm:-translate-y-1/2' %}
+
+<div class="relative w-full">
+  <div class="absolute w-full h-full pt-12 xs:pt-48 sm:pt-0">
+    <div
+      class="w-10/12 lg:w-9/12 h-full mx-auto flex justify-center sm:justify-end sm:items-center text-center sm:text-left">
+      <div class="max-w-xl">
+        <h3 class="{{titleSize}} mb-6">
+          EFFORTLESSLY ENERGIZED
+        </h3>
+      </div>
+    </div>
+  </div>
+  <picture>
+    <source data-srcset="{{ 'product-section0-mount-qi-desktop.jpg' | asset_url }}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-section0-mount-qi-desktop-m.jpg' | asset_url }}"
+      alt="MagEZ Mount Qi Desktop" class=" w-full lazyload">
+  </picture>
+</div>
+
+<div class="w-full relative ">
+  <div class="absolute {{absoluteContentBoxClass_8}}">
+    <div class="{{absoluteContentClass}} absolute xs:pt-36 sm:pt-0">
+      <h3 class="{{titleSize}} mb-6">
+        Attach and Charge
+      </h3>
+      <p class="{{descSize}}">
+        Simply attach a MagEZ Case for stable wireless charging while you work.
+      </p>
+    </div>
+  </div>
+  <picture>
+    <source data-srcset="{{ 'product-section1-mount-qi-desktop.jpg' | asset_url }}" media="(min-width: 769px)">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-section1-mount-qi-desktop-m.jpg' | asset_url }}"
+      alt="MagEZ Mount Qi Desktop" class=" w-full lazyload">
+  </picture>
+</div>
+
+{%- comment -%}轮播图部分{%- endcomment -%}
+<div class="w-full relative">
+  <div class="absolute w-full sm:w-5/12  pt-12 xs:pt-48 sm:pt-0 z-10 sm:transform sm:top-1/2 sm:-translate-y-1/2 sm:left-1/2">
+    <div
+      class="w-10/12 lg:w-9/12  mx-auto flex justify-center sm:justify-end sm:items-center text-center sm:text-left">
+      <div class="sm:max-w-sm xl:max-w-xl">
+        <h3 class="{{titleSize}} mb-6">
+          360° Adjustable Angle
+        </h3>
+        <p class="{{descSize}}">
+          The 360° ball joint allows you to adjust the angle of your device.
+          Easily turn your device landscape to watch a movie, and return it
+          upright to Facetime or check messages.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="w-full swiper-container swiper-top">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <picture class="w-full">
+          <source srcset="{{'product-section2-mount-qi-desktop-1.jpg' | asset_url}}" media="(min-width: 768px)">
+          <img srcset="{{'product-section2-mount-qi-desktop-1-m.jpg' | asset_url}}" alt="MagEZ Mount Qi Desktop"
+            class="img-responsive w-full">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="w-full">
+          <source srcset="{{'product-section2-mount-qi-desktop-2.jpg' | asset_url}}" media="(min-width: 768px)">
+          <img srcset="{{'product-section2-mount-qi-desktop-2-m.jpg' | asset_url}}" alt="MagEZ Mount Qi Desktop"
+            class="img-responsive w-full">
+        </picture>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<div class="section-default pt-section-container section3">
+  <div id="trigger_sec"></div>
+  <div class="pt-section pt-flex section3-1">
+    <div class="pt-section-content">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Fast Charge Your Device</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Fully charge your device in under 3 hours*, almost twice as fast as
+        standard charging.
+      </p>
+      <p class="pt-text-small pt-margin-top-mini">
+        *S10/S10+/Note10/Note10+/Pixel 4/Pixel 4 XL
+      </p>
+    </div>
+    <div class="pt-anim-container">
+      <div class="pt-anim-pictures relative">
+        <div id="trigger_line"></div>
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-section31-mount-qi-desktop.png' | asset_url }}"
+          alt="MagEZ Mount Qi Desktop" class="img-responsive lazyload">
+        <div class="pt-anim-case absolute" id="anim-case">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product-section31-mount-qi-desktop-iphone12.png' | asset_url }}"
+            alt="MagEZ Case for iPhone 12" class="img-responsive lazyload">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pt-section pt-flex section3-2">
+    <picture>
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-section32-mount-qi-desktop.png' | asset_url }}"
+        alt="MagEZ Mount Qi Desktop" class="img-responsive lazyload">
+    </picture>
+    <div class="pt-section-content">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Switch from Wireless to<br>Wired in a Second
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        With its magnetized base, the MagEZ Mount Qi Desktop can hold multiple
+        cables, allowing you to switch to wired charging quickly.
+      </p>
+    </div>
+  </div>
+
+  <div class="pt-section pt-flex section3-3">
+    <div class="pt-section-content">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Secure and Stable Charging
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        The MagEZ Mount Qi Desktop uses powerful N52-T magnets offering stable
+        charging while you continue to work, watch, or take calls.
+      </p>
+    </div>
+    <picture>
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-section33-mount-qi-desktop.png' | asset_url }}"
+        alt="MagEZ Mount Qi Desktop" class="img-responsive lazyload">
+    </picture>
+  </div>
+</div>
+
+{{'swiper-bundle.min.css'| asset_url| stylesheet_tag }}
+{{'swiper-bundle.min.js' | asset_url | script_tag }}
+
+<style>
+  .swiper-top .swiper-button-prev:after {
+    content: '';
+    width: 50%;
+    height: 50%;
+    background: url({{'triggle_pixel.svg' | asset_url}}) no-repeat;
+    background-size: contain;
+  }
+
+  .swiper-top .swiper-button-next:after {
+    content: '';
+    width: 50%;
+    height: 50%;
+    background: url({{'triggle_pixel.svg' | asset_url}}) no-repeat;
+    background-size: contain;
+  }
+
+  .swiper-top .swiper-button-prev {
+    transform: rotate(-180deg);
+    left: 50px;
+  }
+
+  .swiper-top .swiper-button-next {
+    right: 50px;
+  }
+
+  .swiper-top .swiper-pagination-bullets {
+    display: flex;
+    justify-content: center;
+    margin: 0 -0.4rem;
+  }
+
+  .swiper-top .square-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #565557;
+    display: block;
+    margin: 0 .4rem;
+  }
+
+  .swiper-top .swiper-pagination-bullet-active {
+    background-color: #fff;
+  }
+
+  .swiper-top.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .swiper-top .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width:768px) {
+    .swiper-top .swiper-button-next {
+      right: 12px;
+    }
+
+    .swiper-top .swiper-button-prev {
+      left: 12px;
+    }
+  }
+
+  @media screen and (max-width:414) {
+    .swiper-top .swiper-button-next {
+      right: 8px;
+    }
+
+    .swiper-top .swiper-button-prev {
+      left: 8px;
+    }
+  }
+</style>
+
+<script>
+  var swiper_top = new Swiper('.swiper-top', {
+    // direction: 'vertical',
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: {
+      delay: 3000
+    },
+    // mousewheel: true,
+    pagination: {
+      el: '.swiper-pagination',
+      bulletClass: 'square-bullet',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
+
+{%- comment -%}手机壳动画
+{%- endcomment -%}
+
+{{ 'TweenMax.min.js' | asset_url | script_tag }}
+{{ 'ScrollMagic.js' | asset_url | script_tag }}
+{{ 'animation.gsap.min.js' | asset_url | script_tag }}
+
+<style>
+  #anim-case {
+    top: 4%;
+    right: 0%;
+  }
+</style>
+
+<script>
+  $(function () {
+    // init controller
+    var controller = new ScrollMagic.Controller();
+
+    // build tween
+    var tween = TweenMax.to("#anim-case", 0.5, {
+      x: -150,
+      y: 40,
+      ease: Linear.easeNone
+    });
+    if (window.innerWidth > 768) {
+      var scene = new ScrollMagic.Scene({
+          triggerElement: "#trigger_sec",
+          duration: 300,
+          onLeave: true,
+        })
+        .setTween(tween)
+        .addTo(controller);
+
+    } else {
+      var scene = new ScrollMagic.Scene({
+          triggerElement: "#trigger_line",
+          duration: 300,
+          onLeave: true,
+        })
+        .setTween(tween)
+        .addTo(controller);
+    }
+  });
+</script>
+
+
+<style>
+  .section-default {
+    min-height: 45vw;
+  }
+
+  .pt-section-content {
+    max-width: 486px;
+  }
+
+  .section1 .pt-section-content {
+    padding-left: 5%;
+  }
+
+  .section3 {
+    background-image: url("{{ 'product-section3-mount-qi-desktop-bg.png' | asset_url }}");
+    background-size: cover;
+  }
+
+  .section3 .pt-section {
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .section3 .pt-section>*:first-child {
+    padding-right: 3em;
+  }
+
+  .section3 .pt-section>*:last-child {
+    padding-left: 3em;
+  }
+
+  .section3 .pt-section.section3-2>*:last-child {
+    padding-left: 0;
+  }
+
+  .section3 .pt-section picture {
+    max-width: 50%;
+  }
+
+  .section3 .pt-section.section3-2 picture {
+    max-width: 60%;
+  }
+
+  .section2 .pt-section-content {
+    z-index: 10;
+  }
+
+  @media screen and (min-width:1960px) {
+    .pt-section-content {
+      max-width: 550px;
+    }
+  }
+
+  @media screen and (max-width:1600px) {
+    .pt-section-content {
+      max-width: 440px;
+      width: 40%;
+    }
+
+    .section3 .pt-section {
+      justify-content: center;
+    }
+
+    .section3 .pt-section-content {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width:1280px) {
+    .pt-section-content {
+      max-width: 425px;
+    }
+
+    .section3 .pt-section>*:first-child {
+      padding-right: 2em;
+    }
+
+    .section3 .pt-section>*:last-child {
+      padding-left: 2em;
+    }
+
+    .section3 .pt-section.section3-1 {
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+
+  }
+
+  @media screen and (max-width:1024px) {
+
+    .section3 .pt-section.section3-1 {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .section3 .pt-section.section3-1 .pt-section-content {
+      width: 46%;
+      flex-shrink: 0;
+      transform: translateX(25%);
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .section-default {
+      min-height: 160vw;
+    }
+
+    .pt-section-content {
+      width: 100% !important;
+      left: 0 !important;
+      top: 10em;
+      transform: none;
+      text-align: center;
+      padding: 0 20%;
+      max-width: unset;
+      order: 1;
+    }
+
+    .section1 .pt-section-content {
+      padding-left: 20%;
+    }
+
+    .section3 .pt-section.section3-1 {
+      padding-top: 4em;
+    }
+
+    .section3 .pt-section.section3-1 .pt-section-content {
+      transform: none;
+    }
+
+    .section3 .pt-section>*:last-child,
+    .section3 .pt-section>*:first-child {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .section3 .pt-section>.pt-section-content {
+      padding: 0;
+    }
+
+    .section3 .pt-section picture,
+    .section3 .pt-section.section3-2 picture,
+    .section3 .pt-section .pt-anim-container {
+      max-width: 80%;
+      order: 2;
+    }
+  }
+
+  @media screen and (max-width:414px) {
+    .pt-section-content {
+      padding: 0 10%;
+      top: 3em;
+    }
+
+    .section3 .pt-section>.pt-section-content {
+      padding: 0 10% 4em;
+    }
+
+    .section3 .pt-section.section3-2 picture {
+      max-width: 100%;
+    }
+
+  }
+</style>
+<!-- anim-pictures -->
+<style>
+  .pt-anim-container {
+    justify-content: space-around;
+    flex-shrink: 0;
+  }
+
+  .pt-anim-case {
+    top: 0;
+    right: 0;
+  }
+
+  .pt-anim-pictures {
+    width: 462px;
+    margin: 0 2em;
+    flex-shrink: 0;
+  }
+
+  .pt-anim-pictures img {
+    display: block;
+  }
+
+  .pt-anim-content {
+    padding: 0 5%;
+  }
+
+  @media screen and (max-width:1280px) {
+    .pt-anim-container {
+      transform: scale(0.8);
+    }
+  }
+
+  @media screen and (max-width:1024px) {
+    .pt-anim-container {
+      transform: scale(0.65);
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .pt-anim-container {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pt-anim-pictures {
+      margin: 5em 0 0;
+    }
+
+    .pt-anim-container {
+      transform: scale(0.9);
+    }
+
+    .pt-anim-content {
+      max-width: 100vw;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width:414px) {
+    .pt-anim-container {
+      transform: scale(0.6);
+      margin-top: -12em;
+      margin-bottom: -5em;
+    }
+  }
+</style>

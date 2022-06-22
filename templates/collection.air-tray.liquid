@@ -1,0 +1,778 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+{% assign base_name = "tray" %}
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}
+
+<div class="pt-section section5 pt-flex pt-flex-center pt-flex-column marginBottom5 bg-black">
+    <div class="pt-section-content pt-text-center width50"> 
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400">Simplified Charging</h3>
+    </div>
+    <div class="pt-section-picture width100">
+      <picture>
+        <source data-srcset="{{ base_name | prepend: 'product-section1-1-' | append:'.png' | asset_url }}"
+          media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}"
+          data-src="{{  base_name | prepend: 'product-section1-1-' | append:'-m.png' | asset_url }}"
+          class="img-responsive width-100 lazyload" alt="Air Tray"> 
+      </picture>
+    </div>
+  </div>
+  
+  <div class="pt-video-container multiple  bg-black">
+    <video loop muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+      x5-video-orientation="portraint" class="lazyload" preload="none"
+      data-poster="{{ 'product-air-tray-cover.jpg' | asset_url }}" autoplay style="object-fit:contain">
+      <source src="{{ 'product-air-tray.mp4' | asset_url }}" type="video/mp4">
+      <source src="{{ 'product-air-tray.webm' | asset_url }}" type="video/webm">
+    </video>
+  </div>
+  
+  {%- comment -%}
+  {% render 'background-video', background_video:'product-air-tray', video_cover:'product-air-tray-cover' %}
+  {%- endcomment -%}
+  
+  <div class="pt-section section2 pt-flex pt-flex-column pt-bg-dark bg-black">
+    <div class="pt-section-container pt-flex pt-flex-center pt-flex-between pt-margin-bottom-small">
+      <div class="pt-section-content">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+          Instant Wireless Charging
+          Without the Hassle
+        </h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          Equipped with Chain-Coil™ technology, the Air Tray makes wireless charging more effortless than ever before.
+          Simply place your device anywhere on the wireless charging pad without having to position it accurately.
+        </p>
+      </div>
+      <div class="pt-section-picture ">
+        <picture>
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ base_name | prepend: 'product-section2-' | append:'-1.jpg' | asset_url }}"
+            class="img-responsive lazyload" alt="Air Tray">
+        </picture>
+      </div>
+    </div>
+    <div class="phone pt-section-container pt-flex pt-flex-center pt-flex-between part">
+      <div class="phone pt-section-content pt-section-content1">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6 wid">
+          Everyday Luxury
+        </h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          The sleek combination of Aramid fiber, aluminum, and microfiber materials offers everyday luxury in the comfort
+          of your own home. Aramid fiber is the perfect solution for wireless charging pads, as it prevents the charger
+          and your devices from overheating.
+        </p>
+      </div>
+    </div>
+    <div class="phone pt-section-container pt-flex pt-flex-center pt-flex-between part">
+      <div class="pt-section-picture width100vw">
+        <picture>
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ base_name | prepend: 'product-section2-1-' | append:'-2.jpg' | asset_url }}" class="lazyload"
+            alt="Air Tray">
+        </picture>
+      </div>
+    </div>
+    <div class="phone pt-section-container pt-flex pt-flex-center pt-flex-between part">
+      <div class="pt-section-picture pt-section-picture2-2  ">
+        <picture>
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ base_name | prepend: 'product-section2-2-' | append:'-2.png' | asset_url }}" class="lazyload"
+            alt="Air Tray">
+        </picture>
+      </div>
+    </div>
+    <div class="phone pt-section-container pt-flex pt-flex-center pt-flex-between pt-section2 relative part last-box"
+      id="#scroll-slider-img-2">
+      <div class="pt-section-picture width100vw">
+        <picture>
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ base_name | prepend: 'product-section2-' | append:'-2.jpg' | asset_url }}"
+            class="img-responsive lazyload" alt="Air Tray">
+        </picture>
+      </div>
+    </div>
+  
+  </div>
+  
+  <!-- scroll-vertival section -->
+  <div class="pc collection-flex pitaka-section padding_0 relative scroll_left bg-black">
+    <div id="scroll-container-left">
+      <div class="scroll-section" id="scroll-section-left-1">
+        <div class="pt-section-container pt-flex pt-flex-center pt-flex-between part">
+          <div class="pt-section-picture width100vw">
+            <picture>
+              <img src="{{ placeholder_gif }}"
+                data-src="{{ base_name | prepend: 'product-section2-1-' | append:'-2-p.jpg' | asset_url }}"
+                class="lazyload" alt="Air Tray">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-section" id="scroll-section-left-2">
+        <div class="pt-section-container pt-flex pt-flex-center pt-flex-between part">
+          <div class="pt-section-picture  pt-section-picture2-2  width100">
+            <picture>
+              <img src="{{ placeholder_gif }}"
+                data-src="{{ base_name | prepend: 'product-section2-2-' | append:'-2-p.jpg' | asset_url }}"
+                class="lazyload" alt="Air Tray">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-section" id="scroll-section-left-3">
+        <div class="pt-section-container pt-flex pt-flex-center pt-flex-between pt-section2 relative part ">
+          <div class="pt-section-picture width100vw">
+            <picture>
+              <img src="{{ placeholder_gif }}"
+                data-src="{{ base_name | prepend: 'product-section2-' | append:'-2-p.jpg' | asset_url }}"
+                class="img-responsive lazyload" alt="Air Tray">
+            </picture>
+          </div>
+          <div class="pc pt-section-content pt-text-right width-38 absolute width24 right7">
+            <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+              Everyday Luxury
+            </h3>
+            <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+              The sleek combination of Aramid fiber, aluminum, and microfiber materials offers everyday luxury in the
+              comfort of your own home. Aramid fiber is the perfect solution for wireless charging pads, as it prevents
+              the charger and your devices from overheating.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="section3 bg-black">
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-section3-' | append:'.jpg' | asset_url }}"
+        media="(min-width: 768px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-section3-' | append:'-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload" alt="Air Tray">
+    </picture>
+  </div>
+  
+  <div class="section4 relative bg-black">
+    <div class="phone pt-section-content pt-text-center .tac">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Supports Fast Charging</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-medium">
+        The Air Tray is our unique and patented wireless charging mat that provides uninterrupted, fast charging for your
+        Qi-certified device.
+      </p>
+    </div>
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-section4-' | append:'.jpg' | asset_url }}"
+        media="(min-width: 768px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-section4-' | append: '-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload" alt="Air Tray">
+    </picture>
+    <div class="pc pt-section-content pt-text-right width-38 absolute">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Supports Fast Charging</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-medium">
+        The Air Tray is our unique and patented wireless charging mat that provides uninterrupted, fast charging for your
+        Qi-certified device.
+      </p>
+    </div>
+  </div>
+  
+  <div class="pt-section section5 pt-flex pt-flex-center pt-flex-column marginBottom5 bg-black">
+    <div class="pt-section-content pt-text-center width50">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Organize and Charge</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Ensure your personal items are safe and close at hand, so they’re ready to go when you need them.
+        Keep your Air Tray by the door to store your keys and MagEZ wallet or by the bed to hold jewelry and wirelessly
+        charge your devices as you sleep.
+      </p>
+    </div>
+    <div class="pt-section-picture width50">
+      <picture>
+        <img src="{{ placeholder_gif }}"
+          data-src="{{ base_name | prepend: 'product-section5-' | append: '.png' | asset_url }}"
+          class="img-responsive lazyload" alt="Air Tray">
+      </picture>
+    </div>
+  </div>
+  {% comment %}
+  <div class="section6 pt-flex picture-section">
+    <!-- TWO COLORS -->
+    <div class="picture-item item-1 pt-hide-small">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6 absolute">Obsidian Black</span>
+    </div>
+    <div class="picture-item item-3 pt-hide-small">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6 absolute">Crystal Silver</span>
+    </div>
+    <div class="picture-item item-m pt-show-small">
+      <div class="relative">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6 absolute">Obsidian Black</h3>
+        {{ base_name | prepend: 'product-section6-' | append: '-1-m.jpg' | asset_url  | img_tag:'Air Tray Side'}}
+  
+      </div>
+      <div class="relative">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6 absolute">Crystal Silver</h3>
+        {{ base_name | prepend: 'product-section6-' | append: '-2-m.jpg' | asset_url  | img_tag:'Air Tray Side'}}
+      </div>
+    </div>
+  </div>
+  {% endcomment %}
+  <div class="section1 width-100 relative bg-black">
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-section1-' | append:'.jpg' | asset_url }}"
+        media="(min-width: 768px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{  base_name | prepend: 'product-section1-' | append:'-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload" alt="Air Tray">
+    </picture>
+    <!-- <div class="absolute pt-position-center width-100 pt-text-center">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6 font-upper">Simplified Charging</h3>
+    </div> -->
+  </div>
+  
+  {% if base_name == 'tray' %}
+  <style>
+    .pt-section-content1 {
+      padding: 0 7% 2em;
+      text-align: center;
+    }
+  
+    .tac {
+      text-align: center;
+    }
+  
+    .phone {
+      display: none;
+    }
+  
+    #scroll-container-left,
+    #scroll-container-right {
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+    }
+  
+    .dot-list {
+      display: none;
+      position: absolute;
+      width: 10px;
+      height: 120px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      z-index: 12;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%)
+    }
+  
+    .scroll_right .dot-list {
+      left: 95%;
+    }
+  
+    .dot-list>div {
+      width: 6px;
+      height: 6px;
+      border-radius: 3px;
+      background: #bdbdbd;
+    }
+  
+    .dot-list>div.active {
+      background: #333333;
+    }
+  
+    .scroll-section {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      position: absolute;
+      background: #000;
+      z-index: 11;
+    }
+  
+    .scroll-section>* {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+  
+    .scroll-section>.section-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 10%;
+      align-items: flex-start;
+    }
+  
+    .scroll-section>.section-img img {
+      max-width: 200%;
+      height: 100%;
+      display: block;
+      width: auto;
+    }
+  
+    .scroll_left .scroll-section>.section-img img {
+      float: right;
+    }
+  
+    .scroll-section>.section-content .sub-head {
+      font-size: 2em;
+    }
+  
+    /* two colors */
+    .picture-section {
+      height: 100vh !important;
+    }
+  
+    .pt-bg-dark {
+      background: #000;
+    }
+  
+    .width100vw img {
+      width: 100vw !important;
+    }
+  
+    .width38 {
+      width: 38% !important;
+    }
+  
+    .width24 {
+      width: 24% !important;
+    }
+  
+    .width50 {
+      width: 50% !important;
+    }
+  
+    .width50 img {
+      width: 100%;
+    }
+  
+    .width100 {
+      width: 100vw !important;
+    }
+  
+    .width100 img {
+      width: 100%;
+    }
+  
+    .right0 {
+      right: 0;
+    }
+  
+    .right7 {
+      right: 7%;
+    }
+  
+    .top5 {
+      top: 5% !important;
+    }
+  
+    .marginBottom5 {
+      margin-bottom: 0%; 
+    }
+  
+    .pt-section2 {
+      position: relative;
+    }
+  
+    .pt-section-content2 {
+      position: absolute;
+      right: 0;
+      width: 35vw;
+    }
+  
+    .pt-section-picture2-2 {
+      position: relative;
+      min-height: 31.25vw;
+    }
+  
+    .pt-section-picture2-2 img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  
+    @media screen and (min-width:1280px) {
+  
+      .picture-section .picture-item:hover {
+        flex: 8;
+        z-index: 999 !important;
+      }
+  
+      .picture-section .picture-item.item-1::after {
+        background-image: url("{{ 'product-section6-tray-1.jpg' | asset_url }}");
+        opacity: 0;
+      }
+  
+      .picture-section .picture-item.item-3::after {
+        background-image: url("{{ 'product-section6-tray-2.jpg' | asset_url }}");
+        opacity: 0;
+        background-position: right;
+      }
+  
+      .picture-section .picture-item:hover::after {
+        opacity: 1;
+        background-position-y: center;
+      }
+    }
+  
+    @media screen and (min-width:768px) {
+      .picture-section {
+        flex-direction: row;
+        height: calc(100vh - 75px);
+      }
+  
+      .picture-section .picture-item {
+        flex: 1;
+        height: 100%;
+        will-change: flex;
+        transition: flex 700ms ease;
+        position: relative;
+      }
+  
+      .picture-section .picture-item::before,
+      .picture-section .picture-item::after {
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: opacity 700ms ease;
+      }
+  
+  
+      .picture-section .picture-item:first-child {
+        z-index: 3 !important;
+      }
+  
+      .picture-section .picture-item:last-child {
+        z-index: 1 !important;
+        margin-right: 0 !important;
+      }
+  
+      .picture-section .picture-item.item-1::before {
+        background-image: url("{{ 'product-section6-tray-1.jpg' | asset_url }}");
+        background-position: left;
+      }
+  
+      .picture-section .picture-item.item-3::before {
+        background-image: url("{{ 'product-section6-tray-2.jpg' | asset_url }}");
+        background-position: right;
+      }
+  
+      .picture-item h3 {
+        top: 10%;
+      }
+  
+      .picture-item.item-1 h3 {
+        right: 20%;
+        z-index: 10;
+      }
+  
+      .picture-item.item-3 h3 {
+        left: 20%;
+        z-index: 10;
+      }
+    }
+  
+    @media screen and (min-width:768px) and (max-width:1279px) {
+  
+      .picture-section,
+      .pitaka-section.padding-border-equal {
+        /* height: 50vh !important; */
+        min-height: unset;
+      }
+  
+      .picture-item img {
+        width: 100%;
+      }
+  
+      .picture-section .picture-item.item-1::before {
+        background-position: 15%;
+      }
+  
+      .picture-section .picture-item.item-3::before {
+        background-position: 85%;
+      }
+    }
+  
+    @media screen and (max-width:767px) {
+  
+      /* two colors view */
+      .picture-section {
+        height: auto !important;
+      }
+  
+      .item-m {
+        width: 100%;
+      }
+  
+      .item-m img {
+        display: block;
+        width: 100%;
+      }
+  
+      .width50 {
+        width: 100% !important;
+      }
+    }
+  </style>
+  {% endif %}
+  
+  <style>
+    .section3 {
+      padding-bottom: 0;
+    }
+  
+    .section4 .pt-section-content {
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      padding: 0 7%;
+    }
+  
+    .pt-section .pt-section-content,
+    .section2 .pt-section-picture,
+    .section5 .pt-section-picture {
+      width: 100%;
+    }
+  
+    .section2 .pt-section-container:first-child .pt-section-content {
+      padding-left: 3%;
+      padding-right: 10%;
+    }
+  
+    .section2 .pt-section-container:last-child .pt-section-content {
+      padding-right: 3%;
+      padding-left: 10%;
+    }
+  
+    @media screen and (max-width:1024px) {
+      .pt-section {
+        padding: 4em 7%;
+      }
+  
+      .section3 .pt-section-content,
+      .section2 .pt-section-container:last-child .pt-section-content {
+        padding-right: 0;
+        padding-left: 7%;
+      }
+  
+      .section2 .pt-section-container:first-child .pt-section-content {
+        padding-right: 7%;
+        padding-left: 0;
+      }
+  
+      .pt-section-detail {
+        font-size: 14px;
+      }
+  
+      .section6 .pt-section-title {
+        padding-top: 3em;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+      }
+    }
+  
+    @media screen and (max-width:767px) {
+      .pt-video-container {
+        height: 100vh !important;
+      }
+  
+      .pc {
+        display: none;
+      }
+  
+      .phone {
+        display: block;
+      }
+  
+      .pt-section-detail {
+        font-size: 13px;
+      }
+  
+      .pt-bg-dark {
+        background: #000;
+      }
+  
+      .pt-flex {
+        flex-direction: column;
+      }
+  
+      .pt-section {
+        padding: 3em 7%;
+      }
+  
+      .section2 {
+        padding: 3em 0;
+      }
+  
+      .section4 .pt-section-content {
+        width: 100%;
+        text-align: center;
+        top: 0;
+        padding-top: 4em;
+        transform: none;
+      }
+  
+      .pt-section .pt-section-content,
+      .section2 .pt-section-picture,
+      .section5 .pt-section-picture {
+        width: 100%;
+      }
+  
+      .section2 .pt-section-content {
+        order: 1;
+        text-align: center;
+      }
+  
+      .section2 .pt-section-picture {
+        order: 2;
+      }
+  
+      .section2 .pt-section-container:first-child .pt-section-content {
+        padding: 0 7% 2em;
+      }
+  
+      .section2 .pt-section-container:last-child .pt-section-content {
+        padding: 2em 7%;
+      }
+  
+      .section6 .pt-section-title {
+        padding-top: 2em;
+      }
+    }
+  </style>
+  
+  <!-- scroll scripts -->
+  {{ 'ScrollMagic.js' | asset_url | script_tag }}
+  {{ 'animation.gsap.min.js' | asset_url | script_tag }}
+  {{ 'TweenLite.min.js' | asset_url | script_tag }}
+  {{ 'TweenMax.min.js' | asset_url | script_tag }}
+  {{ 'TimelineLite.min.js' | asset_url | script_tag }}
+  {{ 'CSSPlugin.min.js' | asset_url | script_tag }}
+  {{ 'BezierPlugin.min.js' | asset_url | script_tag }}
+  {{ 'magez-juice-scroll.js'  | asset_url | script_tag }}
+  <script>
+    var controller = new ScrollMagic.Controller();
+    if (window.innerWidth > 768) {
+      var wipeAnimation_left = new TimelineMax()
+        .fromTo("#scroll-section-left-2", 1, {
+          y: "100%",
+        }, {
+          y: "0%",
+          ease: Linear.easeNone
+        })
+        .fromTo("#scroll-section-left-3", 1, {
+          y: "100%",
+        }, {
+          y: "0%",
+          ease: Linear.easeNone
+        })
+  
+      new ScrollMagic.Scene({
+          triggerElement: "#scroll-container-left",
+          triggerHook: "onLeave",
+          duration: "200%"
+        })
+        .setPin("#scroll-container-left")
+        .setTween(wipeAnimation_left)
+        .addTo(controller);
+  
+      var wipeAnimation_right = new TimelineMax()
+        .fromTo("#scroll-section-right-2", 1, {
+          y: "100%"
+        }, {
+          y: "0%",
+          ease: Linear.easeNone
+        })
+        .fromTo("#scroll-section-right-3", 1, {
+          y: "100%"
+        }, {
+          y: "0%",
+          ease: Linear.easeNone
+        })
+      new ScrollMagic.Scene({
+          triggerElement: "#scroll-container-right",
+          triggerHook: "onLeave",
+          duration: "200%"
+        })
+        .setPin("#scroll-container-right")
+        .setTween(wipeAnimation_right)
+        .addTo(controller);
+  
+      var controller_s = new ScrollMagic.Controller({
+        // globalSceneOptions: {
+        //   duration: 500
+        // }
+      });
+      new ScrollMagic.Scene({
+          triggerElement: "#scroll-section-left-1"
+        })
+        .setClassToggle("#dot-left-1", "active")
+        .addTo(controller_s);
+  
+      new ScrollMagic.Scene({
+          triggerElement: "#scroll-section-left-2"
+        })
+        .setClassToggle("#dot-left-2", "active")
+        .addTo(controller_s);
+  
+      new ScrollMagic.Scene({
+          triggerElement: "#scroll-section-left-3"
+        })
+        .setClassToggle("#dot-left-3", "active")
+        .addTo(controller_s);
+  
+      new ScrollMagic.Scene({
+          triggerElement: "#scroll-section-right-1"
+        })
+        .setClassToggle("#dot-right-1", "active")
+        .addTo(controller_s);
+  
+      new ScrollMagic.Scene({
+          triggerElement: "#scroll-section-right-2"
+        })
+        .setClassToggle("#dot-right-2", "active")
+        .addTo(controller_s);
+  
+      new ScrollMagic.Scene({
+          triggerElement: "#scroll-section-right-3"
+        })
+        .setClassToggle("#dot-right-3", "active")
+        .addTo(controller_s);
+  
+    }
+  
+    var wipeAnimation_video = new TimelineMax()
+      .fromTo(".video-content", 1, {
+        top: "100%",
+        autoAlpha: 0
+      }, {
+        top: 0,
+        autoAlpha: 1,
+        ease: Linear.easeNone
+      })
+  
+    new ScrollMagic.Scene({
+        triggerElement: "#scroll-video",
+        triggerHook: "onLeave",
+        duration: "100%"
+      })
+      .setPin("#scroll-video")
+      .setTween(wipeAnimation_video)
+      .addTo(controller);
+  </script>

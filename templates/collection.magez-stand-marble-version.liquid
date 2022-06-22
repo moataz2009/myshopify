@@ -1,0 +1,168 @@
+{% render 'buy-bar', product: all_products[collection.handle] %}
+
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_6 = 'w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28' %}
+{% assign pdClass_b = 'px-3 sm:px-6 md:px-0 pb-16 sm:pb-20 lg:pb-28' %}
+{% assign titleBoxClass= 'mx-auto mb-12 w-11/12 sm:w-5/6 md:w-2/3 xl:w-2/5' %}
+{% assign titleSize = 'text-2xl md:text-3xl font-bold' %}
+{% assign descSize = 'text-sm sm:text-base text-gray-400' %}
+{% assign titleDecoMy = 'block mt-4 mb-6' %}
+
+{% assign absoluteContentBoxClass = 'w-full sm:w-11/12 md:w-10/12 max-w-screen-xl mx-auto px-6 lg:px-0 transform sm:left-1/2 sm:-translate-x-1/2' %}
+{% assign absoluteContentClass = 'transform w-full px-6 sm:px-0 sm:w-1/2 left-0 top-12 sm:top-1/2 sm:-translate-y-1/2' %}
+
+<div class="relative section-hero">
+  <div class="absolute {{absoluteContentBoxClass}} sm:h-full z-10">
+    <div class="absolute {{absoluteContentClass}} text-center sm:text-left">
+      <h1 class="{{titleSize}} text-black mb-4">
+        MagEZ Stand for Tablets
+        <span class="block mt-2 font-normal sm:font-bold text-xl md:text-2xl xl:text-3xl">(Marble&nbsp;Version)</span>
+      </h1>
+      <p class="text-black text-sm sm:text-base">
+        The first time marble is incorporated into a tablet stand.
+      </p>
+    </div>
+  </div>
+
+  <picture>
+    <source data-srcset="{{'magez-stand-marble-section1.jpg' | asset_url}}" media="(min-width: 1281px)">
+    <source data-srcset="{{'magez-stand-marble-section1-m.jpg' | asset_url}}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{'magez-stand-marble-section1-s.jpg' | asset_url}}"
+      alt="MagEZ Stand (Marble Version)" class="block w-full lazyload">
+  </picture>
+</div>
+
+<div class="w-full bg-gray-800">
+  <div class="{{wClass}} {{pdClass}} mx-auto">
+    <div class="mx-auto w-full sm:w-3/4 md:w-1/2 xl:w-1/3">
+      <h3 class="{{titleSize}}">
+        A Minimalist White Design
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}}">
+        Marble is highly durable and resistant to shattering. Moreover, it reflects light, 
+        offering a timeless charm to the luxe and minimalistic stand.
+      </p>
+    </div>
+    <div class="flex flex-wrap justify-between items-stretch w-full mt-12">
+      <div class="w-full sm:w-7/12 md:w-8/12 xl:w-7/10 mb-3 sm:mb-0 sm:pr-4 md:pr-6">
+        <picture>
+          <source data-srcset="{{'magez-stand-marble-section3-left.jpg' | asset_url}}" media="(min-width: 1281px)">
+          <source data-srcset="{{'magez-stand-marble-section3-left-m.jpg' | asset_url}}" media="(min-width: 768px)">
+          <img src="{{ placeholder_gif }}" data-src="{{'magez-stand-marble-section3-left-s.jpg' | asset_url}}"
+            alt="MagEZ Stand (Marble Version)" class="block w-full sm:h-full sm:object-cover object-center lazyload">
+        </picture>
+      </div>
+      <div class="w-full sm:w-5/12 md:w-4/12 xl:w-3/10">
+        <div class="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6">
+          <div class="col-span-2">
+            <picture>
+              <img src="{{ placeholder_gif }}" data-src="{{'magez-stand-marble-section3-right-1.jpg' | asset_url}}"
+                alt="MagEZ Stand (Marble Version)"
+                class="block w-full sm:h-full sm:object-cover object-center lazyload">
+            </picture>
+          </div>
+          <div>
+            <picture>
+              <source data-srcset="{{'magez-stand-marble-section3-right-2.jpg' | asset_url}}"
+                media="(min-width: 768px)">
+              <img src="{{ placeholder_gif }}" data-src="{{'magez-stand-marble-section3-right-2-s.jpg' | asset_url}}"
+                alt="MagEZ Stand (Marble Version)"
+                class="block w-full sm:h-full sm:object-cover object-center lazyload">
+            </picture>
+          </div>
+          <div>
+            <picture>
+              <source data-srcset="{{'magez-stand-marble-section3-right-3.jpg' | asset_url}}"
+                media="(min-width: 768px)">
+              <img src="{{ placeholder_gif }}" data-src="{{'magez-stand-marble-section3-right-3-s.jpg' | asset_url}}"
+                alt="MagEZ Stand (Marble Version)"
+                class="block w-full sm:h-full sm:object-cover object-center lazyload">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="{{wClass_8}} {{pdClass}} mx-auto flex flex-wrap justify-between items-center">
+  <div class="w-full mb-12 sm:mb-0 sm:w-5/12">
+    <h3 class="{{titleSize}}">
+      Snap On Your iPad &<br>Work Like A Pro
+    </h3>
+    <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+    <p class="{{descSize}}">
+      Effortlessly snap your tablet on the stand by using the magnetic sticker. Or better, use it with the MagEZ Case 2
+      to enjoy seamless functionality between your devices. With your tablet securely mounted at the perfect position,
+      you can work like a pro now.
+    </p>
+  </div>
+  <div class="w-full sm:w-1/2">
+    <picture>
+      <img src="{{ placeholder_gif }}" data-src="{{'magez-stand-marble-section4.jpg' | asset_url}}"
+        alt="MagEZ Stand (Marble Version)" class="block w-full lazyload">
+    </picture>
+  </div>
+</div>
+
+<div class="w-full bg-gray-800">
+  <div class="{{wClass}} {{pdClass}} mx-auto">
+    <div class="mx-auto w-full sm:w-3/4 md:w-1/2 xl:w-1/3">
+      <h3 class="{{titleSize}}">
+        Adjust for Your Comfort
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}}">
+        Simply pivot to landscape mode to use your tablet as a monitor or to portrait position to make a Zoom call, and
+        adjust it up (32.5°) or down (-5°) to best meet your view needs and enjoy the ultimate comfort.
+      </p>
+    </div>
+    <div class="w-full mt-12">
+      {% render 'video-set', name:'product-video-stand-marble-version',coverName:'magez-stand-marble-section5', noBtnModel:true %}
+      {%- comment -%}
+      <picture>
+        <source data-srcset="{{'magez-stand-marble-section5.jpg' | asset_url}}" media="(min-width: 1281px)">
+        <source data-srcset="{{'magez-stand-marble-section5-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magez-stand-marble-section5-s.jpg' | asset_url}}"
+          alt="MagEZ Stand (Marble Version)" class="block w-full lazyload">
+      </picture>
+      {%- endcomment -%}
+    </div>
+  </div>
+</div>
+
+<div class="{{wClass_8}} {{pdClass}} mx-auto flex flex-wrap-reverse justify-between items-center">
+  <div class="w-full sm:w-1/2">
+    <picture>
+      <img src="{{ placeholder_gif }}" data-src="{{'magez-stand-marble-section6.jpg' | asset_url}}"
+        alt="MagEZ Stand (Marble Version)" class="block w-full lazyload">
+    </picture>
+  </div>
+
+  <div class="w-full mb-12 sm:mb-0 sm:w-5/12">
+    <h3 class="{{titleSize}}">
+      Charge While You Work
+    </h3>
+    <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+    <p class="{{descSize}} mb-12">
+      The wireless charging base is crafted from marble too, but don’t worry,
+      you can charge your mobile with speeds of up to 15W.
+    </p>
+
+    <p class="text-sm text-gray-400">
+      *Android 15W/iPhone 7.5W/earbuds 5W
+    </p>
+  </div>
+</div>
+
+<div class="w-full">
+  <picture>
+    <source data-srcset="{{'magez-stand-marble-section7.jpg' | asset_url}}" media="(min-width: 1281px)">
+    <source data-srcset="{{'magez-stand-marble-section7-m.jpg' | asset_url}}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{'magez-stand-marble-section7-s.jpg' | asset_url}}"
+      alt="MagEZ Stand (Marble Version)" class="block w-full lazyload">
+  </picture>
+</div>

@@ -1,0 +1,922 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}
+<div class="section-default section0 relative bg-black">
+  <picture>
+    <source data-srcset="{{ 'product-section0-digital-kit.jpg' | asset_url }}" media="(min-width: 769px)">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-section0-digital-kit-m.jpg' | asset_url }}"
+      alt="MagEZ Digital Travel Kit" class="lazyload width-100 img-responsive">
+  </picture>
+  <div class="pt-section-content absolute pt-position-centerX text-center">
+    <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400 font-upper">
+      Trip Ready
+    </h3>
+  </div>
+</div>
+{%- comment -%}
+<div class="pt-video-container mobile-fullheight">
+  <video loop muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+    x5-video-orientation="portraint" data-poster="{{ 'product-digital-kit-cover.jpg' | asset_url }}" autoplay
+    preload="none" class="lazyload" style="object-fit:contain">
+    <source src="{{ 'product-digital-kit.mp4' | asset_url }}" type="video/mp4">
+    <source src="{{ 'product-digital-kit.webm' | asset_url }}" type="video/webm">
+  </video>
+</div>
+{%- endcomment -%}
+
+<div class="pt-section section1 pt-flex pt-flex-center pt-hide-small bg-black" id="pinContainer">
+  <div id="trigger_sec_1"></div>
+  <div class="pt-anim-container pt-flex">
+    <div id="anim-img-1" class="anim-img">
+      <img src="{{ 'product-section1-digital-kit-1.png' | asset_url }}" alt="MagEZ Digital Travel Kit"
+        class="img-responsive">
+    </div>
+    <div id="anim-img-2" class="anim-img">
+      <img src="{{ 'product-section1-digital-kit-2.png' | asset_url }}" alt="MagEZ Digital Travel Kit"
+        class="img-responsive">
+    </div>
+    <div id="anim-img-3" class="anim-img">
+      <img src="{{ 'product-section1-digital-kit-3.png' | asset_url }}" alt="MagEZ Digital Travel Kit"
+        class="img-responsive">
+    </div>
+  </div>
+
+  <div class="anim-content" id="anim-content-1">
+    <div class="pt-section-content">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Front Cover and Card Holder
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        The front cover protects the contents of your travel kit and has space to store one credit card on the reverse.
+      </p>
+    </div>
+  </div>
+
+  <div class="anim-content" id="anim-content-2">
+    <div class="pt-section-content">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Extra Layer
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Store and easily access two chip & PIN cards or business cards.
+      </p>
+    </div>
+  </div>
+
+  <div class="anim-content" id="anim-content-3">
+    <div class="pt-section-content">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Tech Module
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Slots for all your charging and data storage essentials.
+      </p>
+      <div class="pt-text-small fw-500 pt-margin-top-small">
+        <a href="javascript:;" data-target="#modal_picture_1" class="modal-toggle pt-link">
+          See What’s Inside >>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pt-section section1 text-center pt-show-small bg-black">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="pt-section-content">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+            Front Cover and Card Holder
+          </h3>
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            The front cover protects the contents of your travel kit and has space to store one credit card on the
+            reverse.
+          </p>
+        </div>
+        <picture>
+          <img src="{{ 'product-section1-digital-kit-1.png' | asset_url }}" alt="MagEZ Digital Travel Kit"
+            class="img-responsive  m-auto" />
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <div class="pt-section-content">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+            Extra Layer
+          </h3>
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            Store and easily access two chip & PIN cards or business cards.
+          </p>
+        </div>
+        <picture>
+          <img src="{{ 'product-section1-digital-kit-2.png' | asset_url }}" alt="MagEZ Digital Travel Kit"
+            class="img-responsive m-auto" />
+        </picture>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="pt-section-content">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+            Tech Module
+          </h3>
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            Slots for all your charging and data storage essentials.
+          </p>
+          <div class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-top-small">
+            <a href="javascript:;" data-target="#modal_picture_1" class="modal-toggle pt-link">
+              See What’s Inside >>
+            </a>
+          </div>
+
+        </div>
+        <picture>
+          <img src="{{ 'product-section1-digital-kit-3.png' | asset_url }}" alt="MagEZ Digital Travel Kit"
+            class="img-responsive m-auto" />
+        </picture>
+      </div>
+    </div>
+
+    <!-- Add Pagination -->
+    <div class="swiper-pagination pagination-custom"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
+<div class="section-default section2 bg-black">
+  <picture>
+    <source data-srcset="{{ 'product-section2-digital-kit.jpg' | asset_url }}" media="(min-width: 769px)">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-section2-digital-kit-m.jpg' | asset_url }}"
+      alt="MagEZ Digital Travel Kit" class="lazyload width-100 img-responsive">
+  </picture>
+</div>
+
+<div class="section-default section3 relative bg-black">
+  <div class="pt-section-content absolute pt-position-centerY">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      Charge and Transfer Data
+      From Any Device
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      Use the Type-C cable and one of the three adapters to quickly transfer data to and from the memory card
+      reader as well as charging your smartphone, tablet, earbuds, and more.
+    </p>
+    <div class="pt-text-small fw-500 pt-margin-top-small">
+      <a href="javascript:;" data-target="#modal_picture_3" class="modal-toggle pt-link">
+        Learn More >>
+      </a>
+    </div>
+    <p class="pt-text-small fw-500 text-cyan pt-margin-top-small">
+      * Power Bank sold separately.
+    </p>
+  </div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <picture class="width-100">
+          <source data-srcset="{{ 'product-section3-digital-kit-1.jpg' | asset_url }}" media="(min-width: 769px)" />
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-section3-digital-kit-1-m.jpg' | asset_url }}"
+            alt="MagEZ Digital Travel Kit" class="lazyload width-100 img-responsive" />
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="width-100">
+          <source data-srcset="{{ 'product-section3-digital-kit-2.jpg' | asset_url }}" media="(min-width: 769px)" />
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-section3-digital-kit-2-m.jpg' | asset_url }}"
+            alt="MagEZ Digital Travel Kit" class="lazyload width-100 img-responsive" />
+        </picture>
+      </div>
+    </div>
+
+    <!-- Add Pagination -->
+    <div class="swiper-pagination pagination-custom"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
+<div class="section-default section4 relative bg-black">
+  <div class="pt-section-content absolute pt-position-centerX text-center">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      Space for Your SD and SIM Cards
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      Specially designed slots keep your spare SD and SIM cards safe while you travel.
+    </p>
+  </div>
+  <picture>
+    <source data-srcset="{{ 'product-section4-digital-kit.jpg' | asset_url }}" media="(min-width: 769px)">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-section4-digital-kit-m.jpg' | asset_url }}"
+      alt="MagEZ Digital Travel Kit" class="lazyload width-100 img-responsive">
+  </picture>
+</div>
+
+<div class="section-default section5 relative bg-black">
+  <div class="pt-section-content absolute pt-position-centerY">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      Built-in Data Storage
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      Import and securely store your important data using the built-in memory card reader and removable 16GB flash
+      drive.
+    </p>
+  </div>
+
+  <picture>
+    <source data-srcset="{{ 'product-section5-digital-kit.jpg' | asset_url }}" media="(min-width: 769px)">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-section5-digital-kit-m.jpg' | asset_url }}"
+      alt="MagEZ Digital Travel Kit" class="lazyload width-100 img-responsive">
+  </picture>
+</div>
+
+<div class="section-default section6 bg-black">
+  <picture>
+    <source data-srcset="{{ 'product-section6-digital-kit.jpg' | asset_url }}" media="(min-width: 769px)">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-section6-digital-kit-m.jpg' | asset_url }}"
+      alt="MagEZ Digital Travel Kit" class="lazyload width-100 img-responsive">
+  </picture>
+</div>
+
+<div class="pt-section section-default section7 pt-flex bg-black">
+  <div class="pt-section-picture">
+
+    <div id="trigger_sec_7"></div>
+    <div class="pt-anim-container">
+      <div class="pt-anim-pictures relative">
+        <div class="pt-anim-item absolute" id="anim_kit_0">
+          <img src="{{ 'product-section7-digital-kit-0.png' | asset_url }}" alt="MagEZ Digital Travel Kit">
+        </div>
+        <div class="pt-anim-item absolute" id="anim_kit_1">
+          <img src="{{ 'product-section7-digital-kit-1.png' | asset_url }}" alt="MagEZ Digital Travel Kit">
+        </div>
+        <div class="pt-anim-item absolute" id="anim_kit_2">
+          <img src="{{ 'product-section7-digital-kit-2.png' | asset_url }}" alt="MagEZ Digital Travel Kit">
+        </div>
+        <div class="pt-anim-item absolute" id="anim_kit_3">
+          <img src="{{ 'product-section7-digital-kit-3.png' | asset_url }}" alt="MagEZ Digital Travel Kit">
+        </div>
+        <div class="pt-anim-item absolute" id="anim_kit_4">
+          <img src="{{ 'product-section7-digital-kit-4.png' | asset_url }}" alt="MagEZ Digital Travel Kit">
+        </div>
+        <div class="pt-anim-item absolute" id="anim_kit_5">
+          <img src="{{ 'product-section7-digital-kit-5.png' | asset_url }}" alt="MagEZ Digital Travel Kit">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pt-section-content">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      A Magnetic,
+      Modular Design
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      The magnetic travel kit and extra layers attach seamlessly to the MagEZ Wallet (not MagEZ Wallet UE) and MagEZ
+      Power Bank.
+    </p>
+
+    <div class="toggle-tabs pt-section-detail pt-margin-top-small">
+      <a href="javascript:;" data-target="all">All Layers</a>
+      <a href="javascript:;" data-target="kit">MagEZ Digital Travel Kit</a>
+      <a href="javascript:;" data-target="#anim_kit_0">MagEZ Power Bank</a>
+      <a href="javascript:;" data-target="#anim_kit_4">Extra Layer</a>
+      <a href="javascript:;" data-target="#anim_kit_3">Tech Module</a>
+      <a href="javascript:;" data-target="#anim_kit_2">Money Clip</a>
+      <a href="javascript:;" data-target="#anim_kit_1">Box Layer</a>
+      <a href="javascript:;" data-target="#anim_kit_5">Cover</a>
+    </div>
+
+    <p class="pt-text-small fw-500 text-cyan pt-margin-top-small">
+      * MagEZ Wallet and Power Bank sold separately.
+    </p>
+  </div>
+</div>
+
+<div class="section-default section8 relative bg-black">
+  <div class="pt-section-content absolute pt-position-centerY pt-position-right">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      Ultra-Light & Portable
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      Condensed down into a compact carbon fiber wallet, the digital kit not only saves space but is lightweight enough
+      (only 2.75oz/78g) to put in your pocket for travel.
+    </p>
+  </div>
+  <picture>
+    <source data-srcset="{{ 'product-section8-digital-kit.jpg' | asset_url }}" media="(min-width: 769px)">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-section8-digital-kit-m.jpg' | asset_url }}"
+      alt="MagEZ Digital Travel Kit" class="lazyload width-100 img-responsive">
+  </picture>
+</div>
+
+<div id="modal_picture_1" class="pt-modal-container bg-black">
+  <div class="modal-background">
+    <div class="pt-modal-dialog relative">
+      <button class="pt-modal-close absolute" type="button">
+        <span class="icon icon-x"></span>
+      </button>
+      <picture>
+        <source data-srcset="{{ 'product-section1-digital-kit-modal.jpg' | asset_url }}" media="(min-width: 769px)">
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-section1-digital-kit-modal-m.jpg' | asset_url }}"
+          alt="MagEZ Digital Travel Kit" class="img-responsive width-100 lazyload">
+      </picture>
+    </div>
+  </div>
+</div>
+
+<div id="modal_picture_3" class="pt-modal-container bg-black">
+  <div class="modal-background">
+    <div class="pt-modal-dialog relative">
+      <button class="pt-modal-close absolute" type="button">
+        <span class="icon icon-x"></span>
+      </button>
+      <picture>
+        <source data-srcset="{{ 'product-section3-digital-kit-modal.jpg' | asset_url }}" media="(min-width: 769px)">
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-section3-digital-kit-modal-m.jpg' | asset_url }}"
+          alt="MagEZ Digital Travel Kit" class="img-responsive width-100 lazyload">
+      </picture>
+    </div>
+  </div>
+</div>
+
+<style>
+  .pt-section-content {
+    max-width: 450px;
+  }
+
+  .pt-section-content.pt-position-centerX {
+    max-width: 485px;
+  }
+
+  .section1 .pt-section-content {
+    width: 100%;
+    max-width: 385px;
+  }
+
+  .section-default {
+    min-height: 43vw;
+  }
+
+  .section3 .pt-section-content {
+    z-index: 10;
+  }
+
+  .section7 {
+    justify-content: center;
+  }
+
+  .section7 .toggle-tabs {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .section7 .toggle-tabs>a {
+    padding-top: 1em;
+    margin-right: 2em;
+    opacity: 0.45;
+    position: relative;
+    transition: all .3s;
+  }
+
+  .section7 .toggle-tabs>a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .3s;
+  }
+
+  .section7 .toggle-tabs>a.active,
+  .section7 .toggle-tabs>a:hover {
+    opacity: 1;
+  }
+
+  .section7 .toggle-tabs>a.active::after,
+  .section7 .toggle-tabs>a:hover::after {
+    width: 100%;
+  }
+
+  .section7 .pt-section-content {
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+
+  .section7 .pt-anim-pictures>div {
+    z-index: 10;
+    opacity: 1;
+  }
+
+  .section7 .pt-anim-pictures>div.inactive {
+    opacity: 0.1;
+    z-index: 9;
+  }
+
+  @media screen and (max-width:1600px) {
+    .pt-section-content {
+      max-width: 385px;
+    }
+
+    .section1 .pt-section-content {
+      max-width: 325px;
+    }
+
+    .section7 .pt-section-content {
+      margin-left: 5%;
+      margin-top: 12%;
+    }
+  }
+
+  @media screen and (max-width:1280px) {
+    .pt-section-content {
+      max-width: 325px;
+    }
+
+    .section1 .pt-section-content {
+      max-width: 285px;
+    }
+
+    .section7 .pt-section-content {
+      margin-top: 15%;
+    }
+  }
+
+  @media screen and (max-width:1024px) {
+    .section1 .swiper-slide .pt-section-content {
+      text-align: center;
+      width: 100%;
+      padding: 2em 25% 10em;
+      max-width: unset !important;
+    }
+
+    .section1 .swiper-slide {
+      flex-direction: column;
+    }
+
+    .section7 {
+      flex-direction: column-reverse;
+    }
+
+    .section7 .pt-section-content {
+      margin: 0;
+      text-align: center;
+      width: 100%;
+      padding: 5em 20% 0;
+      max-width: unset;
+    }
+
+    .section7 .pt-section-picture {
+      width: 100%;
+    }
+
+    .section7 .toggle-tabs {
+      justify-content: center;
+    }
+
+    .section7 .toggle-tabs>a {
+      padding: 1em;
+      margin: 0;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+
+    .pt-section .pt-section-content,
+    .pt-section-content {
+      text-align: center;
+      width: 100%;
+      padding: 5em 20% 0;
+      top: 0;
+      left: 0;
+      transform: none;
+      max-width: unset !important;
+    }
+
+    .section1 .swiper-slide .pt-section-content {
+      padding-bottom: 7em;
+    }
+
+    .section3 .pt-section-content {
+      top: unset;
+      padding: 0 20% 5em;
+      bottom: 0;
+    }
+
+    .section1 .swiper-button-next,
+    .section1 .swiper-button-prev {
+      top: 70%;
+    }
+  }
+
+  @media screen and (max-width:414px) {
+    .section7 {
+      padding: 0;
+    }
+
+    .pt-section .pt-section-content,
+    .pt-section-content {
+      padding: 4em 10% 0;
+    }
+
+    .section3 .pt-section-content {
+      padding: 0 10% 4em;
+    }
+
+    .section1 .swiper-slide .pt-section-content {
+      padding: 2em 10% 5em;
+    }
+
+    .section1 .swiper-slide img {
+      width: 70%;
+    }
+
+    .section7 .pt-section-picture {
+      margin-top: -15%;
+      margin-bottom: -20%;
+    }
+
+    .section7 .toggle-tabs>a {
+      padding: .5em;
+    }
+  }
+</style>
+
+<script>
+  $(function () {
+    $(".modal-toggle").click(function (e) {
+      e.stopPropagation();
+      var modal = $(this).data("target");
+      $(modal).addClass('open').removeClass('out');
+
+      $(document).click(function (e) {
+        var _con = $(modal);
+        if (!_con.is(e.target) && _con.has(e.target).length === 0) {
+          _con.removeClass('open').addClass('out');
+        }
+      })
+    })
+    $(".pt-modal-close").click(function (e) {
+      e.stopPropagation();
+      $(this).parents('.pt-modal-container').removeClass('open').addClass('out');
+    });
+  })
+</script>
+<!-- end modal -->
+
+<!-- swiper -->
+{{ 'swiper-bundle.min.js' | asset_url | script_tag }}
+<style>
+  .swiper-container>div[role="button"]:after {
+    background: url({{'triggle_pixel.svg' | asset_url}}) no-repeat;
+  }
+
+  .swiper-container .swiper-button-prev {
+    transform: rotate(-180deg);
+    left: 50px;
+  }
+
+  .swiper-container .swiper-button-next {
+    right: 50px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    background: none !important;
+    visibility: hidden;
+  }
+
+
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    color: rgba(0, 0, 0, 0);
+    display: block !important;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+    --swiper-navigation-size: 24px;
+    --swiper-theme-color: #0BBCD4;
+  }
+
+  .swiper-container:hover .swiper-button-next,
+  .swiper-container:hover .swiper-button-prev {
+    visibility: visible;
+  }
+
+  .swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 0 1px;
+  }
+
+  @media screen and (min-width:1025px) {
+    .swiper-slide {
+      width: 100% !important;
+    }
+  }
+
+  @media screen and (max-width:1024px) {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      visibility: visible;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .swiper-container .swiper-button-prev {
+      left: 15px;
+    }
+
+    .swiper-container .swiper-button-next {
+      right: 15px;
+    }
+  }
+
+  @media screen and (max-width:414px) {
+    .swiper-container {
+      --swiper-navigation-size: 24px;
+    }
+  }
+</style>
+
+<script>
+  var autoplay_options = {
+    delay: 6000,
+    stopOnLastSlide: false,
+    disableOnInteraction: true,
+  }
+  var autoplay = window.innerWidth > 1024 ? autoplay_options : false;
+  var swiper = new Swiper('.swiper-container', {
+    autoplay: autoplay,
+    loop: true,
+    observer: true,
+    observeParents: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+<!--end swiper -->
+
+<!-- anim-pictures -->
+<style>
+  .pt-anim-container {
+    width: 100%;
+    justify-content: space-between;
+    flex-shrink: 0;
+    padding: 2em 0;
+  }
+
+  .section1 .pt-anim-container {
+    flex-shrink: 1;
+  }
+
+  .section1 .anim-content {
+    opacity: 0;
+    overflow: hidden;
+    right: -100%;
+    width: 0
+  }
+
+  .section1 .anim-img {
+    width: 375px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pt-anim-item {
+    left: 220px;
+    top: 15%;
+    transform-origin: center 315px;
+  }
+
+  #anim_kit_0 {
+    transform: rotate(-110deg);
+  }
+
+  #anim_kit_1 {
+    transform: rotate(-66deg);
+  }
+
+  #anim_kit_2 {
+    transform: rotate(-22deg);
+  }
+
+  #anim_kit_3 {
+    transform: rotate(22deg);
+  }
+
+  #anim_kit_4 {
+    transform: rotate(66deg);
+  }
+
+  #anim_kit_5 {
+    transform: rotate(110deg);
+  }
+
+  .pt-anim-pictures {
+    width: 664px;
+    height: 644px;
+    margin: 0 2em;
+    flex-shrink: 0;
+  }
+
+  .pt-anim-pictures img {
+    display: block;
+  }
+
+  .pt-anim-content {
+    padding: 0 10%;
+  }
+
+  @media screen and (max-width:1600px) {
+    .section7 .pt-anim-container {
+      transform: scale(0.9);
+      transform-origin: left center;
+    }
+  }
+
+  @media screen and (max-width:1280px) {
+    .section1 .anim-img {
+      padding: 0 1em;
+    }
+  }
+
+  @media screen and (max-width:1024px) {
+    .pt-anim-container {
+      padding: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pt-anim-pictures {
+      margin-top: 2em;
+      height: 545px;
+      transform: scale(0.8);
+      transform-origin: center;
+    }
+
+    .section7 .pt-anim-container {
+      transform: scale(1);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .section7 .pt-anim-item {
+      top: 0;
+    }
+  }
+
+  @media screen and (max-width:640px) {
+    .section7 .pt-anim-pictures {
+      transform: scale(0.5);
+      margin-top: 0;
+    }
+  }
+</style>
+
+{{ 'TweenMax.min.js' | asset_url | script_tag }}
+{{ 'ScrollMagic.js' | asset_url | script_tag }}
+{{ 'animation.gsap.min.js' | asset_url | script_tag }}
+
+<script>
+  $(function () {
+    $('.toggle-tabs').on('click', 'a', function () {
+      $(this).addClass('active').siblings().removeClass('active');
+      const target = $(this).data('target');
+      if (target == 'all') {
+        $(".pt-anim-pictures>div").removeClass('inactive');
+      } else if (target == 'kit') {
+        $(".pt-anim-pictures>div").addClass('inactive');
+        $("#anim_kit_3").removeClass('inactive');
+        $("#anim_kit_4").removeClass('inactive');
+        $("#anim_kit_5").removeClass('inactive');
+      } else {
+        $(target).removeClass('inactive').siblings().addClass('inactive');
+      }
+    })
+
+
+    if (window.innerWidth > 1024) {
+      var controller = new ScrollMagic.Controller();
+
+      var tlm_s1 = new TimelineMax()
+        .to("#anim-img-2", 1, {
+          opacity: 0,
+          width: 0,
+          x: '-100%'
+        })
+        .to("#anim-img-3", 1, {
+          opacity: 0,
+          width: 0,
+          x: '-100%'
+        }, '-=1')
+        .to("#anim-img-1", 1, {
+          width: 375,
+          x: '50%'
+        }, '-=1')
+        .to("#anim-content-1", 1, {
+          opacity: 1,
+          width: "80%",
+          right: 0,
+        }, '-=1')
+
+        .to("#anim-img-1", 1, {
+          opacity: 0,
+          width: 0,
+          x: '-100%'
+        }, '+=0.1')
+
+        .to("#anim-img-3", 1, {
+          opacity: 0,
+          width: 0,
+          x: '-100%'
+        }, '-=1')
+
+        .to("#anim-img-2", 1, {
+          opacity: 1,
+          width: 375,
+          x: '0%'
+        }, '-=1')
+        .to("#anim-content-1", 1, {
+          opacity: 0,
+          width: 0,
+          right: "-100%",
+        }, '-=1')
+        .to("#anim-content-2", 1, {
+          opacity: 1,
+          width: "80%",
+          right: 0,
+        }, '-=1')
+
+        .to("#anim-img-1", 1, {
+          opacity: 0,
+          width: 0,
+          x: '-100%'
+        }, '+=0.1')
+        .to("#anim-img-2", 1, {
+          opacity: 0,
+          width: 0,
+          x: '-100%'
+        }, '-=1')
+        .to("#anim-img-3", 1, {
+          opacity: 1,
+          width: 375,
+          x: '-50%'
+        }, '-=1')
+        .to("#anim-content-2", 1, {
+          opacity: 0,
+          width: 0,
+          right: "-100%",
+        }, '-=1')
+        .to("#anim-content-3", 1, {
+          opacity: 1,
+          width: "80%",
+          right: 0,
+        }, '-=1');
+
+      var tween_1 = TweenMax.staggerTo(".pt-anim-item", 0.5, {
+        rotation: 0,
+        ease: Linear.easeNone
+      });
+      var scene_s1 = new ScrollMagic.Scene({
+          triggerElement: "#pinContainer",
+          duration: "600%",
+          triggerHook: "onLeave",
+        })
+        .setPin("#pinContainer")
+        .setTween(tlm_s1)
+        .addTo(controller);
+
+      var scene_1 = new ScrollMagic.Scene({
+          triggerElement: "#trigger_sec_7",
+          offset: 120,
+          duration: 300
+        })
+        .setTween(tween_1)
+        .addTo(controller);
+    }
+  });
+</script>

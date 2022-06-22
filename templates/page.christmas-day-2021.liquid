@@ -1,0 +1,515 @@
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}
+{{'swiper-bundle.min.js' | asset_url | script_tag }}
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_6 = 'w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28' %}
+{% assign pdClass_b = 'px-3 sm:px-6 md:px-0 pb-16 sm:pb-20 lg:pb-28' %}
+{% assign titleBoxClass= 'mx-auto mb-12 w-11/12 sm:w-5/6 md:w-2/3 xl:w-3/5 max-w-2xl' %}
+{% assign titleSize = 'text-2xl md:text-3xl font-bold' %}
+{% assign descSize = 'text-sm sm:text-base text-gray-400' %}
+{% assign titleDecoMy = 'block mt-4 mb-6' %}
+
+{% assign absoluteContentBoxClass_8 = 'w-full laptop:w-10/12 lg:w-8/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-0' %}
+{% assign absoluteContentBoxClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2' %}
+{% assign absoluteContentClass = 'text-center sm:text-left absolute transform w-4/5 sm:w-1/2 xl:w-3/8 top-16 left-1/2 -translate-x-1/2  max-w-md sm:translate-x-0 sm:left-6 lg:left-0 sm:top-1/2 sm:-translate-y-1/2' %}
+
+{% assign menuItems = 'px-2 xs:px-4 md:xl-6 xl:px-12 py-2 text-base sm:py-4  text-white font-bold sm:text-2xl' %}
+<div class="bg-black w-full h-full pb-6 sm:pb-8 md:pb-12 px-3 xs:px-6 sm:px-8 md:px-12">
+  <div class="relative section-hero">
+    <div class="absolute {{absoluteContentBoxClass}}">
+      <div
+        class="absolute text-center transform w-10/12 sm:w-3/4 max-w-xl sm:max-w-md xl:w-4/8 top-12 xs:top-56 xl:top-72 sm:top-1/2 left-1/2 -translate-x-1/2  md:max-w-3xl sm:-translate-x-1/2 sm:left-1/2 lg:left-1/2 sm:top-1/4 sm:-translate-y-1/2 xl:-translate-y-3/4">
+        <h3
+          class="text-2xl xs:text-5xl sm:text-3xl md:text-4xl   xl:text-5xl leading-normal md:leading-normal font-bold mb-4  md:mb-8">
+          Gift Something Unique
+          <br class="hidden sm:inline-block">This Holiday
+        </h3>
+        <p class="text-sm sm:text-base mb-4 max-w-xs xs:max-w-md md:max-w-xl  mx-auto">
+          It's been an awesome year. We all deserve a bit of luxury.
+        </p>
+        <p class="text-sm sm:text-base max-w-xs xs:max-w-sm md:max-w-xl  mx-auto">
+          Expected to deliver within 3~7 business days after your item is shipped.
+        </p>
+      </div>
+      <div
+        class="absolute text-center transform w-10/12 sm:w-3/4 max-w-xl sm:max-w-md xl:w-4/8 bottom-6 xs:bottom-28 sm:bottom-6 lg:bottom-12  left-1/2 -translate-x-1/2  md:max-w-3xl sm:-translate-x-1/2 sm:left-1/2 lg:left-1/2 ">
+        <p class="text-sm sm:text-base  max-w-xs xs:max-w-sm md:max-w-xl  mx-auto text-black">
+          Grab your holiday deals by 11:59 PM EST DEC.23
+        </p>
+      </div>
+    </div>
+    <picture>
+      <source data-srcset="{{'page-christmas-day-2021.jpg' | asset_url}}" media="(min-width: 1280px)">
+      <source data-srcset="{{'page-christmas-day-2021-m.jpg' | asset_url}}" media="(min-width: 768px)">
+      <img src="{{ placeholder_gif }}" data-src="{{'page-christmas-day-2021-s.jpg' | asset_url}}"
+        alt="Christmas Day 2021" class="block w-full  h-full object-cover lazyload">
+    </picture>
+  </div>
+</div>
+
+<div class="bg-black w-full h-full py-6 sm:py-8 md:py-12 px-3 xs:px-6 sm:px-3 laptop:px-8 md:px-12 relative">
+  <div class="bg-gray-850 w-full h-full p-6 xs:p-12 sm:p-6 laptop:p-12 md:p-20">
+    <div class="bg-black w-full h-full">
+      {%- comment -%}第一栏{%- endcomment -%}
+      <div class="text-center sm:grid  sm:grid-cols-3 gap-2  sm:p-6 sm:gap-6  auto-rows-fr">
+        {% assign productList = 'fusion-weaving-magez-case-2-for-iphone-13,fusion-weaving-air-case-for-iphone-13,magez-case-2-for-iphone-13' | split: ',' %}
+        {% for name in productList %}
+        {% assign product = all_products[name] %}
+        {% assign suffix = name | remove: 'magez-' | remove: 'air-' | remove: 'case-for-' | append: '.jpg' %}
+        <div class="w-full sm:h-full border-t border-gray-850 sm:border-none bg-none sm:bg-gray-850">
+          {% render 'grid-product-item-christmas', product: product, link_buy_now: true,between_tag: true,link_product_no:true,desc_no:true %}
+        </div>
+        {% endfor %}
+      </div>
+      <div class="hidden sm:block bg-gray-850 w-full h-6"></div>
+      {%- comment -%}第二栏{%- endcomment -%}
+      <div class="text-center sm:grid   sm:grid-cols-3 gap-2  sm:p-6 sm:gap-6  auto-rows-fr">
+        {% assign productList = 'air-case-for-iphone-13' | split: ',' %}
+        {% for name in productList %}
+        {% assign product = all_products[name] %}
+        {% assign suffix = name | remove: 'magez-' | remove: 'air-' | remove: 'case-for-' | append: '.jpg' %}
+        <div class="w-full sm:h-full border-t border-gray-850 sm:border-none bg-none sm:bg-gray-850">
+          {% render 'grid-product-item-christmas', product: product, link_buy_now: true,between_tag: true,link_product_no:true,desc_no:true %}
+        </div>
+        {% endfor %}
+        <div class="w-full sm:h-full border-t border-gray-850 sm:border-none bg-none sm:bg-gray-850">
+          <div
+            class="grid-item w-full h-full flex flex-col items-center  sm:justify-between  bg-black  p-3 xs:p-6 sm:p-0  sm:pb-10">
+            <div class="images-container  w-full   sm:mb-7  lg:mb-0">
+              <div class="hidden sm:block">
+                <img src="{{ placeholder_gif }}" data-src="{{'christmas-card-gift-1.jpg' | asset_url}}"
+                  alt="Christmas Day 2021" class="block w-full lazyload">
+              </div>
+              <div class="block sm:hidden">
+                <img src="{{ placeholder_gif }}" data-src="{{'christmas-card-gift-1-s.jpg' | asset_url}}"
+                  alt="Christmas Day 2021" class="block w-full lazyload">
+              </div>
+            </div>
+          </div>
+          <div class="block sm:hidden bg-gray-850 w-full h-6 xs:h-12"></div>
+        </div>
+        {% assign productList = 'magez-car-mount-pro' | split: ',' %}
+        {% for name in productList %}
+        {% assign product = all_products[name] %}
+        {% assign suffix = name | remove: 'magez-' | remove: 'air-' | remove: 'case-for-' | append: '.jpg' %}
+        <div class="w-full sm:h-full border-t border-gray-850 sm:border-none bg-none sm:bg-gray-850">
+          {% render 'grid-product-item-christmas', product: product, link_buy_now: true,between_tag: true,link_product_no:true,desc_no:true %}
+        </div>
+        {% endfor %}
+      </div>
+      <div class="hidden sm:block bg-gray-850 w-full h-6"></div>
+      {%- comment -%}第三栏{%- endcomment -%}
+      <div class="text-center sm:grid  sm:grid-cols-3 gap-2  sm:p-6 sm:gap-6  auto-rows-fr">
+        {% assign productList = 'magez-juice-2,magez-case-2-for-ipad-pro-2021' | split: ',' %}
+        {% for name in productList %}
+        {% assign product = all_products[name] %}
+        {% assign suffix = name | remove: 'magez-' | remove: 'air-' | remove: 'case-for-' | append: '.jpg' %}
+        <div class="w-full sm:h-full border-t border-gray-850 sm:border-none bg-none sm:bg-gray-850">
+          {% render 'grid-product-item-christmas', product: product, link_buy_now: true,between_tag: true,link_product_no:true,desc_no:true %}
+        </div>
+        {% endfor %}
+        <!-- 单品case2+stand -->
+        <div class="w-full sm:h-full border-t border-gray-850 sm:border-none bg-none sm:bg-gray-850">
+          <div
+            class="grid-item w-full h-full flex flex-col items-center  sm:justify-between bg-black  p-3 xs:p-6 sm:p-0  sm:pb-10">
+            <div class="images-container  w-full   sm:mb-7  lg:mb-0">
+              <div class="hidden sm:block">
+                <img src="{{ placeholder_gif }}"
+                  data-src="{{'christmas-card-magez-2-ipad-pro-2021-and-magez-stand.jpg' | asset_url}}"
+                  alt="Christmas Day 2021" class="block w-full lazyload">
+              </div>
+              <div class="block sm:hidden">
+                <img src="{{ placeholder_gif }}"
+                  data-src="{{'christmas-card-magez-2-ipad-pro-2021-and-magez-stand-s.jpg' | asset_url}}"
+                  alt="Christmas Day 2021" class="block w-full lazyload">
+              </div>
+            </div>
+            <div class="toggles-container flex justify-center -mx-1 my-6">
+
+            </div>
+
+            <h3 class="text-base font-bold mb-4">
+              MagEZ Case 2 For iPad Pro 2021 + MagEZ Stand
+            </h3>
+
+            <p class="text-base text-gray-400 mb-6 ">
+              <span class="line-through mr-2">
+                $149
+              </span>
+              <span class="font-bold text-white">
+                $134.10
+              </span>
+            </p>
+            <div class="flex flex-row  justify-center sm:justify-around mb-6 sm:mb-0">
+              {% assign shop_url = product.handle | prepend: '/products/' %}
+              <div class="text-left">
+                {% render 'link-button-bg',link_url: '/products/magez-stand',link_title: 'Shop Now',bgGold: true, space_tight: true,target_blank:true %}
+              </div>
+            </div>
+          </div>
+          <div class="block sm:hidden bg-gray-850 w-full h-6 xs:h-12"></div>
+        </div>
+      </div>
+      <div class="hidden sm:block bg-gray-850 w-full h-6"></div>
+      {%- comment -%}第四栏{%- endcomment -%}
+      <div class="text-center sm:grid  sm:grid-cols-3 gap-2  sm:p-6 sm:gap-6  auto-rows-fr">
+        {% assign productList = 'magez-stand-marble-version,magez-case-for-ipad-pro,air-pal-shells-for-airpods-max' | split: ',' %}
+        {% for name in productList %}
+        {% assign product = all_products[name] %}
+        {% assign suffix = name | remove: 'magez-' | remove: 'air-' | remove: 'case-for-' | append: '.jpg' %}
+        <div class="w-full sm:h-full border-t border-gray-850 sm:border-none bg-none sm:bg-gray-850">
+          {% render 'grid-product-item-christmas', product: product, link_buy_now: true,between_tag: true,link_product_no:true,desc_no:true %}
+        </div>
+        {% endfor %}
+      </div>
+      <div class="hidden sm:block bg-gray-850 w-full h-6"></div>
+      {%- comment -%}第五栏{%- endcomment -%}
+      <div class="text-center sm:grid  sm:grid-cols-3 gap-2  sm:p-6 sm:gap-6  auto-rows-fr">
+        {% assign productList = 'carbon-fiber-watch-band,air-case-for-apple-watch,air-omni' | split: ',' %}
+        {% for name in productList %}
+        {% assign product = all_products[name] %}
+        {% assign suffix = name | remove: 'magez-' | remove: 'air-' | remove: 'case-for-' | append: '.jpg' %}
+        <div class="w-full sm:h-full border-t border-gray-850 sm:border-none bg-none sm:bg-gray-850">
+          {% render 'grid-product-item-christmas', product: product, link_buy_now: true,between_tag: true,link_product_no:true,desc_no:true %}
+        </div>
+        {% endfor %}
+      </div>
+      <div class="hidden sm:block bg-gray-850 w-full h-6"></div>
+      {%- comment -%}第六栏{%- endcomment -%}
+      <div class="text-center sm:grid   sm:grid-cols-3 gap-2  sm:p-6 sm:gap-6  auto-rows-fr">
+        {% assign productList = 'magez-card-sleeve' | split: ',' %}
+        {% for name in productList %}
+        {% assign product = all_products[name] %}
+        {% assign suffix = name | remove: 'magez-' | remove: 'air-' | remove: 'case-for-' | append: '.jpg' %}
+        <div class="w-full sm:h-full border-t border-gray-850 sm:border-none bg-none sm:bg-gray-850">
+          {% render 'grid-product-item-christmas', product: product, link_buy_now: true,between_tag: true,link_product_no:true,desc_no:true %}
+        </div>
+        {% endfor %}
+        <div class="w-full sm:h-full border-t border-gray-850 sm:border-none bg-none sm:bg-gray-850">
+          <div
+            class="grid-item w-full h-full flex flex-col items-center  sm:justify-between  bg-black  p-3 xs:p-6 sm:p-0  sm:pb-10">
+            <div class="images-container  w-full   sm:mb-7  lg:mb-0">
+              <div class="hidden sm:block">
+                <img src="{{ placeholder_gif }}" data-src="{{'christmas-card-gift-1.jpg' | asset_url}}"
+                  alt="Christmas Day 2021" class="block w-full lazyload">
+              </div>
+              <div class="block sm:hidden">
+                <img src="{{ placeholder_gif }}" data-src="{{'christmas-card-gift-1-s.jpg' | asset_url}}"
+                  alt="Christmas Day 2021" class="block w-full lazyload">
+              </div>
+            </div>
+          </div>
+          <div class="block sm:hidden bg-gray-850 w-full h-6 xs:h-12"></div>
+        </div>
+        {% assign productList = 'c-to-c-charging-cable' | split: ',' %}
+        {% for name in productList %}
+        {% assign product = all_products[name] %}
+        {% assign suffix = name | remove: 'magez-' | remove: 'air-' | remove: 'case-for-' | append: '.jpg' %}
+        <div class="w-full sm:h-full border-t border-gray-850 sm:border-none bg-none sm:bg-gray-850">
+          {% render 'grid-product-item-christmas', product: product, link_buy_now: true,between_tag: true,link_product_no:true,desc_no:true %}
+        </div>
+        {% endfor %}
+      </div>
+      <div class="hidden sm:block bg-gray-850 w-full h-6"></div>
+      {%- comment -%}第七栏{%- endcomment -%}
+      <div class="text-center sm:grid  sm:grid-cols-3 gap-2  sm:p-6 sm:gap-6  auto-rows-fr">
+
+        <div class="w-full sm:h-full border-t border-gray-850 sm:border-none bg-none sm:bg-gray-850">
+          <div
+            class="grid-item w-full h-full flex flex-col items-center  sm:justify-between  bg-black  p-3 xs:p-6 sm:p-0  sm:pb-10">
+            <div class="images-container  w-full   mb-7  lg:mb-0">
+              <div class="images-toggle active" color="black-blue-twill">
+                <div class="hidden sm:block">
+                  <img src="{{'christmas-card-magez-i12-mini-black-blue-twill.jpg' | asset_url}}"
+                    alt="Christmas Day 2021" class="block w-full ">
+                </div>
+                <div class="block sm:hidden">
+                  <img src="{{'christmas-card-magez-i12-mini-black-blue-twill-s.jpg' | asset_url}}"
+                    alt="Christmas Day 2021" class="block w-full ">
+                </div>
+              </div>
+              <div class="images-toggle  " color="black-grey-twill">
+                <div class="hidden sm:block">
+                  <img src="{{'christmas-card-magez-i12-mini-black-grey-twill.jpg' | asset_url}}"
+                    alt="Christmas Day 2021" class="block w-full ">
+                </div>
+                <div class="block sm:hidden">
+                  <img src="{{'christmas-card-magez-i12-mini-black-grey-twill-s.jpg' | asset_url}}"
+                    alt="Christmas Day 2021" class="block w-full ">
+                </div>
+              </div>
+            </div>
+            <div
+              class="toggles-container flex justify-center -mx-1 my-6 swiper-container-initialized swiper-container-horizontal">
+              <div data-color="black-blue-twill"
+                class="toggle-item active rounded-full w-5 mx-1 p-0.5 border border-gray-850 border-solid box-content cursor-pointer">
+                <img src="{{'black-blue-twill.svg'  | asset_url}}" alt="Black/Blue (Twill)"
+                  class="block width-full rounded-full">
+              </div>
+              <div data-color="black-grey-twill"
+                class="toggle-item  rounded-full w-5 mx-1 p-0.5 border border-gray-850 border-solid box-content cursor-pointer">
+                <img src="{{'black-grey-twill.svg' | asset_url}}" alt="Black/Grey (Twill)"
+                  class="block width-full rounded-full">
+              </div>
+            </div>
+            <h3 class="text-base font-bold mb-4 ">
+              MagEZ Case For iPhone 12 mini
+            </h3>
+
+            <p class="text-base text-gray-400 mb-6{% if between_tag %} lg:mb-0{% endif %}">
+              <span class="line-through mr-2">
+                $49.99
+              </span>
+              <span class="font-bold text-white">
+                $37.49
+              </span>
+            </p>
+            <div class="flex flex-row  justify-center sm:justify-around mb-6 sm:mb-0">
+              <div class="text-left">
+                {% render 'link-button-bg',link_url: "/products/magez-case-for-iphone-12?variant=32107624038470", link_title: 'Shop Now',bgGold: true, space_tight: true,target_blank:true %}
+              </div>
+            </div>
+          </div>
+          <div class="block sm:hidden bg-gray-850 w-full h-6 xs:h-12"></div>
+        </div>
+        <!-- 单品Air Case for iPhone 12 mini -->
+        <div class="w-full sm:h-full border-t border-gray-850 sm:border-none bg-none sm:bg-gray-850">
+          <div
+            class="grid-item w-full h-full flex flex-col items-center  sm:justify-between  bg-black  p-3 xs:p-6 sm:p-0  sm:pb-10">
+            <div class="images-container  w-full   mb-7  lg:mb-0">
+              <div class="hidden sm:block">
+                <img src="{{ placeholder_gif }}" data-src="{{'christmas-card-air-i12.jpg' | asset_url}}"
+                  alt="Christmas Day 2021" class="block w-full lazyload">
+              </div>
+              <div class="block sm:hidden">
+                <img src="{{ placeholder_gif }}" data-src="{{'christmas-card-air-i12-s.jpg' | asset_url}}"
+                  alt="Christmas Day 2021" class="block w-full lazyload">
+              </div>
+            </div>
+            <div class="toggles-container flex justify-center -mx-1 my-6">
+
+            </div>
+
+            <h3 class="text-base font-bold mb-4">
+              Air Case For <br> iPhone 12 mini
+            </h3>
+
+            <p class="text-base text-gray-400 mb-6 ">
+              <span class="line-through mr-2">
+                $59.99
+              </span>
+              <span class="font-bold text-white">
+                $44.99
+              </span>
+            </p>
+            <div class="flex flex-row  justify-center sm:justify-around mb-6 sm:mb-0">
+              <div class="text-left">
+                {% render 'link-button-bg',link_url: '/products/air-case-for-iphone-12?variant=32107623579718',link_title: 'Shop Now',bgGold: true, space_tight: true,target_blank:true %}
+              </div>
+            </div>
+          </div>
+          <div class="block sm:hidden bg-gray-850 w-full h-6 xs:h-12"></div>
+        </div>
+        <!-- 单品MagEZ Case Pro 2 for iPhone 12 mini -->
+        <div class="w-full sm:h-full border-t border-gray-850 sm:border-none bg-none sm:bg-gray-850">
+          <div
+            class="grid-item w-full h-full flex flex-col items-center  sm:justify-between  bg-black  p-3 xs:p-6 sm:p-0  sm:pb-10">
+            <div class="images-container  w-full   mb-7  lg:mb-0">
+              <div class="hidden sm:block">
+                <img src="{{ placeholder_gif }}"
+                  data-src="{{'christmas-card-magez-pro2-i12-mini.jpg' | asset_url}}" alt="Christmas Day 2021"
+                  class="block w-full lazyload">
+              </div>
+              <div class="block sm:hidden">
+                <img src="{{ placeholder_gif }}"
+                  data-src="{{'christmas-card-magez-pro2-i12-mini-s.jpg' | asset_url}}" alt="Christmas Day 2021"
+                  class="block w-full lazyload"> 
+              </div>
+            </div>
+            <div class="toggles-container flex justify-center -mx-1 my-6">
+
+            </div>
+
+            <h3 class="text-base font-bold mb-4">
+              MagEZ Case Pro 2 For<br> iPhone 12 mini
+            </h3>
+
+            <p class="text-base text-gray-400 mb-6 ">
+              <span class="line-through mr-2">
+                $49.99
+              </span>
+              <span class="font-bold text-white">
+                $37.49
+              </span>
+            </p>
+            <div class="flex flex-row  justify-center sm:justify-around mb-6 sm:mb-0">
+              <div class="text-left">
+                {% render 'link-button-bg',link_url: '/products/magez-case-pro2-for-iphone-12?variant=32263021297734',link_title: 'Shop Now',bgGold: true, space_tight: true,target_blank:true %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .bg-gold {
+    background-color: #E0B68A;
+  }
+</style>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    /* 控制下雪 */
+    function snowFall(snow) {
+      /* 可配置属性 */
+      snow = snow || {};
+      this.maxFlake = snow.maxFlake || 100; /* 最多片数 */
+      this.flakeSize = snow.flakeSize || 2; /* 雪花形状 */
+      this.fallSpeed = snow.fallSpeed || 1; /* 坠落速度 */
+      if (window.innerWidth > 1024) {
+        this.flakeSize = 4
+      }
+      if (window.innerWidth < 768) {
+        this.fallSpeed = 0.5
+      }
+    }
+    /* 兼容写法 */
+    requestAnimationFrame = window.requestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.msRequestAnimationFrame ||
+      window.oRequestAnimationFrame ||
+      function (callback) {
+        setTimeout(callback, 1000 / 60);
+      };
+
+    cancelAnimationFrame = window.cancelAnimationFrame ||
+      window.mozCancelAnimationFrame ||
+      window.webkitCancelAnimationFrame ||
+      window.msCancelAnimationFrame ||
+      window.oCancelAnimationFrame;
+    /* 开始下雪 */
+    snowFall.prototype.start = function () {
+      /* 创建画布 */
+      snowCanvas.apply(this);
+      /* 创建雪花形状 */
+      createFlakes.apply(this);
+      /* 画雪 */
+      drawSnow.apply(this)
+    }
+    /* 创建画布 */
+    function snowCanvas() {
+      /* 添加 Dom 结点 */
+      var snowcanvas = document.createElement("canvas");
+      snowcanvas.id = "snowfall";
+      snowcanvas.width = window.innerWidth;
+      console.log("$('#PageContainer')", $('#PageContainer'));
+      snowcanvas.height = $('#PageContainer')[0].clientHeight;
+      console.log("snowcanvas.height1", snowcanvas.height);
+      snowcanvas.setAttribute("style", "position:absolute; top: 0; left: 0; z-index: 1; pointer-events: none;");
+      $('#PageContainer').append(snowcanvas);
+      // document.getElementsByTagName("body")[0].appendChild(snowcanvas);
+      this.canvas = snowcanvas;
+      this.ctx = snowcanvas.getContext("2d");
+      /* 窗口大小改变的处理 */
+      window.onresize = function () {
+        snowcanvas.width = window.innerWidth;
+        /* snowcanvas.height = window.innerHeight */
+      }
+    }
+    /* 雪运动对象 */
+    function flakeMove(canvasWidth, canvasHeight, flakeSize, fallSpeed) {
+      this.x = Math.floor(Math.random() * canvasWidth); /* x 坐标 */
+      this.y = Math.floor(Math.random() * canvasHeight); /* y 坐标 */
+      this.size = Math.random() * flakeSize + 1; /* 形状 */
+      this.maxSize = flakeSize; /* 最大形状 */
+      this.speed = Math.random() * 1 + fallSpeed; /* 坠落速度 */
+      if (window.innerWidth < 768) {
+        this.speed = Math.random() * 0.5 + fallSpeed; /* 坠落速度 */
+      }
+      this.fallSpeed = fallSpeed; /* 坠落速度 */
+      this.velY = this.speed; /* Y 方向速度 */
+      this.velX = 0; /* X 方向速度 */
+      this.stepSize = Math.random() / 30; /* 步长 */
+      this.step = 0 /* 步数 */
+    }
+    flakeMove.prototype.update = function () {
+      var x = this.x,
+        y = this.y;
+      /* 左右摆动(余弦) */
+      this.velX *= 0.98;
+      if (this.velY <= this.speed) {
+        this.velY = this.speed
+      }
+      this.velX += Math.cos(this.step += .05) * this.stepSize;
+
+      this.y += this.velY;
+      this.x += this.velX;
+      /* 飞出边界的处理 */
+      if (this.x >= canvas.width || this.x <= 0 || this.y >= canvas.height || this.y <= 0) {
+        this.reset(canvas.width, canvas.height)
+      }
+    };
+    /* 飞出边界-放置最顶端继续坠落 */
+    flakeMove.prototype.reset = function (width, height) {
+      this.x = Math.floor(Math.random() * width);
+      this.y = 0;
+      this.size = Math.random() * this.maxSize + 2;
+      this.speed = Math.random() * 1 + this.fallSpeed;
+      this.velY = this.speed;
+      this.velX = 0;
+    };
+    // 渲染雪花-随机形状（此处可修改雪花颜色！！！）
+    flakeMove.prototype.render = function (ctx) {
+      var snowFlake = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
+      snowFlake.addColorStop(0, "rgba(255, 255, 255, 0.9)"); /* 此处是雪花颜色，默认是白色 */
+      snowFlake.addColorStop(.5, "rgba(255, 255, 255, 0.5)"); /* 若要改为其他颜色，请自行查 */
+      snowFlake.addColorStop(1, "rgba(255, 255, 255, 0)"); /* 找 16 进制的 RGB 颜色代码。 */
+      ctx.save();
+      ctx.fillStyle = snowFlake;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    };
+    /* 创建雪花-定义形状 */
+    function createFlakes() {
+      var maxFlake = this.maxFlake,
+        flakes = this.flakes = [],
+        canvas = this.canvas;
+      for (var i = 0; i < maxFlake; i++) {
+        flakes.push(new flakeMove(canvas.width, canvas.height, this.flakeSize, this.fallSpeed))
+      }
+    }
+    /* 画雪 */
+    function drawSnow() {
+      var maxFlake = this.maxFlake,
+        flakes = this.flakes;
+      ctx = this.ctx, canvas = this.canvas, that = this;
+      /* 清空雪花 */
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (var e = 0; e < maxFlake; e++) {
+        flakes[e].update();
+        flakes[e].render(ctx);
+      }
+      /*  一帧一帧的画 */
+      this.loop = requestAnimationFrame(function () {
+        drawSnow.apply(that);
+      });
+    }
+    /* 调用及控制方法 */
+    var snow = new snowFall({
+      maxFlake: 250
+    });
+    snow.start();
+    setTimeout(() => {
+      let snowcanvas = $('canvas')[0]
+      snowcanvas.height = $('#PageContainer')[0].clientHeight;
+      console.log("snowcanvas.height2", snowcanvas.height);
+    }, 2000);
+  });
+</script>

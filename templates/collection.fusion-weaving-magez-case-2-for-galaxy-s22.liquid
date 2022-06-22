@@ -1,0 +1,314 @@
+{% render 'buy-bar', product: all_products[collection.handle] %}
+
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_6 = 'w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28' %}
+{% assign pdClass_t = 'px-3 sm:px-6 md:px-0 pt-12 sm:pt-16 lg:pt-20' %}
+{% assign titleBoxClass= 'mx-auto mb-12 w-11/12 sm:w-5/6 md:w-2/3 xl:w-2/5' %}
+{% assign titleSize = 'text-2xl md:text-3xl font-bold' %}
+{% assign descSize = 'text-sm sm:text-base text-gray-400' %}
+{% assign titleDecoMy = 'block mt-4 mb-6' %}
+
+{% assign altName = 'Fusion Weaving MagEZ Case 2 for Samsung Galaxy S22 Series' %}
+
+{% assign absoluteContentBoxClass = 'w-full laptop:w-10/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-0' %}
+{% assign absoluteContentClass = 'text-center lg:text-left absolute transform w-11/12 lg:w-3/5 xl:w-3/8 top-16 left-1/2 -translate-x-1/2 max-w-md lg:translate-x-0 lg:left-0 lg:top-1/2 lg:-translate-y-1/2' %}
+{%- comment -%}首屏banner{%- endcomment -%}
+<div class="w-full relative section-hero">
+  <div class="absolute {{absoluteContentBoxClass}}">
+    <div class="{{absoluteContentClass}} absolute">
+      <h1 class="text-xl md:text-2xl font-normal mb-4">
+        Fusion Weaving for<br>
+        Samsung Phones
+      </h1>
+      <h3 class="{{titleSize}}">
+        Weave Your Style.
+      </h3>
+    </div>
+  </div>
+  <picture>
+    <source data-srcset="{{'fusion-weaving-magez-case-s22-section1.webp' | asset_url}}" media="(min-width: 1280px)">
+    <source data-srcset="{{'fusion-weaving-magez-case-s22-section1-m.webp' | asset_url}}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{'fusion-weaving-magez-case-s22-section1-s.webp' | asset_url}}"
+      alt="{{altName}}" class="block w-full h-full object-cover lazyload">
+  </picture>
+</div>
+{%- comment -%}第2屏video{%- endcomment -%}
+<div class="{{wClass_6}} {{pdClass}} toggles-part">
+  <div class="flex flex-col sm:flex-row items-end justify-between">
+    <div class="w-full sm:w-5/12 md:w-6/12">
+      <h3 class="{{titleSize}}">
+        Style Up Your S22.
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}}">
+        Our Fusion Weaving™ cases are selected to style up your Galaxy S22 Series. Choose from the various designs to
+        fit your look - Overture, Rhapsody, and Concerto.
+      </p>
+    </div>
+    <div class="w-full mt-12 sm:mt-0 sm:w-6/12 lg:w-3/12">
+      <div class="toggle-name text-sm sm:text-base sm:text-right mb-4">
+        Overture
+      </div>
+      <div
+        class="toggles-container flex sm:justify-end -mx-1 sm:h-10 swiper-container-initialized swiper-container-horizontal">
+        <div data-color="Overture"
+          class="toggle-item rounded-full w-8 h-8 mx-1 p-0.5 border border-transparent border-solid box-content hover:border-white cursor-pointer active">
+          {{ 'overture.svg' | asset_url | img_tag: 'overture','block width-full rounded-full' }}
+        </div>
+        <div data-color="Concerto"
+          class="toggle-item rounded-full w-8 h-8 mx-1 p-0.5 border border-transparent border-solid box-content hover:border-white cursor-pointer">
+          {{ 'concerto.svg' | asset_url | img_tag: 'concerto','block width-full rounded-full' }}
+        </div>
+        <div data-color="Rhapsody"
+          class="toggle-item rounded-full w-8 h-8 mx-1 p-0.5 border border-transparent border-solid box-content hover:border-white cursor-pointer">
+          {{ 'rhapsody.svg' | asset_url | img_tag: 'rhapsody','block width-full rounded-full' }}
+        </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+      </div>
+    </div>
+  </div>
+  <div class="images-container">
+    <div
+      class="w-full toggle-it overture mx-auto grid grid-cols-2 sm:grid-cols-6 gap-3 sm:gap-4 md:gap-6 pt-8 pb-16 sm:pt-10 sm:pb-20 lg:pt-14 lg:pb-28 ">
+      <div class="row-span-2 col-span-2 sm:col-span-4">
+        <img src="{{ placeholder_gif }}"
+          data-src="{{ 'fusion-weaving-magez-case-s22-overture-section3-1.webp' | asset_url }}"
+          alt="{{ altName }}" class="block w-full h-full object-cover lazyload" />
+      </div>
+      <div class="row-span-1 col-span-1 sm:col-span-2 bg-gray-800">
+        <img src="{{ placeholder_gif }}"
+          data-src="{{ 'fusion-weaving-magez-case-s22-overture-section3-2.webp' | asset_url }}"
+          alt="{{ altName }}" class="block w-full h-full object-cover lazyload" />
+      </div>
+      <div class="row-span-1 col-span-1 sm:col-span-2 bg-gray-800">
+        <img src="{{ placeholder_gif }}"
+          data-src="{{ 'fusion-weaving-magez-case-s22-overture-section3-3.webp' | asset_url }}"
+          alt="{{ altName }}" class="block w-full h-full object-cover lazyload" />
+      </div>
+    </div>
+    <div
+      class="w-full toggle-it hidden concerto mx-auto grid grid-cols-2 sm:grid-cols-6 gap-3 sm:gap-4 md:gap-6 px-3 sm:px-6 md:px-0 pt-8 pb-16 sm:pt-10 sm:pb-20 lg:pt-14 lg:pb-28 ">
+      <div class="row-span-2 col-span-2 sm:col-span-4">
+        <img src="{{ 'fusion-weaving-magez-case-s22-concerto-section3-1.webp' | asset_url }}" alt="{{ altName }}" class="block w-full h-full object-cover " />
+      </div>
+      <div class="row-span-1 col-span-1 sm:col-span-2 bg-gray-800">
+        <img src="{{ 'fusion-weaving-magez-case-s22-concerto-section3-2.webp' | asset_url }}" alt="{{ altName }}" class="block w-full h-full object-cover " />
+      </div>
+      <div class="row-span-1 col-span-1 sm:col-span-2 bg-gray-800">
+        <img src="{{ 'fusion-weaving-magez-case-s22-concerto-section3-3.webp' | asset_url }}" alt="{{ altName }}" class="block w-full h-full object-cover " />
+      </div>
+    </div>
+    <div
+      class="w-full toggle-it hidden rhapsody mx-auto grid grid-cols-2 sm:grid-cols-6 gap-3 sm:gap-4 md:gap-6 px-3 sm:px-6 md:px-0 pt-8 pb-16 sm:pt-10 sm:pb-20 lg:pt-14 lg:pb-28 ">
+      <div class="row-span-2 col-span-2 sm:col-span-4">
+        <img src="{{ 'fusion-weaving-magez-case-s22-rhapsody-section3-1.webp' | asset_url }}" alt="{{ altName }}" class="block w-full h-full object-cover " />
+      </div>
+      <div class="row-span-1 col-span-1 sm:col-span-2 bg-gray-800">
+        <img src="{{ 'fusion-weaving-magez-case-s22-rhapsody-section3-2.webp' | asset_url }}" alt="{{ altName }}" class="block w-full h-full object-cover " />
+      </div>
+      <div class="row-span-1 col-span-1 sm:col-span-2  bg-gray-800">
+        <img src="{{ 'fusion-weaving-magez-case-s22-rhapsody-section3-3.webp' | asset_url }}" alt="{{ altName }}" class="block w-full h-full object-cover " />
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{%- comment -%}第4屏左字右图{%- endcomment -%}
+<div class="bg-gray-800">
+  <div class="  {{wClass_6}} {{pdClass}} -mt-16 sm:-mt-20 lg:-mt-28 section-hero flex items-center">
+    <div class=" flex flex-col sm:flex-row items-center justify-between h-full">
+      <div class="w-full sm:w-4/9 xl:w-3/8">
+        <h3 class="{{titleSize}}">
+          MagSafe and Wireless<br>
+          Charging Compatible.
+        </h3>
+        <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+        <p class="{{descSize}}">
+          Charging your Samsung phone can be a snap too. Designed with MagSafe compatibility, the case ensures a secure
+          and convenient attachment to MagEZ Car Mount Pro and other 
+          <a class="text-cyan" href="/collections/pitaflow-for-phones">MagEZ 2.0 accessories</a>.
+        </p>
+      </div>
+      <div class="w-full sm:w-1/2 mt-12 sm:mt-0 ">
+        <picture>
+          <source data-srcset="{{'fusion-weaving-magez-case-s22-section4.webp' | asset_url}}"
+            media="(min-width: 768px)">
+          <img src="{{ placeholder_gif }}" data-src="{{'fusion-weaving-magez-case-s22-section4-s.webp' | asset_url}}"
+            alt="{{ altName }}"
+            class="block w-4/5 lg:w-full xl:w-10/12 max-w-max mx-auto lazyload ">
+        </picture>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- comment -%}第5屏字居中图底{%- endcomment -%}
+<div class="relative w-full section5">
+  <div
+    class="absolute w-5/6 sm:w-3/4 lg:w-5/12 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+    <h3 class="{{titleSize}}">
+      Classic. On the Next Level.
+    </h3>
+    <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}} mx-auto">
+    <p class="text-sm sm:text-base">
+      Our new technique, <a href="/collections/fusion-weaving-series" class="text-cyan">Fusion Weaving™</a> allows two
+      or more weaving styles to appear on the same piece of aramid fiber
+      fabric. Fusion Weaving™ cases feature excellent
+      three-dimensional effects and more intricate designs with various
+      colors.
+    </p>
+  </div>
+  <img src="{{ placeholder_gif }}" data-src="{{'fusion-weaving-magez-case-s22-section5.webp' | asset_url}}"
+    alt="{{ altName }}" class="block w-full h-full object-cover lazyload">
+  </picture>
+</div>
+{%- comment -%}第6屏带标题轮播{%- endcomment -%}
+<div class="{{wClass}} {{pdClass}}">
+  <div class="{{titleBoxClass}} text-center">
+    <h3 class="{{titleSize}}">
+      Better Grip with More Comfort.
+    </h3>
+    <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}} mx-auto">
+    <p class="text-sm sm:text-base text-gray-400">
+      Our unique vacuum forming process, 3D Grip Technology, creates a tactile, non-slip surface texture for exceptional
+      grip and comfort. You might want to hold your phone longer this time.
+    </p>
+  </div>
+  {% assign descs = 'Our unique vacuum forming process, 3D Grip Technology, creates a tactile, non-slip surface texture for exceptional grip and comfort. You might want to hold your phone longer this time. | Designed and flawlessly formed to fit every curve, button, and cut out. | The delicately polished edge, same height as the screen, allows you to swipe your screen as hard as you want without worrying about cutting your fingers.' %}
+  {% render 'center-slides', name:'Fusion Weaving MagEZ Case 2 for Samsung Galaxy S22 Series',picName:'center-slider-fusion-weaving-magez-case-s22', sliderDescs:descs %}
+</div>
+
+{%- comment -%}第7屏左图右字{%- endcomment -%}
+<div class="bg-gray-800 {{pdClass}}">
+  <div class="{{wClass}} flex flex-col sm:flex-row-reverse items-center justify-between">
+    <div class="w-full sm:w-5/12 md:w-1/3">
+      <h3 class="{{titleSize}}">
+        Robust and Light
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}} max-w-sm">
+        Made from durable aramid fiber, the slim and lightweight case offers protection against wear and tear without
+        the bulk.
+      </p>
+    </div>
+    <div class="w-full mt-12 sm:mt-0 sm:w-4/8 lg:w-3/5">
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{'fusion-weaving-magez-case-s22-section7.webp' | asset_url}}"
+          alt="{{ altName }}" class="block w-full lazyload">
+      </picture>
+    </div>
+  </div>
+</div>
+{%- comment -%}第8屏左字右图{%- endcomment -%}
+<div class="bg-gray-800 {{pdClass}} -mt-16 sm:-mt-20 lg:-mt-28">
+  <div class="{{wClass}} flex flex-col sm:flex-row items-center justify-between">
+    <div class="w-full sm:w-5/12 md:w-1/3">
+      <h3 class="{{titleSize}}">
+        Built-in Camera Protection
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}}">
+        The raised lip and the edge protects your lenses from scratches.
+        Now you can place your phone facing up, on the table or anywhere without a worry.
+      </p>
+    </div>
+    <div class="w-full mt-12 sm:mt-0 sm:w-4/8 lg:w-3/5">
+      <div class="w-full swiper-container swiper-s22-7-1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <picture>
+              <img src="{{ placeholder_gif }}"
+                data-src="{{'fusion-weaving-magez-case-s22-section7-1.webp' | asset_url}}"
+                alt="{{ altName }}" class="block w-full lazyload">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <img src="{{ placeholder_gif }}"
+                data-src="{{'fusion-weaving-magez-case-s22-section7-2.webp' | asset_url}}"
+                alt="{{ altName }}" class="block w-full lazyload">
+            </picture>
+          </div>
+        </div>
+        <!-- <div class="swiper-pagination swiper-pagination"></div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- comment -%}第9屏四格图{%- endcomment -%}
+<div class="w-full bg-gray-800 -mt-16 sm:-mt-20 lg:-mt-28">
+  <div class="{{wClass}} {{pdClass}}">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 sm:auto-rows-fr">
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{'fusion-weaving-magez-case-s22-section8-1.webp' | asset_url}}"
+          alt="{{ altName }}" class="block w-full h-full object-cover lazyload">
+      </picture>
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{'fusion-weaving-magez-case-s22-section8-2.webp' | asset_url}}"
+          alt="{{ altName }}" class="block w-full h-full object-cover lazyload">
+      </picture>
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{'fusion-weaving-magez-case-s22-section8-3.webp' | asset_url}}"
+          alt="{{ altName }}" class="block w-full h-full object-cover lazyload">
+      </picture>
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{'fusion-weaving-magez-case-s22-section8-4.webp' | asset_url}}"
+          alt="{{ altName }}" class="block w-full h-full object-cover lazyload">
+      </picture>
+    </div>
+  </div>
+</div>
+<style>
+  .section-hero {
+    min-height: 37.5vw;
+  }
+
+  .section5>img {
+    min-height: 480px;
+  }
+</style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L8YQ4BP5ZS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'G-L8YQ4BP5ZS');
+</script>
+
+<script>
+  var galleryTop = new Swiper('.swiper-s22-7-1', {
+    autoplay: {
+      delay: 5000,
+    },
+    loop: true,
+    observer: true,
+    observeParents: true,
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // }
+  })
+  $(document).ready(function () {
+    $(function () {
+      $(".toggles-container").on('click', '.toggle-item', function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        const color_name = $(this).data('color');
+        const color = color_name.toLowerCase();
+        $(this).parent().prev().html(color_name);
+        // $(this).parents().parents().parents().find('.images-container').find('.'+color).addClass('bg-black')
+        // console.log($(this).parents().parents().parents().find('.images-container').find('.' + color));
+        $('.images-container').find('.' + color).removeClass('hidden').siblings().addClass('hidden')
+      });
+    })
+  });
+</script>

@@ -1,0 +1,1122 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+<div class="section0 relative">
+  <div class="pt-section-content absolute pt-position-centerY">
+    <h1 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2">
+      {% assign title =  collection.title | split: ' for ' %}
+      {{ title | first }}<br>
+      <span class="small">for {{ title | last }}</span>
+    </h1>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-top-small">
+      The only case for your iPad Pro that offers<br>
+      seamless functionality between your devices.
+    </p>
+  </div>
+  <picture>
+    <source data-srcset="{{ 'product-ipad2021-case-seciton0.jpg' | asset_url }}" media="(min-width: 769px)" />
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton0-m.jpg' | asset_url }}"
+      class="img-responsive width-100 lazyload" />
+  </picture>
+</div>
+
+<div class="pt-section video-section bg-black">
+  <div class="pt-section-content text-center pt-margin-bottom-medium">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      Embrace Your iPad Pro’s Versatility
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      More than just an ultra-slim, minimalistic case, MagEZ Case 2 offers full functionality between your iPad Pro and
+      Magic Keyboard, including pass-through charging, Apple Pencil charging, and access to the USB-C port.<br>
+      With its magnetic design, MagEZ Case 2 simply attaches to the 
+      <a href="/collections/pitaflow-for-tablets" class="pt-link">Pita!Flow for Tablets</a> 
+      system and seamlessly switches between accessories without affecting device features or your productivity.
+    </p>
+  </div>
+  <div class="pt-section-container relative">
+    <a href="javascript:;" data-target="#modal-video" id="modal-toggle" class="play-btn pt-position-center absolute">
+      {{ 'play-btn.png' | asset_url | img_tag }}
+    </a>
+    <picture>
+      <img src="{{ placeholder_gif }}" data-src="{{'product-video-ipad2021-case-cover.jpg' | asset_url }}"
+        class="width-100 pt-block lazyload" alt="MagEZ Case for iPad 2021 Series">
+    </picture>
+  </div>
+</div>
+
+<div class="pt-section section2 pt-flex pt-flex-center">
+  <div id="split-slider" class="covered">
+    <div class="handle"></div>
+    <div class="changeable"></div>
+    {%- comment -%}
+    <split-view mode="normal" start=25>
+      <picture slot="top">
+        <img src="{{ 'product-ipad2021-case-seciton2-front.png' | asset_url }}" />
+      </picture>
+      <picture slot="bottom">
+        <img src="{{ 'product-ipad2021-case-seciton2-back.png' | asset_url }}" />
+      </picture>
+    </split-view>
+    {%- endcomment -%}
+  </div>
+
+  <div class="pt-section-content">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      A Secure Magnetic Attachment
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-small">
+      With strong embedded magnets, the case for iPad Pro conveniently snaps onto the Apple Magic Keyboard,
+      our    <a href="/products/magez-stand" class="pt-link">MagEZ Stand</a> and
+      <a href="/products/magez-folio" class="pt-link">MagEZ Folio</a>, ensuring a secure hold while you work.
+    </p>
+  </div>
+</div>
+
+<div class="pt-section section1 pt-flex pt-flex-center">
+  <div class="pt-section-content">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Works Seamlessly with the Apple Magic Keyboard</h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      With its super-sleek design and embedded magnets, the case attaches effortlessly to the Apple Magic Keyboard and
+      offers uninterrupted pass-through charging between the devices.
+    </p>
+  </div>
+
+  <div id="trigger_sec"></div>
+  <div class="pt-anim-container">
+    <div class="pt-anim-pictures relative">
+      <div id="trigger_line"></div>
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-attach-keyboard.png' | asset_url }}"
+        class="lazyload" />
+      <div class="pt-anim-item absolute" id="anim-item">
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-attach-ipad.png' | asset_url }}"
+          alt="MagEZ Case 2 for iPad 2021 Series" class="lazyload" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pt-section section3 pt-flex">
+  <div class="pt-section-picture">
+    <picture>
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton3.png' | asset_url }}"
+        class="img-responsive width-100 lazyload" alt="MagEZ Case for iPad 2021 Series" />
+    </picture>
+  </div>
+  <div class="pt-section-content">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">A Perfect Fit For Your Device</h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      The ultra-slim, lightweight {{  collection.title }} is precision cut for easy access to all your device’s features.
+      The case and Magic Keyboard can snugly close for secure carrying.
+    </p>
+  </div>
+</div>
+
+<div class="section4 relative">
+  <div class="pt-section-content absolute pt-position-centerY pt-position-right">
+    <div class="content">
+      {{ 'product-ipad2021-case-seciton4-icon-1.svg' | asset_url | img_tag }}
+      <p class="pt-text-small pt-margin-top-mini">
+        Pass-Through<br>
+        Charging
+      </p>
+    </div>
+    <div class="content">
+      {{ 'product-ipad2021-case-seciton4-icon-2.svg' | asset_url | img_tag }}
+      <p class="pt-text-small pt-margin-top-mini">
+        Easily Attach<br>
+        Your Apple Pencil
+      </p>
+    </div>
+    <div class="content">
+      {{ 'product-ipad2021-case-seciton4-icon-3.svg' | asset_url | img_tag }}
+      <p class="pt-text-small pt-margin-top-mini">
+        Easy Access<br>
+        Type-C Charging Port
+      </p>
+    </div>
+  </div>
+  <picture>
+    <source data-srcset="{{ 'product-ipad2021-case-seciton4.jpg' | asset_url }}" media="(min-width: 769px)" />
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton4-m.jpg' | asset_url }}"
+      class="img-responsive width-100 lazyload" alt="MagEZ Case for iPad 2021 Series" />
+  </picture>
+</div>
+
+<div class="pt-section section8 pt-flex pt-flex-center">
+  <div class="pt-section-content">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Premium Materials For a Comfortable Hold</h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-small">
+      Finely woven aramid fibers create a smooth textured surface that feels great to the touch and improves grip.
+    </p>
+  </div>
+
+  <picture>
+    <source data-srcset="{{ 'product-ipad2021-case-seciton8.jpg' | asset_url }}" media="(min-width: 769px)" />
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton8-m.jpg' | asset_url }}"
+      class="img-responsive lazyload" />
+  </picture>
+</div>
+
+<div class="section9 pt-section  bg-black">
+  <div class="pt-section-container pt-flex pt-hide-mini">
+    <picture>
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton9-1.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload" />
+    </picture>
+    <div class="right-container">
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton9-2.jpg' | asset_url }}"
+          class="img-responsive width-100 lazyload" />
+      </picture>
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton9-3.jpg' | asset_url }}"
+          class="img-responsive width-100 lazyload" />
+      </picture>
+    </div>
+  </div>
+
+  <div class="pt-section-container pt-flex pt-show-mini">
+    <picture>
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton9-2-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload" />
+    </picture>
+    <div class="right-container">
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton9-1-m.jpg' | asset_url }}"
+          class="img-responsive width-100 lazyload" />
+      </picture>
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton9-3-m.jpg' | asset_url }}"
+          class="img-responsive width-100 lazyload" />
+      </picture>
+    </div>
+  </div>
+</div>
+
+<div class="section7 pt-flex pt-section pt-flex-center">
+  <picture>
+    <source data-srcset="{{ 'product-ipad2021-case-seciton7.jpg' | asset_url }}" media="(min-width: 769px)" />
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton7-m.jpg' | asset_url }}"
+      class="img-responsive lazyload" />
+  </picture>
+  <div class="pt-section-content">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Suits Any Style</h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-small">
+      The classic, minimalist aesthetic of {{  collection.title }} fits your
+      unique style and situation.
+    </p>
+  </div>
+</div>
+
+<div class="pt-section section5  bg-black">
+  <div class="view-box pt-flex pt-flex-center">
+    <div class="pt-section-content text-center">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Accelerate Your Productivity With Magnetically Attaching Accessories
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        {{  collection.title }} not only attaches magnetically to the Apple Keyboard but also to our <span
+          class="text-cyan">Pita!Flow</span> accessories.
+      </p>
+    </div>
+    <div class="swiper-container" id="base-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="pt-anim-container">
+            <div class="pt-anim-pictures relative">
+              <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton5-stand.png' | asset_url }}"
+                class="lazyload" />
+              <div class="pt-anim-item absolute anim-item-1">
+                <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton5-ipad.png' | asset_url }}"
+                  alt="MagEZ Case for iPad 2021 Series" class="lazyload" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="pt-anim-container">
+            <div class="pt-anim-pictures relative">
+              <img src="{{ placeholder_gif }}"
+                data-src="{{ 'product-ipad2021-case-seciton5-keyboard.png' | asset_url }}" class="lazyload" />
+              <div class="pt-anim-item absolute anim-item-2">
+                <img src="{{ placeholder_gif }}"
+                  data-src="{{ 'product-ipad2021-case-seciton5-ipad-2.png' | asset_url }}"
+                  alt="MagEZ Case for iPad 2021 Series" class="lazyload" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="pt-anim-container">
+            <div class="pt-anim-pictures relative">
+              <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton5-folio.png' | asset_url }}"
+                alt="MagEZ Case for iPad 2021 Series" class="lazyload" />
+              <div class="pt-anim-item absolute anim-item-3">
+                <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton5-ipad.png' | asset_url }}"
+                  alt="MagEZ Case for iPad 2021 Series" class="lazyload" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
+    <div class="pt-section-container">
+      <div class="swiper-container" id="content-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="pt-flex pt-flex-center">
+              <div class="pt-section-picture">
+                <picture>
+                  <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton5-1.jpg' | asset_url }}"
+                    class="img-responsive width-100 lazyload" />
+                </picture>
+              </div>
+              <div class="pt-section-content">
+                <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">MagEZ Stand</h3>
+                <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-small">
+                  Magnetically attach your tablet or iPad to the raised desk stand to comfortably view your screen while
+                  you work, watch, or video chat.
+                </p>
+                <a href="/products/magez-stand" class="pt-link">
+                  Learn More &gt;&gt;
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="pt-flex pt-flex-center">
+              <div class="pt-section-picture">
+                <picture>
+                  <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton5-2.jpg' | asset_url }}"
+                    class="img-responsive width-100 lazyload" />
+                </picture>
+              </div>
+              <div class="pt-section-content">
+                <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Apple Magic Keyboard</h3>
+                <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                  Fasten your {{  collection.title }} to your Magic Keyboard and experience pass-through charging,
+                  Apple Pencil attachment, and easy charging port access.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="pt-flex pt-flex-center">
+              <div class="pt-section-picture">
+                <picture>
+                  <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton5-3.jpg' | asset_url }}"
+                    class="img-responsive width-100 lazyload" />
+                </picture>
+              </div>
+              <div class="pt-section-content">
+                <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">MagEZ Folio</h3>
+                <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-small">
+                  Connect your MagEZ Case 2 and take your iPad Pro mobile.
+                </p>
+                <a href="/products/magez-folio" class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-link">
+                  Learn More &gt;&gt;
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="section6">
+  <picture>
+    <source data-srcset="{{ 'product-ipad2021-case-seciton6.jpg' | asset_url }}" media="(min-width: 769px)" />
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-ipad2021-case-seciton6-m.jpg' | asset_url }}"
+      class="img-responsive width-100 lazyload" />
+  </picture>
+</div>
+
+<div class="modal-mask"></div>
+<div id="modal-video" class="pt-modal-container">
+  <div class="modal-background">
+    <div class="pt-modal-dialog relative">
+      <button class="pt-modal-close absolute" type="button">
+        <span class="icon icon-x"></span>
+      </button>
+      <video controls playsinline preload="none" class="lazyload">
+        <source src="{{ 'product-video-ipad2021-case.mp4' | asset_url }}" type="video/mp4">
+        <source src="{{ 'product-video-ipad2021-case.webm' | asset_url }}" type="video/webm">
+      </video>
+    </div>
+  </div>
+</div>
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+<style>
+  .video-section .play-btn img {
+    width: 140px;
+    height: 140px;
+  }
+
+  #modal-video .pt-modal-dialog {
+    max-width: unset;
+    width: auto;
+  }
+
+  #modal-video .pt-modal-dialog video {
+    max-height: calc(100vh - 80px);
+    max-width: calc(100vw - 80px);
+    display: block;
+    object-fit: contain;
+  }
+
+  .pt-section {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .pt-section-content {
+    max-width: 404px;
+  }
+
+  .pt-section-content.text-center {
+    width: 50%;
+    max-width: unset;
+  }
+
+  .video-section .pt-section-content.text-center {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section0 .pt-section-content {
+    left: 15%;
+    max-width: 486px;
+  }
+
+  .pt-section .pt-section-picture {
+    width: 55%;
+  }
+
+  .section5 .pt-section-content.text-center {
+    width: 100%;
+  }
+
+  .section2 {
+    background-color: #0e0e0f;
+  }
+
+  .section3,
+  .section9 {
+    background-color: #000;
+  }
+
+  .section3 {
+    padding: 10em 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .section1 .pt-section-content,
+  .section8 .pt-section-content {
+    margin-right: 5em;
+  }
+
+  .section3 .pt-section-content,
+  .section7 .pt-section-content,
+  .section2 .pt-section-content {
+    margin-left: 6em;
+  }
+
+  .section4 .pt-section-content {
+    width: auto;
+  }
+
+  .section9 .pt-section-container {
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .section9 .pt-section-container .right-container {
+    margin-left: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .content {
+    padding: 0 15px;
+    margin-top: 2em;
+  }
+
+  .content img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+
+  .section5 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .section5 .view-box {
+    flex-direction: column;
+    background-color: #000;
+    padding: 5em 0;
+  }
+
+  .section5 .view-box>.pt-section-content {
+    padding-top: 0;
+  }
+
+  .section5 .pt-section-container {
+    width: 100%;
+    padding: 2em 4.7vw 0;
+    order: 3;
+  }
+
+  .section5 .pt-section-container .pt-section-picture {
+    padding-right: 10%;
+  }
+
+  @media screen and (min-width:1960px) {
+    .pt-section-content {
+      max-width: 495px;
+    }
+
+    .section0 .pt-section-content{
+      max-width: 584px;
+    }
+
+    .pt-section-content.text-center {
+      width: 40%;
+    }
+  }
+
+  @media screen and (max-width: 1600px) {
+    .pt-section .pt-section-picture {
+      width: 50%;
+    }
+
+    .section5 .view-box {
+      padding: 4em 0;
+    }
+
+    .section0 .pt-section-content {
+      left: 10%;
+      max-width: 448px;
+    }
+    .video-section .pt-section-content.text-center{
+      width: 70%;
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    .pt-section {
+      padding-left: 7%;
+      padding-right: 7%;
+    }
+    .video-section .play-btn img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    
+    .pt-section .pt-section-content {
+      width: 68vw !important;
+      margin-bottom: 0 !important;
+      padding-bottom: 0;
+      padding-top: 4em;
+      max-width: unset;
+    }
+
+    .pt-section .pt-section-picture {
+      width: 100%;
+    }
+
+    .section0 .pt-section-content {
+      left: 50%;
+      top: 20%;
+      width: 80%;
+      transform: translateX(-50%);
+    }
+
+    .section1 {
+      flex-direction: column-reverse;
+    }
+
+    .section3 .pt-section-picture {
+      width: 80%;
+    }
+
+    .section3 {
+      padding: 6em 0;
+      align-items: flex-start;
+    }
+
+    .section3 .pt-section-content {
+      margin: 0 auto;
+    }
+
+    .section4 .pt-section-content {
+      width: 100% !important;
+      max-width: unset;
+      top: unset;
+      bottom: 4em;
+      left: 0;
+      right: 0;
+      transform: none;
+      display: flex;
+      text-align: center;
+      justify-content: space-evenly;
+    }
+
+    .section5 {
+      padding: 0;
+    }
+
+    #content-swiper .pt-section-content {
+      padding-left: 7%;
+      padding-right: 7%;
+    }
+
+    .section7 {
+      align-items: flex-start !important;
+    }
+
+    .section1 .pt-section-content,
+    .section2 .pt-section-content,
+    
+    .section8 .pt-section-content,
+    .section7 .pt-section-content {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .section8 {
+      align-items: flex-start !important;
+      flex-direction: column-reverse;
+    }
+
+    .section9 .pt-section-container .right-container {
+      margin-top: 10px;
+      margin-left: 0;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .pt-section>.swiper-container {
+      order: 2;
+    }
+
+    #content-swiper .swiper-slide .pt-flex.pt-flex-center {
+      align-items: flex-start;
+    }
+
+    .swiper-container .pt-section-content p {
+      height: 63px;
+    }
+
+    .section5 .pt-section-container .pt-section-picture {
+      padding-right: 0;
+    }
+
+    .content {
+      margin-top: 0;
+    }
+
+    .video-section {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .video-section .pt-section-container {
+      margin: 3em -7vw 0;
+    }
+  }
+
+  @media screen and (max-width: 414px) {
+    .video-section .play-btn img {
+      width: 100px;
+      height: 100px;
+    }
+    .pt-section .pt-section-content {
+      width: 86vw !important;
+      padding-top: 3em;
+    }
+
+    .section0 .pt-section-content {
+      top: 10%;
+    }
+
+    .section3 {
+      padding: 4em 0;
+    }
+
+    .section4 .pt-section-content {
+      bottom: 3em;
+    }
+
+    .section9 .pt-section-container .right-container {
+      margin-top: 0;
+    }
+
+    .content img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .section5 .pt-section-container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .section5 .pt-section-container .pt-section-content {
+      width: 100% !important;
+    }
+
+    .swiper-container .pt-section-content p {
+      height: 88px;
+    }
+
+    
+  }
+</style>
+
+<!-- split slider-->
+{{ 'coveringBad.js' | asset_url | script_tag }}
+<style>
+  /* covered */
+  .covered {
+    width: 386px;
+    height: 432px;
+    background-image: url("{{'product-ipad2021-case-seciton2-front.png' | asset_url }}");
+    background-position: 30px 0;
+    background-repeat: no-repeat;
+    /* box-shadow: 0 0 40px 5px rgba(0, 0, 0, .4); */
+    position: relative;
+  }
+
+  .covered .changeable {
+    background-position: 30px 0;
+    background-repeat: no-repeat;
+    background-image: url("{{'product-ipad2021-case-seciton2-back.png' | asset_url }}");
+  }
+
+  .covered .handle {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    margin-left: -23px;
+    margin-top: -23px;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  .covered .handle span {
+    display: inline-block;
+    margin: 15px 1px 0;
+    color: #0bbcd4;
+    opacity: 0.8;
+    -webkit-transition: .1s ease-out;
+    -moz-transition: .1s ease-out;
+    -ms-transition: .1s ease-out;
+    -o-transition: .1s ease-out;
+    transition: .1s ease-out;
+  }
+
+  .covered .handle.vertical {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  .covered .handle:hover span {
+    opacity: 1;
+  }
+
+  .covered .draggable {
+    cursor: move;
+  }
+
+  .covered .draggable span {
+    margin: 15px 4px 0;
+    color: #0bbcd4;
+    -webkit-transition: .1s ease-out;
+    -moz-transition: .1s ease-out;
+    -ms-transition: .1s ease-out;
+    -o-transition: .1s ease-out;
+    transition: .1s ease-out;
+  }
+
+  @media screen and (max-width:1280px) {
+    .covered {
+      transform: scale(0.8);
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .covered {
+      transform: scale(1);
+    }
+  }
+
+  @media screen and (max-width:414px) {
+    .covered {
+      transform: scale(0.75);
+    }
+  }
+</style>
+
+<!-- anim-pictures -->
+<style>
+  .pt-anim-container {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    transform: scale(0.8);
+  }
+
+  .pt-anim-item {
+    top: 0;
+    right: 0;
+    opacity: 0;
+  }
+
+  .anim-item-1.active {
+    opacity: 1;
+    transform: translate(-126px, 57px);
+    transition: all 0.5s ease-in-out 0.1s;
+  }
+
+  .anim-item-2.active {
+    opacity: 1;
+    transform: translate(-119.5px, 96px);
+    transition: all 0.5s ease-in-out 0.1s;
+  }
+
+  .anim-item-3.active {
+    opacity: 1;
+    transform: translate(-124px, 88px);
+    transition: all 0.5s ease-in-out 0.1s;
+  }
+
+  .section1 .pt-anim-container {
+    transform: unset;
+  }
+
+  .pt-anim-pictures {
+    width: 440px;
+    flex-shrink: 0;
+  }
+
+  .section1 .pt-anim-pictures {
+    width: 539px;
+  }
+
+  .section1 .pt-anim-item {
+    opacity: 1;
+  }
+
+  .pt-anim-pictures img {
+    display: block;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .pt-anim-container {
+      width: 100%;
+      transform: scale(0.7);
+    }
+
+    .section1 .pt-anim-container {
+      width: unset;
+      transform: scale(0.75);
+      transform-origin: 0 center;
+    }
+
+    .section1 .pt-section-content {
+      margin-left: -10vw;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .pt-anim-container {
+      transform: scale(1);
+    }
+
+    .section1 .pt-anim-container {
+      transform: scale(1);
+    }
+
+    .section1 .pt-section-content {
+      margin-left: 0;
+    }
+  }
+
+  @media screen and (max-width: 414px) {
+    .pt-anim-container {
+      transform: scale(0.6);
+    }
+
+    .section1 .pt-anim-container {
+      transform: scale(0.6);
+      transform-origin: center center;
+    }
+  }
+</style>
+
+<!-- swiper css -->
+<style>
+  #base-swiper {
+    width: 80%;
+    height: 100%;
+    padding-bottom: 2em;
+    --swiper-navigation-size: 16px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    background: none !important;
+    top: unset;
+    bottom: 8px;
+    left: 40%;
+  }
+
+  .swiper-button-next {
+    left: unset;
+    right: 40%;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    color: #fff !important;
+    display: block !important;
+  }
+
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .swiper-pagination-bullet {
+    width: 4px;
+    border-radius: 0;
+    height: 8px;
+    background-color: #fff;
+    opacity: 0.24;
+    margin: 0 10px;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    height: 16px;
+    background-color: #fff;
+  }
+
+  #base-swiper .swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  @media screen and (min-width:769px) {
+    #base-swiper .swiper-slide {
+      transition: 300ms;
+      transform: scale(0.6);
+    }
+
+    #base-swiper .swiper-slide-active,
+    #base-swiper .swiper-slide-duplicate-active {
+      transform: scale(1);
+    }
+  }
+
+  @media screen and (max-width:1600px) {
+    #base-swiper {
+      width: 90%;
+    }
+
+    #base-swiper .swiper-slide {
+      margin-top: -5%;
+      margin-bottom: -5%;
+    }
+
+    #base-swiper .swiper-slide-active,
+    #base-swiper .swiper-slide-duplicate-active {
+      transform: scale(0.8);
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    #base-swiper {
+      width: 100%;
+    }
+
+    #base-swiper .swiper-slide {
+      width: 100% !important;
+    }
+  }
+
+  @media screen and (max-width:414px) {
+    #base-swiper {
+      padding-bottom: 0;
+      /* margin-bottom: -15%; */
+      margin-top: -15%;
+    }
+
+    .swiper-button-prev {
+      left: 20%;
+    }
+
+    .swiper-button-next {
+      right: 20%;
+    }
+  }
+</style>
+
+{{ 'swiper.min.js' | asset_url | script_tag }}
+{{ "TweenMax.min.js" | asset_url | script_tag }}
+{{ "ScrollMagic.js" | asset_url | script_tag }}
+{{ "animation.gsap.min.js" | asset_url | script_tag }}
+
+<script>
+  $('#split-slider').coveringBad();
+
+  var video = document.getElementById('modal-video').querySelector('video');
+    $("#modal-toggle").click(function (e) {
+      e.stopPropagation();
+      var modal = $(this).data("target");
+      $(".modal-mask").show();
+      $(modal).addClass('open');
+      video.play();
+
+      $(document).click(function (e) {
+        var _con = $('#modal-video');
+        if (!_con.is(e.target) && _con.has(e.target).length === 0) {
+          video.pause();
+          _con.removeClass('open');
+          $(".modal-mask").hide();
+        }
+      })
+    })
+    $(".pt-modal-close").click(function (e) {
+      e.stopPropagation();
+      video.pause();
+      $('#modal-video').removeClass('open');
+      $(".modal-mask").hide();
+    })
+
+  var swiper_content = new Swiper('#content-swiper', {
+    loop: true,
+    observer: true,
+    observeParents: true,
+    on: {
+      touchEnd: function () {
+        var n = $("#content-swiper").find('.swiper-slide-active').attr('data-swiper-slide-index') || 0;
+        var index = Number(n);
+        swiper_base.slideTo((index + 1), 300, false);
+      },
+    },
+  });
+
+  var controller = new ScrollMagic.Controller();
+  var tween = TweenMax.to("#anim-item", 0.5, {
+    x: -90,
+    y: 24,
+    ease: Linear.easeNone,
+  });
+
+  if (window.innerWidth > 768) {
+    var scene = new ScrollMagic.Scene({
+        triggerElement: "#trigger_sec",
+        duration: 300,
+        onLeave: true,
+        offset: -100,
+      })
+      .setTween(tween)
+      .addTo(controller);
+  } else {
+    var scene = new ScrollMagic.Scene({
+        triggerElement: "#trigger_line",
+        duration: 300,
+        onLeave: true,
+      })
+      .setTween(tween)
+      .addTo(controller);
+  }
+
+  var swiper_base = new Swiper('#base-swiper', {
+    autoplay: {
+      delay: 5000
+    },
+    slidesPerView: 3,
+    observer: true,
+    observeParents: true,
+    spaceBetween: 0,
+    slideToClickedSlide: true,
+    centeredSlides: true,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+      init: function (swiper) {
+        this.emit('slideChangeTransitionEnd');
+      },
+      slideChangeTransitionEnd: function () {
+        $("#base-swiper").find('.swiper-slide').find('.pt-anim-item').removeClass('active');
+        $("#base-swiper").find('.swiper-slide-active').find('.pt-anim-item').addClass('active');
+
+        var n = $("#base-swiper").find('.swiper-slide-active').attr('data-swiper-slide-index') || 0;
+        var index = Number(n);
+        // var tweenArr = [tween_1, tween_2, tween_3];
+
+        // for (let i = 0; i < tweenArr.length; i++) {
+        //   let tweenItem = tweenArr[i];
+        //   if (i === index) {
+        //     tweenItem.restart(true);
+        //   } else {
+        //     tweenItem.pause();
+        //   }
+        // }
+        swiper_content.slideTo((index + 1), 300, false);
+      }
+    },
+  });
+
+  if (window.innerWidth < 769) {
+    swiper_base.params.slidesPerView = 1;
+    swiper_base.params.centeredSlides = false;
+  }
+</script>

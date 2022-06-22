@@ -1,0 +1,41 @@
+<div class="pagination flex items-center justify-center">
+  {{ paginate | default_pagination: previous: '', next: '' }}
+</div>
+<style>
+  .pagination{
+    margin: 0 auto;
+  }
+  .pagination > span{
+    padding-left: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+  }
+
+  .pagination > span a{
+    color: #a9a9a9;
+  }
+  .pagination > span:hover a{
+    color: #fff;
+  }
+  .pagination .prev a,
+  .pagination .next a{
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image:url({{'triggle_pixel.svg' | asset_url }});
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .pagination .prev a{
+    transform: rotate(180deg);
+  }
+  .pagination .current{
+    color:#0bbcd4;
+    background: #fff;
+  }
+</style>

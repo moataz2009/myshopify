@@ -1,0 +1,383 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+{% assign base_name  = 'note20' %}
+<div class="section0 relative">
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-case-section0-' | append: '.jpg' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-case-section0-' | append: '-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture>
+  
+    <div class="pt-section-content absolute pt-position-center">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400 pt-text-center font-upper">Seamless Style</h3>
+    </div>
+  </div>
+  
+  <div class="pt-video-container">
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-case-section-video-' | append: '.jpg' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-case-section-video-' | append: '-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  
+  <div class="section3 relative">
+    <div class="pt-section-content pt-text-center absolute pt-position-centerX">
+      {% if base_name == 'note20' %}
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Magnetic Functionality
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        With built-in metal strips, the MagEZ Case attaches easily to the 
+        <a href="/collections/wireless-chargers" class="pt-link">MagEZ Series magnetic wireless chargers</a> 
+        for an uninterrupted charging experience.
+      </p>
+      {% endif %}
+    </div>
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-case-section3-' | append: '.jpg' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-case-section3-' | append: '-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  
+  <div class="section4 relative">
+    <div class="pt-section-content pt-text-right absolute pt-position-centerY pt-position-right">
+      {% if base_name == 'note20' %}
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Wireless Charging Friendly
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        The metal strips are specifically placed to work alongside your mobile’s wireless charging function.
+      </p>
+      {% endif %}
+    </div>
+  
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-case-section4-' | append: '.jpg' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-case-section4-' | append: '-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  
+  <div class="pt-section section5 pt-flex pt-flex-center pt-flex-between">
+    <div class="pt-section-content">
+      {% if base_name == 'note20' %}
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        In-Car Wireless Charging
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Use the MagEZ Mount Qi for stable in-car wireless charging. For the Note 20 Ultra, add the specially designed
+        form-fitting adapter to your MagEZ Mount Qi.
+      </p>
+      {% endif %}
+    </div>
+    <div id="trigger_sec"></div>
+    <div class="pt-anim-container pt-flex">
+      {% if base_name == 'note20' %}
+      <div class="pt-anim-pictures relative">
+        <div id="trigger_line_1"></div>
+        <img src="{{ placeholder_gif }}"
+          data-src="{{ 'product-case-section5-note20-qi-1.png' | asset_url }}" class="lazyload">
+        <div class="pt-anim-case absolute" id="anim-case-1">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product-case-section5-note20.png' | asset_url }}" class="lazyload">
+        </div>
+      </div>
+  
+      <div class="pt-anim-pictures relative">
+        <div id="trigger_line_2"></div> 
+        <img src="{{ placeholder_gif }}"
+          data-src="{{ 'product-case-section5-note20-qi-2.png' | asset_url }}" class="lazyload">
+        <div class="pt-anim-case absolute" id="anim-case-2">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product-case-section5-note20.png' | asset_url }}" class="lazyload">
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  
+  <div class="section1 relative">
+    <div class="pt-section-content absolute pt-position-centerY">
+      {% if base_name == 'note20' %}
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Aramid Fiber: Slim, Lightweight and Durable
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        With a thickness of only 0.85mm, the aerospace-grade aramid fiber offers protection
+        against daily wear and tear without the bulk.
+      </p>
+      {% endif %}
+      <div class="pt-margin-top-medium pt-hide-mini">
+        <picture class="width-62 pt-block">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product-case-section3-min-17-85.png' | asset_url }}" class="img-responsive lazyload">
+        </picture>
+      </div>
+    </div>
+  
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-case-section1-' | append: '.jpg' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-case-section1-' | append: '-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture>
+  
+    <div class="absolute pt-show-mini width-100">
+      <picture class="width-48 pt-margin-auto pt-block">
+        <img src="{{ placeholder_gif }}"
+          data-src="{{ 'product-case-section3-min-17-85.png' | asset_url }}" class="img-responsive lazyload">
+      </picture>
+    </div>
+  </div>
+  
+  <div class="section2 relative">
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-case-section2-' | append: '.jpg' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-case-section2-' | append: '-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture>
+  
+    <div class="pt-section-content absolute pt-position-right">
+      {% if base_name == 'note20' %}
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        3D Grip<sup>TM</sup> Technology
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-medium">
+        Our unique vacuum forming process retains the raw and original characteristics of aramid, creating a nonslip
+        texture that improves grip while also feeling soft to the touch.
+      </p>
+      {% endif %}
+      {% render 'link-button',link_url: "/pages/3d-grip", link_title:'Learn More About 3D Grip' %}
+    </div>
+  
+  </div>
+  
+  
+  <style>
+    .pt-section-content {
+      max-width: 584px;
+    }
+  
+    .section2 .pt-section-content,
+    .section3 .pt-section-content {
+      top: 10em;
+    }
+  
+    .section5 {
+      height: 56vw;
+    }
+  
+    .section5 .pt-section-content {
+      width: auto;
+      padding-right: 5em;
+    }
+  
+    .pt-hide-mini picture,
+    .pt-show-mini picture {
+      display: block;
+    }
+  
+    @media screen and (max-width:1600px) {
+      .pt-section-content {
+        max-width: 520px;
+        width: 40%;
+      }
+  
+      .section2 .pt-section-content,
+      .section3 .pt-section-content {
+        top: 6em;
+      }
+    }
+  
+    @media screen and (max-width:1280px) {
+      .pt-section-content {
+        max-width: 425px;
+      }
+  
+      .section1 .pt-section-content,
+      .section5 .pt-section-content {
+        left: 7%;
+      }
+  
+      .section4 .pt-section-content {
+        right: 7%;
+      }
+    }
+  
+    @media screen and (max-width:1024px) {
+      .section5 {
+        flex-direction: column;
+        text-align: center;
+      }
+  
+      .section5 .pt-section-content {
+        padding: 0;
+        max-width: unset;
+        width: 60vw;
+      }
+    }
+  
+    @media screen and (max-width:768px) {
+      .section5 {
+        height: 185vw;
+      }
+  
+      .pt-show-mini picture {
+        margin: 0 auto;
+      }
+  
+      .pt-section-content {
+        width: 100%;
+        left: 0 !important;
+        top: 10em;
+        transform: none;
+        text-align: center;
+        padding: 0 20%;
+        max-width: unset;
+      }
+  
+      .section1 .pt-show-mini {
+        bottom: 10em;
+      }
+    }
+  
+    @media screen and (max-width:414px) {
+      .pt-section-content {
+        padding: 0 10%;
+        top: 3em;
+      }
+  
+      .section5 {
+        padding: 3em 7% 0;
+      }
+  
+      .section5 .pt-section-content {
+        padding: 0 10%;
+        width: 100vw;
+      }
+  
+      .section1 .pt-show-mini {
+        bottom: 3em;
+      }
+    }
+  </style>
+  
+  <!-- anim-pictures -->
+  <style>
+    .pt-anim-container {
+      justify-content: space-around;
+      flex-shrink: 0;
+    }
+  
+    .pt-anim-case {
+      top: 0;
+      right: 0;
+    }
+  
+    .pt-anim-pictures {
+      width: 359px;
+      margin: 0 2em;
+    }
+  
+    .pt-anim-pictures img {
+      display: block;
+    }
+  
+    @media screen and (max-width:1024px) {
+      .pt-anim-container {
+        width: 100%;
+      }
+    }
+  
+    @media screen and (max-width:768px) {
+      .pt-anim-container {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .pt-anim-pictures {
+        margin: 5em 0 0;
+      }
+    }
+  
+    @media screen and (max-width:414px) {
+      .pt-anim-container {
+        transform: scale(0.8);
+      }
+    }
+  </style>
+  
+  {{ 'TweenMax.min.js' | asset_url | script_tag }}
+  {{ 'ScrollMagic.js' | asset_url | script_tag }}
+  {{ 'animation.gsap.min.js' | asset_url | script_tag }}
+  
+  <script>
+    $(function () {
+      // init controller
+      var controller = new ScrollMagic.Controller();
+  
+      if (window.innerWidth > 768) {
+  
+        // build tween
+        var tween = TweenMax.to(".pt-anim-case", 0.5, {
+          x: -60,
+          y: 0,
+          ease: Linear.easeNone
+        });
+  
+        // build scene
+        var scene = new ScrollMagic.Scene({
+            triggerElement: "#trigger_sec",
+            duration: 300,
+            onLeave: true,
+          })
+          .setTween(tween)
+          .addTo(controller);
+  
+      } else {
+        // build tween
+        var tween_1 = TweenMax.to("#anim-case-1", 0.5, {
+          x: -60,
+          y: 0,
+          ease: Linear.easeNone
+        });
+        var tween_2 = TweenMax.to("#anim-case-2", 0.5, {
+          x: -60,
+          y: 0,
+          ease: Linear.easeNone
+        });
+  
+        // build scene
+        var scene_1 = new ScrollMagic.Scene({
+            triggerElement: "#trigger_line_1",
+            duration: 300,
+            onLeave: true,
+          })
+          .setTween(tween_1)
+          .addTo(controller);
+  
+        var scene_2 = new ScrollMagic.Scene({
+            triggerElement: "#trigger_line_2",
+            duration: 300,
+            onLeave: true,
+          })
+          .setTween(tween_2)
+          .addTo(controller);
+      }
+    });
+  </script>

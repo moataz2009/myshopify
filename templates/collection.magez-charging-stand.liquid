@@ -1,0 +1,245 @@
+{% render 'buy-bar', product: all_products[collection.handle] %}
+{{ "swiper-bundle.min.css" | asset_url | stylesheet_tag }}
+
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_6 = 'w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28' %}
+{% assign pdClass_b = 'px-3 sm:px-6 md:px-0 pb-16 sm:pb-20 lg:pb-28' %}
+{% assign titleSize = 'text-2xl md:text-3xl font-bold' %}
+{% assign descSize = 'text-sm sm:text-base text-gray-400' %}
+{% assign titleDecoMy = 'block mt-4 mb-6 w-6' %}
+
+{% assign altName = 'MagEZ Charging Stand for Tablets' %}
+
+<div class="relative section-hero">
+  <div class="absolute w-full h-full pb-20 sm:pb-0">
+    <div
+      class="{{wClass}} h-full flex items-start justify-center laptop:justify-start laptop:items-center text-center laptop:text-left">
+      <div class="w-max px-3 sm:px-6 pt-12 laptop:pt-0 transform laptop:-translate-y-1/2 xl:-translate-y-full">
+        <h1 class="{{titleSize}} mb-4 laptop:mb-6">
+          MagEZ Charging Stand<br>
+          For Tablets
+        </h1>
+        <p class="{{descSize}}">
+          Work & Play Like A Pro with Snap n' Charge.
+        </p>
+      </div>
+    </div>
+  </div>
+  <picture>
+    <source data-srcset="{{'magez-charging-stand-section1.webp' | asset_url}}" media="(min-width: 1280px)">
+    <source data-srcset="{{'magez-charging-stand-section1-m.webp' | asset_url}}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{'magez-charging-stand-section1-s.webp' | asset_url}}"
+      alt="{{ altName }}" class="block w-full lazyload">
+  </picture>
+</div>
+
+{%- comment -%}
+<div class="w-full {{pdClass}} bg-gray-800">
+  <div class="{{wClass_8}}">
+    {% render 'video-set' , name:'product-video-magez-charging-stand', no_webm: true, coverPicSuffix:'.webp' %}
+  </div>
+</div>
+{%- endcomment -%}
+
+<div class="w-full {{pdClass}} bg-gray-800">
+  <div class="{{wClass_8}} flex flex-col-reverse laptop:flex-row justify-between items-stretch">
+    <div class="w-full laptop:w-1/2">
+      <img src="{{ placeholder_gif }}" data-src="{{'magez-charging-stand-section3.webp' | asset_url}}"
+        alt="{{ altName }}" class=" block w-full h-full object-cover lazyload">
+    </div>
+    <div class="mb-12 laptop:mb-0 w-full sm:w-4/5 mx-auto laptop:mx-0 laptop:w-4/9 xl:w-3/8 flex flex-col justify-between">
+      <div class="lg:mt-8 mb-12">
+        <h3 class="{{titleSize}}">
+          They Attract Each Other.
+        </h3>
+        <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+        <p class="{{descSize}}">
+          With the "X" pin connectors on the back, the magnetic iPad mini 6 case attaches to the stand with built-in
+          sophisticiately designed magnets. No more fiddling with the cable. Just snap and charge and enjoy.
+        </p>
+      </div>
+      <div class="w-full flex flex-col items-center justify-center">
+        <div id="trigger_line"></div>
+        <div class="attach-container flex items-end justify-end relative">
+          <img src="{{ placeholder_gif }}" data-src="{{'magez-charging-stand-attach-stand.webp' | asset_url}}"
+            alt="{{ altName }}" class="block lazyload">
+          <img src="{{ placeholder_gif }}" data-src="{{'magez-charging-stand-attach-ipad-no_charge.webp' | asset_url}}"
+            alt="{{ altName }}" class=" block lazyload absolute top-0 left-0" id="anim-item-1">
+          <img src="{{ placeholder_gif }}" data-src="{{'magez-charging-stand-attach-ipad-charge.webp' | asset_url}}"
+            alt="{{ altName }}" class=" block lazyload absolute top-0 opacity-0" id="anim-item-2">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="{{wClass_8}} {{pdClass}}">
+  <div class="mx-auto mb-12 w-full sm:w-5/6 md:w-3/5 xl:w-1/2">
+    <h3 class="{{titleSize}}">
+      Multi-Purpose iPad mini 6 Stand.
+    </h3>
+    <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+    <p class="{{descSize}}">
+      Designed ergonomically for eye level, the MagEZ Stand allows you to work comfortably on or view your tablet screen
+      at the perfect position, improving your posture and reducing back and neck strain. And you can set it up with a
+      Bluetooth keyboard and mouse for work or as a second screen for project management or video meetings.
+    </p>
+  </div>
+  <div class="swiper-container picture-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <picture>
+          <source data-srcset="{{'magez-charging-stand-section4-1.webp' | asset_url}}" media="(min-width: 1280px)">
+          <img src="{{ placeholder_gif }}" data-src="{{'magez-charging-stand-section4-1-s.webp' | asset_url}}"
+            alt="{{ altName }}" class="block w-full lazyload">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source data-srcset="{{'magez-charging-stand-section4-2.webp' | asset_url}}" media="(min-width: 1280px)">
+          <img src="{{ placeholder_gif }}" data-src="{{'magez-charging-stand-section4-2-s.webp' | asset_url}}"
+            alt="{{ altName }}" class="block w-full lazyload">
+        </picture>
+      </div>
+    </div>
+    <div class="swiper-pagination px-6 py-3 flex justify-center sm:justify-end"></div>
+  </div>
+</div>
+
+<div class="w-full px-3 sm:px-6 md:px-0" style="background-color:#292d33;">
+  <div class="{{wClass_8}} flex flex-col-reverse sm:flex-row justify-between items-center">
+    <div class="w-full sm:w-1/2 video-second">
+      {% render 'video-set-multiple' , name:'product-video-magez-charging-stand-second', no_webm: true, coverPicSuffix:'.webp', noBtnModel:true, video_id_suffix: 'second' %}
+    </div>
+    <div class="mb-12 sm:mb-0 w-full sm:w-4/9 xl:w-3/8 sm:py-20">
+      <h3 class="{{titleSize}}">
+        Adjust For Your Comfort.
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}}">
+        Featuring an adjustable vertical +32.5°/-5° angle, the iPad mini 6 stand will always give you the best viewing
+        angle. And you can comfortably use your tablet in landscape or portrait mode as you wish.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="{{wClass_8}} {{pdClass}}">
+  <div class="flex flex-col sm:flex-row items-center justify-between">
+    <div class="w-full sm:w-4/9 xl:w-3/8 mb-12 sm:mb-0">
+      <h3 class="{{titleSize}}">
+        Your Mobile Charged Too.
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}}">
+        The aramid fiber wireless charging base charges your mobile with speeds up to 15W*. Instead of sitting your
+        phone idly on the desk, put it on the base, so your device will be charged up when you need it.
+      </p>
+      <p class="text-xs md:text-sm text-gray-400 mt-8">
+        *Android 15W / iPhone 7.5W / Earbuds 5W
+      </p>
+    </div>
+
+    <div class="w-full sm:w-1/2">
+      <div class="flex justify-center bg-gray-800">
+        <img src="{{ placeholder_gif }}" data-src="{{'magez-charging-stand-section6.webp' | asset_url}}"
+          alt="{{ altName }}" class="block w-4/5 lazyload">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="w-full">
+  <picture>
+    <source data-srcset="{{'magez-charging-stand-section7.webp' | asset_url}}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{'magez-charging-stand-section7-s.webp' | asset_url}}"
+      alt="{{ altName }}" class="block w-full lazyload">
+  </picture>
+</div>
+
+<style>
+  .video-second .modal-container{
+    background:#292d33;
+  }
+  .video-second .modal-container video{
+    mix-blend-mode: luminosity;
+  }
+  .attach-container {
+    width: 428px;
+    transform: scale(0.9);
+  }
+
+  .attach-container img {
+    width: 246px;
+    height: 346px;
+  }
+
+  .attach-container img.absolute {
+    width: 227px;
+    height: 215px;
+  }
+
+  .attach-container img#anim-item-2 {
+    left: 142px;
+  }
+
+  .picture-slider .swiper-pagination-bullet {
+    border-radius: 0;
+    width: 24px;
+    height: 3px;
+    background-color: #fff;
+  }
+
+  .picture-slider .swiper-pagination-bullet-active {
+    background-color: #fff;
+  }
+
+  @media screen and (min-width:576px) {
+    .attach-container {
+      transform: scale(1);
+    }
+  }
+
+</style>
+{{'swiper-bundle.min.js' | asset_url | script_tag }}
+
+<script>
+  var swiper_picture = new Swiper('.picture-slider', {
+    // loop: true,
+    roundLengths: true,
+    grabCursor: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    mousewheel: {
+      eventsTarged: '.picture-slider',
+      releaseOnEdges: true
+    }
+  });
+
+  $(function () {
+    var controller = new ScrollMagic.Controller();
+    // build tween
+    var tl = new TimelineLite();
+    tl.to('#anim-item-1', 0.5, {
+      x: 142,
+      ease: Linear.easeNone
+    }).set("#anim-item-1", {
+      opacity: 0
+    }).set("#anim-item-2", {
+      opacity: 1
+    });
+
+    var scene = new ScrollMagic.Scene({
+        triggerElement: "#trigger_line",
+        duration: 300,
+        onLeave: true,
+        offset: -50
+      })
+      .setTween(tl)
+      .addTo(controller);
+  })
+</script>

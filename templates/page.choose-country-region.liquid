@@ -1,0 +1,485 @@
+{% if page.url == '/pages/frontpage' %}
+<script type='text/javascript'>
+  window.location = 'https://www.ipitaka.com';
+</script>
+{% endif %}
+
+
+{{ 'jsvectormap.min.css' | asset_url | stylesheet_tag}}
+{{ 'jsvectormap.min.js' | asset_url | script_tag}}
+{{ 'world.js' | asset_url | script_tag}}
+
+<style>
+  .jsvmap-container {
+    background: #fff;
+  }
+
+  #modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto 5em;
+    width: 75vw;
+    height: 40vw;
+    opacity: 0;
+    transition: all .3s;
+  }
+
+  #map-wrapper {
+    width: 75vw;
+    height: 40vw;
+    border: 1px solid #eee;
+  }
+
+  #modal.open {
+    height: calc(40vw + 50px);
+    opacity: 1;
+  }
+
+  @media screen and (max-width:1280px) {
+
+    #modal,
+    #map-wrapper {
+      width: 80vw;
+      height: 43vw;
+    }
+
+    #modal.open {
+      height: calc(43vw + 30px);
+    }
+  }
+
+  @media screen and (max-width:640px) {
+
+    #modal,
+    #map-wrapper {
+      width: 100vw;
+      height: 53vw;
+    }
+
+    #modal.open {
+      height: 53vw;
+    }
+  }
+</style>
+<div class="pt-section-container text-center">
+  <div class="pt-section">
+    <h1 class="py-8 text-3xl">Choose Your Country or Region</h3>
+    <p class="py-4 text-base">
+      Please select your shipping destination. <br>This will be your default location unless you select
+      another country or close your browser.
+    </p>
+  </div>
+  <div id="modal">
+    <div id="map-wrapper"></div>
+  </div>
+</div>
+
+<script>
+  window.onload = function () {
+
+    var country_code = "US";
+
+    var regions_noshipping = [
+      ''
+    ]
+
+    var regions = {
+      us: [{
+        name: "United States",
+        code: "US",
+      }],
+      ca: [{
+        name: "Canada",
+        code: "CA",
+      }],
+      au: [{
+        name: "Auastrilia",
+        code: "AU",
+      }],
+      asia: [{
+        name: "Russia",
+        code: "RU",
+      },
+             {
+               name: "Cyprus",
+               code: "CY",
+             },
+             {
+               name: "Macedonia",
+               code: "MK",
+             },
+             {
+               name: "Malta",
+               code: "MT",
+             },
+             {
+               name: "Serbia",
+               code: "RS",
+             },
+             {
+               name: "China",
+               code: "CN",
+             },
+             {
+               name: "Monaco",
+               code: "MC",
+             },
+             {
+               name: "Moldova",
+               code: "MD",
+             },
+             {
+               name: "Gibraltar",
+               code: "GI",
+             },
+             {
+               name: "Vatican City",
+               code: "VA",
+             },
+             {
+               name: "Isle of MAN",
+               code: "IM",
+             },
+             {
+               name: "San Marino",
+               code: "SM",
+             },
+             {
+               name: "Svalbard & Jan Mayen",
+               code: "SJ",
+             },
+             {
+               name: "Jersey",
+               code: "JE",
+             },
+             {
+               name: "Kosovo",
+               code: "XK",
+             },
+             {
+               name: "Andorra",
+               code: "AD",
+             },
+             {
+               name: "Iceland",
+               code: "IS",
+             },
+             {
+               name: "Guernsey",
+               code: "GG",
+             },
+             {
+               name: "Faroe Islands",
+               code: "FO",
+             },
+             {
+               name: "Belarus",
+               code: "BY",
+             },
+             {
+               name: "Bosnia & Herzegovina",
+               code: "BA",
+             },
+             {
+               name: "Albania",
+               code: "AL",
+             },
+             {
+               name: "Aland Islands",
+               code: "AX",
+             },
+             {
+               name: "Switzerland",
+               code: "CH",
+             },
+             {
+               name: "Serbia and Montenegro",
+               code: "CS",
+             },
+             {
+               name: "Ukraine",
+               code: "UA",
+             },
+             {
+               name: "Montenegro",
+               code: "ME",
+             },
+             {
+               name: "Norway",
+               code: "NO",
+             },
+            ],
+             europe: [{
+             name: "Austria",
+             code: "AT",
+             },
+             {
+             name: "Belgiunm",
+             code: "BE",
+             },
+             {
+             name: "Bulgaria",
+             code: "BG",
+             },
+             {
+             name: "Croatia",
+             code: "HR",
+             },
+             {
+             name: "Czechia",
+             code: "CZ",
+             },
+             {
+             name: "Denmark",
+             code: "DK",
+             },
+             {
+             name: "Estonia",
+             code: "EE",
+             },
+             {
+             name: "Finland",
+             code: "FI",
+             },
+             {
+             name: "France",
+             code: "FR",
+             },
+             {
+             name: "Germany",
+             code: "DE",
+             },
+             {
+             name: "Greece (Code EL)",
+             code: "EL",
+             },
+             {
+             name: "Greece (Code GR)",
+             code: "GR",
+             },
+             {
+             name: "Hungary",
+             code: "HU",
+             },
+             {
+             name: "Ireland",
+             code: "IE",
+             },
+             {
+             name: "Great Britain (GB)",
+             code: "GB",
+             },
+             {
+             name: "Italy",
+             code: "IT",
+             },
+             {
+             name: "Latvia",
+             code: "LV",
+             },
+             {
+             name: "Liechtenstein",
+             code: "LI",
+             },
+             {
+             name: "Lithuania",
+             code: "LT",
+             },
+             {
+             name: "Luxembourg",
+             code: "LU",
+             },
+             {
+             name: "Netherlands",
+             code: "NL",
+             },
+             {
+             name: "Poland",
+             code: "PL",
+             },
+             {
+             name: "Portugal",
+             code: "PT",
+             },
+             {
+             name: "Israel",
+             code:"IL",
+             },
+             {
+             name: "Romania",
+             code: "RO",
+             },
+             {
+             name: "Slovakia",
+             code: "SK",
+             },
+             {
+             name: "Slovenia",
+             code: "SI",
+             },
+             {
+             name: "Spain",
+             code: "ES",
+             },
+             {
+             name: "Sweden",
+             code: "SE",
+             },
+             {
+             name: "United Kingdom (UK)",
+             code: "UK",
+             },
+            ],
+    };
+
+    var markers = {
+      us: [{
+        name: "US",
+        label: "US",
+        coords: [39.06, -84.7],
+      }],
+      asia: [{
+        name: "Asia",
+        label: "Asia",
+        coords: [22.576, 113.855],
+      }],
+      europe: [{
+        name: "Europe",
+        label: "Europe",
+        coords: [53.076, 8.8],
+      }],
+      ca: [{
+        name: "Canada",
+        label: "Canada",
+        coords: [61.06, -108],
+      }],
+      au: [{
+        name: "Australia",
+        label: "Australia",
+        coords: [-33.88, 151.024],
+      }],
+    };
+
+    var map = new JsVectorMap({
+      map: "world",
+      selector: "#map-wrapper",
+
+      regionsSelectable: true,
+      // markersSelectable: true,
+      // -------- Events --------
+      onRegionSelected: function (target, isSelected, selectedRegions) {
+        // console.log(target, isSelected, selectedRegions);
+        if (isSelected) {
+          for (let i = 0; i < regions_noshipping.length; i++) {
+            const code = regions[i];
+            if (target == code) {
+              return false;
+            } else {
+              map.reset();
+              map.setSelected("regions", [target]);
+              map.setFocus({
+                regions: [target],
+                animate: true
+              })
+            }
+          }
+        } else {
+          map.setSelected("regions", [target]);
+          window.location.href = "https://www.ipitaka.com/?country_override=" + target;
+        }
+      },
+      // -------- Labels --------
+      labels: {
+        markers: {
+          render: function (index) {
+            return markers[index].name;
+          },
+        },
+      },
+      // -------- Region and label style --------
+      regionStyle: {
+        selected: {
+          fill: "#5c5cff",
+        },
+      },
+
+      // -------- Marker and label style --------
+      markers: [],
+      markerStyle: {
+        initial: {
+          fill: "#ff5566",
+        },
+        hover: {
+          stroke: "#676767",
+          fillOpacity: 1,
+          strokeWidth: 2.5,
+          fill: "#ff5566",
+        },
+        selected: {
+          fill: "#ff9251",
+        },
+      },
+      markerLabelStyle: {
+        initial: {
+          fontFamily: "Poppins",
+          fontSize: 13,
+          fontWeight: 500,
+          fill: "#35373e",
+        },
+      },
+
+      // -------- Series --------
+      series: {
+        markers: [{
+          attribute: "fill",
+          scale: {
+            Default: "#ffd400",
+          },
+        }],
+
+        // ---------- Region series ----------
+        regions: [{
+          attribute: "fill",
+          scale: {
+            Default: "#0BBCD4",
+          },
+          values: {},
+        }]
+      }
+    });
+
+    function renderMap(site) {
+      let country_codes = [];
+      for (let i = 0; i < regions[site].length; i++) {
+        const code = regions[site][i].code;
+        country_codes.push(code);
+      }
+
+      // map.removeMarkers(map.getSelectedMarkers());
+      // map.reset();
+      // map.setSelected("regions", country_codes);
+      map.addMarker(site, markers[site][0]);
+      // map.setSelected("markers", [site]);
+      // map.setFocus({
+      //   regions: country_codes,
+      //   animate: true
+      // })
+    }
+
+    for (const site in regions) {
+      if (regions.hasOwnProperty(site)) {
+        const countries = regions[site];
+        for (let i = 0; i < countries.length; i++) {
+          renderMap(site);
+        }
+      }
+    }
+
+
+    let model = document.getElementById('modal');
+    model.classList.toggle("open");
+
+  };
+</script>

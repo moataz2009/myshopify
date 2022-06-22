@@ -1,0 +1,368 @@
+{% assign wClass_8 = 'w-full sm:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+
+{% assign wClass_6 = 'w-full sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+
+{% assign pdClass = 'px-6 lg:px-0 py-16 sm:py-20 lg:py-28' %}
+
+{% assign collection_handle = collection.handle %}
+
+{% assign phone_model = collection_handle | remove: 'case-for-' | remove: '-test' %}
+{% assign compare_items = 'MagEZ Case 2,Air Case,New MagEZ Case Pro' | split: ',' %}
+{% assign compare_lines = 'Description,MagEZ Accessory Compatible,MagSafe Compatible,Thickness,Weight,Protection,Materials,Color' | split: ',' %}
+
+<div class="{{wClass_8}} {{pdClass}} text-center divide-y divide-white divide-opacity-20 divide-solid">
+  <div class="mx-auto sm:w-4/5 md:w-3/5 pb-12">
+    <h1 class="text-2xl xl:text-3xl">
+      Compare PITAKA Cases
+    </h1>
+    <p class="color-gray-400 text-sm mt-8 xl:text-base">
+      Three eye-catching cases with a minimalist aesthetic made to protect and accentuate the flawless design of your
+      iPhone 13. Whether you’re looking for lightweight minimalism, MagSafe compatibility, reinforced protection, we
+      have it for you. And we’ve added two new versions of cases to the iPhone 13 series. Crafted from Fusion Weaving™,
+      the new cases feature a more colorful style and an outstanding three-dimensional effect.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-2 gap-x-3 sm:gap-x-6 -mb-8 block sm:hidden" style="border: none;">
+    <div class="type-box relative -ml-1 xs:ml-0">
+      <div class="tag-container flex justify-between h-14 pb-2">
+        <div class="cursor-pointer h-full flex items-center px-3 text-xs bg-gray-800 text-gray-400" data-target="limited">
+          Fusion Weaving
+        </div>
+        <div class="cursor-pointer h-full flex items-center px-3 text-xs bg-gray-800 text-gray-400 active"
+          data-target="standard">Standard</div>
+      </div>
+      <div class="toggleCategory bg-gray-800 px-2 py-3 xs:px-4">
+        <h3 class="text-xs text-left relative" data-name="{{ compare_items[0] | handleize}}">
+          {{ compare_items[0] }}
+        </h3>
+      </div>
+      <ul class="toggle-list absolute w-full hidden transition duration-300">
+        {% for item in compare_items %}
+        {% assign sub_linkItemClass = 'bg-gray-800 leading-none px-4 text-xs text-left' %}
+        <li data-name="{{ item | handleize }}" class="{{sub_linkItemClass}}">
+          <a href="javascript:;" class="block py-3 h-full text-gray-400 border-b border-solid border-gray-850">
+            {{ item }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="type-box relative -mr-1 xs:mr-0">
+      <div class="tag-container flex justify-between h-14 pb-2">
+        <div class="cursor-pointer h-full flex items-center px-3 text-xs bg-gray-800 text-gray-400" data-target="limited">
+          Fusion Weaving
+        </div>
+        <div class="cursor-pointer h-full flex items-center px-3 text-xs bg-gray-800 text-gray-400 active"
+          data-target="standard">Standard</div>
+      </div>
+      <div class="toggleCategory bg-gray-800 p-3 sm:px-4">
+        <h3 class="text-xs text-left relative" data-name="{{ compare_items[1] | handleize}}">
+          {{ compare_items[1] }}
+        </h3>
+      </div>
+      <ul class="toggle-list absolute w-full hidden transition duration-300">
+        {% for item in compare_items %}
+
+        {% assign sub_linkItemClass = 'bg-gray-800 leading-none px-4 text-xs text-left' %}
+        <li data-name="{{ item | handleize }}" class="{{sub_linkItemClass}}">
+          <a href="javascript:;" class="block py-3 h-full text-gray-400 border-b border-solid border-gray-850">
+            {{item}}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="product-box grid grid-cols-2 sm:grid-cols-3 gap-x-6 md:gap-0">
+    {% assign name_list = 'MagEZ Case 2,Air Case,New MagEZ Case Pro' | split: ',' %}
+    {% for name in name_list %}
+    <div class="hidden sm:block" name="{{name | handleize}}">
+      {% if name == 'New MagEZ Case Pro' %}
+      <div class="tag-container h-14 md:h-10">
+      </div>
+      {% for product in collection.products %}
+      {% assign product_caseType = product.title | split: ' for ' | first %}
+      {% if product_caseType == name %}
+      {% render 'grid-product-item', product: product, title_pos_top: true, desc_no: true, link_buy_btn: true, sm_layout_2:true %}
+      {% endif %}
+      {% endfor %}
+      {% else %}
+      <div class="tag-container flex justify-center h-14 md:h-10 pt-4">
+        <div class="cursor-pointer h-full flex items-center px-3 mx-4 text-xs bg-gray-800 text-gray-400 active" data-target="limited">
+          Fusion Weaving
+        </div>
+        <div class="cursor-pointer h-full flex items-center px-3 mx-4 text-xs bg-gray-800 text-gray-400"
+          data-target="standard">Standard</div>
+      </div>
+      <div class="products-container">
+        {% for product in collection.products %}
+        {% if product.handle contains 'fusion-weaving' %}
+        {% assign product_limited = 'limited' %}
+        {% else %}
+        {% assign product_limited = 'standard' %}
+        {% endif %}
+
+        {% assign product_caseType = product.title | split: ' for ' | first %}
+        {% if product_caseType contains name %}
+        <div class="product-card{% unless product_limited == 'limited' %} hidden{% endunless %}"
+          data-product="{{product_limited}}">
+          {% render 'grid-product-item', product: product, title_pos_top: true, desc_no: true, link_buy_btn: true, sm_layout_2:true %}
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% endif%}
+    </div>
+    {% endfor %}
+  </div>
+
+  {% for lineItem in compare_lines %}
+  <div class="specs-box grid grid-cols-2 sm:grid-cols-3 gap-x-6 md:gap-0">
+
+    {% for item in compare_items %}
+      {% assign data_handle = item | handleize %}
+      {% if data_handle == 'new-magez-case-pro' %}
+        <div class="w-full md:w-5/6 lg:w-4/5 xl:w-2/3 mx-auto py-8 hidden sm:block" name="{{data_handle}}">
+          <p class="text-white text-opacity-40 text-xs mb-2">
+            {{ lineItem }}
+          </p>
+          <h3 class="text-2s sm:text-sm sm:text-base font-bold">
+            {% assign lineLabel = lineItem | strip_html | handleize %}
+            {% assign compareData = settings.compare_data[phone_model][data_handle] %}
+
+            {% for lineData in compareData %}
+            {% assign dataArr = lineData | split: '--' %}
+            {% assign data_l = dataArr | first %}
+            {% if lineLabel contains data_l %}
+            {{ dataArr | last }}
+            {% endif %}
+            {% endfor %}
+
+          </h3>
+        </div>
+      {% else %}
+        <div class="w-full md:w-5/6 lg:w-4/5 xl:w-2/3 mx-auto py-8 hidden sm:block" name="{{data_handle}}">
+          <div class="w-full product-line-card" data-product="limited">
+            <p class="text-white text-opacity-40 text-xs mb-2">
+              {{ lineItem }}
+            </p>
+            <h3 class="text-2s sm:text-sm sm:text-base font-bold">
+              {% assign lineLabel = lineItem | strip_html | handleize %}
+    
+              {% assign compareData = settings.compare_data['fusion-weaving-iphone-13'][data_handle] %}
+    
+              {% for lineData in compareData %}
+              {% assign dataArr = lineData | split: '--' %}
+              {% assign data_l = dataArr | first %}
+              {% if lineLabel contains data_l %}
+              {{ dataArr | last }}
+              {% endif %}
+              {% endfor %}
+    
+            </h3>
+          </div>
+          <div class="w-full hidden product-line-card" data-product="standard">
+            <p class="text-white text-opacity-40 text-xs mb-2">
+              {{ lineItem }}
+            </p>
+            <h3 class="text-2s sm:text-sm sm:text-base font-bold">
+              {% assign lineLabel = lineItem | strip_html | handleize %}
+    
+              {% if collection.title contains 'Phone Cases' %}
+              {% assign compareData = settings.compare_data[phone_model][data_handle] %}
+              {% else %}
+              {% assign compareData = settings.compare_data[data_handle] %}
+              {% endif %}
+    
+              {% for lineData in compareData %}
+              {% assign dataArr = lineData | split: '--' %}
+              {% assign data_l = dataArr | first %}
+              {% if lineLabel contains data_l %}
+              {{ dataArr | last }}
+              {% endif %}
+              {% endfor %}
+    
+            </h3>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% endfor %}
+
+</div>
+
+<div id="metal-modal" class="pt-modal-container">
+  {% assign modalSrc = collection_handle | remove: 'case-for-' | remove: '-series' | remove: 'galaxy-' | remove: '-' | prepend: 'compare-modal-' %}
+  <div class="modal-background">
+    <div class="pt-modal-dialog relative">
+      <button class="pt-modal-close absolute" type="button">
+        <span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </span>
+      </button>
+      <picture>
+        <source data-srcset="{{ modalSrc | append: '-charger.jpg' | asset_url }}" media="(min-width: 769px)">
+        <img src="{{ placeholder_gif }}" data-src="{{ modalSrc | append: '-charger-m.jpg' | asset_url }}"
+          class="block w-full lazyload">
+      </picture>
+    </div>
+  </div>
+</div>
+
+<!-- modal scripts -->
+<script>
+  $(function () {
+    $(".modal-toggle").click(function (e) {
+      e.stopPropagation();
+      var modal = $(this).data("target");
+      $(modal).addClass('open').removeClass('out');
+
+      $(document).click(function (e) {
+        var _con = $(modal);
+        if (!_con.is(e.target) && _con.has(e.target).length === 0) {
+          _con.removeClass('open').addClass('out');
+        }
+      })
+    })
+    $(".pt-modal-close").click(function (e) {
+      e.stopPropagation();
+      $(this).parents('.pt-modal-container').removeClass('open').addClass('out');
+    });
+  })
+</script>
+
+<style>
+  .tag-container>div.active,
+  .tag-container>div:hover {
+    color: #000;
+    background-color: #fff;
+  }
+
+  .toggleCategory {
+    min-width: max-content;
+  }
+
+  .toggleCategory h3::after {
+    position: absolute;
+    content: '';
+    width: 14px;
+    height: 14px;
+    right: 0;
+    top: 3px;
+    transform: rotate(90deg);
+    background:url({{'triggle_pixel.svg' | asset_url }}) no-repeat center center;
+    background-size: contain;
+    transition: all .3s ease;
+  }
+
+  h3.active::after {
+    transform: rotate(-90deg);
+  }
+</style>
+
+<style>
+  @media screen and (max-width:767px) {
+    .title-first {
+      display: none;
+    }
+
+    .product-box {
+      border: none !important;
+    }
+  }
+</style>
+<script>
+  $(function () {
+    function showToggle(itemType) {
+      $('.product-box>div').hide();
+      $('.specs-box>div').hide();
+      $('.tag-container').remove();
+      $('.type-box').each(function () {
+        const type = $(this).find('h3').data('name');
+        $(`[name='${type}']`).show().css('order', ($(this).index() + 1));
+        let tagHTML = '<div class="tag-container h-14 pb-2"></div>';
+        if (type != 'new-magez-case-pro') {
+          tagHTML = `<div class="tag-container flex justify-between h-14 pb-2">
+            <div class="cursor-pointer h-full flex items-center px-3 text-xs bg-gray-800 text-gray-400 active" data-target="limited">
+              Fusion Weaving
+            </div>
+            <div class="cursor-pointer h-full flex items-center px-3 text-xs bg-gray-800 text-gray-400"
+              data-target="standard">Standard</div>
+          </div>`;
+        };
+        $(this).prepend(tagHTML);
+      });
+    }
+    
+    if (window.innerWidth < 768) {
+      $('.type-box').on('click','.tag-container>div', function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        const data_product = $(this).data('target');
+
+        let handle_name = $(this).parents('.type-box').find('h3').data('name');
+        let $target_product = $('.product-box').find('>div').filter(function () {
+          return $(this).attr('name') == handle_name
+        }).find('.products-container').find('.product-card').filter(function () {
+          return $(this).data('product') == data_product
+        });
+
+        $target_product.removeClass('hidden').siblings().addClass('hidden');
+
+        let $target_product_line = $('.specs-box>div').filter(function () {
+          return $(this).attr('name') == handle_name
+        }).find('.product-line-card').filter(function () {
+          return $(this).data('product') == data_product
+        });
+        $target_product_line.removeClass('hidden').siblings().addClass('hidden');
+      });
+
+      showToggle();
+      $('.toggleCategory h3').click(function () {
+        $(this).toggleClass('active');
+        $(this).parent('.toggleCategory').next('ul').slideToggle();
+      })
+
+      $('.toggle-list').on('click', 'li', function () {
+        const prevType = $(this).closest('.type-box').siblings().find('h3').data('name');
+        const itemType = $(this).data('name');
+
+        if (itemType == prevType) {
+          let $sibling = $(this).next().length > 0 ? $(this).next() : $(this).prev();
+          $sibling.click();
+        } else {
+          const itemText = $(this).find('a').text();
+          $(this).parent().prev('.toggleCategory').find('h3').removeClass('active').text(itemText).data('name', itemType);
+          $(this).parent('.toggle-list').slideToggle();
+        }
+        
+        showToggle();
+      });
+    }else{
+      $('.tag-container>div').on('click', function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        const data_product = $(this).data('target');
+        // console.log(data_product)
+        let handle_name = $(this).parent('.tag-container').parent().attr('name');
+        let $target_product = $(this).parent().next('.products-container').find('.product-card').filter(
+        function () {
+          return $(this).data('product') == data_product
+        });
+        $target_product.removeClass('hidden').siblings().addClass('hidden');
+
+        let $target_product_line = $('.specs-box>div').filter(
+        function () {
+          return $(this).attr('name') == handle_name
+        }).find('.product-line-card').filter(
+        function () {
+          return $(this).data('product') == data_product
+        });
+        $target_product_line.removeClass('hidden').siblings().addClass('hidden');
+      });
+    }
+  })
+</script>

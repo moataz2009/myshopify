@@ -1,0 +1,14 @@
+{% comment %}
+  The contents of the collection.liquid template can be found in /sections/collection-template.liquid
+{% endcomment %}
+<script>
+  // console.log(location.pathname)
+  if(location.pathname == '/collections/all')
+    window.location.href = '/collections/pitaka-cases'
+</script>
+
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+
+{% section 'collection-template' %}
+
+{{'swiper-bundle.min.js' | asset_url | script_tag }}

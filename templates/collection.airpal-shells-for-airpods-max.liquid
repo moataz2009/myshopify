@@ -1,0 +1,157 @@
+{% render 'buy-bar', product: all_products[collection.handle] %}
+
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_6 = 'w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28' %}
+{% assign pdClass_b = 'px-3 sm:px-6 md:px-0 pb-16 sm:pb-20 lg:pb-28' %}
+{% assign titleBoxClass= 'mx-auto mb-12 w-11/12 sm:w-5/6 md:w-2/3 xl:w-2/5' %}
+{% assign titleSize = 'text-2xl md:text-3xl font-bold' %}
+{% assign descSize = 'text-sm sm:text-base text-gray-400' %}
+{% assign titleDecoMy = 'block mt-4 mb-6' %}
+
+{% assign absoluteContentBoxClass = 'w-full sm:w-11/12 md:w-10/12 lg:w-9/12 xl:w-8/12 max-w-screen-xl mx-auto px-6 lg:px-0 transform sm:left-1/2 sm:-translate-x-1/2' %}
+{% assign absoluteContentClass = 'transform w-full pr-10 sm:p-0 sm:w-2/5 lg:w-3/8 max-w-md top-12 sm:top-1/2 sm:-translate-y-1/2' %}
+
+<div class="relative section-hero">
+  <div class="absolute {{absoluteContentBoxClass}} sm:h-full z-10">
+    <div class="absolute {{absoluteContentClass}}">
+      <h1 class="{{titleSize}} text-center sm:text-left">
+        A perfect balance of style and protection.
+      </h1>
+    </div>
+  </div>
+
+  <picture>
+    <source data-srcset="{{'airpal-shells-airpods-max-section1.jpg' | asset_url}}" media="(min-width: 1281px)">
+    <source data-srcset="{{'airpal-shells-airpods-max-section1-m.jpg' | asset_url}}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{'airpal-shells-airpods-max-section1-s.jpg' | asset_url}}"
+      alt="Air Pal Shells for AirPods Max" class="block w-full h-full object-cover lazyload">
+  </picture>
+</div>
+
+{% if all_products['air-pal-shells-for-airpods-max'].id %}
+  <div class="{{wClass_8}} {{pdClass}}">
+    <div class="flex flex-wrap justify-between items-end w-full">
+      <div class="w-full sm:w-3/4 md:w-3/5 xl:w-2/5">
+        <h3 class="{{titleSize}}">
+          Stylishly Designed
+        </h3>
+        <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+        <p class="text-sm sm:text-base">
+          Easily gets heads turned toward you.
+        </p>
+      </div>
+      <div class="color-toggles w-full sm:w-1/4 md:w-2/5 -mx-2 mt-6 sm:m-0 flex sm:justify-end">
+        {% for color_option in all_products['air-pal-shells-for-airpods-max'].options_by_name['Color'].values %}
+        <div data-color="{{color_option | handleize}}" 
+          class="toggle-item {% if forloop.first == true %}active {% endif %}rounded-full w-8 mx-2 p-1 border-gray-400 border-2 border-solid box-content cursor-pointer">
+          <img src="{{ color_option | handleize | append: '.svg' | asset_url }}" 
+            alt="{{ color_option }}" class="block width-full rounded-full">
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="flex flex-wrap justify-between items-stretch w-full images-container mt-12">
+      {% for color_option in all_products['air-pal-shells-for-airpods-max'].options_by_name['Color'].values %}
+      {% assign color_str = color_option | handleize | split: '-' %}
+      {% assign color_mid = color_str[1] %}
+      <div class="flex flex-wrap justify-between items-stretch w-full{% if forloop.first == false %} hidden{% endif %}" color="{{color_option | handleize}}">
+        <div class="w-full sm:w-7/12 lg:w-6/10 xl:w-5/8 md:pr-6">
+          <picture>
+            <source data-srcset="{{color_mid | prepend: 'airpal-shells-airpods-max-section2-' | append: '-left.jpg' | asset_url}}" media="(min-width: 768px)">
+            <img src="{{ placeholder_gif }}" data-src="{{color_mid | prepend: 'airpal-shells-airpods-max-section2-' | append: '-left-s.jpg' | asset_url}}"
+              alt="Air Pal Shells for AirPods Max" class="block w-full sm:h-full sm:object-cover object-center lazyload">
+          </picture>
+        </div>
+        <div class="w-full sm:w-5/12 lg:w-4/10 xl:w-3/8">
+          <picture>
+            <source data-srcset="{{color_mid | prepend: 'airpal-shells-airpods-max-section2-' | append: '-right.jpg' | asset_url}}" media="(min-width: 768px)">
+            <img src="{{ placeholder_gif }}" data-src="{{color_mid | prepend: 'airpal-shells-airpods-max-section2-' | append: '-right-s.jpg' | asset_url}}"
+              alt="Air Pal Shells for AirPods Max" class="block w-full sm:h-full sm:object-cover object-center lazyload">
+          </picture>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+<div class="w-full bg-gray-800">
+  <div class="{{wClass}} {{pdClass}} mx-auto">
+    <div class="{{titleBoxClass}} text-center">
+      <h3 class="{{titleSize}}">
+        Full Ear Cup Protection
+      </h3>
+    </div>
+    {% assign descs = 'Crafted from premium 1500D aramid fiber which is five times stronger than steel but way lighter, the covers for AirPods Max can protect your headphones from wear and tear. | The soft microfiber interior cushions your AirPods Max ear cups, offering protection against scratches and scuffs. | A soft curved edge protects your AirPods Max from scratches when you install and remove them.' %}
+    {% render 'center-slides', name:'Air Pal Shells for AirPods Max', picName: 'slider-airpal-shells-airpods-max', sliderDescs:descs, textBg:true %}
+  </div>
+</div>
+
+<div class="{{wClass}} {{pdClass}} flex flex-wrap-reverse justify-between items-center">
+  <div class="w-full sm:w-7/12 md:w-1/2 mt-12 sm:mt-0">
+    <picture>
+      <img src="{{ placeholder_gif }}" data-src="{{'airpal-shells-airpods-max-section4.jpg' | asset_url}}"
+        alt="Air Pal Shells for AirPods Max" class="block w-full lazyload">
+    </picture>
+  </div>
+  <div class="w-full sm:w-3/8 md:w-2/5">
+    <h3 class="{{titleSize}}">
+      Soft Touch Material
+    </h3>
+    <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+    <p class="{{descSize}}">
+      Crafted using a patented process that creates a 3D textured surface that feels soft to the touch.
+    </p>
+  </div>
+</div>
+
+<div class="{{wClass}} {{pdClass_b}} flex flex-wrap justify-between items-center">
+  <div class="w-full sm:w-3/8 md:w-2/5">
+    <h3 class="{{titleSize}}">
+      Ultra-thin & Lightweight
+    </h3>
+    <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+    <p class="{{descSize}}">
+      Listen in comfort with these ultra-slim snap-on covers. Your headphones are already heavy. 
+      Don’t add unnecessary weight over your head and ears.
+    </p>
+  </div>
+  
+  <div class="w-full sm:w-7/12 md:w-1/2 mt-12 sm:mt-0">
+    <picture>
+      <img src="{{ placeholder_gif }}" data-src="{{'airpal-shells-airpods-max-section5.jpg' | asset_url}}"
+        alt="Air Pal Shells for AirPods Max" class="block w-full lazyload">
+    </picture>
+  </div>
+</div>
+
+<div class="{{wClass}} {{pdClass_b}}">
+  <div class="grid gap-3 sm:gap-6 grid-cols-1 md:grid-cols-2">
+    <img src="{{ placeholder_gif }}" data-src="{{'airpal-shells-airpods-max-section6-1.jpg' | asset_url}}"
+      alt="Air Pal Shells for AirPods Max" class="block w-full lazyload">
+    <img src="{{ placeholder_gif }}" data-src="{{'airpal-shells-airpods-max-section6-2.jpg' | asset_url}}"
+      alt="Air Pal Shells for AirPods Max" class="block w-full lazyload">
+    <img src="{{ placeholder_gif }}" data-src="{{'airpal-shells-airpods-max-section6-3.jpg' | asset_url}}"
+      alt="Air Pal Shells for AirPods Max" class="block w-full lazyload">
+    <img src="{{ placeholder_gif }}" data-src="{{'airpal-shells-airpods-max-section6-4.jpg' | asset_url}}"
+      alt="Air Pal Shells for AirPods Max" class="block w-full lazyload">
+  </div>
+</div>
+<style>
+  .toggle-item.active{
+    border-color:#fff;
+  }
+</style>
+<script>
+  $(function(){
+    $(".color-toggles").on('click', '.toggle-item', function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+      $(this).addClass('active').siblings().removeClass('active');
+      const color = $(this).data('color');
+      $('.images-container').find('>div[color = ' + color + ']').removeClass('hidden').siblings().addClass('hidden');
+    });
+  })
+</script>

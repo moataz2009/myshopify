@@ -1,0 +1,211 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+<div class="section-deafult section0 relative">
+    <div class="pt-section-content absolute pt-position-centerY">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400 pt-text-center font-upper">Lightweight Luxury</h3>
+    </div>
+    <picture>
+      <source data-srcset="{{ 'product-aircase-section0-s21.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-aircase-section0-s21-m.jpg' | asset_url }}"
+        alt="Air Case for Samsung Galaxy S21" class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  
+  <div class="section-deafult section1 relative">
+    <div class="pt-section-content absolute pt-position-centerY pt-position-right">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Super-Slim & Lightweight
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        One of the lightest, slimmest cases available, the Air Case covers your Samsung Galaxy S21 with minimalist style.
+      </p>
+      <div class="pt-icons pt-margin-top-small">
+        <picture class="pt-block width-50">
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-aircase-section1-min-10-65.png' | asset_url }}"
+            alt="Air Case for Samsung Galaxy S21" class="img-responsive lazyload">
+        </picture>
+      </div>
+    </div>
+  
+    <picture>
+      <source data-srcset="{{ 'product-aircase-section1-s21.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-aircase-section1-s21-m.jpg' | asset_url }}"
+        alt="Air Case for Samsung Galaxy S21" class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  
+  <div class="section-deafult section2 relative">
+    <div class="pt-section-content absolute pt-position-centerY">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Exclusive Luxury
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-small">
+        The PITAKA Air Cases are crafted using rare and delicate aramid fiber, reserved only for our premium products.
+      </p>
+      {% render 'link-button',link_url: "/pages/600d", link_title:'Learn More About 600D' %} 
+    </div>
+    <picture>
+      <source data-srcset="{{ 'product-aircase-section2-s21.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-aircase-section2-s21-m.jpg' | asset_url }}"
+        alt="Air Case for Samsung Galaxy S21" class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  
+  <div class="section-deafult pt-section section3 pt-flex pt-flex-center pt-flex-between">
+    <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-aircase-section3-s21.png' | asset_url }}"
+        alt="Air Case for Samsung Galaxy S21" class="img-responsive lazyload">
+      </picture>
+      <div class="pt-section-content">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+          A Textured Surface<br>for Improved Grip
+        </h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-small">
+          Our unique vacuum-molding process creates a smooth, nonslip texture that improves grip.
+        </p>
+        {% render 'link-button',link_url: "/pages/3d-grip", link_title:'Learn More About 3D Grip' %}
+      </div>
+  </div>
+  
+  <div class="section-deafult section4 relative">
+    <div class="pt-section-content absolute pt-position-centerY">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Precision Cut Design
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Cut with exceptional accuracy for flawless coverage and effortless access to your smartphone’s features.
+      </p>
+    </div>
+  
+    <picture>
+      <source data-srcset="{{ 'product-aircase-section4-s21.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-aircase-section4-s21-m.jpg' | asset_url }}"
+        alt="Air Case for Samsung Galaxy S21" class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  
+  <div class="section-deafult section5 relative  bg-black">
+    <div class="pt-section-content absolute text-center pt-position-centerX">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Wireless and Reverse Charging Friendly
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-small">
+        The Air Case’s ultra-slim design allows you to wireless charge your S21 Series phone and reverse-wireless charge
+        another qi-enabled device.
+      </p>
+    </div>
+    <picture>
+      <source data-srcset="{{ 'product-aircase-section5-s21.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-aircase-section5-s21-m.jpg' | asset_url }}"
+        alt="Air Case for Samsung Galaxy S21" class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  
+  <style>
+    .section3{
+      padding: 10em 10% 15em 0;
+    }
+    .pt-section-content {
+      max-width: 485px;
+    }
+  
+    .pt-section-content.text-center{
+      max-width: unset;
+      top: 12%;
+    }
+  
+    @media screen and (min-width:1960px) {
+      .pt-section-content {
+        max-width: 516px;
+      }
+    }
+  
+    @media screen and (max-width:1600px) {
+      .pt-section-content {
+        max-width: 388px;
+      }
+      .pt-section-content.text-center{
+        top: 5em;
+      }
+    }
+  
+    @media screen and (max-width:1280px) {
+      .pt-section-content {
+        width: 45%;
+        max-width: 362px;
+      }
+    }
+  
+    @media screen and (max-width:768px) {
+  
+      .section3{
+        padding: 5em 0 10em;
+        min-height: unset;
+        flex-direction: column-reverse;
+      }
+  
+      .pt-section-content {
+        width: 100%;
+        left: 0;
+        top: 10%;
+        transform: none;
+        text-align: center;
+        padding: 0 18%;
+        max-width: unset;
+      }
+  
+      .pt-section-content.text-center{
+        top: 10%;
+      }
+  
+      .section0 .pt-section-content {
+        width: 100%;
+        padding: 0 10%;
+        transform: none;
+        top: 8%;
+        left: 0;
+      }
+  
+      .section3 .pt-section-content{
+        width: 100%;
+        margin-bottom: 5em;
+      }
+  
+      .section3 img{
+        max-width: 80%;
+        transform: rotateY(180deg);
+        float: right;
+      }
+  
+      .section1 .pt-section-content .pt-icons{
+        display: flex;
+        justify-content: center;
+      }
+  
+      .section4 .pt-section-content .pt-icons picture {
+        width: 90%;
+      }
+    }
+  
+    @media screen and (max-width:414px) {
+      .pt-section-content {
+        padding: 0 10%;
+        top: 3em;
+      }
+      .section3{
+        padding: 4em 0 8em;
+      }
+      .section5{
+        padding-top: 5em;
+      }
+      .pt-section-content.text-center{
+        top: 3em;
+      }
+      .section5 .pt-section-content h3{
+        max-width: 225px;
+        margin: 0 auto 10px;
+      }
+    }
+  </style>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1606px" height="80px" viewBox="0 0 1606 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>1920_时间线</title>
+    <defs>
+        <linearGradient x1="0%" y1="50.0000788%" x2="100%" y2="50.0001791%" id="linearGradient-1">
+            <stop stop-color="#52EC69" offset="0%"></stop>
+            <stop stop-color="#33BCB1" offset="15.2347435%"></stop>
+            <stop stop-color="#52EC69" offset="50.1259117%"></stop>
+            <stop stop-color="#37DAB8" offset="63.69885%"></stop>
+            <stop stop-color="#14CC70" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="环保页面_web_1920" transform="translate(-154.000000, -6249.000000)">
+            <g id="1920_时间线" transform="translate(154.000000, 6259.000000)">
+                <line x1="11" y1="62" x2="1604.5" y2="64" id="直线-2" stroke="url(#linearGradient-1)" stroke-width="2" stroke-linecap="square"></line>
+                <g id="编组-8" transform="translate(0.000000, 53.000000)" fill="#00D583">
+                    <path d="M8.5,17 C13.1944204,17 17,13.1944204 17,8.5 C17,3.80557963 13.1944204,0 8.5,0 C3.80557963,0 0,3.80557963 0,8.5 C0,13.1944204 3.80557963,17 8.5,17 Z" id="椭圆形备份" opacity="0.364583333"></path>
+                    <path d="M8.5,12.2777778 C10.5864091,12.2777778 12.2777778,10.5864091 12.2777778,8.5 C12.2777778,6.41359095 10.5864091,4.72222222 8.5,4.72222222 C6.41359095,4.72222222 4.72222222,6.41359095 4.72222222,8.5 C4.72222222,10.5864091 6.41359095,12.2777778 8.5,12.2777778 Z" id="椭圆形"></path>
+                </g>
+                <line x1="409.5" y1="61.5" x2="409.5" y2="55.5" id="直线-3" stroke="#3DCA9A" stroke-width="2" stroke-linecap="square"></line>
+                <line x1="808.5" y1="61.5" x2="808.5" y2="55.5" id="直线-3备份" stroke="#51EB6C" stroke-width="2" stroke-linecap="square"></line>
+                <g id="编组-7" transform="translate(1206.000000, 0.000000)">
+                    <line x1="0.5" y1="61.5" x2="0.5" y2="55.5" id="直线-3备份-2" stroke="#16CD75" stroke-width="2" stroke-linecap="square"></line>
+                    <text id="2025" font-family="Montserrat-Bold, Montserrat" font-size="34" font-weight="bold" line-spacing="16" fill="#3BD18A">
+                        <tspan x="0" y="33">2025</tspan>
+                    </text>
+                </g>
+                <text id="Now-(2022)" font-family="Montserrat-Bold, Montserrat" font-size="34" font-weight="bold" line-spacing="16" fill="#3BD18A">
+                    <tspan x="6" y="33">Now (2022)</tspan>
+                </text>
+                <text id="2023" font-family="Montserrat-Bold, Montserrat" font-size="34" font-weight="bold" line-spacing="16" fill="#3BD18A">
+                    <tspan x="409" y="33">2023</tspan>
+                </text>
+                <text id="2024" font-family="Montserrat-Bold, Montserrat" font-size="34" font-weight="bold" line-spacing="16" fill="#3BD18A">
+                    <tspan x="808" y="33">2024</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

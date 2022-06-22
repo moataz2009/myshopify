@@ -1,0 +1,311 @@
+{% comment %}
+	GEMPAGE BUILDER (https://apps.shopify.com/gempage)
+
+	You SHOULD NOT modify source code in this page because
+	It is automatically generated from GEMPAGE BUILDER
+	Try to edit page with the live editor.
+{% endcomment %}
+<!--GEM_HEADER-->
+
+<link data-instant-track rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="https://d1um8515vdn9kb.cloudfront.net/files/vendor.css?refresh=1" class="gf-style" />
+<link data-instant-track rel="stylesheet" type="text/css" href="{{ 'gem-article-556684542022.css' | asset_url }}" class="gf_page_style">
+<!--GEM_HEADER_END-->
+{%- assign new_comment = false -%}
+{% if comment and comment.created_at %}
+{%- assign new_comment = true -%}
+{%- assign new_comment_id = comment.id -%}
+{% endif %}{% if new_comment %}
+{%- assign duplicate_comment = false %}
+  {% for comment in article.comments %}
+{% if comment.id == new_comment_id %}
+{%- assign duplicate_comment = true %}
+      {% break %}
+{% endif %}
+{% endfor %}{% if duplicate_comment %}
+{%- assign number_of_comments = article.comments_count -%}
+{% else %}
+{%- assign number_of_comments = article.comments_count | plus: 1 -%}
+{% endif %}
+{% else %}
+{%- assign number_of_comments = article.comments_count -%}
+{% endif %}<div class="article w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto px-3 sm:px-6 md:px-0" itemscope itemtype="http://schema.org/Article">
+  <header class="section-header">
+    <div class="breadcrumb flex mx-auto w-full mt-12 mb-6 items-center">
+      <a class="navLink block text-sm 2xl:text-base text-gray-400 hover:text-white leading-tight mr-4 pr-8 bg-right bg-no-repeat" href="/">Home</a> 
+      <a class="navLink block text-sm 2xl:text-base text-gray-400 hover:text-white leading-tight mr-4 pr-8 bg-right bg-no-repeat" href="/blogs/news">Blogs</a>
+    </div>    <h1 class="lg:text-3xl md:text-3xl sm:text-xl my-4">{{ article.title }}</h1>
+    <ul class="list--inline article-meta txt--minor">
+      <li><time datetime="{{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' }}">{{ article.created_at | date: format: 'date' }}</time></li>
+      <li>        {% if article.id == 556170444870
+        or article.id == 384566689862 
+        or article.id == 383582568518 
+        or article.id == 383582830662 
+        or article.id == 383424036934 
+        or article.id == 383424004166 
+        or article.id == 383543640134 
+        or article.id == 383319932998 
+        or article.id == 383292637254 
+        or article.id == 383262392390 
+        or article.id == 30680711238 
+        or article.id == 30572904518 
+        or article.id == 30525161542 
+        or article.id == 30354047046 
+        or article.id == 29922426950 
+        or article.id == 29746626630 
+        or article.id == 29746659398 
+        or article.id == 212734994 
+        or article.id == 214428946 
+        or article.id == 215933586 
+        or article.id == 769425436 
+        or article.id == 989102108 
+        or article.id == 1481932828 
+        or article.id == 5296586790 
+        or article.id == 5355405350 
+        or article.id == 5368447014 
+        or article.id == 5580652582 
+        or article.id == 29186818118 
+        or article.id == 29258940486 
+        or article.id == 29582032966 
+        or article.id == 29722837062 
+        or article.id == 29722804294 
+        or article.id == 383262392390
+        %}
+        by PITAKA Team
+        {% endif %}
+        {% if article.id < 216476817 %}
+        by <a href="#author">Rebecca</a>
+        {% elsif article.id > 216476817 and article.id < 30680711238 %}
+        by <a href="#author">Lily</a>
+        {% elsif article.id > 30680711238 and article.id < 556131221571 %}
+        {% unless article.id == 383262457926 %}
+        by <a href="#author">Claire</a>
+        {% endunless %}
+        {% elsif article.id == 383262457926 %}
+        by James
+        {% elsif article.id > 556131221572 and article.id < 556227625031 %}
+        {% unless article.id == 556170444870 %}
+        by Alistair
+        {% endunless %}
+        {% else %}
+         by <a href="#author">Claire</a>
+        {% endif %}
+      </li>
+      
+    </ul>
+    {% include 'social-sharing', share_title: article.title, share_permalink: article.url, share_image: article.image %}
+  </header>
+  <div class="grid gap-4 grid-cols-1 md:grid-cols-3">
+    <article class="col-span-1 md:col-span-2 px-3 py-6 md:px-6 mb-6 blog-article bg-gray-800 text-gray-400" itemprop="articleBody">
+      
+<!--Gem_Page_Main_Editor--><div class="clearfix"></div><div class="gryffeditor"></div><div id="divContentBk"></div><!--End_Gem_Page_Main_Editor-->
+      {% unless article.id == 29922426950 or article.id == 556170444870 %}
+      {% if article.excerpt != '' %}
+      {% assign article_author = article.excerpt | strip | strip_html | downcase %}
+      {% assign article_authors = 'claire, lily, rebecca, hollie' %}
+      {% if article_authors contains article_author %}
+      {% case article_author %}
+      {% when 'claire' %}
+      <div class="author pt-flex" id="author">
+        {{ 'Claire.png' | asset_url | img_tag: 'Claire', 'float-left' }}
+        <div class="author-content pt-text-small">
+          <h4>About the Author</h4>
+          <p>
+            Love of tea, movies, video games, and writing. I've been writing hundreds of online articles over the past few years, mainly about technology. If I'm not writing, you can probably find me reading or playing video games.
+          </p>
+          <div class="clearfix author-links">
+            <a href="mailto:claire@ipitaka.com" class="pt-link">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      {% when 'hollie' %}
+      <div class="author pt-flex" id="author">
+        {{ 'hollie_info.png' | asset_url | img_tag: 'Hollie', 'float-left' }}
+        <div class="author-content pt-text-small">
+          <h4>About the Author</h4>
+          <p>
+            Lover of crime dramas, tiny DIY, playing my Nintendo Switch, and vintage. I've been blogging for over five years on many different topics, including tech, apps, and productivity. When I'm not writing, you'll probably find me binge-watching black and white movies.
+          </p>
+          <div class="clearfix author-links">
+            <a href="mailto:hollie@ipitaka.com" class="pt-link">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      {% when 'lily' %}
+      <div class="author pt-flex" id="author">
+        {{ 'Lily.png' | asset_url | img_tag: 'Lily', 'float-left' }}
+        <div class="author-content pt-text-small">
+          <h4>About the Author</h4>
+          <p>Lily, not just a blogger of PITAKA but also an aficionado of science fiction and fantasy. From books such
+            as Harry Potter to movies such as Interstellar. One of her greatest interests in her daily life is
+            discovering the coolest inventions from various fields especially electronic products.</p>
+          <div class="clearfix author-links">
+            <a href="mailto:lily@ipitaka.com">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/lolily123456" target="_blank">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      {% when 'rebecca' %}
+      <div class="author pt-flex" id="author">
+        {{ 'rebecca.png' | asset_url | img_tag: 'Rebecca', 'float-left' }}
+        <div class="author-content pt-text-small">
+          <h4>About the Author</h4>
+          <p>
+            Rebecca is the blogger of PITAKA. After receiving a new iPhone 5 at eighteen from her father, she fell in
+            love with various technologies and fascinated of how life evolves with iPhone. In Rebecca's spare time,
+            she enjoyed hanging around a nearby electronics mall, that could be one of the largest fun for her by now.
+          </p>
+          <div class="clearfix author-links">
+            <a href="mailto:rebecca@ipitaka.com">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/Rebecca05115714" target="_blank">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endcase %}
+      {% endif %}
+      {% else %}
+      {% if article.id > 30680711238 and article.id < 556131221573 %}
+      <div class="author pt-flex" id="author">
+        {{ 'Claire.png' | asset_url | img_tag: 'Claire', 'float-left' }}
+        <div class="author-content pt-text-small">
+          <h4>About the Author</h4>
+          <p>
+            Love of tea, movies, video games, and writing. I've been writing hundreds of online articles over the past few years, mainly about technology. If I'm not writing, you can probably find me reading or playing video games.
+          </p>
+          <div class="clearfix author-links">
+            <a href="mailto:claire@ipitaka.com" class="pt-link">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      {% elsif  article.id > 216476817 and article.id < 30680711238 %}
+      <div class="author pt-flex" id="author">
+        {{ 'Lily.png' | asset_url | img_tag: 'Lily', 'float-left' }}
+        <div class="author-content pt-text-small">
+          <h4>About the Author</h4>
+          <p>Lily, not just a blogger of PITAKA but also an aficionado of science fiction and fantasy. From books such
+            as Harry Potter to movies such as Interstellar. One of her greatest interests in her daily life is
+            discovering the coolest inventions from various fields especially electronic products.</p>
+          <div class="clearfix author-links">
+            <a href="mailto:lily@ipitaka.com">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/lolily123456" target="_blank">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      {% elsif article.id < 216476817 %}
+      <div class="author pt-flex" id="author">
+        {{ 'rebecca.png' | asset_url | img_tag: 'Rebecca', 'float-left' }}
+        <div class="author-content pt-text-small">
+          <h4>About the Author</h4>
+          <p>
+            Rebecca is the blogger of PITAKA. After receiving a new iPhone 5 at eighteen from her father, she fell in
+            love with various technologies and fascinated of how life evolves with iPhone. In Rebecca's spare time,
+            she enjoyed hanging around a nearby electronics mall, that could be one of the largest fun for her by now.
+          </p>
+          <div class="clearfix author-links">
+            <a href="mailto:rebecca@ipitaka.com">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/Rebecca05115714" target="_blank">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endif %}
+      {% endunless %}
+      {% if blog.comments_enabled? %}
+      <hr class="hr--clear">
+      <div class="comments-wrapper grid">
+        <div class="">
+          
+          <div class="form-vertical">
+            {% form 'new_comment', article %}            
+            <h3 id="AddCommentTitle" class="h2">{{ 'blogs.comments.title' | t }}</h3>            {{ form.errors | default_errors }}            <label for="CommentAuthor" class="label--hidden">{{ 'blogs.comments.name' | t }}</label>
+            <input type="text" name="comment[author]" id="CommentAuthor" class="placeholder-gray-800 text-gray-850 input-full{% if form.errors contains 'author' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.name' | t }}" value="{{ form.author }}" autocapitalize="words">            <label for="CommentEmail" class="label--hidden">{{ 'blogs.comments.email' | t }}</label>
+            <input type="email" name="comment[email]" id="CommentEmail" class="placeholder-gray-800 text-gray-850 input-full{% if form.errors contains 'email' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.email' | t }}" value="{{ form.email }}" autocorrect="off" autocapitalize="off">            <label for="CommentBody" class="label--hidden">{{ 'blogs.comments.message' | t }}</label>
+            <textarea name="comment[body]" id="CommentBody" class="placeholder-gray-800 text-gray-850 input-full comment__textarea{% if form.errors contains 'body' %} input--error{% endif %}" placeholder="{{ 'blogs.comments.message' | t }}">{{ form.body }}</textarea>            {% if blog.moderated? %}
+            <p><span class="txt--minor txt--emphasis">{{ 'blogs.comments.moderated' | t }}</span></p>
+            {% endif %}            <input type="submit" class="btn" value="{{ 'blogs.comments.post' | t }}">
+            {% endform %}
+          </div>
+        </div>
+        <div class="w-full pt-6">
+          {% if number_of_comments > 0 %}
+          <h3 class="h2">{{ 'blogs.comments.with_count' | t: count: number_of_comments }}</h3>
+          {% endif %}
+          {% paginate article.comments by 5 %}          
+          <div id="comments">            {% if new_comment %}
+            <p class="note form--success">
+              {% if blog.moderated? %}
+              {{ 'blogs.comments.success_moderated' | t }}
+              {% else %}
+              {{ 'blogs.comments.success' | t }}
+              {% endif %}
+            </p>
+            {% endif %}            {% if number_of_comments > 0 %}
+            <ul class="comment-list">
+              
+              {% if new_comment %}
+              {% unless paginate.current_page > 1 %}
+              <li id="{{ comment.id }}" class="comment">
+                {% include 'comment' %}
+              </li>
+              {% endunless %}
+              {% endif %}              
+              {% for comment in article.comments %}
+              {% unless comment.id == new_comment_id %}
+              <li id="{{ comment.id }}" class="comment">
+                {% include 'comment' %}
+              </li>
+              {% endunless %}
+              {% endfor %}
+            </ul>            {% if paginate.pages > 1 %}
+            {% include 'pagination' %}
+            {% endif %}
+            {% endif %}          </div>
+          {% endpaginate %}
+        </div>
+      </div>
+      {% endif %}      <hr class="hr--clear">
+      <div class="clearfix flex justify-between">
+        {% if blog.previous_article %}
+        <div class="text-left text-sm flex-1">{{ 'blogs.article.older_post' | t | link_to: blog.previous_article }}</div>
+        {% endif %}
+        {% if blog.next_article %}
+        <div class="text-right text-sm flex-1">{{ 'blogs.article.newer_post' | t | link_to: blog.next_article }}</div>
+        {% endif %}
+      </div>
+    </article>    <sidebar class="col-span-1 blog-sidebar">
+      {% render 'blog-sidebar' %}
+    </sidebar>
+  </div></div>
+{{ 'yotpo-custom.css' | asset_url | stylesheet_tag }}
+<!--GEM_FOOTER-->
+{% capture GEM_FOOTER_SCRIPT %}
+<script data-instant-track type="text/javascript">
+	var pageLibs = [		'{{ 'gem-article-556684542022.js' | asset_url }}',	];
+</script>
+<script data-instant-track type="text/javascript">
+	var GEMVENDOR = GEMVENDOR || (function(){		var _js = {};		return {			init: function(Args) {				_js = Args;			},			getLibs: function() {				return _js;			}		};	}());	GEMVENDOR.init(pageLibs);</script>
+<script data-instant-track type="text/javascript" src="https://d1um8515vdn9kb.cloudfront.net/files/gempagev2.js?v=1.0" class="gf-script" defer></script>
+{% endcapture %}
+<!--GEM_FOOTER_END-->

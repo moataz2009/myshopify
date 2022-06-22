@@ -1,0 +1,126 @@
+
+
+<div class="lg:w-7/12 md:w-9/12 sm:w-11/12 m-auto">
+  <div class="breadcrumb flex mx-auto w-full my-6 px-6 flex items-center">
+    <a class="navLink block text-sm 2xl:text-base text-gray-400 hover:text-white leading-tight mr-4 pr-8 bg-right bg-no-repeat" href="/">Home</a>
+    <a class="navLink block text-sm 2xl:text-base text-gray-400 hover:text-white leading-tight mr-4 pr-8 bg-right bg-no-repeat" href="/pages/inspiring-culture">Inspiring Culture</a>
+  </div>
+  <h1 class="py-6 px-6">PITAKA Ecosystem</h1>
+
+
+  <div class="py-6 px-6">
+    <div class="grid grid-cols-3">
+      <div class="text-center py-6 px-6 border">
+
+        <div class="flex-col md:flex-row flex items-center md:justify-center">
+          <!--Code Block for white tooltip starts-->
+          <a tabindex="0" role="link" aria-label="tooltip 1" class="relative mt-20 md:mt-0" onmouseover="showTooltip(1)" onfocus="showTooltip(1)" onmouseout="hideTooltip(1)">
+            <div class=" cursor-pointer">
+              img1
+            </div>
+            <div id="tooltip1" role="tooltip" class="hidden -mt-20 w-48 absolute transition bg-white p-4 rounded">
+              txt1
+            </div>
+          </a>
+          <!--Code Block for white tooltip ends-->
+        </div>
+
+      </div>
+      <div class="text-center py-6 px-6 border  bg-gray-400">2</div>
+      <div class="text-center py-6 px-6 border">
+        <div class="flex-col md:flex-row flex items-center md:justify-center">
+          <!--Code Block for white tooltip starts-->
+          <a tabindex="0" role="link" aria-label="tooltip 2" class="relative mt-20 md:mt-0" onmouseover="showTooltip(2)" onfocus="showTooltip(2)" onmouseout="hideTooltip(2)">
+            <div class=" cursor-pointer">
+              img2
+            </div>
+            <div id="tooltip2" role="tooltip" class="hidden -mt-20 w-48 absolute transition bg-white p-4 rounded">
+              txt2
+            </div>
+          </a>
+          <!--Code Block for white tooltip ends-->
+        </div>
+
+      </div>
+      <div class="text-center py-6 px-6 border  bg-gray-400">4</div>
+      <div class="text-center py-6 px-6 border">Core</div>
+      <div class="text-center py-6 px-6 border  bg-gray-400">6</div>
+      <div class="text-center py-6 px-6 border">
+        <div class="flex-col md:flex-row flex items-center md:justify-center">
+          <!--Code Block for white tooltip starts-->
+          <a tabindex="0" role="link" aria-label="tooltip 3" class="relative mt-20 md:mt-0" onmouseover="showTooltip(3)" onfocus="showTooltip(3)" onmouseout="hideTooltip(3)">
+            <div class=" cursor-pointer">
+              img3
+            </div>
+            <div id="tooltip3" role="tooltip" class="hidden -mt-20 w-48 absolute transition bg-white p-4 rounded">
+              txt3
+            </div>
+          </a>
+          <!--Code Block for white tooltip ends-->
+        </div>
+      </div>
+      <div class="text-center py-6 px-6 border  bg-gray-400">8</div>
+      <div class="text-center py-6 px-6 border">
+        <div class="flex-col md:flex-row flex items-center md:justify-center">
+          <!--Code Block for white tooltip starts-->
+          <a tabindex="0" role="link" aria-label="tooltip 4" class="relative mt-20 md:mt-0" onmouseover="showTooltip(4)" onfocus="showTooltip(4)" onmouseout="hideTooltip(4)">
+            <div class=" cursor-pointer">
+              img4
+            </div>
+            <div id="tooltip4" role="tooltip" class="hidden -mt-20 w-48 absolute transition bg-white p-4 rounded">
+              txt4
+            </div>
+          </a>
+          <!--Code Block for white tooltip ends-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-6 px-6 grid sm:grid-cols-1">
+    <div class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1">
+      <div class="text-left py-6"></div>
+      <div class="text-left py-6 text-right">
+        <a href="/pages/define-fashion-through-designs">Define Fashion through Designs</a>
+      </div>
+    </div>
+  </div>
+  <div class="powr-comments" id="9aa86b3d_1637824036"></div><script src="https://www.powr.io/powr.js?platform=shopify"></script>
+</div>
+<script>
+  function showTooltip(flag) {
+    switch (flag) {
+      case 1:
+        document.getElementById("tooltip1").classList.remove("hidden");
+        break;
+      case 2:
+        document.getElementById("tooltip2").classList.remove("hidden");
+        break;
+      case 3:
+        document.getElementById("tooltip3").classList.remove("hidden");
+        break;
+      case 4:
+        document.getElementById("tooltip4").classList.remove("hidden");
+        break;
+    }
+  }
+  function hideTooltip(flag) {
+    switch (flag) {
+      case 1:
+        document.getElementById("tooltip1").classList.add("hidden");
+        break;
+      case 2:
+        document.getElementById("tooltip2").classList.add("hidden");
+        break;
+      case 3:
+        document.getElementById("tooltip3").classList.add("hidden");
+        break;
+      case 4:
+        document.getElementById("tooltip4").classList.add("hidden");
+        break;
+    }
+  }
+</script>
+<style>
+  #tooltip1, #tooltip2, #tooltip3, #tooltip4 {left:-180%;}
+</style>
+{{ 'welcom-bg-m.jpg' | asset_url , img_tag: 'popup' }}

@@ -1,0 +1,276 @@
+<footer class="bg-black px-6 py-12 sm:px-12 sm:pt-20 lg:pt-32" role="contentinfo">
+  {% comment %}
+  Show Shop Links from footer linklist if it has any links
+  {% endcomment %}
+  {% assign wp_Class = 'w-full sm:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto sm:px-6 lg:px-0' %}
+  {% assign flexClass = 'flex flex-col items-stretch justify-between lg:flex-row' %}
+
+  <div class="{{wp_Class}} {{flexClass}}">
+    <div class="w-full flex flex-col justify-between lg:pr-8 xl:pr-16 lg:w-max">
+
+      {{'logo-white.png' | asset_url | img_tag:'PITAKA','block mx-auto lg:mx-0 max-w-max'}}
+      <div class="text-center lg:text-left mt-20 mb-12 lg:mb-0">
+        <h3 class="{{titleSize}} {{titleMb_tight}}">Join Us</h3>
+        <p class="w-max my-4 text-sm mx-auto lg:mx-0">
+          Sign up to be a part of our global community,<br>
+          offering you a world of exclusive benefits.
+        </p>
+        <div class="privy-embed-form" data-campaign="2651818"></div>
+      </div>
+    </div>
+
+    <div class="w-full mt-12 xl:w-1/2 lg:max-w-screen-md lg:mt-0">
+      <div class="text-center sm:text-left flex flex-col justify-center sm:flex-row lg:justify-end">
+        {% for link in linklists[section.settings.footer_link_list].links %}
+        <ul class="min-w-max xs:px-8 mb-12 md:m-0 sm:pl-8 xl:pl-16 lg:pr-0">
+          <li class="text-lg font-bold mb-4 sm:mb-8">{{ link.title }}</li>
+          {% for sublink in link.links %}
+          <li class="text-sm mt-3">
+            <a class="text-gray-400 hover:text-white hover:opacity-100"
+               {%if sublink.url contains 'ref.ipitaka' %} target="_blank"{%endif%} href="{{ sublink.url }}">{{ sublink.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="{{wp_Class}} {{flexClass}} mt-18 sm:items-end sm:mt-24 text-sm">
+    <div class="w-full pr-0 lg:pr-8 xl:pr-16 lg:w-max text-gray-400 text-center lg:text-left">
+      <div class="mx-auto mt-4 text-center sm:mx-0 lg:text-left">
+        <span class="text-sm block text-gray-400">Follow us on</span>
+        <div class="flex flex-row items-center justify-center lg:justify-start mt-4">
+          {% if settings.social_twitter_link != blank %}
+          <a href="{{ settings.social_twitter_link | escape }}" class="text-white"
+             title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Twitter' }}">
+            <span class="icon icon-twitter text-2xl mr-5" aria-hidden="true"></span>
+            <span class="visually-hidden">Twitter</span>
+          </a>
+          {% endif %}
+          {% if settings.social_facebook_link != blank %}
+          <a href="{{ settings.social_facebook_link | escape }}" class="text-white"
+             title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Facebook' }}">
+            <span class="icon icon-facebook text-2xl mr-5" aria-hidden="true"></span>
+            <span class="visually-hidden">Facebook</span>
+          </a>
+          {% endif %}
+
+          {% if settings.social_pinterest_link != blank %}
+          <a href="{{ settings.social_pinterest_link | escape }}" class="text-white"
+             title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Pinterest' }}">
+            <span class="icon icon-pinterest text-2xl mr-5" aria-hidden="true"></span>
+            <span class="visually-hidden">Pinterest</span>
+          </a>
+          {% endif %}
+          {% if settings.social_google_plus_link != blank %}
+          <a href="{{ settings.social_google_plus_link | escape }}" rel="publisher" class="text-white"
+             title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Google Plus' }}">
+            <span class="icon icon-google_plus text-2xl mr-5" aria-hidden="true"></span>
+            <span class="visually-hidden">Google Plus</span>
+          </a>
+          {% endif %}
+          {% if settings.social_instagram_link != blank %}
+          <a href="{{ settings.social_instagram_link | escape }}" class="text-white"
+             title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Instagram' }}">
+            <span class="icon icon-instagram text-2xl mr-5" aria-hidden="true"></span>
+            <span class="visually-hidden">Instagram</span>
+          </a>
+          {% endif %}
+          {% if settings.social_snapchat_link != blank %}
+          <a href="{{ settings.social_snapchat_link | escape }}" class="text-white"
+             title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Snapchat' }}">
+            <span class="icon icon-snapchat text-2xl mr-5" aria-hidden="true"></span>
+            <span class="visually-hidden">Snapchat</span>
+          </a>
+          {% endif %}
+          {% if settings.social_tumblr_link != blank %}
+          <a href="{{ settings.social_tumblr_link | escape }}" class="text-white"
+             title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Tumblr' }}">
+            <span class="icon icon-tumblr text-2xl mr-5" aria-hidden="true"></span>
+            <span class="visually-hidden">Tumblr</span>
+          </a>
+          {% endif %}
+          {% if settings.social_youtube_link != blank %}
+          <a href="{{ settings.social_youtube_link | escape }}" class="text-white"
+             title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'YouTube' }}">
+            <span class="icon icon-youtube text-2xl mr-5" aria-hidden="true"></span>
+            <span class="visually-hidden">YouTube</span>
+          </a>
+          {% endif %}
+          {% if settings.social_vimeo_link != blank %}
+          <a href="{{ settings.social_vimeo_link | escape }}" class="text-white"
+             title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Vimeo' }}">
+            <span class="icon icon-vimeo text-2xl mr-5" aria-hidden="true"></span>
+            <span class="visually-hidden">Vimeo</span>
+          </a>
+          {% endif %}
+          {% if settings.social_fancy_link != blank %}
+          <a href="{{ settings.social_fancy_link | escape }}" class="text-white"
+             title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Fancy' }}">
+            <span class="icon icon-fancy text-2xl mr-5" aria-hidden="true"></span>
+            <span class="visually-hidden">Fancy</span>
+          </a>
+          {% endif %}
+
+          <a href="https://discord.com/invite/UXdSJpB" class="text-white"
+             title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Discord' }}">
+            <span class="block h-12 flex items-center">
+              <img src="{{'newEd-icon-discord.png' | asset_url}}" 
+                   alt="PITAKA Discord" itemprop="icon" style="width: 25px;">
+            </span>
+            <span class="visually-hidden">Discord</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="w-full max-w-full mt-12 lg:mt-0 xl:w-1/2 lg:max-w-screen-md text-center lg:text-right text-gray-400">
+      <div class="my-6">
+        <span class="block">Contact us</span>
+        <a class="block" href="tel:(877) 886 6888">US: (877) 886 6888</a>
+        <a class="block" href="mailto:support@ipitaka.com">support@ipitaka.com</a>
+      </div>
+      <span class="block">&copy; {{ 'now' | date: '%Y' }} PITAKA. All Rights Reserved.</span>
+      <span class="block">
+        PITAKA is a registered trademark of What TO Carry Co.,Ltd in the US and other countries.
+      </span>
+    </div>
+  </div>
+
+  {%- comment -%}
+  {%- if section.settings.show_payment_icons -%}
+  {%- unless shop.enabled_payment_types == empty -%}
+  <span class="visually-hidden">{{ 'general.payment.method' | t }}</span>
+  <ul class="list--inline payment-icons payment-icons--footer">
+    {%- for type in shop.enabled_payment_types -%}
+    <li>
+      {{ type | payment_type_svg_tag: class: 'payment-icons__icon' }}
+    </li>
+    {%- endfor -%}
+  </ul>
+  {%- endunless -%}
+  {%- endif -%}
+  {%- endcomment -%}
+</footer>
+<script type="text/javascript">
+window.Trengo = window.Trengo || {};
+window.Trengo.key = 'e8rlCCZROYTL57y';
+(function(d, script, t) {
+    script = d.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = 'https://static.widget.trengo.eu/embed.js';
+    d.getElementsByTagName('head')[0].appendChild(script);
+}(document));
+</script>
+
+
+{% schema %}
+{
+"name": {
+"cs": "Zápatí",
+"da": "Sidefod",
+"de": "Fußzeile",
+"en": "Footer",
+"es": "Pie de página",
+"fi": "Alatunniste",
+"fr": "Pied de page",
+"it": "Footer",
+"ja": "フッター",
+"ko": "바닥글",
+"nb": "Footer",
+"nl": "Voettekst",
+"pl": "Stopka",
+"pt-BR": "Rodapé",
+"pt-PT": "Rodapé",
+"sv": "Sidfot",
+"th": "ส่วนท้าย",
+"tr": "Altbilgi",
+"vi": "Chân trang",
+"zh-CN": "页脚",
+"zh-TW": "頁尾"
+},
+"class": "footer-section",
+"settings": [
+{
+"type": "link_list",
+"id": "footer_link_list",
+"label": {
+"cs": "Nabídka",
+"da": "Menu",
+"de": "Menü",
+"en": "Menu",
+"es": "Menú",
+"fi": "Valikko",
+"fr": "Menu",
+"it": "Menu",
+"ja": "メニュー",
+"ko": "메뉴",
+"nb": "Meny",
+"nl": "Menu",
+"pl": "Menu",
+"pt-BR": "Menu",
+"pt-PT": "Menu",
+"sv": "Meny",
+"th": "เมนู",
+"tr": "Menü",
+"vi": "Menu",
+"zh-CN": "菜单",
+"zh-TW": "選單"
+},
+"default": "footer",
+"info": {
+"cs": "V této nabídce se nezobrazí položky rozevíracího seznamu",
+"da": "Denne menu viser ikke rullemenupunkter",
+"de": "Dieses Menü zeigt keine Dropdowns an",
+"en": "This menu won't show dropdown items",
+"es": "Este menú no mostrará elementos desplegables",
+"fi": "Tämä valikko ei näytä pudotuskohteita",
+"fr": "Ce menu n'affichera pas les éléments des menus déroulants",
+"it": "Questo menu non mostrerà elementi a discesa",
+"ja": "このメニューにはドロップダウンアイテムは表示されません",
+"ko": "이 메뉴는 드롭 다운 항목을 표시하지 않습니다.",
+"nb": "Denne menyen vil ikke vise rullegardinelementer",
+"nl": "Dit menu laat geen vervolgkeuze-artikelen zien.",
+"pl": "W tym menu pozycje rozwijane nie będą wyświetlane",
+"pt-BR": "Este menu não mostra itens suspensos",
+"pt-PT": "Este menu não irá mostrar itens pendentes",
+"sv": "Den här menyn kommer inte att visa objekt i rullgardinsmenyn",
+"th": "เมนูนี้จะไม่แสดงรายการดรอปดาวน์",
+"tr": "Bu menü açılır öğeleri göstermez",
+"vi": "Menu này sẽ không hiển thị các mục thả xuống",
+"zh-CN": "此菜单不会显示下拉项",
+"zh-TW": "這個選單不會顯示下拉式項目"
+}
+},
+{
+"type": "checkbox",
+"id": "show_payment_icons",
+"label": {
+"cs": "Zobrazit ikony plateb",
+"da": "Vis betalingsikoner",
+"de": "Zahlungssymbole anzeigen",
+"en": "Show payment icons",
+"es": "Mostrar iconos de pago",
+"fi": "Näytä maksukuvakkeet",
+"fr": "Afficher les icônes de paiement",
+"it": "Mostra le icone di pagamento",
+"ja": "支払いアイコンを表示する",
+"ko": "결제 아이콘 표시",
+"nb": "Vis betalingsikoner",
+"nl": "Betalingspictogrammen weergeven",
+"pl": "Pokaż ikony płatności",
+"pt-BR": "Exibir ícones de pagamento",
+"pt-PT": "Mostrar ícones de pagamento",
+"sv": "Visa betalningsikoner",
+"th": "แสดงไอคอนการชำระเงิน",
+"tr": "Ödeme simgelerini göster",
+"vi": "Hiển thị biểu tượng thanh toán",
+"zh-CN": "显示付款图标",
+"zh-TW": "顯示付款圖示"
+},
+"default": true
+}
+]
+}
+{% endschema %}

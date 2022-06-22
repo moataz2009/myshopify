@@ -1,0 +1,582 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+{% assign base_name = "essential" %}
+<div class="section1 pt-flex pt-flex-center pt-flex-column bg-black">
+    <div class="width-100 pt-text-center">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400 font-upper">Simplified Charging</h3>
+    </div>
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-section1-' | append:'.png' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{  base_name | prepend: 'product-section1-' | append:'-m.png' | asset_url }}"
+        class="img-responsive lazyload">
+    </picture>
+  </div>
+  
+  <div class="pt-video-container multiple bg-black">
+    <video loop muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+      x5-video-orientation="portraint" preload="none" class="lazyload"
+      data-poster="{{ 'product-air-omni-cover.jpg' | asset_url }}" autoplay style="object-fit:contain">
+      <source src="{{ 'product-air-essential.mp4' | asset_url }}" type="video/mp4">
+      <source src="{{ 'product-air-essential.webm' | asset_url }}" type="video/webm">
+    </video>
+  </div>
+  {%- comment -%}
+  {% render 'background-video', background_video:'product-air-essential', video_cover:'product-air-essential-cover' %}
+  {%- endcomment -%}
+  
+  <div class="section2 relative bg-black">
+    <div class="pt-section-content absolute pt-position-centerY">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Instant Wireless Charging Without the Hassle
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Equipped with Chain-Coil™ technology, the Air Essential offers positionless wireless charging. Simply place your
+        device anywhere on the wireless charging pad for an instant charge.
+      </p>
+    </div>
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-section2-' | append:'.jpg' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-section2-' | append:'-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+
+  <div class="section4 pt-flex pt-flex-center pt-flex-between bg-black">
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-section3-' | append:'.jpg' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{  base_name | prepend: 'product-section3-' | append:'-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture>
+    <div class="pt-section-picture">
+      <picture>
+        <source data-srcset="{{ base_name | prepend: 'product-section4-' | append:'.png' | asset_url }}"
+          media="(min-width: 769px)">
+        <img src="{{ placeholder_gif }}"
+          data-src="{{ base_name | prepend: 'product-section4-' | append:'-m.png' | asset_url }}"
+          class="img-responsive width-100 lazyload">
+      </picture>
+    </div>
+    <div class="pt-section-content pt-text-right">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Aramid and Metal base</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Crafted from aerospace-grade aramid fiber, PITAKA’s wireless charging pad is exceptionally durable and safe. The
+        combination of aramid fiber and aluminum materials offers everyday luxury that fits your office aesthetic.
+      </p>
+    </div>
+  </div>
+  
+  <div class="pt-section section5 pt-flex pt-flex-center pt-flex-column bg-black">
+    <div class="pt-section-content pt-text-center pt-margin-bottom-large">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Supports Fast Charging</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-medium">
+        The Air Essential uses our unique and patented wireless charging mat that provides uninterrupted, fast charging
+        for your Qi-certified device.
+      </p>
+    </div>
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-section5-' | append:'.png' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-section5-' | append: '-m.png' | asset_url }}"
+        class="img-responsive lazyload">
+    </picture>
+  </div>
+  
+  <div class="pt-section section6 pt-flex pt-flex-center pt-flex-column bg-black">
+    <div class="pt-section-content pt-text-center pt-margin-bottom-large">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Charge Your Qi-certified devices</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        As well as charging your mobile, the Air Essential can charge other devices with Qi wireless charging
+        capabilities, such as AirPods and Galaxy Earbuds.
+      </p>
+    </div>
+    <picture class="width-100">
+      <source data-srcset="{{ base_name | prepend: 'product-section6-' | append:'.jpg' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{  base_name | prepend: 'product-section6-' | append:'-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  
+  {%- comment -%}
+  <div class="section7 relative pt-bg-dark">
+    <div class="skewed pt-hide-small" id="split-slider">
+      <div class="split-layer split-bottom">
+        <div class="content_wrapper">
+          <div class="content_body">
+            <h3>Obsidian Black</h3>
+          </div>
+          <img src="{{ placeholder_gif }}"
+            data-src="{{  base_name | prepend: 'product-section7-' | append:'-1.png' | asset_url }}"
+            class="img-responsive lazyload">
+        </div>
+      </div>
+      <div class="split-layer split-top">
+        <div class="content_wrapper">
+          <div class="content_body">
+            <h3>Crystal Silver</h3>
+          </div>
+          <img src="{{ placeholder_gif }}"
+            data-src="{{  base_name | prepend: 'product-section7-' | append:'-2.png' | asset_url }}"
+            class="img-responsive lazyload">
+        </div>
+      </div>
+      <div class="split-handle"></div>
+    </div>
+  
+    <div class="pt-flex pt-flex-center pt-flex-column pt-show-small relative">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6 absolute pt-position-centerX">Obsidian Black</h3>
+      <picture>
+        <img src="{{ placeholder_gif }}"
+          data-src="{{  base_name | prepend: 'product-section7-' | append:'.jpg' | asset_url }}"
+          class="img-responsive width-100 lazyload">
+      </picture>
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6 absolute pt-position-centerX">Crystal Silver</h3>
+    </div>
+  </div>
+  {%- endcomment -%}
+  
+  <div class="section8  bg-black">
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-section8-' | append:'.jpg' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{  base_name | prepend: 'product-section8-' | append:'-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  {%- comment -%}
+  <!-- split slider css-->
+  <style>
+    #split-slider {
+      position: relative;
+      width: 100vw;
+      min-height: 50vw;
+      overflow: hidden;
+    }
+  
+    .split-layer {
+      position: absolute;
+      width: 100vw;
+      min-height: 50vw;
+      overflow: hidden;
+    }
+  
+    .split-layer .content_wrapper {
+      width: 100vw;
+      min-height: 50vw;
+      position: absolute;
+    }
+  
+    .split-layer .content_wrapper>img {
+      position: absolute;
+      top: 60%;
+      left: 47%;
+      transform: translate(-50%, -50%);
+      width: 35%;
+    }
+  
+    .split-layer .content_body {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    .split-layer .content_body h3 {
+      margin: 0;
+    }
+  
+    .layer img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+    .split-bottom {
+      background: #252525;
+      z-index: 1;
+    }
+  
+    .split-bottom .content_body {
+      right: 7%;
+  
+    }
+  
+    .content_body h3 {
+      font-size: 1.5em;
+      text-align: left;
+      font-weight: 700;
+    }
+  
+    .split-top {
+      background: #171719;
+      width: 50vw;
+      z-index: 2;
+    }
+  
+    .split-top .content_body {
+      left: 7%;
+    }
+  
+    .split-handle {
+      position: absolute;
+      left: 50%;
+      width: 3px;
+      top: 0;
+      /* background: #a40000; */
+      height: 100%;
+      z-index: 3;
+    }
+  
+    .skewed .split-handle {
+      top: 50%;
+      transform: rotate(43deg) translateY(-50%);
+      height: 200%;
+      transform-origin: top;
+    }
+  
+    .skewed .split-top {
+      transform: skew(-43deg);
+      margin-left: -1000px;
+      width: calc(50vw + 1000px)
+    }
+  
+    .skewed .split-top .content_wrapper {
+      transform: skew(43deg);
+      margin-left: 1000px;
+    }
+  
+    @media screen and (max-width:1440px) {
+      #split-slider {
+        min-height: 60vw;
+      }
+  
+      .split-layer {
+        min-height: 60vw;
+      }
+  
+      .split-layer .content_wrapper {
+        min-height: 60vw;
+      }
+  
+      .split-layer .content_wrapper>img {
+        top: 55%;
+        left: 48%;
+        width: 40%;
+      }
+    }
+  
+    @media screen and (max-width:1280px) {
+      #split-slider {
+        min-height: 70vw;
+      }
+  
+      .split-layer {
+        min-height: 70vw;
+      }
+  
+      .split-layer .content_wrapper {
+        min-height: 70vw;
+      }
+  
+      .split-layer .content_wrapper>img {
+        top: 55%;
+        left: 48%;
+        width: 50%;
+      }
+    }
+  
+    @media screen and (max-width:1024px) {
+      #split-slider {
+        min-height: 100vw;
+      }
+  
+      .split-layer {
+        min-height: 100vw;
+      }
+  
+      .split-layer .content_wrapper {
+        min-height: 100vw;
+      }
+  
+      .split-layer .content_wrapper>img {
+        top: 55%;
+        left: 48%;
+        width: 50%;
+      }
+  
+      .content_body h3 {
+        font-size: 1.1em;
+      }
+  
+      .split-handle {
+        display: none;
+      }
+    }
+  
+    @media screen and (max-width:767px) {
+      .split-top .content_body {
+        top: 2em;
+        transform: none;
+      }
+  
+      .split-bottom .content_body {
+        top: unset;
+        bottom: 2em;
+        right: 7%;
+        transform: none;
+      }
+  
+      .content_body h3 {
+        font-size: 1em;
+        text-align: left;
+      }
+  
+      .split-layer .content_wrapper>img {
+        width: 90%;
+      }
+  
+    }
+  </style>
+  {%- endcomment -%}
+  
+  <style>
+    .section1 .pt-text-center {
+      transform: translateY(100%);
+    }
+  
+    .section2 .pt-section-content {
+      padding-right: 10%;
+      max-width: calc(584px + 10%);
+    }
+  
+    .section3 {
+      flex-wrap: wrap;
+    }
+  
+    .section4 {
+      flex-wrap: wrap;
+    }
+  
+    .section6 {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  
+    .section4>picture {
+      width: 100%;
+    }
+  
+    .section4 .pt-section-picture {
+      max-width: calc(60% - 5em);
+      padding: 5em 0;
+    }
+  
+    .section4 .pt-section-content {
+      padding: 0 10vw 0 5em;
+      width: calc(40% + 5em);
+    }
+  
+    .section5 picture {
+      max-width: 68%;
+    }
+  
+    .section7 .pt-show-small picture {
+      display: block;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  
+    .section7 .pt-show-small picture:nth-child(3) {
+      margin-top: -20%;
+    }
+  
+  
+    @media screen and (max-width:1280px) {
+      .pt-section {
+        padding: 4em 7%;
+      }
+  
+      .section2 .pt-section-content {
+        left: 7%;
+        padding-right: 7%;
+      }
+  
+      .section4 .pt-section-content {
+        padding: 0 7vw 0 4em;
+      }
+  
+      .section7 {
+        padding: 4em 0;
+      }
+  
+      .section7 .pt-section-title {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  
+    @media screen and (max-width:1024px) {
+      .section7 .pt-show-small picture {
+        width: 100%;
+        max-width: unset;
+      }
+  
+      .section7 .absolute:first-child {
+        top: 4em;
+      }
+  
+      .section7 .absolute:last-child {
+        bottom: 4em;
+        top: unset;
+      }
+    }
+  
+    @media screen and (max-width:768px) {
+      .pt-section .pt-section-content {
+        width: 100%;
+      }
+  
+      .pt-bg-dark {
+        background: #171719;
+      }
+  
+      .pt-section {
+        padding: 4em 10%;
+      }
+  
+      .section2 .pt-section-content {
+        text-align: center;
+        width: 100%;
+        top: 4em;
+        left: 0;
+        transform: none;
+        padding: 0 10%;
+      }
+  
+      .section4 .pt-section-content {
+        width: 100%;
+        text-align: center;
+        order: 1;
+        padding: 4em 10%;
+      }
+  
+      .section4>picture {
+        order: 2;
+      }
+  
+      .section4 .pt-section-picture {
+        order: 3;
+        max-width: 100%;
+        padding: 4em 0;
+      }
+  
+      .section5 {
+        padding: 4em 10%;
+      }
+  
+      .section6 .pt-section-content {
+        padding: 0 10%;
+      }
+  
+      .section7 {
+        padding: 0;
+      }
+    }
+  
+    @media screen and (max-width:414px) {
+      .pt-section {
+        padding: 3em 7%;
+      }
+  
+      .section2 .pt-section-content {
+        top: 3em;
+      }
+  
+      .section4 .pt-section-content {
+        padding: 3em 7%;
+      }
+  
+      .section4 .pt-section-picture {
+        padding: 3em 10% 3em 0;
+      }
+  
+      .section5 {
+        padding: 3em 7%;
+      }
+  
+      .section7 .absolute:first-child {
+        top: 3em;
+      }
+  
+      .section7 .absolute:last-child {
+        bottom: 3em;
+      }
+    }
+  </style>
+  
+  {%- comment -%}
+  <!-- split screen js -->
+  <script>
+    function addEvent(ele, type, callback) {
+      if (ele.addEventListener) {
+        ele.addEventListener(type, callback, false)
+      } else if (ele.attachEvent) {
+        ele.attachEvent("on" + type, callback)
+      }
+    }
+  
+    function getEle(name) {
+      var method = name.charAt(0) === '.' ? 'getElementsByClassName' : 'getElementById';
+      return document[method](name.substr(1));
+    }
+  
+    function func() {
+      var wrapper = getEle('#split-slider');
+      var bottomWrapper = getEle('.split-bottom')[0];
+      var topWrapper = getEle('.split-top')[0];
+      var handle = getEle('.split-handle')[0];
+      var cls = wrapper.className;
+      var skew = 1000;
+      var delta = 0;
+  
+      addEvent(wrapper, 'mousemove', function (ev) {
+        var e = ev || window.event;
+        delta = (e.clientX - window.innerWidth / 2) * 0.5;
+        handle.style.left = e.clientX + delta + 'px';
+        topWrapper.style.width = e.clientX + skew + delta + 'px';
+      })
+    }
+  
+    addEvent(document, 'DOMContentLoaded', func);
+  </script>
+  {%- endcomment -%}
+  
+  <!-- video script -->
+  <script>
+    $(function () {
+      let winWidth = window.innerWidth;
+      let video_mp4, video_webm;
+      if (winWidth > 768) {
+        video_mp4 = `<source src="{{ 'product-air-essential.mp4' | asset_url }}" type="video/mp4">`
+        video_webm = `<source src="{{ 'product-air-essential.webm' | asset_url }}" type="video/webm">`;
+      } else {
+        video_mp4 = `<source src="{{ 'product-air-essential-m.mp4' | asset_url }}" type="video/mp4">`
+        video_webm = `<source src="{{ 'product-air-essential-m.webm' | asset_url }}" type="video/webm">`;
+      }
+      $("#pt-video").html('');
+      $("#pt-video").append(video_mp4);
+      $("#pt-video").append(video_webm);
+  
+    })
+  </script>

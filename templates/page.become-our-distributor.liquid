@@ -1,0 +1,530 @@
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %} {%
+assign wClass_8 = 'w-full sm:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl
+mx-auto' %} {% assign wClass_6 = 'w-full md:w-10/12 lg:w-8/12 xl:w-6/12
+max-w-screen-xl mx-auto' %} {% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16
+sm:py-20 lg:py-28' %} {% assign pdClass_t = 'px-3 sm:px-6 md:px-0 pt-12 sm:pt-16
+lg:pt-20' %} {% assign titleBoxClass= 'mx-auto mb-12 w-11/12 sm:w-5/6 md:w-2/3
+xl:w-2/5' %} {% assign titleSize = 'text-2xl md:text-3xl font-bold' %} {% assign
+descSize = 'text-sm sm:text-base text-gray-400' %} {% assign titleDecoMy =
+'block mt-4 mb-12' %} {% assign absoluteContentBoxClass = 'w-full laptop:w-10/12
+max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2
+-translate-x-1/2 top-0' %} {% assign absoluteContentClass = 'text-center
+lg:text-left absolute transform w-4/5 lg:w-1/2 xl:w-3/8 top-20 left-1/2
+-translate-x-1/2 max-w-md lg:translate-x-0 lg:left-0 lg:top-1/2
+lg:-translate-y-1/2' %}
+
+<div class="w-full relative section-hero">
+    <div
+        class="absolute w-full sm:w-10/12 laptop:w-8/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-0">
+        <div
+            class="absolute text-left transform w-4/5 lg:w-1/2 xl:w-3/8 max-w-md left-4 xs:left-8 sm:left-0 bottom-8 xs:bottom-20">
+            <h3 class="text-3xl md:text-4xl font-bold">Distributor</h3>
+        </div>
+    </div>
+    <picture>
+        <source data-srcset="{{
+                'become-our-distributor-section1.jpg' | asset_url
+            }}" media="(min-width: 1280px)" />
+        <source data-srcset="{{
+                'become-our-distributor-section1-m.jpg' | asset_url
+            }}" media="(min-width: 768px)" />
+        <img src="{{ placeholder_gif }}" data-src="{{ 'become-our-distributor-section1-s.jpg' | asset_url }}"
+            alt="Become Our Distributor" class="block w-full h-full object-cover lazyload" />
+    </picture>
+</div>
+
+<div class="bg-gray-850">
+    <div class="w-full {{ pdClass }}">
+        <div class="w-10/12 sm:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl
+        mx-auto h-full">
+            <h3 class="{{ titleSize }} mb-2">Grow With PITAKA</h3>
+            <div class="flex flex-col sm:flex-row items-center justify-between">
+                <div class="w-full sm:w-1/2 mb-6 sm:mb-0">
+                    <div class="{{ titleDecoMy }}"></div>
+                    <p class="{{ descSize }}">
+                        <span class="font-bold">PITAKA</span> is founded by a
+                        team of designers, engineers, and creatives across
+                        multiple fields with an alternative approach to all
+                        things technology. We help people be successful and
+                        confident by making protective casing to care for their
+                        daily essentials. We are a company dedicated to
+                        advancing science and style in this specialist area. We
+                        focus on distinct materials, and we have become a large
+                        and successful company selling cases, wallets and covers
+                        for the essentials of modern life around the world.
+                    </p>
+                </div>
+
+                <div class="w-full sm:w-3/8">
+                    <p class="{{ descSize }}">
+                        We need partners across the globe to achieve our
+                        ultimate goal and we want to help you be successful with
+                        your business too as we grow.
+                    </p>
+                    <div class="{{ titleDecoMy }}"></div>
+                    {% render 'link-button',link_url: "/pages/about-us",
+                    link_title:'Learn More' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-gray-800">
+    <div class="w-full {{ pdClass }}">
+        <div class="{{
+                wClass_8
+            }} h-full flex flex-col sm:flex-row items-center justify-between">
+            <div class="w-full sm:w-4/8 mb-12 sm:mb-0">
+                <picture>
+                    <source data-srcset="{{
+                            'become-our-distributor-section2.jpg' | asset_url
+                        }}" media="(min-width: 768px)" />
+                    <img src="{{ placeholder_gif }}" data-src="{{
+                            'become-our-distributor-section2.jpg' | asset_url
+                        }}" alt="Become Our Distributor" class="block w-full lazyload" />
+                </picture>
+            </div>
+            <div class="w-10/12 sm:w-3/8">
+                <h3 class="{{ titleSize }}">
+                    Become Our Distributor
+                </h3>
+                <div class="{{ titleDecoMy }}"></div>
+                <p class="{{ descSize }}">
+                    By choosing to cooperate with PITAKA, rest assured that your
+                    customers will receive the highest quality products on time.
+                    We guarantee express delivery and fulfilment, offer help
+                    during the design and shipping stage, and provide tools to
+                    support sales and promotion activities.
+                </p>
+                <div class="{{ titleDecoMy }}"></div>
+                {% render 'link-button',link_url: "#join", link_title:'Join Now'
+                %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="w-full relative">
+    <div
+        class="absolute w-full sm:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto h-full absolute transform left-1/2 -translate-x-1/2 top-0 px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28">
+        <div class="absolute text-left transform w-7/12 sm:w-full top-10 sm:top-10 md:top-20 left-1/2 -translate-x-1/2">
+            <div class="sm:w-full">
+                <h3 class="text-md xs:text-2xl md:text-3xl font-bold mb-3 sm:mb-6 text-center sm:text-left">
+                    What You'll Get
+                </h3>
+                <ul
+                    class="text-sm lg:text-xl list-style grid grid-cols-1 sm:grid-cols-3 sm:gap-y-2 items-start justify-around">
+                    <li class="leading-6 xs:leading-10 sm:leading-8 md:leading-10">
+                        Reliable business partner
+                    </li>
+                    <li class="leading-6 xs:leading-10 sm:leading-8 md:leading-10">
+                        Marketing support
+                    </li>
+                    <li class="leading-6 xs:leading-10 sm:leading-8 md:leading-10">
+                        Product training
+                    </li>
+                    <li class="leading-6 xs:leading-10 sm:leading-8 md:leading-10">
+                        Top-quality service
+                    </li>
+                    <li class="leading-6 xs:leading-10 sm:leading-8 md:leading-10">
+                        Technical support
+                    </li>
+                    <li class="leading-6 xs:leading-10 sm:leading-8 md:leading-10">
+                        Start-up package
+                        <p class="text-gray-400 text-xs">
+                            (that includes reviewing sales activity and
+                            strategizing improvements)
+                        </p>
+                    </li>
+                </ul>
+                <div class="">
+                    {% render 'link-button',link_url: "#join", link_title:'Join
+                    Now' %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <picture>
+        <source data-srcset="{{
+                'become-our-distributor-section3.jpg' | asset_url
+            }}" media="(min-width: 1280px)" />
+        <source data-srcset="{{
+                'become-our-distributor-section3-m.jpg' | asset_url
+            }}" media="(min-width: 768px)" />
+        <img src="{{ placeholder_gif }}" data-src="{{ 'become-our-distributor-section3-s.jpg' | asset_url }}"
+            alt="Become Our Distributor" class="block w-full h-full object-cover lazyload" />
+    </picture>
+</div>
+
+<div class="bg-gray-800">
+    <div class="w-full {{ pdClass }}">
+        <div class="{{
+                wClass_8
+            }} h-full flex flex-col sm:flex-row items-center justify-between">
+            <div class="w-10/12 sm:w-3/8 mb-12 sm:mb-0">
+                <h3 class="{{ titleSize }} ">Corporate Sales</h3>
+                <div class="{{ titleDecoMy }}"></div>
+                <p class="{{ descSize }}">
+                    PITAKA strives to offer unique designs for all of our
+                    products. And we offer high end print-on demand services.
+                    You can have your logo or signature printed on your desired
+                    items, so you have a unique, eye-catching marketing tool or
+                    corporate gift.
+                </p>
+                <div class="{{ titleDecoMy }}"></div>
+                {% render 'link-button',link_url: "#join", link_title:'Customize
+                Now' %}
+            </div>
+
+            <div class="w-8/12 sm:w-3/8">
+                <picture>
+                    <source data-srcset="{{
+                            'become-our-distributor-section4.png' | asset_url
+                        }}" media="(min-width: 768px)" />
+                    <img src="{{ placeholder_gif }}" data-src="{{
+                            'become-our-distributor-section4.png' | asset_url
+                        }}" alt="Become Our Distributor" class="block w-full lazyload" />
+                </picture>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-gray-850">
+    <div class="w-10/12 md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto {{ pdClass }} ">
+        <h3 class="{{ titleSize }}  text-center mb-2" id="join1">
+            Join Us Now.
+        </h3>
+        <h3 class="{{ titleSize }}  text-center">
+            Be Our Distributor.
+        </h3>
+        <div class="lg:w-2/5 md:w-9/12 sm:w-11/12 m-auto">
+            <!-- <div class="globo-formbuilder" data-id="Njk0Njc="></div> -->
+            <form id="share-form" class="mx-auto w-full relative">
+                <input type="text" name="ip" class="form-control w-full bg-gray-800 hidden" id="ip" />
+                <input type="text" name="datetime" class="form-control w-full bg-gray-800 hidden" id="date_time" />
+                <div class="form-group pt-4">
+                    <label class="font-bold " for="program"><span class="text-cyan">* </span> Program Interested In
+                    </label>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 justify-items-start sm:justify-items-center radio mt-4">
+                        <div>
+                            <input class="mr-1" type="radio" id="radio-1" checked="checked" name="program"
+                                value="Distribution Opportunities" />
+                            <label class="text-sm w-full bg-gray-800 text-center px-0.5 py-1" for="radio-1"
+                                class="radio-label">Distribution Opportunities</label>
+                        </div>
+                        <div>
+                            <input class="mr-1" type="radio" id="radio-2" name="program" value="Corporate Gifting" />
+                            <label class="text-sm w-full bg-gray-800 text-center px-0.5 py-1" for="radio-2"
+                                class="radio-label">Corporate Gifting</label>
+                        </div>
+                        <div>
+                            <input class="mr-1" type="radio" id="radio-3" name="program" value="Others" />
+                            <label class="text-sm w-full bg-gray-800 text-center px-0.5 py-1" for="radio-3"
+                                class="radio-label">Others</label>
+                        </div>
+                    </div>
+                    <div class="form-group py-4">
+                        <label class="font-bold" for="name"><span class="text-cyan">* </span> Your Name</label>
+                        <input type="text" name="name" class="form-control w-full bg-gray-800" required
+                            placeholder="Full Name" />
+                    </div>
+                    <div class="form-group py-4">
+                        <label class="font-bold" for="email"><span class="text-cyan">* </span> Email
+                            Address</label>
+                        <input type="email" name="email" class="form-control w-full bg-gray-800" required
+                            placeholder="Enter email" />
+                    </div>
+                    <div class="form-group py-4">
+                        <label class="font-bold" for="phone">Your Phone</label><br />
+                        <input type="tel" name="phone" id="phone" class="form-control w-full bg-gray-800"
+                            placeholder="Enter Phone" />
+                        <p id="phoneplus"></p>
+                    </div>
+                    <div class="form-group py-4">
+                        <label class="font-bold" for="company">Company Name</label>
+                        <input type="text" name="company" class="form-control w-full bg-gray-800"
+                            placeholder="Your Company Name" />
+                    </div>
+                    <div class="form-group py-4">
+                        <label class="font-bold" for="url"> Your Website</label>
+                        <input type="text" name="url" class="form-control w-full bg-gray-800" placeholder="URL" />
+                    </div>
+                    <div class="form-group py-4">
+                        <label class="font-bold" for="message"><span class="text-cyan">* </span> Your
+                            Message</label>
+                        <textarea name="message" class="form-control w-full bg-gray-800" required
+                            placeholder="Tell us your collaboration ideas."></textarea>
+                    </div>
+                    <button type="submit" id="submit"
+                        class="btn btn-primary block mx-auto absolute -bottom-28 sm:-bottom-32">
+                        <span class="hidden mr-3" id="loading">
+                            <svg t="1645436787483" class="icon animate-spin" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="2938" width="24" height="24">
+                                <path
+                                    d="M512 170.666667v85.333333a256 256 0 1 1-223.573333 131.2L213.930667 345.6A341.333333 341.333333 0 1 0 512 170.666667z"
+                                    fill="#ffffff" opacity=".3" p-id="2939"></path>
+                            </svg>
+                        </span>
+                        Submit
+                    </button>
+                </div>
+            </form>
+            <div class="form-group text-center mb-10">
+                <a href="javascript:;" class="file gradient">
+                    <svg t="1644542289456" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="5767" width="16" height="16">
+                        <path
+                            d="M950.857143 731.428571v182.857143a36.571429 36.571429 0 0 1-36.571429 36.571429H109.714286a36.571429 36.571429 0 0 1-36.571429-36.571429V731.428571h73.142857v54.857143a91.428571 91.428571 0 0 0 91.428572 91.428572h548.571428a91.428571 91.428571 0 0 0 91.428572-91.428572v-54.857143h73.142857m0-73.142857h-73.142857a73.142857 73.142857 0 0 0-73.142857 73.142857v54.857143a18.285714 18.285714 0 0 1-18.285715 18.285715H237.714286a18.285714 18.285714 0 0 1-18.285715-18.285715v-54.857143a73.142857 73.142857 0 0 0-73.142857-73.142857H73.142857a73.142857 73.142857 0 0 0-73.142857 73.142857v182.857143a109.714286 109.714286 0 0 0 109.714286 109.714286h804.571428a109.714286 109.714286 0 0 0 109.714286-109.714286V731.428571a73.142857 73.142857 0 0 0-73.142857-73.142857z"
+                            p-id="5768" fill="#ffffff"></path>
+                        <path
+                            d="M512 93.074286l152.685714 179.565714H658.285714a91.428571 91.428571 0 0 0-91.428571 91.428571v280.32h-109.714286V364.068571a91.428571 91.428571 0 0 0-91.428571-91.428571h-6.4L512 93.074286M512 0a36.571429 36.571429 0 0 0-27.794286 12.8L252.342857 285.622857a36.571429 36.571429 0 0 0 27.794286 60.16H365.714286a18.285714 18.285714 0 0 1 18.285714 18.285714v280.32a73.142857 73.142857 0 0 0 73.142857 73.142858h109.714286a73.142857 73.142857 0 0 0 73.142857-73.142858V364.068571a18.285714 18.285714 0 0 1 18.285714-18.285714h85.577143a36.571429 36.571429 0 0 0 27.794286-60.16L539.794286 12.8A36.571429 36.571429 0 0 0 512 0z"
+                            p-id="5769" fill="#ffffff"></path>
+                    </svg>
+                    Upload a Photo or PDF of your Company
+                    <input type="file" class="file" name="image" id="image" accept="image/png,image/jpeg" />
+                </a>
+                <p class="fileName"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%- comment -%} 表单提交感谢弹窗 {%- endcomment -%}
+<div class="modal-mask opacity-0"></div>
+<div id="modal-video" class="pt-modal-container">
+    <div class="modal-background">
+        <div class="relative bg-black border-white border-2" style="width: 350px; height: 240px">
+            <button class="pt-modal-close absolute" type="button">
+                <span class="icon icon-x"></span>
+            </button>
+            <div id="card1" class="mx-auto text-center text-white px-auto px-4 py-8 flex flex-col items-center">
+                <h3 class="text-xl md:text-2xl">Thanks for signing up!</h3>
+
+                <p class="block mt-4"></p>
+                <p class="text-sm sm:text-base">
+                    We appreciate you contacting us. One of our colleagues will
+                    get in touch with you soon!
+                </p>
+                <p class="block mt-4"></p>
+                <p class="text-sm sm:text-base">Have a great day!</p>
+            </div>
+        </div>
+    </div>
+</div>
+{{ "intlTelInput.css" | asset_url | stylesheet_tag }}
+{{ "intlTelInput.js" | asset_url | script_tag }}
+
+<script type="text/javascript">
+    $("a[href*='join']").click(function () {
+        $("html,body").animate({
+                scrollTop: $("#join1").offset().top,
+            },
+            800
+        );
+    });
+</script>
+
+<style>
+    .btn {
+        background-color: #0bbcd4;
+        display: block;
+        width: 300px;
+    }
+
+    .list-style {
+        list-style-type: disc;
+        list-style-position: inside;
+    }
+
+    .radio input[type="radio"] {
+        background: rgba(33, 35, 39, var(--tw-bg-opacity));
+        cursor: pointer;
+        border-radius: 100%;
+    }
+
+    .radio input[type="radio"]:checked {
+        border-color: #b4b4b4;
+        background: #b4b4b4;
+    }
+
+    .file {
+        position: relative;
+        display: inline-block;
+        background: #ccc;
+        border: 1px solid #333;
+        padding: 4px 20px;
+        overflow: hidden;
+        text-decoration: none;
+        text-indent: 0;
+        line-height: 20px;
+        border-radius: 0px;
+        color: #ffffff;
+        font-size: 13px;
+    }
+
+    .file input {
+        position: absolute;
+        font-size: 100px;
+        right: 0;
+        top: 0;
+        opacity: 0;
+    }
+
+    .gradient {
+        background: #292c31;
+    }
+</style>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script type="text/javascript">
+    $("#phone").intlTelInput({
+        nationalMode: false,
+    });
+    let files = "";
+    let imageUrl = "";
+    $(document).ready(function () {
+        document
+            .querySelector(".file")
+            .addEventListener("change", function (e) {
+                //1.可以通过this拿到这个file的DOM元素
+                $(".fileName").html("Waiting Photo or PDF Upload...");
+                //1.  e 函数事件参数对象中也有这个file的DOM元素对象。使用e.target也可以直接拿到
+                //对开发人员屏蔽，所以直接 必须调用这个文件的DOM对象的files属性，返回一个数组
+                files = e.target.files;
+                // 判断一手是否有文件
+                if (!files.length) return;
+                // 上传文件 创建FormData
+                let formData = new FormData();
+                // upFile就是后台接收的key
+                formData.append("file", files[0]);
+
+                // 将formdata发送到后台即可
+                // 我用的 axios.post('url', formData)
+                const config = {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                };
+                $.ajax({
+                    url: "https://www.ipitaka.com.cn/flow/aliyun/oss/policy",
+                    method: "GET",
+                    success: function (res) {
+                        let formDataNew = new FormData();
+                        formDataNew.append(
+                            "ossAccessKeyId",
+                            res.data.ossAccessKeyId
+                        );
+                        formDataNew.append("callback", res.data.callback);
+                        formDataNew.append(
+                            "key",
+                            res.data.dir + "/" + files[0].name
+                        );
+                        console.log(files[0]);
+                        formDataNew.append("policy", res.data.policy);
+                        formDataNew.append("signature", res.data.signature);
+                        formDataNew.append("success_action_status", 200);
+                        if (files[0].name.search(".pdf") == -1) {
+                            formDataNew.append("Content-Disposition", "inline");
+                            formDataNew.append("x-oss-content-type", "image/jpg");
+                        }
+
+                        formDataNew.append("file", files[0]);
+                        $.ajax({
+                            url: "https://pitaka.oss-cn-shenzhen.aliyuncs.com",
+                            method: "POST",
+                            data: formDataNew,
+                            async: false,
+                            cache: false,
+                            contentType: false,
+                            processData: false,
+                            config: {
+                                headers: {
+                                    "Content-Type": "multipart/form-data",
+                                },
+                            },
+                            success: function (returndata) {
+                                console.log(returndata);
+                                imageUrl = returndata.data.filename;
+                                $(".fileName").html(files[0].name);
+                            },
+                            error: function (returndata) {
+                                console.log(returndata);
+                            },
+                        });
+                    },
+                });
+            });
+
+        $.fn.serializeObject = function () {
+            var o = {};
+            var a = this.serializeArray();
+            $.each(a, function () {
+                if (o[this.name]) {
+                    if (!o[this.name].push) {
+                        o[this.name] = [o[this.name]];
+                    }
+                    o[this.name].push(this.value || "");
+                } else {
+                    o[this.name] = this.value || "";
+                }
+            });
+            return o;
+        };
+
+        var $form = $("form#share-form"),
+            url =
+            "https://script.google.com/macros/s/AKfycbxQlh3-YITu8k1aEJ29Obb3Xe4RmTwNNxeRGjlyLoGpu4KaYT9RLFpuwykVgC6nUwwH/exec"; 
+        // $("#submit").click(function () {
+        $form.submit(function (e) {
+            // console.log($form.serializeObject())
+            $("#loading").show()
+            $("#submit").attr('disabled', true)
+            e.preventDefault();
+            $form.find("#ip").val(returnCitySN["cip"]);
+            $form.find("#date_time").val(new Date());
+            let Data = $form.serializeObject();
+
+            if ($("#phone").val()) {
+                var intlNumber = $("#phone").val();
+                var countryData = $("#phone").intlTelInput(
+                    "getSelectedCountryData"
+                );
+                var countryCode = countryData.dialCode;
+                countryCode = "+" + countryCode;
+                console.log(intlNumber, countryData);
+                var newNo = intlNumber.replace(
+                    countryCode,
+                    "(" + countryCode + ")"
+                );
+                Data.phone = newNo;
+            }
+            if (imageUrl) {
+                Data.image = imageUrl;
+            }
+            var jqxhr = $.ajax({
+                url: url,
+                method: "GET",
+                dataType: "json",
+                data: Data,
+                success: function (res) {
+                    $("#loading").hide()
+                    $("#submit").attr('disabled', false)
+                    $(".thanks")
+                        .html("Thank you for getting in touch!")
+                        .css("font-size", "4rem");
+                    if (res.result == "success") {
+                        $(".modal-mask").show();
+                        $("#modal-video").addClass("open");
+                        $(".pt-modal-close").click(function (e) {
+                            e.stopPropagation();
+                            $("#modal-video").removeClass("open");
+                            $(".modal-mask").hide();
+                        });
+                    }
+                },
+            });
+        });
+    });
+</script>

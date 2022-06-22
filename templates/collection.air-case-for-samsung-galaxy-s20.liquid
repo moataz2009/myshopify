@@ -1,0 +1,233 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+<div class="section0 relative bg-black">
+    <picture>
+      <source data-srcset="{{   'product-aircase-section0-s20.jpg' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{    'product-aircase-section0-s20-m.png' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture>
+    <div class="pt-section-content absolute pt-position-center">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400 pt-text-center font-upper">Lightweight Luxury</h3>
+    </div>
+  </div>
+  
+  <div class="pt-section section1 pt-flex pt-flex-column pt-flex-center  bg-black">
+  
+    <div class="pt-section-content pt-text-center pt-margin-bottom-large">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Ultra-Thin And LightWeight
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Weighing less than a ½ oz (11g) with a thickness of 0.025” (0.65mm), the Air Case offers style and protection
+        without the bulk.
+      </p>
+    </div>
+  
+    <picture>
+      <source data-srcset="{{   'product-aircase-section1-s20.png' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{    'product-aircase-section1-s20-m.png' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture>
+  
+    <div class="pt-flex pt-flex-center width-50">
+      <picture>
+        <img src="{{ placeholder_gif }}"
+          data-src="{{ 'product-aircase-section1-min-10-65.png' | asset_url }}" class="img-responsive lazyload">
+      </picture>
+    </div>
+  
+  </div>
+  
+  <div class="section2 relative  bg-black">
+    <div class="pt-section-content absolute pt-position-centerY">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Exclusive Luxury
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-medium">
+        Used exclusively for PITAKA's premium luxury cases, 600D has a more delicate weave and is smooth to the touch.
+      </p>
+      {% render 'link-button',link_url: "/pages/600d", link_title:'Learn More About 600D' %}
+    </div>
+    <picture>
+      <source data-srcset="{{   'product-aircase-section2-s20.jpg' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{    'product-aircase-section2-s20-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload" />
+    </picture>
+  </div>
+  
+  <div class="section3 relative  bg-black">
+    <picture>
+      <source data-srcset="{{   'product-aircase-section3-s20.png' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{    'product-aircase-section3-s20-m.png' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture>
+    <div class="pt-section-content absolute pt-position-top pt-position-right">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        3D Grip<sup>TM</sup> Technology
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-medium">
+        Our unique vacuum forming process creates a nonslip texture that improves grip while also feeling soft to the
+        touch.
+      </p>
+      {% render 'link-button',link_url: "/pages/3d-grip", link_title:'Learn More About 3D Grip' %}
+    </div>
+  
+  </div>
+  
+  <div class="pt-section section4 pt-flex pt-flex-center pt-flex-between  bg-black">
+    <div class="pt-section-content">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Scratch And Fade Resistant
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        The scratch-resistant case coating reduces daily wear and tear as well as unsightly marks and fading.
+      </p>
+    </div>
+    <div class="pt-section-picture">
+      <picture>
+        <source data-srcset="{{   'product-aircase-section4-s20.png' | asset_url }}"
+          media="(min-width: 769px)">
+        <img src="{{ placeholder_gif }}"
+          data-src="{{   'product-aircase-section4-s20.png' | asset_url }}"
+          class="img-responsive lazyload" />
+      </picture>
+    </div>
+  </div>
+  
+  <style>
+    .section1 {
+      padding: 5em 0;
+    }
+  
+    .section1>picture {
+      transform: translateY(25%);
+    }
+  
+    .section2 .pt-section-content,
+    .section3 .pt-section-content,
+    .section4 .pt-section-content {
+      max-width: 584px;
+    }
+  
+    .section4 .pt-section-content {
+      margin-right: -7%;
+    }
+  
+    @media screen and (max-width:1600px) {
+      .pt-section {
+        padding: 0 7%;
+      }
+  
+      .section1 {
+        padding: 5em 0;
+      }
+  
+      .section3 .pt-section-content {
+        width: 40%;
+      }
+  
+      .section2 .pt-section-content,
+      .section3 .pt-section-content,
+      .section4 .pt-section-content {
+        max-width: 520px;
+      }
+  
+      .section3 .pt-section-content picture {
+        width: 100%;
+      }
+    }
+  
+    @media screen and (max-width:1280px) {
+      .pt-section {
+        padding: 0 5%;
+      }
+  
+      .pt-section-content {
+        width: 45%;
+      }
+  
+      .section1 {
+        padding: 4em 0;
+      }
+  
+      .section2 .pt-section-content {
+        left: 5%;
+      }
+    }
+  
+    @media screen and (max-width:768px) {
+      .section1 {
+        padding: 4em 0;
+      }
+  
+      .section1 .pt-section-content {
+        width: 60%;
+      }
+  
+      .section2 .pt-section-content,
+      .section3 .pt-section-content {
+        width: 60%;
+        left: 20%;
+        top: 4em;
+        transform: none;
+        text-align: center;
+        padding: 0;
+      }
+  
+      .section4 {
+        flex-direction: column;
+        text-align: center;
+        padding: 4em 10%;
+      }
+  
+      .section4 .pt-section-content {
+        margin: 0;
+        width: 60vw;
+      }
+  
+      .section4 .pt-section-picture {
+        width: 78%;
+      }
+    }
+  
+    @media screen and (max-width:414px) {
+      .section1 {
+        padding: 3em 0;
+      }
+  
+      .section2 .pt-section-content {
+        padding: 0;
+      }
+  
+      .section3 .pt-section-picture {
+        margin: 0;
+        display: block;
+      }
+  
+      .section2 .pt-section-content,
+      .section3 .pt-section-content {
+        width: 80%;
+        left: 10%;
+        top: 3em;
+      }
+  
+      .section4 {
+        padding: 3em 10%;
+      }
+  
+      .section4 .pt-section-picture,
+      .section4 .pt-section-content {
+        width: 100%;
+      }
+    }
+  </style>

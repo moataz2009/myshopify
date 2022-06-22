@@ -1,0 +1,167 @@
+<div class="w-full h-full">
+  <div class="relative bg-gray-850 min-h-screen banner">
+    <div class="w-content  absolute transform left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+      <div class="mx-auto ">
+        <div class="p-6 xs:p-11 bg-white">
+          <h3 class="text-md xs:text-2xl font-bold  text-black text-center">
+            Happy Shopping
+          </h3>
+        </div>
+        <div class="w-full">
+          <picture>
+            <!-- <source data-srcset="{{'page-egift-card-1-2021.jpg' | asset_url}}" media="(min-width: 1280px)">
+            <source data-srcset="{{'page-egift-card-1-2021-m.jpg' | asset_url}}" media="(min-width: 768px)"> -->
+            <img src="{{ placeholder_gif }}" data-src="{{'discount-code-for-slider-backers-1.jpg' | asset_url}}" alt="eGift Card"
+              class="block w-full  h-full  object-cover lazyload">
+          </picture>
+        </div>
+        <div class="px-4 py-8 xs:py-16 xs:px-8  bg-white">
+          <h3 class="text-xl  font-bold  text-black mb-4 xs:mb-8">
+            Expired Date: 30th June 2022
+          </h3>
+          <p class="text-base text-black">
+            10% Discount Code
+          </p>
+          <div class="flex flex-row justify-between">
+            <h3 class="text-xl  font-bold  text-black">
+              <span id="code"></span>
+            </h3>
+            <div class="cursor-pointer flex items-center px-2 text-sm bg-gold text-white font-bold" id="copy">COPY
+            </div>
+          </div>
+          <div class="border-b-2 border-gray mt-2"></div>
+          <p class="opacity-0 text-sm mt-2 text-black" id="copy-mark">Copied successfully!</p>
+          <p class="text-base   text-black">
+            Shop on
+          </p>
+          <a class="text-xl  font-bold  text-black cursor-pointer" href="https://www.ipitaka.com/">
+            https://www.ipitaka.com/
+          </a>
+          <div class="border-b-2 border-gray mb-4 xs:mb-8"></div>
+          <p class="text-base text-black mb-4 xs:mb-8">
+            Thank you for your purchase from PITAKA. Copy your discount code above and enter it in the discount code box at checkout. 
+          </p>
+          <p class="text-sm text-black ">
+            The discount code can be used only once.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- <picture>
+      <source data-srcset="{{'page-egift-card-2021.jpg' | asset_url}}" media="(min-width: 1800px)">
+      <source data-srcset="{{'page-egift-card-2021-m.jpg' | asset_url}}" media="(min-width: 768px)">
+      <img src="{{ placeholder_gif }}" data-src="{{'page-egift-card-2021-s.jpg' | asset_url}}" alt="eGift Card"
+        class="block w-full  h-full object-contain lazyload">
+    </picture> -->
+  </div>
+</div>
+
+<style>
+  .border-gray {
+    border-color: #A9A9A9;
+  }
+  .bg-gold{
+    background: #9B8052;
+  }
+  @media screen and (min-width: 1366px) {
+    .banner {
+      height:1080px
+    }
+  }
+  @media screen and (min-width: 1025px) {
+    .w-content {
+      width: 522px;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .w-content {
+      width: 522px;
+    }
+    .banner {
+      height:100vw
+    }
+  }
+  @media screen and (max-width: 768px) {}
+
+  @media screen and (max-width: 414px) {
+    .w-content {
+      width: 355px;
+    }
+
+  }
+</style>
+
+<script>
+  // 获取当前地址所跳转的国家  返回值 as,eu,us
+  function GetUrlParam() {
+    var url = document.location.toString();
+    if (url.indexOf("global") != -1) {
+      return 'as';
+    } else if (url.indexOf("eu") != -1) {
+      return 'eu';
+    } else {
+      return 'us';
+    }
+  }
+
+  function GetEmailParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+    var r = window.location.search.substr(1).match(reg); //匹配目标参数
+    if (r != null) return unescape(r[2]);
+    return null; //返回参数值
+  }
+  $(document).ready(function () {
+    if (GetEmailParam('email')) {
+      $.ajax({
+      type: "post",
+      url: "https://ref.ipitaka.com/api/email/coupon/ks",
+      data: {
+        email: GetEmailParam('email') || "",
+        region: GetUrlParam() || ""
+      },
+      dataType: "json",
+      crossDomain: true,
+      success: function (data) {
+        // console.log(data);
+        if (data.errcode === 0) {
+          $("#code")[0].innerText = data.coupon;
+        }
+      },
+      error: function (error) {
+        console.log(error);
+      },
+    });
+    }
+  })
+</script>
+
+<script>
+  $(function () {
+    $("#copy").click(function () {
+      var con = $('#code').text();
+      var text = con;
+
+      var input = document.createElement("input");
+      input.setAttribute("id", "copyInput");
+
+      input.setAttribute("value", text);
+
+      document.getElementsByTagName("body")[0].appendChild(input);
+
+      document.getElementById("copyInput").select();
+
+      document.execCommand("copy");
+
+      document.getElementById("copyInput").remove();
+
+      $("#copy-mark").animate({
+        opacity: 1
+      }, 500, function () {});
+      setTimeout(() => {
+        $("#copy-mark").animate({
+          opacity: 0
+        }, 500, function () {});
+      }, 2000);
+    });
+  })
+</script>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1068px" height="74px" viewBox="0 0 1068 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>1280_时间线02</title>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#52EC69" offset="0%"></stop>
+            <stop stop-color="#33BCB1" offset="24.0317321%"></stop>
+            <stop stop-color="#52EC69" offset="43.0212672%"></stop>
+            <stop stop-color="#37DAB8" offset="63.69885%"></stop>
+            <stop stop-color="#14CC70" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="环保页面_ipad_1280" transform="translate(-106.000000, -6452.000000)">
+            <g id="1280_时间线02" transform="translate(107.000000, 6461.000000)">
+                <g id="时间线02" transform="translate(0.000000, 55.000000)" stroke-linecap="square" stroke-width="2">
+                    <path d="M0.5,6.5 C0.5,6.5 355.666667,7.16666667 1066,8.5" id="直线-2" stroke="url(#linearGradient-1)"></path>
+                    <line x1="0.5" y1="6.5" x2="0.5" y2="0.5" id="直线-3备份" stroke="#51EB6C"></line>
+                    <line x1="714.5" y1="6.5" x2="714.5" y2="0.5" id="直线-3备份-2" stroke="#35D9B3"></line>
+                </g>
+                <text id="2025" font-family="Montserrat-Bold, Montserrat" font-size="34" font-weight="bold" line-spacing="16" fill="#3BD18A">
+                    <tspan x="714" y="33">2025</tspan>
+                </text>
+                <text id="2024" font-family="Montserrat-Bold, Montserrat" font-size="34" font-weight="bold" line-spacing="16" fill="#3BD18A">
+                    <tspan x="0" y="33">2024</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

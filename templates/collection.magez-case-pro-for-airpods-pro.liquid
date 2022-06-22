@@ -1,0 +1,391 @@
+{% render 'buy-bar', product: all_products[collection.handle] %}
+
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_6 = 'w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28' %}
+{% assign pdClass_b = 'px-3 sm:px-6 md:px-0 pb-16 sm:pb-20 lg:pb-28' %}
+{% assign titleBoxClass= 'mx-auto mb-12 w-11/12 sm:w-5/6 md:w-2/3 xl:w-2/5' %}
+{% assign titleSize = 'text-2xl md:text-3xl font-bold' %}
+{% assign descSize = 'text-sm sm:text-base text-gray-400' %}
+{% assign titleDecoMy = 'block mt-4 mb-6' %}
+
+{% assign absoluteContentBoxClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto px-6 lg:px-0 transform sm:left-1/2 sm:-translate-x-1/2' %}
+{% assign absoluteContentClass = 'transform w-full sm:w-2/5 xl:w-1/3 max-w-md bottom-8 sm:bottom-1/2 sm:translate-y-1/2' %}
+{% assign absoluteContentClass_center = 'absolute text-center z-10 transform w-full px-6 sm:px-0 sm:w-4/5 md:w-1/2 xl:w-1/3 max-w-lg top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2' %}
+{%- comment -%}第一屏{%- endcomment -%}
+<div class="w-full relative">
+  <div class="absolute {{absoluteContentBoxClass}} sm:h-full bottom-7 sm:bottom-0">
+    <div class="transform w-full sm:w-2/5 xl:w-1/3 max-w-md bottom-12 xs:bottom-48 left-1/2 sm:left-0 -translate-x-1/2 sm:translate-x-0 sm:bottom-1/2 sm:translate-y-1/2 static absolute text-center sm:text-left">
+      <h3 class="{{titleSize}} mb-6">
+        MagEZ Case <br>
+for AirPods Pro
+      </h3>
+      <p class="text-sm sm:text-base text-white">
+        A stylish protective case with MagSafe compatibility.
+      </p>
+    </div>
+  </div>
+  <picture>
+    <source data-srcset="{{'magezcase-pro-airpods-pro-section1.jpg' | asset_url}}" media="(min-width: 1281px)">
+    <source data-srcset="{{'magezcase-pro-airpods-pro-section1-m.jpg' | asset_url}}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{'magezcase-pro-airpods-pro-section1-s.jpg' | asset_url}}"
+      alt="MagEZ Case for Airpods Pro" class="block w-full h-full object-cover lazyload">
+  </picture>
+</div>
+
+<div class="w-full bg-gray-800 {{pdClass}} flex flex-col">
+  <div id="trigger-video_sleeve"></div>
+  <div class="mx-auto">
+    <video loop="loop" muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+    x5-video-orientation="portraint" preload="none" autoplay style="object-fit:contain" class="lazyload"
+    id="video-sleeve">
+    <source src="{{ 'magezcase-pro-airpods-pro-section2.mp4' | asset_url }}" type="video/mp4">
+    <source src="{{ 'magezcase-pro-airpods-pro-section2.webm' | asset_url }}" type="video/webm">
+  </video>
+  </div>
+  <div class="mx-auto mb-12 w-11/12 sm:w-2/6 md:w-2/3 xl:w-2/5 max-w-md">
+      <h3 class="{{titleSize}}">
+        MagSafe Compatible
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}}">
+        With built-in MagSafe magnets, securely attach and charge your AirPods Pro using your MagSafe charger. 
+      </p>
+  </div>
+  <div id="trigger-video_safe"></div>
+  <div class="{{wClass}} flex flex-col sm:flex-row items-stretch justify-between">
+    <div class="w-full mb-6 sx:mb-12 sm:mb-0">
+      <video loop="loop" muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+      x5-video-orientation="portraint" preload="none" autoplay style="object-fit:cover" class="w-full h-full lazyload block"
+      id="video-safe">
+      <source src="{{ 'magezcase-pro-airpods-pro-section3.mp4' | asset_url }}" type="video/mp4">
+      <source src="{{ 'magezcase-pro-airpods-pro-section3.webm' | asset_url }}" type="video/webm">
+    </video>
+    </div>
+
+    <div class="w-full mx-auto sm:pl-6 sm:w-3/6">
+      <picture class="block h-full">
+        <source data-srcset="{{'magezcase-pro-airpods-pro-section4.jpg' | asset_url}}" media="(min-width: 1281px)">
+        <source data-srcset="{{'magezcase-pro-airpods-pro-section4-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magezcase-pro-airpods-pro-section4-s.jpg' | asset_url}}"
+          alt="MagEZ Case for Airpods Pro"
+          class="block w-full h-full lazyload object-cover">
+      </picture>
+    </div>
+  </div>
+</div>
+ 
+{%- comment -%}第5屏{%- endcomment -%}
+<div class="bg-gray-850">
+  <div class="{{wClass}}  {{pdClass}}  flex flex-col sm:flex-row items-center justify-between">
+    <div class="w-full sm:w-2/6 max-w-md">
+      <h3 class="{{titleSize}}"> 
+        Exclusive Luxury
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}} mb-6">
+        Used exclusively for PITAKA's premium cases, 600D has a more delicate weave and is smooth to the touch. 
+      </p>
+    </div>
+    <div class="w-full sm:w-5/8">
+      <picture>
+        <source data-srcset="{{'magezcase-pro-airpods-pro-section5.jpg' | asset_url}}" media="(min-width: 1281px)">
+        <source data-srcset="{{'magezcase-pro-airpods-pro-section5-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magezcase-pro-airpods-pro-section5-s.jpg' | asset_url}}"
+          alt="MagEZ Case for Airpods Pro"
+          class="block mx-auto w-full lazyload">
+      </picture>
+    </div>
+  </div>
+</div>
+{%- comment -%}第6屏{%- endcomment -%}
+<div class="sm:bg-gray-800 {{pdClass_b}} px-6 pt-16 sm:pt-0">
+  <div class="{{wClass_6}} flex flex-col sm:flex-row items-center justify-between">
+    <div class="w-full sm:w-2/6 max-w-md">
+      <h3 class="{{titleSize}}">
+        3D Grip™ Technology
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}}">
+        Our unique vacuum forming process creates a nonslip texture that improves grip while also feeling soft to the touch.
+      </p>
+    </div>
+    <div class="w-full sm:w-2/6 md:w-4/8">
+      <picture>
+        <source data-srcset="{{'magezcase-pro-airpods-pro-section6.png' | asset_url}}" media="(min-width: 1281px)">
+        <source data-srcset="{{'magezcase-pro-airpods-pro-section6-m.png' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magezcase-pro-airpods-pro-section6-s.png' | asset_url}}"
+          alt="MagEZ Case 2 for iPhone 13 Series"
+          class="block mx-auto w-4/5 sm:w-full transform translate-y-16 sm:translate-y-20 lg:translate-y-28 lazyload">
+      </picture>
+    </div>
+  </div>
+</div>
+<div class="bg-gray-850 pt-16 sm:pt-20 lg:pt-24 px-6 md:px-0">
+  <div class="{{wClass}}  {{pdClass_b}} flex flex-col-reverse sm:flex-row items-center justify-between">
+    <div class="w-full sm:w-5/8">
+      <picture>
+        <source data-srcset="{{'magezcase-pro-airpods-pro-section8.jpg' | asset_url}}" media="(min-width: 1281px)">
+        <source data-srcset="{{'magezcase-pro-airpods-pro-section8-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magezcase-pro-airpods-pro-section8-s.jpg' | asset_url}}"
+          alt="MagEZ Case for Airpods Pro"
+          class="block mx-auto w-full lazyload">
+      </picture>
+    </div>
+    <div class="w-full sm:w-2/6 max-w-md">
+      <h3 class="{{titleSize}}"> 
+        A Form-fitting Design
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}} mb-6">
+        Precision-cut allowing easy access to the AirPods Pro LED charging indicator and Lightning port without removing the case. This minimalist case snuggly fits your AirPods Pro, retaining its pocket size and shape.
+      </p>
+    </div>
+  </div>
+</div>
+{%- comment -%}第7屏{%- endcomment -%}
+<div class="{{wClass}} {{pdClass_b}}">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 ">
+    <div>
+      <img src="{{ placeholder_gif }}" data-src="{{'magezcase-pro-airpods-pro-section7-1.jpg' | asset_url}}"
+        class="block w-full h-full object-cover lazyload">
+    </div>
+    <div>
+      <img src="{{ placeholder_gif }}" data-src="{{'magezcase-pro-airpods-pro-section7-2.jpg' | asset_url}}"
+        class="block w-full h-full object-cover lazyload">
+    </div>
+    <div>
+      <img src="{{ placeholder_gif }}" data-src="{{'magezcase-pro-airpods-pro-section7-3.jpg' | asset_url}}"
+        class="block w-full h-full object-cover lazyload">
+    </div>
+    <div>
+      <img src="{{ placeholder_gif }}" data-src="{{'magezcase-pro-airpods-pro-section7-4.jpg' | asset_url}}"
+        class="block w-full h-full object-cover lazyload">
+    </div>
+  </div>
+</div>
+
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}
+{{'swiper-bundle.min.js' | asset_url | script_tag }}
+
+<style>
+
+  .privy-embed-form iframe{
+    margin: 0 !important;
+    max-width: 360px !important;
+  }
+  .center-slides {
+    padding-bottom: 2rem;
+  }
+
+  .center-slides .swiper-slide {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    transition: 300ms;
+    transform: scale(0.89);
+  }
+
+  .center-slides .swiper-slide .swiper-content {
+    opacity: 0;
+    transition: all .5s;
+  }
+
+  .center-slides .swiper-slide-prev,
+  .center-slides .swiper-slide-duplicate-prev {
+    transform-origin: right center;
+  }
+
+  .center-slides .swiper-slide-next,
+  .center-slides .swiper-slide-duplicate-next {
+    transform-origin: left center;
+  }
+
+  .center-slides .swiper-slide-active,
+  .center-slides .swiper-slide-duplicate-active {
+    transform: scale(1);
+  }
+
+  .center-slides .swiper-slide-active .swiper-content,
+  .center-slides .swiper-slide-duplicate-active .swiper-content {
+    opacity: 1;
+  }
+
+  .center-slides .swiper-slide img {
+    object-fit: cover;
+  }
+
+  .center-slides .swiper-slide-prev img,
+  .center-slides .swiper-slide-duplicate-prev img {
+    object-position: right top;
+  }
+
+  .center-slides .swiper-slide-next img,
+  .center-slides .swiper-slide-duplicate-next img {
+    object-position: left top;
+  }
+
+  .center-slides>div[role="button"] {
+    top: 45%;
+    width: 12px;
+    height: 16px;
+  }
+
+  .center-slides>div[role="button"]:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url({{'triggle_pixel.svg' | asset_url}}) no-repeat;
+    background-size: contain;
+  }
+
+  .center-slides .swiper-button-next {
+    right: 0;
+  }
+
+  .center-slides .swiper-button-prev {
+    left: 0;
+    transform: rotate(-180deg);
+  }
+
+  .center-slides .swiper-pagination-bullets {
+    display: flex;
+    justify-content: center;
+    margin: 0 -0.4rem;
+  }
+
+  .center-slides .square-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #565557;
+    display: block;
+    margin: 0 .4rem;
+  }
+
+  .center-slides .swiper-pagination-bullet-active {
+    background-color: #fff;
+  }
+
+  @media screen and (min-width:768px) {
+    .center-slides {
+      margin: 0;
+      padding-bottom: 4rem;
+    }
+
+    .center-slides>div[role="button"] {
+      top: unset;
+      bottom: 6px;
+      margin: 0;
+    }
+
+    .center-slides .swiper-button-next {
+      right: calc(50% - 153.2px);
+    }
+
+    .center-slides .swiper-button-prev {
+      left: calc(50% - 153.2px);
+    }
+  }
+  #video-sleeve{
+    margin: 0;
+    padding: 0;
+    /* width: 600px; */
+  }
+</style>
+{{'jquery.scrollTo.min.js' | asset_url | script_tag }}
+{{ 'TweenMax.min.js' | asset_url | script_tag }}
+{{ 'ScrollMagic.js' | asset_url | script_tag }}
+{{ 'animation.gsap.min.js' | asset_url | script_tag }}
+<script>
+  $(function () {
+    // init controller
+    var controller = new ScrollMagic.Controller();
+
+    function toggleVideo(e, id) {
+      var video = document.querySelector(id);
+      if (e.type == "enter") {
+        video.play();
+      } else {
+        video.pause();
+      }
+    }
+
+    var scene_toggle_sleeve = new ScrollMagic.Scene({
+        triggerElement: "#trigger-video_sleeve",
+        offset: -50
+      })
+      .on('enter leave', function (e) {
+        toggleVideo(e, "#video-sleeve")
+      })
+      .addTo(controller)
+
+    var scene_toggle_safe = new ScrollMagic.Scene({
+        triggerElement: "#trigger-video_safe",
+        offset: -50
+      })
+      .on('enter leave', function (e) {
+        toggleVideo(e, "#video-safe")
+      }) 
+      .addTo(controller)
+
+    // build tween
+    var tween_1 = TweenMax.to("#anim-case-1", 0.5, {
+      x: -117,
+      y: 48,
+      ease: Linear.easeNone
+    });
+    var tween_2 = TweenMax.to("#anim-case-2", 0.5, {
+      x: -96,
+      y: 48,
+      ease: Linear.easeNone
+    });
+    if (window.innerWidth > 768) {
+      // build scene
+      var scene_1 = new ScrollMagic.Scene({
+          triggerElement: "#trigger_sec",
+          duration: 300,
+          onLeave: true,
+        })
+        .setTween(tween_1)
+        .addTo(controller);
+
+      var scene_2 = new ScrollMagic.Scene({
+          triggerElement: "#trigger_sec",
+          duration: 300,
+          onLeave: true,
+        })
+        .setTween(tween_2)
+        .addTo(controller);
+
+    } else {
+
+      // build scene
+      var scene_1 = new ScrollMagic.Scene({
+          triggerElement: "#trigger_line_1",
+          duration: 300,
+          onLeave: true,
+        })
+        .setTween(tween_1)
+        .addTo(controller);
+
+      var scene_2 = new ScrollMagic.Scene({
+          triggerElement: "#trigger_line_2",
+          duration: 300,
+          onLeave: true,
+        })
+        .setTween(tween_2)
+        .addTo(controller);
+    }
+  });
+</script>

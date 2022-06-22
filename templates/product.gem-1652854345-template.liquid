@@ -1,0 +1,787 @@
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+{{ 'product-template.css' | asset_url | stylesheet_tag }}
+{{ 'yotpo-custom.css' | asset_url | stylesheet_tag }}
+{%- if product.handle contains 'discounted-products' -%}
+<style>
+  @media only screen and (max-width:767px) {
+    .swatch .swatch-element.model input + label{
+      height: auto;
+      line-height: 1.2;
+      padding: 15px 10px;
+    }
+  }
+</style>
+{%- endif -%}
+
+<style>
+  @media screen and (min-width:1024px){
+    #main-wrapper{
+      min-height: 55vw;
+    }
+  }
+  .mfp-bg {
+    filter: alpha(opacity=40)
+  }
+
+  .mfp-wrap {
+    z-index: 2147483645 !important;
+  }
+
+  .mfp-close{
+    right: 55px !important;
+    top: 90px !important;
+  }
+
+  .mfp-close:active{
+    top: 91px !important;
+  }
+
+  #vitals-related_products-placeholder,
+  #bundle-countdown_box {
+    display: none !important;
+  }
+  #ncv-delay-notice {padding-top:1em; margin-bottom:1em;}
+  #ncv-delay-notice h5 {font-weight:bold; line-height:200%;}
+
+  #BIS_trigger{
+    padding: 0 !important;
+    margin-top: -10px;
+    text-align: center;
+    border: none;
+    background: none;
+    color: #0BBCD4 !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+  }
+  #BIS_trigger:hover{
+    background: none !important;
+    color: #fff !important;
+    opacity: 1;
+  }
+  .cbb-frequently-bought-container{
+    height:auto !important;
+  }
+ .cbb-frequently-bought-products{
+    display: flex !important;
+    align-items:center;
+    float: none !important;
+    margin: 0 0 1rem 0 !important;
+  }
+  .cbb-frequently-bought-product-image{
+    background-color: #27292e;
+  }
+  
+  .cbb-frequently-bought-product{
+    display: flex !important;
+    align-items: center;
+    box-sizing: border-box !important;
+  }
+  
+  .cbb-frequently-bought-product>a{
+  	flex-shrink:0;
+  }
+  .cbb-frequently-bought-plus-icon{
+    font-size: 14px !important;
+    font-weight: bold !important;
+    width: 19px !important;
+    height: 19px !important;
+    line-height: 19px !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    background: #0bbcd4;
+    border-radius: 50%;
+    flex-shrink: 0;
+    z-index: 1;
+    transform: scale(1.35);
+  }
+  .cbb-frequently-bought-add-button:hover,
+  .cbb-frequently-bought-add-button:focus{
+    border-color:#0bbcd4 !important;
+    opacity:1 !important;
+  }
+  @media screen and (max-width:767px){
+    .cbb-frequently-bought-total-price-box{
+    	font-size:1em !important;
+    }
+  }
+</style>
+
+{{'swiper-bundle.min.js' | asset_url | script_tag }}
+{% section 'product-template' %}
+
+<style>
+  .swiper-button-prev{
+    left: 0;
+  }
+  .swiper-button-next{
+    right: 0;
+  }
+
+  .product_sub_photos {
+    --swiper-navigation-size: 20px;
+  }
+
+  .product_sub_photos .swiper-slide {
+    width: 20%;
+    height: 100%;
+    opacity: 0.4;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+  }
+    
+  @media screen and (min-width:1024px){
+    .swiper-button-prev,
+    .swiper-button-next{
+      display: none;
+    }
+    .swiper-container:hover .swiper-button-prev:not(.hidden),
+    .swiper-container:hover .swiper-button-next:not(.hidden){
+      display: block;
+    }
+  }
+</style>
+
+{% if product.handle == 'magez-slider' %}
+<div id="slider_modal" class="spec-modal-container opacity-0 bg-black bg-opacity-30 transition-opacity duration-300 fixed inset-0 flex items-center justify-center">
+  <div class="modal-dialog relative text-center pt-12 pb-6 px-6 w-11/12 max-w-md mx-auto rounded shadow-lg overflow-y-auto bg-gray-850">
+    <div
+      class="modal-close absolute top-4 right-4 cursor-pointer flex flex-col items-center text-sm">
+      <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        viewBox="0 0 18 18">
+        <path
+          d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+        </path>
+      </svg>
+    </div>
+    <div class="modal-content">
+      <h3 class="mb-8 xl:mb-12 text-xl md:text-2xl">
+        Comparing with<br>
+        Apple MagSafe Battery Pack
+      </h3>
+      {% assign battrey_info = '95-iPhone 12 mini-70,75-iPhone 12-60,80-iPhone 12 Pro-60,55-iPhone 12 Pro Max-40,80-iPhone 13 mini-70,70-iPhone 13-60,70-iPhone 13 Pro-60,50-iPhone 13 Pro Max-40' | split: ',' %}
+      <div class="grid grid-cols-10 place-content-center">
+        <div class="col-span-5">
+          <h4 class="text-xs sm:text-2s font-normal text-gray-400 mb-3">
+            MagEZ Battery Pack
+          </h4>
+          {{ 'wireless_charge_with_pitaka.png' | asset_url | img_tag:'MagEZ Battery Pack','block mx-auto w-4/5 pr-1 max-h-60 object-contain' }}
+          {{ 'wireless_charge_with_pitaka_battery.png' | asset_url | img_tag:'MagEZ Battery Pack','block mx-auto w-2/5' }}
+        </div>
+        <div class="col-span-5">
+          <h4 class="text-xs sm:text-2s font-normal text-gray-400 mb-3">
+            MagSafe Battery Pack
+          </h4>
+          {{ 'wireless_charge_with_apple.png' | asset_url | img_tag:'MagEZ Battery Pack','block mx-auto w-4/5 pr-1 max-h-60 object-contain' }}
+          {{ 'wireless_charge_with_apple_battery.png' | asset_url | img_tag:'MagEZ Battery Pack','block mx-auto w-2/5' }}
+        </div>
+      </div>
+      <div class="mx-auto grid grid-cols-4 gap-x-2 gap-y-1.5 place-content-center my-5 text-xs sm:text-2s w-10/12 md:w-2/3">
+        {% for info in battrey_info %}
+          {% assign infoArr = info | split: '-' %}
+          {% for data in infoArr %}
+            <div class="{% if forloop.index == 2 %}col-span-2 text-gray-400{% else %}font-bold{% endif %}">
+              {% if forloop.index == 2 %}
+                {{ data }}
+              {% else %}
+                {{ data | append: '%' }}
+              {% endif %}
+            </div>
+          {% endfor %}
+        {% endfor %}
+      </div>
+      <p class="text-2s sm:text-sm">
+        *All data were obtained in a controlled test environment. Tested with fully charged power banks.
+        Charging time is subject to humidity, temperature, device age, etc.
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .spec-modal-container{
+    z-index: -1;
+  }
+  .spec-modal-container.open {
+    opacity: 1;
+    z-index: 20;
+  }
+</style>
+
+<script>
+  $(function () {
+    var openmodal = document.querySelectorAll('.modal-trigger');
+    if (openmodal.length > 0) {
+      $('.modal-trigger').click(function(e){
+        e.stopPropagation();
+        var modal_name = $(this).data('modal');
+        $(modal_name).addClass('open');
+
+        $(document).click(function (e) {
+          var _con = $(modal_name);
+          if (!_con.is(e.target) && _con.has(e.target).length === 0) {
+            _con.removeClass('open');
+          }
+        })
+      });
+
+      document.onkeydown = function(evt) {
+        evt = evt || window.event;
+        var isEscape = false;
+        if (evt.key === "Escape" || evt.key === "Esc") {
+          $('.spec-modal-container.open').removeClass('open');
+        }
+      };
+
+      $(".modal-close").click(function (e) {
+        e.stopPropagation();
+        $(this).parents('.spec-modal-container').removeClass('open');
+      });
+    }
+  })
+</script>
+{% endif %}
+
+
+<script>
+  const winWidth = window.innerWidth;
+  var thumbs_length = 1;
+  let urlParams = {};
+  if (location.search) {
+    location.search.slice(1).split('&').forEach(item => {
+      const arr = item.split('=');
+      urlParams[arr[0]] = arr[1] || '';
+    });
+  }
+  var variant_id = urlParams.variant;
+
+  var galleryThumbs = new Swiper('.product_sub_photos', {
+    spaceBetween: 0,
+    slidesPerView: 1,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    setWrapperSize :true,
+    breakpoints: { 
+      1024: {
+        spaceBetween: 12,
+        slidesPerView: 5,
+        freeMode: true
+      },
+      1280: {
+        spaceBetween: 24,
+        slidesPerView: 5
+      }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+
+  window.onload = function () {
+    if(!variant_id){
+      setTimeout(function(){
+        $("#ProductThumbs").find(".thumbnail-item").show();
+        // console.log($("#ProductThumbs").find(".thumbnail-item:visible").length)
+        // galleryThumbs.update();
+      },3000)
+    }
+  }
+
+  $('.swatch-element.color').on("click",function(){
+    const disabled = $(this).find("input[type='radio']").prop('disabled');
+    // console.log(disabled);
+    if(!disabled){
+      const color = $(this).data('value');
+      $("#color-context").html(color);
+    }
+  })
+
+  var selectCallback = function (variant, selector) {
+    if(variant) {
+      $('#BIS_trigger').remove();
+      if(!variant.available) {
+        if(soldOutText != "Discontinued"){
+         $('#AddToCartForm').append('<a href="javascript:;" id="BIS_trigger" class="block text-sm text-cyan" data-variant-id="'+ variant.id +'">EMAIL ME WHEN IT IS AVAILABLE</a>');
+        }
+      }   
+    }
+
+    var soldOutText = "{{ 'products.product.sold_out' | t }}";
+    var addToCartText = "{{ 'products.product.add_to_cart' | t }}";
+
+    var product_title = `{{product.title}}`;
+    var product_available = {{product.available}};
+    var product_handle = `{{ product.handle }}`;
+    
+    
+    $('.magez-system-flag').remove();
+    var magez_2_list = ['magez-wallet-2','magez-wallet-2-pro','magez-car-mount-pro','magez-car-mount-lite','magez-slider','magez-card-sleeve','magez-case-for-airpods-3'];
+    var magez_1_list = ['magez-mount','magez-mount-qi','magez-mount-qi-desktop','magez-wireless-charging-kit'];
+    var magez_2_system = '<p class="text-sm mt-2 magez-system-flag">MagEZ<sup>&reg;</sup> 2.0 System</p>';
+    var magez_1_system = '<p class="text-sm mt-2 magez-system-flag">MagEZ<sup>&reg;</sup> 1.0 System</p>';
+    
+    if(product_handle.includes('magez-case')){
+      if(!product_handle.includes('for-ipad')){
+        if (product_handle.includes('with-magsafe') || product_handle.includes('iphone-13') || product_handle.includes('s22') || product_handle.includes('airpods-pro') || product_handle.includes('airpods-3')) {
+          $('.product_content-title h1').after(magez_2_system);
+        }else{
+          $('.product_content-title h1').after(magez_1_system);
+        }
+      }
+    }else{
+      if(magez_2_list.includes(product_handle)){
+        $('.product_content-title h1').after(magez_2_system);
+      }else if(magez_1_list.includes(product_handle)){
+        $('.product_content-title h1').after(magez_1_system);
+      }
+    }
+    
+    
+    let unavailable_flag = false;
+    if (!product_available) {
+      unavailable_flag = true;
+    }else if (!variant) {
+      unavailable_flag = true;
+    }else if(!variant.available){
+      unavailable_flag = true;
+    }
+
+    var new_products = ['S22', 'Slider', 'MagEZ Case for AirPods', 'Apple Watch Series 7', 'MagEZ Car Mount', 'Power Dongle','iPad 2021'];
+    var out_products = ['New MagEZ Case Pro for iPhone 13', 'MagEZ Case 2 for iPad Pro 2018'];
+    var no_products = ['Galaxy S10', 'Juice', 'Wallet','iPhone 11','iPhone X','Galaxy Note20','Galaxy S20','Galaxy Note10','Galaxy S10','HUAWEI P40','OnePlus 8','MagEZ Case & In-Car Wireless Charging Kit'];
+
+    if (unavailable_flag) {
+//       for (let i = 0; i < out_products.length; i++) {
+//         const out_name = out_products[i];
+//         if(product_title.includes(out_name)){
+//           soldOutText = "Sold Out";
+//           break;
+//         }
+//       }
+      for (let i = 0; i < no_products.length; i++) {
+        const no_name = no_products[i];
+        if(product_title.includes(no_name)){
+          soldOutText = "Discontinued";
+          $('#BIS_trigger').remove();
+          break;
+        }
+      }
+    }
+    
+    for (let i = 0; i < new_products.length; i++) {
+      const name = new_products[i];
+      if (product_title.includes(name)) {
+        soldOutText = "Coming Soon";
+
+        $('.preordernotice').find('p').each(function(){
+          var $this = $(this);
+          $this.show();
+          const notice = $this.html();
+          if(notice.includes('Shipping') || notice.includes('Available')){
+            if (unavailable_flag) {
+              $this.hide();
+            }
+          } 
+        });
+        break;
+      }
+    }
+
+    if (variant && variant.title != 'Default Title') {
+
+      const current_variant_id  = variant.id;
+
+      if(product_handle == "magez-case-for-iphone-12" || product_handle == "magez-case-2-for-iphone-13" ){
+        const variant_name = variant.title.toLowerCase();
+        $('.content-variant').each(function(){
+          // console.log(variant_name);
+          const name = $(this).attr('name').replace("_"," ");
+          if(variant_name.indexOf(name) != -1){
+            $(this).removeClass('hidden');
+          }else{
+            $(this).addClass('hidden');
+          }
+        })
+      }
+      
+//       if(product_handle.includes( "car-mount-pro")){
+//         const variant_name = variant.title.toLowerCase();
+//         let suctionCupNotice = '';
+//         $('.mountProNotice').remove();
+//         if(variant_name.includes('suction cup')){
+//           addToCartText = 'Pre-Order Now';
+//           suctionCupNotice = `<p class="text-sm text-cyan mountProNotice">
+//             Notice: Available in late November.
+//           </p>`;
+//           $('.preordernotice').append(suctionCupNotice);
+//         }
+//       }
+      
+      // if(product_handle == "carbon-fiber-watch-band"){
+      //   let carbonfiberbandNotice = '';
+      //   $('.carbonfiberbandNotice').remove();
+      //   if(variant.sku == 'ABR1-02020100-S7' || variant.sku == 'ABR1-02020200-S7' || variant.sku == 'ABM1-02020100-S7' || variant.sku == 'ABM1-02020200-S7'){
+      //       carbonfiberbandNotice = `<p class="text-sm text-cyan carbonfiberbandNotice">Compatible with Apple Watch Series 7.</p>`;
+      //     $('.preordernotice').append(carbonfiberbandNotice);
+      //   }else {
+      //       carbonfiberbandNotice = `<p class="text-sm text-cyan carbonfiberbandNotice">Compatible with Apple Watch Series 6-1 & SE.</p>`;
+      //     $('.preordernotice').append(carbonfiberbandNotice);
+      //   }
+      // }
+
+//      if(product_handle == "new-magez-case-pro-for-iphone-13"){
+//        let casepro13Notice = '';
+//        $('.casepro13Notice').remove();
+//        if(variant.sku == 'MPI13-01010400'){
+//          casepro13Notice = `<p class="text-sm text-cyan casepro13Notice">
+//            Notice: Shipping starts from second-half of November.
+//          </p>`;
+//          $('.preordernotice').append(casepro13Notice);
+//        }
+//      }
+      
+
+      // if(product_handle == "magez-case-2-for-iphone-13"){
+      //   let skuPreOrderList = ['MCI13-01080100','MCI13-01060100','MCI13-01110100','MCI13-01070100','MCI13-01060200','MCI13-01060300','MCI13-01060400'];   
+      //   let case13Notice = '';
+      //   $('.case13Notice').remove();
+      //   if(skuPreOrderList.includes(variant.sku)){
+      //     addToCartText = 'Pre-Order Now';
+      //     case13Notice = `<p class="text-sm text-cyan case13Notice">Notice: Shipping starts from second-half of October.</p>`;
+      //     $('.preordernotice').prepend(case13Notice);
+      //   }
+      // }
+
+      // if ($('#discountCode').length > 0) {
+      //   if( variant.sku == 'CS2-05010100' || variant.sku == 'CS1001' || variant.sku == 'CH1001'){
+      //     $('#discountCode').hide();
+      //   }else{
+      //     $('#discountCode').show();
+      //   }
+      // }
+
+      // let image_alt = variant.featured_image ? variant.featured_image.alt : null;
+      // if(image_alt && image_alt.includes('pitakass')){
+      //   let discountNotice = '';
+      //   $('#discountCode').remove();
+      //   const discount = image_alt.replace('pitakass','');
+      //   discountNotice = `<div class="mb-4" id="discountCode">
+      //     <p class="text-sm text-white">
+      //       Limited Time Offer! Save ${discount}% OFF with code
+      //       <span class="text-cyan font-semibold text-base">${image_alt}</span>
+      //     </p>
+      //   </div>`;
+      //   $('.addtocartbtn').before(discountNotice);
+      // }
+
+      // console.log(variant.options);
+      // if (variant.options.length > 1) {
+      var form = jQuery('#' + selector.domIdPrefix).closest('form');
+      for (let i = 0, length = variant.options.length; i < length; i++) {
+        var selectSwatch = form.find('.swatch[data-option-index="' + i + '"]')
+        .find('.swatch-element[data-value="' + variant.options[i] + '"]');
+        var radioButton = selectSwatch.find(':radio');
+        if (radioButton) {
+          selectSwatch.trigger('click');
+          radioButton.get(0).checked = true;
+        }
+      }
+      // }
+
+      if(variant.compare_at_price && variant.compare_at_price >  variant.price ){
+        if($("#ComparePrice").length > 0){
+          $("#ComparePrice").html(variant.compare_price)
+        }else{
+          var html = `<span id="ComparePrice" class="line-through ml-2">${variant.compare_price}</span>`;
+          $(".product-single__prices").append(html);
+        }
+      }
+
+      thumbs_length = 1;
+      $("#ProductThumbs").find(".thumbnail-item").removeClass("start stop").hide();
+
+      $("#ProductThumbs").find(".swiper-slide").each(function(){
+        if($(".thumbnail-item.start").length != 1 || $(".thumbnail-item.stop").length != 1){
+          let image_variant_id = $(this).data('variant-id');
+
+          if(image_variant_id == current_variant_id ){
+            $(this).addClass("start");
+            $(this).show();
+            $(this).find('.product-single__thumbnail').trigger('click');
+          }else if(image_variant_id != "" && image_variant_id != current_variant_id) {
+            $(this).addClass("stop");
+          }
+        }
+      })
+
+      $(".thumbnail-item.start").nextUntil(".thumbnail-item.stop").each(function(){
+        thumbs_length++;
+        $(this).show();
+      });
+
+      // let ul_width =  thumbs_length * winWidth;
+      // console.log(ul_width)
+      // galleryThumbs.$wrapperEl.css('width',ul_width);
+
+      galleryThumbs.update(true);
+      let visibleSlides = galleryThumbs.slides.filter((item)=> {return item.style.display != 'none'})
+      if(visibleSlides.length < 6 && winWidth >= 1024){
+        galleryThumbs.$el.find('.swiper-button-next').addClass('hidden');
+        galleryThumbs.$el.find('.swiper-button-prev').addClass('hidden');
+      }
+
+      
+    }
+
+//     let unavailableText = "{{ 'products.product.unavailable' | t }}";
+	let unavailableText = soldOutText;
+    if({{ product.available }}){
+      for (let i = 0; i < $('.single-option-selector').length; i++) {
+        const optionValue = $('.single-option-selector').eq(i).val();
+        if(optionValue==""){
+          unavailableText = $('.single-option-selector').eq(i).find("option:first").html();
+          break;
+        }
+      }
+    }
+
+    // END SWATCHES
+    var product_vip_tag = "{{ product.tags | where: 'vip_only' }}";
+   
+    // END SWATCHES
+    timber.productPage({
+      money_format: "{{ shop.money_format }}",
+      variant: variant,
+      selector: selector,
+      vip_tag: product_vip_tag,
+      translations: {
+        pre_order_now: "Pre-Order Now",
+        add_to_cart: addToCartText,
+        sold_out: soldOutText,
+        unavailable: unavailableText,
+      	vip_only: "For PITAKA VIP members only"
+      }
+    });
+  };
+
+  jQuery(function ($) {
+    var productOptions = [];
+    {% for option in product.options %}
+    // var optionObj = {};
+    productOptions[ {{ forloop.index0 }} ] = "{{ product.options[forloop.index0] }}";
+    // productOptions.push(optionObj);
+    {% endfor %}
+
+    new Shopify.OptionSelectors('productSelect', {
+      product:  {{ product | json }} ,
+      onVariantSelected: selectCallback,
+      enableHistoryState: true
+    });
+
+
+    // Hide selectors if we only have 1 variant and its title contains 'Default'.
+    {% if product.variants.size == 1 and product.selected_or_first_available_variant.title contains 'Default' %}
+    $('.selector-wrapper').hide(); 
+    {% endif %}
+
+    if (productOptions.length > 1) {
+
+      function changeOption(selectValue){
+        let length = 1;
+
+        for (let i = 0; i < productOptions.length; i++) {
+          const singleOptionSelector = `#productSelect-option-${i}`;
+          const singleOptionLength = document.querySelector(singleOptionSelector).children.length;
+          length *= singleOptionLength;
+        }
+
+        const options = document.querySelector("#productSelect").children;
+        const optionLength = options.length - 1;
+        if (length == optionLength) {
+          return;
+        }
+
+        const swatchSelectClass = productOptions[1].toLowerCase();
+        const singleOptions =  document.querySelector("#productSelect-option-0").children;
+
+        var optionArr = [];
+        for (let j = 0; j < singleOptions.length; j++) {
+          const singleOptionValue = singleOptions[j].innerHTML;
+          var optionData = {};
+
+          var singleArr = [];
+          for (let i = 0; i < optionLength; i++) {
+            const optionValue = options[i].innerHTML.split(" - ")[0];
+            // console.log(optionValue,singleOptionValue);
+            const optionValueArr = optionValue.split(" / ");
+            if (optionValueArr[0] == singleOptionValue) {
+              singleArr.push(optionValueArr[1]);
+            }
+          }
+          if (singleArr.length > 0) {
+            optionData.option = swatchSelectClass;
+            optionData.name = singleOptionValue;
+            optionData.arr = singleArr;
+
+            optionArr.push(optionData); 
+          }
+        }
+
+        // console.log(optionArr);
+        for (let index = 0; index < optionArr.length; index++) {
+          const name = optionArr[index].name;
+          if (name == selectValue) {
+            // console.log(optionArr[index]);
+            const valueList = optionArr[index].arr;
+            const swatchClass = optionArr[index].option;
+            $(`.swatch-element.${swatchClass}`).each(function(){
+              const swatchValue = $(this).data('value');
+              if (valueList.includes(swatchValue)) {
+                $(this).find("input[type='radio']").prop("disabled", false);
+                $(this).removeClass("disable");
+              }else{
+                $(this).find("input[type='radio']").prop("disabled", true);
+                $(this).addClass("disable");
+              }
+            });
+
+            const radioValue = $("#productSelect-option-1").val();
+            const checkReturn = valueList.length === 1 ? valueList.includes(radioValue) : (valueList.includes(radioValue) || radioValue == "");
+
+            if (checkReturn) {
+              return;
+            }
+
+            $(`.swatch-element.${swatchClass}`).not('.disable').eq(0).find("input[type='radio']").click();
+          }
+        }
+
+      }
+
+      $("#productSelect-option-0").change(function () {
+        const selectValue = $(this).val();
+        // console.log(selectValue)
+        changeOption(selectValue);
+      })
+    }
+
+  });
+</script>
+
+<script type="text/javascript">
+  $(window).on('load', function(){
+
+    $(".show-iframe").hide();
+
+    if(window.innerWidth > 1023){
+      var iframeHeight = $(".product-single__photos").height();
+      $(".show-iframe").css('height', iframeHeight);
+
+      $(".show-img").click(function(e) { 
+        var dataimage =  $(this).data('image');
+        $('.toggle_source').attr('src' ,'');
+        $('#ProductPhotoImg').attr('src' ,dataimage); 
+        $(".product-single__photos").show();
+        $(".show-iframe").hide();
+      });
+
+      $(".embed-youtube").click(function() {
+        var dataSource1 =  $(this).attr('data-source');
+        $(".product-single__photos").hide();
+        $('.toggle_source').attr('src' ,dataSource1);
+        $(".show-iframe").css('display','flex');
+      });
+    }else{
+      $(".show-iframe").css({'height': '86vw'});
+    }
+
+    // Find all YouTube videos
+    var $allVideos = $("iframe[src^='//www.youtube.com']"),
+        // The element that is fluid width
+        $fluidEl = $("body");
+    // Figure out and save aspect ratio for each video
+    $allVideos.each(function() {
+      $(this).data('aspectRatio', this.height / this.width)
+      // and remove the hard coded width/height
+      .removeAttr('height')
+      .removeAttr('width');
+    });
+
+    // When the window is resized
+    // (You'll probably want to debounce this)
+    $(window).resize(function() {
+      var newWidth = $fluidEl.width();
+      // Resize all videos according to their own aspect ratio
+      $allVideos.each(function() {
+        var $el = $(this);
+        $el.width(newWidth).height(newWidth * $el.data('aspectRatio'));
+      });
+      // Kick off one resize to fix all videos on page load
+    }).resize();
+  });
+</script>
+
+<script>
+  $(function () {
+    $(".product-single__quantity").on("click", ".on-number", function() {
+      // console.log(123);
+      var $val = $(this).siblings("input[type='text']"),
+          $max = parseInt($val.data('max')),
+          $min= parseInt($val.data('min')),
+          val = parseInt($val.val(), 10) + parseInt($(this).data("v"));
+      $('.on-number').prop("disabled",false);
+      if(val >= $max || val <= $min){
+        $(this).prop("disabled",true)
+      }else{
+        $(this).prop("disabled",false)
+      }
+      $val.val(isNaN(val) ? 0 : val);
+    });
+
+    $(".product-single__quantity input[name='quantity']").blur(function(){
+      var quantity = parseInt($(this).val());
+      var max = parseInt($(this).data("max"));
+      var min = parseInt($(this).data("min"));
+      $(this).siblings('input').prop('disabled',false)
+      if(quantity >= max){
+        $(this).next('input').prop('disabled',true);
+        $(this).val(max);
+      }else if(quantity <= min){
+        $(this).prev('input').prop('disabled',true);
+        $(this).val(min);
+      }
+    })
+  })
+</script>
+
+<script type="text/javascript">
+  //klaviyo tracking code
+  var _learnq = _learnq || [];
+
+  var item = {
+    Name: {{ product.title|json }},
+    ProductID: {{ product.id|json }},
+    Categories: {{ product.collections|map:'title'|json }},
+    ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+    URL: "{{ shop.secure_url }}{{ product.url }}",
+    Brand: {{ product.vendor|json }},
+    Price: {{ product.price|money|json }},
+    CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+  };
+
+  _learnq.push(['track', 'Viewed Product', item]);
+  _learnq.push(['trackViewedItem', {
+    Title: item.Name,
+    ItemId: item.ProductID,
+    Categories: item.Categories,
+    ImageUrl: item.ImageURL,
+    Url: item.URL,
+    Metadata: {
+      Brand: item.Brand,
+      Price: item.Price,
+      CompareAtPrice: item.CompareAtPrice
+    }
+  }]);
+</script>

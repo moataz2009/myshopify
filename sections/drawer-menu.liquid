@@ -1,0 +1,661 @@
+<style>
+  .drawer__header {
+    border: none;
+  }
+
+  .icon-xiangshangjiantou::before {
+    color: #fff;
+  }
+
+  .site-header .grid--table>.grid__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .site-nav--mobile {
+    margin-left: 0;
+  }
+
+  .drawer,
+  .mobile-nav>.mobile-nav__item {
+    background: transparent
+  }
+
+  .mobile-nav>.mobile-nav__item {
+    border-bottom: 1px solid #2a2a2a;
+    /* padding-bottom: 20px; */
+  }
+
+  .mobile-nav__item a,
+  .mobile-nav__toggle button {
+    color: #fff;
+    outline: none;
+  }
+
+  .mobile-nav__item a:hover {
+    color: #fff;
+  }
+
+  .mobile-nav__toggle {
+    display: block
+  }
+
+  .drawer__close-button {
+    color: #fff
+  }
+
+  .mobile-nav__sublist,
+  .has_subsublist_container {
+    max-height: 0 !important;
+    transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    /* Firefox 4 */
+    -webkit-transition: all 1s ease;
+    /* Safari 和 Chrome */
+    -o-transition: all 1s ease;
+    /* Opera */
+  }
+
+  .mobile-nav__sublist {
+    width: 100%;
+  }
+
+  .mobile-nav__sublist.expand,
+  .has_subsublist_container.expand {
+    max-height: unset !important
+  }
+
+  .js-drawer-open-left .drawer--left {
+    z-index: 2147483647;
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+  .mobile-nav__sublist h3.mobile-nav__link {
+    font-weight: 700;
+    color: #fff;
+    padding: 0;
+    text-align: center;
+  }
+
+  .site-nav>li.site-nav__expanded-item:last-child .mobile-nav__sublist h3.mobile-nav__link {
+    font-weight: 400;
+  }
+
+  .mobile-nav__has-sublist.has_subsublist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobile-nav__has-sublist.has_subsublist>.iconfont {
+    font-size: 12px;
+    line-height: 14px;
+    height: 34px;
+    padding-bottom: 20px;
+  }
+
+  .mobile-nav__sublist h3.mobile-nav__link a {
+    font-size: 16px;
+  }
+
+  .mobile-nav__item>.mobile-nav__has-sublist {
+    width: 100%;
+  }
+
+  .mobile-nav__item>.mobile-nav__has-sublist:last-child {
+    border: none;
+  }
+
+  .mobile-nav__item .mobile-nav__has-sublist>a {
+    letter-spacing: 1px;
+    padding: 20px 0;
+    font-size: 17px;
+  }
+
+  .main-list__item .mobile-nav__has-sublist.has_subsublist>a {
+    padding: 0 0 20px;
+  }
+
+  .site-nav__link {
+    color: #fff;
+    font-weight: 600
+  }
+
+  .icon-fallback-text .iconfont {
+    font-size: 14px
+  }
+
+  .icon-fallback-text .icon.icon-x {
+    font-size: 24px;
+  }
+
+  .mobile-nav__item a:active,
+  .mobile-nav__toggle button:active {
+    background: none
+  }
+
+  .mobile-nav__item .mobile-nav__has-sublist.has_subsublist>a.mobile-nav__link {
+    font-weight: 500;
+    padding: 15px 0 7.5px;
+  }
+
+  .mobile-nav li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-nav li.menu-cases {
+    align-items: flex-start;
+    margin-left: 3px;
+  }
+
+  .has_subsublist_container {
+    margin: 0;
+  }
+
+  .mobile-nav__has-sublist.active .mobile-nav__toggle-btn .mobile-nav__toggle-open {
+    display: none;
+  }
+
+  .mobile-nav__has-sublist.active .mobile-nav__toggle-btn .mobile-nav__toggle-close {
+    display: block;
+  }
+
+  .mobile-nav__toggle button {
+    padding: 20px 0 20px 3em;
+  }
+
+  .mobile-nav__item img.title-img {
+    margin: 0;
+    display: block;
+  }
+
+  .mp-level {
+    transition: all .3s;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #171719;
+    flex-direction: column;
+    overflow: hidden;
+    visibility: hidden;
+    z-index: 99;
+  }
+
+  .mp-level .level-header {
+    width: 100%;
+    background-color: #2A2A2A;
+    display: flex;
+    padding: 0 7%;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .mp-level .level-header>* {
+    width: 50%;
+    padding: 10px 0;
+  }
+
+  .mp-level.open {
+    width: 100%;
+    display: flex;
+    visibility: visible;
+  }
+
+  .mp-level li.mobile-nav__item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .mp-level .subsub_list a {
+    padding: 15px 0 0;
+    text-transform: none;
+  }
+
+  .drawer--left {
+    width: 100%;
+    max-width: unset;
+  }
+
+  .drawer__fixed-header {
+    left: 0;
+    right: 0;
+    background: #171719;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    min-width: 300px;
+    width: 50vw;
+  }
+
+  .drawer__header {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .drawer__close--left {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  .drawer__close--left>a {
+    width: 50%;
+    display: flex;
+  }
+
+  .drawer__close--left>a img {
+    max-width: 145px;
+    transform: translateX(-50%);
+  }
+
+  .drawer__close--left .drawer__close-button {
+    width: 50%;
+    display: flex;
+    left: 0;
+    padding: 0;
+  }
+
+  .drawer__inner {
+    width: 50vw;
+    min-width: 300px;
+    background-color: #171719;
+    overflow: visible;
+    padding: 15px 7% 0;
+  }
+
+  .drawer__inner .mobile-nav {
+    margin: 0;
+  }
+
+  .mp-level .mobile-nav__sublist {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 7vw 10%;
+    max-height: unset !important;
+    overflow: auto;
+  }
+
+  @media screen and (min-width:768px) {
+    .drawer__inner {
+      padding: 15px 5% 0;
+    }
+  }
+
+  .mp-level .mobile-nav__sublist .mobile-nav__item>a {
+    width: 100%;
+    padding: 0;
+  }
+
+  .mobile-nav__sublist h3.mobile-nav__link a {
+    font-size: 14px;
+    padding: 0;
+  }
+
+  .mp-level .mobile-nav__sublist h3.mobile-nav__link.absoluted {
+    padding: 0;
+    margin: 0;
+    left: 10px;
+    bottom: 10px;
+    font-size: 14px;
+  }
+
+  .mobile-nav__item {
+    position: static;
+  }
+
+  .btn-text-gradient {
+    position: relative;
+    display: inline-block;
+    color: rgb(8, 78, 216);
+  }
+
+  .btn-text-gradient::before {
+    content: attr(text);
+    position: absolute;
+    z-index: 10;
+    color: rgb(2, 253, 254);
+    -webkit-mask: linear-gradient(91deg,
+        transparent,
+        rgb(2, 253, 254) 46%,
+        transparent);
+  }
+
+  .btn-gradient {
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #3ee1ff;
+    box-shadow: 1px 1px 15px 8px #1f55f0;
+  }
+
+  .btn-gradient::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+        transparent,
+        rgba(31, 85, 240, 0.3),
+        transparent);
+    transition: all 650ms;
+  }
+
+  @media screen and (max-width:1279px) and (min-width:768px) {
+    .mp-level .level-header {
+      padding: 0 6%;
+    }
+
+    .mp-level .mobile-nav__sublist {
+      padding: 30px 10%;
+    }
+
+    .mobile-nav {
+      margin: 0;
+    }
+
+    .mobile-nav__item .mobile-nav__has-sublist>a,
+    .mobile-nav__toggle button {
+      padding: 30px 0;
+    }
+
+    .mobile-nav__toggle button {
+      padding-left: 3em;
+    }
+
+    .drawer__fixed-header {
+      padding: 0 5%;
+    }
+
+    .drawer__header {
+      padding: 15px 0;
+    }
+  }
+
+  @media screen and (max-width:767px) {
+    .mp-level .level-header {
+      padding: 0 3%;
+    }
+
+    .drawer__header {
+      padding: 15px 0;
+    }
+
+    .drawer__close--left>a img {
+      max-width: 105px;
+    }
+
+    .main-list__item .mobile-nav__has-sublist.has_subsublist>a {
+      font-size: 14px;
+      letter-spacing: 0;
+    }
+  }
+
+  @media screen and (max-width:414px) {
+    .mobile-nav__item .mobile-nav__has-sublist>a {
+      font-size: 16px;
+    }
+  }
+</style>
+
+
+<div data-section-id="{{ section.id }}" data-section-type="drawer-menu-section">
+  <div class="drawer__fixed-header">
+    <div class="drawer__header">
+      <div class="drawer__close drawer__close--left">
+        <button type="button" class="icon-fallback-text drawer__close-button js-drawer-close">
+          <span class="icon icon-x" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="drawer__inner">
+    {% if section.settings.drawer_search_enable %}
+    {% render 'search-bar', search_btn_style: 'btn--secondary', search_bar_location: 'search-bar--drawer' %}
+    {% endif %}
+
+    <!-- begin mobile-nav -->
+    <ul class="mobile-nav">
+
+      {% assign menu = linklists.main-menu %}
+      {% for link in menu.links %}
+      <li class="mobile-nav__item {% if link.levels == 2 %} main-nav__item{% elsif link.levels == 1 %} main-list__item{% endif %}{% unless template.name == 'index' %}
+        {% if link.active %} mobile-nav__item--active{% endif %}{% endunless %}">
+
+        <div class="mobile-nav__has-sublist">
+          <a href="{{ link.url }}" class="mobile-nav__link fw-700 font-upper" id="Label-{{ link.title | handleize }}">
+            {{ link.title }}
+            {% if link.title == 'Winter Sale' %}
+            <sup class="text-cyan child"> NEW</sup>
+            {% endif %}
+          </a>
+          {% unless link.title == 'Winter Sale' %}
+          <div class="mobile-nav__toggle">
+            <button type="button" class="mobile-nav__toggle-btn icon-fallback-text"
+              data-aria-controls="Linklist-{{ link.title | handleize }}">
+              <span class="icon-fallback-text mobile-nav__toggle-open">
+                <span class="iconfont icon-xiangxiajiantou" aria-hidden="true"></span>
+              </span>
+              <span class="icon-fallback-text mobile-nav__toggle-close">
+                <span class="iconfont icon-xiangshangjiantou" aria-hidden="true"></span>
+              </span>
+            </button>
+          </div>
+          {% endunless %}
+          
+        </div>
+
+        {% if link.levels == 2 %}
+        <ul class="mobile-nav__sublist main-nav__sublist" id="Linklist-{{ link.title | handleize }}"
+          aria-labelledby="Label-{{ link.title | handleize }}" role="navigation">
+          {% for sub_link in link.links %}
+          <li class="main-list__item">
+            <div class="mobile-nav__has-sublist has_subsublist">
+              <a href="{{ sub_link.url }}" class="fw-700" id="Label-{{ sub_link.title | handleize }}">
+                {{ sub_link.title }}
+              </a>
+              <span class="iconfont icon-xiangyoujiantou" aria-hidden="true"></span>
+            </div>
+
+            <!-- 待覆盖 -->
+            <div class="mp-level">
+              <div class="level-header">
+                <a class="mp-back fw-500" href="#">
+                  <span class="iconfont icon-xiangzuojiantou"></span> BACK
+                </a>
+              </div>
+
+              <ul class="mobile-nav__sublist secondary-nav__sublist" id="Linklist-{{ sub_link.title | handleize }}"
+                aria-labelledby="Label-{{ link.title | handleize }}" role="navigation">
+
+                {% for sub_sub_link in sub_link.links %}
+                  {% assign sub_link_product = sub_sub_link.object %}
+                  {% assign sub_link_type = sub_sub_link.type %}
+                  {% if sub_link_type == 'product_link' %}
+                    {% if sub_link_product.available 
+                      or sub_sub_link.title contains 'iPad Pro'
+                      or sub_sub_link.title contains 'Folio'
+                      or sub_sub_link.title contains 'Apple Watch'
+                      or sub_sub_link.title contains 'AirPods Pro'
+                      or sub_sub_link.title contains 'Omni Lite'
+                      or sub_sub_link.title contains 'Mount Qi'
+                      or sub_sub_link.title contains 'Juice'
+                    %}
+                      <li
+                        class="mobile-nav__item{% unless template.name == 'index' %}{% if sub_sub_link.active %} mobile-nav__item--active{% endif %}{% endunless %}">
+                        <a href="{{ sub_sub_link.url }}" class="pt-section-detail fw-500">
+                          {{ sub_sub_link.title | escape }}
+                          {% if sub_sub_link.url contains 'wireless-charging-kit'
+                            or sub_sub_link.url contains 'magez-stand'                           	
+                            or sub_sub_link.url contains 'magez-folio' 
+                            or sub_sub_link.url contains 'magez-case-2-for-ipad'
+                           %}
+                            <sup class="text-cyan child"> NEW</sup>
+
+                          {% elsif sub_sub_link.url contains 'magez-juice-2' %}
+                            <sup class="text-cyan child"> Hot Seller</sup>
+
+                          {% elsif sub_sub_link.url contains 'magez-case-for-iphone-x'
+                            or sub_sub_link.url contains 'galaxy-s9' %}
+                            <sup class="text-cyan child"> Super Deals</sup>
+                            
+                          {% endif %}
+                        </a>
+                      </li>
+                    {% endif %}
+                  {% else %}
+                    <li
+                      class="mobile-nav__item{% unless template.name == 'index' %}{% if sub_sub_link.active %} mobile-nav__item--active{% endif %}{% endunless %}">
+                      <a href="{{ sub_sub_link.url }}" class="pt-section-detail fw-500">
+                        {{ sub_sub_link.title | escape }}
+                        {% if sub_sub_link.url contains 'galaxy-s21'
+                           or sub_sub_link.url contains 'ipad-pro'
+                        %}
+                          <sup class="text-cyan child"> NEW</sup>
+                        {% elsif sub_sub_link.url contains 'iphone-12' %}
+                          <sup class="text-cyan child"> Hot Seller</sup>
+                        {% endif %}
+                      </a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+
+        {% else link.levels == 1 %}
+        <div class="mp-level">
+          <div class="level-header">
+            <a class="mp-back fw-500" href="#">
+              <span class="iconfont icon-xiangzuojiantou"></span> BACK
+            </a>
+          </div>
+          <ul class="mobile-nav__sublist secondary-nav__sublist" id="Linklist-{{ link.title | handleize }}"
+            aria-labelledby="Label-{{ link.title | handleize }}" role="navigation">
+
+            {% for sub_link in link.links %}
+              {% assign link_product = sub_link.object %}
+              {% assign link_type = sub_link.type %}
+              
+              {% if link_type == 'product_link' %}
+                {% if link_product.available
+                  or sub_sub_link.title contains 'Travel Kit'
+                  or sub_sub_link.title contains 'Wallet'
+                  or sub_sub_link.title contains 'Card Sleeve'
+                  or sub_sub_link.title contains 'Watch Band'
+                %}
+                  <li
+                    class="mobile-nav__item{% unless template.name == 'index' %}{% if sub_link.active %} mobile-nav__item--active{% endif %}{% endunless %}">
+                    <a href="{{ sub_link.url }}" class="pt-section-detail fw-500">
+                      {{ sub_link.title | escape }}
+                      {% if sub_link.url contains 'watch-band' 
+                        or sub_link.url contains 'power-bank'
+                       or sub_link.url contains 'magez-card-sleeve'
+                      %}
+                        <sup class="text-cyan child"> NEW</sup>
+                      {% endif %}
+                    </a>
+                  </li>
+                {% endif %}
+              {% else %}
+                <li
+                  class="mobile-nav__item{% unless template.name == 'index' %}{% if sub_link.active %} mobile-nav__item--active{% endif %}{% endunless %}">
+
+                  {% if link.title == 'Carry & Protect' %}
+                    <a href="{{ sub_link.url }}" class="pt-section-detail fw-500">
+                      {{ sub_link.title | escape }}
+                      {% if sub_link.url contains 'wallet-2' %}
+                        <sup class="text-cyan child"> NEW</sup>
+                      {% endif %}
+                    </a>
+                  {% else %}
+                    {% assign caseImgUrl =  sub_link.title | escape | downcase | replace: ' ', '-' | append: '.jpg' | prepend: 'nav-title-' %}
+                    <a href="{{ sub_link.url }}" class="relatived">
+                      <img src="{{ caseImgUrl | asset_url }}" class="title-img" />
+                      <h3 class="mobile-nav__link absoluted">
+                        {{ sub_link.title | escape }}
+                      </h3>
+                    </a>
+                  {% endif %}
+
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </li>
+      {% endfor %}
+
+      <li class="mobile-nav__spacer"></li>
+    </ul>
+    <!-- //mobile-nav -->
+  </div>
+</div>
+
+<script>
+  $(function () {
+
+    $(".mobile-nav").on("click", ".main-nav__item", function () {
+      $(this).siblings().find(".mobile-nav__has-sublist").removeClass('active');
+      $(this).siblings().find(".mobile-nav__sublist").removeClass('expand');
+      var subMenu = $(this).find(".main-nav__sublist");
+      subMenu.prev(".mobile-nav__has-sublist").toggleClass("active");
+      subMenu.toggleClass("expand");
+    });
+
+    $(".main-list__item").on("click", function () {
+      $(this).prev(".main-nav__item").find(".mobile-nav__has-sublist").removeClass('active');
+      $(this).prev(".main-nav__item").find(".mobile-nav__sublist").removeClass('expand');
+      $(this).siblings().find(".mp-level").removeClass("open");
+      let mpLevel = $(this).find(".mp-level");
+      mpLevel.addClass("open").css({
+        width: '100%'
+      })
+    })
+
+    $(".mp-level").on("click", ".mp-back", function (e) {
+      e.stopPropagation();
+      let mpLevel = $(this).parents(".mp-level");
+      // console.log(mpLevel);
+      mpLevel.removeClass("open").css({
+        width: 0
+      })
+      if ($(this).parents(".mobile-nav__item").hasClass("main-nav__item")) {
+        $(this).parents(".main-nav__item").click();
+      }
+    });
+  })
+</script>
+
+{% schema %}
+{
+"name": "Sidebar menu",
+"settings": [
+{
+"type": "link_list",
+"id": "drawer_top_link_list",
+"label": "Primary menu",
+"default": "main-menu"
+},
+{
+"type": "link_list",
+"id": "drawer_bottom_link_list",
+"label": "Additional menu",
+"default": "footer"
+},
+{
+"type": "checkbox",
+"id": "drawer_search_enable",
+"label": "Enable search"
+}
+]
+}
+{% endschema %}

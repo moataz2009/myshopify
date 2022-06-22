@@ -1,0 +1,137 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
+<div class="6th-modal-cover hidden h-screen w-full fixed bg-gray-850 z-10 opacity-90"></div>
+<div id="6th-modal" class="fixed hidden top-0 left-0 w-full h-screen z-20">
+  <div id="trigger-close" class="absolute z-20 right-6 top-12 sm:right-12 md:right-24 md:top-24 cursor-pointer">
+    <span
+      class="flex rounded rounded-full justify-center items-center font-semibold block bg-white text-lg w-8 h-8 text-black text-center">x</span>
+  </div>
+  <div class="h-screen w-full flex justify-center items-center overflow-hidden relative">
+    <div class="w-full letter-container flex flex-wrap justify-center">
+      <!-- <h3 class="text-2xl sm:text-3xl font-bold mb-10 text-gold text-center toTextTitle">To Dear PITAKA Fans</h3> -->
+      <div class="envelope-box w-full h-80 sm:h-96 relative animate-bounce">
+        {{'envelope-backend-christmas.png' | asset_url | img_tag:'','envelope block max-w-full absolute bottom-0 left-1/2 -translate-x-1/2 transform transition-transform'}}
+        <div
+          class="letter-box absolute shadow-md h-80 relative -bottom-28 xs:-bottom-16 sm:-bottom-16 -translate-x-1/2 transform transition-transform">
+          <div class="letter-flower absolute -right-4 -top-4 z-10 w-24 xs:-right-6 xs:-top-6 xs:w-32 opacity-0">
+            {{'envelope-letter-flower-christmas.png' | asset_url | img_tag:'','block ' }}
+          </div>
+          <div class="letter-bg absolute left-0 top-0 w-full">
+            {{'envelope-letter-bg-christmas.png' | asset_url | img_tag:'','block w-full' }}
+          </div>
+          <div class="letter w-full p-4 xs:p-6 sm:p-6 z-10 relative">
+            <!-- {{'pitaka-6th-anny-logo.svg' | asset_url | img_tag:'','w-3/4 block mb-6' }} -->
+            <h3 class="text-center text-2xl xs:text-3xl md:text-4xl font-bold text-gold mb-2 xs:mb-4">
+              Happy<br> Holidays
+            </h3>
+            <div class="text-center letter-content text-para">
+              <h4 class="title-head text-sm sm:text-base font-normal text-para mb-0 xs:mb-2">
+                Wishing you health and happiness this holiday season and beyond!
+              </h4> 
+              <p class="text-sm sm:text-base font-normal text-para">
+                Thank you for <br class="xs:hidden"> the wonderful year.
+              </p>
+            </div>
+          </div>
+        </div>
+        {{'envelope-front-christmas.png' | asset_url | img_tag:'','envelope block absolute bottom-0 left-1/2 -translate-x-1/2 trigger-open cursor-pointer max-w-full transform transition-transform'}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .animate-bounce {
+    animation: bounce 4s infinite;
+  }
+
+  @keyframes bounce {
+
+    0%,
+    100% {
+      transform: translateY(-2%);
+      animationTimingFunction: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+      transform: translateY(0);
+      animationTimingFunction: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  .text-gold {
+    color: #eaaa45;
+  }
+
+  .text-para {
+    color: #845c1b;
+  }
+
+  .toText,
+  .letter-flower,
+  .envelope-box,
+  .envelope,
+  .letter-box {
+    transition: all 1.5s ease-in-out;
+  }
+
+  .letter>h3 {
+    font-family: 'Noto Serif SC', serif;
+  }
+
+  .letter-container {
+    padding: 0 1.5rem;
+  }
+
+  .letter-bg img {
+    width: 100%;
+  }
+
+  .letter-box {
+    width: 100%;
+    /* transform: scale(0.9) translateX(-50%); */
+    transform: scale(0.9) ;
+  }
+
+  .envelope-box {
+    max-width: 450px;
+  }
+
+  .envelope-box.open .letter-box {
+    bottom: 0rem;
+  }
+
+  .envelope-box.open .envelope {
+    transform: translateY(2rem) translateX(-50%);
+  }
+  .trigger-open {
+    box-shadow: 0 25px 15px -16px rgb(0 0 0 / 80%);
+  }
+  @media screen and (max-width:767px) {
+    .envelope-box.open .letter-box {
+      bottom: 4rem;
+    }
+  }
+
+  @media screen and (max-width:414px) {
+    .envelope-box.open .letter-box {
+      bottom: -3rem;
+    }
+  }
+</style>
+
+<script>
+  $(function () {
+    setTimeout(() => {
+      $('.envelope-box').addClass('open').removeClass('animate-bounce');
+    }, 1000);
+    setTimeout(() => {
+      $('.letter-flower').addClass('opacity-100').removeClass('opacity-0');
+    }, 2500);
+    $('#trigger-close').click(function () {
+      $('#6th-modal').hide();
+      $('.6th-modal-cover').hide()
+    })
+  })
+</script>

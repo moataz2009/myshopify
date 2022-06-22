@@ -1,0 +1,88 @@
+{% if page.url == '/pages/frontpage' %}
+<script type='text/javascript'>window.location='https://www.ipitaka.com';</script>
+{% endif %}
+<style>
+.container{
+  padding-bottom: 10%;
+}
+.container h1{
+  font-size: 2.25em;
+  font-weight: 800;
+  text-align: center;
+  margin: 5% auto;
+}
+.container form{
+  text-align: center;
+  width:28em;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container label{
+  visibility: hidden;
+}
+.container input[type=text]{
+  position: relative;
+  border:none !important;
+  border-bottom: 1px solid #BFBFBF !important;
+  width:99%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container input[type=text]:focus,
+.container input[type=submit]:focus{
+  outline: none;
+}
+
+.container .order-lookup-container form::before{
+  content:'';
+  position: absolute;
+  height: 32px;
+  border-left: 1px solid #000;
+  width:1%;
+  top:2em;
+  left: 0;
+}
+.container .order-lookup-container form::after{
+  content:'';
+  position: absolute;
+  height: 32px;
+  border-left: 1px solid #000;
+  width:1%;
+  top:7em;
+  left: 0;
+}
+
+.container input[type=submit]{
+  font-style: normal;
+  background: #000;
+  color:#fff;
+  border-radius: 8px;
+  margin: 5% auto;
+  font-size: 1.1em;
+  padding:2em 5em;
+  font-weight: 600;
+}
+  
+  @media screen and (max-width:1024px){
+    
+  }
+
+@media screen and (max-width:414px){
+  .container form{
+    width:18em;
+  }
+}
+</style>
+<div class="container clearfix">
+  {{ page.content }}
+</div>
+
+{% if page.url == '/pages/load-magdock-pro-user-manual' %}
+<script type='text/javascript'>window.location="{{'MagDock-Pro-User-Manual.pdf' | asset_url }}";</script>
+{% endif %}
+
+
+{% section 'manual-collection-to-pdf' %}

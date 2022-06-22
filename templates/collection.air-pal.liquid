@@ -1,0 +1,624 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+{% assign base_name  = 'pal' %}
+<div class="pt-section section1 pt-flex pt-flex-center pt-flex-column bg-black">
+    <div class="pt-section-content pt-text-center">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400 font-upper">Triple the Power</h3>
+    </div>
+    <div class="pt-section-picture">
+      <div class="wallet-section section2-img">
+        <img src="{{ placeholder_gif }}"
+          data-src="{{ base_name | prepend: 'product-section1-' | append: '.png' | asset_url }}" class="lazyload" />
+      </div>
+    </div>
+</div>
+  
+  <div class="section2 relative bg-black">
+    <div class="pt-section-content width-38 absolute">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Triple the Life of Your AirPods
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        With a 1200mAh integrated charger, the Air Pal extends the battery life of
+        your AirPods by three times the standard length. Never worry about running
+        out of power with the Air Pal emergency battery.
+      </p>
+    </div>
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-section2-' | append:'.jpg' | asset_url }}"
+        media="(min-width: 768px)" />
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-section2-' | append:'-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload" />
+    </picture>
+  </div>
+  
+  
+  <div class="pt-section1 section4 pt-flex pt-flex-center pt-flex-column bg-black">
+    <div class="pt-section-content pt-text-center pt-margin-bottom-large">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Wirelessly Charge Your AirPods
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Place your Air Pals on any Qi-Certified device to wirelessly charge your AirPods without removing the case.
+  
+      </p>
+    </div>
+    <div class="pt-section-picture pt-flex pt-flex-center pt-flex-column pt-flex-row">
+      <!-- <picture >
+        <img 
+          srcset="{{ base_name | prepend: 'product-section3-' | append:'-1.png' | asset_url }}"
+        />
+      </picture> -->
+      <picture>
+        <source data-srcset="{{ base_name | prepend: 'product-section3-' | append:'-1.png' | asset_url }}"
+          media="(min-width: 768px)" />
+        <img src="{{ placeholder_gif }}"
+          data-src="{{  base_name | prepend: 'product-section3-' | append:'-1-m.png' | asset_url }}"
+          class="img-responsive lazyload" />
+      </picture>
+      <!-- <picture class="mr5">
+        <img
+          srcset="{{ base_name | prepend: 'product-section3-' | append:'-2.png' | asset_url }}"
+          class="parallex-img"
+          id="scroll-slider-img-2"
+        />
+      </picture> -->
+    </div>
+  </div>
+  
+  <div class="pt-section section4 pt-flex pt-flex-center pt-flex-column bg-black">
+    <div class="pt-section-content pt-text-center pt-margin-bottom-large">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Aerospace-grade Aramid Fiber</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Durable aramid fiber not only protects your AirPods but its classic design
+        is also aesthetically pleasing to the eye.
+      </p>
+    </div>
+    <picture>
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-section4-' | append: '.png' | asset_url }}"
+        class="img-responsive lazyload" />
+    </picture>
+  </div>
+  
+  <div class="pc section2 relative bg-black">
+    <div class="pt-section-content width-38 absolute">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">An Essential Everyday Carry Item</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        With its compact size and detachable ring, easily clip the Air Pals case
+        to your bag or pocket.
+      </p>
+    </div>
+    <picture style="height: auto !important;">
+      <source data-srcset="{{ base_name | prepend: 'product-section5-' | append:'-1.jpg' | asset_url }}"
+        media="(min-width: 768px)" />
+      <img src="{{ placeholder_gif }}"
+        data-src="{{  base_name | prepend: 'product-section5-' | append:'-1-m.png' | asset_url }}"
+        class="img-responsive lazyload" />
+    </picture>
+  </div>
+  
+  <div class="phone pt-section section5 pt-flex pt-flex-center bg-black">
+    <div class="pt-section-container width-100 pt-flex pt-flex-center pt-flex-column pt-flex-row">
+      <div class="pt-section-content pt-text-center pt-margin-bottom-large width35">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">An Essential Everyday Carry Item</h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          With its compact size and detachable ring, easily clip the Air Pals case
+          to your bag or pocket.
+        </p>
+      </div>
+      <!-- <picture class="pt-flex pt-flex-center">
+        <img
+          srcset="{{  base_name | prepend: 'product-section5-' | append:'-1.png' | asset_url }}"
+          class="img-responsive"
+        />
+      </picture> -->
+      <picture style="height: auto !important;">
+        <source data-srcset="{{ base_name | prepend: 'product-section5-' | append:'-1.png' | asset_url }}"
+          media="(min-width: 768px)" />
+        <img src="{{ placeholder_gif }}"
+          data-src="{{  base_name | prepend: 'product-section5-' | append:'-1-m.png' | asset_url }}"
+          class="img-responsive lazyload" />
+      </picture>
+    </div>
+  </div>
+  
+  <div class="pt-section1 section4 pt-flex pt-flex-center pt-flex-column bg-black">
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-section5-' | append:'-3.jpg' | asset_url }}"
+        media="(min-width: 768px)" />
+      <img src="{{ placeholder_gif }}"
+        data-src="{{  base_name | prepend: 'product-section5-' | append:'-3-m.jpg' | asset_url }}"
+        class="img-responsive lazyload" />
+    </picture>
+  </div>
+  
+  <!-- scroll slider css-->
+  <style>
+    .width-38 {
+      width: 38% !important;
+    }
+  
+    .phone {
+      display: none;
+    }
+  
+    .pt-section1 {
+      padding: 5em 0%;
+    }
+  
+    .pt-flex-row {
+      flex-direction: row !important;
+    }
+  
+    .mr5 {
+      margin-right: 5%;
+    }
+  
+    .width35 {
+      width: 35% !important;
+    }
+  
+    .pt-section1 {
+      padding: 5em 0% !important;
+    }
+  
+    .parallexScroll .pt-section-picture picture {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  
+    .parallexScroll .pt-section-picture picture:last-child {
+      justify-content: flex-end;
+      align-items: center;
+    }
+  
+    .parallexScroll .pt-section-picture img {
+      display: block;
+      width: auto;
+    }
+  
+    .section2-img img {
+      width: 80% !important;
+    }
+  
+    /* all PC screens */
+    @media screen and (min-width: 1280px) {
+      .parallexScroll .pt-section-picture {
+        min-width: 708px;
+      }
+    }
+  
+    /* tablet and pc screens */
+    @media screen and (min-width: 768px) {
+      .parallexScroll {
+        overflow: hidden;
+      }
+  
+      .parallexScroll .pt-section-picture {
+        width: 60%;
+        align-self: flex-start;
+        min-width: 425px;
+      }
+  
+      .parallexScroll .pt-section-picture img {
+        height: auto;
+        width: 100%;
+      }
+  
+      .parallexScroll .section-content {
+        text-align: left;
+        width: 40%;
+        padding: 0 5%;
+        max-width: 750px;
+      }
+    }
+  
+    /* portrait tablet */
+    @media screen and (max-width: 1279px) and (min-width: 768px) and (orientation: portrait) {
+      .tablet_vh100_portrait {
+        height: 100vh;
+      }
+  
+      .parallexScroll {
+        flex-flow: column-reverse nowrap;
+      }
+  
+      .parallexScroll.tablet_vh100_portrait {
+        max-height: unset;
+        height: auto;
+      }
+  
+      .parallexScroll .section-content {
+        padding: 12% 0;
+        width: 80%;
+        max-width: 600px;
+        height: 32%;
+        text-align: center;
+      }
+  
+      .parallexScroll .pt-section-picture {
+        height: 68%;
+        width: 100%;
+        overflow: hidden;
+      }
+  
+      .parallexScroll .pt-section-picture picture {
+        padding-bottom: 4em;
+      }
+  
+      .parallexScroll .pt-section-picture picture:last-child {
+        padding: 5em 0;
+      }
+  
+      .parallexScroll .pt-section-picture picture:first-child img {
+        width: 80%;
+      }
+    }
+  
+    @media screen and (max-width: 767px) {
+      .parallexScroll .pt-section-picture picture:first-child img {
+        width: 90%;
+      }
+  
+      .parallexScroll .pt-section-picture picture:last-child img {
+        width: 96%;
+      }
+  
+      .parallexScroll .pt-section-picture picture {
+        padding-bottom: 4em;
+      }
+  
+      .parallexScroll .pt-section-picture picture:last-child {
+        padding: 4em 0;
+      }
+  
+      .pt-flex-row {
+        flex-direction: column !important;
+      }
+  
+      .width35 {
+        width: 65% !important;
+      }
+  
+      .section4 picture {
+        max-width: 100% !important;
+      }
+  
+      .section4 .pt-section-content {
+        width: 75% !important;
+        text-align: center;
+      }
+  
+      .pt-section .pt-section-picture {
+        width: 75% !important;
+      }
+  
+      .pt-section .pt-section-picture picture {
+        margin-bottom: 20% !important;
+      }
+    }
+  </style>
+  <!-- end scroll slider css-->
+  
+  <style>
+    .wallet-section {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+  
+    .wallet-section img {
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      width: 100%;
+    }
+  
+    .pt-section .pt-section-content {
+      width: 50%;
+    }
+  
+    .section1 .pt-section-picture {
+      padding-top: 5em;
+    }
+  
+    .section2 .pt-section-content {
+      padding-left: 7%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    .section3 {
+      padding: 0;
+    }
+  
+    .section3 .pt-section-content {
+      padding-left: 10%;
+      padding-right: 7%;
+    }
+  
+    .section5 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  
+    .section5 .pt-section-content {
+      width: 78%;
+    }
+  
+    .section5 .pt-section-container:first-child picture {
+      max-width: 38%;
+    }
+  
+    .section5 .pt-section-container:last-child {
+      height: 100%;
+    }
+  
+    .section5 .pt-section-container:last-child picture {
+      height: 28vw;
+    }
+  
+    .section5 .pt-section-container:last-child picture:last-child {
+      display: block;
+      overflow: hidden;
+    }
+  
+    .section5 .pt-section-container:last-child picture:first-child img {
+      max-width: 80%;
+    }
+  
+    @media screen and (max-width: 1440px) {
+      .section5 .pt-section-container:first-child picture {
+        max-width: 30%;
+      }
+    }
+  
+    @media screen and (max-width: 1024px) {
+      .pt-section {
+        padding: 4em 0;
+      }
+  
+      .section4 {
+        padding: 4em 10%;
+      }
+  
+      .section3 .pt-section-content {
+        padding: 4em 0;
+        width: 68;
+        text-align: center;
+      }
+  
+      .pt-section-detail {
+        font-size: 14px;
+      }
+  
+      .section4 picture {
+        max-width: 50%;
+      }
+  
+      .section4 .pt-section-content {
+        width: 68%;
+      }
+  
+      .section5 .pt-margin-bottom-large {
+        margin-bottom: 3em;
+      }
+  
+      .section5 .pt-section-container {
+        width: 50%;
+      }
+  
+      .section5 .pt-section-container:first-child picture {
+        max-width: 26%;
+      }
+  
+      .section5 .pt-section-container:last-child picture {
+        height: 29vw;
+      }
+    }
+  
+    @media screen and (max-width: 767px) {
+      .pc {
+        display: none;
+      }
+  
+      .phone {
+        display: block;
+      }
+  
+      .pt-section-detail {
+        font-size: 13px;
+      }
+  
+      .pt-section .pt-section-content {
+        width: 100%;
+      }
+  
+      .pt-bg-dark {
+        background: #171719;
+      }
+  
+      .pt-section {
+        padding: 3em 7%;
+      }
+  
+      .section2 .pt-section-content {
+        text-align: center;
+        width: 100% !important;
+        top: 3em;
+        transform: none;
+        padding: 0 12%;
+      }
+  
+      .section3 {
+        flex-direction: column;
+      }
+  
+      .section3 .pt-section-content {
+        width: 100%;
+        text-align: center;
+        order: 1;
+        padding: 3em 7%;
+      }
+  
+      .section3 .pt-section-picture {
+        order: 2;
+      }
+  
+      .section3 .pt-section-picture:nth-child(3) {
+        width: calc(100% - 10px);
+      }
+  
+      .section4 .pt-section-content {
+        width: 100%;
+        text-align: center;
+      }
+  
+      .section4 picture {
+        max-width: 70%;
+      }
+  
+      .section5 {
+        flex-direction: column;
+        padding: 0;
+      }
+  
+      .section5 .pt-section-container {
+        width: 100%;
+      }
+  
+      .section5 .pt-section-content {
+        padding: 3em 7% 0;
+      }
+  
+      .section5 .pt-flex:last-child {
+        margin:0;
+  
+      }
+  
+  
+      .section5 .pt-section-container:first-child picture {
+        max-width: 80%;
+      }
+  
+      .section5 .pt-section-container:last-child {
+        width: 100%;
+      }
+  
+      .section5 .pt-section-container:last-child picture:first-child,
+      .section5 .pt-section-container:last-child picture:last-child {
+        height: auto;
+        max-width: 100%;
+        padding: 3em 0;
+      }
+  
+      .section5 .pt-section-container:last-child picture:last-child {
+        padding: 0;
+      }
+    }
+  </style>
+  
+  <!-- scroll slider js-->
+  {{ 'ScrollMagic.js' | asset_url | script_tag }}
+  {{ 'debug.addIndicators.min.js' | asset_url | script_tag }}
+  {{ 'animation.gsap.min.js' | asset_url | script_tag }}
+  {{ 'TimelineLite.min.js' | asset_url | script_tag }}
+  {{ 'TweenLite.min.js' | asset_url | script_tag }}
+  {{ 'CSSPlugin.min.js' | asset_url | script_tag }}
+  {{ 'BezierPlugin.min.js' | asset_url | script_tag }}
+  {{ 'imagesloaded.pkgd.min.js' | asset_url | script_tag }}
+  <script>
+    !(function () {
+      if (window.innerWidth > 1024) {
+        let screenWid = window.innerWidth,
+          screenHei = window.innerHeight,
+          alreadyLoaded = false
+        let parallexLastImg = document.querySelector(
+            '.parallexScroll .parallex-img'
+          ),
+          parallexAllImgs = document.querySelectorAll('.parallexScroll picture'), // a nodelist
+          parallexWrapper = document.querySelector('.parallexScroll'),
+          parallexSectionImg = document.querySelector(
+            '.parallexScroll .pt-section-picture'
+          )
+  
+        // create gsap animation
+        function createAnim(h, animatedSelector, triggerEl) {
+          var tl = new TimelineLite()
+          tl.to(animatedSelector, 1, {
+            y: `-${h}px`,
+          })
+          let controller = new ScrollMagic.Controller()
+          let sc = new ScrollMagic.Scene({
+              triggerElement: triggerEl,
+              triggerHook: 0,
+              duration: '100%',
+              tweenChanges: true,
+            })
+            .setTween(tl)
+            .setPin(triggerEl)
+            // .addIndicators()
+            .addTo(controller)
+        }
+  
+        /* when in laptop mode and when img's height is less than screen height,
+            img needs to be of height 100vh w. auto width,
+            and parallexScroll wrapper's height is determined by img's height
+        */
+        function resizeImgAndSetWrapperHeight(allImgs, sectionImgEl, wrapperEl) {
+          let widToHeiRatio = 1.2864
+          for (let i = 0; i < allImgs.length; i++) {
+            allImgs[i].style.height = '100vh'
+            // allImgs[i].style.width = 'auto';
+          }
+          let imgWid = allImgs[0].offsetWidth
+          if (!imgWid) {
+            imgWid = allImgs[0].offsetHeight * widToHeiRatio
+          }
+          sectionImgEl.style.width = imgWid + 'px'
+          wrapperEl.style.height = '100vh'
+          return wrapperEl.offsetHeight
+        }
+  
+        // wait for the images loaded
+        parallexLastImg.addEventListener('load', function () {
+          if (alreadyLoaded) return
+          alreadyLoaded = true
+          listenerCallback(this)
+        })
+  
+        $('#scroll-slider-img-2').imagesLoaded(function () {
+          if (alreadyLoaded) return
+          alreadyLoaded = true
+          let that = this.elements[0]
+          listenerCallback(that)
+        })
+  
+        function listenerCallback(it) {
+          let h = it.offsetHeight
+          if (screenWid / screenHei < 1) {
+            h = it.offsetHeight
+            createAnim(h, '.parallexScroll img', '.parallexScroll')
+          } else if (screenWid / screenHei >= 1) {
+            h = resizeImgAndSetWrapperHeight(
+              parallexAllImgs,
+              parallexSectionImg,
+              parallexWrapper
+            )
+            createAnim(
+              h,
+              '.parallexScroll .pt-section-picture',
+              '.parallexScroll'
+            )
+          }
+        }
+      }
+    })()
+  </script>
+  <!-- end scroll slider js-->

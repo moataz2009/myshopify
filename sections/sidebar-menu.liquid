@@ -1,0 +1,442 @@
+<div class="drawer__header" data-section-id="{{ section.id }}" data-section-type="sidebar-menu-section">
+  <div class="drawer__close">
+    <button type="button" class="drawer__close-button js-drawer-close">
+      <span class="icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </span>
+
+      {%- comment -%}
+      <span class="icon__fallback-text">{{ 'layout.drawers.close_menu' | t }}</span>
+      {%- endcomment -%}
+    </button>
+  </div>
+</div>
+
+{% assign no_products = 'Galaxy S10,Juice,Wallet,iPhone 11,iPhone X,Galaxy Note20,Galaxy S20,Galaxy Note10,Galaxy S10,HUAWEI P40,OnePlus 8,MagEZ Case & In-Car Wireless Charging Kit' | split:',' %}
+<div class="drawer__inner">
+  <ul class="drawer-nav">
+    {% for link in linklists['header-menu'].links %}
+      {% assign outerLoopIndex = forloop.index %}
+      {% if link.links != blank %}
+        {% assign has_active_link = false %}
+
+        {% if link.active or link.child_active %}
+          {% assign has_active_link = true %}
+        {% endif %}
+
+        <li class="drawer-nav__item{% unless request.page_type == 'index' %}{% if link.active %} drawer-nav__item--active{% endif %}{% endunless %}" aria-haspopup="true">
+          <div class="drawer-nav__has-sublist{% if has_active_link %} drawer-nav--expanded{% endif %}">
+            <div class="drawer-nav__toggle flex">
+              <a href="{{ link.url }}" class="drawer-nav__link"{% if link.active %} aria-current="page"{% endif %}>{{ link.title }}</a>
+              <button type="button" class="drawer-nav__toggle-button" aria-expanded="{{ has_active_link }}" aria-label="{{ link.title }} {{ 'layout.navigation.menu' | t }}" aria-controls="Submenu-{{ outerLoopIndex }}">
+                <span class="icon {% if has_active_childlink %}active{% endif %}" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+          <ul class="drawer-nav__sublist has-right__side" id="Submenu-{{ outerLoopIndex }}">
+            {% for childlink in link.links %}
+              {% if link.title == 'Products' %}
+                {% assign has_active_childlink = false %}
+
+                {% if childlink.active or childlink.child_active %}
+                  {% assign has_active_childlink = true %}
+                {% endif %}
+
+                <li class="drawer-nav__item{% unless request.page_type == 'index' %}{% if childlink.active %} drawer-nav__item--active{% endif %}{% endunless %}" aria-haspopup="true">
+                  <div class="drawer-nav__has-sublist{% if has_active_childlink %} drawer-nav--expanded{% endif %}">
+                    <a href="{{ childlink.url }}" 
+                      class="sm-hidden drawer-nav__link"{% if childlink.active %} aria-current="page"{% endif %}>
+                      {{ childlink.title }}
+                    </a>
+                    <div class="sm-hidden drawer-nav__toggle">
+                      <button type="button" class="drawer-nav__toggle-button" aria-expanded="{{ has_active_childlink }}" aria-label="{{ childlink.title }} {{ 'layout.navigation.menu' | t }}" aria-controls="Submenu-{{ outerLoopIndex }}-{{ forloop.index }}">
+                        <span class="icon {% if has_active_childlink %}active{% endif %}" aria-hidden="true"></span>
+                      </button>
+                    </div>
+
+                    <div class="drawer-nav__toggle">
+                      <a href="javascript:;" class="drawer-nav__link"{% if childlink.active %} aria-current="page"{% endif %}>
+                        {{ childlink.title }}
+                      </a>
+                      <button type="button" class="drawer-nav__toggle-button" aria-expanded="{{ has_active_childlink }}" aria-label="{{ childlink.title }} {{ 'layout.navigation.menu' | t }}" aria-controls="Submenu-{{ outerLoopIndex }}-{{ forloop.index }}">
+                        <span class="icon {% if has_active_childlink %}active{% endif %}" aria-hidden="true"></span>
+                      </button>
+                    </div>
+
+                  </div>
+                </li>
+              {% else %}
+                <li class="drawer-nav__item{% unless request.page_type == 'index' %}{% if childlink.active %} drawer-nav__item--active{% endif %}{% endunless %}">
+                  <a href="{{ childlink.url }}" class="drawer-nav__link"{% if childlink.active %} aria-current="page"{% endif %}>{{ childlink.title | escape }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+          
+        </li>
+      {% else %}
+        <li class="drawer-nav__item{% unless request.page_type == 'index' %}{% if link.active %} drawer-nav__item--active{% endif %}{% endunless %}">
+          <a href="{{ link.url }}" class="drawer-nav__link"{% if link.active %} aria-current="page"{% endif %}>{{ link.title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+
+    {%- comment -%}
+    <li class="drawer-nav__spacer"></li>
+
+    {% if shop.customer_accounts_enabled %}
+      {% if customer %}
+        <li class="drawer-nav__item drawer-nav__item--secondary">
+          <a href="{{ routes.account_url }}">{{ 'layout.customer.account' | t }}</a>
+        </li>
+        <li class="drawer-nav__item drawer-nav__item--secondary">
+          {{ 'layout.customer.log_out' | t | customer_logout_link }}
+        </li>
+      {% else %}
+        <li class="drawer-nav__item drawer-nav__item--secondary">
+          {{ 'layout.customer.log_in' | t | customer_login_link }}
+        </li>
+        <li class="drawer-nav__item drawer-nav__item--secondary">
+          {{ 'layout.customer.create_account' | t | customer_register_link }}
+        </li>
+      {% endif %}
+    {% endif %}
+    {%- endcomment -%}
+  </ul>
+
+  <ul class="drawer-nav sublinks-container">
+    <div class="back-container">
+      <button type="button" class="back-btn">
+        <span class="icon" aria-hidden="true"></span>
+        Back
+      </button>
+    </div>
+    {% assign products_linklists = linklists['header-menu'].links | first %}
+
+    {% for sub_link in products_linklists.links %}
+      {% assign sub_handle = sub_link.title | remove: '& ' | handleize %}
+      {% for link in linklists[sub_handle].links %}
+        {% assign outerLoopIndex = forloop.index %}
+
+        {% if outerLoopIndex == 1 %}
+          <li class="sm-show block lg:hidden drawer-nav__item" name="{{sub_handle}}">
+            <a href="{{ sub_link.url }}" class="drawer-nav__link p0 my-8 border-b border-gray-400 border-solid">View All</a>
+          </li>
+        {% endif %}
+        
+        {% if link.links != blank %}
+          {% assign has_active_link = false %}
+  
+          {% if link.active or link.child_active %}
+            {% assign has_active_link = true %}
+          {% endif %}
+  
+          <li class="drawer-nav__item{% unless request.page_type == 'index' %}{% if link.active %} drawer-nav__item--active{% endif %}{% endunless %}" name="{{sub_handle}}" aria-haspopup="true">
+            <div class="drawer-nav__has-sublist drawer-nav--expanded">
+              <div class="block lg:hidden drawer-nav__toggle">
+                <a href="javascript:;" class="drawer-nav__link h3" {% if link.active %} aria-current="page"{% endif %}>
+                  {{ link.title }}
+                </a>
+              </div>      
+              <a href="{{ link.url }}" class="sm-hidden drawer-nav__link h3"{% if link.active %} aria-current="page"{% endif %}>
+                {{ link.title }}
+              </a>
+            </div>
+            <ul class="drawer-nav__sublist">
+              {% for childlink in link.links %}
+                {% assign childlink_available = true %}
+              
+                {% for product_name in no_products %}
+              	  {% if childlink.type == 'collection_link' %}
+              		{% assign childlink_product = childlink.object.products | first %}
+              		{% if childlink_product.title contains product_name %}
+                      {% unless childlink_product.available %}
+                        {% assign childlink_available = false %}
+                      {% endunless %}
+              
+              		  {% break %}
+              		{% else %}
+              		  {% assign childlink_available = true %}
+                    {% endif %}
+              	  {% elsif childlink.type == 'product_link' %}
+              		{% if childlink.object.title contains product_name %}
+                      {% unless childlink.object.available %}
+                        {% assign childlink_available = false %}
+                      {% endunless %}
+              
+              		  {% break %}
+              		{% else %}
+              		  {% assign childlink_available = true %}	
+                    {% endif %}
+                  {% endif %}
+              	{% endfor %}
+              
+              	{%comment%}
+              	{% if childlink.type == 'collection_link' %}
+                  {% assign childlink_product = childlink.object.products | first %}
+                  {% if childlink_product.available or childlink.url contains 'airpods-pro' %}
+                    {% assign childlink_available = true %}
+                  {% endif %}
+              
+                {% elsif childlink.type == 'http_link' %}
+                  {% assign childlink_available = true %}
+              
+                {% elsif childlink.type == 'product_link' %}
+                  {% if childlink.object.available %}
+                    {% assign childlink_available = true %}
+                  {% endif %}
+              
+                {% endif %}
+              	{% endcomment %}
+              
+                {% if childlink_available %}
+                  <li class="drawer-nav__item{% unless request.page_type == 'index' %}{% if childlink.active %} drawer-nav__item--active{% endif %}{% endunless %}">
+                    <a href="{{ childlink.url }}" class="drawer-nav__link last"{% if childlink.active %} aria-current="page"{% endif %}>
+                      
+                      {%if childlink.title contains 'Marble Version'%}
+                      {{ childlink.title | split: ' (' | first }}<br>
+                      ({{ childlink.title | split: '(' | last }}
+                      {%else%}
+                      {{ childlink.title | escape }}
+                      {%endif%}
+                      {% if childlink.url contains 'iphone-13' 
+                      	or childlink.url contains 'galaxy-s22' 
+                      	or childlink.url contains 'car-mount-lite' 
+                      	or childlink.url contains 'airpods-3'                      	
+                     	or childlink.url contains 'apple-watch-series-7'
+                      	or childlink.url contains 'slider'                      	
+                      	or childlink.url contains 'mini-6'
+                      	or childlink.url contains 'charging-stand'
+                      %}
+                        <sup class="text-cyan text-xs font-normal">New</sup>
+                      {% elsif childlink.title == 'iPhone X' 
+                        or childlink.url contains 'juice-2'  
+                      %}
+                        <sup class="text-cyan text-xs font-normal">Super Deal</sup>
+                      {% elsif childlink.url contains 'slider'%}
+                        <sup class="text-cyan text-xs font-normal">Coming Soon</sup>
+                      {% elsif childlink.url contains 'watch-band' 
+                        or childlink.url contains 'ipad-pro-2021' 
+                      %}
+                        <sup class="text-cyan text-xs font-normal">Hot</sup>
+                      {% endif %}
+                    </a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </li>
+        {% else %}
+        
+          {% assign link_available = true %}
+              
+          {% for product_name in no_products %}
+            {% if link.type == 'collection_link' %}
+              {% assign link_product = link.object.products | first %}
+              {% if link_product.title contains product_name %}
+                {% unless link_product.available %}
+                	{% assign link_available = false %}
+                {% endunless %}
+                {% break %}
+              {% else %}
+                  {% assign link_available = true %}
+              {% endif %}
+            {% elsif link.type == 'product_link' %}
+              {% if link.object.title contains product_name %}
+                {% unless link.object.available %}
+                	{% assign link_available = false %}
+                {% endunless %}
+
+              	{% break %}
+              {% else %}
+              	{% assign link_available = true %}	
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+              
+          {% comment %}
+          {% assign link_available = false %}
+          {% if link.type == 'collection_link' %}
+          	{% assign link_product = link.object.products | first %}
+            {% if link_product.available or link.url contains 'airpods-pro' %}
+              {% assign link_available = true %}
+            {% endif %}
+    
+    	  {% elsif link.type == 'http_link' %}
+    		{% assign link_available = true %}
+    
+   		  {% elsif link.type == 'product_link' %}
+    		{% if link.object.available %}
+              {% assign link_available = true %}
+            {% endif %}
+    
+    	  {% endif %}
+    	  {% endcomment %}
+              
+    	  {% if link_available %}
+            <li class="drawer-nav__item{% unless request.page_type == 'index' %}{% if link.active %} drawer-nav__item--active{% endif %}{% endunless %}" name="{{sub_handle}}">
+              <a href="{{ link.url }}" class="drawer-nav__link last"{% if link.active %} aria-current="page"{% endif %}>
+                {{ link.title }}
+                {% if link.url contains 'iphone-13'                	
+                  or link.url contains 'galaxy-s22'
+                  or link.url contains 'car-mount-lite'
+                  or link.url contains 'power-dongle'
+                  or link.url contains 'slider'
+                  or link.url contains 'mini-6'
+                  or link.url contains 'sleeve-3'
+                  or link.url contains 'airpods-3'
+                  or link.url contains 'charging-stand'
+                %}
+                  {% unless sub_link.title == 'New Releases' %}
+                  	<sup class="text-cyan text-xs font-normal">New</sup>
+                  {% endunless %}
+                {% elsif link.url contains 'juice-2' %}
+                  <sup class="text-cyan text-xs font-normal">Super Deal</sup>
+                {% elsif link.url contains 'slider'%}
+                  <sup class="text-cyan text-xs font-normal">Coming Soon</sup>
+                {% elsif link.url contains 'watch-band' %}
+                  <sup class="text-cyan text-xs font-normal">Hot</sup>
+                {% endif %}
+              </a>
+            </li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+    {% endfor %}
+  </ul>
+
+  <div class="drawer-nav pictures-container">
+    {% assign nameList_1 = 'PITAKA Cases,Wireless Chargers,Stands & Mounts,Lifestyle Gear,Magsafe Collection,Accessories,New Releases' | split: ',' %}
+    {% assign nameList_2 = 'Pita!Flow for Tablets,Pita!Flow for Phones,About Us,PITAKA Journal,Trade In,PITAKAre.,Forum,Inspiring Culture,Technology,PITAKA ASI' | split: ',' %}
+    
+    {% for name_1 in nameList_1 %}
+      {% assign data_name_1 = name_1 | remove: 'for ' | remove: '!' | handleize %}
+      <div class="sublink-picture" name="{{ data_name_1 }}">
+        <img src="{{ placeholder_gif }}" data-src="{{ data_name_1 | prepend: 'header-' | append: '.webp' | asset_url }}" 
+          class="block w-full lazyload" alt="{{name_1}}" />
+      </div>
+    {% endfor %}
+    {% for name_2 in nameList_2 %}
+      {% assign data_name_2 = name_2 | remove: 'for ' | remove: '!' | handleize %}
+      <div class="sublink-picture square" name="{{ data_name_2 }}">
+        <img src="{{ placeholder_gif }}" data-src="{{ data_name_2 | prepend: 'header-' | append: '.webp' | asset_url }}" 
+          class="block w-full lazyload" alt="{{name_2}}" />
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{{ 'autoFlow.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+  "name": {
+    "cs": "Nabídka v postranní liště",
+    "da": "Sidebjælkemenu",
+    "de": "Seitenleistenmenü",
+    "en": "Sidebar menu",
+    "es": "Menú de la barra lateral",
+    "fi": "Sivupalkkivalikko",
+    "fr": "Menu de la barre latérale",
+    "it": "Menu sidebar",
+    "ja": "サイドバーメニュー",
+    "ko": "사이드바 메뉴",
+    "nb": "Sidepanelmeny",
+    "nl": "Zijbalkmenu",
+    "pl": "Menu paska bocznego",
+    "pt-BR": "Menu lateral",
+    "pt-PT": "Menu lateral",
+    "sv": "Sidomeny",
+    "th": "เมนูแถบด้านข้าง",
+    "tr": "Yan çubuk menüsü",
+    "vi": "Menu thanh bên",
+    "zh-CN": "侧边栏菜单",
+    "zh-TW": "側邊欄選單"
+  },
+  "class": "sidebar-menu-section",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "sidebar_top_link_list",
+      "label": {
+        "cs": "Primární nabídka",
+        "da": "Primær menu",
+        "de": "Hauptmenü",
+        "en": "Primary menu",
+        "es": "Menú primario",
+        "fi": "Ensisijainen valikko",
+        "fr": "Menu principal",
+        "it": "Menu principale",
+        "ja": "プライマリメニュー",
+        "ko": "기본 메뉴",
+        "nb": "Primærmeny",
+        "nl": "Eerste menu",
+        "pl": "Główne menu",
+        "pt-BR": "Menu principal",
+        "pt-PT": "Menu primário",
+        "sv": "Primärmeny",
+        "th": "เมนูหลัก",
+        "tr": "Birincil menü",
+        "vi": "Menu chính",
+        "zh-CN": "主菜单",
+        "zh-TW": "主要選單"
+      },
+      "default": "main-menu"
+    },
+    {
+      "type": "link_list",
+      "id": "sidebar_bottom_link_list",
+      "label": {
+        "cs": "Vedlejší nabídka",
+        "da": "Ekstra menu",
+        "de": "Zusatzmenü",
+        "en": "Additional menu",
+        "es": "Menú adicional",
+        "fi": "Lisävalikko",
+        "fr": "Menu supplémentaire",
+        "it": "Menu aggiuntivo",
+        "ja": "追加メニュー",
+        "ko": "추가 메뉴",
+        "nb": "Tilleggsmeny",
+        "nl": "Extra menu",
+        "pl": "Dodatkowe menu",
+        "pt-BR": "Menu adicional",
+        "pt-PT": "Menu adicional",
+        "sv": "Ytterligare meny",
+        "th": "เมนูเพิ่มเติม",
+        "tr": "Ek menü",
+        "vi": "Menu bổ sung",
+        "zh-CN": "其他菜单",
+        "zh-TW": "附加選單"
+      },
+      "default": "footer",
+      "info": {
+        "cs": "V této nabídce se nezobrazí položky rozevíracího seznamu",
+        "da": "Denne menu viser ikke rullemenupunkter",
+        "de": "Dieses Menü zeigt keine Dropdowns an",
+        "en": "This menu won't show dropdown items",
+        "es": "Este menú no mostrará elementos desplegables",
+        "fi": "Tämä valikko ei näytä pudotuskohteita",
+        "fr": "Ce menu n'affichera pas les éléments des menus déroulants",
+        "it": "Questo menu non mostrerà elementi a discesa",
+        "ja": "このメニューにはドロップダウンアイテムは表示されません",
+        "ko": "이 메뉴는 드롭 다운 항목을 표시하지 않습니다.",
+        "nb": "Denne menyen vil ikke vise rullegardinelementer",
+        "nl": "Dit menu laat geen vervolgkeuze-artikelen zien.",
+        "pl": "W tym menu pozycje rozwijane nie będą wyświetlane",
+        "pt-BR": "Este menu não mostra itens suspensos",
+        "pt-PT": "Este menu não irá mostrar itens pendentes",
+        "sv": "Den här menyn kommer inte att visa objekt i rullgardinsmenyn",
+        "th": "เมนูนี้จะไม่แสดงรายการดรอปดาวน์",
+        "tr": "Bu menü açılır öğeleri göstermez",
+        "vi": "Menu này sẽ không hiển thị các mục thả xuống",
+        "zh-CN": "此菜单不会显示下拉项",
+        "zh-TW": "這個選單不會顯示下拉式項目"
+      }
+    }
+  ]
+}
+{% endschema %}

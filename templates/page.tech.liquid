@@ -1,0 +1,200 @@
+{% if page.url == '/pages/frontpage' %}
+<script type='text/javascript'>
+  window.location = 'https://www.ipitaka.com';
+</script>
+{% endif %}
+<div class="fullsize clearfix bgcolorgrey">
+  <div class="container clearfix text-center vacuum-forming-head">
+    <h1>What is vacuum forming?</h1>
+    <p class="text-left vacuum-forming-head-para">
+      Vacuum forming is an upgraded version of the thermoforming technology 
+      for forming materials in production. During the vacuum forming process, 
+      the product is completely wrapped by particular films, 
+      which are then placed within a mold and subject to extremely high 
+      temperatures and pressures. This makes sure that the product is preciselyformed 
+      to the exact required size.
+    </p>
+  </div>
+  {{ 'vacuum-forming-machine.jpg' | asset_url | img_tag: 'Vacuum Forming for phone case produce', 'img-responsive' }}
+</div>
+<div class="clearfix relative our-story-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="our-story-text-section">
+          <h2>Why do we use the vaccum forming on our products?</h2>
+          <br><br>
+          <p>
+            Traditionally, composite material accessories were molded by heat or vacuum pressure only.  This is a low cost and easy way to form composite materials.  However, it is impossible to create the product accurately by one method alone.  What’s more, the heat compression process destroys the natural texture of the fabrics and eliminates the natural touch of the materials used.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="absolute our-story-video-section">
+    <div class="our-story-video">
+      {{ 'phone-case-produce-generation-i.jpg' | asset_url | img_tag: 'phone case produce generation-I', 'img-responsive' }}
+    </div>
+  </div>
+</div>
+<div class="clearfix technology-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-sm-offset-6 col-lg-offset-6 col-md-offset-6 col-sm">
+        <div class="technology-text-section">
+          <p>Molding of PITAKA products processes in a special autoclave, where products are formed by heating under
+            vacuum conditions. The products are completely wrapped by special films, and then being heated and
+            compressed all around with high temperature and extremely high pressure. It makes sure the products will be
+            100% precisely formed to a certain size. Also, just like a cushion, the special film absorbs the "punching"
+            from the high pressure and protects the natural texture of raw materials. It assures you an ultimate
+            pleasant grip when holding the product, which we named it "<a href="/pages/3d-grip">3D Grip</a>".</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="absolute technology-section-image">
+    {{ 'phone-case-autoclave.jpg' | asset_url | img_tag: 'phone case autoclave generation II', 'img-responsive' }}</div>
+</div>
+<style type="text/css">
+  .col-md-offset-6,
+  .col-lg-offset-6,
+  .col-sm-offset-6 {
+    margin-left: 50%
+  }
+
+  .absolute {
+    position: absolute
+  }
+
+  .relative {
+    position: relative
+  }
+
+  .our-story-text-section {
+    padding: 170px 40% 0 0;
+    height: 550px
+  }
+
+  .our-story-title {
+    color: #898462;
+    font: 700 39px/55px Helvetica, sans-serif;
+    text-transform: uppercase
+  }
+
+  .our-story-video-section {
+    width: calc(50% + 99px);
+    margin-left: calc(50% - 99px);
+    height: 550px
+  }
+
+  .our-story-video {
+    width: 100%;
+    height: 100%
+  }
+
+  .our-story-video img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%
+  }
+
+  .technology-section-image {
+    width: calc(50% + 99px);
+    margin-right: calc(50% - 99px);
+    height: 580px
+  }
+
+  .technology-section-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%
+  }
+
+  .technology-text-section {
+    padding: 141px 0 0 40%;
+    height: 580px
+  }
+
+  .icon-after-technology-text img {
+    margin: 10px 9px 0 0
+  }
+
+  .contacts {
+    text-align: center;
+    margin: 20px 0
+  }
+
+  .contacts h4 {
+    line-height: 2em;
+    color: #dfdcd3
+  }
+
+  .contacts a {
+    color: #8f8464;
+    text-decoration: none
+  }
+
+  @media screen and (max-width: 1000px) {
+    .header-image-section {
+      height: auto;
+      padding: 95px 0 100px
+    }
+
+    .header-image-section .header-image-text {
+      max-width: 80%
+    }
+
+    .our-story-video-section {
+      width: calc(50% + 70px);
+      margin-left: calc(50% - 70px);
+      height: 411px
+    }
+
+    .technology-section-image {
+      width: calc(50% + 70px);
+      margin-right: calc(50% - 70px);
+      height: 517px
+    }
+
+    .our-story-text-section {
+      padding: 98px 20% 0 0;
+      height: 411px
+    }
+
+    .technology-text-section {
+      padding: 77px 0 0 20%;
+      height: 517px
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+
+    .our-story-section .col-sm-6,
+    .technology-section .col-sm-6 {
+      width: 100%;
+      float: none
+    }
+
+    .technology-section .col-sm-offset-6 {
+      margin: 0
+    }
+
+    .our-story-text-section,
+    .technology-text-section {
+      padding: 50px 30px;
+      height: auto
+    }
+
+    .our-story-video-section,
+    .technology-section-image {
+      position: static;
+      margin: 0;
+      width: 100%;
+      height: auto
+    }
+
+    .our-story-video-section {
+      margin-bottom: 30px
+    }
+  }
+</style>

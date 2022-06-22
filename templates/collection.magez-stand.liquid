@@ -1,0 +1,352 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}
+{{'swiper-bundle.min.js' | asset_url | script_tag }}
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_6 = 'w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28' %}
+{% assign pdClass_b = 'px-3 sm:px-6 md:px-0 pb-16 sm:pb-20 lg:pb-28' %}
+{% assign titleBoxClass= 'mx-auto mb-12 w-11/12 sm:w-5/6 md:w-2/3 xl:w-2/5' %}
+{% assign titleSize = 'text-2xl md:text-3xl font-bold' %}
+{% assign descSize = 'text-sm sm:text-base text-gray-400' %}
+{% assign titleDecoMy = 'block mt-4 mb-6' %}
+
+{% assign absoluteContentBoxClass_8 = 'w-full laptop:w-10/12 lg:w-8/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-0' %}
+{% assign absoluteContentBoxClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2' %}
+{% assign absoluteContentClass = 'text-center sm:text-left absolute transform w-4/5 sm:w-1/2 xl:w-3/8 top-16 left-1/2 -translate-x-1/2  max-w-md sm:translate-x-0 sm:left-6 lg:left-0 sm:top-1/2 sm:-translate-y-1/2' %}
+
+<div class="relative ">
+  <div class="absolute w-full h-full pt-12 sm:pt-0">
+    <div class="w-full mx-auto absolute transform top-16 xs:top-64 sm:top-8 xl:top-16 left-1/2 -translate-x-1/2">
+      <div class="{{titleBoxClass}} text-center">
+        <h3 class="{{titleSize}} mb-6">
+          Streamlining <br class="pt-show-mini" />Productivity
+        </h3>
+        <p class="{{descSize}}">
+          Securely Snap-On Your iPad & Get Ready to Work Like a Pro.
+        </p>
+      </div>
+    </div>
+  </div>
+  <picture>
+    <source data-srcset="{{'product-magez-stand-seciton0.jpg' | asset_url}}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{'product-magez-stand-seciton0-m.jpg' | asset_url}}" alt="Magez Stand"
+      class="block w-full h-full object-cover lazyload">
+  </picture>
+</div>
+
+<div class="w-full bg-black">
+  <div
+    class="{{wClass}} px-3 sm:px-6 md:px-0 pt-16 sm:pt-20 lg:pt-28 flex flex-col sm:flex-row justify-between items-center">
+    <div class="w-full sm:w-1/2">
+      <video loop muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+        x5-video-orientation="portraint" preload="none" autoplay style="object-fit: contain" class="lazyload width-100">
+        <source src="{{ 'product-magez-stand-seciton0-2.mp4' | asset_url }}" type="video/mp4" />
+        <source src="{{ 'product-magez-stand-seciton0-2.webm' | asset_url }}" type="video/webm" />
+      </video>
+    </div>
+    <div class="w-full sm:w-1/2 sm:pl-20 xl:pl-40 order-first sm:order-none mb-12">
+      <h3 class="{{titleSize}} mb-6">
+        Adjust For Your Comfort
+      </h3>
+      <p class="{{descSize}} mb-8 sm:mb-12">
+        Magnetically attach your iPad Pro 2018/2020/2021 or iPad Air 2020/2022
+        using a MagEZ Case 2 and comfortably use your tablet as a monitor in
+        landscape mode. Then, simply pivot to portrait position to make a
+        Zoom call. The adjustable tablet stand tilts up (32.5°) and down
+        (-5°) for an angle that meets your viewing needs.
+      </p>
+      {% render 'link-button',link_url: "/collections/magez-case-2-for-ipad-pro-2021", link_title:'MagEZ Case 2 for iPad Pro 2021' %}
+      <div class="mb-4 sm:mb-6"></div>
+      {% render 'link-button',link_url: "/collections/magez-case-2-for-ipad-pro-2020-and-2018", link_title:'MagEZ Case 2 for iPad Pro 2020/2018 & Air 2020/2022' %}
+    </div>
+  </div>
+</div>
+
+<div class="w-full  bg-gray-850">
+  <div class="{{wClass}} {{pdClass}} flex flex-col sm:flex-row justify-between items-center">
+    <div class="w-full sm:w-1/2 sm:pr-40">
+      <h3 class="{{titleSize}} mb-6">
+        A Multi-Purpose Stand
+      </h3>
+      <p class="{{descSize}} mb-8 sm:mb-12">
+        Set up your tablet with a Bluetooth keyboard and mouse for work or
+        as a second screen for project management or video meetings. Elevate
+        your tablet in the kitchen, keeping it safe from food splashes while
+        you follow a recipe. Designed ergonomically for eye level, the MagEZ
+        Stand allows you to comfortably work on or view your tablet screen
+        at the perfect position, improving your posture and reducing back
+        and neck strain.
+      </p>
+    </div>
+    <div class="w-full sm:w-1/2">
+      <div class="swiper-container w-full center-slides">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide px-6 sm:px-0">
+            <div class="w-full">
+              <picture>
+                <source data-srcset="{{'product-magez-stand-seciton2-part1.jpg' | asset_url}}"
+                  media="(min-width: 768px)">
+                <img src="{{ placeholder_gif }}" data-src="{{'product-magez-stand-seciton2-part1-m.jpg' | asset_url}}"
+                  alt="Magez Stand" class="block w-full h-full lazyload  bg-gray-850">
+              </picture>
+            </div>
+          </div>
+          <div class="swiper-slide px-6 sm:px-0">
+            <div class="w-full">
+              <picture>
+                <source data-srcset="{{'product-magez-stand-seciton2-part2.jpg' | asset_url}}"
+                  media="(min-width: 768px)">
+                <img src="{{ placeholder_gif }}" data-src="{{'product-magez-stand-seciton2-part2-m.jpg' | asset_url}}"
+                  alt="Magez Stand" class="block w-full h-full lazyload  bg-gray-850">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="w-full  bg-gray-800">
+  <div class="{{wClass}} {{pdClass}} flex flex-col sm:flex-row justify-between items-center">
+    <div class="w-full sm:w-1/2">
+      <picture>
+        <source data-srcset="{{'product-magez-stand-seciton3.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'product-magez-stand-seciton3-m.jpg' | asset_url}}"
+          alt="Magez Stand" class="block w-full h-full object-cover lazyload">
+      </picture>
+    </div>
+    <div class="w-full sm:w-1/2 sm:pl-20 xl:pl-40 order-first sm:order-none">
+      <h3 class="{{titleSize}} mb-6">
+        Charge While You Work
+      </h3>
+      <p class="{{descSize}} mb-8 sm:mb-12">
+        Charge your mobile with speeds of up to 15W* using the aramid fiber
+        wireless charging base.
+      </p>
+      <p class="text-sm sm:text-base text-cyan mb-8 sm:mb-12">
+        *Android 15W/iPhone 7.5W/earbuds 5W
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="w-full  bg-gray-850">
+  <div class="{{wClass}} {{pdClass}} flex flex-col sm:flex-row justify-between items-center">
+    <div class="w-full sm:w-1/2 sm:pl-20 xl:pl-40">
+      <h3 class="{{titleSize}} mb-6">
+        A Sleek Minimalist Design
+      </h3>
+      <p class="{{descSize}} mb-8 sm:mb-12">
+        With sleek steel aesthetics, this freestanding desktop mount is
+        minimalistic and sturdy enough to hold even the largest tablet.
+      </p>
+      <p class="text-sm sm:text-base text-cyan mb-8 sm:mb-12">
+        *Holds up to 2.2lbs (1kg).
+      </p>
+    </div>
+    <div class="w-full sm:w-1/2">
+      <picture>
+        <source data-srcset="{{'product-magez-stand-seciton4.png' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'product-magez-stand-seciton4-m.png' | asset_url}}"
+          alt="Magez Stand" class="block  object-cover mx-auto lazyload">
+      </picture>
+    </div>
+  </div>
+</div>
+
+<div class="w-full">
+  <picture>
+    <source data-srcset="{{'product-magez-stand-seciton5.jpg' | asset_url}}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{'product-magez-stand-seciton5-m.jpg' | asset_url}}" alt="c to c"
+      class="block w-full h-full object-cover lazyload">
+  </picture>
+</div>
+
+<div class="w-full bg-gray-800">
+  <div class="{{wClass}} px-0 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28">
+    <div class="grid gap-4  grid-cols-1 sm:grid-cols-2">
+      <div
+        class=" m-auto p-12  w-11/12 sm:w-full sm:m-0 sm:col-span-1 sm:row-span-1 bg-gray-850 flex flex-col items-center justify-center">
+        <div class="mb-6">
+          <picture>
+            <img src="{{ placeholder_gif }}" data-src="{{ 'product-section7-folio-1.png' | asset_url }}"
+              alt="MagEZ Folio for iPad Pro & iPad Air" class="img-responsive lazyload" />
+          </picture>
+        </div>
+        <h3 class="text-xl md:text-2xl font-bold mb-3 xs:mb-6 text-center">
+          MagEZ Case 2 <br />
+          for iPad Pro 2021
+        </h3>
+        <p class="{{descSize}} mb-8 sm:mb-12 w-full xs:w-2/4 sm:w-3/4 xl:w-2/4 text-center">
+          An ultra-slim Magic Keyboard compatible case for iPad Pro 2021.
+        </p>
+        {% render 'link-button',link_url: "/products/magez-case-2-for-ipad-pro-2021", link_title:'Shop Now' %}
+      </div>
+      <div
+        class="m-auto  p-12  w-11/12 sm:w-full sm:m-0 sm:col-span-1 sm:row-span-1  bg-gray-850 flex flex-col items-center justify-center">
+        <div class="mb-6">
+          <picture>
+            <img src="{{ placeholder_gif }}" data-src="{{ 'product-section7-folio-2.png' | asset_url }}"
+              alt="MagEZ Folio for iPad Pro & iPad Air" class="img-responsive lazyload" />
+          </picture>
+        </div>
+        <h3 class="text-xl md:text-2xl font-bold mb-3 xs:mb-6 text-center">
+          MagEZ Case 2 <br />
+          for iPad Pro 2020/2018 & iPad Air 2020/2022
+        </h3>
+        <p class="{{descSize}} mb-8 sm:mb-12  w-full xs:w-2/4 sm:w-3/4 xl:w-2/4 text-center">
+          An ultra-slim Magic Keyboard compatible case for iPad Pro/Air.
+        </p>
+        {% render 'link-button',link_url: "/products/magez-case-2-for-ipad-pro-2020-and-2018", link_title:'Shop Now' %}
+      </div>
+      <div class="m-auto p-0 w-full sm:m-0 sm:col-span-2 sm:row-span-1 relative">
+        <picture>
+          <source data-srcset="{{
+                            'product-section7-folio-3.jpg'
+                                | asset_url
+                        }}" media="(min-width: 769px)" />
+          <img src="{{ placeholder_gif }}" data-src="{{
+                            'product-section7-folio-3-m.jpg'
+                                | asset_url
+                        }}" class="img-responsive width-100 lazyload" />
+        </picture>
+        <div
+          class="absolute transform left-1/2 -translate-x-1/2 bottom-12 xs:bottom-64 sm:transform-none sm:left-20 sm:top-1/3 sm:-translate-y-1/2 text-center sm:text-left w-3/4">
+          <h3 class="text-xl md:text-2xl font-bold mb-3 xs:mb-6">
+            <span class="text-cyan">Pita!Flow</span> for Tablets
+          </h3>
+          <p class="{{descSize}} mb-8 sm:mb-12 max-w-md mx-auto sm:ml-0 text-center sm:text-left">
+            A series of magnetic products that work seamlessly with your
+            iPad Pro/Air to help you work more efficiently, whether you’re
+            at home, the office, or a cafe.
+          </p>
+          {% render 'link-button',link_url: "/collections/pitaflow-for-tablets", link_title:'Learn More' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  .center-slides {
+    padding-bottom: 2rem;
+    overflow: hidden;
+  }
+
+  .center-slides .swiper-slide {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    transition: 300ms;
+    transform: scale(1);
+  }
+
+  .center-slides>div[role="button"] {
+    top: 45%;
+    width: 12px;
+    height: 16px;
+  }
+
+  .center-slides>div[role="button"]:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url({{'triggle_pixel.svg' | asset_url}}) no-repeat;
+    background-size: contain;
+  }
+
+  .center-slides .swiper-button-next {
+    right: 0;
+  }
+
+  .center-slides .swiper-button-prev {
+    left: 0;
+    transform: rotate(-180deg);
+  }
+
+  .center-slides .swiper-pagination-bullets {
+    display: flex;
+    justify-content: center;
+    margin: 0 -0.4rem;
+  }
+
+  .center-slides .square-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #565557;
+    display: block;
+    margin: 0 .4rem;
+  }
+
+  .center-slides .swiper-pagination-bullet-active {
+    background-color: #fff;
+  }
+
+  @media screen and (min-width:768px) {
+    .center-slides {
+      margin: 0;
+      padding-bottom: 4rem;
+    }
+
+    .center-slides>div[role="button"] {
+      top: unset;
+      bottom: 6px;
+      margin: 0;
+    }
+
+    .center-slides .swiper-button-next {
+      right: calc(50% - 153.2px);
+    }
+
+    .center-slides .swiper-button-prev {
+      left: calc(50% - 153.2px);
+    }
+  }
+</style>
+
+<script>
+  var swiper_center = new Swiper('.center-slides', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    centeredSlides: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 16
+      },
+      1280: {
+        slidesPerView: 1,
+        spaceBetween: 24
+      }
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      bulletClass: 'square-bullet',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>

@@ -1,0 +1,53 @@
+<!-- /templates/blog.liquid -->
+{% assign wClass = 'w-full sm:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-6 lg:px-0 py-16 sm:py-20 lg:py-28' %}
+{% assign titleSize = 'text-2xl sm:text-3xl font-bold text-center' %}
+{% assign titleBox_center= 'mx-auto text-center mb-12 w-11/12 sm:w-4/5 md:w-2/3 xl:w-2/5' %}
+
+
+{% paginate blog.articles by 10 %}
+
+<div class="{{wClass}} {{pdClass}}" itemscope itemtype="http://schema.org/Article">
+  <div class="{{titleBox_center}}">
+    <h1 class="{{titleSize}}">PITAKA Journal</h1>
+  </div>
+  
+  <header class="visually-hidden">
+    {% if current_tags %}
+      <h1>{{ blog.title | link_to: blog.url }} &mdash; {{ current_tags.first }}</h1>
+    {% else %}
+      <h1>{{ blog.title }}</h1>
+    {% endif %}
+  </header>
+
+  <div class="blogs-container grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 my-6">
+    {% for article in blog.articles | sort: 'id' | reverse %}
+      {% unless article.title contains 'Shipping' %}
+      	{% if paginate.current_page == 1 %}
+          {% assign firstIndex = 1 %}
+        {%else%}
+          {% assign firstIndex = 1 %}
+        {% endif %}
+        {% if forloop.index == firstIndex %}
+          <div class="col-span-1 sm:col-span-2 md:col-span-3 bg-gray-800">
+            {% render 'grid-article-item',article: article, isHorizontal:true, isReverse:true %}
+          </div>
+        {% else %}
+          {% render 'grid-article-item', article: article, blockTag: true %}
+        {% endif %}
+      {% endunless %}
+    {% endfor %}
+  </div>
+
+  {% if paginate.pages > 1 %}
+    {% include 'pagination' %}
+  {% endif %}
+</div>
+{% endpaginate %}
+
+<style>
+  .blogs-container>div:not(.col-span-3) .p-6 h3{
+    /* height:calc(100% - 320px); */
+    height: 50px;
+  }
+</style>

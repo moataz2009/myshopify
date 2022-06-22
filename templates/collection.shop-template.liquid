@@ -1,0 +1,15 @@
+{% comment %}
+  The contents of the collection.liquid template can be found in /sections/collection-template.liquid
+{% endcomment %}
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+
+{% if collection.url contains 'iphone-13' %}
+  {% section 'collection-compare-template-i13' %}
+{% elsif collection.url contains 'phone-holders' %}
+  {% section 'collection-compare-template-mount' %}
+{% else %}
+  {% section 'collection-compare-template' %}
+{% endif %}
+
+
+{{'swiper-bundle.min.js' | asset_url | script_tag }}

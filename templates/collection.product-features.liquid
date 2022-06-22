@@ -1,0 +1,4 @@
+{% assign section_name = collection.handle | remove: 'for-' | replace: '-case', 'case' | prepend: 'product-' | append: '-features' %}
+{% assign product = collection.products | first %}
+
+{% section 'section_name' %}

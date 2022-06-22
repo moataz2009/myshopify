@@ -1,0 +1,118 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+{%- comment -%}
+section0---start
+{%- endcomment -%}
+<div class="w-full relative">
+  <picture>
+    <source srcset="{{'product-magez-stand-seciton0.jpg' | asset_url}}" media="(min-width: 1025px)">
+    <source srcset="{{'product-magez-stand-seciton0.jpg' | asset_url}}" media="(min-width: 768px)">
+    <img srcset="{{'product-magez-stand-seciton0.jpg' | asset_url}}" alt="MagEZ Slider" 
+      class="img-responsive w-full">
+  </picture>
+</div>
+{%- comment -%}
+section1---start
+{%- endcomment -%}
+<div class="container mx-auto w-10/12 my-12">
+    <div class="border-t-2 border-b-2 border-gray-200  py-4 flex flex-row flex-nowrap place-content-around font-bold uppercase text-gray-400 mb-8 ">
+      <div>
+        PITAKA case
+      </div>
+      <div>
+        Wireless Charging
+      </div>
+      <div>
+        Stand & Mount
+      </div>
+      <div>
+        EDC FASHION
+      </div>
+      <div>
+        Accessories
+      </div>
+    </div>
+    <div class="px-40 py-2 flex flex-row flex-nowrap place-content-around  font-bold uppercase text-gray-400 mb-8 bg-gray-800">
+      <div>
+        iPhone Case
+      </div>
+      <div>
+        Android Case
+      </div>
+      <div>
+       iPad Case
+      </div>
+      <div>
+        Apple Watch Case
+      </div>
+      <div>
+        AirPods Case
+      </div>
+    </div>
+        {%- comment -%}定义产品表{%- endcomment -%}
+        <!-- {% assign products_linklists = linklists['header-menu'].links | first %}
+          {% for sub_link in products_linklists.links %}
+            {% assign sub_handle = sub_link.url | remove_first: '#' %}
+                <ul class="active">
+                  {{
+                      sub_handle
+                  }}
+                </ul>        
+          {% endfor %} -->
+</div>
+{%- comment -%}
+section2---start
+{%- endcomment -%}
+<div class="w-full mx-auto my-24">
+  <div class="mx-auto text-left mb-28 w-8/12">
+    <h3 class="text-2xl xl:text-3xl font-bold ">Portable Power Bank Wireless 
+      Charging Dock
+      <br>
+      <img src="{{'triggle_pixel-d.svg' | asset_url}}" class="inline-block transform">
+  </h3>
+    <p class="text-sm xl:text-base text-gray-400 mb-12"> 
+      The MagEZ Juice eliminates the need to carry a bulky power bank and cable. When you’re at home or in the office, simply attach your phone to the The MagEZ Juice eliminates the need to carry a bulky power bank and cable. When you’re at home or in the office, simply attach your phone to the 
+    </p>
+    <!-- {% render 'link-button',link_url: '/pages/about-us', link_title:'Learn More' %} -->
+  </div>
+</div>
+{%- comment -%}
+section3---start
+{%- endcomment -%}
+<div class="container mx-auto w-10/12 my-12">
+  <h3 class="text-2xl xl:text-3xl font-bold ">iPhone 12 series 
+  </h3>
+  <div class="grid grid-cols-1 gap-x-3 md:grid-cols-3 md:gap-x-3">
+    <div class="bg-gray-300 h-80">
+    手机占位
+   </div>
+   <div class="bg-gray-300 h-80">
+    手机占位
+   </div>
+   <div class="bg-gray-300 h-80">
+    手机占位
+   </div>
+</div>
+      {%- comment -%}定义产品表{%- endcomment -%}
+      <!-- {% assign products_linklists = linklists['header-menu'].links | first %}
+        {% for sub_link in products_linklists.links %}
+          {% assign sub_handle = sub_link.url | remove_first: '#' %}
+              <ul class="active">
+                {{
+                    sub_handle
+                }}
+              </ul>        
+        {% endfor %} -->
+</div>
+<div class="w-full mx-auto my-24">
+  <div class="mx-auto text-left mb-28 w-10/12">
+    <h3 class="text-2xl xl:text-3xl font-bold ">iPhone 12 series 
+    </h3>
+    <p class="text-sm xl:text-base text-gray-400 mb-12"> 
+      The MagEZ Juice eliminates the need to carry a bulky power bank and cable. When you’re at home or in the office, simply attach your phone to the The MagEZ Juice eliminates the need to carry a bulky power bank and cable. When you’re at home or in the office, simply attach your phone to the 
+    </p>
+    <!-- {% render 'link-button',link_url: '/pages/about-us', link_title:'Learn More' %} -->
+  </div>
+</div>

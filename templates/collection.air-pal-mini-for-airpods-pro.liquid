@@ -1,0 +1,508 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+{% assign base_name = 'pal-mini-pro' %}
+<div class="section1 pt-flex pt-flex-center pt-flex-column bg-black">
+    <div class="pt-section-content pt-text-center">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400 font-upper">Pocketable Style</h3>
+    </div>
+    <picture class="width-100">
+      <source data-srcset="{{ base_name | prepend: 'product-section1-' | append:'.jpg' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-section1-' | append:'-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture>
+    <!-- <picture class="width-100">
+      <img src="{{ placeholder_gif }}"
+      data-src="{{ base_name | prepend: 'product-section1-' | append:'.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture> -->
+  </div>
+  
+  <div class="pt-video-container multiple bg-black">
+    <video loop muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+      x5-video-orientation="portraint" class="pt-hide-small lazyload"
+      data-poster="{{ 'product-airpal-mini-pro-cover.jpg' | asset_url }}" preload="none" autoplay
+      style="object-fit:contain">
+      <source src="{{ 'product-airpal-mini-pro.mp4' | asset_url }}" type="video/mp4">
+      <source src="{{ 'product-airpal-mini-pro.webm' | asset_url }}" type="video/webm">
+    </video>
+  
+    <video loop muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+      x5-video-orientation="portraint" class="pt-show-small lazyload"
+      data-poster="{{ 'product-airpal-mini-pro-cover-m.jpg' | asset_url }}" preload="none" autoplay
+      style="object-fit:contain">
+      <source src="{{ 'product-airpal-mini-pro-m.mp4' | asset_url }}" type="video/mp4">
+      <source src="{{ 'product-airpal-mini-pro-m.webm' | asset_url }}" type="video/webm">
+    </video>
+  
+  </div>
+  
+  <div class="section2 relative bg-black">
+    <div class="pt-section-content absolute pt-position-centerY">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Exclusive Luxury
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Used exclusively for PITAKA's premium luxury cases, 600D has a more delicate weave and is smooth to the touch.
+      </p>
+    </div>
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-section2-' | append:'.jpg' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-section2-' | append:'-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  
+  <div class="section3 pt-flex picture-section bg-black">
+    <div class="picture-item item-1"></div>
+    <div class="picture-item item-2"></div>
+    <div class="picture-item item-3"></div>
+  </div>
+  
+  <div class="section4 relative bg-black">
+    <div class="pt-section-content absolute pt-position-centerY pt-position-right">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        3D Grip<sup>TM</sup> Technology
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Our unique vacuum forming process creates a nonslip texture that improves grip while also feeling soft to the
+        touch.
+      </p>
+    </div>
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-section4-' | append:'.jpg' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-section4-' | append:'-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  <div class="section5 parallexScroll pt-flex pt-flex-center mobile_vh100 tablet_vh100_portrait bg-black">
+    <div class="pt-section-content width-42">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Wireless and Wired Charging
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Use any Qi-Certified device to wirelessly charge your AirPods without removing the case. The precisely cut AirPods
+        case also allows you to charge with an Apple Lightning cable.
+      </p>
+    </div>
+    <div class="pt-section-picture">
+      <picture>
+        <source media="(min-width: 769px)"
+          data-srcset="{{ base_name | prepend: 'product-section5-' | append:'-1.jpg' | asset_url }}">
+        <img src="{{ placeholder_gif }}"
+          data-src="{{ base_name | prepend: 'product-section5-' | append:'-1-m.jpg' | asset_url }}" class="lazyload" />
+      </picture>
+      <picture>
+        <source media="(min-width: 769px)"
+          data-srcset="{{ base_name | prepend: 'product-section5-' | append:'-2.jpg' | asset_url }}">
+        <img src="{{ placeholder_gif }}"
+          data-src="{{ base_name | prepend: 'product-section5-' | append:'-2-m.jpg' | asset_url }}" 
+          class="parallex-img lazyload" id="scroll-slider-img-2">
+      </picture>
+    </div>
+  
+  </div>
+  <div class="section6 relative bg-black">
+    <div class="pt-section-content absolute">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        An Essential Everyday Carry Item
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        With its compact size and detachable ring, easily clip the Air Pals case to your bag or pocket, providing easy
+        access to your AirPods.
+      </p>
+    </div>
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-section6-' | append:'.jpg' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-section6-' | append:'-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  
+  
+  <style>
+    @media screen and (min-width:1025px) {
+      .picture-section {
+        flex-direction: row;
+        height: calc(100vh - 75px);
+      }
+  
+      .picture-section .picture-item {
+        flex: 1;
+        height: 100%;
+        will-change: flex;
+        transition: flex 700ms ease;
+        position: relative;
+      }
+  
+      .picture-section .picture-item::before,
+      .picture-section .picture-item::after {
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: opacity 700ms ease;
+      }
+  
+  
+      .picture-section .picture-item:first-child {
+        z-index: 3 !important;
+      }
+  
+      .picture-section .picture-item:nth-child(2) {
+        z-index: 2 !important;
+      }
+  
+      .picture-section .picture-item:last-child {
+        z-index: 1 !important;
+        margin-right: 0 !important;
+      }
+  
+      .picture-section .picture-item:hover {
+        flex: 8;
+        z-index: 999 !important;
+      }
+  
+      .picture-section .picture-item.item-1::before {
+        background-image: url("{{ 'product-section3-pal-mini-pro-1-m.jpg' | asset_url }}");
+      }
+  
+      .picture-section .picture-item.item-2::before {
+        background-image: url("{{ 'product-section3-pal-mini-pro-2-m.jpg' | asset_url }}");
+      }
+  
+      .picture-section .picture-item.item-3::before {
+        background-image: url("{{ 'product-section3-pal-mini-pro-3-m.jpg' | asset_url }}");
+      }
+  
+      .picture-section .picture-item.item-1::after {
+        background-image: url("{{ 'product-section3-pal-mini-pro-1.jpg' | asset_url }}");
+        opacity: 0;
+      }
+  
+      .picture-section .picture-item.item-2::after {
+        background-image: url("{{ 'product-section3-pal-mini-pro-2.jpg' | asset_url }}");
+        opacity: 0;
+      }
+  
+      .picture-section .picture-item.item-3::after {
+        background-image: url("{{ 'product-section3-pal-mini-pro-3.jpg' | asset_url }}");
+        opacity: 0;
+      }
+  
+      .picture-section .picture-item:hover::after {
+        opacity: 1;
+      }
+    }
+  
+    @media screen and (max-width:1024px) {
+      .picture-section {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+  
+      .picture-section .picture-item {
+        width: calc(50% - 10px);
+        height: 50vw;
+        margin: 5px;
+        background-size: cover;
+      }
+  
+      .picture-section .picture-item.item-1 {
+        background-image: url("{{ 'product-section3-pal-mini-pro-1-m.jpg' | asset_url }}");
+      }
+  
+      .picture-section .picture-item.item-2 {
+        background-image: url("{{ 'product-section3-pal-mini-pro-2-m.jpg' | asset_url }}");
+      }
+  
+      .picture-section .picture-item.item-3 {
+        width: calc(100% - 10px);
+        background-image: url("{{ 'product-section3-pal-mini-pro-3-m.jpg' | asset_url }}");
+      }
+    }
+  </style>
+  
+  <!-- scroll slider css-->
+  <style>
+    .parallexScroll .pt-section-picture picture {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  
+    .parallexScroll .pt-section-picture picture:last-child {
+      justify-content: flex-end;
+      align-items: center;
+    }
+  
+    .parallexScroll .pt-section-picture img {
+      display: block;
+      width: auto;
+    }
+  
+    /* all PC screens */
+    @media screen and (min-width:1280px) {
+      .parallexScroll .pt-section-picture {
+        min-width: 708px;
+      }
+    }
+  
+    /* tablet and pc screens */
+    @media screen and (min-width:768px) {
+      .parallexScroll {
+        overflow: hidden;
+      }
+  
+      .parallexScroll .pt-section-picture {
+        width: 60%;
+        align-self: flex-start;
+        min-width: 425px;
+      }
+  
+      .parallexScroll .pt-section-picture img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+  
+      .parallexScroll .section-content {
+        text-align: left;
+        width: 40%;
+        padding: 0 5%;
+        max-width: 750px;
+      }
+    }
+  
+    /* portrait tablet */
+    @media screen and (max-width:1279px) and (min-width:768px) and (orientation: portrait) {
+      .tablet_vh100_portrait {
+        height: 100vh;
+      }
+  
+      .parallexScroll {
+        flex-flow: column nowrap;
+      }
+  
+      .parallexScroll.tablet_vh100_portrait {
+        max-height: unset;
+        height: auto;
+      }
+  
+      .parallexScroll .section-content {
+        padding: 12% 0;
+        width: 80%;
+        max-width: 600px;
+        height: 32%;
+        text-align: center;
+      }
+  
+      .parallexScroll .pt-section-picture {
+        height: 68%;
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+  </style>
+  
+  <style>
+    .section1 .pt-section-content {
+      width: 100%;
+      transform: translateY(100%);
+    }
+  
+    .section2 .pt-section-content {
+      max-width: 485px;
+      padding-right: 5%;
+    }
+  
+    .section4 .pt-section-content {
+      /* padding-left: 10%; */
+      max-width: 485px;
+    }
+  
+    .section6 .pt-section-content {
+      bottom: 10%;
+      right: 10%;
+      max-width: 420px;
+    }
+  
+    .section5 .pt-section-content {
+      padding: 0 5% 0 10%;
+    }
+  
+    @media screen and (max-width:1280px) {}
+  
+    @media screen and (max-width:1024px) {
+      .section3 {
+        padding: 2em;
+      }
+  
+      .section5 .pt-section-content {
+        padding: 4em 0;
+        width: 68%;
+        text-align: center;
+      }
+  
+      .section4 picture {
+        max-width: 50%;
+      }
+    }
+  
+    @media screen and (max-width:768px) {
+      .section3 {
+        padding: 1em;
+      }
+  
+      .section2 .pt-section-content,
+      .section4 .pt-section-content,
+      .section6 .pt-section-content {
+        width: 100%;
+        text-align: center;
+        transform: none;
+        top: 4em;
+        padding: 0 20%;
+        left: 0;
+        max-width: unset;
+      }
+  
+      .section5 {
+        flex-direction: column;
+      }
+  
+      .section5 .pt-section-content {
+        width: 100%;
+        text-align: center;
+        order: 1;
+        padding: 4em 20%;
+      }
+  
+      .section5 .pt-section-picture {
+        order: 2;
+      }
+  
+      .section5 .pt-section-picture:nth-child(3) {
+        width: calc(100% - 10px);
+      }
+    }
+  
+    @media screen and (max-width:414px) {
+      .section3 {
+        padding: 10px;
+      }
+  
+      .section2 .pt-section-content,
+      .section4 .pt-section-content,
+      .section6 .pt-section-content {
+        top: 3em;
+        padding: 0 10%;
+      }
+  
+      .section5 .pt-section-content {
+        padding: 3em 10%;
+      }
+    }
+  </style>
+  
+  {{ 'ScrollMagic.js' | asset_url | script_tag }}
+  {{ 'debug.addIndicators.min.js' | asset_url | script_tag }}
+  {{ 'animation.gsap.min.js' | asset_url | script_tag }}
+  {{ 'TimelineLite.min.js' | asset_url | script_tag }}
+  {{ 'TweenLite.min.js' | asset_url | script_tag }}
+  {{ 'CSSPlugin.min.js' | asset_url | script_tag }}
+  {{ 'BezierPlugin.min.js' | asset_url | script_tag }}
+  {{ 'imagesloaded.pkgd.min.js' | asset_url | script_tag }}
+  <script>
+    ! function () {
+      if (window.innerWidth > 1024) {
+        let screenWid = window.innerWidth,
+          screenHei = window.innerHeight,
+          alreadyLoaded = false;
+        let parallexLastImg = document.querySelector('.parallexScroll .parallex-img'),
+          parallexAllImgs = document.querySelectorAll('.parallexScroll picture'), // a nodelist
+          parallexWrapper = document.querySelector('.parallexScroll'),
+          parallexSectionImg = document.querySelector('.parallexScroll .pt-section-picture');
+  
+        // create gsap animation
+        function createAnim(h, animatedSelector, triggerEl) {
+          var tl = new TimelineLite();
+          tl
+            .to(animatedSelector, 1, {
+              y: `-${h}px`
+            });
+          let controller = new ScrollMagic.Controller();
+          let sc = new ScrollMagic.Scene({
+              triggerElement: triggerEl,
+              triggerHook: 0,
+              duration: '100%',
+              tweenChanges: true,
+            })
+            .setTween(tl)
+            .setPin(triggerEl)
+            // .addIndicators()
+            .addTo(controller)
+        };
+  
+        /* when in laptop mode and when img's height is less than screen height,
+            img needs to be of height 100vh w. auto width,
+            and parallexScroll wrapper's height is determined by img's height
+        */
+        function resizeImgAndSetWrapperHeight(allImgs, sectionImgEl, wrapperEl) {
+          let widToHeiRatio = 1.2864;
+          for (let i = 0; i < allImgs.length; i++) {
+            allImgs[i].style.height = '100vh';
+            // allImgs[i].style.width = 'auto';
+          }
+          let imgWid = allImgs[0].offsetWidth;
+          if (!imgWid) {
+            imgWid = allImgs[0].offsetHeight * widToHeiRatio;
+          }
+          sectionImgEl.style.width = imgWid + 'px';
+          wrapperEl.style.height = '100vh';
+          return wrapperEl.offsetHeight;
+        }
+  
+        // wait for the images loaded
+        parallexLastImg.addEventListener('load', function () {
+          if (alreadyLoaded) return;
+          alreadyLoaded = true;
+          listenerCallback(this);
+        });
+  
+        $('#scroll-slider-img-2').imagesLoaded(function () {
+          if (alreadyLoaded) return;
+          alreadyLoaded = true;
+          let that = this.elements[0];
+          listenerCallback(that);
+        });
+  
+        function listenerCallback(it) {
+          let h = it.offsetHeight;
+          if (screenWid / screenHei < 1) {
+            h = it.offsetHeight;
+            createAnim(h, '.parallexScroll img', '.parallexScroll');
+          } else if (screenWid / screenHei >= 1) {
+            h = resizeImgAndSetWrapperHeight(parallexAllImgs, parallexSectionImg, parallexWrapper);
+            createAnim(h, '.parallexScroll .pt-section-picture', '.parallexScroll');
+          }
+        }
+      }
+    }();
+  </script>

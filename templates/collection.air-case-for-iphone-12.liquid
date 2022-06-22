@@ -1,0 +1,181 @@
+
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+<div class="section-deafult section0 relative">
+    <picture>
+      <source data-srcset="{{ 'product-aircase-section0-iphone12.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-aircase-section0-iphone12-m.jpg' | asset_url }}"
+        alt="Air Case for iPhone 12" class="img-responsive width-100 lazyload">
+    </picture>
+    <div class="pt-section-content absolute pt-position-center">
+      <h3 class="text-2xl sm:text-3xl font-bold mb-6 fw-400 pt-text-center font-upper">Lightweight Luxury</h3>
+    </div>
+  </div>
+  
+  <div class="section-deafult section1 relative">
+    <div class="pt-section-content absolute text-center pt-position-centerX pt-position-top">
+      <h3 class="text-2xl sm:text-3xl font-bold mb-6">
+        Delicate, Yet Durable
+      </h3>
+      <p class="text-base text-gray-400 mb-8 sm:mb-12  pt-margin-bottom-small">
+        The PITAKA Air Case for iPhone 12 is made using exceptionally fine and unique materials that we reserve only for
+        our premium products.
+      </p>
+      {% render 'link-button',link_url: "/pages/600d", link_title:'Learn More About 600D' %}
+    </div>
+    <picture>
+      <source data-srcset="{{ 'product-aircase-section1-iphone12.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-aircase-section1-iphone12-m.jpg' | asset_url }}"
+        alt="Air Case for iPhone 12" class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  
+  <div class="section-deafult section2">
+    <picture>
+      <source data-srcset="{{ 'product-aircase-section2-iphone12.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-aircase-section2-iphone12-m.jpg' | asset_url }}"
+        alt="Air Case for iPhone 12" class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  
+  <div class="section-deafult section3">
+    <picture>
+      <source data-srcset="{{ 'product-aircase-section3-iphone12.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-aircase-section3-iphone12-m.jpg' | asset_url }}"
+        alt="Air Case for iPhone 12" class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  
+  <div class="section-deafult section4 relative">
+    <div class="pt-section-content text-center absolute pt-position-centerX pt-position-top">
+      <h3 class="text-2xl sm:text-3xl font-bold mb-6">
+        Lightweight and Ultra-Thin
+      </h3>
+      <p class="text-base text-gray-400 mb-8 sm:mb-12 ">
+        Although extremely thin and light, the Air Case protects your iPhone 12 with minimalist style.
+      </p>
+      <div class="pt-flex pt-flex-center pt-margin-top-small">
+        <picture class="pt-block width-50">
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-aircase-section1-min-10-65.png' | asset_url }}"
+            alt="Air Case for iPhone 12" class="img-responsive lazyload">
+        </picture>
+      </div>
+    </div>
+  
+    <picture>
+      <source srcset="{{ 'product-aircase-section4-iphone12.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img srcset="{{ 'product-aircase-section4-iphone12-m.jpg' | asset_url }}" alt="Air Case for iPhone 12"
+        class="img-responsive width-100">
+    </picture>
+  </div>
+  
+  <div class="section-deafult section5 relative">
+    <div class="pt-section-content absolute pt-position-centerY pt-position-left">
+      <h3 class="text-2xl sm:text-3xl font-bold mb-6">
+        Textured Surface For Better Grip
+      </h3>
+      <p class="text-base text-gray-400 mb-8 sm:mb-12  pt-margin-bottom-small">
+        Our unique vacuum forming process creates a nonslip texture that improves grip while also feeling soft to the
+        touch.
+      </p>
+      {% render 'link-button',link_url: "/pages/3d-grip", link_title:'Learn More About 3D Grip' %}
+    </div>
+    <picture>
+      <source data-srcset="{{ 'product-aircase-section5-iphone12.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-aircase-section5-iphone12-m.jpg' | asset_url }}"
+        alt="Air Case for iPhone 12" class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  
+  <div class="section-deafult section6 relative">
+    <div class="pt-section-content absolute text-center pt-position-centerX pt-position-top">
+      <h3 class="text-2xl sm:text-3xl font-bold mb-6">
+        Protective Camera Ring
+      </h3>
+      <p class="text-base text-gray-400 mb-8 sm:mb-12 ">
+        The raised ring protects your camera lens from scratches.
+      </p>
+    </div>
+    <picture>
+      <source data-srcset="{{ 'product-aircase-section6-iphone12.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-aircase-section6-iphone12-m.jpg' | asset_url }}"
+        alt="Air Case for iPhone 12" class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  
+  <div class="section-deafult section7">
+    <picture>
+      <source data-srcset="{{ 'product-aircase-section7-iphone12.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-aircase-section7-iphone12-m.jpg' | asset_url }}"
+        alt="Air Case for iPhone 12" class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  
+  <style>
+    .pt-section-content {
+      max-width: 584px;
+    }
+  
+    @media screen and (max-width:1600px) {
+      .pt-section-content {
+        max-width: 520px;
+      }
+    }
+  
+    @media screen and (max-width:1280px) {
+      .pt-section-content {
+        width: 45%;
+        max-width: 425px;
+      }
+    }
+  
+    @media screen and (max-width:768px) {
+      .section-deafult {
+        min-height: 143vw;
+      }
+  
+      .pt-section-content {
+        width: 100%;
+        left: 0;
+        top: 10em;
+        transform: none;
+        text-align: center;
+        padding: 0 20%;
+        max-width: unset;
+      }
+  
+      .section0 .pt-section-content {
+        width: 100%;
+        padding: 0 10%;
+        transform: none;
+        top: 8%;
+        left: 0;
+      }
+  
+      .section4 .pt-section-content {
+        width: 40%;
+        padding: 0;
+        transform: translateY(-50%);
+        top: 50%;
+        left: 10%;
+        text-align: left !important;
+      }
+  
+      .section4 .pt-section-content .pt-flex.pt-flex-center {
+        align-items: flex-start;
+      }
+  
+      .section4 .pt-section-content .pt-flex.pt-flex-center picture {
+        width: 90%;
+      }
+    }
+  
+    @media screen and (max-width:414px) {
+      .pt-section-content {
+        padding: 0 10%;
+        top: 3em;
+      }
+    }
+  </style>

@@ -1,0 +1,403 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+<!-- creat by Colin 2020.7.10 -->
+<!-- contact by colin@ipitaka.com -->
+<style>
+  .page-container{
+    background-color: #000;
+  }
+    /* page common css  */
+    .imgBox-pc img {
+      width: 100%;
+    }
+  
+    .section-banner {
+      width: 100vw;
+      height: 46.875vw;
+    }
+  
+    .section-banner {
+      position: relative;
+    }
+  
+    .section-banner img {
+      display: block;
+    }
+  
+    .section-banner-text1 {
+      position: absolute;
+      top: 14.888%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  
+    .imgBanner1 {
+      position: absolute;
+      width: 100vw;
+      height: 46.875vw;
+      background-color: #171719;
+    }
+  
+    .imgBanner1 img {
+      position: absolute;
+      width: 40.677%;
+      top: 29.222%;
+      left: 28.90625%;
+    }
+  
+    .section-banner-text2 {
+      position: absolute;
+      top: 34%;
+      right: 10%;
+      max-width: 485px;
+    }
+  
+    .section-banner-text3 {
+      position: absolute;
+      width: 90vw;
+      top: 6%;
+      left: 10%;
+      text-align: left;
+      max-width: 485px;
+    }
+  
+    .section-banner-text3 h3 {
+      color: #000;
+    }
+  
+    .section-banner-text3 p {
+      color: #000;
+    }
+  
+    .section-banner-text4 {
+      position: absolute;
+      width: 90vw;
+      top: 6%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      text-align: center;
+    }
+  
+    .section-banner-text4 h3 {
+      color: #000;
+    }
+  
+    .section-banner-text4 p {
+      color: #000;
+    }
+  
+    .section-banner4 {
+      position: relative;
+      width: 100vw;
+      height: 37.5vw;
+    }
+  
+    /*  */
+    .section-scence {
+      position: relative;
+      width: 100vw;
+      height: 37.5vw;
+    }
+  
+    .section-scence img {
+      display: block;
+    }
+  
+    .section-scence .imgBox1-pc {
+      position: absolute;
+      width: 100vw;
+      height: 37.5vw;
+      background-color: #171719;
+    }
+  
+    .section-scence-text1 {
+      position: absolute;
+      top: 50%;
+      left: 8%;
+      transform: translate(0, -50%);
+    }
+  
+    .imgScence1-1 {
+      position: absolute;
+      top: 32.5%;
+      left: 43.333%;
+      width: 14.427%;
+    }
+  
+    .imgScence1-2 {
+      position: absolute;
+      top: 24%;
+      left: 48.75%;
+      width: 11.5625%;
+    }
+  
+    .imgScence1-3 {
+      position: absolute;
+      top: 28.3333%;
+      left: 69.3229%;
+      width: 15%;
+    }
+  
+    .imgScence1-4 {
+      position: absolute;
+      top: 9.7222%;
+      left: 74.6875%;
+      width: 13.28125%;
+    }
+  
+    .section-scence .imgBox2-pc {
+      position: absolute;
+      width: 100vw;
+      height: 37.5vw;
+      background-color: #000;
+    }
+  
+    .section-scence-text2 {
+      position: absolute;
+      top: 9.1666%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      text-align: center;
+    }
+  
+    .imgScence2 {
+      position: absolute;
+      top: 35%;
+      width: 44.6354%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  
+    .section-scence-text3 {
+      position: absolute;
+      top: 44.1666%;
+      left: 60.8333%;
+    }
+  
+    .imgScence3-1 {
+      position: absolute;
+      top: 26.8055%;
+      left: 8.28125%;
+      width: 16.09375%;
+    }
+  
+    .imgScence3-2 {
+      position: absolute;
+      top: 27.4666%;
+      left: 28.6979%;
+      width: 16.47395%;
+    }
+  
+    .imgBanner4-2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 58.8%;
+    }
+  </style>
+  
+  <style>
+    /* 以下为媒体查询PC端样式 */
+    @media screen and (min-width: 769px) {
+      .imgBox-phone {
+        display: none;
+      }
+  
+      .imgBox1-phone {
+        display: none;
+      }
+  
+      .imgBox2-phone {
+        display: none;
+      }
+      .imgBox4-phone {
+        display: none;
+      }
+    }
+  </style>
+  
+  <style>
+    /* 以下为媒体查询移动端样式 */
+    @media screen and (max-width: 768px) {
+      .section-banner {
+        width: 100vw;
+        height: 46.875vw;
+      }
+  
+      .imgBox-pc {
+        display: none;
+      }
+  
+      .imgBox1-pc {
+        display: none;
+      }
+  
+      .imgBox2-pc {
+        display: none;
+      }
+  
+      .section-banner1-phone {
+        width: 100vw;
+        height: 113.33vw;
+      }
+  
+      .imgBox1-phone {
+        width: 100vw;
+        height: 113.33vw;
+        background: #000;
+      }
+  
+      .imgBanner1-phone {
+        position: absolute;
+        top: 38.2353%;
+        left: 50%;
+        width: 63.3333%;
+        transform: translate(-50%, 0);
+      }
+  
+      .section-banner-text1 {
+        position: absolute;
+        top: 19.66%;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+  
+      .section-banner2-phone {
+        width: 100vw;
+        height: 133.33vw;
+      }
+  
+      .imgBox2-phone {
+        width: 100vw;
+        height: 133.33vw;
+        background: #000;
+      }
+  
+      .section-banner-text2 {
+        position: absolute;
+        top: 4em;
+        left: 5%;
+      }
+  
+      .section-banner3-phone {
+        width: 100vw;
+        height: 89.733vw;
+      }
+  
+      .imgBox3-phone {
+        width: 100vw;
+        height: 89.733vw;
+        background: #000;
+      }
+  
+      .section-banner-text3 {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        text-align: left;
+        
+      }
+  
+      .section-banner-text3 h3 {
+        color: #000;
+      }
+  
+      .section-banner-text3 p {
+        color: #000;
+      }
+  
+      .section-banner4-phone {
+        width: 100vw;
+        height: 113.3333vw;
+      }
+  
+      .imgBox4-phone {
+        width: 100vw;
+        height: 113.3333vw;
+        background: #000;
+      }
+  
+      .section-banner-text4 {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        text-align: left;
+      }
+  
+    }
+  </style>
+  
+    <div class="section-banner section-banner1-phone bg-black">
+      <div class="imgBox-pc">
+        <div class="imgBanner1">
+          {{ 'product_magez_bar_detail_banner1.png' | asset_url | img_tag }}
+        </div>
+      </div>
+      <div class="imgBox1-phone">
+        <div class="imgBanner1-phone">
+          {{ 'product_magez_bar_detail_banner1_phone.png' | asset_url | img_tag }}
+        </div>
+      </div>
+      <div class="section-banner-text1 text-center">
+        <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400 font-upper">Effortlessly Energized</h3>
+      </div>
+    </div>
+    <div class="section-banner section-banner2-phone bg-black">
+      <div class="imgBox-pc">
+        {{ 'product_magez_bar_detail_banner2.png' | asset_url | img_tag }}
+      </div>
+      <div class="imgBox2-phone">
+        {{ 'product_magez_bar_detail_banner2_phone.jpg' | asset_url | img_tag }}
+      </div>
+      <div class="section-banner-text2">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Organize Your Everyday Carry Items</h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          Mount the MagEZ Bar in your home or office and keep all of your
+          personal items organized.
+        </p>
+      </div>
+    </div>
+    <div class="section-banner section-banner3-phone bg-black">
+      <div class="imgBox-pc">
+        {{ 'product_magez_bar_detail_banner3.jpg' | asset_url | img_tag }}
+      </div>
+      <div class="imgBox3-phone">
+        {{ 'product_magez_bar_detail_banner3_phone.jpg' | asset_url | img_tag }}
+      </div>
+      <div class="section-banner-text3">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Ready When You Are</h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          Never misplace your keys or MagEZ Wallet again! With this wireless
+          charging wall mount, you won’t forget to charge your
+          smartphone or AirPods, just place them on the MagEZ Bar and take them
+          with you when you’re ready to go.
+        </p>
+      </div>
+    </div>
+    <div class="section-banner4  section-banner4-phone bg-black">
+      <div class="imgBox-pc">
+        <div class="imgBanner4-1">
+          {{ 'product_magez_bar_detail_banner4_1.png' | asset_url | img_tag }}
+        </div>
+        <!-- <div class="imgBanner4-2">
+          {{ 'product_magez_bar_detail_banner4_2.png' | asset_url | img_tag }}
+        </div> -->
+      </div>
+      <div class="imgBox4-phone">
+        {{
+          'product_magez_bar_detail_banner4_phone.jpg' | asset_url | img_tag
+        }}
+      </div>
+      <div class="section-banner-text2 ">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Premium Aramid fiber</h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          The MagEZ Bar is crafted with high-quality Aramid fiber that is
+          both aesthetically pleasing and protective. Aramid fiber
+          possesses many qualities that make it a perfect solution for wireless
+          chargers, such as its ability to dissipate heat, preventing the
+          charger and your devices from overheating while they charge.
+        </p>
+      </div>
+    </div>

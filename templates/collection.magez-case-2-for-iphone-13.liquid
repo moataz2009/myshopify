@@ -1,0 +1,768 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+{{ "swiper-bundle.min.css" | asset_url | stylesheet_tag }}
+
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_6 = 'w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28' %}
+{% assign pdClass_b = 'px-3 sm:px-6 md:px-0 pb-16 sm:pb-20 lg:pb-28' %}
+{% assign titleBoxClass= 'mx-auto mb-12 w-11/12 sm:w-5/6 md:w-2/3 xl:w-2/5' %}
+{% assign titleSize = 'text-2xl md:text-3xl font-bold' %}
+{% assign descSize = 'text-sm sm:text-base text-gray-400' %}
+{% assign titleDecoMy = 'block mt-4 mb-6' %}
+{%- comment -%}主标题h1距底部距离（紧）{%- endcomment -%}
+{% assign titleMb_tight = 'mb-6' %}
+{%- comment -%}主标题h1距底部距离（松）{%- endcomment -%}
+{% assign titleMb_loose = 'mb-12' %}
+{% assign absoluteContentBoxClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto px-6 lg:px-0 transform sm:left-1/2 sm:-translate-x-1/2' %}
+{% assign absoluteContentClass = 'absolute transform w-full sm:w-2/5 xl:w-1/3 max-w-md sm:max-w-xs xl:max-w-md   top-20 left-1/2 -translate-x-1/2 xs:top-48 sm:translate-x-0  sm:left-2/3 sm:top-1/2 sm:-translate-y-1/2' %}
+{% assign absoluteContentClass_center = 'absolute text-center z-10 transform w-full px-6 sm:px-0 sm:w-4/5 md:w-1/2 xl:w-1/3 max-w-lg top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2' %}
+<div class="w-full relative section-hero">
+  <div class="absolute {{absoluteContentBoxClass}} h-full bottom-7 sm:bottom-0">
+    <div
+      class="absolute transform w-full sm:w-2/5 xl:w-1/3 max-w-md sm:max-w-xs md:max-w-md xl:max-w-xl  top-16 xs:top-20 left-1/2 -translate-x-1/2 xs:top-48 sm:translate-x-0  sm:left-2/3 sm:top-1/2 sm:-translate-y-1/2 xl:left-2/3">
+      <h3 class=" mb-4  text-gray-400 font-bold  text-xl xs:text-2xl leading-9 text-center sm:text-left">
+        A MagSafe compatible case that perfectly fits and protects your iPhone 2021 from daily wear and tear.
+      </h3>
+    </div>
+  </div>
+  <picture>
+    <source data-srcset="{{'magezcase-2-i13-section1.jpg' | asset_url}}" media="(min-width: 1281px)">
+    <source data-srcset="{{'magezcase-2-i13-section1-m.jpg' | asset_url}}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{'magezcase-2-i13-section1-s.jpg' | asset_url}}"
+      alt="MagEZ Case 2 for iPhone 13 Series" class="block w-full h-full object-cover lazyload">
+  </picture>
+</div>
+
+<div class="{{wClass_8}} {{pdClass}}">
+  {% render 'video-set' , name:'magezcase-2-i13-section2',coverName:'product-video-magezcase-i13-cover', extraClass:'mb-12' %}
+  {%- comment -%}
+  <div id="trigger-video"></div>
+  <div class="w-full relative mb-12">
+    <div class="pt-section-picture relative">
+      <div class="absolute left-0 top-0 transform w-full h-full flex justify-center items-center">
+        <div id="play-btn" class="rounded-full w-9 h-9 bg-white flex justify-center items-center cursor-pointer"
+          data-target="#modal-video">
+          {{ 'triggle_pixel-black.svg' | asset_url | img_tag:'','block' }}
+        </div>
+      </div>
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-video-magezcase-i13-cover.jpg' | asset_url }}"
+          class="block w-full lazyload" />
+      </picture>
+    </div>
+    <div id="modal-video" class="modal-container absolute w-full h-full opacity-0 inset-0 transition">
+      <video muted loop controls playsinline webkit-playsinline x5-video-player-type="h5"
+        x5-video-player-fullscreen="true" x5-video-orientation="portraint" class="w-full h-full block object-cover">
+        <source src="{{ 'magezcase-2-i13-section2.mp4' | asset_url }}" type="video/mp4" />
+        <source src="{{ 'magezcase-2-i13-section2.webm' | asset_url }}" type="video/webm" />
+      </video>
+    </div>
+  </div>
+  {%- endcomment -%}
+
+  <div class="mx-auto mb-0 w-11/12 sm:w-5/6 md:w-2/3 xl:w-2/5">
+    <h3 class="{{titleSize}}">
+      Designs That Complement Your iPhone 13
+    </h3>
+    <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+    <p class="{{descSize}}">
+      Our classically colored cases were selected to best suit the iPhone 13 series, including our vibrant new case, Red
+      and Orange Twill.
+    </p>
+  </div>
+</div>
+{%- comment -%}轮播图部分{%- endcomment -%}
+<div class="w-full swiper-container swiper-top">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <picture class="w-full">
+        <source srcset="{{'magezcase-2-i13-section3-slider-1.jpg' | asset_url}}" media="(min-width: 1025px)">
+        <source srcset="{{'magezcase-2-i13-section3-slider-1-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img srcset="{{'magezcase-2-i13-section3-slider-1-s.jpg' | asset_url}}" alt="MagEZ Case 2 for iPhone 13 Series"
+          class="img-responsive w-full">
+      </picture>
+    </div>
+    <div class="swiper-slide">
+      <picture class="w-full">
+        <source srcset="{{'magezcase-2-i13-section3-slider-3.jpg' | asset_url}}" media="(min-width: 1025px)">
+        <source srcset="{{'magezcase-2-i13-section3-slider-3-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img srcset="{{'magezcase-2-i13-section3-slider-3-s.jpg' | asset_url}}" alt="MagEZ Case 2 for iPhone 13 Series"
+          class="img-responsive w-full">
+      </picture>
+    </div>
+    <div class="swiper-slide">
+      <picture class="w-full">
+        <source srcset="{{'magezcase-2-i13-section3-slider-2.jpg' | asset_url}}" media="(min-width: 1025px)">
+        <source srcset="{{'magezcase-2-i13-section3-slider-2-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img srcset="{{'magezcase-2-i13-section3-slider-2-s.jpg' | asset_url}}" alt="MagEZ Case 2 for iPhone 13 Series"
+          class="img-responsive w-full">
+      </picture>
+    </div>
+    <div class="swiper-slide">
+      <picture class="w-full">
+        <source srcset="{{'magezcase-2-i13-section3-slider-4.jpg' | asset_url}}" media="(min-width: 1025px)">
+        <source srcset="{{'magezcase-2-i13-section3-slider-4-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img srcset="{{'magezcase-2-i13-section3-slider-4-s.jpg' | asset_url}}" alt="MagEZ Case 2 for iPhone 13 Series"
+          class="img-responsive w-full">
+      </picture>
+    </div>
+  </div>
+  <div class="swiper-button-next swiper-button-next2"></div>
+  <div class="swiper-button-prev swiper-button-next2"></div>
+  <div class="swiper-pagination swiper-pagination2"></div>
+</div>
+
+<div id="trigger_line_1"></div>
+<div class="{{wClass_8}} {{pdClass}} flex flex-col sm:flex-row items-center justify-center">
+  <div class="mx-auto w-11/12 sm:w-1/2 ">
+    <h3 class="{{titleSize}}">
+      MagSafe and Wireless <br> Charging Compatible
+    </h3>
+    <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+    <p class="{{descSize}} mb-12 max-w-md sm:max-w-xs xl:max-w-md">
+      Designed for MagSafe compatibility to ensure a secure, convenient attachment with MagSafe chargers or accessories.
+      Charge your iPhone 13 using any standard Qi-certified wireless charger without removing your case.<br>
+      Work with MagEZ<sup>&reg;</sup> 2.0 System.
+      <sup><a href="/collections/magez-system" title="Learn More about Our MagEZ System">
+          <span class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</span>
+        </a></sup>
+    </p>
+  </div>
+  <div class="w-3/5 xs:w-2/5 m-auto sm:w-1/4 relative">
+    <img src="{{ placeholder_gif }}" data-src="{{'magezcase-2-i13-section3-1.png' | asset_url}}"
+      alt="MagEZ Case 2 for iPhone 13 Series" class="block object-cover mx-auto lazyload">
+    <img src="{{ placeholder_gif }}" data-src="{{'magezcase-2-i13-section3-2.png' | asset_url}}"
+      alt="MagEZ Case 2 for iPhone 13 Series" class=" block object-cover lazyload absolute" id="anim-case-1">
+  </div>
+  <!-- <div class="mx-auto w-11/12 sm:w-1/2 hidden sm:block max-w-md">
+    <h3 class="{{titleSize}}">
+      MagSafe and Wireless <br> Charging Compatible
+    </h3>
+    <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+    <p class="{{descSize}}">
+      Designed for MagSafe compatibility to ensure a secure, convenient attachment with MagSafe chargers or accessories.
+      Charge your iPhone 13 using any standard Qi-certified wireless charger without removing your case.
+    </p>
+  </div> -->
+</div>
+{%- comment -%}
+<div class="w-full  bg-gray-800">
+  <div class="{{wClass_8}} {{pdClass}}">
+    <div class="mx-auto w-11/12 sm:w-1/2 {{titleMb_loose}}">
+      <h3 class="text-gray-400 font-normal text-2xl sm:text-3xl mb-6">
+        Arriving Soon
+      </h3>
+      <h3 class="{{titleSize}}">
+        In-car Charging for Your iPhone 13
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}} {{titleMb_tight}}">
+        Securely attach your device to the new magnetic wireless charging car mount for on-the-go rock steady charging
+        no matter the terrain.
+      </p>
+      <p class="text-sm sm:text-base {{titleMb_tight}} text-cyan">
+        Notice:MagEZ Case 2 for iPhone 13 is not compatible with MagEZ Mount & MagEZ Mount Qi.
+      </p>
+      <a class="navLink inline-block text-sm sm:text-base font-bold text-cyan leading-tight {% if space_tight %}pr-8{% else %}pr-12{% endif %} bg-right bg-no-repeat"
+        href="javascript:void(0);" name="#qi_pro_signup" id="openSignup">Learn More</a>
+    </div>
+    <div class="w-full relative">
+      <picture>
+        <source data-srcset="{{'magezcase-2-i13-section4.jpg' | asset_url}}" media="(min-width: 1281px)">
+        <source data-srcset="{{'magezcase-2-i13-section4-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magezcase-2-i13-section4-s.jpg' | asset_url}}"
+          alt="MagEZ Case 2 for iPhone 13 Series" class="block w-full h-full object-cover lazyload">
+      </picture>
+    </div>
+  </div>
+</div>
+
+<div class="hidden" id="qi_pro_signup">
+  <div class="{{wClass_6}} {{pdClass}} flex flex-col sm:flex-row items-center sm:justify-center md:justify-between">
+    <div class="w-full sm:w-1/2 pb-16 sm:pb-0">
+      <h3 class="{{titleSize}}">
+        MagEZ Car Mount Pro/Lite
+      </h3>
+      <p class="text-sm sm:text-base my-8">
+        A magnetic in-car wireless charger for iPhone 13.
+      </p>
+      <style type="text/css">
+        .privy-embed-form iframe,
+        .privy-embed-form iframe.privy-embedded-form-2744328 {
+          height: 160px !important
+        }
+      </style>
+      <div class="privy-embed-form" data-campaign="2744328"></div>
+    </div>
+    <div class="w-full sm:w-3/8 sm:pl-12 md:pl-0">
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{'magez-car-mount-pro-signup-1.png' | asset_url}}"
+          alt="MagEZ Car Mount Pro Sign Up" class="block w-4/5 mx-auto sm:w-full max-w-full lazyload">
+      </picture>
+      <h3 class="text-lg sm:text-xl lg:text-2xl text-gray-400 mt-12 text-center pb-8">Air Vent Mount</h3>
+    </div>
+  </div>
+  <div class="{{pdClass}} bg-gray-800">
+    <div class="{{wClass_8}} flex flex-col-reverse sm:flex-row items-center justify-between">
+      <div class="w-full flex flex-col items-center sm:items-end sm:w-1/2 md:w-3/8 sm:pr-12 md:pr-0">
+        <picture>
+          <img src="{{ placeholder_gif }}" data-src="{{'magez-car-mount-pro-signup-2.png' | asset_url}}"
+            alt="MagEZ Car Mount Pro Sign Up" class="block w-4/5 mx-auto sm:w-full max-w-full lazyload">
+        </picture>
+        <h3 class="text-lg sm:text-xl lg:text-2xl text-gray-400 mt-12 text-center">Suction Cup Mount</h3>
+      </div>
+
+      <div class="w-full sm:w-1/2 pb-16 sm:pb-0">
+        <div class="grid grid-cols-1 gap-6">
+          <div class="flex items-center">
+            <div class="rounded-full bg-gray-850 w-20 h-20 flex justify-center items-center flex-shrink-0">
+              {{ 'magez-car-mount-pro-signup-icon-1.svg' | asset_url | img_tag:'','h-10'  }}
+            </div>
+            <p class="{{descSize}} pl-8">
+              Magnetically attach your iPhone 13 using a MagEZ Case 2/New MagEZ Case Pro for secure, uninterrupted
+              wireless charging while you drive (MagEZ Car Mount Pro only).
+            </p>
+          </div>
+          <div class="flex items-center">
+            <div class="rounded-full bg-gray-850 w-20 h-20 flex justify-center items-center flex-shrink-0">
+              {{ 'magez-car-mount-pro-signup-icon-2.svg' | asset_url | img_tag:'','h-10'  }}
+            </div>
+            <p class="{{descSize}} pl-8">
+              Up to 15W fast wireless charging speeds (7.5W for iPhone).
+            </p>
+          </div>
+          <div class="flex items-center">
+            <div class="rounded-full bg-gray-850 w-20 h-20 flex justify-center items-center flex-shrink-0">
+              {{ 'magez-car-mount-pro-signup-icon-3.svg' | asset_url | img_tag:'','h-10'  }}
+            </div>
+            <p class="{{descSize}} pl-8">
+              New streamlined design that includes a stylish, circular aramid fiber pad.
+            </p>
+          </div>
+          <div class="flex items-center">
+            <div class="rounded-full bg-gray-850 w-20 h-20 flex justify-center items-center flex-shrink-0">
+              {{ 'magez-car-mount-pro-signup-icon-4.svg' | asset_url | img_tag:'','h-10' }}
+            </div>
+            <p class="{{descSize}} pl-8">
+              Fan cooling system prevents overheating.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-full bg-gray-800 pb-6">
+    <div class="{{wClass_8}} px-6 lg:px-0 flex justify-center">
+      {{'triggle_pixel.svg' | asset_url | img_tag:'','block transform -rotate-90'}}
+      <a class="text-cyan" href="javascript:;" id="closeSignup">
+        <span class="text-cyan ml-4 ">Close</span>
+      </a>
+    </div>
+  </div>
+</div>
+{%- endcomment -%}
+
+<div class="sm:bg-gray-800 {{pdClass}} px-6 pt-16 sm:pt-0 block sm:hidden">
+  <div class="{{wClass_6}} flex flex-col sm:flex-row items-center justify-between">
+    <div class="w-full sm:w-3/6 md:w-3/8">
+      <h3 class="{{titleSize}}">
+        Minimalist Style
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}}">
+        Crafted using sleek aramid fiber, the MagEZ Case 2 offers a minimalistic, clean design.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="w-full relative">
+  <div class="absolute {{absoluteContentBoxClass}} h-full bottom-7 sm:bottom-0 hidden sm:block">
+    <div class="{{absoluteContentClass}} static">
+      <h3 class="{{titleSize}}">
+        Minimalist Style
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}}">
+        Crafted using sleek aramid fiber, the MagEZ Case 2 offers a minimalistic, clean design.
+      </p>
+    </div>
+  </div>
+  <picture>
+    <source data-srcset="{{'magezcase-2-i13-section5.jpg' | asset_url}}" media="(min-width: 1281px)">
+    <source data-srcset="{{'magezcase-2-i13-section5-m.jpg' | asset_url}}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{'magezcase-2-i13-section5-s.jpg' | asset_url}}"
+      alt="MagEZ Case 2 for iPhone 13 Series" class="block w-full h-full object-cover lazyload">
+  </picture>
+</div>
+
+<div class="bg-gray-850 {{pdClass}} px-6 pt-16 sm:pt-0">
+  <div class="{{wClass_6}} flex flex-col sm:flex-row items-center justify-between">
+    <div class="w-full sm:w-3/6 md:w-3/8">
+      <h3 class="{{titleSize}}">
+        Better Grip with More Comfort
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}}">
+        Our unique vacuum forming process, 3D Grip Technology, creates a tactile, nonslip surface texture for
+        exceptional grip and comfort.
+      </p>
+    </div>
+    <div class="w-full sm:w-2/6 md:w-4/8">
+      <picture>
+        <source data-srcset="{{'magezcase-2-i13-section6.png' | asset_url}}" media="(min-width: 1281px)">
+        <source data-srcset="{{'magezcase-2-i13-section6-m.png' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magezcase-2-i13-section6-s.png' | asset_url}}"
+          alt="MagEZ Case 2 for iPhone 13 Series"
+          class="block mx-auto w-4/5 sm:w-full transform translate-y-16 sm:translate-y-20 lg:translate-y-28 lazyload">
+      </picture>
+    </div>
+  </div>
+</div>
+
+<div class="w-full  bg-gray-800">
+  <div class="{{wClass}} {{pdClass}}">
+    <div class="{{titleBoxClass}}">
+      <h3 class="{{titleSize}}">
+        Precision Manufacturing for the Perfect Fit
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}}">
+        Designed and flawlessly formed to fit every curve, button, and cut out.
+      </p>
+    </div>
+    <div class="swiper-container w-full center-slides">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide px-6 sm:px-0 s1">
+          <div class="w-full">
+            <picture>
+              <source data-srcset="{{'magezcase-2-i13-section7-2.png' | asset_url}}" media="(min-width: 768px)">
+              <img src="{{ placeholder_gif }}" data-src="{{'magezcase-2-i13-section7-2-s.png' | asset_url}}"
+                alt="MagEZ Case 2 for iPhone 13 Series" class="block w-full h-full lazyload  bg-gray-850">
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-slide px-6 sm:px-0 s2">
+          <div class="w-full">
+            <picture>
+              <source data-srcset="{{'magezcase-2-i13-section7-3.png' | asset_url}}" media="(min-width: 768px)">
+              <img src="{{ placeholder_gif }}" data-src="{{'magezcase-2-i13-section7-3-s.png' | asset_url}}"
+                alt="MagEZ Case 2 for iPhone 13 Series" class="block w-full h-full lazyload  bg-gray-850">
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-slide px-6 sm:px-0 s3">
+          <div class="w-full">
+            <picture>
+              <source data-srcset="{{'magezcase-2-i13-section7-1.png' | asset_url}}" media="(min-width: 768px)">
+              <img src="{{ placeholder_gif }}" data-src="{{'magezcase-2-i13-section7-1-s.png' | asset_url}}"
+                alt="MagEZ Case 2 for iPhone 13 Series" class="block w-full h-full lazyload bg-gray-850">
+            </picture>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</div>
+<div class="w-full  bg-gray-800">
+  <div class="{{wClass}} {{pdClass_b}}">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 auto-rows-fr">
+      <div>
+        <source data-srcset="{{'magezcase-2-i13-section8-1.jpg' | asset_url}}" media="(min-width: 1281px)">
+        <source data-srcset="{{'magezcase-2-i13-section8-1-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magezcase-2-i13-section8-1.jpg' | asset_url}}"
+          class="block w-full h-full object-cover lazyload">
+      </div>
+      <div>
+        <source data-srcset="{{'magezcase-2-i13-section8-2.jpg' | asset_url}}" media="(min-width: 1281px)">
+        <source data-srcset="{{'magezcase-2-i13-section8-2-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magezcase-2-i13-section8-2.jpg' | asset_url}}"
+          class="block w-full h-full object-cover lazyload">
+      </div>
+      <div>
+        <source data-srcset="{{'magezcase-2-i13-section8-3.jpg' | asset_url}}" media="(min-width: 1281px)">
+        <source data-srcset="{{'magezcase-2-i13-section8-3-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magezcase-2-i13-section8-3.jpg' | asset_url}}"
+          class="block w-full h-full object-cover lazyload">
+      </div>
+      <div>
+        <source data-srcset="{{'magezcase-2-i13-section8-4.jpg' | asset_url}}" media="(min-width: 1281px)">
+        <source data-srcset="{{'magezcase-2-i13-section8-4-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magezcase-2-i13-section8-4.jpg' | asset_url}}"
+          class="block w-full h-full object-cover lazyload">
+      </div>
+    </div>
+  </div>
+</div>
+
+{{'jquery.scrollTo.min.js' | asset_url | script_tag }}
+
+<style>
+  .section-hero {
+    min-height: 40vw;
+  }
+
+  .privy-embed-form iframe {
+    margin: 0 !important;
+    max-width: 360px !important;
+  }
+
+  #anim-case-1 {
+    left: 64%;
+    top: 40%;
+  }
+
+  @media screen and (max-width:1921px) {
+    #anim-case-1 {
+      left: 68%;
+      top: 40%;
+    }
+  }
+
+  @media screen and (max-width:1601px) {
+    #anim-case-1 {
+      left: 70%;
+      top: 40%;
+    }
+
+  }
+
+  @media screen and (max-width:1025px) {
+    #anim-case-1 {
+      left: 72%;
+      top: 40%;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    #anim-case-1 {
+      left: 68%;
+      top: 40%;
+    }
+  }
+
+  @media screen and (max-width:414px) {
+    #anim-case-1 {
+      left: 75%;
+      top: 40%;
+    }
+  }
+</style>
+
+<script>
+  $(function () {
+    $("#openSignup").on('click', function () {
+      $("#qi_pro_signup").slideDown();
+      $(window).scrollTo($("#qi_pro_signup"), 800);
+    });
+    $("#closeSignup").on('click', function () {
+      $("#qi_pro_signup").slideUp();
+      $(window).scrollTo($("#qi_pro_signup"), 500);
+    });
+
+    var controller = new ScrollMagic.Controller();
+    // build tween
+    var tween_1 = TweenMax.to("#anim-case-1", 0.5, {
+      x: -117,
+      y: 0,
+      ease: Linear.easeNone
+    });
+
+    if (window.innerWidth > 768) {
+      // build scene
+      var scene_1 = new ScrollMagic.Scene({
+          triggerElement: "#trigger_line_1",
+          duration: 300,
+          onLeave: true,
+        })
+        .setTween(tween_1)
+        .addTo(controller);
+    } else {
+      // build scene
+      var scene_1 = new ScrollMagic.Scene({
+          triggerElement: "#trigger_line_1",
+          duration: 300,
+          onLeave: true,
+        })
+        .setTween(tween_1)
+        .addTo(controller);
+    }
+  });
+</script>
+
+{{'swiper-bundle.min.css'| asset_url| stylesheet_tag }}
+{{'swiper-bundle.min.js' | asset_url | script_tag }}
+
+<style>
+  .center-slides {
+    padding-bottom: 2rem;
+  }
+
+  .center-slides .swiper-slide {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    transition: 300ms;
+    transform: scale(0.65);
+  }
+
+  /* .center-slides .swiper-slide .swiper-content{
+    opacity: 0;
+    transition: all .5s;
+  } */
+
+  .center-slides .swiper-slide-prev,
+  .center-slides .swiper-slide-duplicate-prev {
+    transform-origin: right center;
+  }
+
+  .center-slides .swiper-slide-next,
+  .center-slides .swiper-slide-duplicate-next {
+    transform-origin: left center;
+  }
+
+  .center-slides .swiper-slide-active,
+  .center-slides .swiper-slide-duplicate-active {
+    transform: scale(1);
+  }
+
+  /* .center-slides .swiper-slide-active .swiper-content,
+  .center-slides .swiper-slide-duplicate-active .swiper-content{
+    opacity: 1;
+  } */
+
+  .center-slides .swiper-slide img {
+    object-fit: cover;
+  }
+
+  .center-slides .swiper-slide-prev img,
+  .center-slides .swiper-slide-duplicate-prev img {
+    object-position: right top;
+  }
+
+  .center-slides .swiper-slide-next img,
+  .center-slides .swiper-slide-duplicate-next img {
+    object-position: left top;
+  }
+
+  .center-slides>div[role="button"] {
+    top: 45%;
+    width: 12px;
+    height: 16px;
+  }
+
+  .center-slides>div[role="button"]:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url({{'triggle_pixel.svg' | asset_url}}) no-repeat;
+    background-size: contain;
+  }
+
+  .center-slides .swiper-button-next {
+    right: 0;
+  }
+
+  .center-slides .swiper-button-prev {
+    left: 0;
+    transform: rotate(-180deg);
+  }
+
+  .center-slides .swiper-pagination-bullets {
+    display: flex;
+    justify-content: center;
+    margin: 0 -0.4rem;
+  }
+
+  .center-slides .square-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #565557;
+    display: block;
+    margin: 0 .4rem;
+  }
+
+  .center-slides .swiper-pagination-bullet-active {
+    background-color: #fff;
+  }
+
+  @media screen and (min-width:768px) {
+    .center-slides {
+      margin: 0;
+      padding-bottom: 4rem;
+    }
+
+    .center-slides>div[role="button"] {
+      top: unset;
+      bottom: 6px;
+      margin: 0;
+    }
+
+    .center-slides .swiper-button-next {
+      right: calc(50% - 153.2px);
+    }
+
+    .center-slides .swiper-button-prev {
+      left: calc(50% - 153.2px);
+    }
+  }
+</style>
+
+<style>
+  .swiper-top .swiper-button-prev:after {
+    content: '';
+    width: 50%;
+    height: 50%;
+    background: url({{'triggle_pixel.svg' | asset_url}}) no-repeat;
+    background-size: contain;
+  }
+
+  .swiper-top .swiper-button-next:after {
+    content: '';
+    width: 50%;
+    height: 50%;
+    background: url({{'triggle_pixel.svg' | asset_url}}) no-repeat;
+    background-size: contain;
+  }
+
+  .swiper-top .swiper-button-prev {
+    transform: rotate(-180deg);
+    left: 50px;
+  }
+
+  .swiper-top .swiper-button-next {
+    right: 50px;
+  }
+
+  .swiper-top .swiper-pagination-bullets {
+    display: flex;
+    justify-content: center;
+    margin: 0 -0.4rem;
+  }
+
+  .swiper-top .square-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #565557;
+    display: block;
+    margin: 0 .4rem;
+  }
+
+  .swiper-top .swiper-pagination-bullet-active {
+    background-color: #fff;
+  }
+
+  .swiper-top.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .swiper-top .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width:768px) {
+    .swiper-top .swiper-button-next {
+      right: 12px;
+    }
+
+    .swiper-top .swiper-button-prev {
+      left: 12px;
+    }
+  }
+
+  @media screen and (max-width:414) {
+    .swiper-top .swiper-button-next {
+      right: 8px;
+    }
+
+    .swiper-top .swiper-button-prev {
+      left: 8px;
+    }
+  }
+</style>
+
+
+<script>
+  var swiper_center = new Swiper('.center-slides', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    centeredSlides: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 1.5,
+        spaceBetween: 16
+      },
+      1280: {
+        slidesPerView: 1.5,
+        spaceBetween: 24
+      }
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      bulletClass: 'square-bullet',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  var swiper_top = new Swiper('.swiper-top', {
+    // direction: 'vertical',
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: {
+      delay: 3000
+    },
+    // mousewheel: true,
+    pagination: {
+      el: '.swiper-pagination2',
+      bulletClass: 'square-bullet',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next2',
+      prevEl: '.swiper-button-prev2',
+    },
+  });
+</script>

@@ -1,0 +1,373 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28' %}
+{% assign pdClass_t = 'px-3 sm:px-6 md:px-0 pt-16 sm:pt-20 lg:pt-28' %}
+{% assign titleBoxClass= 'mx-auto mb-12 w-11/12 sm:w-4/5 md:w-2/3 xl:w-2/5' %}
+{% assign titleSize = 'text-2xl md:text-3xl font-bold' %}
+{% assign descSize = 'text-sm sm:text-base text-gray-400' %}
+{% assign titleDecoMy = 'block mt-4 mb-6' %}
+{% assign absoluteContentBoxClass = 'w-full sm:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto px-6 lg:px-0 sm:transform sm:left-1/2 sm:-translate-x-1/2' %}
+
+<div class="w-full relative section-hero">
+  <div class="flex items-center sm:block absolute {{absoluteContentBoxClass}} h-full">
+    <div
+      class="mx-auto absolute text-center sm:text-left w-5/6 sm:w-2/5 xl:w-1/3 max-w-md top-4/5 left-1/2 sm:left-0 transform -translate-x-1/2 sm:translate-x-0 sm:top-2/5">
+      <h1 class="{{titleSize}} sm:text-black">
+        The first aramid fiber case for Galaxy S22 with MagSafe compatibility.
+      </h1>
+    </div>
+  </div>
+
+  <picture>
+    <source data-srcset="{{'magez-case2-s22-section-hero.jpg' | asset_url}}" media="(min-width: 1281px)">
+    <source data-srcset="{{'magez-case2-s22-section-hero-m.jpg' | asset_url}}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'magez-case2-s22-section-hero-s.jpg' | asset_url }}"
+      alt="MagEZ Case 2 for Samsung Galaxy S22 Series" class="block w-full lazyload" />
+  </picture>
+</div>
+
+<div class="{{wClass_8}} {{pdClass}}">
+  {% render 'video-set',name:'magez-case2-s22-video',no_webm:true %}
+</div>
+
+<div class="w-full swiper-container" id="base-swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <picture>
+        <source data-srcset="{{'slider-magez-case2-s22-1.jpg' | asset_url}}" media="(min-width: 1281px)">
+        <source data-srcset="{{'slider-magez-case2-s22-1-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{ 'slider-magez-case2-s22-1-s.jpg' | asset_url }}"
+          alt="MagEZ Case 2 for Samsung Galaxy S22 Series" class="block w-full lazyload" />
+      </picture>
+    </div>
+    <div class="swiper-slide">
+      <picture>
+        <source data-srcset="{{'slider-magez-case2-s22-2.jpg' | asset_url}}" media="(min-width: 1281px)">
+        <source data-srcset="{{'slider-magez-case2-s22-2-m.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{ 'slider-magez-case2-s22-2-s.jpg' | asset_url }}"
+          alt="MagEZ Case 2 for Samsung Galaxy S22 Series" class="block w-full lazyload" />
+      </picture>
+    </div>
+  </div>
+  <div class="swiper-button-prev swiper-button-white"></div>
+  <div class="swiper-button-next swiper-button-white"></div>
+</div>
+
+
+<div class="{{wClass_8}} {{pdClass}}">
+  <div class="mx-auto w-11/12 sm:w-7/10 lg:w-2/3 xl:w-1/2 text-center mb-12 lg:mb-16">
+    <h3 class="{{titleSize}}">
+      MagSafe Compatible
+    </h3>
+    <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}} mx-auto">
+    <p class="{{descSize}} mb-12">
+      Charging your Samsung phone can be a snap too. Designed with MagSafe compatibility, the case ensures a secure and
+      convenient attachment to MagSafe Charger, MagEZ Car Mount Pro, and other MagSafe accessories.
+    </p>
+  </div>
+  <div id="trigger_sec"></div>
+  <div class="pt-anim-container w-full flex flex-col sm:flex-row justify-center flex-shrink-0">
+    <div class="pt-anim-pictures mx-0 sm:mx-12 lg:mx-16 flex-shrink-0 relative mb-16 sm:mb-0">
+      <div id="trigger_line_1"></div>
+      <div class="pt-anim-item left-0 top-0 absolute" id="anim-item-1_1">
+        <img src="{{'magez-case2-s22-section4-case-1.png' | asset_url}}"
+          alt="MagEZ Case 2 for Samsung Galaxy S22 Series" class="block">
+      </div>
+      <div class="pt-anim-item opacity-0 left-0 top-0 absolute" id="anim-item-1_2">
+        <img src="{{ placeholder_gif }}" data-src="{{'magez-case2-s22-section4-case-2.png' | asset_url}}"
+          alt="MagEZ Case 2 for Samsung Galaxy S22 Series" class="block lazyload">
+      </div>
+      <img src="{{ placeholder_gif }}" data-src="{{'magez-case2-s22-section4-magsafe.png' | asset_url}}"
+        class="block lazyload">
+    </div>
+
+    <div class="pt-anim-pictures mx-0 sm:mx-12 lg:mx-16 flex-shrink-0 relative">
+      <div id="trigger_line_2"></div>
+      <div class="pt-anim-item left-0 top-0 absolute" id="anim-item-2_1">
+        <img src="{{'magez-case2-s22-section4-case-1.png' | asset_url}}"
+          alt="MagEZ Case 2 for Samsung Galaxy S22 Series" class="block">
+      </div>
+      <div class="pt-anim-item opacity-0 left-0 top-0 absolute" id="anim-item-2_2">
+        <img src="{{ placeholder_gif }}" data-src="{{'magez-case2-s22-section4-case-2.png' | asset_url}}"
+          alt="MagEZ Case 2 for Samsung Galaxy S22 Series" class="block lazyload">
+      </div>
+      <img src="{{ placeholder_gif }}" data-src="{{'magez-case2-s22-section4-mount-pro.png' | asset_url}}"
+        alt="MagEZ Car Mount Pro" class="block lazyload">
+    </div>
+  </div>
+</div>
+
+<div class="{{wClass}} {{pdClass}}">
+  <div class="{{titleBoxClass}} text-center">
+    <h3 class="{{titleSize}}">
+      Better Grip with More Comfort
+    </h3>
+  </div>
+  {% assign descs = 'Our unique vacuum forming process, 3D Grip Technology, creates a tactile, non-slip surface texture for exceptional grip and comfort. You might want to hold your phone longer this time. | Designed and flawlessly formed to fit every curve, button, and cut out. | The delicately polished edge, same height as the screen, allows you to swipe your screen as hard as you want without worrying about cutting your fingers.' %}
+  {% render 'center-slides', name:'MagEZ Case 2 for Samsung Galaxy S22 Series',picName:'center-slider-magez-case2-s22', sliderDescs:descs %}
+</div>
+
+<div class="bg-gray-800 {{pdClass}}">
+  <div class="{{wClass}} flex flex-col sm:flex-row-reverse items-center justify-between">
+    <div class="w-full sm:w-5/12 md:w-1/3">
+      <h3 class="{{titleSize}}">
+        Robust and Light
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}} max-w-sm">
+        Made from durable aramid fiber,
+        the slim and lightweight case offers protection against wear and tear without the bulk.
+      </p>
+    </div>
+    <div class="w-full mt-12 sm:mt-0 sm:w-4/8 lg:w-3/5">
+      <picture>
+        <source data-srcset="{{'magez-case2-s22-section6.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magez-case2-s22-section6-s.jpg' | asset_url}}"
+          alt="MagEZ Case 2 for Samsung Galaxy S22 Series" class="block w-full lazyload">
+      </picture>
+    </div>
+  </div>
+</div>
+
+<div class="bg-gray-800 {{pdClass}} -mt-16 sm:-mt-20 lg:-mt-28">
+  <div class="{{wClass}} flex flex-col sm:flex-row items-center justify-between">
+    <div class="w-full sm:w-5/12 md:w-1/3">
+      <h3 class="{{titleSize}}">
+        Built-in Camera Protection
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}}">
+        The raised lip and the edge protects your lenses from scratches.
+        Now you can place your phone facing up, on the table or anywhere without a worry.
+      </p>
+    </div>
+    <div class="w-full mt-12 sm:mt-0 sm:w-4/8 lg:w-3/5">
+      <picture>
+        <source data-srcset="{{'magez-case2-s22-section7.jpg' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magez-case2-s22-section7-s.jpg' | asset_url}}"
+          alt="MagEZ Case 2 for Samsung Galaxy S22 Series" class="block w-full lazyload">
+      </picture>
+    </div>
+  </div>
+</div>
+
+<div class="w-full bg-gray-800 -mt-16 sm:-mt-20 lg:-mt-28">
+  <div class="{{wClass}} {{pdClass}}">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6 sm:auto-rows-fr">
+      <picture>
+        <source data-srcset="{{'magez-case2-s22-section8-1.jpg' | asset_url}}" media="(min-width: 1280px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magez-case2-s22-section8-1-s.jpg' | asset_url}}"
+          alt="MagEZ Case 2 for Samsung Galaxy S22 Series" class="block w-full h-full object-cover lazyload">
+      </picture>
+      <picture>
+        <source data-srcset="{{'magez-case2-s22-section8-2.jpg' | asset_url}}" media="(min-width: 1280px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magez-case2-s22-section8-2-s.jpg' | asset_url}}"
+          alt="MagEZ Case 2 for Samsung Galaxy S22 Series" class="block w-full h-full object-cover lazyload">
+      </picture>
+      <picture>
+        <source data-srcset="{{'magez-case2-s22-section8-3.jpg' | asset_url}}" media="(min-width: 1280px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magez-case2-s22-section8-3-s.jpg' | asset_url}}"
+          alt="MagEZ Case 2 for Samsung Galaxy S22 Series" class="block w-full h-full object-cover lazyload">
+      </picture>
+      <picture>
+        <source data-srcset="{{'magez-case2-s22-section8-4.jpg' | asset_url}}" media="(min-width: 1280px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'magez-case2-s22-section8-4-s.jpg' | asset_url}}"
+          alt="MagEZ Case 2 for Samsung Galaxy S22 Series" class="block w-full h-full object-cover lazyload">
+      </picture>
+    </div>
+  </div>
+</div>
+
+<style>
+  .section-hero {
+    min-height: 50vh;
+  }
+
+  #base-swiper>div[role="button"] {
+    top: 45%;
+    width: 12px;
+    height: 16px;
+  }
+
+  #base-swiper>div[role="button"]:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url({{'triggle_pixel.svg' | asset_url}}) no-repeat;
+    background-size: contain;
+  }
+
+  #base-swiper .swiper-button-prev {
+    left: 32px;
+    transform: rotate(-180deg);
+  }
+
+  #base-swiper .swiper-button-next {
+    right: 32px;
+  }
+
+  @media screen and (min-width:1025px) {
+    #base-swiper .swiper-button-prev {
+      left: 64px;
+    }
+
+    #base-swiper .swiper-button-next {
+      right: 64px;
+    }
+  }
+</style>
+
+<!-- anim-pictures -->
+<style>
+  .pt-anim-pictures {
+    width: 420px;
+  }
+
+  #anim-item-1_1,
+  #anim-item-2_1,
+  #anim-item-1_2,
+  #anim-item-2_2 {
+    transform: translate(-150px, -40px);
+  }
+
+  @media screen and (max-width: 1280px) {
+    .pt-anim-container {
+      width: unset;
+      transform: scale(0.85);
+      transform-origin: bottom center;
+      margin-top: -8%;
+      margin-bottom: -8%;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .pt-anim-container {
+      transform: scale(0.75);
+      margin-top: -12%;
+      margin-bottom: -5%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .pt-anim-container {
+      transform: scale(0.65);
+      margin-top: -25%;
+      margin-bottom: -10%;
+    }
+  }
+
+  @media screen and (max-width: 414px) {
+    .pt-anim-container {
+      transform: scale(0.65);
+      margin-top: -110%;
+      margin-bottom: -20%;
+    }
+  }
+</style>
+
+{{ "TweenMax.min.js" | asset_url | script_tag }}
+{{ "ScrollMagic.js" | asset_url | script_tag }}
+{{ "animation.gsap.min.js" | asset_url | script_tag }}
+<script>
+  $(document).ready(function () {
+    var base_swiper = new Swiper('#base-swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        stopOnLastSlide: false,
+        disableOnInteraction: true
+      },
+      observer: true,
+      observeParents: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+
+    var controller = new ScrollMagic.Controller();
+    var tl_1 = new TimelineLite();
+    var tl_2 = new TimelineLite();
+
+    tl_1.to("#anim-item-1_1", 1, {
+        x: 0,
+        y: 0,
+        ease: Circ.easeIn
+      })
+      .to("#anim-item-1_2", 1, {
+        x: 0,
+        y: 0,
+        ease: Circ.easeIn
+      }, '-=1')
+
+      .to("#anim-item-1_2", 0.001, {
+        opacity: 1,
+        ease: Linear.easeNone
+      });
+
+    tl_2.to("#anim-item-2_1", 1, {
+        x: 0,
+        y: 0,
+        ease: Circ.easeIn
+      })
+      .to("#anim-item-2_2", 1, {
+        x: 0,
+        y: 0,
+        ease: Circ.easeIn
+      }, '-=1')
+      .to("#anim-item-2_2", 0.001, {
+        opacity: 1,
+        ease: Linear.easeNone
+      });
+
+    if (window.innerWidth >= 768) {
+      var scene_toggle = new ScrollMagic.Scene({
+          triggerElement: "#trigger_sec",
+          onLeave: true
+        })
+        .on('enter leave', function (e) {
+          // console.log(e.type)
+          if (e.type == "enter") {
+            tl_1.play();
+            tl_2.play();
+          } else {
+            tl_1.reverse();
+            tl_2.reverse();
+          }
+        })
+        .addTo(controller)
+    } else {
+      var scene_1 = new ScrollMagic.Scene({
+          triggerElement: "#trigger_line_1",
+          duration: 300,
+          onLeave: true,
+        })
+        .on('enter leave', function (e) {
+          if (e.type == "enter") {
+            tl_1.play();
+          } else {
+            tl_1.reverse();
+          }
+        })
+        .addTo(controller);
+      var scene_2 = new ScrollMagic.Scene({
+          triggerElement: "#trigger_line_2",
+          duration: 300,
+          onLeave: true,
+        })
+        .on('enter leave', function (e) {
+          if (e.type == "enter") {
+            tl_2.play();
+          } else {
+            tl_2.reverse();
+          }
+        })
+        .addTo(controller);
+    }
+  })
+</script>

@@ -1,0 +1,865 @@
+<div id="hiddenProductId" style="display:none;" data-product-id="{{product.id}}"></div>
+
+<div itemscope itemtype="http://schema.org/Product">
+  
+
+  {% assign first_variant = product.variants | first %}
+  {% assign featured_image = first_variant.image | default: product.featured_image %}
+  {% assign variant_image = product.selected_or_first_available_variant.image | default: product.featured_image %}
+
+  <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+  <meta itemprop="image" content="{{ featured_image.src | img_url: 'grande' }}">
+  <div class="flex flex-col laptop:flex-row justify-center pb-20 sm:pb-40 laptop:pb-28 px-6 lg:px-0 relative"
+       id="main-wrapper" itemprop="product_content">
+
+    <div class="w-full my-6 sm:mt-6 sm:mb-12 laptop:my-0 laptop:w-5/12 xl:w-4/12 laptop:pr-6 laptop:absolute info-left"
+         id="product-pictures">
+      <div class="breadcrumb w-full py-12 flex items-center">
+        <a class="navLink block text-sm 2xl:text-base text-gray-400 hover:text-white leading-tight mr-4 pr-8 bg-right bg-no-repeat"
+          href="/">Home</a>
+        {% if collections[product.handle].id != '' %}
+          <a class="navLink block text-sm 2xl:text-base text-gray-400 hover:text-white leading-tight mr-4 pr-8 bg-right bg-no-repeat"
+            href="{{product.handle | prepend: '/collections/'}}">Product Details</a>
+        {% endif %}
+      </div>
+
+      <div class="product_detail_photos hidden laptop:block">
+        <div class='show-iframe' style='display:none;'>
+          <iframe id="popup-youtube-player" class='toggle_source' width="980" height="980"></iframe>
+        </div>
+        <div class="product-single__photos featured-image-div" id="ProductPhoto">
+          {% if product.handle contains 'customize-magez-wallet' %}
+          <div id="qstomizerImages" data-imagewidth="600"></div>
+          {% else %}
+          <img src="{{ placeholder_gif }}" data-src="{{ variant_image | img_url: '980x980' }}" class="block w-full lazyload"
+               alt="{{ variant_image.alt | escape }}" id="ProductPhotoImg" 
+               data-image-id="{{ variant_image.id }}" />
+
+          {% endif %}
+        </div>
+      </div>
+      {% assign placeholder_gif = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' %}
+      <div class="swiper-container product_sub_photos mt-6">
+        <div class="swiper-wrapper" id="ProductThumbs">
+          {% for image in product.images %}
+            {% assign image_variant_ids = '' %}
+
+            {% for item_variant in image.variants %}
+              {% if forloop.last %}
+                {% assign image_variant_ids = image_variant_ids | append: item_variant.id  %}
+              {% else %}
+                {% assign image_variant_ids = image_variant_ids | append: item_variant.id | append: ',' %}
+              {% endif %}
+            {% endfor %}
+
+            <div class="swiper-slide thumbnail-item" data-variant-id="{{ image_variant_ids }}">
+              <a data-image-id="{{ image.id }}" href="javascript:void(0)"
+                data-image="{{ image.src | img_url: '980x980' }}" data-source='{{ image.alt }}'
+                class="block hover:opacity-100 product-single__thumbnail {% if image.alt contains 'youtube' %}embed-youtube{% else %}show-img{% endif %}">
+                <img src="{{ placeholder_gif }}" data-src="{{ image.src | img_url: '980x980' }}" class="block w-full lazyload" alt="{{ image.alt | escape }}" />
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+      </div>
+
+      <ul class="gallery hidden">
+        {% for image in product.images %}
+        <li data-image-id="{{ image.id }}" class="gallery__item" data-mfp-src="{{ image | img_url: '720x720' }}">
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="w-full laptop:w-5/12 lg:w-4/12 xl:w-3/12 laptop:pl-12 info-right pt-24">
+
+      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="product_detail_form">
+        {% assign variant = product.selected_or_first_available_variant %}
+        <meta itemprop="priceCurrency" content="{{ shop.currency }}">
+        <link itemprop="availability"
+              href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
+
+        <div class="product_content-title border-b border-gray-400 border-solid mb-6" itemprop="name">
+          {% capture collection_url %}
+            {% if collections[product.handle].id != '' %}
+              {{ product.handle | prepend: '/collections/' }}
+            {%else%}
+          	  javascript:;
+          	{% endif %}
+          {%endcapture%}
+          
+          {% if product.handle contains 'for' and product.handle contains 'case' %}
+
+          {% if product.handle == 'magez-case-for-iphone-12' %}
+          <div class="content-variant" name="iphone_12">
+            <h1 class="text-2xl md:text-3xl font-bold">
+              <a class="cursor-pointer hover:opacity-100" href="/collections/magez-case-for-iphone-12">
+                MagEZ Case<br />
+                <span class="text-base">
+                  For iPhone 12 mini/12/12 Pro/12 Pro Max
+                </span>
+              </a>
+            </h1>
+          </div>
+          <div class="content-variant hidden" name="card_sleeve">
+            <h1 class="text-2xl md:text-3xl font-bold">
+              <a class="cursor-pointer hover:opacity-100" href="/collections/magez-card-sleeve">
+             	 MagEZ Card Sleeve 2
+              </a>
+            </h1>
+          </div>
+          {% elsif product.handle == 'magez-case-2-for-iphone-13' %}
+          <div class="content-variant" name="iphone_13">
+            <h1 class="text-2xl md:text-3xl font-bold">
+              <a class="cursor-pointer hover:opacity-100" href="/collections/magez-case-2-for-iphone-13">
+                MagEZ Case 2<br />
+                <span class="text-base">
+                  For iPhone 13 mini/13/13 Pro/13 Pro Max
+                </span>
+              </a>
+            </h1>
+          </div>
+          <div class="content-variant hidden" name="card_sleeve">
+            <h1 class="text-2xl md:text-3xl font-bold">
+              <a class="cursor-pointer hover:opacity-100" href="/collections/magez-card-sleeve-3">
+              	MagEZ Card Sleeve 3
+              </a>
+            </h1>
+          </div>
+          {% elsif product.handle contains 'fusion-weaving' %}
+          {% assign title_parts = product.title | split: ' for ' %}
+          <h1 class="text-xl md:text-2xl font-bold">
+            <a class="cursor-pointer hover:opacity-100" href="{{collection_url}}">
+              {{ title_parts[0] }}<br />
+              <span class="text-base">
+                For {{ title_parts[1] }}
+              </span>
+            </a>
+          </h1>
+          {% else %}
+          {% assign title_parts = product.title | split: ' for ' %}
+          <h1 class="text-2xl md:text-3xl font-bold">
+            <a class="cursor-pointer hover:opacity-100" href="{{collection_url}}">
+              {{ title_parts[0] }}<br />
+              <span class="text-base">
+                {% if product.handle contains 'ipad-pro' %}
+                For {{ title_parts[1] }}
+                {% else %}
+                For {{ title_parts[1] | replace: ' & ', '/' }}
+                {% endif %}
+              </span>
+            </a>
+          </h1>
+          {% endif %}
+          {% else %}
+          <h1 class="text-2xl md:text-3xl font-bold">
+            <a class="cursor-pointer hover:opacity-100" href="{{collection_url}}">
+              {% if product.handle == 'magez-folio' %}
+              {% assign title_parts = product.title | split: ' for ' %}
+              {{ title_parts[0] }}<br />
+              <span class="text-base">
+                For {{ title_parts[1] }}
+              </span>
+              {% elsif product.handle contains 'power-dongle' 
+                  or product.handle == 'air-pal-shells-for-airpods-max' 
+                  or product.handle == 'magez-charging-stand' 
+              %}
+              {% assign title_parts = product.title | split: ' for ' %}
+              {{ title_parts[0] }}<br />
+              <span class="text-xl md:text-2xl">
+                For {{ title_parts[1] }}
+              </span>
+              {% elsif product.handle == 'magez-mount-qi' or  product.handle == 'pitaka-magez-mount-qi' %}
+              MagEZ Mount Qi
+              {% elsif product.handle == "magez-juice" or product.handle == "pitaka-magez-juice" %}
+              MagEZ Juice<br />
+              <span class="text-base">Portable Power Bank + Wireless Charging Dock</span>
+              {% elsif product.handle == "magez-juice-2" %}
+              MagEZ Juice 2<br />
+              <span class="text-base">A MagSafe Compatible Wireless Charging Stand</span>
+              {% elsif product.handle == "magez-stand-marble-version" %}
+              MagEZ Stand for Tablets
+              <span class="block text-xl md:text-2xl mt-2">(Marble&nbsp;Version)</span>
+              {% elsif product.handle contains 'wallet' %}
+              {% if product.handle == 'magez-wallet-ue' %}
+              MagEZ Wallet UE<br />
+              <span class="text-base">
+                RFID-Blocking Wallet
+              </span>
+              {% elsif product.handle == 'magez-wallet' %}
+              MagEZ Wallet<br />
+              <span class="text-base">
+                RFID-Blocking Wallet
+                <span class="text-cyan font-normal">(for chip cards only)</span>
+              </span>
+              {% else %}
+              {{product.title}}
+              {% endif %}
+              {% elsif product.handle == 'magez-power-bank' %}
+              MagEZ Power Bank <span class="text-base text-cyan font-normal">(Limited Edition)</span>
+              {% elsif product.handle == 'tempered-glass' %}
+              Tempered Glass
+              {% elsif product.handle == 'c-to-c-charging-cable' %}
+              C to C Charging Cable (3ft/1m)
+              {% elsif product.handle == 'a-c-cable' %}
+              A-C Cable
+              {% elsif product.handle == 'smart-car-charger-adapter' %}
+              36W PD &amp; QC Car Adapter
+              {% elsif product.handle == 'magez-wireless-charging-kit' %}
+              <span class="text-xl md:text-2xl">
+                {% assign title_parts = product.title | split: ' & ' %}
+                {{ title_parts[0] }}<br />
+                & {{ title_parts[1] }}
+              </span>
+
+              {% else %}
+              {{ product.title }}
+              {% endif %}
+            </a>
+          </h1>
+          {% endif %}
+        </div>
+
+        <div class="product_content-prices flex items-center justify-between">
+          <div class="product-single__prices text-lg md:text-xl text-gray-400">
+            <span id="ProductPrice" class="text-white text-xl md:text-2xl" itemprop="price"
+                  content="{{ variant.price | money_without_currency | remove: ',' }}">
+              {{ variant.price | money }}
+            </span>
+            {% if variant.compare_at_price > variant.price %}
+            <span id="ComparePrice" class="line-through sm:ml-2">
+              {{ variant.compare_at_price | money }}
+            </span>
+            {% endif %}
+          </div>
+
+          <div class="yotpo-reviews-stars ml-4">
+            <div class="yotpo bottomLine" data-appkey="j1blj6TlfDCoOKkflErQWd5DDUoq2RdHIFub5Ug7"
+                 data-domain="{{shop.permanent_domain | escape }}" data-product-id="{{ product.id }}"
+                 data-product-models="{{ product.id }}" data-name="{{ product.title | escape }}"
+                 data-url="{{ shop.url }}{{ product.url }}"
+                 data-image-url="{{ product.featured_image | product_img_url: 'large' |replace: '?', '%3F' | replace: '&','%26'}}"
+                 data-description="{{ product.description | escape }}"
+                 data-bread-crumbs="{% for tag in product.tags %}{{ tag | escape }};{% endfor %}">
+            </div>
+          </div>
+        </div>
+
+        <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm" class="pt-8 sm:pt-12">
+          {% if customer %}
+          {% for tag in customer.tags %}
+          {% if customer.tags contains 'VIP' %}
+          <input id="vipuser" type="hidden" name="properties[_vipuser]" value="VIPuser">
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+
+          <div id="qstomizerData"></div>
+
+          <select name="id" id="productSelect" class="product-single__variants hidden">
+            {% for variant in product.variants %}
+            <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+            {% endfor %}
+            <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+          </select>
+
+          {% if product.available and product.variants.size > 1 %}
+          {% for option in product.options %}
+          {% render 'swatch' with option %}
+          {% endfor %}
+          {% endif %}
+
+
+          <div class="clearfix preordernotice">
+
+            {% if product.handle == 'aramid-case-for-iphone-7-and-7-plus-us-only' 
+              or product.handle == 'aramid-case-for-iphone-7-and-7-plus-au-only' 
+            or product.handle == 'aramid-case-for-iphone-7-and-7-plus-eu-only' %}
+            <p class="text-sm text-cyan">
+              Every customer is only qualified to get One aramid case with a Random color.
+            </p>
+            {% elsif product.handle == 'magez-mount-qi-magez-case' 
+                  or product.handle == 'magez-mount-qi-magez-case-36w-pd-qc-car-charger' %}
+            <p class="text-sm text-cyan">
+              Notice: Please Add A Note to Order if You Want An Other Color for The MagEZ Case.
+            </p>
+            {% elsif product.handle == 'air-case-for-iphone-11' %}
+            <p class="text-sm text-cyan">
+              Notice: No metal plates embedded. Not compatible with MagEZ Mount Qi, MagEZ Bar, MagEZ Juice.
+            </p>
+            {% elsif product.handle == 'magez-card-sleeve' %}
+            <p class="text-sm text-cyan">
+              Notice: Compatible with iPhone 12 Series, MagEZ Case Series, and other phone cases with MagSafe.
+            </p>
+            {% elsif product.handle == 'air-case-for-samsung-galaxy-s20' %}
+            <p class="text-sm text-cyan">
+              Notice: No metal plates embedded and not compatible with MagEZ series wireless chargers.
+            </p>
+            {% elsif product.handle == 'magez-case-for-ipad-pro' %}
+            <p class="text-sm text-cyan">
+              MagEZ Case for iPad Pro 2018 &amp; 2020 is not compatible with iPad Pro 2021.<br />
+              <a class="text-cyan" href="/products/magez-case-2-for-ipad-pro-2021"
+                 style="border-bottom:1px solid #0bbcd4;">Click here for MagEZ Case 2 for iPad Pro 2021.</a>
+            </p>
+
+            {% elsif product.handle == 'magez-juice-2' %}
+            <p class="text-sm text-cyan">
+              Shipping Notice: Due to some restrictions on shipping batteries,
+              we are unable to ship MagEZ Juice 2 to the
+              <a class="underline" href="/pages/shipping-warranty#unableship">following countries and Regions</a>.
+            </p>
+            {% elsif product.handle == 'air-omni' %}
+            <p class="text-2s sm:text-sm text-cyan">
+              Note:You need to install your own watch charger on Air Omni Lite.
+            </p>
+            {% elsif product.handle == 'magez-case-pro-for-ipad-mini-6' %}
+            <p class="text-xs sm:text-2s text-cyan">
+              Note: The MagEZ Case Pro comes with a Pita!Flow Charger. 
+              If you want additional chargers to charge your tablet anywhere, please add Pita!Flow Charger to your cart.
+            </p>
+            {%- comment -%}
+            {% elsif product.handle == 'magez-car-mount-pro' %}
+            <p class="text-sm text-cyan">
+              Note: The color of the MagEZ Case 2 is Black/Grey Twill by default.
+            </p>
+            {%- endcomment -%}
+            {% endif %}
+          </div>
+
+          <div class="product-cart width-full mt-4 mb-6">
+
+            <div class="flex justify-between items-center mb-6">
+              <h4 class="text-xs font-bold m-0">Quantity:</h4>
+              <div
+                   class="product-single__quantity{% unless settings.product_quantity_enable %} is-hidden{% endunless %}">
+                <div class="number-box flex items-center text-xs">
+                  <input type="button" class="on-number" data-v="-1" value="-" disabled>
+                  <input id="Quantity" name="quantity" type="text" value="1" data-min="1"
+                         data-max="{% if variant.inventory_policy == 'continue' %}999{% else %}{{ variant.inventory_quantity }}{% endif %}">
+                  <input type="button" class="on-number" data-v="1" value="+">
+                </div>
+
+              </div>
+            </div>
+
+            {% if product.handle == 'magez-slider' %}
+            <!--  Spice Product Addons Snippet Starts -->
+            <div id="spiceaddonsappid">{% assign product_collections = product.collections | map: "id" %}{% if product_collections %}<input type="hidden" id="sgcollections" value="{{ product_collections | join: ',' }}"/>{% endif %}</div>
+            <!--   Spice Product Addons Snippet ends  -->
+            {% endif %}
+
+            {% render 'shappify-sales-clock' %}
+            <div class="w-full">
+              {% comment %}
+              {% if product.available and product.handle contains 'iphone-13' %}
+              <div class="text-right mb-3" id="discountCode">
+                <p class="leading-tight text-sm">
+                  Save 10% For 72 Hours Only<br>With Discount Code:
+                  <span class="text-base text-cyan font-semibold">PITAKA13</span>
+                </p>
+              </div>
+              {% endif %}
+              {% endcomment %}
+              
+              
+              <div class="addtocartbtn">
+                {% assign product_tags = product.tags %}
+                {% if product_tags contains 'vip_only' %}
+                  {% if customer %}
+                    {% assign customer_tags = customer.tags %}
+                    {% if customer_tags contains 'vip' %}
+                      <button type="submit" name="add" class="AddToCart">
+                        <span class="AddToCartText text-base uppercase font-normal" 
+                          text="{{ 'products.product.add_to_cart' | t }}">
+                          {{ 'products.product.add_to_cart' | t }}
+                        </span>
+                      </button>
+                    {% else %} 
+                      <button type="submit" name="add" class="AddToCart disabled" disabled>
+                        <span class="AddToCartText text-sm uppercase font-normal" data-type="vip_only" 
+                          text="For PITAKA ASI members only">
+                          For PITAKA ASI members only
+                        </span>
+                      </button>
+                      
+                      <div class="flex justify-end my-2 text-sm sm:text-base link_to_vip">
+                        <a href="/account/login" class="block text-xs sm:text-sm text-cyan text-right">
+                          How to be ASI?
+                        </a>
+                      </div>
+                    {% endif %}
+                  {% else %}
+                	<button type="submit" name="add"class="AddToCart disabled" disabled>
+                      <span class="AddToCartText text-base uppercase font-normal" data-type="vip_only" 
+                        text="For PITAKA ASI members only">
+                        For PITAKA ASI members only
+                      </span>
+                	</button>
+                      
+                    <div class="flex justify-between my-2 text-sm sm:text-base link_to_vip">
+                      <a href="/account/register" class="block text-xs sm:text-sm text-cyan">
+                        Not a member? Join now.
+                      </a>
+                      <a href="/account/login" class="block text-cyan text-xs sm:text-sm text-right">
+                        Login to purchase
+                      </a>
+                    </div>
+                  {% endif %}
+                  
+                {% else %}
+                  {% if product.available %}
+                    <button type="submit" name="add" class="AddToCart">
+                      <span class="AddToCartText text-base uppercase font-normal" 
+                        text="{{ 'products.product.add_to_cart' | t }}">
+                        {{ 'products.product.add_to_cart' | t }}
+                      </span>
+                    </button>
+                  {% else %}
+                    <button type="submit" name="add" class="AddToCart disabled" disabled>
+                      <span class="AddToCartText text-base uppercase font-normal" 
+                        text="{{ 'products.product.unavailable' | t }}">
+                        {{ 'products.product.unavailable' | t }}
+                      </span>
+                    </button>  
+                  {% endif %}
+
+                  {% comment %}
+                  {% if product.handle contains 'magez-wallet' %}
+                  <!-- Qstomizer button -->
+                  {% if product.content contains 'QSMZ_button' %}
+                    {% assign trozos = product.content | split: 'QSMZ_button_' %}
+                    {% if product.handle == 'magez-wallet-2' %}
+                      <input type="button" value="Customize It!" id="gotoDesigner" class="text-base uppercase font-normal"
+                        onClick="javascript:location.href = '{{settings.qstomizer2_href}}'">
+                    {% endif %}
+                    {% if product.handle == 'magez-wallet-ue' %}
+                      <input type="button" value="Customize It!" id="gotoDesigner" class="text-base uppercase font-normal"
+                        onClick="javascript:location.href = '{{settings.qstomizerue_href}}'">
+                    {% endif %}
+                    {% if product.handle == 'magez-wallet' %}
+                      <input type="button" value="Customize It!" id="gotoDesigner" class="text-base uppercase font-normal"
+                        onClick="javascript:location.href = '{{settings.qstomizer_href}}'">
+                    {% endif %}
+                  {% endif %}
+                  <!-- Qstomizer button -->
+                  {% endif %}
+                  {% endcomment %}
+                {% endif %}
+              </div>
+              
+              
+            </div>
+            
+            {% if product.available %}
+              {% unless variant.available %}
+                <a href="#" id="BIS_trigger" class="block text-sm text-cyan text-center mt-6"
+                   data-variant-id="{{ variant.id }}">EMAIL ME WHEN IT IS AVAILABLE</a>
+              {%endunless%}
+            {% else %}
+              {% assign first_variant = product.variants | first %}
+              <a href="#" id="BIS_trigger" class="block text-sm text-cyan text-center mt-6"
+                 data-variant-id="{{ first_variant.id }}">EMAIL ME WHEN IT IS AVAILABLE</a>
+            {% endif %}
+          </div>
+          
+        </form>
+      </div>
+
+      <div class="bundle-discount">
+        <div class="aiod-bundle-discount-wrap"></div>
+      </div>
+
+      <div class="product_content-detail mt-14">
+        {% render 'product-desc-info', base_handle: product.handle  %}
+
+        <div class="accordion menu mt-12">
+          <div class="item">
+            <h2 class="title active font-bold text-base border-b border-solid border-gray-400 py-2 flex justify-between items-center">
+              Compatibility
+              <i class="dropdown icon">
+                <img src="{{'triggle_pixel.svg' | asset_url }}" alt="Compatibility" class="block">
+              </i>
+            </h2>
+            <div class="content active py-8 border-b border-solid border-gray-400">
+              {% render 'product-compatibility-info', base_handle: product.handle, product_title: product.title  %}
+            </div>
+          </div>
+          <div class="item mt-6">
+            <h2 class="title font-bold text-base border-b border-solid border-gray-400 py-2 flex justify-between items-center">
+              Specs
+              <i class="dropdown icon">
+                <img src="{{'triggle_pixel.svg' | asset_url }}" alt="Compatibility" class="block">
+              </i>
+            </h2>
+            <div class="content py-8 border-b border-solid border-gray-400">
+              {% render 'product-specs-info', base_handle: product.handle, product_title: product.title  %}
+            </div>
+          </div>
+          <div class="item mt-6">
+            <h2 class="title font-bold text-base border-b border-solid border-gray-400 py-2 flex justify-between items-center">
+              FAQs
+              <i class="dropdown icon">
+                <img src="{{'triggle_pixel.svg' | asset_url }}" alt="Compatibility" class="block">
+              </i>
+            </h2>
+            <div class="content py-8 border-b border-solid border-gray-400">
+              {% render 'product-faqs-info', base_handle: product.handle  %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {%comment%}
+  {% if product.handle contains 'fusion-weaving' %}
+  {% capture campaign_id %}
+  {% if shop.domain == 'eu.ipitaka.com' %}
+  2885961,2885956
+  {% elsif shop.domain == 'global.ipitaka.com' %}
+  2887184,2885859
+  {% else %}
+  2885964,2885963
+  {% endif %}
+  {% endcapture %}
+  <style>
+    .privy-embed-form iframe {
+      max-width: 80% !important;
+      width: 330px !important;
+      margin: 0 !important;
+    }
+
+    @media screen and (max-width:1023px) {
+      .privy-embed-form iframe {
+        margin: 0 auto !important;
+      }
+    }
+
+    @media screen and (max-width:414px) {
+      .privy-embed-form iframe {
+        max-width: 100% !important;
+        transform: scale(0.85);
+        transform-origin: top center;
+      }
+    }
+  </style>
+
+  <div class="w-full relative">
+    <div
+         class="w-full mx-auto laptop:w-11/12 lg:w-10/12 xl:w-8/12 px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2">
+      <div
+           class="absolute transform w-11/12 sm:w-2/3 text-center laptop:text-left laptop:w-1/2 lg:w-2/5 top-12 sm:top-24 left-1/2 -translate-x-1/2 laptop:left-0 laptop:-translate-x-0 laptop:pt-12 laptop:top-1/2 laptop:-translate-y-1/2">
+        <h1 class="text-2xl sm:text-3xl mb-4 sm:mb-6 font-bold">Fusion Weaving™ Gift Box</h1>
+        <p class="text-sm sm:text-base mb-4 sm:mb-6 text-gray-400">
+          Indulge yourself or treat your friends with the classic black & grey twill case plus four beautiful Fusion Weaving™ cases.
+          Leave your email address to get notified when it’s available.
+        </p>
+        {% if product.handle contains 'magez' %}
+        <div class="privy-embed-form w-full" data-campaign="{{campaign_id | split: ',' | first}}"></div>
+        {% else %}
+        <div class="privy-embed-form w-full" data-campaign="{{campaign_id | split: ',' | last}}"></div>
+        {% endif %}
+      </div>
+    </div>
+    {% if product.handle contains 'magez' %}
+    <picture>
+      <source data-srcset="{{'product-magez-signup-fusion-weaving-box.jpg' | asset_url}}" media="(min-width: 1280px)">
+      <source data-srcset="{{'product-magez-signup-fusion-weaving-box-m.jpg' | asset_url}}" media="(min-width: 1024px)">
+      <img src="{{ placeholder_gif }}" data-src="{{'product-magez-signup-fusion-weaving-box-s.jpg' | asset_url}}"
+           alt="Fusion Weaving MagEZ Case 2 Gift Box" class="block w-full object-cover lazyload"
+           style="max-height: 1024px;">
+    </picture>
+    {% else %}
+    <picture>
+      <source data-srcset="{{'product-air-signup-fusion-weaving-box.jpg' | asset_url}}" media="(min-width: 1280px)">
+      <source data-srcset="{{'product-air-signup-fusion-weaving-box-m.jpg' | asset_url}}" media="(min-width: 1024px)">
+      <img src="{{ placeholder_gif }}" data-src="{{'product-air-signup-fusion-weaving-box-s.jpg' | asset_url}}"
+           alt="Fusion Weaving Air Case Gift Box" class="block w-full object-cover lazyload" style="max-height: 1024px;">
+    </picture>
+    {% endif %}
+  </div>
+  {% endif %}
+  {%endcomment%}
+
+  <div class="bg-gray-800 paired-container">
+    {% if product.handle contains  '-case-' %}
+    {% assign handle_type = product.handle | split: '-for-' | first %}
+    {% assign original_handle = product.handle | split: '-for-' | last | remove: 'samsung-' | remove: 'google-' | replace: 'pro-2020-and-2018', '2020' %}
+    {% else %}
+    {% assign handle_type = 'others' %}
+    {% assign original_handle = product.handle | remove: 'magez-' | remove: 'air-' | remove: 'for-airpods-' | remove: '-for-apple-watch' %}
+    {% endif %}
+
+
+    <div class="w-full laptop:w-11/12 lg:w-10/12 xl:w-9/12 max-w-screen-xl laptop:mx-auto px-6 laptop:px-0 pt-20 pb-10 sm:py-28">
+      <div class="mx-auto text-center mb-12 sm:mb-16 md:mb-12 w-full sm:w-4/5 md:w-2/3 xl:w-2/5">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-6 sm:mb-10 md:mb-6 leading-tight">
+          You may also like
+        </h2>
+      </div>
+      <div class="multiple-slider swiper-container">
+        <div class="swiper-wrapper">
+          {% assign list = 'carbon-fiber-watch-band,air-omni,magez-wallet' | split: ',' %}
+
+          {% for lineData in settings.paired_data[handle_type] %}
+          {% assign data_l = lineData | split: '--' | first %}
+          {% if original_handle == data_l %}
+          {% assign list  =  lineData | split: '--' | last | split: ',' %}
+          {% break %}
+          {% endif %}
+          {% endfor %}
+
+          {% for handle in list %}
+          {% assign paired_product = all_products[handle] %}
+          {% if paired_product.id != '' and paired_product.available %}
+          <div class="swiper-slide">
+            {% render 'grid-product-item-hover', product: paired_product, bgColor: 820, flex_between:true %}
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="reviews" class="w-full px-6 lg:px-0 laptop:w-11/12 lg:w-10/12 xl:w-8/12 mx-auto py-16 sm:py-20 sm:py-28">
+    {%- comment -%}
+    {% if product.metafields.yotpo.reviews_count and product.metafields.yotpo.reviews_count != "0" %}
+    <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+      <span itemprop="itemReviewed">{{ product.title }}</span>
+      has a rating of <span itemprop="ratingValue">{{ product.metafields.yotpo.reviews_average }}</span> stars
+      based on <span itemprop="ratingCount">{{ product.metafields.yotpo.reviews_count }}</span> reviews.
+    </div>
+    {% endif %}
+    {%- endcomment -%}
+    {% if product.handle == 'magez-case-for-iphone-12' or product.handle == 'magez-case-2-for-iphone-13'  %}
+    <div class="content-variant" {% if product.handle == 'magez-case-for-iphone-12' %} name="iphone_12" {% else %}
+         name="iphone_13" {% endif %}>
+      <!-- yotpo -->
+      <div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}"
+           data-url="{{ shop.url }}{{ product.url }}"
+           data-image-url="{{ featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}"
+           data-description="{{ product.description | escape }}">
+      </div>
+    </div>
+    <div class="content-variant hidden" name="card_sleeve">
+      {% assign cardSleeve = all_products['magez-card-sleeve'] %}
+      <!-- yotpo -->
+      <div class="yotpo yotpo-main-widget" data-product-id="{{ cardSleeve.id }}"
+           data-name="{{ cardSleeve.title | escape }}" data-url="{{ shop.url }}{{ cardSleeve.url }}"
+           data-image-url="{{ cardSleeve.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}"
+           data-description="{{ cardSleeve.description | escape }}">
+      </div>
+    </div>
+    {% else %}
+    <!-- yotpo -->
+    <div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}"
+         data-url="{{ shop.url }}{{ product.url }}"
+         data-image-url="{{ featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}"
+         data-description="{{ product.description | escape }}">
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .info-left {
+    left: unset;
+  }
+
+  .info-right {
+    margin-left: 0;
+  }
+
+  .accordion .title {
+    cursor: pointer;
+  }
+
+  .accordion .title~.content {
+    display: none;
+  }
+
+  .accordion .title .icon {
+    width: 16px;
+    height: 16px;
+    transition: all .3s;
+  }
+
+  .accordion .title.active .icon {
+    transform: rotate(90deg)
+  }
+
+  .accordion .active.content {
+    display: block;
+  }
+
+  @media screen and (min-width:1024px) {
+    .info-left {
+      left:8.33333%;
+    }
+
+    .info-right {
+      margin-left: 41.66667%;
+    }
+  }
+
+  @media screen and (min-width:1280px) {
+    .info-left {
+      left: 12.5%;
+    }
+
+    .info-right {
+      margin-left: 41.66667%;
+    }
+  }
+
+  @media screen and (min-width:1596px) {
+    .info-left {
+      left: 20.83333%;
+    }
+
+    .info-right {
+      margin-left: 33.33333%;
+    }
+  }
+</style>
+
+<style>
+  .multiple-slider .swiper-slide {
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .multiple-slider .swiper-button-next,
+  .multiple-slider .swiper-button-prev {
+    margin: 0;
+    width: 12px;
+    height: 16px;
+    display: block;
+  }
+
+  .multiple-slider .swiper-button-next:after,
+  .multiple-slider .swiper-button-prev:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url({{'triggle_pixel.svg' | asset_url}}) no-repeat;
+    background-size: contain;
+  }
+
+  .multiple-slider .swiper-button-next {
+    right: 0;
+  }
+
+  .multiple-slider .swiper-button-prev {
+    left: 0;
+    transform: rotate(-180deg);
+  }
+
+  @media screen and (min-width:768px) {
+    .multiple-slider {
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+      padding: 0 1.5rem;
+      /* width: calc(100% - 3rem); */
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (min-width:1025px) {
+
+    .multiple-slider .swiper-button-next,
+    .multiple-slider .swiper-button-prev {
+      display: none !important;
+    }
+  }
+
+  @media screen and (min-width:1280px) {
+    .multiple-slider {
+      width: 100%;
+    }
+  }
+
+  .csapp-select-option-selector,
+  .cs_single_op_selector {
+    color: #333 !important
+  }
+
+  .csapps-bunlde-wrapper {
+    background: #2c2c2c !important
+  }
+
+  .csapps-bunlde-tiers .csapps-error p {
+    color: #ffffff !important;
+    font-size: 14px
+  }
+</style>
+
+{{ 'accordion.min.js' | asset_url | script_tag }}
+{{ 'hc-sticky.js' | asset_url | script_tag }}
+
+<script>
+  var swiper = new Swiper('.multiple-slider', {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    breakpoints: {
+      768: {
+        slidesPerView: 2
+      },
+      1025: {
+        slidesPerView: 3
+      }
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+  var Sticky = new hcSticky('#product-pictures', {
+    stickTo: '#main-wrapper',
+    innerSticker: '.breadcrumb',
+    innerTop: 0,
+    bottomEnd: 112,
+    queries: {
+      1023: {
+        disable: true
+      }
+    }
+  });
+  $(function () {
+    $('.accordion').accordion({
+      onChange: function () {
+        Sticky.reinit();
+      }
+    });
+  });
+</script>
+
+<script>
+    gtag("event", "GA4_GTM_AddToCart_Click", {
+        items:[
+          {
+            item_id: `{{ variant.id }}`,
+            item_name: `{{ variant.title }}`
+          }
+        ]
+    });
+</script>

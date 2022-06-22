@@ -1,0 +1,793 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+{{ "swiper-bundle.min.css" | asset_url | stylesheet_tag }}
+<div class="section-default pt-section section0 pt-flex pt-flex-center relative bg-black">
+    <div class="width-100 pt-text-center absolute pt-position-center">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400">SEAMLESS STYLE</h3>
+    </div>
+    <picture>
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-case-section0-ipadpro.png' | asset_url }}"
+        class="img-responsive lazyload" alt="MagEZ Case for iPad Pro 2018/2020 & iPad Air 2020/2022">
+    </picture>
+  </div>
+  
+  <div class="section-default pt-video-container bg-black">
+    <video loop muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+      x5-video-orientation="portraint" preload="none" autoplay style="object-fit:contain"
+      poster="{{ 'product-case-ipadpro_v-cover.jpg' | asset_url }}" class="lazyload">
+      <source src="{{ 'product-case-ipadpro_v.mp4' | asset_url }}" type="video/mp4">
+      <source src="{{ 'product-case-ipadpro_v.webm' | asset_url }}" type="video/webm">
+    </video>
+  </div>
+  
+  <div class="section-default section1 relative bg-black">
+    <div id="trigger_sec"></div>
+    <div class="pt-section-content absolute">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Works Seamlessly With <br class="pt-show-mini">
+        The Apple Magic Keyboard
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        With its ultra-sleek design, the MagEZ iPad Pro 2018/2020 or iPad Air 2020/2022 Case attaches effortlessly to the Apple Magic Keyboard
+        without affecting any functionality.
+      </p>
+    </div>
+    <div class="pt-anim-container pt-flex pt-flex-center">
+      <div class="pt-anim-pictures relative">
+        <div id="trigger_line"></div>
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-case-section1-ipadpro-base.png' | asset_url }}"
+          class="lazyload" alt="MagEZ Case for iPad Pro 2018/2020 & iPad Air 2020/2022">
+        <div class="pt-anim-ipad absolute" id="anim-ipad">
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-case-section1-ipadpro.png' | asset_url }}"
+            class="lazyload" alt="MagEZ Case for iPad Pro 2018/2020 & iPad Air 2020/2022">
+        </div>
+      </div>
+    </div>
+    <picture>
+      <source data-srcset="{{ 'product-case-section-ipadpro-bg.png' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-case-section-ipadpro-bg-m.png' | asset_url }}"
+        class="pt-block width-100 lazyload" alt="MagEZ Case for iPad Pro 2018/2020 & iPad Air 2020/2022">
+    </picture>
+  </div>
+  <div class="section7 pt-flex pt-flex-center bg-black">
+    <div class="pt-section-picture">
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-case-section2-ipadpro.png' | asset_url }}"
+          class="img-responsive lazyload" alt="MagEZ Case for iPad Pro 2018/2020 & iPad Air 2020/2022">
+      </picture>
+    </div>
+    <div class="pt-section-content">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        A Secure Magnetic Attachment
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        The MagEZ Case for iPad Pro 2018/2020 or iPad Air 2020/2022 attaches magnetically to the Apple Keyboard, 
+        ensuring a secure hold while you work.
+      </p>
+    </div>
+  </div>
+  
+  <div class="section-default section3 pt-flex pt-flex-center pt-flex-column bg-black">
+    <div class="pt-section-content pt-text-center pt-margin-bottom-large">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Easily Attach Your Apple Pencil</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-small">
+        Magnetically connect and charge your Apple Pencil as usual.<span class="text-cyan">*</span>
+      </p> 
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        <span class="text-cyan large">*Not compatible with any Apple Pencil skin or cover. </span>
+      </p>
+    </div>
+    <picture>
+      <source data-srcset="{{ 'product-case-section3-ipadpro.png' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-case-section3-ipadpro-m.png' | asset_url }}"
+        class="img-responsive lazyload" alt="MagEZ Case for iPad Pro 2018/2020 & iPad Air 2020/2022">
+    </picture>
+  </div>
+  
+  <div class="section-default section4 relative bg-black">
+    <div class="pt-section-content absolute pt-position-centerY">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Pass-Through<br>
+        Charging Functionality
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        The patented three-pin adapter offers seamless charging between your iPad Pro/iPad Air Case and Magic Keyboard.
+      </p>
+    </div>
+  
+    <div class="pt-video-container">
+      <video loop muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+        x5-video-orientation="portraint" autoplay preload="none" style="object-fit:contain" class="lazyload">
+        <source src="{{ 'product-case-ipadpro_bgv.mp4' | asset_url }}" type="video/mp4">
+        <source src="{{ 'product-case-ipadpro_bgv.webm' | asset_url }}" type="video/webm">
+      </video>
+    </div>
+  </div>
+  
+  <div class="section-default section5 pt-flex pt-flex-center pt-flex-column relative bg-black">
+    <div class="pt-section-content pt-text-center">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">A Perfect Fit</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Even when used together with the MagEZ Case for iPad Pro 2018/2020 or iPad Air 2020/2022, the Magic Keyboard still snugly closes for
+        secure carrying.
+      </p>
+    </div>
+    <picture>
+      <source data-srcset="{{ 'product-case-section5-ipadpro.png' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-case-section5-ipadpro-m.png' | asset_url }}"
+        class="img-responsive lazyload" alt="MagEZ Case for iPad Pro 2018/2020 & iPad Air 2020/2022">
+    </picture>
+  </div>
+  
+  <div class="section-default section6 relative bg-black">
+    <div class="pt-section-content absolute pt-position-centerY">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Soft Feel with <br class="pt-hide-mini">
+        Improved Grip
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Finely woven fibers create a smooth textured surface that feels great to the touch and improves grip.
+      </p>
+    </div>
+  
+    <picture>
+      <source data-srcset="{{ 'product-case-section6-ipadpro.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-case-section6-ipadpro-m.jpg' | asset_url }}"
+        class="img-responsive width-100 lazyload" alt="MagEZ Case for iPad Pro 2018/2020 & iPad Air 2020/2022">
+    </picture>
+  </div>
+  
+  <div class="section-default section7 pt-flex pt-flex-center bg-black">
+    <div class="pt-section-picture">
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-case-section7-ipadpro.png' | asset_url }}"
+          class="img-responsive lazyload" alt="MagEZ Case for iPad Pro 2018/2020 & iPad Air 2020/2022">
+      </picture>
+    </div>
+    <div class="pt-section-content">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Super-Slim,<br>
+        Lightweight And Durable
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Crafted from aerospace-grade aramid fiber, this slim, lightweight case offers protection against daily wear and
+        tear.
+      </p>
+    </div>
+  </div>
+  
+  <div class="pt-section section9 pt-flex pt-flex-center bg-black">
+    <div id="trigger-sec9"></div>
+    <div class="pt-section-content">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Easy Access Type-C <br class="pt-hide-mini">
+        Charging Port
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        The precisely cut design of the MagEZ iPad Pro Case provides easy access to all buttons and switches. The USB-C
+        charging port cut-out's specific shape allows Type-C hubs to fit comfortably.
+      </p>
+    </div>
+  
+    <div class="pt-anim-container relative">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-case-section9-add-ipadpro.png' | asset_url }}"
+        class="img-responsive lazyload" alt="MagEZ Case for iPad Pro 2018/2020 & iPad Air 2020/2022">
+    </div>
+  </div>
+  
+  <div class="section-default section11 pt-flex pt-flex-center bg-black">
+    <div class="pt-section-picture">
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-case-section9-ipadpro.png' | asset_url }}"
+          class="img-responsive lazyload" alt="MagEZ Case for iPad Pro 2018/2020 & iPad Air 2020/2022">
+      </picture>
+    </div>
+    <div class="pt-section-content">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Keep Credit and <br class="pt-hide-mini">
+        Business Cards Handy
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Simply slide the <a href="/products/magez-case-for-ipad-pro?variant=32120474042438">clip</a>
+        over your iPad Pro 2018/2020 or iPad Air 2020/2022 and keyboard for easy access to your cards when you’re
+        on the go and additional security for your Apple Pencil.
+      </p>
+    </div>
+  </div>
+  
+  <div class="section-default section8 swiper-container bg-black">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <picture class="width-100">
+          <source data-srcset="{{ 'product-case-section8-ipadpro-1.jpg' | asset_url }}" media="(min-width: 769px )">
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-case-section8-ipadpro-1-m.jpg' | asset_url }}"
+            class="img-responsive width-100 lazyload" alt="MagEZ Case for iPad Pro 2018/2020 & iPad Air 2020/2022">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="width-100">
+          <source data-srcset="{{ 'product-case-section8-ipadpro-2.jpg' | asset_url }}" media="(min-width: 769px )">
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-case-section8-ipadpro-2-m.jpg' | asset_url }}"
+            class="img-responsive width-100 lazyload" alt="MagEZ Case for iPad Pro 2018/2020 & iPad Air 2020/2022">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="width-100">
+          <source data-srcset="{{ 'product-case-section8-ipadpro-3.jpg' | asset_url }}" media="(min-width: 769px )">
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-case-section8-ipadpro-3-m.jpg' | asset_url }}"
+            class="img-responsive width-100 lazyload" alt="MagEZ Case for iPad Pro 2018/2020 & iPad Air 2020/2022">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="width-100">
+          <source data-srcset="{{ 'product-case-section8-ipadpro-4.jpg' | asset_url }}" media="(min-width: 769px )">
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-case-section8-ipadpro-4-m.jpg' | asset_url }}"
+            class="img-responsive width-100 lazyload" alt="MagEZ Case for iPad Pro 2018/2020 & iPad Air 2020/2022">
+        </picture>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  
+  <style>
+    .section-animScroll {
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .scroll-box {
+      background: #000;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      overflow: hidden;
+      padding-top: 5em;
+      z-index: 11;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  
+    .scroll-box.pt-video-container {
+      padding: 0;
+      height: 100% !important;
+    }
+  
+    .scroll-box.pt-video-container video {
+      width: auto;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) scale(0.8);
+    }
+  
+    .pt-section .pt-section-picture {
+      max-width: 60%;
+    }
+  
+    .section10 .pt-section-picture {
+      max-width: 45%;
+    }
+  
+    .section1 {
+      padding-top: 10em;
+    }
+  
+    .pt-section-content {
+      max-width: 486px;
+    }
+  
+    .section1 .pt-section-content {
+      left: 50%;
+      top: 25%;
+    }
+  
+    .section10 .pt-section-content {
+      /* max-width: 436px; */
+      padding-left: 10%;
+    }
+  
+    .section2 .pt-section-content,
+    .section2-add .pt-section-content {
+      /* max-width: 436px; */
+      padding-right: 10%;
+    }
+  
+    .section4 .pt-section-content {
+      z-index: 10;
+    }
+  
+    .section5 .pt-section-content {
+      margin-top: 10%;
+      margin-bottom: 15%;
+    }
+  
+    .section5 {
+      z-index: 9;
+    }
+  
+    .section6 {
+      margin-top: -5em;
+      z-index: 9;
+    }
+  
+    .section7 .pt-section-content {
+      transform: translate(-50%, -5vw);
+    }
+  
+    .section9 .pt-section-content,
+    .section11 .pt-section-content {
+      margin-left: 5%;
+    }
+  
+    .section11 .pt-section-picture {
+      padding-right: 5%;
+      max-width: 40%;
+    }
+  
+    .section2,
+    .section2-add {
+      padding-top: 0;
+      padding-bottom: 10%;
+    }
+  
+    .section10 {
+      padding-top: 0;
+      padding-bottom: 10%;
+    }
+  
+  
+    @media screen and (min-width: 769px) {
+      .section2 {
+        padding-right: 0;
+      }
+    }
+  
+    @media screen and (min-width: 1960px) {
+      .pt-section-content {
+        max-width: 550px;
+      }
+  
+      .section2 .pt-section-content,
+      .section2-add .pt-section-content {
+        max-width: 600px;
+      }
+  
+      .section5 .pt-section-content {
+        margin-bottom: 20em;
+      }
+    }
+  
+    @media screen and (max-width: 1280px) {
+      .pt-section-content {
+        max-width: 390px;
+      }
+  
+      .section2 .pt-section-content,
+      .section2-add .pt-section-content {
+        max-width: 400px;
+      }
+  
+      .section-animScroll {
+        height: 70vh;
+      }
+  
+      .section11 .pt-section-picture {
+        max-width: 35%;
+      }
+    }
+  
+    @media screen and (max-width:768px) {
+      .secction4 {
+        background-color: rgb(15, 15, 13);
+      }
+  
+      .pt-section-content {
+        width: 100% !important;
+        padding: 4em 20%;
+        max-width: unset !important;
+        transform: none !important;
+        position: static;
+        text-align: center;
+      }
+  
+      .section2 .pt-section-content,
+      .section2-add .pt-section-content {
+        padding-left: 20%;
+        padding-right: 20%;
+      }
+  
+      .section2-add .pt-section-content {
+        padding-top: 2em;
+      }
+  
+      .section1 {
+        padding-top: 4em;
+      }
+  
+      .section1 .pt-section-content,
+      .section2 .pt-section-content {
+        padding-top: 0;
+      }
+  
+      .section3 .pt-section-content {
+        padding-bottom: 1em;
+      }
+  
+      .section5 .pt-section-content {
+        margin-top: 0;
+      }
+  
+      .section6 .pt-section-content {
+        padding-bottom: 0;
+      }
+  
+      .section7 {
+        padding-top: 0;
+      }
+  
+      .section7 .pt-section-content {
+        order: 1;
+      }
+  
+      .pt-section-picture {
+        order: 2;
+      }
+  
+      .section9 .pt-section-content,
+      .section11 .pt-section-content {
+        margin: 0;
+      }
+  
+  
+      .pt-section-picture {
+        max-width: 70%;
+      }
+  
+      .pt-section .pt-section-picture {
+        max-width: 90%;
+      }
+  
+      .section11 {
+        padding-bottom: 5em;
+      }
+  
+      .scroll-box {
+        padding: 0;
+      }
+  
+      .section9 picture {
+        max-width: 100%;
+      }
+  
+      .section11 .pt-section-picture {
+        padding: 0;
+        max-width: 60%;
+      }
+  
+      .section-animScroll {
+        height: 840px;
+      }
+    }
+  
+    @media screen and (max-width: 414px) {
+      .section1 {
+        padding-top: 4em;
+      }
+  
+      .pt-section-content {
+        padding: 4em 10%;
+      }
+  
+      .section1 .pt-section-content {
+        padding-bottom: 2em;
+      }
+  
+      .section2 .pt-section-content,
+      .section2-add .pt-section-content,
+      .section2 .pt-section-content {
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+  
+      .section2 .pt-section-content,
+      .section2-add .pt-section-content {
+        padding-top: 15%;
+      }
+  
+      .section6 {
+        margin-top: -3em;
+      }
+  
+      .section6 .pt-section-content {
+        padding-bottom: 1em;
+      }
+  
+      .section7 .pt-section-content {
+        padding-top: 3em;
+      }
+  
+      .section9,.section11 {
+        padding-bottom: 5em;
+      }
+  
+      .section9 .pt-section-content,
+      .section11 .pt-section-content {
+        padding: 0 10% 5em;
+      }
+  
+      .section-animScroll {
+        height: 600px;
+      }
+    }
+  </style>
+  
+  <!-- anim-pictures -->
+  <style>
+    .pt-anim-ipad {
+      top: -50px;
+      left: 0;
+    }
+  
+    .pt-anim-pictures {
+      margin: 0 2em;
+    }
+  
+    .pt-anim-pictures img {
+      display: block;
+    }
+  
+    #anim-toggle {
+      left: -50px;
+      top: 0;
+    }
+  
+    @media screen and (max-width:1024px) {
+      .pt-anim-container {
+        width: 100%;
+      }
+    }
+  
+    @media screen and (max-width:768px) {
+      .pt-anim-container {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .pt-anim-pictures {
+        width: 100%;
+        margin: 0;
+      }
+  
+      .pt-anim-container {
+        transform: scale(0.8);
+      }
+  
+      .pt-anim-container img {
+        max-width: unset;
+      }
+  
+      .section9 .pt-anim-container {
+        transform: none;
+      }
+  
+      .section9 .pt-anim-container img {
+        max-width: 100%;
+      }
+    }
+  
+    @media screen and (max-width:414px) {
+      .pt-anim-container {
+        transform: scale(0.4) translateX(-50%);
+        transform-origin: bottom;
+        margin-top: -60%;
+      }
+  
+      .section9 .pt-anim-container {
+        transform: none;
+        margin-top: 0;
+      }
+    }
+  </style>
+  
+  {{ 'TweenLite.min.js' | asset_url | script_tag }}
+  {{ 'TweenMax.min.js' | asset_url | script_tag }} 
+  {{ 'TimelineLite.min.js' | asset_url | script_tag }}
+  {{ 'ScrollMagic.js' | asset_url | script_tag }}
+  {{ 'animation.gsap.min.js' | asset_url | script_tag }}
+  {{ 'CSSPlugin.min.js' | asset_url | script_tag }}
+  {%- comment -%}
+  {{ 'debug.addIndicators.min.js'| asset_url | script_tag }}
+  {%- endcomment -%}
+  
+  <script>
+    $(function () {
+      // init controller
+      var controller = new ScrollMagic.Controller();
+  
+      // var wipeAnimation_video = new TimelineMax()
+      //   .fromTo("#scroll-section-1", 1, {
+      //     y: "0%",
+      //   }, {
+      //     y: "-100%",
+      //     ease: Linear.easeNone
+      //   })
+      //   .fromTo("#scroll-section-2", 1, {
+      //     y: "0%",
+      //   }, {
+      //     y: "-100%",
+      //     ease: Linear.easeNone
+      //   }, '+=0.5')
+  
+      // function toggleVideo_attach(e) {
+      //   var video = document.querySelector("#video-attach");
+      //   // console.log(e.progress);
+      //   if (e.progress >= 0.95) {
+      //     video.play();
+      //   } else {
+      //     video.pause();
+      //   }
+      // }
+  
+      // var scene_video= new ScrollMagic.Scene({
+      //     triggerElement: "#scroll-container",
+      //     triggerHook: "onLeave",
+      //     duration: "300%"
+      //   })
+      //   .setPin("#scroll-container")
+      //   .setTween(wipeAnimation_video)
+      //   .on("progress", toggleVideo_attach)
+      //   .addTo(controller)
+  
+      var scene_toggle = new ScrollMagic.Scene({
+          triggerElement: "#trigger-toggle"
+        })
+        .setTween("#anim-toggle", 1, {
+          left: 0
+        })
+        .addTo(controller);
+  
+      // build tween
+      var tween = TweenMax.to(".pt-anim-ipad", 0.5, {
+        x: -100,
+        y: 50,
+        ease: Linear.easeNone
+      });
+      if (window.innerWidth > 768) {
+        // build scene
+        var scene = new ScrollMagic.Scene({
+            triggerElement: "#trigger_sec",
+            duration: 300,
+            onLeave: true,
+          })
+          .setTween(tween)
+          .addTo(controller);
+  
+      } else {
+        // build scene
+        var scene = new ScrollMagic.Scene({
+            triggerElement: "#trigger_line",
+            duration: 300,
+            onLeave: true,
+          })
+          .setTween(tween)
+          .addTo(controller);
+      }
+    });
+  </script>
+  
+  <style>
+  .swiper-container>div[role="button"]:after {
+    background: url({{'triggle_pixel.svg' | asset_url}}) no-repeat;
+    background-size: 20px;
+  }
+  .swiper-container .swiper-button-prev {
+    transform: rotate(-180deg);
+  }
+    .swiper-button-next,
+    .swiper-button-prev {
+      background: none !important;
+      visibility: hidden;
+    }
+    .swiper-button-next{
+      right: 50px;
+    }
+    .swiper-button-prev {
+      left: 50px;
+    }
+  
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      color: rgba(0, 0, 0, 0);
+      display: block !important;
+    }
+  
+    .swiper-pagination-bullet {
+      background-color: #fff;
+    }
+  
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      --swiper-navigation-size: 50px;
+      --swiper-theme-color: #0BBCD4;
+    }
+  
+    .swiper-container:hover .swiper-button-next,
+    .swiper-container:hover .swiper-button-prev {
+      visibility: visible;
+    }
+  
+    .swiper-slide {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      width: 100% !important;
+    }
+  
+    .pagination-custom .swiper-pagination-bullet {
+      border-radius: 0;
+      width: 40px;
+      height: 4px;
+    }
+  
+    @media screen and (max-width:1024px) {
+      .swiper-container>div[role="button"]:after {
+    background-size: 12px;
+  }
+  .swiper-button-next{
+      right: 12px;
+    }
+    .swiper-button-prev {
+      left: 12px;
+    }
+    .swiper-container {
+        --swiper-navigation-size: 20px;
+      }
+      .swiper-button-next,
+      .swiper-button-prev {
+        visibility: visible;
+      }
+    }
+   
+    @media screen and (max-width:414px) {
+      .swiper-container>div[role="button"]:after {
+    background-size: 12px;
+  }
+  .swiper-button-next{
+      right: 12px;
+    }
+    .swiper-button-prev {
+      left: 12px;
+    }
+    }
+  </style>
+  
+  {{ 'swiper.min.js' | asset_url | script_tag }}
+  <script>
+    var galleryTop = new Swiper('.swiper-container', {
+      autoplay: {
+        delay: 5000,
+      },
+      loop: true,
+      observer:true,
+      observeParents:true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    })
+  </script>

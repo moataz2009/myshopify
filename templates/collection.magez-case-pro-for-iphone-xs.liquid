@@ -1,0 +1,530 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+
+<div class="section0 pt-flex pt-flex-center relative bg-black">
+    <div class="pt-section-content absolute pt-position-centerX">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400 pt-text-center font-upper">
+        Protection Evolved
+      </h3>
+    </div> 
+    <picture>
+      <source data-srcset="{{   'product-casepro-section0-iphonexs.png' | asset_url }}"
+        media="(min-width: 769px)" />
+      <img src="{{ placeholder_gif }}"
+        data-src="{{    'product-casepro-section0-iphonexs-m.png' | asset_url }}"
+        class="img-responsive lazyload" />
+    </picture>
+  </div>
+  
+  <div class="pt-video-container bg-black">
+    <video loop muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+      x5-video-orientation="portraint" data-poster="{{ 'PITAKA-magcase_pro_bgv.jpg' | asset_url }}" preload="none" 
+      autoplay class="lazyload" style="object-fit: fill;">
+      <source src="{{ 'PITAKA-magcase_pro_bgv.mp4' | asset_url }}" type="video/mp4" />
+      <source src="{{ 'PITAKA-magcase_pro_bgv.webm' | asset_url }}" type="video/webm" />
+    </video>
+  </div>
+  <div class="pt-section pt-section1 section1 pt-flex pt-flex-center pt-flex-column bg-black">
+    <div class="pt-section-content pt-text-center pt-margin-bottom-large">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">MAGNETIC FUNCTIONALITY</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        With built-in metal strips, the MagEZ Case Pro attaches easily to the
+        MagEZ Series magnetic wireless chargers for an uninterrupted charging
+        experience.
+      </p>
+    </div>
+    <div class="pt-section-picture">
+      <picture>
+        <img src="{{ placeholder_gif }}"
+          data-src="{{    'product-casepro-section1-iphonexs.png' | asset_url }}"
+          class="img-responsive lazyload" />
+      </picture>
+    </div>
+  </div>
+  
+  {% unless base_name == 'iphonexs' %}
+  <div class="pt-section section2 pt-flex pt-flex-center pt-bg-dark bg-black">
+    <div class="pt-section-content">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">5 PROTECTIVE LAYERS</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Scientifically designed using layers of premium materials, including three
+        layers of aramid fiber, a shock-absorbing EVA foam layer, and a microfiber
+        lining to cushion your phone.
+      </p>
+    </div>
+    <div class="pt-section-picture">
+      <picture>
+        <img src="{{ placeholder_gif }}"
+          data-src="{{    'product-casepro-section2-iphonexs.png' | asset_url }}"
+          class="img-responsive lazyload" />
+      </picture>
+    </div>
+  </div>
+  {% endunless %}
+  
+  <div class="pt-section section3 pt-flex pt-flex-center bg-black">
+    <div class="pt-section-picture">
+      <picture>
+        <img src="{{ placeholder_gif }}"
+        data-src="{{ 'product-casepro-section3.png' | asset_url }}" class="img-responsive width-100 lazyload" />
+      </picture>
+    </div>
+    <div class="pt-section-content">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        MILITARY DROP TESTED
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-medium">
+        With a TPU (Thermoplastic Polyurethane) reinforced frame, corner bumpers,
+        and shock-absorbing air pockets, the MagEZ Case Pro can receive an impact
+        without damaging your phone.
+      </p>
+    </div>
+  </div>
+  
+  <div class="pt-section section4 pt-flex pt-flex-center bg-black">
+    <div class="pt-section-content">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        ANTI-SLIP SIDE GRIPS
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Additional textured side grips ensure a firmer hold, reducing the chances
+        of dropping your device.
+      </p>
+    </div>
+    <div class="pt-section-picture">
+      <picture>
+        <source data-srcset="{{ 'product-casepro-section4.png' | asset_url }}" media="(min-width: 769px)" />
+        <img src="{{ placeholder_gif }}"
+        data-src="{{ 'product-casepro-section4-m.png' | asset_url }}" class="img-responsive lazyload" />
+      </picture>
+    </div>
+  </div>
+  
+  <!-- media -->
+  <div class="section5 pt-section bg-black">
+    <div class="pt-section-container pt-flex pt-flex-center pt-flex-column">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Our Credits
+      </h3>
+      <div class="product-media">
+        <div class="itemsBox">
+          <div class="mquotes" text="“">“</div>
+          <div class="m-content" id="contentBox">
+            <div id="i1" class="content-item active">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="http://bgr.com/2017/01/20/amazon-deals-of-the-day-jan20/" target="_blank">
+                  There actually is a case that offers solid protection without
+                  adding bulk to your iPhone. How does it accomplish what so many
+                  other cases cannot? Simple: It's made out of Aramid, the same
+                  revolutionary material used to build body armor. Definitely
+                  check out the PITAKA Aramid Fibre Super Slim Fit Case for the
+                  iPhone.
+                </a>
+              </p>
+            </div>
+            <div id="i2" class="content-item">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="https://www.cultofmac.com/440570/bulletproof-iphone-case-pitaka-aramid-iphone-case-reviews/"
+                  target="_blank">
+                  This case is a pleasure to hold, with a soft almost rubberized
+                  feel and thanks to how thin it is, my iPhone almost feels naked.
+                </a>
+              </p>
+            </div>
+            <div id="i3" class="content-item">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="https://www.youtube.com/watch?v=MppdBKPgKYU" target="_blank">
+                  PITAKA MagEZ Case probably my favorite. It is actually one of
+                  the best looking cases. It looks like carbon fiber but it's even
+                  better. It's made out of Kevlar, which is the same materials
+                  they make bulletproof vests and it's a real weave. So what
+                  you're seeing this pattern, is actually real and it feels great.
+                </a>
+              </p>
+            </div>
+  
+            <div id="i4" class="content-item">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="https://the-gadgeteer.com/2018/07/20/pitaka-magcase-pro-iphone-x-case-review/" target="_blank">
+                  They are lightweight fibers with exceptional strength and
+                  thermal stability, making this material a perfect choice for an
+                  iPhone case like these new iPhone MagEZ Cases from PITAKA.
+                </a>
+              </p>
+            </div>
+            <div id="i5" class="content-item">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="https://www.igeeksblog.com/pitaka-magcase-for-iphone-x/" target="_blank">
+                  Unlike most slim cases, PITAKA MagEZ Case for iPhone X not just
+                  pairs nicely with the device but also shields it against minor
+                  falls. On top of all, the case also works with magnetic car
+                  mount and doesn't obstruct wireless charging.
+                </a>
+              </p>
+            </div>
+            <div id="i6" class="content-item">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="http://www.gadgetreview.com/magcase-is-the-worlds-thinnest-phone-case" target="_blank">
+                  The MagEZ Case certainly takes smartphone cases to the next
+                  level. It is the world’s thin phone case and one that’s designed
+                  beautifully. The design makes for a seamless carrying experience
+                  as well as providing you with a layer of armor around your
+                  phone.
+                </a>
+              </p>
+            </div>
+            <div id="i7" class="content-item">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="http://thegadgetflow.com/portfolio/pitaka-aramid-iphone-7-case/" target="_blank">
+                  Unlike other protective cases, the Aramid Case keeps your device
+                  looking smart. However, even with the wonderful protection, the
+                  Aramid material is five times stronger than steel yet weighs the
+                  same.
+                </a>
+              </p>
+            </div>
+            <div id="i8" class="content-item">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="http://nymag.com/selectall/article/the-best-iphone-phone-cases-reviewed.html" target="_blank">
+                  The Aramid case provides a surprising amount of protection
+                  (including a screen protector), while still giving you that
+                  glorious naked-iPhone feeling.
+                </a>
+              </p>
+            </div>
+            <div id="i9" class="content-item">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="http://www.androidguys.com/2017/07/24/this-is-the-thinnest-samsung-galaxy-s8-plus-case-on-the-market-giveaway-review/"
+                  target="_blank">
+                  There is some flex in the case, but it’s rather rigid. I was
+                  able to bend the case and I feel like if I really try I could
+                  flex it enough to break it, but it would be pretty tough. This
+                  thing isn’t going to crack and should last for a long time.
+                </a>
+              </p>
+            </div>
+            <div id="i10" class="content-item">
+              <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+                <a href="http://www.hightechdad.com/2016/12/12/pitaka-aramid-iphone-7-case-lightweight-strong-better-than-carbon-fiber/"
+                  target="_blank">
+                  It’s thin, it isn’t slippery, it looks good, it provides good
+                  protection, it comes with a screen protector, and supposedly it
+                  doesn’t block Wi-Fi or cellular signals.
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="arrowBox">
+            <div id="arrow_prev" class="arrow arrow_perv">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 44">
+                <path d="M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z" fill="#F5F7F7" />
+              </svg>
+            </div>
+            <div id="arrow_next" class="arrow arrow_next">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 44">
+                <path d="M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z" fill="#F5F7F7" />
+              </svg>
+            </div>
+          </div>
+        </div>
+  
+        <div class="logoBox">
+          <ul class="media-logos">
+            <li data-id="i1" class="thumb-ico m-item active">
+              {{ 'bgr.svg' | asset_url | img_tag: 'MagEZ Case bgr' }}
+            </li>
+            <li data-id="i2" class="thumb-ico m-item">
+              {{ 'cultofmac.svg' | asset_url | img_tag: 'MagEZ Case cultofmac' }}
+            </li>
+            <li data-id="i3" class="thumb-ico m-item">
+              {{
+                'everything.svg' | asset_url | img_tag: 'MagEZ Case everything'
+              }}
+            </li>
+            <li data-id="i4" class="thumb-ico m-item">
+              {{
+                'm-gatgeter.svg' | asset_url | img_tag: 'MagEZ Case m-gatgeter'
+              }}
+            </li>
+            <li data-id="i5" class="thumb-ico m-item">
+              {{
+                'igeeksblog-logo.png'
+                  | asset_url
+                  | img_tag: 'MagEZ Case igeeksblog'
+              }}
+            </li>
+            <li data-id="i6" class="thumb-ico m-item">
+              {{
+                'gadgetreview-logo.png'
+                  | asset_url
+                  | img_tag: 'MagEZ Case gadgetreview'
+              }}
+            </li>
+            <li data-id="i7" class="thumb-ico m-item">
+              {{
+                'gadgetflow.svg' | asset_url | img_tag: 'MagEZ Case gadgetflow'
+              }}
+            </li>
+            <li data-id="i8" class="thumb-ico m-item">
+              {{ 'nymag-logo.svg' | asset_url | img_tag: 'MagEZ Case nymag' }}
+            </li>
+            <li data-id="i9" class="thumb-ico m-item">
+              {{ 'ag.svg' | asset_url | img_tag: 'MagEZ Case ag' }}
+            </li>
+            <li data-id="i10" class="thumb-ico m-item">
+              {{ 'hightechdad-logo.svg' | asset_url | img_tag: 'MagEZ Case' }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .section0 .pt-section-content {
+      width: 80%;
+    }
+  
+    .section2 .pt-section-content {
+      padding-right: 10%;
+      width: 40%;
+    }
+  
+    .section3.pt-flex-center {
+      padding: 5em 5em 0 0;
+      justify-content: flex-start;
+    }
+  
+    .section4 {
+      padding: 0 0 0 10%;
+    }
+  
+    .section3 .pt-section-content {
+      width: 45%;
+      max-width: 478px;
+    }
+  
+    .section4 .pt-section-content {
+      width: 40%;
+      max-width: 478px;
+      transform: translateX(10vw);
+    }
+  
+    .section3 .pt-section-picture {
+      width: 55%;
+      display: flex;
+      align-items: flex-end;
+    }
+  
+    @media screen and (max-width: 1600px) {
+  
+      .section1,
+      .section2 {
+        padding: 5em 5%;
+      }
+  
+      .section3 .pt-section-content {
+        width: 40%;
+      }
+  
+      .section3 .pt-section-picture {
+        width: 60%;
+      }
+    }
+  
+    @media screen and (max-width: 1280px) {
+  
+      .section1,
+      .section2 {
+        padding: 4em 10%;
+      }
+  
+      .pt-section .pt-section-content {
+        width: 50%;
+      }
+  
+      .section4 .pt-section-content {
+        width: 40%;
+        margin-right: -10%;
+      }
+  
+      .section4 .pt-section-picture {
+        width: 70%;
+      }
+  
+      .section2 .pt-section-content {
+        width: 60%;
+      }
+    }
+  
+    @media screen and (min-width: 768px) {
+      .pt-section1 {
+        min-height: 45vw;
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      .section0 {
+        padding-top: 5em;
+      }
+  
+      .section0 .pt-section-content {
+        top: 3em;
+      }
+  
+      .section2 {
+        flex-direction: column;
+        text-align: center;
+      }
+  
+      .section1 .pt-section-content,
+      .section2 .pt-section-content {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 3em;
+      }
+  
+      .section3.pt-flex-center {
+        flex-direction: column-reverse;
+        padding: 4em 0 0;
+      }
+  
+      .section3 .pt-section-content {
+        width: 100%;
+        text-align: center;
+        max-width: 100%;
+        padding: 0 10%;
+      }
+  
+      .section4 {
+        flex-direction: column;
+        padding: 0;
+        position: relative;
+      }
+  
+      .section4 .pt-section-content {
+        position: absolute;
+        left: 10%;
+        top: 4em;
+        transform: none;
+        width: 50%;
+      }
+  
+      .section3 .pt-section-picture,
+      .section4 .pt-section-picture,
+      .section3 .pt-section-picture img,
+      .section4 .pt-section-picture img {
+        width: 100%;
+      }
+    }
+  
+    @media screen and (max-width: 414px) {
+  
+      .section1,
+      .section2 {
+        padding: 3em 10%;
+      }
+  
+      .section3.pt-flex-center {
+        padding: 3em 0 0;
+      }
+  
+      .section4 .pt-section-content {
+        top: 3em;
+        width: 60%;
+      }
+    }
+  </style>
+  
+  <!-- media -->
+  {{ 'collection-media-slide.css' | asset_url | stylesheet_tag }}
+  <style>
+    .section5 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  
+    .product-media .m-content {
+      height: 200px;
+    }
+  
+    .product-media .content-item p {
+      font-size: unset;
+    }
+  
+    @media screen and (min-width: 1025px) {
+      @supports (display: grid) {
+  
+        /* individual logo width setting */
+        .media-logos li[data-id='i1'] {
+          width: 70%;
+        }
+  
+        .media-logos li[data-id='i9'] {
+          width: 68%;
+        }
+  
+        .media-logos li[data-id='i2'] {
+          width: 125%;
+        }
+      }
+    }
+  
+    @media screen and (max-width: 1024px) {
+      .product-media {
+        width: 100%;
+      }
+  
+      .product-media .m-content {
+        height: 250px;
+        width: 1100% !important;
+      }
+  
+      .product-media .m-content .content-item {
+        width: 9.09%;
+      }
+  
+      .thumb-ico.m-item.active {
+        justify-content: center;
+      }
+  
+      .product-media .arrowBox .arrow {
+        top: calc(50% + 60px);
+      }
+  
+      /* individual logo width setting */
+      .product-media .logoBox .media-logos li.m-item[id='i1'] img {
+        width: 70%;
+      }
+  
+      .product-media .logoBox .media-logos li.m-item[id='i9'] img {
+        width: 55%;
+      }
+    }
+  
+    @media screen and (max-width: 640px) {
+      .product-media .m-content {
+        height: 300px;
+      }
+  
+      .product-media .media-logos {
+        padding-bottom: 0;
+      }
+    }
+  </style>
+  
+  {{ 'collection-media-slide.js' | asset_url | script_tag }}
+  <script>
+    $(document).ready(function () {
+      $('.thumb-ico').click(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+        var modid = $(this).data('id')
+        $('#' + modid)
+          .addClass('active')
+          .siblings()
+          .removeClass('active')
+      })
+    })
+  </script>

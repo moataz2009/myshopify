@@ -1,0 +1,8 @@
+{% comment %}
+  The contents of the search.liquid template can be found in /sections/search-template.liquid
+{% endcomment %}
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}
+
+{% section 'search-template' %}
+
+{{'swiper-bundle.min.js' | asset_url | script_tag }}

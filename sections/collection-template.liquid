@@ -1,0 +1,905 @@
+{% assign collection_type = collection.current_type %}
+{% assign multiple_tabs = false %}
+
+{% if collection_type %}
+  {% assign collection_handle = collection_type %}
+{% else %}
+  {% assign collection_handle = collection.handle %}
+{% endif %}
+
+{% case collection_handle %}
+  {% when 'pitaka-cases' %}
+    {% assign multiple_tabs = true %}
+    {% assign collection_title = 'PITAKA Cases' %}
+    {% assign collection_desc = 'A range of precision-cut cases for your favorite digital accessories. Crafted using PITAKA’s signature aramid fiber, vacuum-formed to create a smooth texture that feels soft and improves grip.' %}
+  {% when 'wireless-chargers' %}
+    {% assign multiple_tabs = true %}
+    {% assign collection_title = 'Wireless Chargers' %}
+    {% assign collection_desc = 'Keep all of your devices charged with these magnetic wireless chargers, multi-device wireless charging stations, and versatile Qi charging pads.' %}
+  {% when 'stands-mounts' %}
+    {% assign multiple_tabs = true %}
+    {% assign collection_title = 'Stands & Mounts' %}
+    {% assign collection_desc = 'Securely mount your devices with these magnetic in-car chargers and desktop stands.' %}
+  {% when 'lifestyle-gear' %}
+    {% assign collection_title = 'Lifestyle Gear' %}
+    {% assign collection_desc = 'Stylish accessories for your essential everyday carry items from Apple Watch bands to modular wallets made from durable carbon fiber.' %}
+  {% when 'magsafe-collection' %}
+    {% assign collection_title = 'MagSafe Collection' %}
+    {% assign collection_desc = 'A range of MagSafe compatible accessories that keep your cards secure and your iPhone conveniently charged.' %}
+  {% when 'accessories' %}
+    {% assign collection_title = 'Accessories' %}
+    {% assign collection_desc = 'A selection of premium accessories for your electronics including screen protectors and cables.' %}
+  {% when 'new-releases' %}
+    {% assign collection_title = 'New Releases' %}
+    {% assign collection_desc = 'Our new minimalist products made using cutting-edge technology and materials providing you with convenient, stylish designs.' %}
+  {% when 'flash-sale' %}
+    {% assign multiple_tabs = true %}
+{% endcase %}
+
+{% assign wClass = 'w-full sm:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign titleSize = 'text-2xl sm:text-3xl font-bold' %}
+{% assign titleMb_tight = 'mb-6' %}
+
+{% if collection_handle == 'flash-sale' %}
+  <!-- flash-sale  -->
+  <div class="collection-hero relative">
+    <div class="absolute {{wClass}} px-6 md:px-0 h-full absolute transform left-1/2 -translate-x-1/2">
+      <div class="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 w-4/5 md:w-3/5 xl:w-1/2 text-center md:text-left">
+        <h3 class="text-xl sm:text-2xl xl:text-3xl mb-2 sm:mb-4 font-normal">
+          Up To 50% Off
+        </h3>
+        <h1 class="text-2xl sm:text-4xl xl:text-5xl mb-8 sm:mb-12 font-bold ">
+          72-Hour Flash Sale
+        </h1>
+        <p class="text-base sm:text-lg xl:text-xl mb-4">
+          What we make lasts a long time. But not this one.
+        </p>
+        <p class="text-xs sm:text-base md:text-gray-850">
+          Because This Ends Soon.
+        </p>
+      </div>
+    </div>
+    <picture>
+      <source data-srcset="{{ 'collection-hero-flash-sale.webp' | asset_url}}"
+        media="(min-width: 1280px)">
+      <source data-srcset="{{ 'collection-hero-flash-sale-m.webp' | asset_url}}"
+        media="(min-width: 1025px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ 'collection-hero-flash-sale-s.webp' | asset_url}}"
+        class="block w-full lazyload">
+    </picture>
+  </div>
+
+  <div class="{{wClass}} px-6 lg:px-0 py-12">
+    <div class="collection-header block md:hidden">
+      <div class="w-full relative">
+        <div class="subCategory py-2.5 border-t border-b border-solid border-white border-opacity-10">
+          <label class="text-gray-400 text-xs">Choose your Category</label>
+          <h3 class="text-sm font-bold uppercase relative">
+            iPhone Cases
+          </h3>
+        </div>
+        <ul class="absolute sub_header w-full bg-gray-850 hidden transition duration-300">
+          {% for sub_link in linklists[collection_handle].links %}
+          {% assign headerItemClass = 'leading-none py-4 text-sm uppercase border-b border-solid border-white border-opacity-10' %}
+          <li class="{{headerItemClass}}" data-target="{{sub_link.title | handleize}}" >
+            <a href="javascript:;" class="block h-full text-gray-400">
+              {{ sub_link.title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="collection-header hidden md:block">
+      <ul class="sub_header flex justify-between lg:justify-around border-t border-b border-solid border-white border-opacity-10">
+        {% for sub_link in linklists[collection_handle].links %}
+          {% assign sub_linkItemClass = 'hover-border-b leading-none pt-5 pb-4 text-sm md:text-base font-bold uppercase text-center' %}
+          <li data-target="{{sub_link.title | handleize}}" 
+            class="{{sub_linkItemClass}} {% if forloop.first == true %}active{% endif %}">
+            <a href="javascript:;" class="block h-full text-gray-400">
+              {{sub_link.title}}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    {% assign gridContainerClass = 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:auto-rows-fr gap-6 sm:gap-5 lg:gap-6 xl:gap-7 pb-12 md:pb-16 mb-20 border-b border-solid border-white border-opacity-10' %}
+
+    <div class="collection-list-container pt-16 sm:pt-20 lg:pt-24">
+      <div class="list">
+        {% for main_link in linklists[collection_handle].links %}
+        <!-- main_link：iphone-cases -->
+        <div id="list-{{main_link.title | handleize}}">
+          {% if main_link.title contains 'Cases' %}
+          {% for child_link in main_link.links %}
+            
+            <!-- child_link：iphone11-series -->
+            {% assign link_product = null %}
+            {% assign link_products = null %}
+
+            {% assign pLen = 0 %}
+            
+            {% if child_link.type == "product_link" and child_link.object.available %}
+              {% assign pLen = pLen | plus: 1 %}
+              {% assign link_product = child_link.object %}
+
+            {% elsif child_link.type == "collection_link" %}
+              {% assign collection_link_handle = child_link.url | remove_first: '/collections/' %}
+              {% assign link_products = collections[collection_link_handle].products %}
+              {% for link_product in link_products %}
+                {% if link_product.available %}
+                  {% assign pLen = pLen | plus: 1 %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+
+            {% unless pLen == 0 %}
+              <h4 class="mb-12 md:mb-16">{{child_link.title}}</h4>
+              <div class="{{gridContainerClass}}">
+                {% if collection_link_handle == 'case-for-iphone-11' %}
+                  {% assign link_products_11_magsafe = all_products['magez-case-for-iphone-11-with-magsafe'] %}
+                  {% unless link_products_11_magsafe.id == blank %}
+                    
+                    {% render 'grid-product-item-hover', product: link_products_11_magsafe, bgColor: 800, flex_between: true, extraDiscount: true %}
+                  {% endunless %}
+                {% endif %}
+
+                {% if link_product != null %}
+                  {% render 'grid-product-item-hover', product: link_product, bgColor: 800, flex_between:true, extraDiscount: true %}
+                {% elsif link_products != null %}
+                  {% for product in link_products %}
+                    {% if product.available %}
+                      {% render 'grid-product-item-hover', product: product, bgColor: 800, flex_between: true, extraDiscount: true %}
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}
+              </div>
+            {% endunless %}
+
+          {% endfor %}
+          {% else %}
+          <div class="{{gridContainerClass}}">
+            <!-- main_link：wireless-chargers -->
+            {% for child_link in main_link.links %}
+              <!-- child_link：magez-juice-2 -->
+              {% if child_link.type == "product_link" %}
+                {% if child_link.object.available %}
+                  {% render 'grid-product-item-hover', product: child_link.object, bgColor: 800, flex_between:true, extraDiscount: true %}
+                {% endif %}
+
+              {% elsif child_link.type == "collection_link" %}
+                {% assign collection_link_handle = child_link.url | remove_first: '/collections/' %}
+                {% assign link_products = collections[collection_link_handle].products %}
+
+                {% if link_products.size > 0 %}
+                  {% for link_product in link_products %}
+                    {% if link_product.available %}
+                      {% render 'grid-product-item-hover', product: link_product, bgColor: 800, flex_between:true, extraDiscount: true %}
+                    {% endif %}
+                  {% endfor %}
+
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+{% else %}
+  {%- comment -%}
+  {% assign noDetailList = 'c-to-c-charging-cable,tempered-glass,magez-case-for-iphone7,magez-case-for-iphone8,magez-case-for-samsung-galaxy-s10,magez-case-for-samsung-galaxy-s9' | split: ',' %}
+  {%- endcomment -%}
+
+  <div class="collection-hero">
+    <picture>
+      <source data-srcset="{{ collection_handle | prepend: 'collection-hero-' | append: '.webp' | asset_url}}" media="(min-width: 1280px)">
+      <source data-srcset="{{ collection_handle | prepend: 'collection-hero-' | append: '-m.webp' | asset_url}}" media="(min-width: 768px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ collection_handle | prepend: 'collection-hero-' | append: '-s.webp' | asset_url}}"
+        class="block w-full lazyload">
+    </picture>
+  </div>
+
+  {% assign wClass = 'w-full sm:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+  {% assign titleSize = 'text-2xl sm:text-3xl font-bold' %}
+  {% assign titleMb_tight = 'mb-6' %}
+
+  <div class="{{wClass}} px-6 lg:px-0 py-12">
+    {% unless collection_handle == 'new-releases' %}
+      <div class="collection-header block md:hidden">
+        <div class="w-full relative">
+          <div class="mainCategory py-2.5 border-t border-b border-solid border-white border-opacity-10">
+            <label class="text-gray-400 text-xs">Choose your Category</label>
+            <h3 class="text-sm font-bold uppercase relative">
+              {{ collection_title }}
+            </h3>
+          </div>
+          <ul class="absolute w-full bg-gray-850 hidden transition duration-300">
+            {% for link in linklists['header-menu'].links %}
+            <!-- products -->
+              {% assign link_name = link.title | handleize %}
+              {% if link_name == 'products' %}
+                {% for collection_header_link in link.links %}
+                  {% assign headerItemClass = 'leading-none py-4 text-sm uppercase border-b border-solid border-white border-opacity-10' %}
+                  <li class="{{headerItemClass}}" data-target="{{sub_link.title | handleize}}" >
+                    <a href="{{collection_header_link.url}}" class="block h-full text-gray-400">
+                      {{ collection_header_link.title }}
+                    </a>
+                  </li>
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+
+        {% if multiple_tabs %}
+          <div class="w-11/12 mx-auto mt-6 relative">
+            <div class="subCategory bg-gray-800 px-4 py-3">
+              <h3 class="text-sm relative">
+                {{ linklists[collection_handle].links[0].title }}
+              </h3>
+            </div>
+            <ul class="sub_header absolute w-full hidden transition duration-300">
+              {% for sub_link in linklists[collection_handle].links %}
+                {% assign sub_linkItemClass = 'bg-gray-800 leading-none px-4 text-sm' %}
+                <li data-target="{{sub_link.title | handleize}}" 
+                  class="{{sub_linkItemClass}} {% if forloop.first == true %}active{% endif %}">
+                  <a href="javascript:;" class="block py-3 h-full text-gray-400 border-b border-solid border-gray-850">{{sub_link.title}}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="collection-header hidden md:block">
+        <div class="flex justify-between xl:justify-around border-t border-b border-solid border-white border-opacity-10">
+          {% for link in linklists['header-menu'].links %}
+          <!-- products -->
+            {% assign link_name = link.title | handleize %}
+            {% if link_name == 'products' %}
+              {% for collection_header_link in link.links %}
+                {% assign headerItemClass = 'hover-border-b leading-none pt-5 pb-4 text-sm md:text-base font-bold uppercase text-center' %}
+                <h4 class="{{headerItemClass}}{% if collection_header_link.url contains collection_handle %} active{% endif %}">
+                  <a href="{{collection_header_link.url}}" class="block h-full text-gray-400">
+                    {{ collection_header_link.title }}
+                  </a>
+                </h4>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        {% if multiple_tabs %}
+          <div class="bg-gray-820 mt-6">
+            <ul class="sub_header block mx-auto w-11/12 xl:w-10/12 flex justify-center items-center">
+              {% for sub_link in linklists[collection_handle].links %}
+                {% assign sub_linkItemClass = 'hover-border-b leading-none mx-8 pt-2 pb-1 text-sm md:text-base' %}
+                <li data-target="{{sub_link.title | handleize}}" 
+                  class="{{sub_linkItemClass}} {% if forloop.first == true %}active{% endif %}">
+                  <a href="javascript:;" class="block h-full text-gray-400">{{sub_link.title}}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      </div>
+    {% endunless %}
+
+    {% assign gridContainerClass = 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:auto-rows-fr gap-6 sm:gap-5 lg:gap-6 xl:gap-7 pb-12 md:pb-16 mb-20 border-b border-solid border-white border-opacity-10' %}
+
+    <div class="collection-list-container">
+      {% unless collection_handle == 'new-releases' %}
+      <div class="desc w-full sm:w-4/5 lg:w-2/3 max-w-4xl mx-auto pt-16 sm:pt-20 lg:pt-24">
+        <h1 class="{{titleSize}} {{titleMb_tight}}">
+          {{collection_title}}
+        </h1>
+        <p class="text-base text-gray-400">
+          {{collection_desc}}
+        </p>
+      </div>
+      {% endunless %}
+      <div class="list pt-16 sm:pt-20 lg:pt-24">
+        {% if multiple_tabs %}
+          {% for main_link in linklists[collection_handle].links %}
+            <!-- main_link：iphone-case -->
+            <div id="list-{{main_link.title | handleize}}" class="hidden">
+              {% if collection_handle == 'pitaka-cases' %}
+                {% for child_link in main_link.links %}
+                  <!-- child_link：iphone12-series -->
+
+                  {% unless child_link.title contains 'iPhone 11 Series (Compatible With MagSafe' %}
+                    {% assign compare_handle = child_link.title | remove: ' Series' | remove: ' 1&2' | remove: ' 2018/2020 & iPad Air 2020/2022' | prepend: 'Case for ' | handleize %}
+
+                    <div class="h-6 opacity-0" id="{{compare_handle}}"></div>
+                    <h4 class="mb-12 md:mb-16">{{child_link.title}}</h4>
+                    <div class="{{gridContainerClass}}">
+                      
+                      {% if child_link.type == "product_link" %}
+                        {% render 'grid-product-item-hover', product: child_link.object, bgColor: 800, link_product_no:true, flex_between:true %}
+                      
+                      {% elsif child_link.type == "collection_link" or child_link.type == "http_link" %}
+                        
+                        {% if child_link.type == "http_link" %}
+                          {% assign collection_link_handle = child_link.url | split: '#' | last %}
+                          {% assign compare_link = compare_handle | prepend: '/collections/' %}
+                          {% else %}
+                          {% assign collection_link_handle = child_link.url | remove_first: '/collections/' %}
+                          {% assign compare_link = child_link.url %}
+                        {% endif %}
+
+                        {% assign link_products = collections[collection_link_handle].products %}
+                    
+                        {% if link_products.size > 0 %}
+                          {% for link_product in link_products %}
+                            {% render 'grid-product-item-hover', product: link_product, bgColor: 800, flex_between: true %}
+                          {% endfor %}
+
+                          {% if collection_link_handle == 'case-for-iphone-11' %}
+                            {% assign link_products_11_magsafe = collections['magez-case-for-iphone-11-with-magsafe'].products %}
+                            {% if link_products_11_magsafe.length > 0 %}
+                              {% render 'grid-product-item-hover', product: link_products_11_magsafe[0], bgColor: 800, flex_between: true %}
+                            {% endif %}
+                          {% endif %}
+
+                          {% if link_products.length > 2 and link_products.length != 5 %} 
+                            {% assign extraGridClass = 'md:col-span-2 grid grid-cols-1 md:grid-cols-2 bg-gray-800' %}
+                            <div class="{{extraGridClass}}">
+                              <div class="w-11/12 mx-auto flex flex-col justify-center items-center text-center pl-0 md:pl-3.5 py-12">
+                                <img src="{{ 'collection-grid-compare-icon.svg' | asset_url }}" class="block mb-12 mx-auto">
+                                <h3 class="text-base xl:text-lg w-4/5 mx-auto font-bold font-upper mb-4">
+                                  {% if child_link.title contains 'AirPods' %}
+                                    WHICH AIRPODS CASE<br>IS RIGHT FOR YOU?
+                                  {% elsif child_link.title contains 'iPad' %}
+                                    WHICH IPAD CASE<br>IS RIGHT FOR YOU?
+                                  {% else %}
+                                    WHICH PHONE CASE<br>IS RIGHT FOR YOU?
+                                  {% endif %}
+                                </h3>
+                                <p class="text-base sm:text-sm xl:text-base text-gray-400 mb-12">
+                                  {% if child_link.title contains 'AirPods' %}
+                                    Compare our AirPods cases<br>and find your perfect match.
+                                  {% elsif child_link.title contains 'iPad' %}
+                                    Compare our ipad cases<br>and find your perfect match.
+                                  {% else %}
+                                    Compare our smartphone cases<br>and find your perfect match.
+                                  {% endif %}
+                                </p>
+                                {% render 'link-button',link_url: compare_link, link_title:'Learn More' %}
+                              </div>
+                              <div class="pl-0 md:pl-3.5 block sm:hidden md:block">
+                                <img src="{{ placeholder_gif }}" data-src="{{ collection_link_handle | remove: 'case-for' | prepend: 'collection-grid-compare' | append:'.webp' | asset_url }}"
+                                  class="block w-full h-full object-cover lazyload">
+                              </div>
+                            </div>
+                          {% elsif link_products.length > 1 %}
+                            <div class="bg-gray-800 flex flex-col justify-center items-center text-center py-12">
+                              <div class="w-11/12 mx-auto">
+                                <img src="{{ 'collection-grid-compare-icon.svg' | asset_url }}" class="block mb-12 mx-auto">
+                                <h3 class="text-base xl:text-lg w-4/5 mx-auto font-bold font-upper mb-4">
+                                  {% if child_link.title contains 'AirPods' %}
+                                    WHICH AIRPODS CASE<br>IS RIGHT FOR YOU?
+                                  {% elsif child_link.title contains 'iPad' %}
+                                    WHICH IPAD CASE<br>IS RIGHT FOR YOU?
+                                  {% else %}
+                                    WHICH PHONE CASE<br>IS RIGHT FOR YOU?
+                                  {% endif %}
+                                </h3>
+                                <p class="text-base sm:text-sm xl:text-base text-gray-400 mb-12">
+                                  {% if child_link.title contains 'AirPods' %}
+                                    Compare our AirPods cases<br>and find your perfect match.
+                                  {% elsif child_link.title contains 'iPad' %}
+                                    Compare our ipad cases<br>and find your perfect match.
+                                  {% else %}
+                                    Compare our smartphone cases<br>and find your perfect match.
+                                  {% endif %}
+                                </p>
+                                
+                                {% render 'link-button',link_url: compare_link, link_title:'Learn More' %}
+                              </div>
+                            </div>
+                          {% endif %}
+                        {% endif %}
+
+                      {% endif %}
+
+                    </div>
+                  {% endunless %}
+                {% endfor %}
+              {% else %}
+                <div class="{{gridContainerClass}}">
+                  <!-- main_link：home-office -->
+                  {% assign grids_length = 0 %}
+                  {% for child_link in main_link.links %}
+                    <!-- child_link：magez-juice-2 -->
+                    {% if child_link.type == "product_link" %}
+                      {% assign grids_length = grids_length | plus: 1 %}
+                      {% render 'grid-product-item-hover', product: child_link.object, bgColor: 800, link_product_no:true, flex_between:true %}
+
+                    {% elsif child_link.type == "collection_link" %}
+                      {% assign collection_link_handle = child_link.url | remove_first: '/collections/' %}
+                      {% assign link_products = collections[collection_link_handle].products %}
+                  
+                      {% if link_products.size > 0 %}
+                        {% for link_product in link_products %}
+                          {% assign grids_length = grids_length | plus: 1 %}
+                          {% render 'grid-product-item-hover', product: link_product, bgColor: 800, flex_between:true %}
+                        {% endfor %}
+
+                      {% endif %}
+                    {% endif %}
+                  {% endfor %}
+                  
+                  {% if main_link.title == 'Car' %}
+                    {% assign grids_length = grids_length | plus: 1 %}
+                    <div class="bg-gray-800 flex flex-col justify-center items-center text-center py-12">
+                      <div class="w-11/12 mx-auto">
+                        <img src="{{ 'collection-grid-compare-icon.svg' | asset_url }}" class="block mb-12 mx-auto">
+                        <h3 class="text-base xl:text-lg w-4/5 mx-auto font-bold font-upper mb-4">
+                          WHICH CAR MOUNT<br>IS RIGHT FOR YOU?
+                        </h3>
+                        <p class="text-base sm:text-sm xl:text-base text-gray-400 mb-12">
+                          Compare our magnetic car mounts<br>and find your perfect match.
+                        </p>
+                        {% assign compare_link = '/collections/car-phone-holders' %}
+                        {% render 'link-button',link_url: compare_link, link_title:'Learn More' %}
+                      </div>
+                    </div>
+                  {% endif %}
+
+                  {% assign remainder_3 = grids_length | modulo: 3 %}
+                  {% assign remainder_2 = grids_length | modulo: 2 %}
+                  {% assign col_md = 3 | minus: remainder_3 %}
+                  {% assign col_sm = 2 | minus: remainder_2 %}
+
+                  {% capture gridPicClass %}
+                    col-span-1 sm:col-span-{{col_sm}} {% if col_md == 3 %}md:col-span-2{% else %}md:col-span-{{col_md}}{% endif %}
+                  {% endcapture %}
+                  
+                  {% if col_md == 1 %}
+                    {% assign suffix_md = '-m.webp' %}
+                  {% else %}
+                    {% assign suffix_md = '.webp' %}
+                  {% endif %}
+
+                  {% if col_sm == 1 %}
+                    {% assign suffix_sm = '-m.webp' %}
+                  {% else %}
+                    {% assign suffix_sm = '.webp' %}
+                  {% endif %}
+
+                  <div class="{{gridPicClass}}">
+                    {% assign main_title_handle = main_link.title | handleize | prepend: '-' %}
+                    <picture>
+                      <source data-srcset="{{ collection_handle | append: main_title_handle | prepend: 'collection-grid-' | append: suffix_md | asset_url }}" media="(min-width: 1025px)">
+                      <source data-srcset="{{ collection_handle | append: main_title_handle | prepend: 'collection-grid-' | append: suffix_sm | asset_url }}" media="(min-width: 768px)">
+                      <img src="{{ placeholder_gif }}" data-src="{{ collection_handle | append: main_title_handle | prepend: 'collection-grid-' | append:'-m.webp' | asset_url }}"
+                        class="block w-full h-full object-cover lazyload">
+                    </picture>
+                  </div>          
+                  
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        {% elsif collection_handle == 'new-releases' %}
+          <div class="{{gridContainerClass}}">
+            {% assign grids_length = 0 %}
+            {% for item in collections['new-releases'].products %}
+              {% assign grids_length = grids_length | plus: 1 %}
+              {% render 'grid-product-item-hover', product: item, bgColor: 800, flex_between:true %}
+            {% endfor %}
+
+            {% assign remainder_3 = grids_length | modulo: 3 %}
+            {% assign remainder_2 = grids_length | modulo: 2 %}
+            {% assign col_md = 3 | minus: remainder_3 %}
+            {% assign col_sm = 2 | minus: remainder_2 %}
+
+            {% capture gridPicClass %}
+              col-span-1 sm:col-span-{{col_sm}} {% if col_md == 3 %}md:col-span-2{% else %}md:col-span-{{col_md}}{% endif %}
+            {% endcapture %}
+
+            {% if col_md == 1 %}
+              {% assign suffix_md = '-m.webp' %}
+            {% else %}
+              {% assign suffix_md = '.webp' %}
+            {% endif %}
+
+            {% if col_sm == 1 %}
+              {% assign suffix_sm = '-m.webp' %}
+            {% else %}
+              {% assign suffix_sm = '.webp' %}
+            {% endif %}
+            
+            <div class="{{gridPicClass}}">
+              <picture>
+                <source data-srcset="{{ collection_handle | prepend: 'collection-grid-' | append: suffix_md | asset_url }}" media="(min-width: 1025px)">
+                <source data-srcset="{{ collection_handle | prepend: 'collection-grid-' | append: suffix_sm | asset_url }}" media="(min-width: 768px)">
+
+                <img src="{{ placeholder_gif }}" data-src="{{ collection_handle | prepend: 'collection-grid-' | append:'-m.webp' | asset_url }}"
+                  class="block w-full h-full object-cover lazyload">
+              </picture>
+            </div>
+          </div>
+        {% else %}
+          {% if collection_handle == 'accessories' %}
+            <div class="{{gridContainerClass}}">
+              {% assign grids_length = 0 %}
+              {% for child_link in linklists[collection_handle].links %}
+
+                {% if child_link.type == "product_link"  %}
+                  {% assign grids_length = grids_length | plus: 1 %}
+                  {% render 'grid-product-item-hover', product: child_link.object, bgColor: 800, link_product_no:true, flex_between:true %}
+
+                {% elsif child_link.type == "collection_link"%}
+                  {% assign collection_link_handle = child_link.url | remove_first: '/collections/' %}
+                  {% assign link_products = collections[collection_link_handle].products %}
+                  
+                  {% if link_products.length > 0 %}
+                    {% for link_product in link_products %}
+                      {% assign grids_length = grids_length | plus: 1 %}
+                      {% render 'grid-product-item-hover', product: link_product, bgColor: 800, flex_between: true %}
+                    {% endfor %}
+
+                    {% if link_products.length > 1  %} 
+                      {% assign grids_length = grids_length | plus: 1 %}
+                      <div class="bg-gray-800 flex flex-col justify-center items-center text-center py-12">
+                        <div class="w-11/12 mx-auto">
+                          <img src="{{ 'collection-grid-compare-icon.svg' | asset_url }}" class="block mb-12 mx-auto">
+                          
+                          <h3 class="text-base xl:text-lg w-4/5 mx-auto font-bold font-upper mb-4">
+                            WHICH WALLET<br>IS RIGHT FOR YOU?
+                          </h3>
+                          <p class="text-base sm:text-sm xl:text-base text-gray-400 mb-12">
+                            Compare our wallets<br>and find your perfect match.
+                          </p>
+                          {% render 'link-button',link_url: child_link.url, link_title:'Learn More' %}
+                        </div>
+                      </div>
+                    {% endif %}
+
+                  {% endif %}
+
+                {% endif %}
+              {% endfor %}
+
+              {% assign remainder_3 = grids_length | modulo: 3 %}
+              {% assign remainder_2 = grids_length | modulo: 2 %}
+              {% assign col_md = 3 | minus: remainder_3 %}
+              {% assign col_sm = 2 | minus: remainder_2 %}
+              {% capture gridPicClass %}
+                col-span-1 sm:col-span-{{col_sm}} {% if col_md == 3 %}md:col-span-2{% else %}md:col-span-{{col_md}}{% endif %}  
+              {% endcapture %}
+
+              {% if col_md == 1 %}
+                {% assign suffix_md = '-m.webp' %}
+              {% else %}
+                {% assign suffix_md = '.webp' %}
+              {% endif %}
+
+              {% if col_sm == 1 %}
+                {% assign suffix_sm = '-m.webp' %}
+              {% else %}
+                {% assign suffix_sm = '.webp' %}
+              {% endif %}
+              
+              <div class="{{gridPicClass}}">
+                <picture>
+                  <source data-srcset="{{ collection_handle | prepend: 'collection-grid-' | append: suffix_md | asset_url }}" media="(min-width: 1025px)">
+                  <source data-srcset="{{ collection_handle | prepend: 'collection-grid-' | append: suffix_sm | asset_url }}" media="(min-width: 768px)">
+    
+                  <img src="{{ placeholder_gif }}" data-src="{{ collection_handle | prepend: 'collection-grid-' | append:'-m.webp' | asset_url }}"
+                    class="block w-full h-full object-cover lazyload">
+                </picture>
+              </div>
+
+            </div>
+          {% else %}
+            <div class="{{gridContainerClass}}">
+              {% assign grids_length = 0 %}
+              {% for child_link in linklists[collection_handle].links %}
+              
+                {% if child_link.type == "product_link"  %}
+                  {% assign grids_length = grids_length | plus: 1 %}
+                  {% render 'grid-product-item-hover', product: child_link.object, bgColor: 800, link_product_no:true, flex_between:true %}
+
+                {% elsif child_link.type == "collection_link" and child_link.title != 'MagEZ Digital Travel Kit' %}
+                  {% assign collection_link_handle = child_link.url | remove_first: '/collections/' %}
+                  {% assign link_products = collections[collection_link_handle].products %}
+                  
+                  {% if link_products.length == 1 %}
+                    {% for link_product in link_products %}
+                      {% assign grids_length = grids_length | plus: 1 %}
+                      {% render 'grid-product-item-hover', product: link_product, bgColor: 800, flex_between: true %}
+                    {% endfor %}
+                  {% endif %}
+
+                {% endif %}
+              {% endfor %}
+
+              {% assign remainder_3 = grids_length | modulo: 3 %}
+              {% assign remainder_2 = grids_length | modulo: 2 %}
+              {% assign col_md = 3 | minus: remainder_3 %}
+              {% assign col_sm = 2 | minus: remainder_2 %}
+
+              {% capture gridPicClass %}
+                {% if collection_handle == 'magsafe-collection' %}
+                  col-span-1 sm:col-span-{{col_sm}} md:col-span-{{col_md}} 
+                {% else %}
+                  col-span-1 sm:col-span-{{col_sm}} {% if col_md == 3 %}md:col-span-2{% else %}md:col-span-{{col_md}}{% endif %}  
+                {% endif %}
+              {% endcapture %}
+
+              {% if col_md == 1 %}
+                {% assign suffix_md = '-m.webp' %}
+              {% else %}
+                {% assign suffix_md = '.webp' %}
+              {% endif %}
+
+              {% if col_sm == 1 %}
+                {% assign suffix_sm = '-m.webp' %}
+              {% else %}
+                {% assign suffix_sm = '.webp' %}
+              {% endif %}
+              
+              {% if collection_handle == 'magsafe-collection' %}
+                {% capture extraGridClass %}
+                  grid grid-cols-1 sm:grid-cols-{{col_sm}} md:grid-cols-{{col_md}} col-span-1 sm:col-span-{{col_sm}} md:col-span-{{col_md}}
+                {% endcapture %}
+
+                {% capture sm_pic %}
+                  {% if col_sm == 1 %}
+                    sm:hidden
+                  {% else %}
+                    sm:block sm:col-span-{{ col_sm | minus: 1}}
+                  {% endif %}
+                {% endcapture %}
+                
+                {% capture md_pic %}
+                  {% if col_md == 1 %}
+                    md:hidden
+                  {% else %}
+                    md:block md:col-span-{{ col_md | minus: 1 }}
+                  {% endif %}
+                {% endcapture %}
+                  
+
+                <div class="{{ extraGridClass }} auto-rows-fr">
+                  <div class="col-span-1 bg-gray-800">
+                    <div class="w-11/12 h-full mx-auto flex flex-col justify-center items-center text-center">
+                      <img src="{{ 'collection-grid-compare-icon.svg' | asset_url }}" class="block mb-12 mx-auto">
+                      <h3 class="text-lg w-4/5 mx-auto font-bold font-upper mb-4">
+                        What is PITAKA&nbsp;MagEZ<sup>&reg;</sup>&nbsp;System?
+                      </h3>
+                      <p class="text-base sm:text-sm xl:text-base text-gray-400 mb-12">
+                        Check how each MagEZ<sup>&reg;</sup> product<br>works with each other.
+                      </p>
+                      {% render 'link-button',link_url: '/collections/magez-system', link_title:'Learn More' %}
+                    </div>
+                  </div>
+                  <div class="col-span-1 block {{sm_pic}} {{md_pic}} pl-0 md:pl-3.5 bg-gray-800">
+                    <picture>
+                      <source data-srcset="{{ 'collection-grid-magsafe-collection' | append: suffix_md | asset_url }}" media="(min-width: 1025px)">
+                      <source data-srcset="{{ 'collection-grid-magsafe-collection' | append: suffix_sm | asset_url }}" media="(min-width: 768px)">
+                      <img src="{{ placeholder_gif }}" data-src="{{ 'collection-grid-magsafe-collection' | append:'-m.webp' | asset_url }}"
+                        class="block w-full h-full object-cover lazyload">
+                    </picture>
+                  </div>
+                </div>
+
+                {%- comment -%}
+                <div class="{{extraGridClass}}">
+                  <div class="w-11/12 mx-auto flex flex-col justify-center items-center text-center pl-0 md:pl-3.5 py-12">
+                    <img src="{{ 'collection-grid-compare-icon.svg' | asset_url }}" class="block mb-12 mx-auto">
+                    <h3 class="text-lg w-4/5 mx-auto font-bold font-upper mb-4">
+                      What is PITAKA&nbsp;MagEZ<sup>&reg;</sup>&nbsp;System?
+                    </h3>
+                    <p class="text-base sm:text-sm xl:text-base text-gray-400 mb-12">
+                      Check how each MagEZ<sup>&reg;</sup> product<br>works with each other.
+                    </p>
+                    {% render 'link-button',link_url: '/collections/magez-system', link_title:'Learn More' %}
+                  </div>
+                  <div class="{{extraPicClass}}">
+                    <picture>
+                      <source data-srcset="{{ 'collection-grid-magsafe-collection' | append: suffix_md | asset_url }}" media="(min-width: 1025px)">
+                      <source data-srcset="{{ 'collection-grid-magsafe-collection' | append: suffix_sm | asset_url }}" media="(min-width: 768px)">
+                      <img src="{{ placeholder_gif }}" data-src="{{ 'collection-grid-magsafe-collection' | append:'-m.webp' | asset_url }}"
+                        class="block w-full h-full object-cover lazyload">
+                    </picture>
+                  </div>
+                </div>
+                {%- endcomment -%}
+              {% else %}
+                <div class="{{gridPicClass}}">
+                  <picture>
+                    <source data-srcset="{{ collection_handle | prepend: 'collection-grid-' | append: suffix_md | asset_url }}" media="(min-width: 1025px)">
+                    <source data-srcset="{{ collection_handle | prepend: 'collection-grid-' | append: suffix_sm | asset_url }}" media="(min-width: 768px)">
+      
+                    <img src="{{ placeholder_gif }}" data-src="{{ collection_handle | prepend: 'collection-grid-' | append:'-m.webp' | asset_url }}"
+                      class="block w-full h-full object-cover lazyload">
+                  </picture>
+                </div>
+              {% endif %}
+            </div>
+
+            {% for child_link in linklists[collection_handle].links %}
+              {% assign collection_link_handle = child_link.url | split: '#' | last %}
+              {% assign link_products = collections[collection_link_handle].products %}
+
+              {% if link_products.length > 0 and child_link.type == "http_link" %}
+                {% assign compare_handle = child_link.title | handleize %}
+                <div class="h-6 opacity-0" id="{{compare_handle}}"></div>
+                <h4 class="mb-12 md:mb-16">{{child_link.title}}</h4>
+
+                <div class="{{gridContainerClass}}">
+                  {% for link_product in link_products %}
+                    {% render 'grid-product-item-hover', product: link_product, bgColor: 800, flex_between: true %}
+                  {% endfor %}
+
+                  {% if link_products.length > 1 %}
+                  <div class="bg-gray-800 flex flex-col justify-center items-center text-center py-12">
+                    <div class="w-11/12 mx-auto">
+                      <img src="{{ 'collection-grid-compare-icon.svg' | asset_url }}" class="block mb-12 mx-auto">
+                      
+                      <h3 class="text-base xl:text-lg w-4/5 mx-auto font-bold font-upper mb-4">
+                        WHICH WALLET<br>IS RIGHT FOR YOU?
+                      </h3>
+                      <p class="text-base sm:text-sm xl:text-base text-gray-400 mb-12">
+                        Compare our wallets<br>and find your perfect match.
+                      </p>
+                      {% assign compare_link = compare_handle | prepend: '/collections/' %}
+                      {% render 'link-button',link_url: compare_link, link_title:'Learn More' %}
+                    </div>
+                  </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            {% endfor %}
+              
+          {% endif %}
+
+        {% endif %}
+      </div>
+    </div>
+    
+  </div>
+{% endif %}
+
+
+<style>
+  .list .grid>div.bg-transparent{
+    background-color: #292C31 !important;
+    padding-top: 3rem !important;
+  }
+</style>
+
+{% unless collection_handle == 'new-releases' %}
+<style>
+  .collection-header ul.absolute{
+    z-index: 10;
+  }
+  .mainCategory~ul.absolute{
+    z-index: 11;
+  }
+  .mainCategory h3::after,
+  .subCategory h3::after{
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    right: 0;
+    top: 5px;
+    transform: rotate(90deg);
+    background:url({{'triggle_pixel.svg' | asset_url }}) no-repeat center center;
+    background-size: contain;
+    transition:all .3s ease;
+  }
+
+  .mainCategory h3.active::after,
+  .subCategory h3.active::after{
+    transform: rotate(-90deg);
+  }
+  
+  .hover-border-b{
+    border-bottom: 2px solid transparent;
+  }
+
+  .hover-border-b:hover,
+  .hover-border-b.active{
+    border-color: #fff;
+    color: #fff;
+  }
+  
+  .hover-border-b:hover a,
+  .hover-border-b.active a{
+    color: #fff;
+    opacity: 100;
+  }
+</style>
+<script>
+  $(function(){
+    $('.mainCategory h3').click(function(){
+      $(this).toggleClass('active');
+      $('.sub_header').hide();
+      $('.subCategory h3').removeClass('active');
+      $('.mainCategory').next('ul').slideToggle();
+    })
+  })
+</script>
+
+{% if multiple_tabs %}
+<script>
+  let urlParams = {};
+  if (location.search) {
+    location.search.slice(1).split('?').forEach(item => {
+      const arr = item.split('=');
+      urlParams[arr[0]] = arr[1] || '';
+    });
+  }
+  console.log(urlParams)
+  
+  function activeHeader($activeLi,hashTag){
+    const targetID = '#list-' + $activeLi.data('target');
+
+    const mainType = `{{ collection_type }}`;
+    let hash = hashTag?`#${hashTag}`:'';
+    if (mainType == '') {
+      history.pushState("", document.title, window.location.pathname + `?t=${$activeLi.data('target')}` + hash);
+    }else{
+      history.pushState("", document.title, window.location.pathname + `?q=${mainType}&t=${$activeLi.data('target')}` + hash);
+    }
+    $(targetID).show().siblings().hide();
+  }
+  
+  $(function(){
+    if(urlParams.t){
+      let hrefArr = location.href.split('#');
+      let $activeLi = $('.sub_header').find('li').filter(function(){return $(this).data('target') == urlParams.t});
+      $activeLi.addClass('active').siblings().removeClass('active');
+      if (hrefArr.length > 1) {
+        activeHeader($activeLi, hrefArr[1]);
+      }else{
+        activeHeader($activeLi);
+      }
+    }else{
+      activeHeader($('.sub_header').find('li:first'))
+    }
+    if(window.innerWidth < 1280){
+      $('.subCategory h3').click(function(){
+        $(this).toggleClass('active');
+        $('.subCategory').next('ul').slideToggle();
+      });
+      
+      $('.sub_header').on('click','li',function(){
+        const caseType = $(this).find('a').text();
+        $('.subCategory h3').text(caseType);
+        activeHeader($(this));
+        const scrollTop = $('.collection-hero').height() + 120;
+        window.scrollTo({
+          top:scrollTop,
+          behavior:"smooth"
+        });
+        $('.sub_header').slideToggle();
+      })
+    }else{
+      $('.sub_header').on('click', 'li', function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        activeHeader($(this))
+        const scrollTop = $('.collection-hero').height() + 120;
+        window.scrollTo({
+          top:scrollTop,
+          behavior:"smooth"
+        });
+      })
+    }
+  })
+</script>
+{% endif %}
+{% endunless %}

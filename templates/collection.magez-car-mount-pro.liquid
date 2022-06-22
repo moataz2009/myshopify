@@ -1,0 +1,298 @@
+{% render 'buy-bar', product: all_products[collection.handle] %}
+
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_6 = 'w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28' %}
+{% assign pdClass_b = 'px-3 sm:px-6 md:px-0 pb-16 sm:pb-20 lg:pb-28' %}
+{% assign titleBoxClass= 'mx-auto mb-12 w-11/12 sm:w-5/6 md:w-2/3 xl:w-2/5' %}
+{% assign titleSize = 'text-2xl md:text-3xl font-bold' %}
+{% assign descSize = 'text-sm sm:text-base text-gray-400' %}
+{% assign titleDecoMy = 'block mt-4 mb-6' %}
+
+{% assign altName = 'MagEZ Car Mount Pro' %}
+
+<div class="relative section-hero">
+  <div class="absolute w-full h-full pt-12 sm:pt-0">
+    <div
+      class="w-10/12 lg:w-9/12 h-full mx-auto flex justify-center sm:justify-end sm:items-center text-center sm:text-left">
+      <div>
+        <h1 class="{{titleSize}} lg:text-4xl mb-4">MagEZ Car Mount Pro</h1>
+        <p class="text-xl md:text-2xl text-gray-400">
+          Stylish, Yet Sturdy.
+        </p>
+      </div>
+    </div>
+  </div>
+  <picture>
+    <source data-srcset="{{'magez-car-mount-pro-section1.webp' | asset_url}}" media="(min-width: 1281px)">
+    <source data-srcset="{{'magez-car-mount-pro-section1-m.webp' | asset_url}}" media="(min-width: 768px)">
+    <img src="{{ placeholder_gif }}" data-src="{{'magez-car-mount-pro-section1-s.webp' | asset_url}}"
+      alt="{{ altName }}" class="block w-full lazyload">
+  </picture>
+</div>
+
+<div class="w-full bg-gray-800">
+  <div class="{{wClass_8}} {{pdClass}}">
+    <div class="{{titleBoxClass}} xl:w-3/5">
+      <h3 class="text-lg sm:text-xl md:text-2xl text-center">
+        Compact and with an ultra-streamlined aesthetic, the MagSafe compatible MagEZ Car Mount Pro offers style with
+        exceptional stability while you drive.
+      </h3>
+    </div>
+    {% render 'video-set' , name:'product-video-car-mount-pro', no_webm: true, coverPicSuffix:'.webp' %}
+  </div>
+</div>
+
+<div class="{{wClass}} {{pdClass}}">
+  <div class="{{titleBoxClass}} text-center">
+    <h3 class="{{titleSize}}">
+      More Magnetism for Better Stability
+    </h3>
+  </div>
+
+  {% assign descs = 'Experience uninterrupted wireless charging, even on your bumpiest ride, with an improved MagSafe compatibility to create a stronger magnetism suction. Work with MagEZ<sup>&reg;</sup> 2.0 System. <sup><a href="/collections/magez-system" title="Learn More about Our MagEZ System"><span class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</span></a></sup> | Using an innovative co-molding technique, MagEZ Car Mount Pro has a textured surface that keeps your phone held firmly in place. | Conveniently attach your smartphone to the charger with a single hand and experience a stable, film hold even on the bumpiest of roads.' %}
+  {% render 'center-slides', name:'MagEZ Car Mount Pro', sliderDescs:descs, slideIndex: 2, picSuffix:'.webp' %}
+
+</div>
+
+<div class="w-full bg-gray-800">
+  <div class="{{wClass_8}} {{pdClass}} flex flex-col-reverse sm:flex-row items-stretch justify-between">
+    <div class="w-7/8 -mt-10 sm:w-5/8 sm:mt-0">
+      <img src="{{ placeholder_gif }}" data-src="{{'magez-car-mount-pro-section4-1.webp' | asset_url}}"
+        alt="{{ altName }}" class="block w-full h-full object-cover lazyload">
+    </div>
+    <div class="w-full sm:w-3/8 grid grid-cols-1 gap-12 sm:gap-0 sm:auto-rows-fr pl-0 sm:pl-6 laptop:pl-12 md:pl-20">
+      <div class="w-6/8 sm:w-full place-self-start laptop:place-self-center">
+        <div>
+          <h3 class="{{titleSize}}">
+            Secure Attachment
+          </h3>
+          <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+          <p class="{{descSize}}">
+            The smart hook system has stabilising grooves on both sides to firmly hook onto different car vents for
+            a balance and sturdy mount.
+          </p>
+        </div>
+      </div>
+      <img src="{{ placeholder_gif }}" data-src="{{'magez-car-mount-pro-section4-2.webp' | asset_url}}"
+        alt="{{ altName }}" class="block w-5/8 sm:w-full place-self-end lazyload">
+    </div>
+
+  </div>
+</div>
+
+<div class="w-full section8 relative">
+  <div
+    class="{{wClass_6}} {{pdClass}} h-full absolute left-1/2 transform -translate-x-1/2 z-10 flex flex-col justify-center">
+    <div class="mx-auto w-11/12 lg:w-3/4 mb-20 text-center">
+      <h3 class="{{titleSize}}">
+        Secure Even On The Bumpiest Road
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}} mx-auto">
+      <p class="{{descSize}}">
+        With stronger magnetism plus the new smart hook design, our MagSafe car mount can keep your phone held firmly in
+        any road conditions.
+      </p>
+    </div>
+    <div class="grid grid-cols-3 gap-x-6 sm:flex justify-around md:justify-between">
+      <div class="text-center">
+        <img src="{{ 'magez-car-mount-pro-section8-icon-1.svg' | asset_url }}" class="block w-16 sm:w-20 mx-auto mb-2">
+        <p class="text-xs sm:text-sm">Sudden Breaking</p>
+      </div>
+      <div class="text-center">
+        <img src="{{ 'magez-car-mount-pro-section8-icon-2.svg' | asset_url }}" class="block w-16 sm:w-20 mx-auto mb-2">
+        <p class="text-xs sm:text-sm">Deceleration Strips</p>
+      </div>
+      <div class="text-center">
+        <img src="{{ 'magez-car-mount-pro-section8-icon-3.svg' | asset_url }}" class="block w-16 sm:w-20 mx-auto mb-2">
+        <p class="text-xs sm:text-sm">Ruggeded Mountain Road</p>
+      </div>
+    </div>
+  </div>
+  <picture>
+    <img src="{{ placeholder_gif }}" data-src="{{'magez-car-mount-pro-section8.webp' | asset_url}}"
+      alt="{{ altName }}"
+      class="block w-full h-full object-cover object-center lazyload">
+  </picture>
+</div>
+
+<div
+  class="parallexScroll z-10 bg-gray-850 pt-16 sm:pt-20 md:pt-28 h-screen flex flex-col overflow-hidden md:flex-row md:items-center justify-between md:justify-end">
+  <div class="w-11/12 sm:w-4/5 md:w-5/12 xl:w-4/12 pl-6 sm:pl-12 md:pl-0 md:pr-24 z-20">
+    <h3 class="{{titleSize}}">
+      Fast, Safe, and Reliable
+    </h3>
+    <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+    <p class="{{descSize}} mb-6">
+      MagEZ Car Mount Pro offers up to 15W fast charging*. With a unique built-in cooling fan that reduces heat, your
+      MagEZ Car Mount Pro and smartphone stay safe from overheating as you wireless charge.
+    </p>
+
+    <p class="{{descSize}} mb-6">
+      The car charger also includes sensors that detect an increase in temperature, voltage, and current to protect your
+      devices while driving.
+    </p>
+
+    <p class="{{descSize}}">
+      *7.5W for iPhone
+    </p>
+  </div>
+
+  <div
+    class="scroll-pictures relative w-full transform scale-110 translate-x-1/3 sm:scale-105 sm:translate-x-1/4 md:scale-100 md:translate-x-16 md:translate-y-20 xl:translate-x-0 sm:w-4/5 md:w-6/12 md:h-full self-end">
+    <img src="{{ placeholder_gif }}" class="block w-full max-h-full lazyload bg-gray-850"
+      data-src="{{ 'magez-car-mount-pro-section5-1.webp' | asset_url }}" id="scroll-img-1" />
+    <img src="{{ placeholder_gif }}" class="absolute top-0 block opacity-0 w-full max-h-full bg-gray-850 lazyload"
+      data-src="{{ 'magez-car-mount-pro-section5-2.webp' | asset_url }}" id="scroll-img-2" />
+    {%- comment -%}
+    <img src="{{ placeholder_gif }}" class="absolute top-0 block opacity-0 w-full max-h-full z-10 bg-gray-850 lazyload"
+      data-src="{{ 'magez-car-mount-pro-section5-3.webp' | asset_url }}" id="scroll-img-3" />
+    {%- endcomment -%}
+    <img class="absolute top-0 block opacity-0 max-h-full" id="scroll-plus" />
+    <img class="absolute top-0 block opacity-0 max-h-full invisible" id="scroll-hidden" />
+  </div>
+</div>
+
+{%- comment -%}
+<div class="parallexScroll overflow-hidden h-screen relative">
+  <div class="{{wClass_8}} h-full z-10 absolute left-1/2 transform -translate-x-1/2 flex items-center">
+    <div class="w-11/12 sm:w-4/5 laptop:w-3/8">
+      <h3 class="{{titleSize}}">
+        Fast, Safe, and Reliable
+      </h3>
+      <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="{{titleDecoMy}}">
+      <p class="{{descSize}} mb-6">
+        MagEZ Car Mount Pro offers up to 15W fast charging*. With a unique built-in cooling fan that reduces heat, your
+        MagEZ Car Mount Pro and smartphone stay safe from overheating as you wireless charge.
+      </p>
+
+      <p class="{{descSize}} mb-6">
+        The car charger also includes sensors that detect an increase in temperature, voltage, and current to protect
+        your
+        devices while driving.
+      </p>
+
+      <p class="{{descSize}}">
+        *7.5W for iPhone
+      </p>
+    </div>
+  </div>
+</div>
+{%- endcomment -%}
+
+<div class="w-full bg-gray-800">
+  <div class="{{wClass}} {{pdClass}}">
+    <picture>
+      <source media="(min-width: 1281px )" data-srcset="{{'magez-car-mount-pro-section6.webp' | asset_url}}">
+      <source media="(min-width: 768px )" data-srcset="{{'magez-car-mount-pro-section6-m.webp' | asset_url}}">
+      <img src="{{ placeholder_gif }}" data-src="{{'magez-car-mount-pro-section6-s.webp' | asset_url}}"
+        alt="{{ altName }}" class="block w-full mb-6 lazyload">
+    </picture>
+    <picture>
+      <source media="(min-width: 1281px )" data-srcset="{{'magez-car-mount-pro-section7.webp' | asset_url}}">
+      <source media="(min-width: 768px )" data-srcset="{{'magez-car-mount-pro-section7-m.webp' | asset_url}}">
+      <img src="{{ placeholder_gif }}" data-src="{{'magez-car-mount-pro-section7-s.webp' | asset_url}}"
+        alt="{{ altName }}" class="block w-full lazyload">
+    </picture>
+  </div>
+</div>
+
+<style>
+  #scroll-plus {
+    max-width: unset;
+    width: 200%;
+    margin-left: -100%;
+  }
+
+  .section-hero {
+    min-height: 35vw;
+  }
+
+  .section8 {
+    height: 512px;
+  }
+
+  @media screen and (min-width:1921px) {
+    .section8 {
+      height: auto;
+    }
+  }
+</style>
+
+{%- comment -%}
+<script>
+  var images = [
+    "{{ 'magez-car-mount-pro-section5-1.webp' | asset_url }}",
+    "{{ 'magez-car-mount-pro-section5-2.webp' | asset_url }}",
+    "{{ 'magez-car-mount-pro-section5-3.webp' | asset_url }}"
+  ];
+  var obj = {
+    curImg: 0
+  };
+  var tween = TweenMax.to(obj, 1, {
+    curImg: images.length - 1,
+    roundProps: "curImg",
+    repeat: 0,
+    immediateRender: true,
+    ease: Linear.easeNone,
+    onUpdate: function () {
+      $("#twist-item").attr("src", images[obj.curImg]);
+      $("#twist-item").css("opacity", 1);
+    }
+  });
+  var controller = new ScrollMagic.Controller();
+  var scene = new ScrollMagic.Scene({
+      triggerElement: "#trigger",
+      duration: 500,
+      offset: -50
+    })
+    .setTween(tween)
+    .addTo(controller);
+</script>
+{%- endcomment -%}
+
+{{ 'TweenMax.min.js' | asset_url | script_tag }}
+{{ 'ScrollMagic.js' | asset_url | script_tag }}
+{{ 'animation.gsap.min.js' | asset_url | script_tag }}
+
+<script>
+  $(document).ready(function () {
+    let parallexH = window.innerHeight * 2;
+    let controller = new ScrollMagic.Controller();
+
+    var tl = new TimelineLite();
+    tl
+      .to('#scroll-img-1', 0.5, {
+        opacity: 0
+      })
+      .to('#scroll-img-2', 0.5, {
+        opacity: 1
+      }, '-=0.3')
+      // .to('#scroll-img-3', 0.5, {
+      //   opacity: 1
+      // })
+      .to('#scroll-plus', 0.1, {
+        opacity: 1,
+        onComplete: function () {
+          $("#scroll-plus").attr("src", "{{ 'magez-car-mount-pro-section5-3-plus.gif' | asset_url }}");
+        },
+        onReverseComplete: function () {
+          $("#scroll-plus").attr("src", "");
+        }
+      })
+      .to('#scroll-hidden',0.2,{
+        opacity: 1
+      }, '+=0.3');
+
+    let sc = new ScrollMagic.Scene({
+        triggerElement: '.parallexScroll',
+        triggerHook: 0,
+        duration: '300%',
+        tweenChanges: true
+      })
+      .setTween(tl)
+      .setPin('.parallexScroll')
+      .addTo(controller)
+  });
+</script>

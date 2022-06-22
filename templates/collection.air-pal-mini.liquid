@@ -1,0 +1,714 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+{% assign base_name = 'pal-mini' %}
+<div class="section1 pt-flex pt-flex-center pt-flex-column">
+    <div class="pt-section-content pt-text-center">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400 font-upper">Pocketable Style</h3>
+    </div>
+    <picture>
+      <source data-srcset="{{ base_name | prepend: 'product-section1-' | append:'.png' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ base_name | prepend: 'product-section1-' | append:'-m.png' | asset_url }}"
+        class="img-responsive width-100 lazyload">
+    </picture>
+  </div>
+  
+  {%- comment -%}
+  <div class="section2 exploded relative">
+    <!-----------EXPLODED SECTION ------------->
+    <div class="animation">
+      <div class="animItem centerY coil">
+        <img src="{{'airpal-mini-coil.png' | asset_url}}" alt="Air Pal Mini Coil">
+        <div class="caption">
+          <div>Coil</div>
+          <img src="{{'airpal-mini-lineLeft.png' | asset_url}}" class="captionLine" alt="Air Pal Mini Coil Line">
+        </div>
+      </div>
+      <div class="animItem centerY plate">
+        <img src="{{'airpal-mini-plate.png' | asset_url}}" alt="Air Pal Mini Plate">
+        <div class="caption">
+          <div>Antifreeze&nbsp;Plate</div>
+          <img src="{{'airpal-mini-lineLeft.png' | asset_url}}" class="captionLine" alt="Air Pal Mini Plate Line">
+        </div>
+      </div>
+      <div class="animItem centerY fpc centerX">
+        <img src="{{'airpal-mini-fpc.png' | asset_url}}" alt="Air Pal Mini FPC and Lightning Port">
+        <div class="caption">
+          <div>
+            <span class="sideTxt">Lightning&nbsp;Port</span>
+            <img src="{{'airpal-mini-lineLeft.png' | asset_url}}" class="captionLine sideTxtImg"
+              alt="Air Pal Mini FPC and Lightning Port Line">
+          </div>
+          <div>
+            <span class="sideTxt">FPC</span>
+            <img src="{{'airpal-mini-lineLeft.png' | asset_url}}" class="captionLine sideTxtImg"
+              alt="Air Pal Mini FPC and Lightning Port Line">
+          </div>
+        </div>
+      </div>
+      <img src="{{'airpal-mini-body.png' | asset_url}}" class="animItem centerX centerY body" alt="Air Pal Mini Body">
+      <div class="animItem centerY plate_r">
+        <img src="{{'airpal-mini-plate.png' | asset_url}}" alt="Air Pal Mini Plate">
+        <div class="caption alignRight">
+          <div>Antifreeze&nbsp;Plate</div>
+          <img src="{{'airpal-mini-lineRight.png' | asset_url}}" class="captionLine" alt="Air Pal Mini Plate Line">
+        </div>
+      </div>
+  
+      <div class="animItem centerY coil_r">
+        <img src="{{'airpal-mini-coil.png' | asset_url}}" alt="Air Pal Mini Coil">
+        <div class="caption alignRight">
+          <div>Coil</div>
+          <img src="{{'airpal-mini-lineRight.png' | asset_url}}" class="captionLine" alt="Air Pal Mini Coil Line">
+        </div>
+      </div>
+      <div class="animItem aramidBody centerX">
+        <img src="{{'airpal-mini-aramid-body.png' | asset_url}}" alt="Air Pal Mini Aramid Body">
+        <img src="{{'airpal-mini-body-edge.png' | asset_url}}" id="bodyEdge" class="bodyEdge"
+          alt="Air Pal Mini Body Edge">
+        <div class="caption">
+          <span class="sideTxt">Aramid Body</span>
+          <img src="{{'airpal-mini-lineLeft.png' | asset_url}}" class="captionLine sideTxtImg"
+            alt="Air Pal Mini Aramid Body Line">
+        </div>
+      </div>
+  
+      <div class="animItem centerX plasticCap">
+        <img src="{{'airpal-mini-plastic-cap.png' | asset_url}}" alt="Air Pal Mini Plastic Cap">
+        <div class="caption alignRight">
+          <img src="{{'airpal-mini-lineRight.png' | asset_url}}" class="captionLine sideTxtImg"
+            alt="Air Pal Mini Plastic Cap Line">
+          <span class="sideTxt">Plastic Cap</span>
+        </div>
+      </div>
+      <div class="animItem centerX aramidCap">
+        <img src="{{'airpal-mini-aramid-cap.png' | asset_url}}" alt="Air Pal Mini Aramid Cap">
+        <div class="caption alignRight">
+          <img src="{{'airpal-mini-lineRight.png' | asset_url}}" class="captionLine sideTxtImg"
+            alt="Air Pal Mini Aramid Cap Line">
+          <span class="sideTxt">Aramid Cap</span>
+        </div>
+      </div>
+    </div>
+    {%- endcomment -%}
+    <div class="pt-section section2 pt-flex pt-flex-center relative">
+      <picture>
+        <source data-srcset="{{ base_name | prepend: 'product-section2-' | append:'.png' | asset_url }}"
+          media="(min-width: 769px)">
+        <img src="{{ placeholder_gif }}"
+          data-src="{{ base_name | prepend: 'product-section2-' | append:'-m.png' | asset_url }}"
+          class="img-responsive lazyload">
+      </picture>
+      <div class="pt-section-content absolute">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+          Dual-sided Charging
+        </h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          With wireless charging coils on both sides of the Air Pals case, your AirPods can charge on whichever side you
+          place it.
+        </p>
+      </div>
+    </div>
+  
+    {%- comment -%}
+    <div class="section3 parallexScroll pt-flex pt-flex-center tablet_vh100_portrait">
+      <div class="pt-section-content width-42">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+          Wireless and Wired Charging
+        </h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          Place your Air Pals on any Qi-Certified device, including the MagEZ Bar to wirelessly charge your AirPods
+          without
+          removing the case. The form-fitting and precisely cut AirPods case also allows you to charge with an Apple
+          Lightning cable.
+        </p>
+      </div>
+      <div class="pt-section-picture">
+        <picture class="pt-bg-dark-secondary">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ base_name | prepend: 'product-section3-' | append:'-1.png' | asset_url }}" class="lazyload">
+        </picture>
+        <picture class="pt-bg-dark">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ base_name | prepend: 'product-section3-' | append:'-2.png' | asset_url }}"
+            class="parallex-img lazyload" id="scroll-slider-img-2">
+        </picture>
+      </div>
+  
+    </div>
+    {%- endcomment -%}
+  
+    {%- comment -%}
+    {% render 'background-video', wrapper_class:'video-sec', background_video:'product-airpal-mini', background_video_mobile:'PITAKA-air-quad-bgv-t-m', video_to_remove_id:'air-quad-laptop', text_align:'left' %}
+    {%- endcomment -%}
+  
+    <div class="section3 relative">
+      <video loop muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+        x5-video-orientation="portraint" data-poster="{{ 'product-airpal-mini-cover.jpg' | asset_url }}" autoplay
+        preload="none" style="object-fit:contain" class="lazyload">
+        <source src="{{ 'product-airpal-mini.mp4' | asset_url }}" type="video/mp4">
+        <source src="{{ 'product-airpal-mini.webm' | asset_url }}" type="video/webm">
+      </video>
+      <div class="pt-section-content absolute pt-position-centerY">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+          Wirelessly Charge Your AirPods
+        </h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          Place your Air Pals on any Qi-Certified device, to wirelessly charge your AirPods without removing the case.
+        </p>
+      </div>
+    </div>
+  
+    <div class="section4 relative">
+      <div class="pt-section-content width-38 absolute">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+          Crafted using
+          Select Materials
+        </h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          Durable aramid fiber not only protects your AirPods but its classic design is also aesthetically pleasing to the
+          eye.
+        </p>
+      </div>
+      <picture>
+        <source data-srcset="{{ base_name | prepend: 'product-section4-' | append:'.jpg' | asset_url }}"
+          media="(min-width: 769px)">
+        <img src="{{ placeholder_gif }}"
+          data-src="{{ base_name | prepend: 'product-section4-' | append:'-m.jpg' | asset_url }}"
+          class="img-responsive width-100 lazyload">
+      </picture>
+    </div>
+  
+    <div class="section5 pt-flex picture-section">
+      <div class="picture-item item-1"></div>
+      <div class="picture-item item-2"></div>
+      <div class="picture-item item-3"></div>
+    </div>
+  
+    <div class="section6">
+      <div class="pt-swiper-container relative">
+        <div class="swiper-wrapper">
+          <div class="pt-slider-item swiper-slide">
+            <picture>
+              <source data-srcset="{{ 'product-section6-pal-mini-1.jpg' | asset_url }}" media="(min-width: 769px)">
+              <img src="{{ placeholder_gif }}" data-src="{{'product-section6-pal-mini-1-m.jpg' | asset_url }}"
+                class="width-100 lazyload">
+            </picture>
+          </div>
+  
+          <div class="pt-slider-item swiper-slide">
+            <picture>
+              <source data-srcset="{{ 'product-section6-pal-mini-2.jpg' | asset_url }}" media="(min-width: 769px)">
+              <img src="{{ placeholder_gif }}" data-src="{{'product-section6-pal-mini-2-m.jpg' | asset_url }}"
+                class="width-100 lazyload">
+            </picture>
+          </div>
+        </div>
+  
+        <div class="pt-section-content absolute pt-position-centerY pt-position-right">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+            An Essential Everyday Carry
+          </h3>
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            With its compact size and detachable ring, easily clip the Air Pals case to your bag or pocket.
+          </p>
+        </div>
+  
+        <div class="swiper-button-next size-2"></div>
+        <div class="swiper-button-prev size-2"></div>
+      </div>
+    </div>
+  
+  
+    {{ 'airpal-mini-exploded-view.css' | asset_url | stylesheet_tag }}
+    {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+  
+    <style>
+      
+      .swiper-button-prev {
+        background: url({{'triggle_pixel.svg' | asset_url}}) no-repeat;
+        left: 50px;
+        background-size: contain;
+        transform: rotate(-180deg);
+        color: rgba(0, 0, 0, 0);
+      }
+  
+      .swiper-button-next {
+        background: url({{'triggle_pixel.svg' | asset_url}}) no-repeat;
+        right: 50px;
+        background-size: contain;
+        color: rgba(0, 0, 0, 0);
+      }
+  
+      .section1 .pt-section-content {
+        transform: translateY(100%);
+      }
+  
+      @media screen and (min-width:1025px) {
+        .picture-section {
+          flex-direction: row;
+          height: calc(100vh - 75px);
+        }
+  
+        .picture-section .picture-item {
+          flex: 1;
+          height: 100%;
+          will-change: flex;
+          transition: flex 700ms ease;
+          position: relative;
+        }
+  
+        .picture-section .picture-item::before,
+        .picture-section .picture-item::after {
+          content: '';
+          display: block;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          transition: opacity 700ms ease;
+        }
+  
+  
+        .picture-section .picture-item:first-child {
+          z-index: 3;
+        }
+  
+        .picture-section .picture-item:nth-child(2) {
+          z-index: 2;
+        }
+  
+        .picture-section .picture-item:last-child {
+          z-index: 1;
+          margin-right: 0;
+        }
+  
+        .picture-section .picture-item:hover {
+          flex: 8;
+          z-index: 999 !important;
+        }
+  
+        .picture-section .picture-item.item-1::before {
+          background-image: url("{{ 'product-section5-pal-mini-1-m.jpg' | asset_url }}");
+        }
+  
+        .picture-section .picture-item.item-2::before {
+          background-image: url("{{ 'product-section5-pal-mini-2-m.jpg' | asset_url }}");
+        }
+  
+        .picture-section .picture-item.item-3::before {
+          background-image: url("{{ 'product-section5-pal-mini-3-m.jpg' | asset_url }}");
+        }
+  
+        .picture-section .picture-item.item-1::after {
+          background-image: url("{{ 'product-section5-pal-mini-1.jpg' | asset_url }}");
+          opacity: 0;
+        }
+  
+        .picture-section .picture-item.item-2::after {
+          background-image: url("{{ 'product-section5-pal-mini-2.jpg' | asset_url }}");
+          opacity: 0;
+        }
+  
+        .picture-section .picture-item.item-3::after {
+          background-image: url("{{ 'product-section5-pal-mini-3.jpg' | asset_url }}");
+          opacity: 0;
+        }
+  
+        .picture-section .picture-item:hover::after {
+          opacity: 1;
+        }
+      }
+  
+      @media screen and (max-width:1024px) {
+        .picture-section {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+  
+        .picture-section .picture-item {
+          width: calc(50% - 10px);
+          height: 50vw;
+          margin: 5px;
+          background-size: cover;
+        }
+  
+        .picture-section .picture-item.item-1 {
+          background-image: url("{{ 'product-section5-pal-mini-1-m.jpg' | asset_url }}");
+          width: calc(100% - 10px);
+          order: 3;
+        }
+  
+        .picture-section .picture-item.item-2 {
+          background-image: url("{{ 'product-section5-pal-mini-2-m.jpg' | asset_url }}");
+          order: 1;
+        }
+  
+        .picture-section .picture-item.item-3 {
+          background-image: url("{{ 'product-section5-pal-mini-3-m.jpg' | asset_url }}");
+          order: 2;
+        }
+      }
+    </style>
+  
+    <!-- scroll slider css-->
+    {%- comment -%}
+    <style>
+      .parallexScroll .pt-section-picture picture {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center
+      }
+  
+      .parallexScroll .pt-section-picture picture:last-child {
+        justify-content: flex-end;
+      }
+  
+      .parallexScroll .pt-section-picture img {
+        display: block;
+        width: auto;
+      }
+  
+      /* all PC screens */
+      @media screen and (min-width:1280px) {
+        .parallexScroll .pt-section-picture {
+          min-width: 708px;
+        }
+      }
+  
+      /* tablet and pc screens */
+      @media screen and (min-width:768px) {
+        .parallexScroll {
+          overflow: hidden;
+        }
+  
+        .parallexScroll .pt-section-picture {
+          width: 60%;
+          align-self: flex-start;
+          min-width: 425px;
+        }
+  
+        .parallexScroll .pt-section-picture img {
+          height: auto;
+          width: 100%;
+        }
+  
+        .parallexScroll .section-content {
+          text-align: left;
+          width: 40%;
+          padding: 0 5%;
+          max-width: 750px;
+        }
+      }
+  
+      /* portrait tablet */
+      @media screen and (max-width:1279px) and (min-width:768px) and (orientation: portrait) {
+        .tablet_vh100_portrait {
+          height: 100vh;
+        }
+  
+        .parallexScroll {
+          flex-flow: column nowrap;
+        }
+  
+        .parallexScroll.tablet_vh100_portrait {
+          max-height: unset;
+          height: auto;
+        }
+  
+        .parallexScroll .section-content {
+          padding: 12% 0;
+          width: 80%;
+          max-width: 600px;
+          height: 32%;
+          text-align: center;
+        }
+  
+        .parallexScroll .pt-section-picture {
+          height: 68%;
+          width: 100%;
+          overflow: hidden;
+        }
+  
+        .parallexScroll .pt-section-picture picture {
+          padding-bottom: 4em;
+        }
+  
+        .parallexScroll .pt-section-picture picture:last-child {
+          padding: 5em 0;
+        }
+  
+        .parallexScroll .pt-section-picture picture:first-child img {
+          width: 80%;
+        }
+      }
+  
+      @media screen and (max-width:767px) {
+        .parallexScroll .pt-section-picture picture:first-child img {
+          width: 90%;
+        }
+  
+        .parallexScroll .pt-section-picture picture:last-child img {
+          width: 90%;
+        }
+  
+        .parallexScroll .pt-section-picture picture {
+          padding: 3em 0;
+        }
+      }
+    </style>
+    {%- endcomment -%}
+  
+    <style>
+      .section3 video {
+        display: block;
+        min-width: 100%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+  
+      .section1 .pt-section-picture {
+        padding-top: 5em;
+      }
+  
+      .section4 .pt-section-content {
+        padding-left: 7%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 36%;
+      }
+  
+      .section2 picture {
+        max-width: 80%;
+      }
+  
+      .section2 .pt-section-content {
+        max-width: 366px;
+        right: 10%;
+        bottom: 10%
+      }
+  
+      .section3 .pt-section-content {
+        max-width: 366px;
+      }
+  
+      .section6 .pt-section-content {
+        width: 30%;
+        max-width: 420px;
+        z-index: 10;
+      }
+  
+      @media screen and (max-width:1280px) {
+        .section3 .pt-section-content {
+          top: 20%;
+        }
+  
+        .section2 .pt-section-content {
+          bottom: 7%;
+          right: 7%;
+          width: 30%;
+        }
+      }
+  
+      @media screen and (max-width:1024px) {
+        .section5 {
+          padding: 2em;
+        }
+      }
+  
+      @media screen and (max-width:768px) {
+        .section5 {
+          padding: 1em;
+        }
+  
+        .section2 {
+          padding: 4em 0;
+          flex-direction: column;
+        }
+  
+        .section2 picture {
+          order: 2;
+        }
+  
+        .section2 .pt-section-content {
+          display: block;
+          width: 100%;
+          position: static;
+          transform: none;
+          padding: 0 20% 4em;
+          text-align: center;
+          max-width: unset;
+          order: 1
+        }
+  
+        .section3 .pt-section-content,
+        .section4 .pt-section-content,
+        .section6 .pt-section-content {
+          width: 100%;
+          text-align: center;
+          padding: 0 20%;
+          top: 4em;
+          left: 0;
+          transform: none;
+          max-width: unset;
+        }
+  
+        .section5 .pt-section-picture:nth-child(3) {
+          width: calc(100% - 10px);
+        }
+        .pt-swiper-container{
+          --swiper-navigation-size:20px
+        }
+        .swiper-button-prev {
+        left: 20px;
+      }
+  
+      .swiper-button-next {
+        right: 20px;
+      }
+      }
+  
+      @media screen and (max-width:414px) {
+        .section2 {
+          padding: 3em 0;
+        }
+  
+        .section2 .pt-section-content {
+          padding: 0 10% 3em;
+        }
+  
+        .section4 .pt-section-content,
+        .section3 .pt-section-content,
+        .section6 .pt-section-content {
+          top: 3em;
+          padding: 0 10%;
+        }
+  
+        .section5 {
+          padding: 10px;
+        }
+  
+        .section6 .pt-section-content {
+          bottom: 3em;
+        }
+      }
+    </style>
+  
+    {%- comment -%}
+    {{ 'ScrollMagic.min.js' | asset_url | script_tag }}
+    {{ 'debug.addIndicators.min.js' | asset_url | script_tag }}
+    {{ 'animation.gsap.min.js' | asset_url | script_tag }}
+    {{ 'TimelineLite.min.js' | asset_url | script_tag }}
+    {{ 'TweenLite.min.js' | asset_url | script_tag }}
+    {{ 'CSSPlugin.min.js' | asset_url | script_tag }}
+    {{ 'BezierPlugin.min.js' | asset_url | script_tag }}
+    {{ 'imagesloaded.pkgd.min.js' | asset_url | script_tag }}
+  
+    {{ 'airpal-mini-exploded-view.js' | asset_url | script_tag }}
+  
+    <script>
+      ! function () {
+        if (window.innerWidth > 1024) {
+  
+          let screenWid = window.innerWidth,
+            screenHei = window.innerHeight,
+            alreadyLoaded = false;
+          let parallexLastImg = document.querySelector('.parallexScroll .parallex-img'),
+            parallexAllImgs = document.querySelectorAll('.parallexScroll picture'), // a nodelist
+            parallexWrapper = document.querySelector('.parallexScroll'),
+            parallexSectionImg = document.querySelector('.parallexScroll .pt-section-picture');
+  
+          // create gsap animation
+          function createAnim(h, animatedSelector, triggerEl) {
+            var tl = new TimelineLite();
+            tl
+              .to(animatedSelector, 1, {
+                y: `-${h}px`
+              });
+            let controller = new ScrollMagic.Controller();
+            let sc = new ScrollMagic.Scene({
+                triggerElement: triggerEl,
+                triggerHook: 0,
+                duration: '100%',
+                tweenChanges: true,
+              })
+              .setTween(tl)
+              .setPin(triggerEl)
+              // .addIndicators()
+              .addTo(controller)
+          };
+  
+          /* when in laptop mode and when img's height is less than screen height,
+              img needs to be of height 100vh w. auto width,
+              and parallexScroll wrapper's height is determined by img's height
+          */
+          function resizeImgAndSetWrapperHeight(allImgs, sectionImgEl, wrapperEl) {
+            let widToHeiRatio = 1.2864;
+            for (let i = 0; i < allImgs.length; i++) {
+              allImgs[i].style.height = '100vh';
+              // allImgs[i].style.width = 'auto';
+            }
+            let imgWid = allImgs[0].offsetWidth;
+            if (!imgWid) {
+              imgWid = allImgs[0].offsetHeight * widToHeiRatio;
+            }
+            sectionImgEl.style.width = imgWid + 'px';
+            wrapperEl.style.height = '100vh';
+            return wrapperEl.offsetHeight;
+          }
+  
+          // wait for the images loaded
+          parallexLastImg.addEventListener('load', function () {
+            if (alreadyLoaded) return;
+            alreadyLoaded = true;
+            listenerCallback(this);
+          });
+  
+          $('#scroll-slider-img-2').imagesLoaded(function () {
+            if (alreadyLoaded) return;
+            alreadyLoaded = true;
+            let that = this.elements[0];
+            listenerCallback(that);
+          });
+  
+          function listenerCallback(it) {
+            let h = it.offsetHeight;
+            if (screenWid / screenHei < 1) {
+              h = it.offsetHeight;
+              createAnim(h, '.parallexScroll img', '.parallexScroll');
+            } else if (screenWid / screenHei >= 1) {
+              h = resizeImgAndSetWrapperHeight(parallexAllImgs, parallexSectionImg, parallexWrapper);
+              createAnim(h, '.parallexScroll .pt-section-picture', '.parallexScroll');
+            }
+          }
+        }
+      }();
+    </script>
+    {%- endcomment -%}
+    {{ 'swiper.min.js' | asset_url | script_tag }}
+    <script>
+      var swiper = new Swiper('.pt-swiper-container', {
+        autoplay: {
+          delay: 5000,
+          stopOnLastSlide: false,
+          disableOnInteraction: true,
+        },
+        loop: true,
+        observer: true,
+        observeParents: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    </script>

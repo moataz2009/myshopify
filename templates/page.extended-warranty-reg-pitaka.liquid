@@ -1,0 +1,67 @@
+<style>
+.container{
+  padding-bottom: 0;
+  height: 18.75vw;
+  display: flex;
+  align-items: center;
+  background-image:url({{ 'warranty-header.jpg' | asset_url }});
+  background-size:cover;
+  background-position:center;
+  max-width: none;
+}
+.container h1{
+  font-size: 3.5em;
+  font-weight: 800;
+  text-align: center;
+  margin: 5% auto;
+  color:#fff;
+}
+.form-wrapper{
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width:1025px) {
+  .hide-pc{display:none}
+}
+
+@media screen and (max-width:1024px){
+  .container{
+    padding: 0;
+    margin: 0;
+    width:100%;
+    height: auto;
+    min-height: 300px;
+    background-image:url({{ 'warranty-header-m.jpg' | asset_url }});
+    align-items:flex-end;
+  }
+  .container h1{
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width:414px){
+  .container form{
+    width:18em;
+  }
+  .container h1{
+    font-size: 18px;
+  }
+}
+</style>
+<div class="lg:w-7/12 md:w-9/12 sm:w-11/12 m-auto px-6">
+  <div class="my-8 py-8 lg:w-5/12 md:7/12 sm:w-9/12 m-auto">
+    <h1 class="text-2xl text-center my-4"><span class="font_regular">Extended Warranty</span> <br class="hide-pc">Registration</h1>
+
+      <script src="https://www.powr.io/powr.js?platform=shopify"></script>
+      <div class="powr-form-builder" id="a9db5a41_1573805258"></div>
+  </div>
+</div>
+{% if page.url == '/pages/frontpage' %}
+<script type='text/javascript'>window.location='https://www.ipitaka.com';</script>
+{% endif %}
+{% if page.url == '/pages/load-magdock-pro-user-manual' %}
+<script type='text/javascript'>window.location="{{'MagDock-Pro-User-Manual.pdf' | asset_url }}";</script>
+{% endif %}
+

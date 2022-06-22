@@ -1,0 +1,212 @@
+
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+<div class="section-default section1 relative">
+    <picture>
+      <source data-srcset="{{ 'product-section1-apple-watch.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-section1-apple-watch-m.jpg' | asset_url }}"
+        alt="Air Case for Apple Watch" class="lazyload width-100 img-responsive">
+    </picture>
+    <div class="w-full absolute transform top-24  xs:top-48 sm:top-24 xl:top-48 left-1/2 -translate-x-1/2 text-center">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2  fw-400 font-upper">
+        Lightweight Luxury
+      </h3>
+    </div>
+  </div>
+  
+  <div class="section-default relative">
+    <picture>
+      <source data-srcset="{{ 'product-aircase-applewatch-cover.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-aircase-applewatch-cover-m.jpg' | asset_url }}"
+        alt="Air Case for Apple Watch" class="lazyload width-100 img-responsive">
+    </picture>
+    <div class="absolute left-0 top-0 transform w-full h-full flex justify-center items-center">
+      <a href="javascript:;" class="play-btn rounded-full w-9 h-9 bg-white flex justify-center items-center"
+        data-target="#modal-video" id="modal-toggle">
+        {{ 'triggle_pixel-black.svg' | asset_url | img_tag:'','block' }}
+      </a>
+    </div>
+    <!-- <a href="javascript:;" class="play-btn rounded-full w-9 h-9 bg-white flex justify-center items-center"
+    data-target="#modal-video" id="modal-toggle">
+    {{ 'triggle_pixel-black.svg' | asset_url | img_tag:'','block' }} -->
+  </a>
+    <!-- <a href="javascript:;" data-target="#modal-video" id="modal-toggle" class="absolute pt-position-center play-btn">
+    </a> -->
+  </div>
+  
+  <div class="section-default section2 relative">
+    <picture>
+      <source data-srcset="{{ 'product-section2-apple-watch.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-section2-apple-watch-m.jpg' | asset_url }}"
+        alt="Air Case for Apple Watch" class="lazyload width-100 img-responsive">
+    </picture>
+    <div class="pt-section-content absolute pt-position-centerY">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Premium Aramid Fiber
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        The PITAKA Air Case for Apple Watch is made using premium aerospace-grade aramid fiber that is lightweight,
+        scratch-resistant, and highly durable.
+      </p>
+    </div>
+  </div>
+  
+  <div class="section-default section3 relative">
+    <picture>
+      <source data-srcset="{{ 'product-section3-apple-watch.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-section3-apple-watch-m.jpg' | asset_url }}"
+        alt="Air Case for Apple Watch" class="lazyload width-100 img-responsive">
+    </picture>
+    <div class="pt-section-content absolute pt-position-centerY pt-position-right">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Precision Crafted
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Designed to accentuate the shape and form of your Apple Watch, the smartwatch casing offers easy access to buttons
+        while maintaining its sleek, minimalist aesthetic.
+      </p>
+    </div>
+  </div>
+  
+  <div class="section-default section4 relative">
+    <picture>
+      <source data-srcset="{{ 'product-section4-apple-watch.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-section4-apple-watch-m.jpg' | asset_url }}"
+        alt="Air Case for Apple Watch" class="lazyload width-100 img-responsive">
+    </picture>
+    <div class="pt-section-content absolute pt-position-centerY">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Exclusive Luxury
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        600D aramid fiber’s delicate weave makes it difficult to produce and is reserved exclusively for PITAKA’s premium
+        luxury products. 600D has an extremely smooth-textured surface that is soft to the touch, ensuring all-day comfort
+        against your skin.
+      </p>
+    </div>
+  </div>
+  
+  <div class="section-default section5 relative">
+    <picture>
+      <source data-srcset="{{ 'product-section5-apple-watch.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-section5-apple-watch-m.jpg' | asset_url }}"
+        alt="Air Case for Apple Watch" class="lazyload width-100 img-responsive">
+    </picture>
+    <div class="pt-section-content absolute pt-position-centerX text-center">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Fits Your Lifestyle
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Our signature aramid fiber Apple Watch Case fits seamlessly into your on the go life.
+      </p>
+    </div>
+  </div>
+  
+  <div class="modal-mask"></div>
+  <div id="modal-video" class="pt-modal-container">
+    <div class="modal-background">
+      <div class="pt-modal-dialog relative">
+        <button class="pt-modal-close absolute" type="button">
+          <span class="icon icon-x"></span>
+        </button>
+        <video controls playsinline preload="none" class="lazyload" id="watch-video">
+          <source src="{{ 'product-aircase-applewatch.mp4' | asset_url }}" type="video/mp4">
+          <source src="{{ 'product-aircase-applewatch.webm' | asset_url }}" type="video/webm">
+        </video>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .pt-video-container {
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+  
+    .pt-video-container .play-btn {
+      width: 140px;
+      height: 140px;
+      background-image: url({{'play-btn.png' | asset_url }});
+    }
+  
+    .pt-section-content {
+      max-width: 580px;
+    }
+  
+    @media screen and (max-width:1600px) {
+      .pt-section-content {
+        max-width: 480px;
+      }
+    }
+  
+    @media screen and (max-width:1280px) {
+      .pt-section-content {
+        max-width: 380px;
+      }
+    }
+  
+    @media screen and (max-width:1024px) {
+      .pt-video-container {
+        width: 100vw;
+      }
+    }
+  
+    @media screen and (max-width:768px) {
+      .pt-modal-close {
+        font-size: 18px;
+        width: 28px;
+        height: 28px;
+      }
+  
+      .section-default {
+        min-height: 134vw;
+      }
+  
+      .pt-section-content {
+        text-align: center;
+        width: 100%;
+        padding: 5em 20% 0;
+        top: 0;
+        left: 0;
+        transform: none;
+        max-width: unset;
+      }
+    }
+  
+    @media screen and (max-width:414px) {
+      .pt-section-content {
+        padding: 4em 10% 0;
+      }
+    }
+  </style>
+  
+  <script>
+    $(function () {
+      var video = document.getElementById('watch-video');
+      $("#modal-toggle").click(function (e) {
+        e.stopPropagation();
+        var modal = $(this).data("target");
+        $(".modal-mask").show();
+        $(modal).addClass('open');
+        video.play();
+  
+        $(document).click(function (e) {
+          var _con = $('#modal-video');
+          if (!_con.is(e.target) && _con.has(e.target).length === 0) {
+            video.pause();
+            _con.removeClass('open');
+            $(".modal-mask").hide();
+          }
+        })
+      })
+      $(".pt-modal-close").click(function (e) {
+        e.stopPropagation();
+        video.pause();
+        $('#modal-video').removeClass('open');
+        $(".modal-mask").hide();
+      })
+    })
+  </script>

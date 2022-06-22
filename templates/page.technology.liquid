@@ -1,0 +1,340 @@
+<!-- update on Colin 2020.7.28 -->
+<!-- contact by colin@ipitaka.com -->
+<style>
+  .page-container {
+    background-color: #171719;
+  }
+  .text-row2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  .pt-line-link{
+    text-decoration: underline;
+  }
+  .imgBox-pc img {
+    width: 100%;
+  }
+  .section-banner {
+    position: relative;
+  }
+  .section-banner img {
+    display: block;
+  }
+  .section-banner-text1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .scence-container {
+    width: 66.5%;
+    margin: 0 auto;
+    padding-top: 3vw;
+    overflow: hidden;
+  }
+  .section-scence {
+    float: left;
+    width: 30vw;
+    padding: 1vw 0;
+    margin-right: 2vw;
+  }
+  .section-scence img {
+    display: block;
+  }
+  .section-scence .imgBox1-pc {
+    width: 30vw;
+    height: 16.6vw;
+    margin: 0 auto;
+    margin-top: 2.3vw;
+  }
+  .section-scence-text {
+    text-align: left;
+  }
+  .section-scence-text h3 {
+    width: 30vw;
+    padding-top: 0.8vw;
+  }
+  .section-scence-text p {
+    width: 30vw;
+    padding-top: 1vw;
+  }
+</style>
+
+<style>
+  /* 以下为媒体查询PC端样式 */
+  @media screen and (min-width: 769px) {
+    .imgBox-phone {
+      display: none;
+    }
+    .imgBox1-phone {
+      display: none;
+    }
+    .imgBox2-phone {
+      display: none;
+    }
+  }
+</style>
+
+<style>
+  /* 以下为媒体查询移动端样式 */
+  @media screen and (max-width: 768px) {
+    .imgBox-pc {
+      display: none;
+    }
+    .imgBox1-pc {
+      display: none;
+    }
+    .imgBox2-pc {
+      display: none;
+    }
+    .scence-container {
+      width: 80vw;
+    }
+    .section-banner-text1 {
+      position: absolute;
+      top: 30.444%;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    .section-scence {
+      width: 80vw;
+      /* height: 114vw; */
+      /* overflow: hidden; */
+      margin-top: 5vw;
+    }
+    .section-scence img {
+      display: block;
+    }
+    .section-scence .imgBox1-phone {
+      width: 80vw;
+      background-color: #171719;
+    }
+    .section-scence-text1 {
+      width: 80vw;
+      text-align: left;
+    }
+    .section-scence-text {
+    text-align: left;
+  }
+  .section-scence-text h3 {
+    width: 80vw;
+    padding-top: 1vw;
+  }
+  .section-scence-text p {
+    width: 80vw;
+    padding-top: 1vw;
+  }
+  }
+</style>
+
+<div class="page-container">
+  <section class="section-banner">
+    <div class="imgBox-pc">
+      {{ 'page_technology_banner1.jpg' | asset_url | img_tag }}
+    </div>
+    <div class="imgBox-phone">
+      {{ 'page_technology_banner1_phone.jpg' | asset_url | img_tag }}
+    </div>
+    <div class="section-banner-text1">
+      <h3 class="pt-section-title fw-700">Our Technology</h3>
+    </div>
+  </section>
+
+  <div class="scence-container">
+    <div class="section-scence">
+      <div class="imgBox1-pc">
+        {{ 'page_technology_scence1.png' | asset_url | img_tag }}
+      </div>
+      <div class="imgBox1-phone">
+        {{ 'page_technology_scence1_phone.png' | asset_url | img_tag }}
+      </div>
+      <div class="section-scence-text">
+        <h3 class="pt-section-title fw-700">What is Aramid Fiber?</h3>
+        <p class="pt-section-detail text-row2">
+          Aramid is short for ‘aromatic polyamide’ and possesses unique
+          properties in terms of being lightweight, durable, and high resistance
+          to the force of impact. It is a synthetic fiber, and its wide range of
+          uses includes military and aerospace technologies, performance
+          automotive, and bulletproof protective gear. It is soft to the touch
+          and is molded to fit any shape and provides excellent protection for
+          your electronic devices. PITAKA uses a series of complex processes to
+          weave, form, and polish the aramid fiber to ensure it offers
+          longlasting protection for your device. Aramid fibers are thinner than
+          a human hair with a distinct yellow color that allows it to be dyed in
+          a variety of colors. You can read more about aramid fiber in our
+          article.
+        </p>
+        <p> 
+          <a class="pt-line-link" href="/collections/magez-case-for-iphone-11">     
+          <span>Learn More</span>
+        </a>
+      </p>
+      </div>
+    </div>
+
+    <div class="section-scence">
+      <div class="imgBox1-pc">
+        {{ 'page_technology_scence2.png' | asset_url | img_tag }}
+      </div>
+      <div class="imgBox1-phone">
+        {{ 'page_technology_scence2_phone.png' | asset_url | img_tag }}
+      </div>
+      <div class="section-scence-text">
+        <h3 class="pt-section-title fw-700">
+          What is so special about 600D Aramid Fiber?
+        </h3>
+        <p class="pt-section-detail text-row2">
+          PITAKA’s signature 600D aramid fiber is specially sourced and only
+          used for premium products. 600D is extremely rare as it has a fine
+          weave and is challenging to produce, making the products that use it
+          even more unique.
+        </p>
+        <p> 
+          <a class="pt-line-link" href="/pages/600d">     
+          <span>Learn More</span>
+        </a>
+      </p>
+      </div>
+    </div>
+
+    <div class="section-scence">
+      <div class="imgBox1-pc">
+        {{ 'page_technology_scence3.png' | asset_url | img_tag }}
+      </div>
+      <div class="imgBox1-phone">
+        {{ 'page_technology_scence3_phone.png' | asset_url | img_tag }}
+      </div>
+      <div class="section-scence-text">
+        <h3 class="pt-section-title fw-700">
+          Why do we use 600D?
+        </h3>
+        <p class="pt-section-detail text-row2">
+          600D aramid fiber is a new high-tech fiber that is around five times
+          stronger than steel but is approximately one-fifth of the weight.
+          Since the weave of 600D is more delicate, the results are even more
+          impressive, resulting in a lighter and softer product.
+        </p>
+        <p> 
+          <a class="pt-line-link" href="/pages/600d">     
+          <span>Learn More</span>
+        </a>
+      </p>
+      </div>
+    </div>
+
+    <div class="section-scence">
+      <div class="imgBox1-pc">
+        {{ 'page_technology_scence4.png' | asset_url | img_tag }}
+      </div>
+      <div class="imgBox1-phone">
+        {{ 'page_technology_scence4_phone.png' | asset_url | img_tag }}
+      </div>
+      <div class="section-scence-text">
+        <h3 class="pt-section-title fw-700">
+          3D Grip™ Technology
+        </h3>
+        <p class="pt-section-detail text-row2">
+          3D Grip™ is the granular texture found on the surface of all PITAKA
+          products, including our phone cases. A phone case should not just
+          protect your phone, but it should also be comfortable to hold. By
+          using a proprietary vacuum forming process, the aramid material
+          retains some of its natural properties that feel smooth and improve
+          grip.
+        </p>
+        <p> 
+          <a class="pt-line-link" href="/collections/magez-case-for-iphone-11">     
+          <span>Learn More</span>
+        </a>
+      </p>
+      </div>
+    </div>
+
+    <div class="section-scence">
+      <div class="imgBox1-pc">
+        {{ 'page_technology_scence5.png' | asset_url | img_tag }}
+      </div>
+      <div class="imgBox1-phone">
+        {{ 'page_technology_scence5_phone.png' | asset_url | img_tag }}
+      </div>
+      <div class="section-scence-text">
+        <h3 class="pt-section-title fw-700">
+          Chain-Coil™ Technology
+        </h3>
+        <p class="pt-section-detail text-row2">
+          With many other wireless charging pads on the market, it is essential
+          to place your device on a specific spot for your phone to charge. When
+          you are in a rush, you may set your mobile at an angle, only to
+          discover later that your phone was never charging. To solve this
+          problem, PITAKA designed a wireless charging pad that uses Chain-Coil™
+          technology. Chain-Coil™ combines multiple overlapping charging coils
+          to enlarge the charging area. You no longer have to place your phone
+          on one specific spot, but anywhere on the charger area.
+        </p>
+        <p> 
+          <a class="pt-line-link" href="/collections/magez-case-for-iphone-11">     
+          <span>Learn More</span>
+        </a>
+      </p>
+      </div>
+    </div>
+
+    <div class="section-scence">
+      <div class="imgBox1-pc">
+        {{ 'page_technology_scence6.png' | asset_url | img_tag }}
+      </div>
+      <div class="imgBox1-phone">
+        {{ 'page_technology_scence6_phone.png' | asset_url | img_tag }}
+      </div>
+      <div class="section-scence-text">
+        <h3 class="pt-section-title fw-700">
+          What is Vacuum Forming Technology?
+        </h3>
+        <p class="pt-section-detail text-row2">
+          Vacuum forming wraps the product in special film before placing into a
+          mold and subjecting it to high temperatures and pressure. Vacuum
+          forming ensures that the products, especially phone cases, are
+          precisely formed and the exact size to fit the phone. Like a cushion,
+          the film absorbs the “punching” of the high pressure and protects the
+          natural texture of raw materials. The force leaves behind a granular
+          texture that we call 3D Grip™.
+        </p>
+        <p> 
+          <a class="pt-line-link" href="/collections/magez-case-for-iphone-11">     
+          <span>Learn More</span>
+        </a>
+      </p>
+      </div>
+    </div>
+
+    <div class="section-scence">
+      <div class="imgBox1-pc">
+        {{ 'page_technology_scence7.png' | asset_url | img_tag }}
+      </div>
+      <div class="imgBox1-phone">
+        {{ 'page_technology_scence7_phone.png' | asset_url | img_tag }}
+      </div>
+      <div class="section-scence-text">
+        <h3 class="pt-section-title fw-700">
+          What is AramidCore™
+        </h3>
+        <p class="pt-section-detail text-row2">
+          Vacuum forming wraps the product in special film before placing into a
+          mold and subjecting it to high temperatures and pressure. Vacuum
+          forming ensures that the products, especially phone cases, are
+          precisely formed and the exact size to fit the phone. Like a cushion,
+          the film absorbs the “punching” of the high pressure and protects the
+          natural texture of raw materials. The force leaves behind a granular
+          texture that we call 3D Grip™.
+        </p>
+        <p> 
+          <a class="pt-line-link" href="/collections/magez-case-for-iphone-11">     
+          <span>Learn More</span>
+        </a>
+      </p>
+      </div>
+    </div>
+  </div>
+</div>

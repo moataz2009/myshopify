@@ -1,0 +1,870 @@
+{{ 'timber-multiple.js' | asset_url | script_tag }}
+{% assign wClass = 'w-full sm:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_9 = 'w-full sm:w-10/12 lg:w-9/12 max-w-screen-xl mx-auto' %}
+
+<!-- spring-sale-2022  -->
+<div class="collection-hero relative">
+  <div class="absolute {{wClass}} px-6 md:px-0 h-full absolute transform left-1/2 -translate-x-1/2">
+    <div
+      class="absolute top-1/6 laptop:top-1/2 left-1/2 laptop:left-0 transform laptop:-translate-y-1/2 -translate-x-1/2 laptop:translate-x-0 px-4 w-full md:w-1/2 text-center laptop:text-left">
+      <h3 class="text-base sm:text-lg xl:text-xl font-normal">
+        Spring is in the air.
+      </h3>
+      <h1 class="text-xl sm:text-2xl xl:text-3xl my-6 sm:my-8 xl:my-12 font-bold">
+        Warm up with a few new things<br class="hidden sm:block">
+        for the season.
+      </h1>
+      <p class="text-base sm:text-lg font-bold">
+        Ends 29 Mar.
+      </p>
+    </div>
+  </div>
+  <picture>
+    <source data-srcset="{{ 'collection-hero-spring-sale-2022.webp' | asset_url}}" media="(min-width: 1280px)">
+    <source data-srcset="{{ 'collection-hero-spring-sale-2022-m.webp' | asset_url}}" media="(min-width: 1024px)">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'collection-hero-spring-sale-2022-s.webp' | asset_url}}"
+      class="block w-full lazyload">
+  </picture>
+</div>
+
+<div class="'w-full sm:w-11/12 xl:w-10/12 max-w-screen-xl mx-auto px-6 lg:px-0 py-12">
+  <div class="collection-header block md:hidden">
+    <div class="w-full relative">
+      <div class="mainCategory py-2.5 border-t border-b border-solid border-white border-opacity-10">
+        <label class="text-gray-400 text-xs">Choose your Category</label>
+        <h3 class="text-sm font-bold uppercase relative">
+          Bundle
+        </h3>
+      </div>
+      <ul class="mainNavList absolute w-full bg-gray-850 hidden transition duration-300 z-10">
+        {% for header_link in linklists['spring-sale-2022'].links %}
+        <!-- Bundle -->
+        {% assign headerItemClass = 'leading-none py-4 text-sm uppercase border-b border-solid border-white border-opacity-10' %}
+        <li class="{{ headerItemClass }}" data-target="{{ header_link.title | handleize }}">
+          <a class="block h-full text-gray-400" href="javascript:;">
+            {{ header_link.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    {% for link in linklists['spring-sale-2022'].links %}
+    {% if link.levels == 2 %}
+    <div class="w-11/12 mx-auto mt-6 relative subNav-container hidden" data-nav="{{link.title | handleize}}">
+      <div class="subCategory bg-gray-800 px-4 py-3">
+        <h3 class="text-sm relative">
+          Travel Series
+        </h3>
+      </div>
+      <ul class="subNavList absolute w-full hidden transition duration-300 z-10">
+        {% for sub_link in link.links %}
+        {% assign sub_linkItemClass = 'bg-gray-800 leading-none px-4 text-sm' %}
+        <li data-target="{{sub_link.title | handleize}}"
+          class="{{sub_linkItemClass}} {% if forloop.first == true %}active{% endif %}">
+          <a class="block py-3 h-full text-gray-400 border-b border-solid border-gray-850" href="javascript:;">
+            {{sub_link.title}}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+    {% endfor %}
+
+  </div>
+
+  <div class="collection-header hidden md:block">
+    <div
+      class="flex justify-between laptop:justify-around border-t border-b border-solid border-white border-opacity-10">
+      {% for link in linklists['spring-sale-2022'].links %}
+      {% assign headerItemClass = 'hover-border-b leading-none pt-5 pb-4 text-sm md:text-base font-bold uppercase text-center' %}
+      <h4 class="{{headerItemClass}} mainNav">
+        <a href="javascript:;" data-target="{{link.title | handleize}}" class="block h-full text-gray-400">
+          {{ link.title }}
+        </a>
+      </h4>
+      {% endfor %}
+    </div>
+
+    {% for link in linklists['spring-sale-2022'].links %}
+    {% if link.levels == 2 %}
+    <div class="subNav bg-gray-820 mt-6 hidden" data-nav="{{ link.title | handleize }}">
+      <ul class="block mx-auto w-11/12 xl:w-10/12 flex justify-center items-center">
+        {% for sub_link in link.links %}
+        {% assign sub_linkItemClass = 'hover-border-b leading-none mx-12 pt-2 pb-1 text-sm md:text-base' %}
+        <li data-target="{{sub_link.title | handleize}}" class="{{sub_linkItemClass}}">
+          <a class="block h-full text-gray-400" href="javascript:;">{{sub_link.title}}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  {%- comment -%}
+  <div class="banner-container mt-12 mb-8 laptop:mt-24 laptop:mb-20">
+    {% for link in linklists['spring-sale-2022'].links %}
+    {% if link.levels == 1 %}
+    {% assign banner_suffix = link.title | handleize %}
+    <div class="list-banner w-full hidden" data-name="{{ banner_suffix }}">
+      <picture>
+        <source data-srcset="{{ banner_suffix | prepend: 'collection-hero-' | append: '.jpg' | asset_url }}"
+          media="(min-width: 1280px)">
+        <source data-srcset="{{ banner_suffix | prepend: 'collection-hero-' | append: '-m.jpg' | asset_url }}"
+          media="(min-width: 1025px)">
+        <img src="{{ placeholder_gif }}"
+          data-src="{{ banner_suffix | prepend: 'collection-hero-' | append: '-s.jpg' | asset_url}}"
+          class="block w-full lazyload">
+      </picture>
+    </div>
+    {% else %}
+    {% for subLink in link.links %}
+    {% assign banner_suffix = subLink.title | handleize %}
+    <div class="list-banner w-full hidden" data-name="{{ banner_suffix }}">
+      <picture>
+        <source media="(min-width: 1280px)"
+          data-srcset="{{ banner_suffix | prepend: 'list-banner-' | append: '.jpg' | asset_url }}">
+        <source media="(min-width: 1025px)"
+          data-srcset="{{ banner_suffix | prepend: 'list-banner-' | append: '-m.jpg' | asset_url }}">
+        <img src="{{ placeholder_gif }}" class="block w-full lazyload"
+          data-src="{{ banner_suffix | prepend: 'list-banner-' | append: '-s.jpg' | asset_url}}">
+      </picture>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endfor %}
+  </div>
+  {%- endcomment -%}
+
+  {% assign discount_5_products = 'charging-kit,case-2-for-ipad,apple-watch,car-mount,mount-qi,case-for-airpods' | split: ',' %}
+  {% assign discount_10_products = 'desktop,air-pal-mini' | split: ',' %}
+  {% assign discount_15_products = 'iphone-12,galaxy-s21' | split: ',' %}
+  {% assign discount_25_products = 'juice-2,case-for-ipad' | split: ',' %}
+  {% assign discount_35_products = 'case-for-iphone-11' | split: ',' %}
+  {% assign discount_40_products = 'case-for-iphone-x,galaxy-s20,galaxy-note20,galaxy-s10,galaxy-note10,oneplus-8' | split: ',' %}
+  {% assign discount_50_products = 'cable,case-pro-for-iphone-xs,galaxy-s9,huawei-p40' | split: ',' %}
+  {% assign hot_bundles = 'iphone-13,watch,ipad' | split: ',' %}
+
+  <div class="list mt-12 laptop:mt-24">
+    {% assign products_count = 0 %}
+    {% for main_link in linklists['spring-sale-2022'].links %}
+    {% if main_link.title == 'Bundle' %}
+    {% assign gridContainerClass = 'flex flex-row flex-wrap' %}
+    {% else %}
+    {% assign gridContainerClass = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-4 lg:gap-6' %}
+    {% endif %}
+    <div class="hidden list-container" id="list-{{main_link.title | handleize}}">
+      {% if main_link.levels == 2 %}
+
+      {% for child_link in main_link.links %}
+      <div class="items-container hidden {{gridContainerClass}}" data-name="{{ child_link.title | handleize }}">
+        {% assign item_counts = 0 %}
+        {% for sub_link in child_link.links %}
+        <!-- child_link：travel-series -->
+        {% if main_link.title == 'Bundle' %}
+        {% assign bundle_available = true %}
+        {% assign bundle_hot = false %}
+        {% assign bundle_items = sub_link.title | split: ' + ' %}
+
+        {% for bundle_title in bundle_items %}
+        {% assign bundle_handle = bundle_title | remove: ' Series' | replace_first: 'Pro 2 ', 'Pro2 ' | handleize %}
+        {% for item in hot_bundles %}
+        {% if bundle_handle contains item %}
+        {% assign bundle_hot = true %}
+        {% break %}
+        {% endif %}
+        {% endfor %}
+
+        {% assign link_product = all_products[bundle_handle] %}
+        {% if link_product.available == false or link_product.id == '' %}
+          {% assign bundle_available = false %}
+          {% break %}
+        {% else %}
+          {% assign variant_length = 0 %}
+          {% for variant in link_product.variants %}
+            {% unless variant.title contains 'Card' or variant.title contains 'Form-Fitting' %}
+              {% if variant.available %}
+                {% assign variant_length = variant_length | plus: 1 %}
+              {% endif %}
+            {% endunless %}
+          {% endfor %}
+          {% if variant_length == 0 %}
+            {% assign bundle_available = false %}
+            {% break %}
+          {% endif %}
+        {% endif %}
+        {% endfor %}
+
+        {% if bundle_available %}
+        <div class="bundle-container w-full laptop:w-1/2 mb-6">
+          {%- comment -%}
+          {% assign bundle_items = sub_link.url | remove: '#' | split: '=' | first | split: '+' %}
+          {%- endcomment -%}
+          {% assign bundle_new = sub_link.url | remove: '#' | split: '=' | last %}
+
+          {% assign bundle_price = 0 %}
+          {% assign bundle_items = sub_link.title | split: ' + ' %}
+          {% assign origin_price = 0 %}
+          <div class="flex flex-col sm:flex-row items-center justify-between bg-gray-800 relative">
+            {% if bundle_hot %}
+            <div class="discount-flag absolute right-0 top-0 laptop:right-4 laptop:top-4 lg:right-6 lg:top-6">
+              {{ 'sale-flag-hot.svg' | asset_url | img_tag }}
+            </div>
+            {% endif %}
+
+            {% for bundle_title in bundle_items %}
+              {% assign products_count = products_count | plus: 1 %}
+
+              {% assign bundle_handle = bundle_title | remove: ' Series' | replace_first: 'Pro 2 ', 'Pro2 ' | handleize  %}
+              {% assign link_product = all_products[bundle_handle] %}
+
+              {% assign link_variant = link_product.selected_or_first_available_variant %}
+
+              <div class="pt-card px-6 py-10 text-center w-full laptop:w-1/2">
+                {% render 'mutiple-form', form_title: bundle_title, form_product: link_product, form_index: products_count %}
+              </div>
+              {% if forloop.first == true %}
+              <div
+                class="text-3xl rounded-full w-8 h-8 flex items-center justify-center bg-white text-green block sm:hidden">
+                +</div>
+              {% endif %}
+            {% endfor %}
+          </div>
+
+          {% if link_variant.compare_at_price > link_variant.price %}
+          {% assign origin_price = origin_price | plus: link_variant.compare_at_price %}
+          {% else %}
+          {% assign origin_price = origin_price | plus: link_variant.price %}
+          {% endif %}
+          {% assign bundle_price = bundle_price | plus: link_variant.price %}
+
+          <div class="flex justify-center my-6">
+            <div
+              class="triggerBtn transition h-10 w-40 flex flex-col lg:flex-wrap justify-center items-center text-center">
+              {%- comment -%}
+              <span class="addToCartText block text-black text-base font-bold block lg:hidden">
+                {{ 'products.product.add_to_cart' | t }}
+              </span>
+              {%- endcomment -%}
+              <div class="flex justify-center items-center">
+                <span class="bundle_discount_price text-sm sm:text-base font-bold" data-new="{{bundle_new}}">
+                  {% capture bundle_discount %}
+                  {% if bundle_new == 'new' %}500{% elsif bundle_new == 'kit' %}449{% else %}1000{% endif %}
+                  {% endcapture %}
+                  ${{ bundle_price | minus: bundle_discount | money_without_currency | round }}
+                </span>
+                <span class="bundle_origin_price text-xs sm:text-2s line-through ml-0.5">
+                  {{ origin_price | money_without_trailing_zeros }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        {% else %}
+        {% assign link_product = sub_link.object %}
+        {% if link_product.available %}
+        {% assign link_variant = link_product.selected_or_first_available_variant %}
+        {% assign item_counts = item_counts | plus: 1 %}
+        {% assign products_count = products_count | plus: 1 %}
+        {% assign discount = 0 %}
+        {% for item in discount_5_products %}
+          {% if link_product.handle contains item %}
+            {% assign discount = 5 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% for item in discount_10_products %}
+          {% if link_product.handle contains item %}
+            {% assign discount = 10 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% for item in discount_15_products %}
+          {% if link_product.handle contains item %}
+            {% assign discount = 15 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        
+        {% for item in discount_25_products %}
+          {% if link_product.handle contains item %}
+            {% assign discount = 25 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% for item in discount_35_products %}
+          {% if link_product.handle contains item %}
+            {% assign discount = 35 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% for item in discount_40_products %}
+          {% if link_product.handle contains item %}
+            {% assign discount = 40 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% for item in discount_50_products %}
+          {% if link_product.handle contains item %}
+            {% assign discount = 50 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% assign variant_length = 0 %}
+        {% for variant in link_product.variants %}
+          {% unless variant.title contains 'Card' or variant.title contains 'Form-Fitting' %}
+            {% if variant.available %}
+              {% assign variant_length = variant_length | plus: 1 %}
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+        
+        {% unless variant_length == 0 %}
+        <div class="pt-card bg-gray-800 px-6 py-10 text-center w-full relative">
+          
+          {% unless discount == 0 %}
+            <div class="discount-flag absolute right-0 top-0 laptop:right-4 laptop:top-4 lg:right-6 lg:top-6">
+              {%- comment -%}
+              <div class="flex items-center">
+                <h4 class="font-bold leading-none text-3xl">
+                  {{discount}}
+                </h4>
+                <p class="block text-left ml-0.5">
+                  <span class="block leading-none text-sm">%</span>
+                  <span class="block leading-none text-xs">OFF</span>
+                </p>
+              </div>
+              {%- endcomment -%}
+              {{ discount | prepend: 'sale-discount-' | append: '.svg' | asset_url | img_tag }}
+            </div>
+            {% endunless %}
+
+            {% assign form_class = 'block mx-auto w-full sm:w-4/5 xl:w-7/10' %}
+
+            {% render 'mutiple-form', form_title: sub_link.title, form_product: link_product, form_index: products_count,formClass: form_class %}
+          </div>
+        {% endunless %}
+        
+        {% endif %}
+
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% endfor %}
+
+      {% else %}
+      <div class="{{gridContainerClass}}">
+        {% for child_link in main_link.links %}
+        {% assign link_product = child_link.object %}
+
+        {% if link_product.available or link_product.handle == 'magez-juice-2' %}
+        {% assign products_count = products_count | plus: 1 %}
+        
+        {% assign discount = 0 %}
+        {% for item in discount_5_products %}
+          {% if link_product.handle contains item %}
+            {% assign discount = 5 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% for item in discount_10_products %}
+          {% if link_product.handle contains item %}
+            {% assign discount = 10 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% for item in discount_15_products %}
+          {% if link_product.handle contains item %}
+            {% assign discount = 15 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% for item in discount_25_products %}
+          {% if link_product.handle contains item %}
+            {% assign discount = 25 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        
+        {% for item in discount_35_products %}
+          {% if link_product.handle contains item %}
+            {% assign discount = 35 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% for item in discount_40_products %}
+          {% if link_product.handle contains item %}
+            {% assign discount = 40 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% for item in discount_50_products %}
+          {% if link_product.handle contains item %}
+            {% assign discount = 50 %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% assign variant_length = 0 %}
+        {% for variant in link_product.variants %}
+          {% unless variant.title contains 'Card' or variant.title contains 'Form-Fitting' %}
+            {% if variant.available %}
+              {% assign variant_length = variant_length | plus: 1 %}
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+
+        {% unless variant_length == 0 %}
+          <div class="pt-card bg-gray-800 px-6 py-10 text-center w-full relative">
+            <div class="hidden">{{link_product.handle}}</div>
+            {% unless discount == 0 %}
+            <div class="discount-flag absolute right-0 top-0 laptop:right-4 laptop:top-4 lg:right-6 lg:top-6">
+              {%- comment -%}
+              <div class="flex items-center">
+                <h4 class="font-bold leading-none text-3xl">
+                  {{discount}}
+                </h4>
+                <p class="block text-left ml-0.5">
+                  <span class="block leading-none text-sm">%</span>
+                  <span class="block leading-none text-xs">OFF</span>
+                </p>
+              </div>
+              {%- endcomment -%}
+              {{ discount | prepend: 'sale-discount-' | append: '.svg' | asset_url | img_tag }}
+            </div>
+            {% endunless %}
+            {% assign form_class = 'block mx-auto w-full sm:w-4/5 xl:w-7/10' %}
+            {% if child_link.title contains 'Power Dongle' %}
+            {% assign variant_default = true %}
+            {% else %}
+            {% assign variant_default = false %}
+            {% endif %}
+            {% render 'mutiple-form', form_title: child_link.title, form_product: link_product, form_index: products_count, formClass: form_class, variantDefault: variant_default %}
+          </div>
+        {% endunless %}
+        {% endif %}
+        {% endfor %}
+      </div>
+
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  /*Select2 ReadOnly Start*/
+  select[readonly].product-single__variants {
+    pointer-events: none;
+    touch-action: none;
+  }
+
+  /*Select2 ReadOnly End*/
+  .mainCategory h3::after,
+  .subCategory h3::after {
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    right: 0;
+    top: 5px;
+    transform: rotate(90deg);
+    background:url({{'triggle_pixel.svg' | asset_url }}) no-repeat center center;
+    background-size: contain;
+    transition: all .3s ease;
+  }
+
+  .mainCategory h3.active::after,
+  .subCategory h3.active::after {
+    transform: rotate(-90deg);
+  }
+
+  .AddToCart {
+    line-height: 40px;
+    padding: 0;
+    letter-spacing: 0;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .AddToCart.disabled {
+    opacity: 0.7;
+  }
+
+  .AddToCart:not(.noClick):hover {
+    background-color: rgb(11, 188, 212);
+  }
+
+  .AddToCart:not(.noClick):hover span {
+    color: #fff;
+  }
+
+  .AddToCart.disabled:hover .AddToCartText {
+    color: #000;
+  }
+  
+  .AddToCart.disabled:hover .AddToCartText::before {
+    content: '';
+    -webkit-mask: unset;
+  }
+
+  .pt-card .selector-wrapper {
+    display: none;
+  }
+
+  .product-single__variants {
+    display: block !important;
+    border: 1px solid #a9a9a9;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .shop-btn .continue-shopping {
+    display: none !important;
+  }
+
+  .mainNav.active,
+  .subNav li.active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+  }
+
+  .mainNav.active a,
+  .subNav li.active a {
+    color: #fff;
+  }
+
+  a:hover,
+  a:focus {
+    opacity: 1;
+  }
+
+  .collection-hero {
+    min-height: 320px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .sm\:w-1\/2 {
+      width: calc(50% - 0.75rem);
+    }
+  }
+
+  @media screen and (min-width:1024px) {
+    .laptop\:w-1\/3 {
+      width: calc(33.33% - 1rem);
+    }
+
+    .bundle-container:nth-child(odd) {
+      padding-right: 0.75rem;
+    }
+
+    .bundle-container:nth-child(even) {
+      padding-left: 0.75rem;
+    }
+  }
+
+  /* @media screen and (min-width:1280px) {
+    .AddToCart:hover span {
+      color: #fff;
+    }
+
+    .AddToCart:hover,
+    .triggerBtn:hover,
+    .triggerBtn.active {
+      background-color: #6a8c77;
+    }
+
+    .triggerBtn:hover .addToCartText,
+    .triggerBtn.active .addToCartText {
+      display: block;
+      transform: translateY(0);
+      color: #fff;
+    }
+
+    .triggerBtn:hover span:not(.addToCartText),
+    .triggerBtn.active span:not(.addToCartText) {
+      display: none;
+      transform: translateY(-3rem);
+    }
+  } */
+
+  @media screen and (min-width:1596px) {
+    .bundle-container:nth-child(odd) {
+      padding-right: 1rem;
+    }
+
+    .bundle-container:nth-child(even) {
+      padding-left: 1rem;
+    }
+  }
+
+  .discount-flag,
+  .triggerBtn {
+    background-color: #6a8c77;
+  }
+
+  .text-green {
+    color: #6a8c77;
+  }
+</style>
+
+<script>
+  var selectCallback = function (variant, selector) {
+    var soldOutText = "{{ 'products.product.sold_out' | t }}";
+    if (variant) {
+      timber.productPage({
+        money_format: "{{ shop.money_format }}",
+        variant: variant,
+        selector: selector,
+        translations: {
+          add_to_cart: "{{ 'products.product.add_to_cart' | t }}",
+          sold_out: soldOutText,
+          unavailable: "{{ 'products.product.unavailable' | t }}"
+        }
+      });
+    }
+  };
+
+  function variantChange(select_id) {
+    var variant_str = $(select_id).find("option:selected").data('label');
+    if (variant_str.indexOf(" / ") == -1) {
+      $(`${select_id}-option-0`).val(variant_str).trigger("change");
+    } else {
+      var variant_arr = variant_str.split(" / ");
+      for (let i = 0; i < variant_arr.length; i = i + 1) {
+        var variant = variant_arr[i];
+        $(`${select_id}-option-${i}`).val(variant).trigger("change");
+      }
+    }
+  }
+
+  $(function(){
+    if (window.innerWidth < 1280) {
+      $(".mainCategory h3").click(function () {
+        $(this).toggleClass("active");
+        $(".subNavList").hide();
+        $(".subCategory h3").removeClass("active");
+        $(".mainCategory").next("ul").slideToggle();
+      });
+
+      $(".subCategory h3").click(function () {
+        $(this).toggleClass("active");
+        $(".subCategory").next("ul").slideToggle();
+      });
+
+      $(".mainNavList").on("click", "li", function () {
+        const itemType = $(this).find("a").text();
+        $(".mainCategory h3").text(itemType);
+        $(".mainNavList").slideUp();
+
+        $(".subNav-container").hide();
+        const sub_nav = $(this).data("target");
+        if (sub_nav == "bundle" || sub_nav == "phone") {
+          $(".subNav-container")
+            .filter(function () {
+              return $(this).data("nav") == sub_nav;
+            })
+            .show()
+            .find(".subNavList>li:first-child")
+            .click();
+        } else {
+          const target_id = "#list-" + sub_nav;
+          $(".list>div").hide();
+          $(target_id).show();
+          // $(".list-banner")
+          //   .filter(function () {
+          //     return $(this).data("name") == sub_nav;
+          //   })
+          //   .removeClass("hidden")
+          //   .siblings()
+          //   .addClass("hidden");
+
+          const scrollTop = $(".collection-hero").height() + 120;
+          window.scrollTo({
+            top: scrollTop,
+            behavior: "smooth"
+          });
+        }
+      });
+
+      $(".subNavList").on("click", "li", function () {
+        const itemType = $(this).find("a").text();
+        $(".subCategory h3").text(itemType);
+        $(".subNavList").slideUp();
+
+        const nav_target = $(this).closest(".subNav-container").data("nav");
+        const targetID = "#list-" + nav_target;
+        $(targetID)
+          .show()
+          .siblings()
+          .hide();
+
+        const subNav_target = $(this).data("target");
+        $(targetID).find(".items-container").addClass("hidden");
+        $(targetID)
+          .find(".items-container")
+          .filter(function (index) {
+            return $(this).data("name") == subNav_target;
+          })
+          .removeClass("hidden");
+
+        // $(".list-banner")
+        //   .filter(function () {
+        //     return $(this).data("name") == subNav_target;
+        //   })
+        //   .removeClass("hidden")
+        //   .siblings()
+        //   .addClass("hidden");
+
+        const scrollTop = $(".collection-hero").height() + 120;
+        window.scrollTo({
+          top: scrollTop,
+          behavior: "smooth"
+        });
+      });
+
+      $(".mainNavList").find("li:first-child").click();
+    } else {
+      $(".mainNav").on("click", "a", function () {
+        $(".mainNav").removeClass("active");
+        $(this).parent().addClass("active");
+        const sub_nav = $(this).data("target");
+        // console.log(sub_nav)
+        $(".subNav").hide();
+        if (sub_nav == "bundle" || sub_nav == "phone") {
+          $(".subNav")
+            .filter(function (index) {
+              return $(this).data("nav") == sub_nav;
+            })
+            .show()
+            .find("li:first-child")
+            .click();
+        } else {
+          const target_id = "#list-" + sub_nav;
+          $(".list>div").hide();
+          $(target_id).show();
+
+          const scrollTop = $(".collection-hero").height() + 120;
+          window.scrollTo({
+            top: scrollTop,
+            behavior: "smooth"
+          });
+        }
+      });
+
+      $(".subNav").on("click", "li", function () {
+        $(this)
+          .addClass("active")
+          .siblings()
+          .removeClass("active");
+        const sub_nav = $(".mainNav.active").find("a").data("target");
+        const target_id = "#list-" + sub_nav;
+        $(".list>div").hide();
+        $(target_id).show();
+        const nav_target = $(this).data("target");
+        $(target_id).find(".items-container").addClass("hidden");
+        $(target_id)
+          .find(".items-container")
+          .filter(function (index) {
+            return $(this).data("name") == nav_target;
+          })
+          .removeClass("hidden");
+
+        const scrollTop = $(".collection-hero").height() + 120;
+        window.scrollTo({
+          top: scrollTop,
+          behavior: "smooth"
+        });
+      });
+
+      $(".mainNav")
+        .filter(":first-child")
+        .find("a")
+        .click();
+    }
+
+    $(".product-single__variants").on("change", function () {
+      var select_id = "#" + $(this).attr("id");
+      // console.log(select_id);
+      variantChange(select_id);
+
+      if ($(this).closest(".list-container").attr('id') == 'list-bundle') {
+        let bundle_discount_price = 0,
+          bundle_origin_price = 0;
+
+        $(this).closest(".bundle-container").find('.product-single__price').each(function () {
+          const price = parseFloat($(this).attr('content'));
+          bundle_discount_price += price;
+        });
+
+        const bundle_new = $(this).closest(".bundle-container").find('.bundle_discount_price').data('new');
+        let bundle_discount = 10;
+        if (bundle_new == 'new') {
+          bundle_discount = 5;
+        }else if(bundle_new == 'kit'){
+          bundle_discount = 4.49;
+        }
+
+        bundle_discount_price = '$' + (bundle_discount_price - bundle_discount).toFixed(2);
+
+        $(this).closest(".bundle-container").find('.product-compare__price').each(function () {
+          var $this = $(this);
+          var price_content = $this.attr('content');
+          let price = 0;
+          if (price_content != "") {
+            price = parseFloat(price_content);
+          } else {
+            price = parseFloat($this.prev('.product-single__price').attr('content'));
+          }
+          bundle_origin_price += price;
+        });
+
+        bundle_origin_price = '$' + bundle_origin_price.toFixed(2);
+
+
+        $(this).closest(".bundle-container").find('.bundle_discount_price').html(bundle_discount_price);
+        $(this).closest(".bundle-container").find('.bundle_origin_price').html(bundle_origin_price);
+      }
+
+    });
+
+    $(".product-single__variants").each(function () {
+      $(this).val($(this).find("option:first").attr("value")).trigger("change");
+    });
+
+    // $(".triggerBtn").on("click", function () {
+    //   var _this = $(this);
+    //   let toCartSize = 0;
+    //   _this.closest(".bundle-container").find(".AddToCart").trigger('click');
+    //   setTimeout(function () {
+    //     _this.closest(".bundle-container").find('form').each(function(){
+    //       if ($(this).data("submitSuccess") == true) {
+    //         toCartSize += 1;
+    //         // console.log(toCartSize);
+    //         if (toCartSize == 2) {
+    //           _this.find(".addToCartText").html("View Cart");
+    //           _this.addClass("active");
+    //         }
+    //       }
+    //     })
+    //   }, 2000);
+    // });
+  
+  })
+//   window.onload = function () {
+//   };
+</script>

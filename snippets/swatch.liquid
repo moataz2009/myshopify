@@ -1,0 +1,140 @@
+{% comment %}
+Set the extension of your color files below. Use 'png', 'jpeg', 'jpg' or 'gif'.
+{% endcomment %}
+
+{% if swatch == blank %}
+  <div class="swatch error">
+    <p>You must include the snippet swatch.liquid with the name of a product option.</p> 
+    <p>Use: <code>{% raw %}{% render 'swatch' with 'name of your product option here' %}{% endraw %}</code></p>
+    <p>Example: <code>{% raw %}{% render 'swatch' with 'Color' %}{% endraw %}</code></p>
+  </div>
+{% else %}
+  {% assign found_option = false %}
+  {% assign is_color = false %}
+  {% assign is_base = false %}
+  {% assign is_region = false %}
+  {% assign option_index = 0 %}
+  {% assign color_index = 0 %}
+
+  {% for option in product.options %}
+    {% if option == swatch %}
+      {% assign found_option = true %}
+      {% assign option_index = forloop.index0 %}
+      <style>
+        label[for="product-select-option-{{ option_index }}"] { display: none; }
+        #product-select-option-{{ option_index }} { display: none; }
+        #product-select-option-{{ option_index }} + .custom-style-select-box { display: none !important; }
+      </style>
+
+      {% assign downcased_option = swatch | remove_first: 'Countries/' | downcase %}
+      {% if downcased_option contains 'color' or downcased_option contains 'colour' %}
+        {% assign is_color = true %}
+        {% assign color_index = option_index %}
+      {% elsif downcased_option contains 'base' %}
+        {% assign is_base = true %}
+      {% elsif downcased_option contains 'regions' %}
+        {% assign is_region = true %}
+      {% endif %}
+
+    {% endif %}
+  {% endfor %}
+
+  {% if found_option %}
+    <div class="swatch swatch-{{ downcased_option }} clearfix mb-8" data-option-index="{{ option_index }}">
+
+      <h3 class="header text-sm font-bold">
+        {{ swatch }}
+        {% if is_color %}
+          <span class="text-gray-400 font-normal" id="color-context"></span>
+        {% endif %}
+      </h3>
+
+      {% assign values = '' %}
+      {% for variant in product.variants %}
+        {% assign value = variant.options[option_index] %}
+
+        {% unless values contains value %}
+          {% assign values = values | join: ',' %}
+          {% assign values = values | append: ',' | append: value %} 
+          {% assign values = values | split: ',' %}
+
+          {% capture soldoutClass %}
+          {% if product.handle contains 'juice-2' %}
+            hidden
+          {% else %}
+            soldout
+          {% endif %}
+          {% endcapture %}
+
+          {% capture roundedClass %}
+            {% if is_color %}color mr-1 mb-1 sm:mr-1.5 sm:mb-1.5{% else %}{% if is_base %}base{% elsif is_region %}regions{% else %}model{% endif %} mr-2 mb-2 sm:mr-3 sm:mb-3{% endif %}
+          {% endcapture %}
+
+          <div data-value="{{ value | escape }}" 
+              class="text-sm swatch-element {{roundedClass}} {{ value | handle }} {% if variant.available %}available{% else %}{{soldoutClass}}{% endif %}">
+            {%- comment -%}
+            {% if is_color %}
+            <!-- {{variant.inventory_quantity}} -->
+            <div class="tooltip pt-text-small">{{ value }}</div>
+            {% endif %}
+            {%- endcomment -%}
+
+            <input id="swatch-{{ option_index }}-{{ value | handle }}" 
+              type="radio" name="option-{{ option_index }}" value="{{ value | escape }}"
+              {%- comment -%} {% if forloop.first %}checked="checked" {% endif %}{%- endcomment -%}
+
+              {%- comment -%}
+              {% unless variant.available %}
+                {% unless variant.id == 32150123446342 or variant.id  == 32150124101702 or variant.id  == 32150124789830 or variant.id == 32150130622534 %}
+                disabled
+                {% endunless %}
+              {% endunless %} 
+              {%- endcomment -%}
+            />
+
+            {% if is_color %}
+              {%- comment -%}
+              {% if value contains '/' or product.handle contains 'fusion-weaving' %}
+                {% assign file_extension = 'svg' %}
+              {% else %}
+                {% assign file_extension = 'png' %}
+              {% endif %}
+              {%- endcomment -%}
+              {% assign file_extension = 'svg' %}
+
+              <label for="swatch-{{ option_index }}-{{ value | handle }}" 
+                class="bg-no-repeat bg-center w-9 border border-gray-850 border-solid rounded-full"       
+                style="background-color: {{ value | split: ' ' | last | handle }}; background-image: url({{ value | handle | append: '.' | append: file_extension | asset_url }});background-size:calc(100% - 10px)">
+                <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" />  
+              </label>
+            {% else %}
+              <label class="bg-gray-750 px-4 py-2 leading-tight"
+                for="swatch-{{ option_index }}-{% if value == 'S10+' %}s10+{% elsif value == 'MagEZ Case for S9+ (Black/Grey (Twill))' %}magez-case-for-s9p-black-grey-twill{% else %}{{ value | handle }}{% endif %}">
+                <span class="pt-btn-text text-gray-400" text="{{ value }}">{{ value }}</span>
+              </label>
+            {% endif %}
+          </div>
+        {% endunless %}
+
+        {% if variant.available %}
+          <script>
+            jQuery('.swatch[data-option-index="{{ option_index }}"] .{{ value | handle }}').removeClass('soldout').addClass('available').find(':radio').removeAttr('disabled');
+          </script>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% if is_region %}
+      <p class="text-xs -mt-8 mb-4 text-cyan">
+        Notices: Extra Shipping Fee would be charged if the Countries/Regions you select doesn't match your delivery address and the delivery time will be extended by 7 days.
+      </p>
+    {% endif %}
+  {% else %}
+    <div class="swatch error">
+      <p>You included the snippet swatch.liquid with the name of a product option — <code>'{{ swatch }}'</code> — that does not belong to your product.</p>
+      <p>Use <code>{% raw %}{% render 'swatch' with 'name of your product option here' %}{% endraw %}</code></p>
+      <p>Example: <code>{% raw %}{% render 'swatch' with 'Color' %}{% endraw %}</code></p>
+      <p><strong>This is case-sensitive!</strong> Do not put in <code>'color'</code> if your product option name is <code>'Color'</code>.</p>
+    </div>
+  {% endif %}
+{% endif %}
+

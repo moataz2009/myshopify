@@ -1,0 +1,557 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}
+<div class="section-default section0 relative">
+    <picture>
+      <source data-srcset="{{ 'product-mount-section0.jpg' | asset_url }}" media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-mount-section0-m.jpg' | asset_url }}" alt="MagEZ Mount"
+        class="img-responsive width-100 lazyload">
+    </picture>
+    <div class="pt-section-content absolute pt-position-center">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400 pt-text-center font-upper">Ready for the Road</h3>
+    </div>
+  </div>
+  
+  <div class="pt-section section1">
+    <div class="pt-section-content text-center pt-margin-auto">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Secure Your Mobile or Wallet While You Drive
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Simply attach the MagEZ Case or Wallet to the MagEZ Mount for a secure hold while traveling.
+      </p>
+    </div>
+  
+    <div class="pt-anim-container pt-flex pt-flex-center pt-margin-top-large">
+      <div class="pt-anim-pictures relative">
+        <div id="trigger_line"></div>
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-section1-mount.png' | asset_url }}" alt="MagEZ Mount"
+          class="lazyload">
+        <div class="pt-anim-case absolute" id="anim-case">
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-section1-iphone11.png' | asset_url }}"
+            alt="MagEZ Case for iPhone 11" class="lazyload">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="pt-section pt-flex pt-flex-column pt-flex-center section2">
+    <div class="pt-section-content text-center">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Specifically Placed Metal Strips
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Positioned for a seamless attachment to the MagEZ Mount and MagEZ ecosystem.
+      </p>
+    </div>
+  
+    <div class="pt-section-pictures pt-margin-top-large">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-mount-section2.png' | asset_url }}" alt="MagEZ Mount"
+        class="pt-block img-responsive lazyload">
+      {%- comment -%}
+      <div class="pt-flex pt-flex-center pt-margin-top-large">
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-mount-section2-1.png' | asset_url }}" alt="MagEZ Mount"
+          class="pt-padding-small img-responsive lazyload">
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-mount-section2-2.png' | asset_url }}" alt="MagEZ Mount"
+          class="pt-padding-small img-responsive lazyload">
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-mount-section2-3.png' | asset_url }}" alt="MagEZ Mount"
+          class="pt-padding-small img-responsive lazyload">
+      </div>
+      {%- endcomment -%}
+    </div>
+  </div>
+  
+  <div class="section-default section3 relative">
+    <div class="pt-section-content absolute pt-position-centerY pt-position-right">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        A Secure, Safe Attachment
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-medium">
+        Powerful N52-T magnets offer the stability needed for even the bumpiest of roads. Additionally, the magnetic
+        function auto-aligns your device to keep it secure while driving.
+      </p>
+      <picture class="pt-hide-mini">
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-mount-section3.png' | asset_url }}" alt="MagEZ Mount"
+          class="img-responsive pt-margin-auto lazyload">
+      </picture>
+    </div>
+  
+    <picture>
+      <source media="(min-width: 769px)" data-srcset="{{ 'product-mount-section3.jpg' | asset_url }}">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-mount-section3-m.jpg' | asset_url }}" alt="MagEZ Mount"
+        class="width-100 img-responsive lazyload">
+    </picture>
+  </div>
+  
+  <div class="section-default pt-section section4 pt-flex pt-flex-center">
+    <div class="pt-section-picture">
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-mount-section4.png' | asset_url }}" alt="MagEZ Mount"
+          class="img-responsive lazyload">
+      </picture>
+    </div>
+  
+    <div class="pt-section-content pt-text-right">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        A 360° Adjustable Angle
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-medium">
+        The 360° ball joint allows you to adjust the MagEZ Mount and view your phone at the best angle.
+      </p>
+      <picture class="pt-flex pt-flex-end">
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-mount-section4-1.png' | asset_url }}" alt="MagEZ Mount"
+          class="img-responsive lazyload">
+      </picture>
+    </div>
+  </div>
+  
+  <div class="pt-hide-small">
+    <div class="pt-section section5 pt-flex pt-flex-center">
+      <div class="pt-section-content pt-text-right">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+          Easy Installation
+        </h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          Our uniquely designed claw easily attaches to your car’s air vent. The durable clip holds your device steady
+          and, with its ergonomic shape, can easily be removed and reattached whenever you need it.
+        </p>
+  
+        <ul class="feature-toggles-container pt-margin-top-large">
+          <li class="feature-toggle pt-flex pt-flex-center pt-flex-end active" data-target="#feature_1">
+            <span class="pt-section-title-small fw-400">
+              Easy to install and remove
+            </span>
+            <div class="feature-toggle-ico pt-flex pt-flex-center">
+              {{ 'ico-claw.png' | asset_url | img_tag }}
+            </div>
+          </li>
+          <li class="feature-toggle pt-flex pt-flex-center pt-flex-end " data-target="#feature_2">
+            <span class="pt-section-title-small fw-400">
+              Stronger Suction Force
+            </span>
+            <div class="feature-toggle-ico pt-flex pt-flex-center">
+              {{ 'ico-newbase.png' | asset_url | img_tag }}
+            </div>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="pt-section-picture">
+        <div id="feature_1" class="feature-toggle-item active">
+          {{ 'product-mount-section5-1.jpg' | asset_url | img_tag: 'Easy to install and remove','img-responsive width-100' }}
+        </div>
+        <div id="feature_2" class="feature-toggle-item">
+          {{ 'product-mount-section5-2.jpg' | asset_url | img_tag: 'Stronger Suction Force','img-responsive width-100' }}
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="pt-show-small">
+    <div class="section5">
+      <div class="pt-section-content text-center">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+          Easy Installation
+        </h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+          Our uniquely designed claw easily attaches to your car’s air vent. The durable clip holds your device steady
+          and, with its ergonomic shape, can easily be removed and reattached whenever you need it.
+        </p>
+      </div>
+  
+      <div class="pt-section-picture swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="feature-toggle pt-flex pt-flex-center active">
+              <div class="feature-toggle-ico pt-flex pt-flex-center">
+                {{ 'ico-claw.png' | asset_url | img_tag }}
+              </div>
+              <span class="pt-section-title-small fw-400">
+                Easy to install and remove
+              </span>
+            </div>
+  
+            <picture class="width-100 pt-margin-top-large">
+              <img src="{{ placeholder_gif }}" data-src="{{ 'product-mount-section5-1-m.jpg' | asset_url }}"
+                class="img-responsive width-100 lazyload" alt="Easy to install and remove">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <div class="feature-toggle pt-flex pt-flex-center active">
+              <div class="feature-toggle-ico pt-flex pt-flex-center">
+                {{ 'ico-newbase.png' | asset_url | img_tag }}
+              </div>
+              <span class="pt-section-title-small fw-400">
+                Stronger Suction Force
+              </span>
+            </div>
+            <picture class="width-100 pt-margin-top-large">
+              <img src="{{ placeholder_gif }}" data-src="{{ 'product-mount-section5-2-m.jpg' | asset_url }}"
+                class="img-responsive width-100 lazyload" alt="Stronger Suction Force">
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section-default section6 relative">
+    <div class="pt-section-content absolute pt-position-centerY pt-position-right">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Extremely durable claw
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        built with highly-durable materials allowing 5000+ plug & unplug
+      </p>
+    </div>
+    <picture>
+      <source media="(min-width: 769px)" data-srcset="{{ 'product-mount-section6.jpg' | asset_url }}">
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-mount-section6-m.jpg' | asset_url }}" alt="MagEZ Mount"
+        class="width-100 img-responsive lazyload">
+    </picture>
+  </div>
+  
+  
+  <style>
+    .pt-section-content {
+      max-width: 558px;
+    }
+  
+    .section1 .pt-section-content {
+      max-width: unset;
+      width: 60%;
+    }
+  
+    .section3 .pt-section-content img {
+      max-width: 50%;
+    }
+  
+    .section4 .pt-section-picture {
+      padding-right: 5%;
+    }
+  
+    .section5 .pt-section-content {
+      padding-right: 8%;
+    }
+  
+    .feature-toggle .feature-toggle-ico {
+      width: 105px;
+      height: 105px;
+      border-radius: 50%;
+      background-color: #27272A;
+      margin: 1em 0 1em 2em;
+      cursor: pointer;
+    }
+  
+    .feature-toggle .feature-toggle-ico img{
+      max-width: 55%;
+    }
+  
+    .feature-toggle.active .feature-toggle-ico {
+      background-color:  #808080;
+    }
+  
+    .pt-section-picture .feature-toggle-item {
+      display: none;
+    }
+  
+    .pt-section-picture .feature-toggle-item.active {
+      display: block;
+    }
+  
+    @media screen and (min-width: 1960px) {
+      .pt-section-content {
+        max-width: 658px;
+      }
+    }
+  
+    @media screen and (min-width: 1441px) {
+      .section4 {
+        padding-left: 16%;
+        padding-right: 16%;
+      }
+    }
+  
+    @media screen and (max-width: 1440px) {
+      .feature-toggle .feature-toggle-ico {
+        width: 86px;
+        height: 86px;
+      }
+    }
+  
+    @media screen and (max-width:768px) {
+  
+      .pt-section .pt-section-content,
+      .pt-section-content,
+      .section1 .pt-section-content,
+      .section5 .pt-section-content {
+        max-width: unset;
+        text-align: center;
+        transform: none;
+        width: 100%;
+        padding: 0 20%;
+        left: 0;
+        top: 10%;
+      }
+  
+      .pt-section .pt-section-content {
+        padding: 0 13vw;
+      }
+  
+      .section0 .pt-section-content {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+  
+      .section2 .pt-section-pictures .pt-flex {
+        flex-direction: row;
+      }
+  
+      .section4 {
+        flex-direction: column-reverse;
+      }
+  
+      .section4 .pt-section-content {
+        margin-bottom: 5em;
+      }
+      
+      .section4 .pt-section-picture{
+        padding: 0;
+      }
+  
+      .section4 .pt-section-content picture.pt-flex.pt-flex-end {
+        align-items: center;
+      }
+  
+      .section4 .pt-section-content img {
+        width: max-content;
+      }
+  
+      .feature-toggle .feature-toggle-ico {
+        margin: 2em 0 1em;
+      }
+    }
+  
+    @media screen and (max-width:414px) {
+  
+      .pt-section .pt-section-content,
+      .pt-section-content,
+      .section1 .pt-section-content,
+      .section5 .pt-section-content {
+        padding: 0 10%;
+      }
+  
+      .pt-section .pt-section-content {
+        padding: 0 3vw;
+      }
+  
+      .section0 .pt-section-content {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+  
+      .section2 .pt-section-pictures .pt-flex {
+        justify-content: space-around;
+      }
+  
+      .section2 .pt-section-pictures .pt-flex img {
+        width: 25%;
+        padding: 0;
+      }
+    }
+  </style>
+  
+  <style>
+    .swiper-button-next,
+    .swiper-button-prev {
+      background: none !important;
+      visibility: hidden;
+      top: 90px;
+      left: 28%;
+      right: auto;
+    }
+  
+    .swiper-button-next {
+      right: 28%;
+      left: auto;
+    }
+  
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      color: #fff !important;
+      display: block !important;
+    }
+  
+    .swiper-pagination-bullet {
+      background-color: #fff;
+    }
+  
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      --swiper-navigation-size: 60px;
+      --swiper-theme-color: #0BBCD4;
+    }
+  
+    .swiper-container:hover .swiper-button-next,
+    .swiper-container:hover .swiper-button-prev {
+      visibility: visible;
+    }
+  
+    .swiper-slide {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      width: 100% !important;
+    }
+  
+    .pagination-custom .swiper-pagination-bullet {
+      border-radius: 0;
+      width: 40px;
+      height: 4px;
+    }
+  
+    @media screen and (max-width:1024px) {
+  
+      .swiper-button-next,
+      .swiper-button-prev {
+        visibility: visible;
+      }
+    }
+  
+  
+  
+    @media screen and (max-width:414px) {
+      .swiper-container {
+        --swiper-navigation-size: 30px;
+      }
+    }
+  </style>
+  
+  {{ 'swiper-bundle.min.js' | asset_url | script_tag }}
+  
+  <script>
+    new Swiper('.swiper-container', {
+      autoplay: {
+        delay: 5000,
+      },
+      loop: true,
+      observer:true,
+      observeParents:true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    })
+  </script>
+  
+  {{ 'TweenMax.min.js' | asset_url | script_tag }}
+  {{ 'ScrollMagic.js' | asset_url | script_tag }}
+  {{ 'animation.gsap.min.js' | asset_url | script_tag }}
+  
+  <!-- anim-pictures -->
+  <style>
+    .pt-anim-container {
+      justify-content: space-around;
+      flex-shrink: 0;
+    }
+  
+    .pt-anim-case {
+      top: -50px;
+      left: 120px;
+      width: 100%;
+    }
+  
+    .pt-anim-pictures {
+      width: 368px;
+      margin: 0 2em;
+      flex-shrink: 0;
+    }
+  
+    .pt-anim-pictures img {
+      display: block;
+    }
+  
+    .pt-anim-content {
+      padding: 0 10%;
+    }
+  
+    @media screen and (max-width:1280px) {
+  
+      .pt-anim-container {
+        transform: scale(0.8);
+      }
+    }
+  
+    @media screen and (max-width:1024px) {
+      .pt-anim-container {
+        width: 100%;
+      }
+    }
+  
+    @media screen and (max-width:768px) {
+      .pt-anim-container {
+        flex-direction: column;
+        align-items: center;
+        margin: -2em 0;
+      }
+  
+      .pt-anim-pictures {
+        margin: 5em 0 0;
+      }
+    }
+  
+    @media screen and (max-width:414px) {
+      .pt-anim-container {
+        margin: -3em 0;
+        transform: scale(0.7);
+      }
+    }
+  </style>
+  
+  <script>
+    $(function () {
+      // init controller
+      var controller = new ScrollMagic.Controller();
+  
+      // build tween
+      var tween = TweenMax.to("#anim-case", 0.5, {
+        top: 0,
+        left: 0,
+        ease: Linear.easeNone
+      });
+  
+      // build scene
+      var scene = new ScrollMagic.Scene({
+          triggerElement: "#trigger_line",
+          duration: 300,
+          onLeave: true,
+        })
+        .setTween(tween)
+        .addTo(controller);
+    });
+  </script>
+  
+  <script>
+    $(function () {
+      $('.feature-toggle').on('click', function () {
+        var target = $(this).data('target');
+        $(this).addClass('active').siblings().removeClass('active');
+        $(target).addClass('active').siblings().removeClass('active');
+      })
+    })
+  </script>

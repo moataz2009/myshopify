@@ -1,0 +1,856 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}
+<div class="section1 relative">
+    <div class="pt-section-content absolute pt-position-centerY">
+      <h1 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2">
+        MagEZ Folio
+      </h1>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        A magnetic dual-sided cover to<br>
+        protect your tablet on the go.
+      </p>
+    </div>
+    <picture>
+      <source media="(min-width: 769px )" data-srcset="{{ 'product-section1-folio.jpg' | asset_url }}" />
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-section1-folio-m.jpg' | asset_url }}"
+        alt="MagEZ Folio for iPad Pro & iPad Air" class="img-responsive width-100 lazyload" />
+    </picture>
+  </div>
+  
+  <div class="pt-section">
+    <div class="pt-section-content text-center pt-margin-bottom-medium">
+      <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+        Protect Your Tablet On The Go
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        What accessories would you take with you if you want to use your tablet outdoors? The Magic Keyboard? It is great
+        but undeniably heavy. Or a clumsy stand that can’t be folded?<br>
+        The MagEZ Folio is a lightweight double-side cover to protect your tablet on the go. And you can fold it into
+        different positions as a stand for viewing and typing.<br>
+        Feel no pressure to carry your tablet wherever you go.
+      </p>
+    </div>
+  
+    <div class="pt-section-container relative">
+      <div class="absolute left-0 top-0 transform w-full h-full flex justify-center items-center">
+        <a href="javascript:;" class="play-btn rounded-full w-9 h-9 bg-white flex justify-center items-center"
+          data-target="#modal-video" id="modal-toggle">
+          {{ 'triggle_pixel-black.svg' | asset_url | img_tag:'','block' }}
+        </a>
+      </div>
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{'product-video-folio-cover.jpg' | asset_url }}"
+          class="width-100 pt-block lazyload" alt="MagEZ Folio">
+      </picture>
+    </div>
+  </div>
+  
+  <div class="section-default pt-section section2 pt-flex pt-flex-center pt-flex-between">
+    <div id="trigger_sec"></div>
+    <div class="pt-anim-container pt-flex">
+      <div class="pt-anim-pictures relative">
+        <div id="trigger_line_2"></div>
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-section2-folio.png' | asset_url }}" class="lazyload" />
+        <div class="pt-anim-item absolute" id="anim-item-2">
+          <img src="{{ placeholder_gif }}" data-src="{{ 'product-section2-ipad-case.png' | asset_url }}"
+            alt="MagEZ Folio for iPad Pro & iPad Air" class="lazyload" />
+        </div>
+      </div>
+    </div>
+  
+    <div class="pt-section-content">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2">Magnetically Attaches</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-small">
+        Use the magnetically attaching Folio with all MagEZ Cases 2 for iPad Pro
+        2021/2020/2018 and iPad Air 2020/2022 or an iPad Pro/Air without a case.
+        Attach and charge your Apple Pencil as usual.
+      </p>
+      {% render 'link-button',link_url: "/collections/magez-case-2-for-ipad-pro-2021", link_title:'MagEZ Case 2 for iPad Pro 2021' %}
+      <div class="mb-4 sm:mb-6"></div>
+      {% render 'link-button',link_url: "/collections/magez-case-2-for-ipad-pro-2020-and-2018", link_title:'MagEZ Case 2 for iPad Pro 2020/2018 & Air 2020/2022' %}
+    </div>
+
+  </div>
+  
+  <div class="section3 relative">
+    <div class="pt-section-content absolute pt-position-centerY" style="z-index: 10;">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2">Multiple Viewing Options</h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        The tri-fold front cover supports two stand positions that are perfect for viewing, drawing, or typing.
+      </p>
+    </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <picture class="width-100">
+            <source media="(min-width: 769px )" data-srcset="{{ 'product-section3-folio-1.jpg' | asset_url }}" />
+            <img src="{{ placeholder_gif }}" data-src="{{ 'product-section3-folio-1-m.jpg' | asset_url }}"
+              alt="MagEZ Folio for iPad Pro & iPad Air" class="img-responsive width-100 lazyload" />
+          </picture>
+        </div>
+        <div class="swiper-slide">
+          <picture class="width-100">
+            <source media="(min-width: 769px )" data-srcset="{{ 'product-section3-folio-2.jpg' | asset_url }}" />
+            <img src="{{ placeholder_gif }}" data-src="{{ 'product-section3-folio-2-m.jpg' | asset_url }}"
+              alt="MagEZ Folio for iPad Pro & iPad Air" class="img-responsive width-100 lazyload" />
+          </picture>
+        </div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination pagination-custom"></div>
+    </div>
+  </div>
+  
+  <div class="section4 pt-section pt-flex pt-flex-center pt-flex-between">
+    <div class="pt-section-picture">
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-section4-folio.png' | asset_url }}"
+          alt="MagEZ Folio for iPad Pro & iPad Air" class="img-responsive width-100 lazyload" />
+      </picture>
+    </div>
+  
+    <div class="pt-section-content">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2">
+        Auto Sleep/Wake Function
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Use the finger groove to slide open the cover easily. Automatically wakes up your iPad Pro/Air when opened and
+        puts it into sleep mode when the cover is closed.
+      </p>
+    </div>
+  </div>
+
+  <div class="section6 pt-section pt-flex pt-flex-center pt-flex-between">
+    <div class="pt-section-content">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2">
+        Simplicity Design
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Automatically wakes up your iPad Pro/Air when opened and puts it into sleep mode when the cover is closed.
+      </p>
+    </div>
+    <div class="pt-section-picture">
+      <picture>
+        <source media="(min-width: 769px)" data-srcset="{{ 'product-section6-folio.jpg' | asset_url }}" />
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-section6-folio-m.jpg' | asset_url }}"
+          alt="MagEZ Folio for iPad Pro & iPad Air" class="img-responsivewidth-100 lazyload" />
+      </picture>
+    </div>
+  </div>
+  
+  
+  <div class="section5">
+    <picture>
+      <source media="(min-width: 769px)" data-srcset="{{ 'product-section5-folio.jpg' | asset_url }}" />
+      <img src="{{ placeholder_gif }}" data-src="{{ 'product-section5-folio-m.jpg' | asset_url }}"
+        alt="MagEZ Folio for iPad Pro & iPad Air" class="width-100 lazyload" />
+    </picture>
+  </div>
+  
+  <div class="section7 pt-section pt-flex pt-flex-between">
+    <div class="pt-section-container pt-flex pt-flex-column pt-flex-center">
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-section7-folio-1.png' | asset_url }}"
+          alt="MagEZ Folio for iPad Pro & iPad Air" class="img-responsive lazyload" />
+      </picture>
+  
+      <h3 class="pt-section-title text-xl sm:text-2xl font-bold mb-6 pt-margin-top-small">
+        MagEZ Case 2 <br>
+        <span class="small">
+          for iPad Pro 2021
+        </span>
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-medium">
+        An ultra-slim Magic Keyboard compatible case for iPad Pro 2021.
+      </p>
+      {% render 'link-button',link_url: "/products/magez-case-2-for-ipad-pro-2021", link_title:'Shop Now' %}
+    </div>
+    <div class="pt-section-container pt-flex pt-flex-column pt-flex-center">
+      <picture>
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-section7-folio-2.png' | asset_url }}"
+          alt="MagEZ Folio for iPad Pro & iPad Air" class="img-responsive lazyload" />
+      </picture>
+  
+      <h3 class="pt-section-title text-xl sm:text-2xl font-bold mb-6 pt-margin-top-small">
+        MagEZ Case 2 <br>
+        <span class="small">
+          for iPad Pro 2020/2018 & iPad Air 2020/2022
+        </span>
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-medium">
+        An ultra-slim Magic Keyboard compatible case for iPad Pro/Air.
+      </p>
+      {% render 'link-button',link_url: "/products/magez-case-2-for-ipad-pro-2020-and-2018", link_title:'Shop Now' %}
+    </div>
+    <div class="pt-section-container relative">
+      <div class="pt-section-content absolute pt-position-centerY">
+        <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6 pt-margin-top-small">
+          <span class="text-cyan">Pita!Flow</span> for Tablets
+        </h3>
+        <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-medium">
+          A series of magnetic products that work seamlessly with your iPad Pro/Air to help you work more efficiently,
+          whether you’re at home, the office, or a cafe.
+        </p>
+        {% render 'link-button',link_url: "/collections/pitaflow-for-tablets", link_title:'Learn More' %}
+      </div>
+      <picture>
+        <source media="(min-width: 769px)" data-srcset="{{ 'product-section7-folio-3.jpg' | asset_url }}">
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product-section7-folio-3-m.jpg' | asset_url }}"
+          alt="MagEZ Folio for iPad Pro & iPad Air" class="img-responsive width-100 lazyload" />
+      </picture>
+    </div>
+  </div>
+  
+  <div class="modal-mask"></div>
+  <div id="modal-video" class="pt-modal-container">
+    <div class="modal-background">
+      <div class="pt-modal-dialog relative">
+        <button class="pt-modal-close absolute" type="button">
+          <span class="icon icon-x"></span>
+        </button>
+        <video controls playsinline preload="none" class="lazyload">
+          <source src="{{ 'product-video-folio.mp4' | asset_url }}" type="video/mp4">
+          <source src="{{ 'product-video-folio.webm' | asset_url }}" type="video/webm">
+        </video>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    /* .pagination-custom.swiper-pagination-bullets {
+      width: 10%;
+      left: unset;
+      right: 0;
+      bottom: 1em;
+    } */
+  
+    .swiper-pagination-bullet {
+      background-color: #fff;
+    }
+  
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+  
+    .swiper-slide {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+  
+    .pagination-custom .swiper-pagination-bullet {
+      border-radius: 0;
+      width: 8px;
+      height: 8px;
+    }
+  </style>
+  
+  <!-- anim-pictures -->
+  <style>
+    .pt-anim-container {
+      justify-content: space-around;
+      flex-shrink: 0;
+      width: 50%;
+    }
+  
+    .pt-anim-item {
+      top: 0;
+      right: 0;
+    }
+  
+    .pt-anim-pictures {
+      width: 472px;
+      /* margin: 0 2em; */
+      flex-shrink: 0;
+    }
+  
+    .pt-anim-pictures img {
+      display: block;
+    }
+  
+    .pt-anim-content {
+      padding: 0 5%;
+    }
+  
+    @media screen and (max-width: 1280px) {
+      .pt-anim-container {
+        transform: scale(0.8);
+      }
+    }
+  
+    @media screen and (max-width: 1024px) {
+      .pt-anim-container {
+        width: 100%;
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      .pt-anim-container {
+        flex-direction: column;
+        align-items: center;
+        transform: scale(1);
+        margin-bottom: 0;
+      }
+  
+      /* .pt-anim-pictures:first-child {
+        margin-bottom: 5em;
+      } */
+  
+      .pt-anim-content {
+        max-width: 100vw;
+        margin: 0 auto;
+      }
+    }
+  
+    @media screen and (max-width: 414px) {
+      .pt-anim-container {
+        transform: scale(0.65);
+        margin-bottom: -30%;
+        margin-top: -30%;
+        /* margin-top: calc(-30% - 3em); */
+      }
+    }
+  </style>
+  
+  
+  <style>
+    .video-section{
+      padding-bottom: 0;
+    }
+    
+    .video-section .play-btn img {
+      width: 140px;
+      height: 140px;
+    }
+  
+    #modal-video .pt-modal-dialog {
+      max-width: unset;
+      width: auto;
+    }
+  
+    #modal-video .pt-modal-dialog video {
+      max-height: calc(100vh - 80px);
+      max-width: calc(100vw - 80px);
+      display: block;
+      object-fit: contain;
+    }
+  
+    #features .pt-section {
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+  
+    .pt-section .pt-section-picture {
+      width: 50%;
+      overflow: hidden;
+    }
+  
+    .pt-section-content.text-center {
+      max-width: unset;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .section1 .pt-section-content {
+      left: 15%;
+    }
+  
+    .section2 .video-container {
+      width: 40%;
+      background: none;
+    }
+  
+    .section2 .video-container video {
+      width: 100%;
+      height: auto;
+    }
+  
+    .section7 {
+      /* align-items: stretch; */
+      flex-wrap: wrap;
+    }
+  
+    .section7 .pt-section-container {
+      width: calc(50% - 10px);
+      padding: 3em 5%;
+      text-align: center;
+      justify-content: space-between;
+      background-color: #1B1B1B;
+    }
+  
+    .section7 .pt-section-container:last-child {
+      width: 100%;
+      padding: 0;
+      text-align: left;
+      margin-top: 20px;
+    }
+  
+    .section7 .pt-section-container p {
+      max-width: 358px;
+    }
+  
+    .section7 .pt-section-container:last-child p {
+      padding: 0;
+      max-width: unset;
+      width: 70%;
+    }
+  
+    .section3 .pt-section-content {
+      width: 30%;
+      left: 15%;
+    }
+  
+    /* .section4 .pt-section-content {
+      text-align: left;
+    } */
+  
+    .section4{
+      padding-top: 8em;
+      padding-bottom: 5em;
+    }
+    
+    .section6{
+      padding-bottom: 8em;
+    }
+  
+    /* .section6 .pt-section-container {
+      padding: 3em;
+      background: #171719;
+    } */
+  
+    /* .section6 picture {
+      max-width: 50%;
+      padding-left: 10%;
+    } */
+  
+    /* .section6 .pt-section-content {
+      width: 50%;
+    } */
+  
+    .tab-box {
+      margin-bottom: 2em;
+      opacity: 0.35;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      text-align: left;
+    }
+  
+    .content-box {
+      opacity: 0;
+      height: 0;
+      transition: all 0.3s;
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      /* justify-content: flex-end; */
+    }
+  
+    .tab-box.active {
+      opacity: 1;
+    }
+  
+    .content-box.active {
+      opacity: 1;
+      height: auto;
+    }
+  
+    .tab-box .tab-icon {
+      width: 81px;
+      height: 81px;
+      padding: 14px;
+      background: #302f2f;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1.5em;
+      flex-shrink: 0;
+    }
+  
+    .content-box p {
+      opacity: 0.8;
+      margin-top: 3em;
+      max-width: 640px;
+      height: 54px;
+    }
+  
+    @media screen and (min-width:1960px){
+      .section4{
+        padding-top: 10em;
+        padding-bottom: 8em;
+      }
+      .section6{
+        padding-bottom: 10em;
+      }
+    }
+  
+    @media screen and (max-width:1600px) {
+      .section1 .pt-section-content {
+        left: 10%;
+      }
+  
+      #features .pt-section {
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+  
+      .large {
+        font-size: 120%;
+      }
+  
+      .section7 .pt-section-container p {
+        max-width: 308px;
+      }
+  
+      .section7 .pt-section-container:last-child p {
+        width: 80%;
+      }
+    }
+  
+    @media screen and (max-width:1280px) {
+      #features .pt-section {
+        padding-left: 7%;
+        padding-right: 7%;
+      }
+  
+      .video-section .play-btn img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  
+    @media screen and (max-width:1024px) {
+      .shop-btn {
+        align-items: flex-start;
+      }
+  
+      .pt-section-content {
+        width: 45%;
+      }
+  
+      .pt-section .pt-section-content.text-center {
+        width: 68%;
+      }
+  
+      /* .section7 {
+        flex-direction: column;
+        align-items: center;
+      } */
+  
+      /* .section7 .pt-section-container {
+        width: 80%;
+        margin-bottom: 4em;
+      } */
+  
+      .section7 .pt-section-container h3 {
+        margin-left: -23px;
+        margin-right: -23px;
+      }
+  
+      .section7 .pt-section-container:last-child h3 {
+        margin-left: 0;
+        margin-right: 0;
+      }
+  
+      .section7 .pt-section-container:last-child p {
+        width: 98%;
+      }
+  
+      .content-box p {
+        height: 68px;
+      }
+  
+      .section2 {
+        flex-direction: column-reverse;
+      }
+  
+      .section2 .pt-section-content {
+        text-align: center;
+        width: 68%;
+      }
+    }
+  
+    @media screen and (max-width:768px) {
+      .shop-btn {
+        align-items: center;
+      }
+  
+      .large {
+        font-size: 115%;
+      }
+  
+      .pt-section-content {
+        text-align: center;
+        padding-bottom: 4em;
+        width: 64%;
+        max-width: unset !important;
+      }
+  
+      .pt-section .pt-section-content {
+        width: 80% !important;
+      }
+  
+      .pt-section .pt-section-content.text-center {
+        width: 100% !important;
+      }
+  
+      .pt-section-content.text-center {
+        width: 86%;
+      }
+  
+      .pt-section .pt-section-picture {
+        width: 100%;
+      }
+  
+      .section1 .pt-section-content {
+        left: 50%;
+        top: 12%;
+        transform: translateX(-50%);
+      }
+  
+      .section7 .pt-section-container {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+  
+      .section7 .pt-section-container:last-child {
+        width: 100vw;
+        margin: 0 -7vw;
+      }
+  
+      .section7 .pt-section-content {
+        left: 50%;
+        top: unset;
+        bottom: 12%;
+        transform: translateX(-50%);
+        padding: 0 10vw;
+      }
+  
+      .video-section {
+        padding-bottom: 2em;
+      }
+  
+      .section3 .pt-section-content,
+      .video-section .pt-section-content {
+        padding-bottom: 0;
+      }
+  
+      .section3 .pt-section-content{
+        position: static;
+        width: 100%;
+        padding: 4em 20%;
+        transform: none;
+      }
+  
+      .section2 .pt-section-content {
+        margin-bottom: 0;
+      }
+  
+      .section2 .video-container {
+        width: 100%;
+      }
+  
+      .section4 {
+        padding-top: 4em;
+        padding-bottom: 4em;
+        flex-direction: column-reverse;
+      }
+  
+      .section6 {
+        padding-top: 1em;
+        padding-bottom: 4em;
+      }
+  
+      .section7.pt-section{
+        padding: 4em 7% 0em;
+      }
+    }
+  
+    @media screen and (max-width:414px) {
+      .video-section .play-btn img {
+        width: 100px;
+        height: 100px;
+      }
+  
+      #features .pt-section {
+        padding-left: 7%;
+        padding-right: 7%;
+      }
+  
+      .large {
+        font-size: 110%;
+      }
+  
+      .content-box p {
+        height: 56px;
+      }
+  
+      .pt-section-content {
+        padding-bottom: 3em;
+        width: 86%;
+      }
+  
+      .pt-section .pt-section-content {
+        width: 100% !important;
+      }
+  
+      .section7 .pt-section-content {
+        bottom: 7%;
+        padding: 0 7vw;
+      }
+  
+      .section4 {
+        padding-top: 3em;
+        padding-bottom: 2em;
+      }
+  
+      #features .pt-section.section6 {
+        padding: 2em 0 0;
+      }
+  
+      .section3 .pt-section-content{
+        padding: 3em 7%;
+      }
+      /* .section6 .pt-section-container {
+        padding: 3em 1em;
+      } */
+  
+      .video-section {
+        padding-bottom: 0;
+      }
+  
+      .video-section .pt-section-container {
+        margin: 0 -7vw;
+      }
+    }
+  </style>
+  
+  {{ "swiper.min.js" | asset_url | script_tag }}
+  <script>
+    // var swiperWidth_15 = Math.ceil(window.innerWidth * 0.35);
+    // var swiperWidth_10 = Math.ceil(window.innerWidth * 0.4);
+    var galleryTop = new Swiper(".swiper-container", {
+      // width: window.innerWidth,
+      // breakpoints: {
+      //   769: {
+      //     width: swiperWidth_10
+      //   },
+      //   1601: {
+      //     width: swiperWidth_15
+      //   },
+      // },
+      autoplay: {
+        delay: 5000,
+      },
+      loop: true,
+      observer: true,
+      observeParents: true,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+      }
+    });
+  </script>
+  
+  {{ "TweenMax.min.js" | asset_url | script_tag }}
+  {{ "ScrollMagic.js" | asset_url | script_tag }}
+  {{ "animation.gsap.min.js" | asset_url | script_tag }}
+  
+  <script>
+    $(function () {
+      var video = document.getElementById('modal-video').querySelector('video');
+      $("#modal-toggle").click(function (e) {
+        e.stopPropagation();
+        var modal = $(this).data("target");
+        $(".modal-mask").show();
+        $(modal).addClass('open');
+        video.play();
+  
+        $(document).click(function (e) {
+          var _con = $('#modal-video');
+          if (!_con.is(e.target) && _con.has(e.target).length === 0) {
+            video.pause();
+            _con.removeClass('open');
+            $(".modal-mask").hide();
+          }
+        })
+      })
+      $(".pt-modal-close").click(function (e) {
+        e.stopPropagation();
+        video.pause();
+        $('#modal-video').removeClass('open');
+        $(".modal-mask").hide();
+      })
+  
+      // init controller
+      var controller = new ScrollMagic.Controller();
+      // var tween_1 = TweenMax.to("#anim-item-1", 0.5, {
+      //   x: -84,
+      //   y: 51,
+      //   ease: Linear.easeNone,
+      // });
+      var tween_2 = TweenMax.to("#anim-item-2", 0.5, {
+        x: -80,
+        y: 50,
+        ease: Linear.easeNone,
+        offset: -100
+      });
+      if (window.innerWidth > 768) {
+        // var scene_1 = new ScrollMagic.Scene({
+        //     triggerElement: "#trigger_sec",
+        //     duration: 300,
+        //     onLeave: true,
+        //   })
+        //   .setTween(tween_1)
+        //   .addTo(controller);
+  
+        var scene_2 = new ScrollMagic.Scene({
+            triggerElement: "#trigger_sec",
+            duration: 300,
+            onLeave: true,
+          })
+          .setTween(tween_2)
+          .addTo(controller);
+      } else {
+        // var scene_1 = new ScrollMagic.Scene({
+        //     triggerElement: "#trigger_line_1",
+        //     duration: 300,
+        //     onLeave: true,
+        //   })
+        //   .setTween(tween_1)
+        //   .addTo(controller);
+  
+        var scene_2 = new ScrollMagic.Scene({
+            triggerElement: "#trigger_line_2",
+            duration: 300,
+            onLeave: true,
+          })
+          .setTween(tween_2)
+          .addTo(controller);
+      }
+  
+      $(".tab-box").click(function () {
+        $(this).addClass("active").siblings().removeClass("active");
+        const dataId = $(this).data("feature");
+        const featureId = `#feature-${dataId}`;
+        $(featureId).addClass("active").siblings().removeClass("active");
+      });
+    });
+  </script>

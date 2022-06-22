@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 37.98 37.98" style="enable-background:new 0 0 37.98 37.98;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:1.3906;stroke-miterlimit:10;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#FFFFFF;stroke-width:1.3906;stroke-miterlimit:10;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#FFFFFF;stroke-width:0.9441;stroke-miterlimit:10;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#FFFFFF;stroke-width:0.5915;stroke-miterlimit:10;}
+</style>
+<g>
+	<polygon class="st0" points="15.7,22.01 18.81,22.56 19.98,15.81 	"/>
+	<polygon class="st0" points="22.29,21.02 19.17,20.48 18,27.22 	"/>
+</g>
+<g>
+	<g>
+		<path class="st0" d="M20.06,5.1c2.15,0,3.9,1.75,3.9,3.9v19.97c0,2.15-1.75,3.9-3.9,3.9h-2.13c-2.15,0-3.9-1.75-3.9-3.9V9.01
+			c0-2.15,1.75-3.9,3.9-3.9H20.06 M20.06,3.71h-2.13c-2.92,0-5.29,2.37-5.29,5.29v19.97c0,2.92,2.37,5.29,5.29,5.29h2.13
+			c2.92,0,5.29-2.37,5.29-5.29V9.01C25.35,6.08,22.98,3.71,20.06,3.71L20.06,3.71z"/>
+	</g>
+	<g>
+		<line class="st1" x1="13.34" y1="12.25" x2="24.6" y2="12.25"/>
+	</g>
+</g>
+<path class="st2" d="M32.62,13.25c4.61,4.61,4.61,12.09,0,16.7"/>
+<path class="st3" d="M29.98,15.89c3.15,3.15,3.15,8.26,0,11.42"/>
+<path class="st4" d="M27.62,18.25c1.85,1.85,1.85,4.85,0,6.7"/>
+<path class="st2" d="M5.36,29.95c-4.61-4.61-4.61-12.09,0-16.7"/>
+<path class="st3" d="M8.01,27.31c-3.15-3.15-3.15-8.26,0-11.42"/>
+<path class="st4" d="M10.36,24.95c-1.85-1.85-1.85-4.85,0-6.7"/>
+</svg>

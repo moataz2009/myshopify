@@ -1,0 +1,857 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}
+{{'swiper-bundle.min.js' | asset_url | script_tag }}
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_6 = 'w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28' %}
+{% assign pdClass_b = 'px-3 sm:px-6 md:px-0 pb-16 sm:pb-20 lg:pb-28' %}
+{% assign titleBoxClass= 'mx-auto mb-12 sm:mb-12 w-11/12 sm:w-5/6 md:w-2/3 xl:w-2/5' %}
+{% assign titleSize = 'text-2xl md:text-3xl font-bold' %}
+{% assign descSize = 'text-sm sm:text-base text-gray-400' %}
+{% assign titleDecoMy = 'block mt-4 mb-6' %}
+
+{% assign absoluteContentBoxClass_8 = 'w-full laptop:w-10/12 lg:w-8/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-0' %}
+{% assign absoluteContentBoxClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2' %}
+{% assign absoluteContentClass = 'text-center sm:text-left absolute transform w-4/5 sm:w-1/2 xl:w-3/8 top-16 left-1/2 -translate-x-1/2  max-w-md sm:translate-x-0 sm:left-6 lg:left-0 sm:top-1/2 sm:-translate-y-1/2' %}
+
+<div class="relative w-full bg-black">
+    <div class="absolute w-full h-full pt-12 xs:pt-32 sm:pt-0">
+        <div
+            class="w-10/12 lg:w-9/12 h-full mx-auto flex flex-col justify-start sm:items-center text-center sm:text-left">
+            <div class="max-w-xl mx-auto sm:pt-32 xl:pt-48">
+                <h3 class="{{titleSize}} mb-6">
+                    EFFORTLESSLY ENERGIZED
+                </h3>
+            </div>
+        </div>
+    </div>
+    <picture>
+        <source data-srcset="{{ 'product_magez_mount_qi_detail_banner1.png' | asset_url }}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product_magez_mount_qi_detail_banner1_phone.png' | asset_url }}"
+            alt="MagEZ Mount Qi" class="object-cover mx-auto lazyload">
+    </picture>
+</div>
+
+<div class="relative w-full">
+    <div class="absolute w-full h-full pt-12 xs:pt-48 sm:pt-0">
+        <div
+            class="w-10/12 lg:w-9/12 h-full mx-auto flex justify-center sm:justify-end sm:items-center text-center sm:text-left">
+            <div class="max-w-md">
+                <h3 class="{{titleSize}} mb-6">
+                    Attach and Charge
+                </h3>
+                <p class="{{descSize}}">
+                    Simply attach a MagEZ Case for stable wireless charging
+                    even on the bumpiest of journeys.
+                </p>
+            </div>
+        </div>
+    </div>
+    <picture>
+        <source data-srcset="{{ 'product_magez_mount_qi_detail_banner2.jpg' | asset_url }}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{ 'product_magez_mount_qi_detail_banner2_phone.jpg' | asset_url }}"
+            alt="MagEZ Mount Qi Desktop" class=" w-full lazyload">
+    </picture>
+</div>
+<style>
+    .section-scence1 {
+        width: 100vw;
+        height: 37.5vw;
+    }
+
+    /* page common css  */
+    .color38E8FE {
+        color: #38e8fe;
+    }
+
+    .imgBox-pc {
+        background-color: #000;
+    }
+
+    .imgBox-pc img {
+        width: 100%;
+    }
+
+    .section-banner {
+        position: relative;
+    }
+
+    .section-banner img {
+        display: block;
+    }
+
+    .section-banner1 {
+        position: relative;
+        width: 100vw;
+        height: 62vw;
+    }
+
+    .imgBanner1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 33vw;
+        height: 62vw;
+    }
+
+    .section-banner-text1 {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 35vw;
+        text-align: center;
+    }
+
+    .section-banner-text2 {
+        position: absolute;
+        top: 34%;
+        left: 64%;
+        width: 35vw;
+    }
+
+    .section-banner-text3 {
+        position: absolute;
+        top: 36%;
+        left: 63.5%;
+        width: 35vw;
+    }
+
+    /*  */
+    .section-scence {
+        position: relative;
+        width: 100vw;
+        height: 37.5vw;
+    }
+
+    .section-scence2 {
+        height: 50vw;
+    }
+
+    .section-scence img {
+        display: block;
+    }
+
+    .section-scence .imgBox1-pc {
+        position: absolute;
+        width: 100vw;
+        height: 37.5vw;
+        background-color: #000;
+    }
+
+    .section-scence-text1 {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translate(0, -50%);
+        width: 25vw;
+    }
+
+    .imgScence1-1 {
+        position: absolute;
+        top: 32.5%;
+        left: 44%;
+        width: 14.427%;
+    }
+
+    .imgScence1-1-1 {
+        position: absolute;
+        top: 31%;
+        left: 50.5%;
+        width: 8.5%;
+    }
+
+    .imgScence1-3-1 {
+        position: absolute;
+        top: 28%;
+        left: 65%;
+        width: 8.5%;
+    }
+
+    .imgScence1-2 {
+        position: absolute;
+        top: 24%;
+        left: 48.75%;
+        width: 11.5625%;
+    }
+
+    .imgScence1-3 {
+        position: absolute;
+        top: 28.3333%;
+        left: 59.3229%;
+        width: 15%;
+    }
+
+    .imgScence1-4 {
+        position: absolute;
+        top: 9.7222%;
+        left: 64.6875%;
+        width: 13.28125%;
+    }
+
+    .section-scence .imgBox2-pc {
+        position: absolute;
+        width: 100vw;
+        height: 37.5vw;
+        background-color: #000;
+    }
+
+    .section-scence-text2 {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center;
+        width: 35vw;
+    }
+
+    .imgScence2 {
+        position: absolute;
+        top: -6%;
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .imgScence2 img {
+        width: 100%;
+    }
+
+    .section-scence-text3 {
+        position: absolute;
+        top: 34.1666%;
+        left: 60.8333%;
+        width: 25vw;
+    }
+
+    .section-scence-text3-1 {
+        position: absolute;
+        top: 75%;
+        left: 13%;
+    }
+
+    .section-scence-text3-2 {
+        position: absolute;
+        top: 75%;
+        left: 35%;
+    }
+
+    .imgScence3-0 {
+        position: absolute;
+        bottom: 20%;
+        left: 0%;
+        width: 75%;
+    }
+
+    .imgScence3-1 {
+        position: absolute;
+        top: 16.8055%;
+        left: 13%;
+        width: 16.09375%;
+    }
+
+    .imgScence3-2 {
+        position: absolute;
+        top: 17.4666%;
+        left: 35%;
+        width: 16.47395%;
+    }
+</style>
+
+<style>
+    /* 以下为媒体查询PC端样式 */
+    @media screen and (min-width: 769px) {
+        .imgBox-phone {
+            display: none;
+        }
+
+        .imgBox1-phone {
+            display: none;
+        }
+
+        .imgBox2-phone {
+            display: none;
+        }
+    }
+</style>
+
+<style>
+    /* 以下为媒体查询移动端样式 */
+    @media screen and (max-width: 768px) {
+        .imgBox-pc {
+            display: none;
+        }
+
+        .imgBox1-pc {
+            display: none;
+        }
+
+        .imgBox2-pc {
+            display: none;
+        }
+
+        .imgBox-phone img {
+            width: 100%;
+        }
+
+        .imgScence2-phone img {
+            width: 100%;
+        }
+
+        .section-banner1 {
+            position: relative;
+            width: 100vw;
+            height: 164vw;
+            background-color: #000;
+        }
+
+        .imgBanner1 {
+            position: absolute;
+            width: 70vw;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        .section-banner-text1 {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 75vw;
+            text-align: center;
+        }
+
+        .section-banner-text2 {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 75vw;
+            text-align: center;
+        }
+
+        .section-banner-text3 {
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            width: 75vw;
+        }
+
+        .section-scence1 {
+            width: 100vw;
+            height: 190vw;
+        }
+
+        .section-scence2 {
+            width: 100vw;
+            height: 105.8666vw;
+        }
+
+        .section-scence img {
+            display: block;
+        }
+
+        /* scence1样式开始 */
+        .section-scence .imgBox1-phone {
+            position: absolute;
+            width: 100vw;
+            height: 173.3333vw;
+            left: 0;
+            bottom: 0;
+            background-color: #000;
+        }
+
+        .section-scence-text1 {
+            position: absolute;
+            width: 75vw;
+            top: 0%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, 0);
+        }
+
+        .imgScence1-1-phone {
+            position: absolute;
+            top: 22.61538%;
+            left: 22.26666%;
+            width: 36.93333%;
+        }
+
+        .imgScence1-1-1-phone {
+            position: absolute;
+            top: 22.61538%;
+            left: 37.26666%;
+            width: 21%;
+        }
+
+        .imgScence1-2-phone {
+            position: absolute;
+            top: 17.923%;
+            left: 36.1333%;
+            width: 29.6%;
+        }
+
+        .imgScence1-3-phone {
+            position: absolute;
+            top: 43.4615%;
+            left: 23.2%;
+            width: 38.4%;
+        }
+
+        .imgScence1-3-1-phone {
+            position: absolute;
+            top: 43.4615%;
+            left: 41%;
+            width: 21%;
+        }
+
+        .imgScence1-4-phone {
+            position: absolute;
+            top: 33.15384%;
+            left: 36.9333%;
+            width: 34%;
+        }
+
+        /* scence1样式结束 */
+        /* scence2样式开始 */
+        .section-scence .imgBox2-phone {
+            position: absolute;
+            width: 100vw;
+            height: 105.8666vw;
+            background-color: #000;
+        }
+
+        .section-scence-text2 {
+            position: absolute;
+            width: 80vw;
+            top: 2%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            text-align: center;
+        }
+
+        .imgScence2-phone {
+            position: absolute;
+            top: 24%;
+            width: 100%;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        /* scence2样式结束 */
+        /* scence3样式开始 */
+        .section-scence-text3-1 {
+            position: absolute;
+            top: 52%;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        .section-scence-text3-2 {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        .section-scence-text3 {
+            position: absolute;
+            width: 80vw;
+            top: 2%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            text-align: center;
+        }
+
+        .imgScence3-1-phone {
+            position: absolute;
+            top: 21.923%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 100%;
+        }
+
+        .imgScence3-2-phone {
+            position: absolute;
+            top: 59.3%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 100%;
+        }
+
+        /* scence3样式结束 */
+    }
+
+    @media screen and (max-width: 414px) {
+        .section-scence-text2 {
+            top: -20%;
+        }
+
+        .section-banner-text2 {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 75vw;
+            text-align: center;
+        }
+
+        .section-banner-text3 {
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            width: 75vw;
+        }
+
+        .section-scence1 {
+            width: 100vw;
+            height: 190vw;
+        }
+
+        .section-scence2 {
+            width: 100vw;
+            height: 150vw;
+        }
+
+        /* scence2样式结束 */
+        /* scence3样式开始 */
+        .section-scence3 {
+            height: 250vw;
+        }
+
+        .section-scence.section-scence1.section-scence3 .imgBox1-phone {
+            height: 250vw;
+        }
+
+        .section-scence.section-scence1.section-scence3 .section-scence-text3 {
+            top: -8%;
+        }
+
+        .section-scence3 .section-scence-text3-1 {
+            position: absolute;
+            top: 48%;
+            left: 54%;
+            transform: translate(-50%, 0);
+        }
+
+        .section-scence3 .section-scence-text3-2 {
+            position: absolute;
+            top: 86%;
+            left: 54%;
+            transform: translate(-50%, 0);
+        }
+    }
+
+    /* scence3样式结束 */
+</style>
+
+<div class="section-scence section-scence1 bg-black">
+    <div class="imgBox1-pc">
+        <div class="imgScence1-3" id="imgScence1-3">
+            {{
+                "product_magez_mount_qi_detail_scence1_3.png"
+                    | asset_url
+                    | img_tag
+            }}
+        </div>
+        <div class="imgScence1-3-1">
+            {{
+                "product_magez_mount_qi_detail_scence1_1_1.png"
+                    | asset_url
+                    | img_tag
+            }}
+        </div>
+        <div class="imgScence1-4" id="imgScence1-4">
+            {{
+                "product_magez_mount_qi_detail_scence1_4.png"
+                    | asset_url
+                    | img_tag
+            }}
+        </div>
+        <div class="section-scence-text1">
+            <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+                Organize the MagEZ Series
+            </h3>
+            <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12">
+                Keep your personal items safe and organized by attaching your
+                MagEZ Case to the MagEZ Mount Qi while driving.
+            </p>
+        </div>
+    </div>
+    <div class="imgBox1-phone">
+        <div class="imgScence1-3-phone" id="imgScence1-3-phone">
+            {{
+                "product_magez_mount_qi_detail_scence1_3_phone.png"
+                    | asset_url
+                    | img_tag
+            }}
+        </div>
+        <div class="imgScence1-3-1-phone">
+            {{
+                "product_magez_mount_qi_detail_scence1_1_1_phone.png"
+                    | asset_url
+                    | img_tag
+            }}
+        </div>
+        <div class="imgScence1-4-phone" id="imgScence1-4-phone">
+            {{
+                "product_magez_mount_qi_detail_scence1_4_phone.png"
+                    | asset_url
+                    | img_tag
+            }}
+        </div>
+        <div class="section-scence-text1">
+            <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+                Organize the MagEZ Series
+            </h3>
+            <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12">
+                Keep your personal items safe and organized by attaching your
+                MagEZ Case to the MagEZ Mount Qi while driving.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="section-scence section-scence2 bg-black">
+    <div class="imgBox2-pc">
+        <div class="imgScence2">
+            {{
+                "product_magez_mount_qi_detail_scence2.png"
+                    | asset_url
+                    | img_tag
+            }}
+        </div>
+        <div class="section-scence-text2">
+            <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+                Safe and Reliable
+            </h3>
+            <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12">
+                The built-in cooling fan reduces heat, increasing the MagEZ
+                Mount Qi's charging power. The charger includes sensors that
+                detect an increase in temperature, voltage, and current to
+                protect your device and the MagEZ Mount Qi while driving.
+            </p>
+        </div>
+    </div>
+    <div class="imgBox2-phone">
+        <div class="imgScence2-phone">
+            {{
+                "product_magez_mount_qi_detail_scence2_phone.png"
+                    | asset_url
+                    | img_tag
+            }}
+        </div>
+        <div class="section-scence-text2">
+            <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+                Safe and Reliable
+            </h3>
+            <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12">
+                The built-in cooling fan reduces heat, increasing the MagEZ
+                Mount Qi's charging power. <br />The charger includes sensors
+                that detect an increase in temperature, voltage, and<br />
+                current to protect your device and the MagEZ Mount Qi while
+                driving.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="section-scence section-scence1 section-scence3 bg-black">
+    <div class="imgBox1-pc">
+        <div class="section-scence-text3-1">
+            <p class="
+                    pt-section-detail
+                    text-base text-gray-400
+                    mb-8
+                    sm:mb-12
+                    color38E8FE
+                ">
+                *For OnePlus 8 Pro <br />MagEZ Case to use only.
+            </p>
+        </div>
+        <div class="section-scence-text3-2">
+            <p class="
+                    pt-section-detail
+                    text-base text-gray-400
+                    mb-8
+                    sm:mb-12
+                    color38E8FE
+                ">
+                *For Note20 Ultra/S20 Ultra/P40 Pro <br />MagEZ Case to use
+                only.
+            </p>
+        </div>
+        <div class="imgScence3-0">
+            {{
+                "product_magez_mount_qi_detail_scence3_0.png"
+                    | asset_url
+                    | img_tag
+            }}
+        </div>
+        <div class="imgScence3-1">
+            {{
+                "product_magez_mount_qi_detail_scence3_1.png"
+                    | asset_url
+                    | img_tag
+            }}
+        </div>
+        <div class="imgScence3-2">
+            {{
+                "product_magez_mount_qi_detail_scence3_2.png"
+                    | asset_url
+                    | img_tag
+            }}
+        </div>
+        <div class="section-scence-text3">
+            <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+                A Magnetic Adapter for <br />
+                Note20 Ultra, S20 Ultra, P40 Pro, and OnePlus 8 Pro
+            </h3>
+            <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12">
+                To ensure the sturdy, reliable attachment of your device, add
+                the specially designed form-fitting adapter to your MagEZ Mount
+                Qi.
+            </p>
+        </div>
+    </div>
+    <div class="imgBox1-phone">
+        <div class="section-scence-text3-1">
+            <p class="
+                    pt-section-detail
+                    text-base text-gray-400
+                    mb-8
+                    sm:mb-12
+                    color38E8FE
+                ">
+                *For OnePlus 8 Pro MagEZ Case to use only.
+            </p>
+        </div>
+        <div class="section-scence-text3-2">
+            <p class="
+                    pt-section-detail
+                    text-base text-gray-400
+                    mb-8
+                    sm:mb-12
+                    color38E8FE
+                ">
+                *For S20 Ultra/P40 Pro MagEZ Case to use only.
+            </p>
+        </div>
+        <div class="imgScence3-1-phone">
+            {{
+                "product_magez_mount_qi_detail_scence3_1_phone.png"
+                    | asset_url
+                    | img_tag
+            }}
+        </div>
+        <div class="imgScence3-2-phone">
+            {{
+                "product_magez_mount_qi_detail_scence3_2_phone.png"
+                    | asset_url
+                    | img_tag
+            }}
+        </div>
+        <div class="section-scence-text3">
+            <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+                A Magnetic Adapter for <br />
+                S20 Ultra, P40, and OnePlus 8
+            </h3>
+            <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12">
+                To ensure the sturdy, reliable attachment of your device, add
+                the specially designed form-fitting adapter to your MagEZ Mount
+                Qi.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="section-banner bg-black">
+    <div class="imgBox-pc">
+        {{ "product_magez_mount_qi_detail_banner3.jpg" | asset_url | img_tag }}
+    </div>
+</div>
+<div class="section-banner bg-black">
+    <div class="imgBox-phone">
+        {{
+            "product_magez_mount_qi_detail_banner3_phone.jpg"
+                | asset_url
+                | img_tag
+        }}
+    </div>
+</div>
+
+{{ "jqscrollanim-1.01.min.js" | asset_url | script_tag }}
+<!-- 移动的js -->
+<script type="text/javascript">
+    var fixquery = window.matchMedia("(min-width:769px)");
+    if (fixquery.matches) {
+        $(document).ready(function () {
+            $("#imgScence1-2").jqScrollAnim({
+                rep_s: 0.3,
+                rep_e: 0.5,
+                animation: {
+                    type: "integer",
+                    property: "left",
+                    end: 49,
+                    start: 57,
+                    unit: "%",
+                },
+                stake: "#imgScence1-1",
+            });
+        });
+    } else {
+        $(document).ready(function () {
+            $("#imgScence1-2-phone").jqScrollAnim({
+                rep_s: 0.3,
+                rep_e: 0.5,
+                animation: {
+                    type: "integer",
+                    property: "left",
+                    end: 35,
+                    start: 57,
+                    unit: "%",
+                },
+                stake: "#imgScence1-1-phone",
+            });
+        });
+    }
+</script>
+
+<script type="text/javascript">
+    var fixquery = window.matchMedia("(min-width:769px)");
+    if (fixquery.matches) {
+        $(document).ready(function () {
+            $("#imgScence1-4").jqScrollAnim({
+                rep_s: 0.3,
+                rep_e: 0.5,
+                animation: {
+                    type: "integer",
+                    property: "left",
+                    end: 63,
+                    start: 75,
+                    unit: "%",
+                },
+                stake: "#imgScence1-3",
+            });
+        });
+    } else {
+        $(document).ready(function () {
+            $("#imgScence1-4-phone").jqScrollAnim({
+                rep_s: 0.3,
+                rep_e: 0.5,
+                animation: {
+                    type: "integer",
+                    property: "left",
+                    end: 37,
+                    start: 57,
+                    unit: "%",
+                },
+                stake: "#imgScence1-3-phone",
+            });
+        });
+    }
+</script>

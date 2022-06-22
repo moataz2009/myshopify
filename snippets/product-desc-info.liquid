@@ -1,0 +1,2171 @@
+{% if base_handle contains 'magez-case-for-' %}
+
+  {% if base_handle contains 'ipad-pro' %}
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+    <div class="thumb-item">
+      {{ 'through-desc-thumb-ipad.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Pass-Through Charging
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'aramid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a href="/pages/material" class="text-cyan">Premium Aramid Fiber</a>
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'connectivity-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Magnetic Connectivity
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Lightweight & Thin
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'signal-desc-thumb-ipad.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        No Signal Interference
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'protection-desc-thumb-ipad.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Camera Protection
+      </p>
+    </div>
+  </div>
+
+  {% elsif base_handle contains 'iphone-12' %}
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb content-variant" name="iphone_12">
+    <div class="thumb-item">
+      {{ 'compatible-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Magnetic System Compatible
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'charging-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Wireless Charging Friendly
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Lightweight & Thin
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {% if base_model == 'iphone11' or base_model == 'iphone12' %}
+      {{ 'protection-desc-thumb-ipad.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      {% else %}
+      {{ 'protection-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      {% endif %}
+      <p class="text-sm text-gray-400 mt-4">
+        Camera Protection
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'aramid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a href="/pages/material" class="text-cyan">Premium Aramid Fiber</a>
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'signal-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        No Signal Interference
+      </p>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb content-variant hidden" name="card_sleeve">
+
+    <div class="thumb-item">
+      {{ 'connectivity_sleeve-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Magnetic Connectivity
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'magsafe-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        MagSafe Compatible
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'slim_sleeve-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Slim, Precision Cut Design
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'stripe_cards-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Magnetic Stripe Cards Compatible
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'cards-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        2 Bank or 4 Business Cards
+      </p>
+    </div>
+  </div>
+
+  {% elsif base_handle contains 's21'  %}
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+    <div class="thumb-item">
+      {{ 'connectivity-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Magnetic Connectivity
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'charging-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Wireless Charging Friendly
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Lightweight & Thin
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'aramid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a href="/pages/material" class="text-cyan">Premium Aramid Fiber</a>
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'signal-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        No Signal Interference
+      </p>
+    </div>
+  </div>
+
+  {% elsif base_handle contains 'magsafe'  %}
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+    <div class="thumb-item">
+      {{ 'connectivity-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Magnetic Connectivity
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'charging-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Wireless Charging Friendly
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Lightweight & Thin
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'protection-desc-thumb-ipad.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Camera Protection
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'aramid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a href="/pages/material" class="text-cyan">Premium Aramid Fiber</a>
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'signal-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        No Signal Interference
+      </p>
+    </div>
+  </div>
+
+  {% elsif base_handle contains 'airpods'  %}
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+    <div class="thumb-item">
+      {{ 'magsafe_airpods-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        MagSafe Compatible
+      </p>
+    </div>
+    <div class="thumb-item">
+      {{ '600d-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a href="/pages/600d" class="text-cyan">600D Aramid Fiber</a>
+      </p>
+    </div>
+    <div class="thumb-item">
+      {{ 'wired-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Wired & Wireless Charging
+      </p>
+    </div>
+  </div>
+
+  {% else %}
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+    <div class="thumb-item">
+      {{ 'compatible-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Magnetic System Compatible
+      </p>
+    </div>
+    {% unless base_model == 'iphone7' %}
+    <div class="thumb-item">
+      {{ 'charging-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Wireless Charging Friendly
+      </p>
+    </div>
+    {% endunless %}
+
+    <div class="thumb-item">
+      {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Lightweight & Thin
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {% if base_model == 'iphone11' or base_model == 'iphone12' %}
+      {{ 'protection-desc-thumb-ipad.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      {% else %}
+      {{ 'protection-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      {% endif %}
+      <p class="text-sm text-gray-400 mt-4">
+        Camera Protection
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'aramid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a href="/pages/material" class="text-cyan">Premium Aramid Fiber</a>
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'signal-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        No Signal Interference
+      </p>
+    </div>
+  </div>
+  {% endif %}
+
+{% elsif base_handle contains 'magez-case-2-for-' %}
+  {% if base_handle contains 'iphone-13'  %}
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb content-variant" name="iphone_13">
+    <div class="thumb-item">
+      {{ 'magsafe-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        MagSafe Compatible
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'protection-desc-thumb-ipad.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Camera Protection
+      </p>
+    </div>
+    <div class="thumb-item">
+      {{ 'aramid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        {% if base_handle contains 'fusion-weaving' %}
+        <a href="/collections/fusion-weaving-series" class="text-cyan">
+          Fusion Weaving™ Aramid Fiber
+        </a>
+        {% else %}
+        <a href="/pages/material" class="text-cyan">Premium Aramid Fiber</a>
+        {% endif %}
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'signal-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        No Signal Interference
+      </p>
+    </div>
+
+    <div class="thumb-item hidden lg:block">
+      {{ 'charging-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Wireless Charging Friendly
+      </p>
+    </div>
+
+    <div class="thumb-item col-span-2 pr-4 lg:col-span-1 lg:pr-0">
+      {{ 'pitaflow_phones-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2 lg:w-full' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a class="text-cyan" href="/collections/pitaflow-for-phones">Pita!Flow for Phones</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb content-variant hidden" name="card_sleeve">
+
+    <div class="thumb-item">
+      {{ 'connectivity_sleeve-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Magnetic Connectivity
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'magsafe-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        MagSafe Compatible
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'slim_sleeve-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Slim, Precision Cut Design
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'stripe_cards-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Magnetic Stripe Cards Compatible
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'cards-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        2 Bank or 4 Business Cards
+      </p>
+    </div>
+  </div>
+
+  {% elsif base_handle contains 'ipad-pro' %}
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+    <div class="thumb-item">
+      {{ 'through-desc-thumb-ipad.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Pass-Through Charging
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'aramid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a href="/pages/material" class="text-cyan">Premium Aramid Fiber</a>
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'connectivity-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Magnetic Connectivity
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Lightweight & Thin
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'signal-desc-thumb-ipad.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        No Signal Interference
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'protection-desc-thumb-ipad.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Camera Protection
+      </p>
+    </div>
+  </div>
+
+  {% elsif base_handle contains 'galaxy-s22' %}
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+    <div class="thumb-item">
+      {{ 'magsafe_airpods-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        MagSafe Connectivity
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'protection-desc-thumb-galaxy.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Camera Protection
+      </p>
+    </div>
+    <div class="thumb-item">
+      {{ 'aramid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        {% if base_handle contains 'fusion-weaving' %}
+        <a href="/collections/fusion-weaving-series" class="text-cyan">
+          Fusion Weaving™ Aramid Fiber
+        </a>
+        {% else %}
+        <a href="/pages/material" class="text-cyan">Premium Aramid Fiber</a>
+        {% endif %}
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Lightweight & Thin
+      </p>
+    </div>
+
+    <div class="thumb-item col-span-2 pr-4 lg:col-span-1 lg:pr-0">
+      {{ 'pitaflow_phones-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2 lg:w-full' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a class="text-cyan" href="/collections/pitaflow-for-phones">Pita!Flow for Phones</a>
+      </p>
+    </div>
+  </div>
+  {% endif %}
+
+{% elsif base_handle contains 'magez-case-pro-for-' %}
+
+  {% if base_handle contains 'iphone-13'  %}
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+    <div class="thumb-item">
+      {{ 'drop_test-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a class="text-cyan"
+          href="/blogs/news/military-grade-protection-the-biggest-lie-in-phone-case-industries">Military Drop Tested</a>
+      </p>
+    </div>
+    <div class="thumb-item">
+      {{ 'magsafe-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        MagSafe Compatible
+      </p>
+    </div>
+    <div class="thumb-item">
+      {{ 'reinforced-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Reinforced Frame
+      </p>
+    </div>
+    <div class="thumb-item">
+      {{ 'aramid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a href="/pages/material" class="text-cyan">Premium Aramid Fiber</a>
+      </p>
+    </div>
+    <div class="thumb-item hidden lg:block">
+      {{ 'charging-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Wireless Charging Friendly
+      </p>
+    </div>
+    <div class="thumb-item col-span-2 pr-4 lg:col-span-1 lg:pr-0">
+      {{ 'pitaflow_phones-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2 lg:w-full' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a class="text-cyan" href="/collections/pitaflow-for-phones">Pita!Flow for Phones</a>
+      </p>
+    </div>
+  </div>
+
+  {% elsif base_handle contains 'ipad-mini-6'  %}
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+    <div class="thumb-item">
+      {{ 'free_charging-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Hassle-free Charging 
+      </p>
+    </div>
+    <div class="thumb-item">
+      {{ 'reinforced-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Reinforced Frame
+      </p>
+    </div>
+    <div class="thumb-item">
+      {{ 'attach-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Magnetic Attachment
+      </p>
+    </div>
+    <div class="thumb-item">
+      {{ 'aramid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a href="/pages/material" class="text-cyan">Premium Aramid Fiber</a>
+      </p>
+    </div>
+  </div>
+  {% else %}
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+    <div class="thumb-item">
+      {{ 'compatible-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Magnetic System Compatible
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'charging-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Wireless Charging Friendly
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'layers-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        5 Protective Layers
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'reinforced-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Reinforced Frame & Bumpers
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'aramid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a href="/pages/material" class="text-cyan">Premium Aramid Fiber</a>
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'signal-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        No Signal Interference
+      </p>
+    </div>
+  </div>
+  {% endif %}
+
+{% elsif base_handle contains 'magez-case-pro2-for-' %}
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+    <div class="thumb-item">
+      {{ 'drop_test-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a class="text-cyan"
+          href="/blogs/news/military-grade-protection-the-biggest-lie-in-phone-case-industries">Military Drop Tested</a>
+        MIL-STD 810G 516.6
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'connectivity-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Magnetic Connectivity
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'charging-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Wireless Charging Friendly
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ '3_layers-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        3 Protective Layers
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'line_reinforced-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Reinforced Frame & Corner Airbags
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'aramid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a href="/pages/material" class="text-cyan">Premium Aramid Fiber</a>
+      </p>
+    </div>
+  </div>
+
+{% elsif base_handle contains 'air-case-for-' %}
+
+  {% if base_handle == 'air-case-for-apple-watch' %}
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+    <div class="thumb-item">
+      {{ 'crafted-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Precision Crafted
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'signal-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        No Signal Interference
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ '600d-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a href="/pages/600d" class="text-cyan">600D Aramid Fiber</a>
+      </p>
+    </div>
+  </div>
+
+  {% elsif base_handle == 'air-case-for-apple-watch-series-7' %}
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+    <div class="thumb-item">
+      {{ 'crafted-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Precision Crafted
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'signal-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        No Signal Interference
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ '600d-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a href="/pages/600d" class="text-cyan">600D Aramid Fiber</a>
+      </p>
+    </div>
+  </div>
+
+  {% elsif base_handle contains 'iphone-13' %}
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+    <div class="thumb-item">
+      {{ 'charging-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Wireless Charging Friendly
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Lightweight
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'slim-desc-thumb-air.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Ultra-Slim
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'protection-desc-thumb-ipad.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Camera Protection
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ '600d-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        {% if base_handle contains 'fusion-weaving' %}
+        <a href="/collections/fusion-weaving-series" class="text-cyan">
+          Fusion Weaving™ Aramid Fiber
+        </a>
+        {% else %}
+        <a href="/pages/600d" class="text-cyan">600D Aramid Fiber</a>
+        {% endif %}
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'signal-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        No Signal Interference
+      </p>
+    </div>
+
+  </div>
+
+  {% elsif base_handle contains 'galaxy-s22' %}
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+    <div class="thumb-item">
+      {{ 'charging-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Works with Wireless Charging
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Lightweight
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'slim-desc-thumb-air.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Ultra-Slim
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'protection-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Camera Protection
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ '600d-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a href="/pages/600d" class="text-cyan">600D Aramid Fiber</a>
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'perfect_fit-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Perfect Fit Guaranteed
+      </p>
+    </div>
+  </div>
+  {% else %}
+  <div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+    <div class="thumb-item">
+      {{ 'charging-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Wireless Charging Friendly
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Lightweight
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'slim-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        Ultra-slim
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {% if base_model == 'iphone11' or base_model == 'iphone12' %}
+      {{ 'protection-desc-thumb-ipad.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      {% else %}
+      {{ 'protection-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      {% endif %}
+      <p class="text-sm text-gray-400 mt-4">
+        Camera Protection
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ '600d-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        <a href="/pages/600d" class="text-cyan">600D Aramid Fiber</a>
+      </p>
+    </div>
+
+    <div class="thumb-item">
+      {{ 'signal-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+      <p class="text-sm text-gray-400 mt-4">
+        No Signal Interference
+      </p>
+    </div>
+  </div>
+  {% endif %}
+
+{% elsif base_handle == 'air-pal' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'wired-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Wired & Wireless Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'power-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Built-in Power Bank
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'clip-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Detachable Clip
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'air-pal-mini' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'wireless-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Wireless Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'double-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Double-Sided Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'loop-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Detachable Loop
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'air-pal-mini-for-airpods-pro' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'wired-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Wired & Wireless Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ '600d-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      <a href="/pages/600d" class="text-cyan">600D Aramid Fiber</a>
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'air-pal-shells-for-airpods-max' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Lightweight & Thin
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'aramid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      <a href="/pages/material" class="text-cyan">Protective Aramid Fiber</a>
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'crafted-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Precision Crafted
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'air-omni' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ '6in1-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      6-in-1 Charger
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'toggle-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Lightning to Type-C Toggle
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ '18w-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Fast 18W Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'wireless-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Wireless Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'module-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Apple-Certified Watch Module
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'devices-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      iOS & Android Devices
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'air-omni-lite' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ '6in1-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      6-in-1 Charger
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'toggle-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Lightning to Type-C Toggle
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ '18w-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Fast 18W Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'wireless-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Wireless Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'module-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Apple Watch Mount
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'devices-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      iOS & Android Devices
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-juice' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'wireless-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Wireless Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ '45angle-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      45° Angled Stand
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'mag_power-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Power Bank
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'qi-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Qi Mobile Compatible
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'through-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Pass-Through Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'office-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Office & On the Go
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-juice-2' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'wireless-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Wireless Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ '45angle-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      45° Angled Stand
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'mag_power-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Wireless Charging Power Bank
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'qi-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Qi Mobile Compatible
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'through-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Pass-Through Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'office-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Office & On the Go
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'air-essential' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'free-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Position-free Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'charges-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Charges Phones and Earbuds
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'fast-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Fast Wireless Charging
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'air-tray' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'charges-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Charges Phones and Earbuds
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'free-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Position-free Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'edc-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Store EDC
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-bar' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'wireless-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Wireless Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'connectivity-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Connectivity
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'stable-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Stable and Secure
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-mount-qi' or base_handle contains 'magez-mount-qi-for'  %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'wireless-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Wireless Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'fan-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Built-in Fan
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'incar-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      In-Car Use
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'fast-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Fast Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'stable-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Stable & Secure
+    </p>
+  </div>
+
+  {% unless base_handle contains 's21' %}
+  <div class="thumb-item">
+    {{ 'adapters-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Phone Model Adapters
+    </p>
+  </div>
+  {% endunless %}
+</div>
+
+{% elsif base_handle == 'magez-mount-qi-desktop' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'wireless-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Wireless Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'rotation-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      360° Rotation
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'fast-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Fast Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'fan-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Built-in Fan
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'holds-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Holds 2 Cables
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'stable-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Stable & Secure
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-mount' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+  <div class="thumb-item">
+    {{ 'rotation-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      360° Rotation
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'incar-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      In-Car Use
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'stable-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Stable & Secure
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-car-mount-pro' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+  <div class="thumb-item">
+    {{ 'magsafe_airpods-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      MagSafe Compatible
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'wireless-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Wireless Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'fan-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Built-in Fan
+    </p>
+  </div>
+  <div class="thumb-item">
+    {{ 'fast-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Fast Charging
+    </p>
+  </div>
+
+  <div class="thumb-item hidden lg:block">
+    {{ 'stable-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Stable & Secure
+    </p>
+  </div>
+
+  <div class="thumb-item col-span-2 pr-4 lg:col-span-1 lg:pr-0">
+    {{ 'pitaflow_phones-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2 lg:w-full' }}
+    <p class="text-sm text-gray-400 mt-4">
+      <a class="text-cyan" href="/collections/pitaflow-for-phones">Pita!Flow for Phones</a>
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-car-mount-lite' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+  <div class="thumb-item">
+    {{ 'magsafe_airpods-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      MagSafe Compatible
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'incar-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      In-Car Use
+    </p>
+  </div>
+
+  <div class="thumb-item hidden lg:block">
+    {{ 'stable-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Stable & Secure
+    </p>
+  </div>
+
+  <div class="thumb-item col-span-2 pr-4 lg:col-span-1 lg:pr-0">
+    {{ 'pitaflow_phones-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2 lg:w-full' }}
+    <p class="text-sm text-gray-400 mt-4">
+      <a class="text-cyan" href="/collections/pitaflow-for-phones">Pita!Flow for Phones</a>
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'smart-car-charger-adapter' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'typec-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Type-C & Lightning
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'compact-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Compact
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'qcpd-fast-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      QC 3.0 & PD 2.0 Fast Charging
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'tempered-glass' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'apply-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Easy to Apply
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'smudge-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Anti-Smudge
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'ultra_thin-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Ultra-thin
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'c-to-c-charging-cable' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'core-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Reinforced Core
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'c2c-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Type-C to Type-C
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'bends-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      6000+ Bends
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'fast-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      60W PD
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-card-sleeve-3' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'connectivity_sleeve-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Connectivity
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'magsafe-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      MagSafe Compatible
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'slim_sleeve-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Slim, Precision Cut Design
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'stripe_cards-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Stripe Cards Compatible
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'cards-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      2 Bank or 4 Business Cards
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-card-sleeve' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'connectivity_sleeve-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Connectivity
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'magsafe-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      MagSafe Compatible
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'slim_sleeve-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Slim, Precision Cut Design
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'stripe_cards-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Stripe Cards Compatible
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'cards-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      2 Bank or 4 Business Cards
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'carbon-fiber-watch-band' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'fiber_links-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Carbon Fiber Links
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'crafted-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Precision Crafted
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'customizable_sizing-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Customizable Sizing
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'compatible_watches-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Compatible With All Apple Watches
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'magnetic_Clasp-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Patented Magnetic Clasp
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Lightweight
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-wallet-ue' or base_handle == 'customize-magez-wallet-ue'  %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'strip-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Strip Card Compatible
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'rfid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      <a class="text-cyan" href="/blogs/news/what-is-an-rfid-blocking-wallet-and-why-do-you-need-one">RFID Blocking</a>
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'plus-layers-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      + / - Layers
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'customizable-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Customizable
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'magnetic-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Function
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Lightweight
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-wallet' or base_handle == 'customize-magez-wallet' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'rfid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      <a class="text-cyan" href="/blogs/news/what-is-an-rfid-blocking-wallet-and-why-do-you-need-one">RFID Blocking</a>
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'plus-layers-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      + / - Layers
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'customizable-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Customizable
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'compact-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Compact
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'magnetic-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Function
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Lightweight
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-wallet-2' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'magnetic-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Connectivity
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'magez_compatible-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      MagEZ & MagSafe Compatible
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'rfid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      <a class="text-cyan" href="/blogs/news/what-is-an-rfid-blocking-wallet-and-why-do-you-need-one">RFID Blocking</a>
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'plus-layers-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Adjustable Layers
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'compact-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Compact
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Lightweight
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-wallet-2-pro' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'magnetic-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Connectivity
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'magez_compatible-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      MagEZ & MagSafe Compatible
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'strip-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Strip Card Shielding
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'rfid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      <a class="text-cyan" href="/blogs/news/what-is-an-rfid-blocking-wallet-and-why-do-you-need-one">RFID Blocking</a>
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'plus-layers-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      + / - Layers
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Lightweight
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-tech-kit' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'magnetic-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Connectivity
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'compact-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Compact
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ '10in1-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      10 Accessories in 1
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Lightweight
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'store_data-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Store & Transfer Data
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'rfid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      <a class="text-cyan" href="/blogs/news/what-is-an-rfid-blocking-wallet-and-why-do-you-need-one">RFID Blocking</a>
+      Extra Layer
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-digital-travel-kit' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'compact-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Compact
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ '10in1-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      10 Accessories in 1
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Lightweight
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'store_data-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Store & Transfer Data
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'magnetic_layers-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Layers
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'rfid_layers-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      <a class="text-cyan" href="/blogs/news/what-is-an-rfid-blocking-wallet-and-why-do-you-need-one">RFID Blocking</a>
+      Extra Layer
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-power-bank' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'compact-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Compact
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Lightweight
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'magnetic_layers-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Connectivity
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-wireless-charging-kit' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'incar-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      In-Car Use
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'wireless-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Wireless Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'fast-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Fast Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'stable-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Stable & Secure
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'auto-aligning-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Auto-Aligning
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'safety-sensors-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Safety Sensors
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-folio' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+
+  <div class="thumb-item">
+    {{ 'attach-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Attachment
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'features-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Easy Access to Features
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'light-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Lightweight
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'sleep_wake-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Auto Sleep/Wake
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'dual_standing-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Dual Standing Options
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'case_compatible-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      MagEZ Case 2 Compatible
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-charging-stand' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+  <div class="thumb-item">
+    {{ 'connectivity-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Connectivity
+    </p>
+  </div>
+  
+  <div class="thumb-item">
+    {{ 'charging_ipadmini-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Charging iPad Mini at 20W
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'ajustable_angle-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Adjustable Angle
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ '15w_charging-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      A 15W Wireless Charging Base
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'aramid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Superior Alloy & 
+      <a href="/pages/material" class="text-cyan">Aramid Fiber</a>  
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'positioning-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Landscape & Portrait&nbsp;Positioning
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle contains 'magez-stand' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+  <div class="thumb-item">
+    {{ 'connectivity-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Connectivity
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'ajustable_angle-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Adjustable Angle
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ '15w_charging-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      15W Wireless Charging
+    </p>
+  </div>
+
+  {% if base_handle contains 'marble' %}
+  <div class="thumb-item">
+    {{ 'marble-desc-thumb.jpg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Premium Marble
+    </p>
+  </div>
+  {% else %}
+  <div class="thumb-item">
+    {{ 'aramid-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      <a href="/pages/material" class="text-cyan">Premium Aramid Fiber</a>
+    </p>
+  </div>
+  {% endif %}
+
+  <div class="thumb-item">
+    {{ 'eye_level-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Eye-level Viewing
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'positioning-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Landscape & Portrait&nbsp;Positioning
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'power-dongle-for-apple-watch' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+  <div class="thumb-item">
+    {{ 'dongle_magnetic-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Functionality
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'dongle_typec-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      USB-C Connector
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'dongle_fits-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Fits all Apple Watch Models
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'dongle_safe-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Safe 5W Charging
+    </p>
+  </div>
+
+  <div class="thumb-item hidden lg:block">
+    {{ 'dongle_portable-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Portable
+    </p>
+  </div>
+
+  <div class="thumb-item col-span-2 pr-4 lg:col-span-1 lg:pr-0">
+    {{ 'dongle_mfi-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2 lg:w-full' }}
+    <p class="text-sm text-gray-400 mt-4">
+      MFi-certified
+    </p>
+  </div>
+</div>
+
+{% elsif base_handle == 'magez-slider' %}
+<div class="grid grid-cols-3 gap-4 lg:gap-8 product_desc-thumb">
+  <div class="thumb-item">
+    {{ 'magsafe_airpods-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      MagSafe Compatible
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'multiple_charger-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      A Multi-device Charger
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'rotation-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      360° Rotating Base
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ '4000_battery-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      4000mAh Portable Battery
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'wireless-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Magnetic Wireless Charging
+    </p>
+  </div>
+
+  <div class="thumb-item">
+    {{ 'office-desc-thumb.svg' | asset_url | img_tag:'', 'block w-1/2' }}
+    <p class="text-sm text-gray-400 mt-4">
+      Office & On the Go
+    </p>
+  </div>
+</div>
+
+{% endif %}

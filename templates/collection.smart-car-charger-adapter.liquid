@@ -1,0 +1,506 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+<!-- creat by Colin 2020.7.12 -->
+<!-- contact by colin@ipitaka.com -->
+<style>
+    /* page common css  */
+    /*  */
+    .section-scence {
+      position: relative;
+      width: 100vw;
+      height: 50vw;
+    }
+  
+    .section-scence img {
+      display: block;
+    }
+  
+    .section-scence .imgBox1-pc {
+      position: absolute;
+      width: 100vw;
+      height: 50vw;
+      background-color: #000;
+    }
+  
+    .section-scence-text1 {
+      position: absolute;
+      top: 50%;
+      left: 65.729%;
+      transform: translate(0, -50%);
+    }
+  
+    .imgScence1 {
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      width: 57.8125%;
+    }
+  
+    .section-scence .imgBox2-pc {
+      position: absolute;
+      width: 100vw;
+      height: 50vw;
+    }
+  
+    .section-scence-text2 {
+      position: absolute;
+      top: 45.52%;
+      left: 11.4%;
+      z-index: 1;
+    }
+  
+    .imgScence2 {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+    }
+  
+    .imgScence2 img {
+      width: 100%;
+    }
+  
+    .imgScence2-1 {
+      position: absolute;
+      top: 63.4375%;
+      left: 11%;
+      width: 4.53125%;
+    }
+  
+    .imgScence2-2 {
+      position: absolute;
+      top: 63.4375%;
+      left: 18%;
+      width: 5.729%;
+    }
+  
+    .section-scence-text3 {
+      position: absolute;
+      top: 50%;
+      left: 19%;
+      transform: translate(0, -50%);
+      text-align: right;
+    }
+  
+    .imgScence3 {
+      position: absolute;
+      bottom: 0;
+      right: 0%;
+      width: 40.625%;
+    }
+  
+    .imgScence4 {
+      position: absolute;
+      top: 10.52%;
+      left: 10%;
+      width: 44.27%;
+    }
+  
+    .section-scence-text4 {
+      position: absolute;
+      top: 44.1666%;
+      left: 60.8333%;
+      text-align: right;
+      z-index: 1;
+    }
+  
+    .imgScence5 {
+      position: absolute;
+      top: 17%;
+      left: 41.7%;
+      width: 49.5%;
+    }
+  
+    .section-scence-text5 {
+      position: absolute;
+      top: 50%;
+      left: 7%;
+      transform: translate(0, -50%);
+      text-align: right;
+    }
+  </style>
+  
+  <style>
+    /* 以下为媒体查询PC端样式 */
+    @media screen and (min-width: 769px) {
+      .imgBox-phone {
+        display: none;
+      }
+  
+      .imgBox1-phone {
+        display: none;
+      }
+  
+      .imgBox2-phone {
+        display: none;
+      }
+  
+      .imgBox3-phone {
+        display: none;
+      }
+  
+      .imgBox4-phone {
+        display: none;
+      }
+  
+      .imgBox5-phone {
+        display: none;
+      }
+    }
+  </style>
+  
+  <style>
+    /* 以下为媒体查询移动端样式 */
+    @media screen and (max-width: 768px) {
+      .imgBox-pc {
+        display: none;
+      }
+  
+      .imgBox1-pc {
+        display: none;
+      }
+  
+      .imgBox2-pc {
+        display: none;
+      }
+  
+      .section-scence1 {
+        width: 100vw;
+        height: 166vw;
+      }
+  
+      .section-scence0 {
+        width: 100vw;
+        height: 166vw;
+      }
+  
+      .section-scence2 {
+        width: 100vw;
+        height: 166vw;
+      }
+  
+      .section-scence img {
+        display: block;
+      }
+  
+      /* scence1样式开始 */
+      .section-scence .imgBox1-phone {
+        position: absolute;
+        width: 100vw;
+        height: 166.66vw;
+        left: 0;
+        bottom: 0;
+        background-color: #000;
+      }
+  
+      .section-scence-text1 {
+        position: absolute;
+        width: 90vw;
+        top: 10%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, 0);
+      }
+  
+      .imgScence1-phone {
+        position: absolute;
+        bottom: 17.74%;
+        left: 0;
+        width: 97;
+      }
+  
+      /* scence1样式结束 */
+      /* scence2样式开始 */
+      .section-scence .imgBox2-phone {
+        position: absolute;
+        width: 100vw;
+        height: 180vw;
+        background-color: #171719;
+      }
+  
+      .section-scence-text2 {
+        position: absolute;
+        width: 80vw;
+        top: 7.67%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center;
+      }
+  
+      .imgScence2-phone {
+        position: absolute;
+      }
+  
+      .imgScence2-1-phone {
+        position: absolute;
+        top: 29.68%;
+        width: 11.6%;
+        left: 32.53333%;
+      }
+  
+      .imgScence2-2-phone {
+        position: absolute;
+        top: 29.68%;
+        width: 14.6666%;
+        left: 50.2666%;
+      }
+  
+      /* scence2样式结束 */
+      /* scence3样式开始 */
+      .section-scence .imgBox3-phone {
+        position: absolute;
+        width: 100vw;
+        height: 166.4vw;
+        background-color: #000;
+      }
+  
+      .section-scence-text3 {
+        position: absolute;
+        width: 80vw;
+        top: 13.2%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center;
+      }
+  
+      .imgScence3-phone {
+        position: absolute;
+        top: 32.88%;
+        right: 0%;
+        width: 63.4666%;
+      }
+  
+      /* scence3样式结束 */
+      /* scence4样式开始 */
+      .section-scence .imgBox4-phone {
+        position: absolute;
+        width: 100vw;
+        height: 166.4vw;
+        background-color: #171719;
+      }
+  
+      .section-scence-text4 {
+        position: absolute;
+        width: 80vw;
+        top: 15.68%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center;
+      }
+  
+      .imgScence4-phone {
+        position: absolute;
+        top: 39.52%;
+        left: 8%;
+        width: 84%;
+      }
+  
+      /* scence4样式结束 */
+      /* scence5样式开始 */
+      .section-scence .imgBox5-phone {
+        position: absolute;
+        width: 100vw;
+        height: 166.4vw;
+        background-color: #000;
+      }
+  
+      .section-scence-text5 {
+        position: absolute;
+        width: 80vw;
+        top: 13.2%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-align: center;
+      }
+  
+      .imgScence5-phone {
+        position: absolute;
+        top: 34.24%;
+        left: 0%;
+        width: 97.2%;
+      }
+  
+      /* scence5样式结束 */
+    }
+  </style>
+    <div class="section-scence section-scence1 section-scence0">
+      <div class="imgBox1-pc">
+        <div class="section-scence-text1">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Dual Charging Capabilities</h3>
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            Charge both Apple and Android devices at the same time<br />
+            with C-Type and A-Type ports.
+          </p>
+        </div>
+        <div class="imgScence1">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product_car_adapter_detail_scence1.png' | asset_url }}" class="lazyload" />
+        </div>
+      </div>
+      <div class="imgBox1-phone">
+        <div class="section-scence-text1">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Dual Charging Capabilities</h3>
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            Charge both Apple and Android devices at the same time<br />
+            with C-Type and A-Type ports.
+          </p>
+        </div>
+        <div class="imgScence1-phone">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product_car_adapter_detail_scence1_phone.png' | asset_url }}" class="lazyload" />
+        </div>
+      </div>
+    </div>
+    <div class="section-scence section-scence2">
+      <div class="imgBox2-pc">
+        <div class="section-scence-text2">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+            Fast charging enabled
+          </h3>
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            Certified by Qualcomm Quick Charge 3.0, the PITAKA car<br />
+            adapter fast charges the MagEZ Mount Qi or your plugin device.
+          </p>
+        </div>
+        <div class="imgScence2">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product_car_adapter_detail_scence2.png' | asset_url }}" class="lazyload" />
+        </div>
+        <div class="imgScence2-1">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product_car_adapter_detail_scence2_1.png' | asset_url }}" class="lazyload" />
+        </div>
+        <div class="imgScence2-2">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product_car_adapter_detail_scence2_2.png' | asset_url }}" class="lazyload" />
+        </div>
+      </div>
+      <div class="imgBox2-phone">
+        <div class="section-scence-text2">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+            Fast charging enabled
+          </h3>
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            Certified by Qualcomm Quick Charge 3.0, the PITAKA car<br />
+            adapter fast charges the MagEZ Mount Qi or your plugin device.
+          </p>
+        </div>
+        <div class="imgScence2-phone">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product_car_adapter_detail_scence2_phone.png' | asset_url }}" class="lazyload" />
+        </div>
+        <div class="imgScence2-1-phone">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product_car_adapter_detail_scence2_1_phone.png' | asset_url }}" class="lazyload" />
+        </div>
+        <div class="imgScence2-2-phone">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product_car_adapter_detail_scence2_2_phone.png' | asset_url }}" class="lazyload" />
+        </div>
+      </div>
+    </div>
+    <div class="section-scence section-scence1">
+      <div class="imgBox1-pc">
+        <div class="section-scence-text3">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+            Compact and Easy to Store
+          </h3>
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            One of the smallest adapters in the world, the PITAKA car charger<br />
+            adapter plugs in discreetly and can be stored conveniently in a glove
+            <br />compartment or console when not in use.
+          </p>
+        </div>
+        <div class="imgScence3">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product_car_adapter_detail_scence3.png' | asset_url }}" class="lazyload" />
+        </div>
+      </div>
+      <div class="imgBox3-phone">
+        <div class="section-scence-text3">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+            Compact and Easy to Store
+          </h3>
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            One of the smallest adapters in the world, the PITAKA car charger<br />
+            adapter plugs in discreetly and can be stored conveniently in a glove
+            <br />compartment or console when not in use.
+          </p>
+        </div>
+        <div class="imgScence3-phone">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product_car_adapter_detail_scence3_phone.png' | asset_url }}" class="lazyload" />
+        </div>
+      </div>
+    </div>
+    <div class="section-scence section-scence2">
+      <div class="imgBox2-pc">
+        <div class="imgScence4">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product_car_adapter_detail_scence4.png' | asset_url }}" class="lazyload" />
+        </div>
+        <div class="section-scence-text4">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+            Ergonomic Shape
+          </h3>
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            The specifically designed bullet shape fits perfectly into the
+            <br />charging socket, ensuring a stable and constant charge.
+          </p>
+        </div>
+      </div>
+      <div class="imgBox4-phone">
+        <div class="section-scence-text4">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+            Ergonomic Shape
+          </h3>
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            The specifically designed bullet shape fits perfectly into the
+            <br />charging socket, ensuring a stable and constant charge.
+          </p>
+        </div>
+        <div class="imgScence4-phone">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product_car_adapter_detail_scence4_phone.png' | asset_url }}" class="lazyload" />
+        </div>
+      </div>
+    </div>
+    <div class="section-scence section-scence1">
+      <div class="imgBox1-pc">
+        <div class="section-scence-text5">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+            Safe and Reliable
+          </h3>
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            With built-in sensors that detect an increase in temperature,
+            voltage,<br />
+            and current, the car charger and your devices are protected as you
+            drive.
+          </p>
+        </div>
+        <div class="imgScence5">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product_car_adapter_detail_scence5.png' | asset_url }}" class="lazyload" />
+        </div>
+      </div>
+      <div class="imgBox5-phone">
+        <div class="section-scence-text5">
+          <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+            Safe and Reliable
+          </h3>
+          <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+            With built-in sensors that detect an increase in temperature,
+            voltage,<br />
+            and current, the car charger and your devices are protected as you
+            drive.
+          </p>
+        </div>
+  
+        <div class="imgScence5-phone">
+          <img src="{{ placeholder_gif }}"
+            data-src="{{ 'product_car_adapter_detail_scence5_phone.png' | asset_url }}" class="lazyload" />
+        </div>
+      </div>
+    </div>

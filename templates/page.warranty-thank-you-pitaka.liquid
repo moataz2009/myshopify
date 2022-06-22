@@ -1,0 +1,83 @@
+
+<style>
+.container{
+  padding-bottom: 10%;
+}
+.container h1{
+  font-size: 2.25em;
+  font-weight: 800;
+  text-align: center;
+  margin: 5% auto;
+}
+
+.detail-font-xmedium{line-height: 1.5;text-align: center;}
+.toCheck{
+  margin-top: 5em;
+  font-size: 1em;
+  text-align: center;
+}
+.toCheckClick{
+  font-weight: 800;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+@media screen and (max-width:1024px){
+  .container h1{
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width:414px){
+  .container h1{
+    font-size: 18px;
+  }
+  .container form{
+    width:18em;
+  }
+}
+</style>
+<div class="lg:w-7/12 md:w-9/12 sm:w-11/12 m-auto px-6">
+  <div class="my-8 py-8 lg:w-5/12 md:7/12 sm:w-9/12 m-auto text-center">
+  <h1 class="text-2xl my-4">THANK YOU!</h1>
+  <h3 class="text-xl my-4">Congratulations on getting an extended warranty !!</h3>
+  <div class="shop-btn pt-flex pt-flex-center pt-margin-top-medium">
+    <a href="/pages/warranty-check" class="more-btn">
+      Check your extended warranty
+    </a>
+  </div>
+  {%- comment -%}
+  <div class="toCheck">
+    <span>Check your extended warranty in <span id="secondsToJump">6</span> seconds.</span><br>
+    <a class="toCheckClick" href="https://www.ipitaka.com/pages/warranty-check">Or click here to enter.</a>
+  </div>
+  {%- endcomment -%}
+</div>
+
+{% if page.url == '/pages/frontpage' %}
+<script type='text/javascript'>window.location='https://www.ipitaka.com';</script>
+{% endif %}
+{% if page.url == '/pages/load-magdock-pro-user-manual' %}
+<script type='text/javascript'>window.location="{{'MagDock-Pro-User-Manual.pdf' | asset_url }}";</script>
+{% endif %}
+
+{%- comment -%}
+<script>
+  window.addEventListener('load',function(){
+    let timer;
+    if(timer){clearInterval(timer)}
+    let sec = $('#secondsToJump');
+    let n = 5;
+    setInterval(function(){
+      if(n>-1) sec.text(n--);
+    },1000)
+    
+    timer = setTimeout(function(){
+      window.location.href='https://www.ipitaka.com/pages/warranty-check';
+    },6000)
+  })
+</script>
+{%- endcomment -%}
+
+{% comment %}
+将跳转warranty-check-pitaka改成warranty-check
+{% endcomment %}

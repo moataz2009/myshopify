@@ -1,0 +1,300 @@
+{%- comment -%}
+商品card组件:
+传入参数（必需）：product
+传入参数（可选）：
+bgColor：背景颜色灰度800
+hover_tag：产品图片是否有hover效果
+card_hover：card是否有hover效果
+desc_no: 是否没有产品描述，默认为false
+title_pos_top: 产品名称位置是否在图片之上，默认为false
+link_product_no: 是否没有产品页链接，默认为false
+link_buy_no: 是否没有购买链接，默认为false
+link_buy_btn: 购买链接是否为按钮形式，默认为false
+sm_layout_2:手机端是否显示2列，默认显示1列
+{%- endcomment -%}
+
+{% if product.handle contains '-case-' %}
+{% assign product_name = product.handle | remove: 'case-' | remove: 'for-' | replace: 'pixel-', 'pixel' | replace: 'oneplus-', 'oneplus' | remove: 'samsung-galaxy-' | remove: 'google-' | remove: 'huawei-' | replace: 'iphone-','i' | replace: 'pro-2020-and-2018', '2020' %}
+{% else %}
+{% assign product_name = product.handle | remove: 'magez-' | remove: 'air-' | remove: 'for-' | replace: 'oneplus-', 'oneplus' %}
+{% endif %}
+
+{% assign hover_effect = false %}
+{% if hover_tag %}
+{% assign hover_effect = true %}
+{% endif %}
+
+{% assign bgClass = null %}
+{% if bgColor %}
+{% assign bgClass = bgColor | prepend: 'bg-gray-' %}
+{% endif %}
+
+{% assign color_tag = false %}
+{% unless product.handle == 'air-omni' %}
+{% for option in product.options %}
+{% if option == 'Color' %}
+{% assign color_tag = true %}
+{% break %}
+{% endif %}
+{% endfor %}
+{% endunless %}
+
+{% assign series_list = 'iPhone 13,iPhone 12,iPhone 11/11 Pro,iPhone Xs,Galaxy S21,Galaxy S20,Galaxy Note20,Galaxy Note10' | split: ',' %}
+{% assign series_suffix = false %}
+{% for item in series_list %}
+{% if product.title contains item %}
+{% assign series_suffix = true %}
+{% break %}
+{% endif %}
+{% endfor %}
+
+{% assign magez_2_list = 'magez-wallet-2,magez-wallet-2-pro,magez-car-mount-pro,magez-slider,magez-card-sleeve' | split: ',' %}
+{% assign magez_1_list = 'magez-mount,magez-mount-qi,magez-mount-qi-desktop,magez-wireless-charging-kit' | split: ',' %}
+
+{% assign magez_1_flag = false %}
+{% assign magez_2_flag = false %}
+
+{% if product.handle contains 'magez-case'  %}
+{% unless product.handle contains 'for-ipad' %}
+{% if product.handle contains 'iphone-13' or product.handle contains 'airpods-pro' %}
+{% assign magez_2_flag = true %}
+{% else %}
+{% assign magez_1_flag = true %}
+{% endif %}
+{% endunless %}
+{% else %}
+{% for magez_2_handle in magez_2_list %}
+{% if product.handle contains magez_2_handle %}
+{% assign magez_2_flag = true %}
+{% break %}
+{% endif %}
+{% endfor %}
+
+{% for magez_1_handle in magez_1_list %}
+{% if product.handle contains magez_1_handle %}
+{% assign magez_1_flag = true %}
+{% break %}
+{% endif %}
+{% endfor %}
+
+{% endif %}
+
+<div
+  class="grid-item w-full h-full flex flex-col items-center{% if between_tag %} sm:justify-between{% endif %} py-10 {% if sm_layout_2 %}px-0{% else %} px-4 sm:px-6{% endif %} lg:px-7 xl:px-10 {{bgClass}}">
+  <div
+    class="images-container {% if sm_layout_2 %}w-full{% else %}w-11/12{% endif %} xl:w-5/6 mx-auto mb-7{% if between_tag %} lg:mb-0{% endif %}">
+    {% if color_tag %}
+    {% for color_option  in product.options_by_name['Color'].values %}
+    {% assign color_prefix = color_option | handleize | prepend: '-' %}
+    <div class="images-toggle {% if forloop.first == true %} active{% endif %}" color="{{ color_option | handleize }}">
+      {% if hover_effect %}
+      <div class="hover-pictures relative">
+        {{ product_name | append: color_prefix | prepend: 'card-' | append: '.png' | asset_url | img_tag: product.title,'block max-w-full mx-auto' }}
+        <div class="absolute hover-image w-full top-0 left-0 opacity-0 transition-opacity">
+          {{ product_name | append: color_prefix | prepend: 'card-' | append: '-hover.png' | asset_url | img_tag: product.title,'block max-w-full mx-auto' }}
+        </div>
+      </div>
+      {% else %}
+      {{ product_name | append: color_prefix | prepend: 'card-' | append: '.png' | asset_url | img_tag: product.title,'block max-w-full mx-auto' }}
+      {% endif %}
+    </div>
+    {% endfor %}
+    {% else %}
+    {% if hover_effect %}
+    <div class="hover-pictures relatived">
+      {{ product_name | prepend: 'card-' | append: '.png' | asset_url | img_tag: product.title,'block max-w-full mx-auto' }}
+      <div class="absolute hover-image w-full top-0 left-0 opacity-0 transition-opacity">
+        {{ product_name | prepend: 'card-' | append: '-hover.png' | asset_url | img_tag: product.title,'block max-w-full mx-auto' }}
+      </div>
+    </div>
+    {% else %}
+    {{ product_name | prepend: 'card-' | append: '.png' | asset_url | img_tag: product.title,'block max-w-full mx-auto' }}
+    {% endif %}
+    {% endif %}
+  </div>
+  <div class="toggles-container flex justify-center -mx-1 my-6">
+    {% if color_tag %}
+    {% for color_option  in product.options_by_name['Color'].values %}
+    <div data-color="{{color_option | handleize}}"
+      class="toggle-item {% if forloop.first == true %}active {% endif %}rounded-full w-5 mx-1 p-0.5 border border-gray-850 border-solid box-content cursor-pointer">
+      <img src="{{ color_option | handleize | append: '.svg' | asset_url }}" alt="{{ color_option }}"
+        class="block width-full rounded-full">
+    </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+
+  <h3 class="text-base font-bold mb-4">
+    {% if product.title == 'Air Pal' or product.title == 'Air Pal Mini' %}
+    {{ product.title }}
+    <span class="block text-sm sm:text-base">
+      For AirPods 1&2
+    </span>
+    {% elsif product.title contains ' for ' %}
+    {% if product.title contains 'Wireless Charging Kit' %}
+    {{ product.title | remove: 'for iPhone 12 Series ' }}
+    {% else %}
+    {{ product.title | split: ' for ' | first }}
+    <span class="block text-sm sm:text-base">
+      {% if series_suffix %}
+      {% assign last_arr = product.title | split: ' for ' | last | remove: 'Samsung ' | split: '/' %}
+      For {{ last_arr | first | remove: ' mini' | append: ' Series' }}
+      {% else %}
+      For {{ product.title | split: ' for ' | last | remove: 'Samsung ' }}
+      {% endif %}
+    </span>
+    {% endif %}
+    {% else %}
+    {{ product.title }}
+    {% endif %}
+  </h3>
+
+  <p class="text-base text-gray-400 mb-6 ">
+    {% if product.title == 'New MagEZ Case Pro for iPhone 13 mini/13/13 Pro/13 Pro Max' %}
+    <span class="font-bold text-white">
+      $64.99
+    </span>
+    {% endif %}
+    {% if product.title == 'MagEZ Car Mount Pro' %}
+    <span class="font-bold text-white">
+      $59.99
+    </span>
+    {% endif %}
+    {% if product.title == 'MagEZ Case 2 for iPhone 13 mini/13/13 Pro/13 Pro Max' %}
+    <span class="font-bold text-white">
+      $59.99
+    </span>
+    {% endif %}
+    {% if product.title == 'MagEZ Stand for Tablets (Marble Version)' %}
+    <span class="font-bold text-white">
+      $119
+    </span>
+    {% endif %}
+    {% if product.title == 'Air Case for Apple Watch Series SE/6/5/4' %}
+    <span class="line-through sm:mr-2">
+      $39
+    </span>
+    <span class="font-bold text-white">
+      $33.15
+    </span>
+    {% endif %}
+    {% if product.title == 'Carbon Fiber Watch Band' %}
+    <span class="line-through sm:mr-2">
+      $89
+    </span>
+    <span class="font-bold text-white">
+      $84.55
+    </span>
+    {% endif %}
+    {% if product.title == 'Air Omni' %}
+    <span class="font-bold text-white">
+      $159
+    </span>
+    {% endif %}
+    {% if product.title == 'Air Omni Lite' %}
+    <span class="font-bold text-white">
+      $129
+    </span>
+    {% endif %}
+    {% if product.title == 'MagEZ Wallet' %}
+    <span class="line-through sm:mr-2">
+      $80
+    </span>
+    <span class="font-bold text-white">
+      $72.00
+    </span>
+    {% endif %}
+    {% if product.title == 'MagEZ Wallet 2' %}
+    <span class="line-through sm:mr-2">
+      $59
+    </span>
+    <span class="font-bold text-white">
+      $56.05
+    </span>
+    {% endif %}
+    {% if product.title == 'MagEZ Case for iPad Pro 2020/2018 & iPad Air 2020/2022' %}
+    <span class="line-through sm:mr-2">
+      $69.99
+    </span>
+    <span class="font-bold text-white">
+      $59.49
+    </span>
+    {% endif %}
+    {% if product.title == 'Air Case for iPhone 12 mini/12/12 Pro/12 Pro Max' %}
+    <span class="line-through sm:mr-2">
+      $59.99
+    </span>
+    <span class="font-bold text-white">
+      $53.99
+    </span>
+    {% endif %}
+    {% if product.title == 'MagEZ Case for iPhone 12 mini/12/12 Pro/12 Pro Max' %}
+    <span class="line-through sm:mr-2">
+      $49.99
+    </span>
+    <span class="font-bold text-white">
+      $44.99
+    </span>
+    {% endif %}
+    {% if product.title == 'MagEZ Case Pro 2 for iPhone 12 mini/12/12 Pro/12 Pro Max' %}
+    <span class="line-through sm:mr-2">
+      $49.99
+    </span>
+    <span class="font-bold text-white">
+      $44.99
+    </span>
+    {% endif %}
+    {% if product.title == 'C to C Charging Cable' %}
+    <span class="line-through sm:mr-2">
+      $15.99
+    </span>
+    <span class="font-bold text-white">
+      $11.19
+    </span>
+    {% endif %}
+    {% if product.handle == 'magez-wallet-ue' %}
+    <span class="line-through sm:mr-2">
+      $89
+    </span>
+    <span class="font-bold text-white">
+      $80.10
+    </span>
+    {% endif %}
+    {% if product.handle == 'magez-digital-travel-kit' %}
+    <span class="line-through sm:mr-2">
+      $80.00
+    </span>
+    <span class="font-bold text-white">
+      $72.00
+    </span>
+    {% endif %}
+    {% if product.handle == 'magez-wallet-2-pro' %}
+    <span class="line-through sm:mr-2">
+      $79.00
+    </span>
+    <span class="font-bold text-white">
+      $75.05
+    </span>
+    {% endif %}
+    {% if product.handle == 'magez-case-2-for-ipad-pro-2021' %}
+    <span class="line-through sm:mr-2">
+      $69.99
+    </span>
+    <span class="font-bold text-white">
+      $66.49
+    </span>
+    {% endif %}
+  </p>
+
+  <div
+    class="flex {% if link_buy_btn %}w-full sm:w-4/5 lg:w-2/3 mx-auto flex-col items-center{% else %}w-full{% endif %} {% if link_product_no or link_buy_no %}justify-center{% else %}justify-between{% endif %} sm:justify-around">
+    {% assign shop_url = product.handle | prepend: '/products/' %}
+    <div class="text-left">
+      {% if link_buy_now %}
+      {% render 'link-button-bg',link_url: shop_url,link_title: 'Buy Now', space_tight: true,target_blank:true %}
+      {% else %}
+      {% render 'link-button-bg',link_url: shop_url,link_title: 'Add to Cart', space_tight: true,target_blank:true %}
+      {% endif %} 
+    </div>
+  </div>
+</div>

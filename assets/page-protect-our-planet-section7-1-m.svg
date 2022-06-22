@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1075px" height="80px" viewBox="0 0 1075 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>1280_时间线01</title>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#52EC69" offset="0%"></stop>
+            <stop stop-color="#33BCB1" offset="15.2347435%"></stop>
+            <stop stop-color="#52EC69" offset="50.1259117%"></stop>
+            <stop stop-color="#37DAB8" offset="63.69885%"></stop>
+            <stop stop-color="#14CC70" offset="72.7444216%"></stop>
+            <stop stop-color="#04BB42" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="环保页面_ipad_1280" transform="translate(-99.000000, -6081.000000)">
+            <g id="1280_时间线01" transform="translate(99.000000, 6091.000000)">
+                <g id="时间线01" transform="translate(0.000000, 53.000000)">
+                    <line x1="10.5" y1="8.5" x2="1074" y2="10.5" id="直线-2" stroke="url(#linearGradient-1)" stroke-width="2" stroke-linecap="square"></line>
+                    <g id="编组-8" fill="#00D583">
+                        <path d="M8.5,17 C13.1944204,17 17,13.1944204 17,8.5 C17,3.80557963 13.1944204,0 8.5,0 C3.80557963,0 0,3.80557963 0,8.5 C0,13.1944204 3.80557963,17 8.5,17 Z" id="椭圆形备份" opacity="0.364583333"></path>
+                        <path d="M8.5,12.2777778 C10.5864091,12.2777778 12.2777778,10.5864091 12.2777778,8.5 C12.2777778,6.41359095 10.5864091,4.72222222 8.5,4.72222222 C6.41359095,4.72222222 4.72222222,6.41359095 4.72222222,8.5 C4.72222222,10.5864091 6.41359095,12.2777778 8.5,12.2777778 Z" id="椭圆形"></path>
+                    </g>
+                    <line x1="722.5" y1="8.5" x2="722.5" y2="2.5" id="直线-3" stroke="#3DCA9A" stroke-width="2" stroke-linecap="square"></line>
+                </g>
+                <text id="2023" font-family="Montserrat-Bold, Montserrat" font-size="34" font-weight="bold" line-spacing="16" fill="#3BD18A">
+                    <tspan x="722" y="33">2023</tspan>
+                </text>
+                <text id="Now-(2022)" font-family="Montserrat-Bold, Montserrat" font-size="34" font-weight="bold" line-spacing="16" fill="#3BD18A">
+                    <tspan x="6" y="33">Now (2022)</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

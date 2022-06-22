@@ -1,0 +1,150 @@
+{%- comment -%}
+  参数：
+  isArticle:是否为文章正文 默认false
+  wGrid：所占最大宽度格:1-12(PC端)
+  bgColor：背景颜色灰度:750、800、820、850
+  pxSize：水平最大内边距数值
+  pySize：垂直最大内边距数值
+  title：标题
+  desc：描述
+  deco_icon:标题装饰
+  picSrc：图片名称
+  section_pic_alt：图片alt
+  linkBtn：链接按钮true/false
+  linkUrl:链接地址
+  linkTitle:链接文本
+  display_row：分布方式true：左右分布，默认垂直分布
+  itemsCenter：是否水平居中
+  rowReverse：分布顺序是否反向
+  contentPdSize：文本区域内边距
+  contentWidth：文本区域所占宽度类名:w-1/2(PC端)
+  contentTitle：文本区域标题
+  contentDesc：文本区域描述
+  content_deco_icon:文本区域标题装饰
+  content_linkBtn:文本区域链接按钮true/false
+  content_linkUrl:文本区域链接地址
+  content_linkTitle:文本区域链接文本
+  picWidth:左右分布图片所占宽度类名:w-1/2(PC端)
+{%- endcomment -%}
+
+
+{%- comment -%}
+  以产品页为例，ex1（第二屏：上下分布，无背景颜色，文本区域和图片区域1：1）
+{%- endcomment -%}
+
+{%- comment -%}
+  {% assign titleStr = 'Portable Power Bank Wireless Charging Dock' %}
+  {% assign descStr = 'The MagEZ Juice eliminates the need to carry a bulky power bank and cable. When you’re at home or in the office, simply attach your phone' %}
+  {% render 'flex-section', wGrid: 8, deco_icon:true, title:titleStr, desc: descStr, picSrc: 'product-juice-section1.jpg' %}
+{%- endcomment -%}
+
+{%- comment -%}
+  以产品页为例，ex2（第五屏：左右分布，有背景颜色，文本区域和图片区域1：1）
+{%- endcomment -%}
+
+
+{% assign placeholder_gif = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' %}
+
+{%- assign wClass = 'w-full' -%}
+{%  if wGrid %}
+  {% case wGrid %}
+    {% when 8 %}
+    {%- assign wClass = 'w-full sm:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto px-6 lg:px-0' -%}
+    {% when 10 %}
+    {%- assign wClass = 'w-full sm:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto px-6 lg:px-0' -%}
+  {% endcase %}
+{% endif %}
+
+{%- assign bgClass = null -%}
+{%  if bgColor %}
+  {%- assign bgClass = bgColor | prepend: 'bg-gray-' -%}
+{% endif %}
+
+{%- assign pxClass = null -%}
+{%  if pxSize %}
+  {%- assign pxClass = pxSize | prepend: 'px-' -%}
+{% endif %}
+
+{%- assign pyClass = null -%}
+{%  if pySize %}
+  {%- assign pyClass = pySize | prepend: 'py-' -%}
+{% endif %}
+
+<div class="{{wClass}} {{bgClass}} {{pxClass}} {{pyClass}}">
+  {%  if title %}
+    <h1 class="mx-auto w-1/2 text-2xl sm:text-3xl font-bold {% if title_center %}text-center{% endif %}">
+      {{title}}
+    </h1>
+  {% endif %}
+
+  {%  if deco_icon %}
+    <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="block mt-4 mb-6">
+  {% endif %}
+
+  {%  if desc %}
+    <p class="mx-auto w-full sm:w-2/3 xl:w-2/5 mb-8 text-base text-gray-400{% if title_center %} text-center{% endif %}">
+      {{ desc }}
+    </p>
+  {% endif %}
+
+  {%  if linkBtn %}
+    {% render 'link-button',link_url: linkUrl, link_title: linkTitle %}
+  {% endif %}
+
+  {% assign section_pic_name = picSrc | split: '.' | first %}
+  {% assign section_pic_type = picSrc | split: '.' | last | prepend: '.' %}
+
+  {% if display_row %}
+    {%- assign itemsClass = null -%}
+    {% if itemsCenter %}
+      {%- assign itemsClass = 'items-center' -%}
+    {% endif %}
+
+    {%- assign directionClass = null -%}
+    {% if rowReverse %}
+      {%- assign directionClass = 'flex-row-reverse' -%}
+    {% endif %}
+
+    <div class="flex {{directionClass}} justify-center {{itemsClass}}">
+      
+      {% assign contentPdClass = null %}
+      {% if contentPdSize %}
+        {% assign contentPdClass = contentPdSize | prepend: 'p-' %}
+      {% endif %}
+
+      <div class="w-full md:{{contentWidth}} {% if rowReverse %}pl-4{% else %}pr-4{% endif %} {{contentPdClass}}">
+        <h1 class="text-2xl sm:text-3xl font-bold">{{contentTitle}}</h1>
+        
+        {%  if content_deco_icon %}
+          <img src="{{ 'triggle_pixel-d.svg' | asset_url }}" class="block mt-4 mb-6 sm:mt-6 sm:mb-8 md:mt-4 md:mb-6">
+        {% endif %}
+
+        <p class="text-gray-400 text-base{%  if content_linkBtn %} mb-8{% endif %}">
+          {{ contentDesc }}
+        </p>
+
+        {%  if content_linkBtn %}
+         {% render 'link-button',link_url: content_linkUrl, link_title: content_linkTitle %}
+        {% endif %}
+
+      </div>
+      <div class="{{picWidth}} {% if rowReverse %}pr-4{% else %}pl-4{% endif %} ">
+        <picture>
+          <source media="(min-width: 1025px)" data-srcset="{{ section_pic_name | append: section_pic_type  | asset_url}}">
+          <source media="(min-width: 768px)" data-srcset="{{ section_pic_name | append: '-m' | append: section_pic_type | asset_url}}">
+          <img src="{{placeholder_gif}}" alt="{{ section_pic_alt }}" 
+            data-src="{{ section_pic_name | append: '-s' | append: section_pic_type | asset_url}}" 
+            class="block w-full h-full object-contain lazyload">
+        </picture>
+      </div>
+    </div>
+  {% else %}
+
+    <picture>
+      <source media="(min-width: 1025px)" data-srcset="{{ section_pic_name | append: section_pic_type  | asset_url}}">
+      <source media="(min-width: 768px)" data-srcset="{{ section_pic_name | append: '-m' | append: section_pic_type | asset_url}}">
+      <img src="{{ placeholder_gif }}" alt="{{ section_pic_alt }}" 
+        data-src="{{ section_pic_name | append: '-s' | append: section_pic_type | asset_url}}" class="block w-full lazyload">
+    </picture>   
+  {% endif %}
+</div>

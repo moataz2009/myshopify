@@ -1,0 +1,135 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+
+{{'swiper-bundle.min.css' | asset_url| stylesheet_tag }}
+{{'swiper-bundle.min.js' | asset_url | script_tag }}
+
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_8 = 'w-full md:w-11/12 lg:w-10/12 xl:w-8/12 max-w-screen-xl mx-auto' %}
+{% assign wClass_6 = 'w-full md:w-10/12 lg:w-8/12 xl:w-6/12 max-w-screen-xl mx-auto' %}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28' %}
+{% assign pdClass_b = 'px-3 sm:px-6 md:px-0 pb-16 sm:pb-20 lg:pb-28' %}
+{% assign titleBoxClass= 'mx-auto mb-12 w-11/12 sm:w-5/6 md:w-2/3 xl:w-2/5' %}
+{% assign titleSize = 'text-2xl md:text-3xl font-bold' %}
+{% assign descSize = 'text-sm sm:text-base text-gray-400' %}
+{% assign titleDecoMy = 'block mt-4 mb-6' %}
+
+{% assign absoluteContentBoxClass_8 = 'w-full laptop:w-10/12 lg:w-8/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2 top-0' %}
+{% assign absoluteContentBoxClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto px-6 lg:px-0 h-full absolute transform left-1/2 -translate-x-1/2' %}
+{% assign absoluteContentClass = 'text-center sm:text-left absolute transform w-4/5 sm:w-1/2 xl:w-3/8 top-16 left-1/2 -translate-x-1/2  max-w-md sm:translate-x-0 sm:left-6 lg:left-0 sm:top-1/2 sm:-translate-y-1/2' %}
+
+<div class="w-full  bg-gray-850">
+  <div class="{{wClass}} {{pdClass}} text-center">
+    <h3 class="{{titleSize}} mb-6">
+      High Touch Screen Responsitivity
+    </h3>
+    <p class="{{descSize}} mb-8 sm:mb-12">
+      Measuring only 0.33 mm, the ultra-thin design of the tempered glass offers the same responsiveness as the phone's
+      screen.
+    </p>
+  </div>
+  <div class="sm:flex sm:flex-row  {{pdClass_b}}">
+    <div class="w-full sm:w-1/2 sm:pr-20 md:pr-30 xl:pr-40">
+      <picture>
+        <source data-srcset="{{'product_tempered_glass_detail_scence1_1.png' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'product_tempered_glass_detail_scence1_1_phone.png' | asset_url}}"
+          alt="tempered  glass"
+          class="block w-full h-full object-contain lazyload rounded-b-full sm:rounded-bl-none sm:rounded-r-full bg-gray-800">
+      </picture>
+    </div>
+    <div class="w-full sm:w-1/2 sm:pl-20 md:pl-30 xl:pl-40">
+      <picture>
+        <source data-srcset="{{'product_tempered_glass_detail_scence1_2.png' | asset_url}}" media="(min-width: 768px)">
+        <img src="{{ placeholder_gif }}" data-src="{{'product_tempered_glass_detail_scence1_2_phone.png' | asset_url}}"
+          alt="tempered  glass" class="block w-full h-full object-contain lazyload">
+      </picture>
+    </div>
+  </div>
+</div>
+
+<div class=" w-full bg-black">
+  <div class="{{wClass}} {{pdClass}} ">
+    <div class=" flex flex-col sm:flex-row justify-between items-center">
+      <div class="w-full sm:w-1/2 ">
+        <picture>
+          <source data-srcset="{{'product_tempered_glass_detail_scence2.png' | asset_url}}" media="(min-width: 768px)">
+          <img src="{{ placeholder_gif }}" data-src="{{'product_tempered_glass_detail_scence2_phone.png' | asset_url}}"
+            alt="tempered  glass" class="block w-full h-full object-contain lazyload">
+        </picture>
+      </div>
+      <div class="w-full sm:w-1/2 order-first sm:order-none sm:pl-20 xl:pl-40">
+        <h3 class="{{titleSize}} mb-6">
+          Shock-Absorbing Glass
+          Protects Against High Impact Falls
+        </h3>
+        <p class="{{descSize}} mb-8 sm:mb-12">
+          PITAKA's screen protector tempered glass offers full coverage and is
+          designed to
+          absorb the impact of a drop and is extremely resilient against
+          scratches and daily
+          wear and tear.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=" w-full">
+  <div class="{{wClass}} px-3 sm:px-6 md:px-0 pt-16 sm:pt-20 lg:pt-28 pb-0">
+    <div class=" flex flex-col sm:flex-row justify-between items-center">
+      <div class="w-full sm:w-1/2  sm:pr-20 xl:pr-40">
+        <h3 class="{{titleSize}} mb-6">
+          Crystal Clear Tempered Glass
+        </h3>
+        <p class="{{descSize}} mb-8 sm:mb-12">
+          PITAKA uses Japanese sourced tempered glass to ensure
+          a clear view of your phone's screen.
+        </p>
+      </div>
+      <div class="w-8/12 xs:10/12  sm:w-1/2 relative">
+        <picture>
+          <source data-srcset="{{'product_tempered_glass_detail_scence3.png' | asset_url}}" media="(min-width: 768px)">
+          <img src="{{ placeholder_gif }}" data-src="{{'product_tempered_glass_detail_scence3_phone.png' | asset_url}}"
+            alt="tempered  glass" class="block w-full h-full object-contain lazyload">
+        </picture>
+        <div class="w-full absolute  bottom-4 xl:bottom-8 flex flex-row justify-evenly text-center">
+          <h3 class="text-xs xs:text-xl md:text-2xl font-bold mb-6">
+            PITAKA
+            <br>
+            Tempered Glass
+          </h3>
+          <h3 class="text-xs xs:text-xl md:text-2xl font-bold mb-6">
+            OTHER
+            <br>
+            Tempered Glass
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=" w-full">
+  <div class=" relative">
+    <picture>
+      <source data-srcset="{{'product_tempered_glass_detail_scence4.png' | asset_url}}" media="(min-width: 768px)">
+      <img src="{{ placeholder_gif }}" data-src="{{'product_tempered_glass_detail_scence4_phone.png' | asset_url}}"
+        alt="tempered  glass" class="block w-full h-full object-contain lazyload">
+    </picture>
+    <div
+      class="w-11/12 sm:w-4/12 max-w-screen-xs mx-auto absolute top-10  xs:top-32 transform left-1/2 -translate-x-1/2 sm:-translate-x-0 sm:top-1/2 sm:-translate-y-1/2 sm:left-1/2 sm:ml-20 md:ml-32 xl:ml-56">
+      <h3 class="{{titleSize}} mb-6">
+        Simple Attachment
+        and Accurate Placement
+      </h3>
+      <p class="{{descSize}} mb-8 sm:mb-12">
+        With the specifically designed alignment frame, fitting the
+        screen protector glass is quick, eliminating the need to readjust
+        without leaving bubbles and scratches.
+      </p>
+    </div>
+  </div>
+
+</div>

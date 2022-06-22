@@ -1,0 +1,183 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+<div class="pt-section section1 relative pt-flex pt-flex-center pt-flex-column bg-black">
+  <div class="pt-section-content pt-text-center pt-margin-bottom-large">
+    <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400 font-upper">Seamless Style</h3>
+  </div>
+  <div class="pt-section-picture pt-flex pt-flex-center">
+    {{ 'product-case-section1-iphone11.png' | asset_url | img_tag }}
+  </div>
+</div>
+
+{% if base_name contains 'iphone' %}
+<div class="pt-video-container pt-section  bg-black">
+  <video loop muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+    x5-video-orientation="portraint" data-poster="{{ 'product-magez-case-cover.jpg' | asset_url }}" preload="none" 
+    autoplay style="object-fit:contain" class="lazyload">
+    <source src="{{ 'product-magez-case.mp4' | asset_url }}" type="video/mp4">
+    <source src="{{ 'product-magez-case.webm' | asset_url }}" type="video/webm">
+  </video>
+</div>
+{% endif %}
+
+<div class="pt-section section3 pt-flex pt-flex-center pt-flex-column  bg-black">
+  <div class="pt-section-content pt-text-center pt-margin-bottom-large">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      Aramid Fiber: Slim, Lightweight and Durable
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      With a thickness of only 0.85mm, the aerospace-grade aramid fiber offers protection
+      against daily wear and tear without the bulk.
+    </p>
+  </div>
+  <picture class="pt-margin-large width-100">
+    <source data-srcset="{{ 'product-case-section3-iphone11.png' | asset_url }}"
+      media="(min-width: 769px)">
+    <img src="{{ placeholder_gif }}"
+      data-src="{{ 'product-case-section3-iphone11-m.png' | asset_url }}"
+      class="img-responsive width-100 lazyload">
+  </picture>
+  <div class="pt-flex pt-flex-center width-50 pt-margin-top-large">
+    <picture>
+      <img src="{{ placeholder_gif }}"
+        data-src="{{ 'product-case-section3-min-14-85.png' | asset_url }}" class="img-responsive lazyload">
+    </picture>
+  </div>
+</div>
+
+<div class="section4 relative bg-black">
+  <picture>
+    <source data-srcset="{{ 'product-case-section4-iphone11.png' | asset_url }}"
+      media="(min-width: 769px)">
+    <img src="{{ placeholder_gif }}"
+      data-src="{{'product-case-section4-iphone11-m.png' | asset_url }}"
+      class="img-responsive width-100 lazyload" />
+  </picture>
+  <div class="pt-section-content absolute pt-position-centerY pt-text-right">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">3D Grip<sup>TM</sup> Technology</h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-medium">
+      Our unique vacuum forming process retains the raw and original characteristics of aramid, creating a nonslip
+      texture that improves grip while also feeling soft to the touch.
+    </p>
+    {% render 'link-button',link_url: "/pages/3d-grip", link_title:'Learn More About 3D Grip' %}
+  </div>
+</div>
+
+<div class="pt-section section5 pt-flex pt-flex-center pt-flex-column bg-black">
+  <div class="pt-section-content pt-text-center pt-margin-bottom-large">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Magnetic Functionality</h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      With built-in metal strips, the MagEZ Case attaches easily to the 
+      <a href="/collections/wireless-chargers" class="pt-link">MagEZ Series magnetic wireless chargers</a> 
+      for an uninterrupted charging experience.
+    </p>
+  </div>
+  <div class="pt-section-picture">
+    <picture>
+      <source data-srcset="{{'product-case-section5-iphone11.png' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{'product-case-section5-iphone11-m.png' | asset_url }}"
+        class="img-responsive lazyload">
+    </picture>
+  </div>
+</div>
+{% unless base_name == 'iphone7' %}
+<div class="pt-section section6 pt-flex pt-flex-center pt-flex-between bg-black">
+  <div class="pt-section-content pt-text-right">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">Wireless Charging Friendly</h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      The metal strips are specifically placed to work alongside your mobile’s wireless charging function.
+    </p>
+  </div>
+  <div class="pt-section-picture pt-flex pt-flex-end">
+    <picture>
+      <source data-srcset="{{  'product-case-section6-iphone11.png' | asset_url }}"
+        media="(min-width: 769px)">
+      <img src="{{ placeholder_gif }}"
+        data-src="{{   'product-case-section6-iphone11-m.png' | asset_url }}"
+        class="img-responsive lazyload" />
+    </picture>
+  </div>
+</div>
+{% endunless %}
+
+{{ 'product-case-detail.css' | asset_url | stylesheet_tag }}
+<style>
+  .case-animation {
+    max-height: 720px;
+  }
+
+  .section1 .pt-section-content {
+    position: relative;
+    z-index: 10;
+  }
+</style>
+{% if base_type == 'galaxy' or base_name == 'oneplus8' 
+    or base_name == 'iphone11' %}
+<style>
+  .section1 {
+    padding: 0;
+  }
+
+  .section1 .pt-section-content {
+    position: absolute;
+    top: 5em;
+  }
+</style>
+{% endif %}
+
+{% if base_name == 'note10' %}
+<style>
+  .section6 {
+    flex-direction: row-reverse;
+    padding-left: 0;
+    padding-right: 10%;
+  }
+
+  .section6 .pt-section-content { 
+    text-align: left;
+  }
+
+  .section6 .pt-section-picture {
+    justify-content: flex-start;
+  }
+
+  @media screen and (max-width:768px) {
+    .section6 {
+      flex-direction: column;
+      padding: 3em 0;
+    }
+
+    .section6 .pt-section-content {
+      text-align: center;
+    }
+  }
+</style>
+{% endif %}
+
+{% unless base_type == 'galaxy' and base_name == 'oneplus8' %}
+<script>
+  $(function () {
+    var $win = $(window);
+    if ($('.case-animation').length) {
+      var whc = $('.case-animation').height();
+      $(document).scroll(casePartsHandler);
+      $win.resize(casePartsHandler);
+
+      function casePartsHandler() {
+        var cswrpheight = ($('.case-animation').offset().top - $win.scrollTop()) * 3;
+        if (window.innerWidth < 600)
+          if (cswrpheight > 450) cswrpheight = 450;
+        if (window.innerWidth > 601 && window.innerWidth < 800)
+          if (cswrpheight > 600) cswrpheight = 600;
+        if (window.innerWidth > 801 && window.innerWidth < 1024)
+          if (cswrpheight > 600) cswrpheight = 600;
+        $(".case-animation").css('height', cswrpheight);
+      }
+    }
+  });
+</script>
+{% endunless %}

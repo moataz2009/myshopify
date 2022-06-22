@@ -1,0 +1,1360 @@
+{% if base_handle contains 'magez-case-for-' %}
+  {% assign base_model = base_handle | remove: 'magez-case-for-'
+        | remove: 'google-'
+  | remove: 'samsung-galaxy-' | remove: 'huawei-'
+  | replace: '-','' %}
+
+  {% if base_model == 'ipadpro' %}
+  <p class="text-sm sm:text-base">
+    Compatible with the Apple Magic Keyboard, Smart Keyboard Folio, and 
+    <a href="/products/magez-card-sleeve" class="text-cyan">MagEZ Card Sleeve (2)</a>.
+  </p>
+  {% elsif base_model == 'iphone12' or base_model == 'iphone11' or base_model == 'iphonex' or base_model == 'iphonexs'  or base_model == 'iphonese'  or base_model == 'iphone7'  or base_model == 'iphone8'   or base_model == 'pixel4'  or base_model == 'note10'  %}
+  <div class="content-variant" name="iphone_12">
+    <ul class="text-sm sm:text-base list-disc list-inside">
+      <li class="mt-2">
+        Magnetically attaches to PITAKA 
+        <a href="/collections/magez-system" class="text-cyan"  title="Learn More about Our MagEZ System">
+          MagEZ<sup>&reg;</sup> 
+          1.0<sup class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</sup>
+        </a> 
+        chargers and accessories including MagEZ Juice 2, 
+        <a href="/products/magez-mount" class="text-cyan">MagEZ Mount</a>, 
+        <a href="/products/magez-mount-qi" class="text-cyan">MagEZ Mount Qi</a>, 
+        <a href="/products/magez-mount-qi-desktop" class="text-cyan">MagEZ Mount Qi Desktop</a>, and 
+        <a href="/products/magez-card-sleeve" class="text-cyan">MagEZ Card Sleeve (2)</a>.
+      </li>
+      <li class="mt-2">
+        Charge your phones through the case on any Qi wireless chargers and MagSafe chargers.
+      </li>
+    </ul>
+  </div>
+  <div class="content-variant hidden" name="card_sleeve">
+    <ul class="text-sm sm:text-base list-disc list-inside">
+      <li class="mt-2">Attach to the MagEZ Case or MagEZ Case Pro.</li>
+      <li class="mt-2">
+        The magnetic card wallet cannot hold strip cards as there may be a chance of
+        demagnetization.
+      </li>
+      <li class="mt-2">Not compatible with the MagEZ Wallet or MagEZ Wallet UE.</li>
+      <li class="mt-2">Remove the card wallet before wireless charging.</li>
+      <li class="mt-2">Holds two Chip & PIN cards or four business cards.</li>
+      <li class="mt-2">Not waterproof.</li>
+    </ul>
+  </div>
+  {% elsif base_model == 'airpodspro' %}
+  <ul class="text-sm sm:text-base list-disc list-inside">
+    <li class="mt-2">MagEZ Case is compatible with Apple AirPods Pro.</li>
+    <li class="mt-2">Can be charged wirelessly, with a MagSafe charger or with a Lightning cable.</li>
+    <li class="mt-2">Charge using a standard Qi wireless charging pad.</li>
+  </ul>
+  {% elsif base_model == 'airpods3' %}
+  <ul class="text-sm sm:text-base list-disc list-inside">
+    <li class="mt-2">MagEZ Case is compatible with Apple AirPods 3.</li>
+    <li class="mt-2">Can be charged wirelessly, with a MagSafe charger or with a Lightning cable.</li>
+    <li class="mt-2">Charge using a standard Qi wireless charging pad such as the MagEZ Slider.</li>
+  </ul>
+  {% else %}
+
+  {% if base_model == 'p40' %}
+  <ul class="text-sm sm:text-base list-disc list-inside">
+    <li class="mt-2">
+      MagEZ Case for HUAWEI P40 attaches to the 
+      <a href="/products/magez-mount" class="text-cyan">MagEZ Mount</a>.
+    </li>
+    <li class="mt-2">
+      MagEZ Case for HUAWEI P40 Pro is compatible with 
+      <a href="/products/magez-mount" class="text-cyan">MagEZ Mount</a>, 
+      <a href="/products/magez-mount-qi" class="text-cyan">MagEZ Mount Qi</a>, and 
+      <a href="/products/magez-mount-qi-desktop" class="text-cyan">MagEZ Mount Qi Desktop</a>.
+    </li>
+  </ul>
+  {% elsif base_model == 's20' %}
+  <ul class="text-sm sm:text-base list-disc list-inside">
+    <li class="mt-2">
+      MagEZ Case for S20 and S20+ are compatible with MagEZ Juice 2, 
+      <a href="/products/magez-mount" class="text-cyan">MagEZ Mount</a>, 
+      <a href="/products/magez-mount-qi" class="text-cyan">MagEZ Mount Qi</a>, 
+      <a href="/products/magez-mount-qi-desktop" class="text-cyan">MagEZ Mount Qi Desktop</a>, and 
+      <a href="/products/magez-card-sleeve" class="text-cyan">MagEZ Card Sleeve (2)</a>.
+    </li>
+    <li class="mt-2">
+      MagEZ Case for S20 Ultra is compatible with 
+      <a href="/products/magez-mount-qi" class="text-cyan">MagEZ Mount Qi</a> and 
+      <a href="/products/magez-mount-qi-desktop" class="text-cyan">MagEZ Mount Qi Desktop</a>.
+    </li>
+  </ul>
+  {% elsif base_model == 's21' %}
+  <ul class="text-sm sm:text-base list-disc list-inside">
+    <li class="mt-2">
+      MagEZ Case for S21/S21+ is compatible with MagEZ Juice 2, 
+      <a href="/products/magez-mount" class="text-cyan">MagEZ Mount</a>, 
+      <a href="/products/magez-mount-qi" class="text-cyan">MagEZ Mount Qi</a>, and 
+      <a href="/products/magez-mount-qi-desktop" class="text-cyan">MagEZ Mount Qi Desktop</a>.
+    </li>
+    <li class="mt-2">
+      MagEZ Case for S21+ works with <a href="/products/magez-card-sleeve">MagEZ Card Sleeve (2)</a>.
+    </li>
+    <li class="mt-2">
+      MagEZ Case for S21 Ultra is compatible with 
+      <a href="/products/magez-mount" class="text-cyan">MagEZ Mount</a>, 
+      <a href="/products/magez-mount-qi" class="text-cyan">MagEZ Mount Qi</a>, and 
+      <a href="/products/magez-mount-qi-desktop" class="text-cyan">MagEZ Mount Qi Desktop</a>. The phone
+      camera bump interferes with other 
+      <a href="/collections/magez-system" class="text-cyan"  title="Learn More about Our MagEZ System">
+        MagEZ<sup>&reg;</sup> 
+        1.0<sup class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</sup>
+      </a> 
+      chargers and accessories.
+    </li>
+  </ul>
+  {% elsif base_model == 'oneplus8' %}
+  <ul class="text-sm sm:text-base list-disc list-inside">
+    <li class="mt-2">
+      OnePlus 8 Pro can be used with the MagEZ Mount Qi
+      when using the specially designed adapter.
+    </li>
+    <li class="mt-2">
+      OnePlus 8 attaches to the
+      <a href="/products/magez-mount" class="text-cyan">MagEZ Mount</a>.
+    </li>
+  </ul>
+  {% elsif base_model == 'note20' %}
+  <ul class="text-sm sm:text-base list-disc list-inside">
+    <li class="mt-2">
+      MagEZ Case for Note20 is compatible with MagEZ Juice 2, 
+      <a href="/products/magez-mount" class="text-cyan">MagEZ Mount</a>, 
+      <a href="/products/magez-mount-qi" class="text-cyan">MagEZ Mount Qi</a>, 
+      <a href="/products/magez-mount-qi-desktop" class="text-cyan">MagEZ Mount Qi Desktop</a>, and 
+      <a href="/products/magez-card-sleeve" class="text-cyan">MagEZ Card Sleeve (2)</a>.
+    </li>
+    <li class="mt-2">
+      MagEZ Case for Note20 Ultra is compatible with 
+      <a href="/products/magez-mount" class="text-cyan">MagEZ Mount</a>, 
+      <a href="/products/magez-mount-qi" class="text-cyan">MagEZ Mount Qi</a>, and
+      <a href="/products/magez-mount-qi-desktop" class="text-cyan">MagEZ Mount Qi Desktop</a>.
+    </li>
+  </ul>
+  {% else %}
+  <p class="text-sm sm:text-base">
+    Attaches to any
+    <a href="/collections/wireless-chargers" class="text-cyan">MagEZ magnetic charger</a>.
+  </p>
+  {% endif %}
+
+  {% if base_model contains 'magsafe' %}
+  <p class="text-sm sm:text-base">
+    Works with MagSafe chargers and accessories.
+  </p>
+  {% endif %}
+
+{% endif %}
+
+{% elsif base_handle contains 'magez-case-2-for-' %}
+  {% assign base_model = base_handle | split: '-for-' | last | remove: 'samsung-galaxy-' | remove: '-' %}
+  {% if base_model == 'iphone13' %}
+    {% if base_handle contains 'fusion-weaving' %}
+      <ul class="text-sm sm:text-base list-disc list-inside">
+        <li class="mt-2">
+          Charge your phones through the case on any Qi wireless chargers and MagSafe chargers.
+        </li>
+        <li class="mt-2">
+          Magnetically attaches to PITAKA 
+          <a href="/collections/magez-system" class="text-cyan"  title="Learn More about Our MagEZ System">
+            MagEZ<sup>&reg;</sup> 
+            2.0<sup class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</sup>
+          </a> 
+          chargers.
+        </li>
+      </ul>
+
+      <div class="grid grid-cols-2 gap-1 sm:gap-2 mt-6 text-xs sm:text-sm">
+        <div class="col-span-2 mb-2 text-sm sm:text-base">
+          Is the case compatible with the following products?
+        </div>
+        <div class="bg-gray-820 py-4 px-2 sm:px-3">
+          <a href="/collections/car-phone-holders" class="text-white underline">MagEZ Car Mount Pro/Lite</a>
+        </div>
+        <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+      
+        <div class="bg-gray-820 p-4 px-2 sm:px-3">
+          <a href="/products/magez-slider" class="text-white underline">MagEZ Slider</a>
+        </div>
+        <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+      
+        <div class="bg-gray-820 py-4 px-2 sm:px-3">
+          <a href="/products/magez-card-sleeve-3" class="text-white underline">MagEZ Card Sleeve 3</a>
+        </div>
+        <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+        <div class="bg-gray-820 py-4 px-2 sm:px-3">
+          <a href="/products/magez-card-sleeve" class="text-white underline">MagEZ Card Sleeve 2</a>
+        </div>
+        <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+          <span class="block">Yes</span>
+          <span class="block text-xs text-center text-gray-400">
+            (Note that the product slightly covers the camera lens of iPhone 13 mini & Pro.)
+          </span>
+        </div>
+
+        <div class="bg-gray-820 py-4 px-2 sm:px-3">
+          <a href="/collections/magez-wallet-2-series" class="text-white underline">MagEZ Wallet 2 Series</a>
+        </div>
+        <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+          <span class="block">Yes</span>
+          <span class="block text-xs text-center text-gray-400">
+            (Note that the product slightly covers the camera lens of iPhone 13 mini & Pro.)
+          </span>
+        </div>
+
+        <div class="bg-gray-820 py-4 px-2 sm:px-3">
+          MagEZ Mount Qi/MagEZ Mount
+        </div>
+        <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">
+          No
+        </div>
+
+      </div>
+    {% else %}
+      <div class="content-variant" name="iphone_13">
+        <ul class="text-sm sm:text-base list-disc list-inside">
+          <li class="mt-2">
+            Charge your phones through the case on any Qi wireless chargers and MagSafe chargers.
+          </li>
+          <li class="mt-2">
+            Magnetically attaches to PITAKA 
+            <a href="/collections/magez-system" class="text-cyan"  title="Learn More about Our MagEZ System">
+              MagEZ<sup>&reg;</sup> 
+              2.0<sup class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</sup>
+            </a> 
+            chargers.
+          </li>
+        </ul>
+  
+        <div class="grid grid-cols-2 gap-1 sm:gap-2 mt-6 text-xs sm:text-sm">
+          <div class="col-span-2 mb-2 text-sm sm:text-base">
+            Is the case compatible with the following products?
+          </div>
+          <div class="bg-gray-820 py-4 px-2 sm:px-3">
+            <a href="/collections/car-phone-holders" class="text-white underline">MagEZ Car Mount Pro/Lite</a>
+          </div>
+          <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+        
+          <div class="bg-gray-820 py-4 px-2 sm:px-3">
+            <a href="/products/magez-slider" class="text-white underline">MagEZ Slider</a>
+          </div>
+          <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+        
+          <div class="bg-gray-820 py-4 px-2 sm:px-3">
+            <a href="/products/magez-card-sleeve-3" class="text-white underline">MagEZ Card Sleeve 3</a>
+          </div>
+          <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+  
+          <div class="bg-gray-820 py-4 px-2 sm:px-3">
+            <a href="/products/magez-card-sleeve" class="text-white underline">MagEZ Card Sleeve 2</a>
+          </div>
+          <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+            <span class="block">Yes</span>
+            <span class="block text-xs text-center text-gray-400">
+              (Note that the product slightly covers the camera lens of iPhone 13 Pro.)
+            </span>
+          </div>
+  
+          <div class="bg-gray-820 py-4 px-2 sm:px-3">
+            <a href="/collections/magez-wallet-2-series" class="text-white underline">MagEZ Wallet 2 Series</a>
+          </div>
+          <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+            <span class="block">Yes</span>
+            <span class="block text-xs text-center text-gray-400">
+              (Note that the product slightly covers the camera lens of iPhone 13 Pro.)
+            </span>
+          </div>
+  
+          <div class="bg-gray-820 py-4 px-2 sm:px-3">
+            MagEZ Mount Qi/MagEZ Mount
+          </div>
+          <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">
+            No
+          </div>
+  
+        </div>
+      </div>
+      <div class="content-variant hidden" name="card_sleeve">
+        <p class="text-cyan">
+          Work with  
+          <a href="/collections/magez-system" class="text-cyan"  title="Learn More about Our MagEZ System">
+            MagEZ<sup>&reg;</sup> 
+            2.0<sup class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</sup>
+          </a> 
+          System.
+        </p>
+        <ul class="text-sm sm:text-base list-disc list-inside">
+          <li class="mt-2">
+            Compatible with iPhone 12/13 Series with or without a MagSafe Case. 
+          </li>
+          <li class="mt-2">
+            Attaches to MagEZ Case 2 for iPhone 13 Series, New MagEZ Case Pro for iPhone 13 Series, MagEZ Case Pro 2 for iPhone 12 Series, 
+            MagEZ Case 2 for Galaxy S22 series (slightly covers the lens of S22), and MagEZ Case 2 for iPad Pro/Air.
+          </li>
+          <li class="mt-2">
+            Not compatible with the MagEZ Wallet or MagEZ Wallet UE.
+          </li>
+          <li class="mt-2">
+            Cannot be used with Air Case.
+          </li>
+        </ul>
+      </div>
+    {% endif %}
+  {% elsif base_model == 's22' %}
+    <ul class="text-sm sm:text-base list-disc list-inside">
+      <li class="mt-2">
+        Magnetically attaches to PITAKA 
+        <a href="/collections/magez-system" class="text-cyan"  title="Learn More about Our MagEZ System">
+          MagEZ<sup>&reg;</sup> 
+          2.0<sup class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</sup>
+        </a> 
+        chargers.
+      </li>
+    </ul>
+
+    <div class="grid grid-cols-2 gap-1 sm:gap-2 mt-6 text-xs sm:text-sm">
+      <div class="col-span-2 mb-2 text-sm sm:text-base">
+        Is the case compatible with the following products?
+      </div>
+      <div class="bg-gray-820 py-4 px-2 sm:px-3">
+        <a href="/collections/car-phone-holders" class="text-white underline">MagEZ Car Mount Pro/Lite</a>
+      </div>
+      <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+    
+      <div class="bg-gray-820 py-4 px-2 sm:px-3">
+        <a href="/products/magez-slider" class="text-white underline">MagEZ Slider</a>
+      </div>
+      <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+    
+      <div class="bg-gray-820 flex py-4 px-2 sm:px-3">
+        <a href="/products/magez-card-sleeve-3" class="text-white underline">MagEZ Card Sleeve 3</a>
+      </div>
+      <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+        <span class="block">Yes</span>
+        <span class="block text-xs text-center text-gray-400">
+          (Note that the product slightly covers the camera lens of S22.)
+        </span>
+      </div>
+
+      <div class="bg-gray-820 py-4 px-2 sm:px-3">
+        <a href="/products/magez-card-sleeve" class="text-white underline">MagEZ Card Sleeve 2</a>
+      </div>
+      <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+        <span class="block">Yes</span>
+        <span class="block text-xs text-center text-gray-400">
+          (Note that the product slightly covers the camera lens of S22 Series.)
+        </span>
+      </div>
+
+      <div class="bg-gray-820 py-4 px-2 sm:px-3">
+        <a href="/collections/magez-wallet-2-series" class="text-white underline">MagEZ Wallet 2 Series</a>
+      </div>
+      <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+        <span class="block">Yes</span>
+        <span class="block text-xs text-center text-gray-400">
+          (Note that the product slightly covers the camera lens of S22 Series.)
+        </span>
+      </div>
+
+      <div class="bg-gray-820 py-4 px-2 sm:px-3">
+        Samsung's Wireless Charger Pad 2018, Wireless Charger Trio 2021
+      </div>
+      <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">
+        Yes
+      </div>
+
+      <div class="bg-gray-820 py-4 px-2 sm:px-3">
+        Samsung’s Wireless Charger Duo, Fast Charge Wireless Charging Stand (2019)
+      </div>
+      <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">
+        No
+      </div>
+
+      <div class="bg-gray-820 py-4 px-2 sm:px-3">
+        MagEZ Mount Qi/MagEZ Mount
+      </div>
+      <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">
+        No
+      </div>
+    </div>
+  {% endif %}
+
+{% elsif base_handle contains 'magez-case-pro-for-' %}
+  {% assign base_model = base_handle | split: '-for-' | last | remove: '-' %}
+
+  {% if base_model == 'iphone13' %}
+  <ul class="text-sm sm:text-base list-disc list-inside">
+      <li class="mt-2">
+        Charge your phones through the case on any Qi wireless chargers and MagSafe chargers.
+      </li>
+      <li class="mt-2">
+        Magnetically attaches to PITAKA 
+        <a href="/collections/magez-system" class="text-cyan"  title="Learn More about Our MagEZ System">
+          MagEZ<sup>&reg;</sup> 
+          2.0<sup class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</sup>
+        </a> 
+        chargers.
+      </li>
+    </ul>
+
+  <div class="grid grid-cols-2 gap-1 sm:gap-2 mt-6 text-xs sm:text-sm">
+    <div class="col-span-2 mb-2 text-sm sm:text-base">
+      Is the case compatible with the following products?
+    </div>
+    <div class="bg-gray-820 py-4 px-2 sm:px-3">
+      <a href="/collections/car-phone-holders" class="text-white underline">MagEZ Car Mount Pro/Lite</a>
+    </div>
+    <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+    <div class="bg-gray-820 py-4 px-2 sm:px-3">
+      <a href="/products/magez-slider" class="text-white underline">MagEZ Slider</a>
+    </div>
+    <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+    <div class="bg-gray-820 py-4 px-2 sm:px-3">
+      <a href="/products/magez-card-sleeve-3" class="text-white underline">MagEZ Card Sleeve 3</a>
+    </div>
+    <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+    <div class="bg-gray-820 py-4 px-2 sm:px-3">
+      <a href="/products/magez-card-sleeve" class="text-white underline">MagEZ Card Sleeve 2</a>
+    </div>
+    <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+      <span class="block">Yes</span>
+      <span class="block text-xs text-center text-gray-400">
+        (Note that the product slightly covers the camera lens of iPhone 13 Pro.)
+      </span>
+    </div>
+
+    <div class="bg-gray-820 py-4 px-2 sm:px-3">
+      <a href="/collections/magez-wallet-2-series" class="text-white underline">MagEZ Wallet 2 Series</a>
+    </div>
+    <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+      <span class="block">Yes</span>
+      <span class="block text-xs text-center text-gray-400">
+        (Note that the product slightly covers the camera lens of iPhone 13 Pro.)
+      </span>
+    </div>
+
+    <div class="bg-gray-820 py-4 px-2 sm:px-3">
+      MagEZ Mount Qi/MagEZ Mount
+    </div>
+    <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">
+      No
+    </div>
+
+  </div>
+  {% elsif base_model == 'iphone11' or base_model == 'iphonex' or base_model == 'iphonexs'  or base_model == 'iphonese' %}
+  <ul class="text-sm sm:text-base list-disc list-inside">
+    <li class="mt-2">
+      Magnetically attaches to PITAKA 
+      <a href="/collections/magez-system" class="text-cyan"  title="Learn More about Our MagEZ System">
+        MagEZ<sup>&reg;</sup> 
+        1.0<sup class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</sup>
+      </a> 
+     chargers and accessories including MagEZ Juice 2, 
+      <a href="/products/magez-mount" class="text-cyan">MagEZ Mount</a>, 
+      <a href="/products/magez-mount-qi" class="text-cyan">MagEZ Mount Qi</a>, 
+      <a href="/products/magez-mount-qi-desktop" class="text-cyan">MagEZ Mount Qi Desktop</a>, MagEZ Juice 2, and 
+      <a href="/products/magez-card-sleeve" class="text-cyan">MagEZ Card Sleeve (2)</a>.
+    </li>
+    <li class="mt-2">
+      Charge your phones through the case on any Qi wireless chargers and MagSafe chargers.
+    </li>
+  </ul>
+  {% elsif base_model == 'ipadmini6' %}
+  <ul class="text-sm sm:text-base list-disc list-inside">
+    <li class="mt-2">
+      Compatible with Pita!Flow Charger and 
+      <a href="/products/magez-charging-stand" class="text-cyan">MagEZ Charging Stand</a>. 
+    </li>
+    <li class="mt-2">
+      Not compatible with MagEZ Stand and MagEZ Folio.
+    </li>
+  </ul>
+  {% else %}
+  <ul class="text-sm sm:text-base list-disc list-inside">
+    <li class="mt-2">
+      Attaches to any
+      <a href="/collections/wireless-chargers" class="text-cyan">MagEZ magnetic charger</a>.
+    </li>
+    <li class="mt-2">MagEZ Case Pro is not compatible with full-cover curved screen protectors.</li>
+    <li class="mt-2">Not Compatible with MagEZ Mount, MagEZ Mount Qi and MagEZ Mount Qi Desktop.</li>
+  </ul>
+  {% endif %}
+
+{% elsif base_handle contains 'magez-case-pro2-for-iphone-12' %}
+  <ul class="text-sm sm:text-base list-disc list-inside">
+    <li class="mt-2">
+      Charge your phones through the case on any Qi wireless chargers and MagSafe chargers.
+    </li>
+    <li class="mt-2">
+      Magnetically attaches to PITAKA 
+      <a href="/collections/magez-system" class="text-cyan"  title="Learn More about Our MagEZ System">
+        MagEZ<sup>&reg;</sup> 
+        1.0<sup class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</sup>
+      </a> 
+      chargers.
+    </li>
+  </ul>
+  <div class="grid grid-cols-2 gap-1 sm:gap-2 mt-6 text-xs sm:text-sm">
+    <div class="col-span-2 mb-2 text-sm sm:text-base">
+      Is the case compatible with the following products?
+    </div>
+    <div class="bg-gray-820 py-4 px-2 sm:px-3">
+      <a href="/collections/car-phone-holders" class="text-white underline">MagEZ Car Mount Pro/Lite</a>
+    </div>
+    <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+    <div class="bg-gray-820 py-4 px-2 sm:px-3">
+      <a href="/products/magez-slider" class="text-white underline">MagEZ Slider</a>
+    </div>
+    <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+    <div class="bg-gray-820 py-4 px-2 sm:px-3">
+      <a href="/products/magez-card-sleeve-3" class="text-white underline">MagEZ Card Sleeve 3</a>
+    </div>
+    <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+    <div class="bg-gray-820 py-4 px-2 sm:px-3">
+      <a href="/products/magez-card-sleeve" class="text-white underline">MagEZ Card Sleeve 2</a>
+    </div>
+    <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">
+      Yes
+    </div>
+
+    <div class="bg-gray-820 py-4 px-2 sm:px-3">
+      <a href="/collections/magez-wallet-2-series" class="text-white underline">MagEZ Wallet 2 Series</a>
+    </div>
+    <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+      Yes
+    </div>
+
+    <div class="bg-gray-820 py-4 px-2 sm:px-3">
+      <a href="/collections/car-phone-holders" class="text-white underline">MagEZ Mount Qi/MagEZ Mount</a>
+    </div>
+    <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">
+      Yes
+    </div>
+
+  </div>
+
+{% elsif base_handle contains 'magez-case-pro2-for-' %}
+  <ul class="text-sm sm:text-base list-disc list-inside">
+    <li class="mt-2">
+      Attaches to any
+      <a href="/collections/wireless-chargers" class="text-cyan">MagEZ magnetic charger</a>.
+    </li>
+    <li class="mt-2">Compatible with MagSafe Chargers.</li>
+    <li class="mt-2">
+      Compatible with 
+      <a href="/products/magez-card-sleeve">MagEZ Card Sleeve (2)</a>.
+    </li>
+  </ul>
+
+{% elsif base_handle contains 'air-case-for-' %}
+  {% assign base_model = base_handle | remove: 'air-case-for-' 
+      | remove: 'samsung-galaxy-' | replace: '-','' %}
+
+  {% if base_model == 'applewatch' %}
+  <ul class="text-sm sm:text-base list-disc list-inside">
+    <li class="mt-2">
+      Use with the Apple Watch Series SE/6/5/4.
+    </li>
+    <li class="mt-2">
+      Only compatible with a screen protector that is  0.2mm or thinner.
+    </li>
+  </ul>
+  {% elsif base_model == 'iphone13' %}
+  <ul class="text-sm sm:text-base list-disc list-inside">
+    <li class="mt-2">
+      Charge your iPhone 13 using a standard
+      <a href="/collections/wireless-chargers" class="text-cyan">wireless charger</a>, including MagSafe.
+    </li>
+    <li class="mt-2">
+      Not compatible with our magnetic MagEZ Series chargers or MagSafe accessories.
+    </li>
+  </ul>
+  {% elsif base_model == 'applewatchseries7' %}
+  <ul class="text-sm sm:text-base list-disc list-inside">
+    <li class="mt-2">
+      Use with the Apple Watch Series 7.
+    </li>
+    <li class="mt-2">
+      Only compatible with a soft screen protector that is 0.2mm or thinner.
+    </li>
+  </ul>
+  {% elsif base_model == 's22' %}
+  <ul class="text-sm sm:text-base list-disc list-inside">
+    <li class="mt-2">
+      Charge with any Qi wireless charger but do note that it can't mount or snap to PITAKA magnetic MagEZ Series chargers.
+    </li>
+  </ul>
+  {% else %}
+  <p class="text-sm sm:text-base">
+    Charge with any <a href="/collections/wireless-chargers" class="text-cyan">wireless charger</a>;
+    but can’t mount or snap to our magnetic MagEZ Series chargers.
+  </p>
+{% endif %}
+
+{% endif %}
+
+
+{% case base_handle %}
+
+{% when 'air-pal' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">Air Pal Case is compatible with Apple AirPods 1&2.</li>
+  <li class="mt-2">Can be charged wirelessly or with the Type-C cable included.</li>
+  <li class="mt-2">Use the emergency battery to charge your mobile device.</li>
+</ul>
+
+
+{% when 'air-pal-mini' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">Air Pal Mini Case is compatible with Apple AirPods 1&2.</li>
+  <li class="mt-2">Can be charged wirelessly.</li>
+</ul>
+
+
+{% when 'air-pal-mini-for-airpods-pro' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">Air Pal Mini Case is compatible with Apple AirPods Pro.</li>
+  <li class="mt-2">Can be charged wirelessly or with a Lightning cable.</li>
+</ul>
+
+{% when 'air-pal-shells-for-airpods-max' %}
+<p class="text-sm sm:text-base">Fits AirPods Max.</p>
+
+{% when 'air-omni' or 'air-omni-lite' %}
+
+<p class="text-sm sm:text-base font-semibold">
+  Wireless Charging Pad
+</p>
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">All Qi-enable Devices.</li>
+  <li class="mt-2">Apple AirPods with wireless charging case and Samsung Galaxy Buds.</li>
+</ul>
+
+<p class="text-sm sm:text-base mt-4 font-semibold">
+  Earbuds Charging Pad
+</p>
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">Apple AirPods with wireless charging case.</li>
+  <li class="mt-2">Samsung Galaxy Buds.</li>
+  <li class="mt-2">Powerbeats Pro Charging Case.</li>
+</ul>
+
+<p class="text-sm sm:text-base mt-4 font-semibold">
+  Apple Watch Charging Mount
+</p>
+<ul class="text-sm sm:text-base list-disc list-inside">
+  {% if base_handle == 'air-omni' %}
+  <li class="mt-2">Series 7/SE/6/5/4/3/2&1 (Ceramic, Titanium, Steel, Aluminum, Sport, and Nike versions).</li>
+  {% else %}
+  <li class="mt-2">Compatible with original Apple watch charger (USB A).</li>
+  {% endif %}
+</ul>
+
+<p class="text-sm sm:text-base mt-4 font-semibold">
+  Lightning & Type-C Toggle
+</p>
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">All devices using Lightning or Type-C charging.</li>
+</ul>
+
+<p class="text-sm sm:text-base mt-4 font-semibold">
+  Type-C Charging Port
+</p>
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">All Type-C Charging Devices.</li>
+</ul>
+
+<p class="text-sm sm:text-base mt-4 font-semibold">
+  Type-A Charging Port
+</p>
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">All Type-A Charging Devices.</li>
+</ul>
+
+<p class="text-sm sm:text-base mt-4">
+  The Lightning & Type-C Toggle should not be used if the device is upside down.
+</p>
+
+{% when 'air-essential' or 'air-tray' %}
+<p class="text-sm sm:text-base font-bold mb-2">
+  Charges all Qi-Enabled Mobiles and Earbuds.
+</p>
+
+{% when 'magez-juice' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">Works with the MagEZ Case and MagEZ Case Pro.</li>
+  <li class="mt-2">
+    Charges all Qi-Enabled Mobiles (except HUAWEI P40 Pro, OnePlus 8 Pro, Samsung Galaxy S21 Ultra, Samsung S20
+    Ultra and Samsung Galaxy Note20 Ultra).
+  </li>
+  <li class="mt-2">The power bank can also be charged using a Type-C cable.</li>
+</ul>
+
+{% when 'magez-juice-2' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Works with both 
+    <a href="/collections/magez-system" class="text-cyan"  title="Learn More about Our MagEZ System">
+      MagEZ<sup>&reg;</sup> 1.0 and 2.0
+    </a> 
+    cases, but some phone models with large camera bumps may interfere with magnetic connection and charging.
+  </li>
+</ul>
+{% when 'magez-bar' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Charges all Qi-Enabled mobiles using a MagEZ Case or MagEZ Case Pro or metal stickers provided.
+  </li>
+  <li class="mt-2">
+    Charges AirPods 2 and AirPods Pro.
+  </li>
+  <li class="mt-2">
+    Can attach the <a href="/products/magez-wallet" class="text-cyan">MagEZ Wallet</a>, 
+    MagEZ Wallet UE and AirPals for AirPods Case.
+  </li>
+  <li class="mt-2">
+    Can attach any magnetic items to the non-charging side (keys etc).
+  </li>
+</ul>
+
+{% when 'magez-mount-qi' %}
+<p class="text-sm sm:text-base mt-2">
+  Work with 
+  <a href="/collections/magez-system" class="text-cyan"  title="Learn More about Our MagEZ System">
+    MagEZ<sup>&reg;</sup> 
+    1.0<sup class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</sup>
+  </a> 
+  System.
+</p>
+
+<div class="grid grid-cols-2 gap-1 sm:gap-2 mt-6 text-xs sm:text-sm">
+  <div class="col-span-2 mb-2 text-center text-sm sm:text-base">
+    MagEZ Case Compatible
+  </div>
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    <a href="/products/magez-case-for-iphone-12" class="text-white underline">
+      MagEZ Case for iPhone 12 series
+    </a> and older models
+  </div>
+  <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    <a href="/products/magez-case-pro2-for-iphone-12" class="text-white underline">
+      MagEZ Case Pro 2 for iPhone 12 Series
+    </a>
+  </div>
+  <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    MagEZ Case for Android phones
+  </div>
+  <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    New MagEZ Case Pro for iPhone 13 Series
+  </div>
+  <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+    No
+  </div>
+
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    MagEZ Case 2 for iPhone 13 Series
+  </div>
+  <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+    No
+  </div>
+  
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    MagEZ Case 2 for Galaxy S22 Series
+  </div>
+  <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+    No
+  </div>
+
+</div>
+
+<p class="text-sm text-cyan mt-2">
+  Note: A form-fitting adapter is required for Samsung Galaxy S21 & S21 Ultra, Samsung Galaxy Note20 Ultra, 
+  Samsung Galaxy S20 Ultra, HUAWEI P40 Pro, and OnePlus 8 Pro to mount to the charger.
+</p>
+
+
+{% when 'magez-mount-qi-desktop' %}
+<p class="text-sm sm:text-base mt-2">
+  Work with 
+  <a href="/collections/magez-system" class="text-cyan"  title="Learn More about Our MagEZ System">
+    MagEZ<sup>&reg;</sup> 
+    1.0<sup class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</sup>
+  </a> 
+  System.
+</p>
+
+<div class="grid grid-cols-2 gap-1 sm:gap-2 mt-6 text-xs sm:text-sm">
+  <div class="col-span-2 mb-2 text-center text-sm sm:text-base">
+    MagEZ Case Compatible
+  </div>
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    <a href="/products/magez-case-for-iphone-12" class="text-white underline">
+      MagEZ Case for iPhone 12 series
+    </a> and older models
+  </div>
+  <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    <a href="/products/magez-case-pro2-for-iphone-12" class="text-white underline">
+      MagEZ Case Pro 2 for iPhone 12 Series
+    </a>
+  </div>
+  <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    MagEZ Case for Android phones
+  </div>
+  <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    New MagEZ Case Pro for iPhone 13 Series
+  </div>
+  <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+    No
+  </div>
+
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    MagEZ Case 2 for iPhone 13 Series
+  </div>
+  <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+    No
+  </div>
+  
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    MagEZ Case 2 for Galaxy S22 Series
+  </div>
+  <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+    No
+  </div>
+
+</div>
+
+<p class="text-sm text-cyan mt-2">
+  Note: A form-fitting adapter is required for Samsung Galaxy S21 & S21 Ultra, Samsung Galaxy Note20 Ultra, 
+  Samsung Galaxy S20 Ultra, HUAWEI P40 Pro, and OnePlus 8 Pro to mount to the charger.
+</p>
+
+{% when 'magez-mount' %}
+<p class="text-sm sm:text-base mt-2">
+  Work with 
+  <a href="/collections/magez-system" class="text-cyan"  title="Learn More about Our MagEZ System">
+    MagEZ<sup>&reg;</sup> 
+    1.0<sup class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</sup>
+  </a> 
+  System.
+</p>
+
+<div class="grid grid-cols-2 gap-1 sm:gap-2 mt-6 text-xs sm:text-sm">
+  <div class="col-span-2 mb-2 text-center text-sm sm:text-base">
+    MagEZ Case Compatible
+  </div>
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    <a href="/products/magez-case-for-iphone-12" class="text-white underline">
+      MagEZ Case for iPhone 12 series
+    </a> and older models
+  </div>
+  <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    <a href="/products/magez-case-pro2-for-iphone-12" class="text-white underline">
+      MagEZ Case Pro 2 for iPhone 12 Series
+    </a>
+  </div>
+  <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    MagEZ Case for Android phones
+  </div>
+  <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    New MagEZ Case Pro for iPhone 13 Series
+  </div>
+  <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+    No
+  </div>
+
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    MagEZ Case 2 for iPhone 13 Series
+  </div>
+  <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+    No
+  </div>
+  
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    MagEZ Case 2 for Galaxy S22 Series
+  </div>
+  <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+    No
+  </div>
+
+</div>
+
+<p class="text-sm text-cyan mt-2">
+  Note: A form-fitting adapter is required for Samsung Galaxy S21 & S21 Ultra, Samsung Galaxy Note20 Ultra, 
+  Samsung Galaxy S20 Ultra, HUAWEI P40 Pro, and OnePlus 8 Pro to mount to the charger.
+</p>
+
+{% when 'magez-car-mount-pro' or 'magez-car-mount-lite' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    If your phone does not support MagSafe or you don’t have a MagSafe case, 
+    {% if base_handle == 'magez-car-mount-pro' %}
+    <a class="underline" href="/products/magez-mount-qi">click here</a>.
+    {% else %} 
+    <a class="underline" href="/products/magez-mount">click here</a>.
+    {% endif %}
+  </li>
+  <li class="mt-2">
+    Works with Apple MagSafe cases and third-party MagSafe cases. 
+    But note that the magnetic attraction varies depending on the material the case is made from.
+  </li>
+  <li class="mt-2">
+    Work with 
+    <a href="/collections/magez-system" class="text-cyan"  title="Learn More about Our MagEZ System">
+      MagEZ<sup>&reg;</sup> 
+      1.0<sup class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</sup>
+    </a> 
+    System.
+  </li>
+</ul>
+
+<div class="grid grid-cols-2 gap-1 sm:gap-2 mt-6 text-xs sm:text-sm">
+  <div class="col-span-2 mb-2 text-center text-sm sm:text-base">
+    MagEZ Case Compatible
+  </div>
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    <a href="/products/new-magez-case-pro-for-iphone-13" class="text-white underline">
+      New MagEZ Case Pro for iPhone 13 Series
+    </a>
+  </div>
+  <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    <a href="/products/magez-case-2-for-iphone-13" class="text-white underline">
+      MagEZ Case 2 for iPhone 13 Series
+    </a>
+  </div>
+  <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    <a href="/products/magez-case-2-for-samsung-galaxy-s22" class="text-white underline">
+      MagEZ Case 2 for Galaxy S22 Series
+    </a>
+  </div>
+  <div class="bg-gray-750 flex items-center justify-center py-4 px-2 sm:px-3">Yes</div>
+
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    <a href="/products/magez-case-pro-2-for-iphone-12" class="text-white underline">
+      MagEZ Case Pro 2 for iPhone 12 Series
+    </a>
+  </div>
+  <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+    Yes
+  </div>
+
+  <div class="bg-gray-820 py-4 px-2 sm:px-3">
+    MagEZ Case for iPhone 12 Series and old models
+  </div>
+  <div class="bg-gray-750 flex flex-wrap items-center justify-center py-4 px-2 sm:px-3">
+    No
+  </div>
+
+</div>
+
+{% when 'smart-car-charger-adapter' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">All Type-A and Type-C devices.</li>
+  <li class="mt-2">Supports PD2.0 + QC3.0.</li>
+  <li class="mt-2">
+    Support fast charging for
+    <a href="/products/magez-mount-qi" class="text-cyan">MagEZ Mount Qi</a>.
+  </li>
+</ul>
+
+
+{% when 'tempered-glass' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">Compatible with iPhone XS Max/XR/11/11 Pro Max.</li>
+  <li class="mt-2">Compatible with iPhone 12/12 Pro.</li>
+</ul>
+
+{% when 'c-to-c-charging-cable' %}
+<p class="text-sm sm:text-base">
+  Compatible with all Type-C devices.
+</p>
+
+{% when 'magez-card-sleeve' %}
+<p class="text-cyan">
+  Work with 
+  <a href="/collections/magez-system" class="text-cyan"  title="Learn More about Our MagEZ System">
+    MagEZ<sup>&reg;</sup> 
+    2.0<sup class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</sup>
+  </a> 
+  System.
+</p>
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Compatible with MagEZ Case 1.0&2.0 Series, and other MagSafe compatible phone cases.
+  </li>
+  <li class="mt-2">
+  	Slightly covers the camera lens of iPhone 13 mini, iPhone 13 Pro, and Galaxy S22 Series.</li>
+  <li class="mt-2">
+    Can hold both Chip & PIN and magnetic stripe cards.
+  </li>
+  <li class="mt-2">Not compatible with the MagEZ Wallet or MagEZ Wallet UE.</li>
+  <li class="mt-2">
+    Cannot be used with Air Case.
+  </li>
+  <li class="mt-2">Remove the card wallet before wireless charging.</li>
+  <li class="mt-2">
+    Holds two credit cards or four business cards.
+  </li>
+  <li class="mt-2">Not waterproof.</li>
+</ul>
+
+{% when 'magez-card-sleeve-3' %}
+<p class="text-cyan">
+  Work with 
+  <a href="/collections/magez-system" class="text-cyan"  title="Learn More about Our MagEZ System">
+    MagEZ<sup>&reg;</sup> 
+    2.0<sup class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</sup>
+  </a> 
+  System.
+</p>
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Compatible with iPhone 12/13 Series with or without a MagSafe Case. 
+  </li>
+  <li class="mt-2">
+    Attaches to MagEZ Case 2 for iPhone 13 Series, New MagEZ Case Pro for iPhone 13 Series, MagEZ Case Pro 2 for iPhone 12 Series, 
+    MagEZ Case 2 for Galaxy S22 series (slightly covers the lens of S22), and MagEZ Case 2 for iPad Pro/Air.
+  </li>
+  <li class="mt-2">
+    Not compatible with the MagEZ Wallet or MagEZ Wallet UE.
+  </li>
+  <li class="mt-2">
+  	Cannot be used with Air Case.
+  </li>
+</ul>
+
+
+{% when 'carbon-fiber-watch-band' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Compatible with Apple Watch Series 7-1 & SE of different case sizes including 38/40/41mm, 42/44/45mm.
+  </li>
+  <li class="mt-2">
+    Seawater may cause stainless steel pins to erode over time.
+  </li>
+  <li class="mt-2">
+    Modern fits a wrist size of up to 8.1in/205mm with extra links (not including Apple Watch).
+  </li>
+  <li class="mt-2">
+    Retro fits a wrist size of up to 7.5in/190mm with extra links (not including Apple Watch).
+  </li>
+</ul>
+
+
+{% when 'magez-wallet-ue' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    To ensure your strip cards are not demagnetized, they MUST be placed inside the degaussing module.
+  </li>
+  <li class="mt-2">
+    Not placing your strip cards inside the degaussing module may cause damage and data loss to those cards.
+  </li>
+  <li class="mt-2">
+    Add card, box, and money clip layers to the MagEZ Wallet UE.
+  </li>
+
+  <li class="mt-2">
+    Attaches to the
+    <a href="/products/magez-mount" class="text-cyan">MagEZ Mount</a>
+    and MagEZ Bar.
+  </li>
+  <li class="mt-2">
+    When not using the degaussing module, the layer can be replaced with an extra cover.
+  </li>
+</ul>
+
+{% when 'magez-wallet' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Add card, box, and money clip layers to the MagEZ Wallet.
+  </li>
+  <li class="mt-2">
+    MagEZ Wallet layers are only compatible with the standard MagEZ Wallet.
+  </li>
+  <li class="mt-2">
+    Attaches to the
+    <a href="/products/magez-mount" class="text-cyan">MagEZ Mount</a>
+    and MagEZ Bar.
+  </li>
+</ul>
+
+{% when 'magez-wallet-2' %}
+<p class="text-cyan">
+  Work with 
+  <a href="/collections/magez-system" class="text-cyan"  title="Learn More about Our MagEZ System">
+    MagEZ<sup>&reg;</sup> 
+    2.0<sup class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</sup>
+  </a> 
+  System.
+</p>
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Not compatible with magnetic strip cards. For a magnetic strip card compatible wallet, see
+    <a class="underline" href="/collections/magez-wallet-2-pro">MagEZ Wallet 2 Pro</a>.
+  </li>
+  <li class="mt-2">
+    Attach to PITAKA <a class="underline" href="/collections/magez-case-pro2-for-iphone-12">MagEZ Case Pro 2</a>,
+    <a class="underline" href="/collections/magez-case-2-for-iphone-13">MagEZ Case 2</a>,
+    <a class="underline" href="/collections/new-magez-case-pro-for-iphone-13">New MagEZ Case Pro</a> or other MagSafe
+    Cases.
+  </li>
+  <li class="mt-2">
+    Attach to MagEZ Wallet 2, Wallet 2 Pro, Tech Kit, Extra Layer, Box Layer, Tech Module, and Money Clip.
+  </li>
+  <li class="mt-2">
+    MagEZ Wallet 2 layers are not compatible with MagEZ Wallet UE.
+  </li>
+  <li class="mt-2">
+    MagEZ Wallet 2/2 Pro covers the camera lens of iPhone 13 mini/13 Pro, Galaxy S22 Series, iPhone 12 mini, and HUAWEI P40 Pro.
+  </li>
+</ul>
+
+
+{% when 'magez-wallet-2-pro' %}
+<p class="text-cyan">
+  Work with 
+  <a href="/collections/magez-system" class="text-cyan"  title="Learn More about Our MagEZ System">
+    MagEZ<sup>&reg;</sup> 
+    2.0<sup class="inline-block bg-gray-750 rounded-full w-4 h-4 text-center text-xs text-gray-400">?</sup>
+  </a> 
+  System.
+</p>
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Attach to PITAKA
+    <a class="underline" href="/collections/magez-case-pro2-for-iphone-12">MagEZ Case Pro 2</a>,
+    <a class="underline" href="/collections/magez-case-2-for-iphone-13">MagEZ Case 2</a>,
+    <a class="underline" href="/collections/new-magez-case-pro-for-iphone-13">New MagEZ Case Pro</a>
+    or other MagSafe Cases.
+  </li>
+  <li class="mt-2">
+    MagEZ Wallet 2/2 Pro covers the camera lens of iPhone 13 mini/13 Pro, Galaxy S22 Series, iPhone 12 mini, and HUAWEI P40 Pro.
+  </li>
+  <li class="mt-2">
+    Attach to MagEZ Wallet 2, Wallet 2 Pro, Tech Kit, Extra Layer, Box Layer, Tech Module, and Money Clip.
+  </li>
+  <li class="mt-2">
+    MagEZ Wallet 2 Pro layers are not compatible with MagEZ Wallet UE.
+  </li>
+</ul>
+
+
+{% when 'magez-tech-kit' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Attach to MagEZ or MagSafe Cases with built-in magnets.
+  </li>
+  <li class="mt-2">
+    Attach to <a href="/products/magez-wallet" class="text-cyan">MagEZ Wallet</a>, 
+    MagEZ Wallet 2, Wallet 2 Pro, Extra Layer, Box Layer, Tech Module, and Money Clip.
+  </li>
+  <li class="mt-2">
+    Memory card reader supports MicroSD (TF), SDHC, and SDXC flash memory cards.
+  </li>
+  <li class="mt-2">
+    Card module is not compatible with magnetic strip cards, as demagnetization may occur.
+  </li>
+  <li class="mt-2">
+    Not compatible with MagEZ Case for iPhone 12 models, Galaxy S21, S21U, S20U, Note 20U, OnePlus 8 Pro, or P40
+    Pro.
+  </li>
+  <li class="mt-2">
+    Not compatible with magnetic strip cards. For a magnetic strip card compatible wallet, see MagEZ Wallet 2 Pro.
+  </li>
+</ul>
+
+{% when 'magez-digital-travel-kit' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Compatible with <a href="/products/magez-wallet" class="text-cyan">MagEZ Wallet</a> layers, including money clip, coin box, and card module.
+  </li>
+  <li class="mt-2">
+    Compatible with MagEZ Power Bank.
+  </li>
+  <li class="mt-2">
+    Memory card reader supports MicroSD (TF), SDHC, and SDXC flash memory cards.
+  </li>
+  <li class="mt-2">
+    Card module is not compatible with magnetic strip cards, as demagnetization may occur.
+  </li>
+</ul>
+
+
+{% when 'magez-power-bank' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Compatible with MagEZ Digital Travel Kit, 
+    <a href="/products/magez-wallet" class="text-cyan">MagEZ Wallet</a> layers, 
+    including money clip, coin box, and card module.
+  </li>
+  <li class="mt-2">
+    Attaches magnetically to MagEZ Cases, MagEZ Case Pro, and iPhone 12 (with or without a case).
+  </li>
+  <li class="mt-2">
+    The MagEZ Power Bank module requires a Type-C cable for in and output.
+  </li>
+  <li class="mt-2">
+    Cannot magnetically attach to MagEZ Case for <span class="text-cyan">Galaxy S20U, Note20U, S21U, HUAWEI P40, or P40
+      Pro</span>.
+  </li>
+</ul>
+
+{% when 'magez-wireless-charging-kit' %}
+<p class="font-semibold">MagEZ Mount Qi</p>
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Works with the MagEZ Case and MagEZ Case Pro.
+  </li>
+  <li class="mt-2">
+    Charges all Qi-Enabled Mobiles using a MagEZ Case/MagEZ Case Pro except the
+    Samsung Galaxy S21 & S21 Ultra,
+    Samsung Galaxy Note20 Ultra,
+    HUAWEI P40 Pro,
+    Samsung S20 Ultra, and
+    OnePlus 8 Pro
+    require an additional adapter.
+  </li>
+</ul>
+
+<p class="mt-4 font-semibold">MagEZ Case</p>
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Attaches to any
+    <a href="/collections/wireless-chargers?t=home-office" class="text-cyan">MagEZ magnetic charger</a>.
+  </li>
+</ul>
+<p class="mt-4 font-semibold">USB Cable</p>
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Type A to Type C Cable.
+  </li>
+</ul>
+
+
+{% when 'magez-folio' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Works with MagEZ Case 2 for iPad Pro 2021/2020/2018 and iPad Air 2020/2022.
+  </li>
+  <li class="mt-2">
+    Attaches to iPad Pro 2021/2020/2018 and iPad Air 2020/2022 without a case.
+  </li>
+</ul>
+
+{% when 'magez-charging-stand' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Works with the iPad mini 6 equipped with MagEZ Case Pro.
+  </li>
+  <li class="mt-2">
+    The charging base is suitable for all Qi-enabled devices.
+  </li>
+</ul>
+
+{% when 'magez-stand-marble-version' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Compatible with all tablets no more than 1kg (2.2lbs) using the metal sticker.
+    If using a case, the metal sticker must be attached to the outside of the case.
+  </li>
+  <li class="mt-2">
+    Works best with the MagEZ Case 2 for iPad Pro 2021/2020/2018 and iPad Air 2020/2022 (no metal sticker necessary).
+  </li>
+  <li class="mt-2">
+    Not compatible with MagEZ Case for iPad Pro 2020/2018 or iPad Air 2020/2022 without a sticker.
+  </li>
+</ul>
+
+{% when 'magez-stand' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Compatible with all tablets using the metal sticker. If using a case, the metal sticker must be attached to the
+    outside of the case.
+  </li>
+  <li class="mt-2">
+    Attach a MagEZ Case 2 for iPad Pro 2021/2020/2018 or iPad Air 2020/2022 (no metal sticker necessary).
+  </li>
+  <li class="mt-2">
+    Not compatible with MagEZ Case for iPad Pro 2021/2020/2018 or iPad Air 2020/2022 without a metal sticker.
+  </li>
+  <li class="mt-2">
+    Wireless charge any Qi-enabled device (iPhone 7.5W/Android up to 15W/earbuds 5W).
+  </li>
+</ul>
+
+{% when 'magez-case-2-for-ipad-pro-2021' or 'magez-case-2-for-ipad-pro-2020-and-2018' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Compatible with the Apple Magic Keyboard and Smart Keyboard Folio.
+  </li>
+  <li class="mt-2">
+    Attach to <a href="/products/magez-stand" class="text-cyan">MagEZ Stand</a> and 
+    <a href="/products/magez-folio">MagEZ Folio</a>.
+  </li>
+  <li class="mt-2">
+    Attach the <a href="/products/magez-card-sleeve">MagEZ Card Sleeve (2)</a> to store cards on the go.
+  </li>
+  <li class="mt-2">
+    Not compatible with any Apple Pencil skin or cover.
+  </li>
+</ul>
+
+{% when 'power-dongle-for-apple-watch' %}
+<ul class="text-sm sm:text-base list-disc list-inside">
+  <li class="mt-2">
+    Compatible with all Apple Watch models.
+  </li>
+  <li class="mt-2">
+    Plug into any USB-C port to charge your Apple Watch.
+  </li>
+</ul>
+
+{% when 'magez-slider' %}
+<ul class="text-sm sm:text-base list-decimal list-inside">
+  <li class="mt-2">
+    <span class="font-bold">Phone charging: </span>
+    Compatible with iPhone 12 series & iPhone 13 series without a case or with a MagSafe case and Samsung Galaxy S22 Series with a MagEZ Case 2.
+  </li>
+  <li class="mt-2">
+    <span class="font-bold">Earbuds charging: </span>
+    Charges Qi wireless charging earbuds including AirPods, Samsung Galaxy Buds R170 and Galaxy Buds Pro R190.
+  </li>
+  <li class="mt-2">
+    <span class="font-bold">Power Dongle (sold separately; scroll down to add to cart): </span>
+    Charges all Apple Watch models.
+  </li>
+</ul>
+
+{% endcase %}

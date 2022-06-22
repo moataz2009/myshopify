@@ -1,0 +1,256 @@
+{%- comment -%}容器尺寸(初始占10格){%- endcomment -%}
+{% assign wClass = 'w-full md:w-11/12 lg:w-10/12 max-w-screen-xl mx-auto' %}
+{%- comment -%}容器内边距{%- endcomment -%}
+{% assign pdClass = 'px-3 sm:px-6 md:px-0 py-16 sm:py-20 lg:py-28 xl:py-32' %}
+{%- comment -%}容器内边距顶部{%- endcomment -%}
+{% assign pdClass_t = 'pt-16 sm:pt-20 lg:pt-28 xl:pt-32' %}
+{%- comment -%}主标题h1样式{%- endcomment -%}
+{% assign titleClass = 'text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 lg:mb-8' %}
+{%- comment -%}正文p粗体样式{%- endcomment -%}
+{% assign subTitleClass = 'text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold opacity-60' %}
+{%- comment -%}正文p尺寸{%- endcomment -%}
+{% assign descSize = 'text-base sm:text-lg lg:text-xl xl:text-2xl' %}
+{%- comment -%}正文p小尺寸{%- endcomment -%}
+{% assign subDescSize = 'text-xs sm:text-sm lg:text-base' %}
+
+{% assign pageAlt = 'PITAKA ASI' %}
+
+
+<div class="page_asi-container">
+  <div class="section-hero relative">
+    <div class="{{wClass}} h-full absolute left-1/2 transform -translate-x-1/2 flex items-center">
+      <div class="w-full sm:w-5/9 xl:w-2/5 px-6 mx-auto sm:mx-0 text-center sm:text-left">
+        <h1 class="{{titleClass}}">
+          PITAKA ASI Program
+        </h1>
+        <p class="{{descSize}}">
+          Your long-term company is the biggest driver of our sustainability efforts through innovation.
+        </p>
+      </div>
+    </div>
+    <picture>
+      <source data-srcset="{{'page-asi-hero.webp' | asset_url}}" media="(min-width: 768px)">
+      <img data-src="{{ placeholder_gif }}" src="{{'page-asi-hero-s.webp' | asset_url}}" alt="{{pageAlt}}"
+        class="block w-full lg:h-full object-cover lazyload">
+    </picture>
+  </div>
+
+  <div class="{{pdClass}}">
+    <div class="w-full sm:w-2/3 lg:w-3/5 xl:w-1/2 mx-auto max-w-2xl">
+      <h3 class="{{titleClass}} uppercase">
+        What is ASI Program?
+      </h3>
+      <p class="{{subTitleClass}}">
+        PITAKA Accompany Small Innovators (ASI) Program aims to gather people as enthusiastic as us about innovation and
+        willing to support PITAKA with dedicated design work. With this program, we'd love to bring our loyal customers
+        the best experience while staying innovative.
+      </p>
+    </div>
+  </div>
+
+  <div class="{{pdClass}} bg-gray-800">
+    <div class="{{wClass}}">
+      <div class="flex flex-col sm:flex-row justify-between items-stretch">
+        <div class="w-full sm:w-3/5">
+          <picture>
+            <source data-srcset="{{'page-asi-section3.webp' | asset_url}}" media="(min-width: 768px)">
+            <img data-src="{{ placeholder_gif }}" src="{{'page-asi-section3-s.webp' | asset_url}}" alt="{{pageAlt}}"
+              class="block w-full h-full object-cover lazyload">
+          </picture>
+        </div>
+
+        <div class="w-full sm:w-2/5 sm:pl-12 pt-12 sm:pt-0">
+          <h3 class="{{titleClass}} uppercase">
+            Why do we start this program?
+          </h3>
+          <p class="text-sm sm:text-base xl:text-lg">
+            Creating something different means high investment, a new supply chain, numerous trials and failures,
+            production capacity shortage at the launching stage, etc.
+          </p>
+        </div>
+      </div>
+
+      <div class="w-full sm:w-4/5 xl:w-3/5 mx-auto max-w-2xl {{pdClass_t}}">
+        <p class="{{subTitleClass}}">
+          Therefore, your patience and trust in our innovation are very important. We want to draw strength from your
+          support and return with our best work and service.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="{{wClass}} {{pdClass}}">
+    <div class="flex flex-col sm:flex-row justify-between">
+      <div class="w-full sm:w-3/5">
+        <h3 class="{{titleClass}} uppercase sm:max-w-xs lg:max-w-md xl:max-w-lg">
+          What benefits can ASI Members enjoy?
+        </h3>
+      </div>
+      <div class="w-full sm:w-2/5 xl:w-3/10">
+        <p class="{{subDescSize}} xl:text-lg">
+          The ASI members are always at the forefront of our product development and are our partners in making something
+          brilliant together.
+        </p>
+      </div>
+
+      <div class="hidden xl:block xl:w-1/10">
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-6 sm:flex flex-wrap lg:flex-nowrap justify-between items-stretch my-12 sm:my-16 lg:-mx-4 xl:mx-0">
+      <div class="w-full sm:w-4/9 lg:w-1/4 xl:w-1/5 lg:mx-4 xl:mx-0 mb-6 lg:mb-0 py-6 border-b border-white border-opacity-60">
+        <div class="flex items-center mb-4">
+          {{'page-asi-section4-icon-1.svg' | asset_url | img_tag:'','block h-10 w-10 sm:h-12 sm:w-12 lg:w-14 lg:h-14 object-contain object-center'}}
+          <h4 class="{{descSize}} font-bold ml-3">
+            Premium<br>
+            Support
+          </h4>
+        </div>
+        <p class="{{subDescSize}}">
+          Enjoy faster and more efficient responses to questions or orders from our dedicated team.
+        </p>
+      </div>
+      <div class="w-full sm:w-4/9 lg:w-1/4 xl:w-1/5 lg:mx-4 xl:mx-0 mb-6 lg:mb-0 py-6 border-b border-white border-opacity-60">
+        <div class="flex items-center mb-4">
+          {{'page-asi-section4-icon-2.svg' | asset_url | img_tag:'','block h-10 w-10 sm:h-12 sm:w-12 lg:w-14 lg:h-14 object-contain object-center'}}
+          <h4 class="{{descSize}} font-bold ml-3">
+            Purchase<br>
+            Privilege
+          </h4>
+        </div>
+        <p class="{{subDescSize}}">
+          Get the priority to purchase some new-released or limited-edition products or products that are exclusive to the
+          ASI Members Only.
+        </p>
+      </div>
+      <div class="w-full sm:w-4/9 lg:w-1/4 xl:w-1/5 lg:mx-4 xl:mx-0 mb-6 lg:mb-0 py-6 border-b border-white border-opacity-60">
+        <div class="flex items-center mb-4">
+          {{'page-asi-section4-icon-3.svg' | asset_url | img_tag:'','block h-10 w-10 sm:h-12 sm:w-12 lg:w-14 lg:h-14 object-contain object-center'}}
+          <h4 class="{{descSize}} font-bold ml-3">
+            Brand<br>
+            Events
+          </h4>
+        </div>
+        <p class="{{subDescSize}}">
+          Get closer to the team with invitations to special events such as PITAKA Online Event, Anniversary, Year-End
+          Event, etc.
+        </p>
+      </div>
+      <div class="w-full sm:w-4/9 lg:w-1/4 xl:w-1/5 lg:mx-4 xl:mx-0 mb-6 lg:mb-0 py-6 border-b border-white border-opacity-60">
+        <div class="flex items-center mb-4">
+          {{'page-asi-section4-icon-4.svg' | asset_url | img_tag:'','block h-10 w-10 sm:h-12 sm:w-12 lg:w-14 lg:h-14 object-contain object-center'}}
+          <h4 class="{{descSize}} font-bold ml-3">
+            Co-creation<br>
+            Project
+          </h4>
+        </div>
+        <p class="{{subDescSize}}">
+          Your design idea will have a chance to turn into reality by joining the co-creation project.
+        </p>
+      </div> 
+    </div>
+
+    <picture>
+      <source data-srcset="{{'page-asi-section4.webp' | asset_url}}" media="(min-width: 768px)">
+      <img data-src="{{ placeholder_gif }}" src="{{'page-asi-section4-s.webp' | asset_url}}" alt="{{pageAlt}}"
+        class="block w-full lazyload">
+    </picture>
+  </div>
+
+  <div class="bg-gray-800 {{pdClass}}">
+    <div class="{{wClass}}">
+      <div class="w-full sm:w-1/2 xl:w-2/5">
+        <h3 class="{{titleClass}} uppercase">
+          How to become an ASI Member?
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-10 sm:auto-rows-fr mt-12 lg:mt-16"> 
+        <div class="w-full xl:w-4/5">
+          <span class="block h-px w-6 bg-white"></span>
+          <p class="text-sm sm:text-base lg:text-lg font-bold opacity-40 py-3">
+            Step 1
+          </p>
+          <h4 class="{{descSize}} font-bold mb-4">
+            Complete Application
+          </h4>
+          <p class="{{subDescSize}} max-w-xs">
+            Provide your general information to let us know more about you.
+          </p>
+        </div>
+
+        <div class="w-full xl:w-4/5">
+          <span class="block h-px w-6 bg-white"></span>
+          <p class="text-sm sm:text-base lg:text-lg font-bold opacity-40 py-3">
+            Step 2
+          </p>
+          <h4 class="{{descSize}} font-bold mb-4">
+            Get Approved
+          </h4>
+          <p class="{{subDescSize}} max-w-xs">
+            Once your application is submitted, we will review your eligibility and send you a notification of your
+            application status.
+          </p>
+        </div>
+
+        <div class="w-full xl:w-4/5">
+          <span class="block h-px w-6 bg-white"></span>
+          <p class="text-sm sm:text-base lg:text-lg font-bold opacity-40 py-3">
+            Step 3
+          </p>
+          <h4 class="{{descSize}} font-bold mb-4">
+            Enjoy Member Benefits
+          </h4>
+          <p class="{{subDescSize}} max-w-xs">
+            Once your account is activated, you can request service, purchase eligible products or take part in brand
+            events.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="mt-12 lg:mt-16">
+        <p class="{{subDescSize}}">
+          Notice*: To ensure ASI members have the best service and resources, we will keep the group small, and not all applicants can get in.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-footer relative">
+    <div class="{{wClass}} pt-16 sm:pt-12 lg:pt-20 h-full absolute left-1/2 transform -translate-x-1/2 flex justify-center">
+      <div class="w-5/6 text-center">
+        <h1 class="{{titleClass}}">
+          Join the PITAKA ASI Program
+        </h1>
+        <a href="/account/register" class="inline-block hover:opacity-100 mx-auto">
+          <button
+            class="text-sm sm:text-base rounded-sm px-4 py-2 xl:px-5 xl:py-2.5 font-bold transform transition duration-300 ease-in-out bg-cyan hover:bg-white hover:text-black">
+            Join Now
+          </button>
+        </a>
+      </div>
+    </div>
+    <picture>
+      <source data-srcset="{{'page-asi-section6.webp' | asset_url}}" media="(min-width: 768px)">
+      <img data-src="{{ placeholder_gif }}" src="{{'page-asi-section6-s.webp' | asset_url}}" alt="{{pageAlt}}"
+        class="block w-full h-full object-cover lazyload">
+    </picture>
+  </div>
+</div>
+
+<style>
+  .page_asi-container p{
+    line-height: 1.5;
+  }
+
+  .page_asi-container p.font-bold{
+    line-height: 1.5;
+  }
+  @media screen and (min-width:1280px) {
+    .page_asi-container .section-hero{
+      height: 960px;
+      max-hieght:100vh;
+    }
+  }
+</style>

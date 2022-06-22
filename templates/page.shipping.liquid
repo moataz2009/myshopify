@@ -1,0 +1,976 @@
+<style>
+  a,
+  a:hover,
+  .aff-left a,
+  .aff-left a:link,
+  .aff-left a:visited,
+  .aff-left a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .aff-left h2 {
+    padding-top: 2.5em;
+  }
+
+  .aff-left h3 {
+    margin-top: 2em;
+  }
+
+  .container>.list-box {
+    display: flex;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  table.tablepress {
+    background-color: transparent;
+  }
+
+  .tablepress .even td {
+    background-color: #171719;
+    color: #fff;
+  }
+
+  .tablepress .odd td {
+    background-color: #252525;
+    color: #fff;
+  }
+
+  .tablepress th,
+  .tablepress td {
+    padding: 10px;
+  }
+
+  .tablepress tbody td {
+    vertical-align: middle;
+  }
+
+  .tablepress tr td:last-child,
+  .tablepress tr th {
+    text-align: center;
+  }
+
+  .tablepress tr td:last-child a {
+    text-decoration: underline;
+  }
+
+  .tablepress tr td.align-right {
+    text-align: right;
+  }
+
+  .tablepress tr td.align-left {
+    text-align: left;
+  }
+
+  .tablepress tr.tr_hidden td {
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .tablepress tr.tr_hidden td div {
+    height: 0;
+    font-size: .9em;
+    transition: all .2s;
+  }
+
+  a.expand_link_ico {
+    cursor: pointer;
+    border: 1px solid #0BBCD4;
+    font-size: 20px;
+    line-height: 16px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 18px;
+    text-align: center;
+    color: #0BBCD4 !important;
+    margin-left: 5px;
+  }
+
+  .aff-left ul {
+    margin-left: 1.5em;
+  }
+
+  .aff-left ul li {
+    list-style-type: disc;
+  }
+
+  .left-con {
+    position: relative;
+    width: 280px;
+    min-height: 100px;
+  }
+
+  .left-con>ul {
+    position: absolute;
+    width: 100%;
+    top: 6.8em;
+    z-index: 99;
+  }
+
+  .left-con>ul>li {
+    padding-bottom: 25px;
+    padding-right: 15px;
+  }
+
+  .left-con>ul>li>a {
+    position: relative;
+    padding: 5px 0;
+  }
+
+  .left-con ul li a::before {
+    position: absolute;
+    height: 2px;
+    content: "";
+    width: 0;
+    bottom: 0;
+    background: #0BBCD4;
+    transition: all .2s;
+  }
+
+  .left-con ul li.active a::before,
+  .left-con ul li:hover a::before {
+    width: 100%;
+  }
+
+  .right-con {
+    width: calc(100% - 280px);
+  }
+
+  .content-container p,
+  .content-container li {
+    margin-bottom: 15px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .left-con {
+      width: 210px;
+      font-size: .9em;
+    }
+
+    .right-con {
+      width: calc(100% - 210px);
+      font-size: .9em;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+
+    .left-con {
+      display: none;
+    }
+
+    .right-con {
+      width: 100%;
+      font-size: .85em;
+    }
+
+    .tablepress th,
+    .tablepress td {
+      padding: 8px 10px;
+      line-height: 1.5;
+    }
+
+    th {
+      font-size: 14px;
+    }
+
+    td {
+      font-size: .85em;
+    }
+
+    a.expand_link_ico {
+      display: block;
+      margin: 0;
+    }
+  }
+</style>
+<div class="sm:w-11/12 md:w-10/12 lg:w-8/12 mx-auto">
+  <div class="grid gap-4 grid-cols-1 md:grid-cols-5 pt-16">
+    <div class="col-span-1 md:col-span-1 pt-4 pr-4">
+      <ul id="list-title">
+        <li class="list-item leading-8 text-base">
+          <a href="#_WARRANTY">Warranty Periods</a>
+        </li>
+        <li class="list-item leading-8 text-base">
+          <a href="#_SHIPPING">Shipping Details</a>
+        </li>
+        <li class="list-item leading-8 text-base">
+          <a href="#free_shipping_exclusions">Exclusions</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-span-1 md:col-span-4 py-5 pl-6">
+      <div class="content-container pt-section-detail" name="_WARRANTY" id="_WARRANTY">
+        <h2 class="pt-section-title-large">
+          WARRANTY PERIODS (Begins from delivery date)
+        </h2>
+        <table class="tablepress pt-margin-top-small">
+          <thead>
+            <tr>
+              <th>Product Category</th>
+              <th>Model</th>
+              <th colspan="2">Standard Warranty Period</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="odd">
+              <td>
+                Phone Cases
+              </td>
+              <td>
+                Air Case, MagEZ Case, MagEZ Case Pro,MagEZ Case Pro 2, MagEZ Case 2, New MagEZ Case Pro
+              </td>
+              <td colspan="2" class="align-right">
+                2 months
+              </td>
+            </tr>
+
+            <tr class="even">
+              <td rowspan="3">
+                For Apple Watch
+              </td>
+              <td>
+                Air Case for Apple Watch Series
+              </td>
+              <td colspan="2" class="align-right">
+                2 months
+              </td>
+            </tr>
+
+            <tr class="even">
+              <td>
+                Carbon Fiber Watch Band
+              </td>
+              <td colspan="2" class="align-right">
+                1 year
+              </td>
+            </tr>
+
+            <tr class="odd">
+              <td>
+                Power Dongle for Apple Watch
+              </td>
+              <td colspan="2" class="align-right">
+                1 year
+              </td>
+            </tr>
+
+            <tr class="even">
+              <td rowspan="5">
+                For Tablets
+              </td>
+              <td>
+                MagEZ Case for iPad Pro/Air
+              </td>
+              <td colspan="2" class="align-right">
+                2 months
+              </td>
+            </tr>
+
+            <tr class="odd">
+              <td>
+                MagEZ Case 2 for iPad Pro/Air
+              </td>
+              <td colspan="2" class="align-right">
+                2 months
+              </td>
+            </tr>
+
+            <tr class="even">
+              <td>
+                Card Clip
+              </td>
+              <td colspan="2" class="align-right">
+                2 months
+              </td>
+            </tr>
+
+            <tr class="odd">
+              <td>
+                MagEZ Folio
+              </td>
+              <td colspan="2" class="align-right">
+                2 months
+              </td>
+            </tr>
+
+            <tr class="even">
+              <td>
+                MagEZ Stand
+              </td>
+              <td colspan="2" class="align-right">
+                1 year
+              </td>
+            </tr>
+
+            <tr class="odd">
+              <td rowspan="2">
+                Chargers
+              </td>
+              <td data-target="#chargers_list" id="expand_link">
+                Single Device and Multi-Device Wireless Chargers
+                <a href="javascript:;" class="expand_link_ico text-cyan"> + </a>
+              </td>
+              <td colspan="2" class="align-right">
+                1 year
+              </td>
+            </tr>
+            <tr class="tr_hidden" id="chargers_list">
+              <td colspan="3" class="align-left">
+                <div>
+                  MagEZ Juice 2, MagEZ Mount Qi, MagEZ Juice, MagEZ Bar, MagEZ Mount Qi Desktop, Air Essential, Air
+                  Quad/Air Quad Lite, Air Tray, Air Omni, Air Omni Lite,MagEZ Car Mount Pro, MagEZ Power Bank
+                </div>
+              </td>
+            </tr>
+
+            <tr class="even">
+              <td rowspan="2">
+                For Cars
+              </td>
+              <td>
+                MagEZ Mount/MagEZ Car Mount Lite (including mounting bases)
+              </td>
+              <td colspan="2" class="align-right">
+                2 months
+              </td>
+            </tr>
+            <tr class="odd">
+              <td>
+                Smart Car Charger Adapter
+              </td>
+              <td colspan="2" class="align-right">
+                1 year
+              </td>
+            </tr>
+
+            <tr class="odd">
+              <td rowspan="2">
+                AirPods Cases
+              </td>
+              <td rowspan="2">
+                Air Pal for AirPods 1&2, Air Pal Mini for AirPods 1&2,
+                Air Pal Mini for AirPods Pro, MagEZ Case for AirPods Pro
+              </td>
+              <td>
+                Cases
+              </td>
+              <td class="align-right">
+                2 months
+              </td>
+            </tr>
+
+            <tr class="even">
+              <td>
+                Wireless charging funciton
+              </td>
+              <td class="align-right">
+                1 year
+              </td>
+            </tr>
+
+            <tr class="even">
+              <td rowspan="2">
+                Wallets
+              </td>
+              <td>
+                MagEZ Wallet (UE)
+              </td>
+              <td>
+                Magnets
+              </td>
+              <td class="align-right">
+                1 year
+              </td>
+            </tr>
+
+            <tr class="odd">
+              <td>
+                MagEZ Wallet 2 (UE)
+              </td>
+              <td>
+                Others Parts
+              </td>
+              <td class="align-right">
+                Lifetime
+              </td>
+            </tr>
+
+            <tr class="even">
+              <td rowspan="4">
+                Accessories
+              </td>
+              <td>
+                MagEZ Digital Travel Kit
+              </td>
+              <td colspan="2" class="align-right">
+                1 year
+              </td>
+            </tr>
+            <tr class="odd">
+              <td>
+                MagEZ Card Sleeve (2)
+              </td>
+              <td colspan="2" class="align-right">
+                2 months
+              </td>
+            </tr>
+            <tr class="even">
+              <td>
+                Tempered Glass
+              </td>
+              <td colspan="2" class="align-right">
+                2 months
+              </td>
+            </tr>
+            <tr class="odd">
+              <td>
+                C to C Cable
+              </td>
+              <td colspan="2" class="align-right">
+                1 year
+              </td>
+            </tr>
+
+            <tr class="even">
+              <td rowspan="3">
+                Others
+              </td>
+              <td>
+                Air Omni (Lite) Travel Pouch
+              </td>
+              <td colspan="2" class="align-right">
+                2 months
+              </td>
+            </tr>
+            <tr class="odd">
+              <td>
+                MagEZ Case &amp; Versatile Magnetic Power Bank Kit
+              </td>
+              <td colspan="2" class="align-right">
+                1 year
+              </td>
+            </tr>
+            <tr class="even">
+              <td>
+                MagEZ Case &amp; In-Car Wireless Charging Kit
+              </td>
+              <td colspan="2" class="align-right">
+                1 year
+              </td>
+            </tr>
+        </table>
+
+        <h2 class="py-8 pt-section-title-large fw-400">Warranty Details</h2>
+        <ul>
+          <li>
+            Our warranty guarantees that all items will be free from material and engineering defects and works as
+            advertised.
+          </li>
+          <li>
+            A defect is defined as an imperfection or flaw produced during manufacturing, including surface defects and
+            wireless charging functionality.
+          </li>
+          <li>
+            Exclusions: The warranty does not extend to damage from abuse or on purpose, normal wear and tear,
+            alterations, or misuse, demagnetization of magnetic strip bank cards, cosmetic damage that does not affect
+            functionality (such as scratches, stained magnets, or fading logos). Any damage to, loss of the cardholder’s
+            contents, loss of use, loss of data, or similar are not covered.
+          </li>
+          <li>
+            The warranty is non-transferable and only covers the original end-user purchaser. PITAKA will only authorize
+            the warranty claim if the product was purchased from an official store.
+          </li>
+          <li>
+            Customers must provide a valid order number or matching email address to make a claim.
+          </li>
+        </ul>
+        <h3 class="py-8 pt-section-title">TO MAKE A CLAIM</h3>
+        <p>
+          To make a claim, or if your shipment arrived damaged or defective, please contact us at <a
+            href="mailto:aftersales@ipitaka.com"><u>aftersales@ipitaka.com</u></a>
+          for a quick solution.
+        </p>
+        <h3 class="py-8 pt-section-title">7-DAY MONEY BACK GUARANTEE</h3>
+        <p>
+          Sometimes, we know that our products don’t quite meet your expectations, and we sincerely apologize for this.
+          If
+          you experience this, please contact <a href="mailto:aftersales@ipitaka.com"><u>aftersales@ipitaka.com</u></a>
+          as soon as possible and provide us with complete
+          product and package pictures within seven days of purchase. We will then arrange after-sales service as
+          quickly
+          as possible.
+        </p>
+        <p>
+          All items may be returned or exchanged within seven days from when it was delivered. PITAKA owns a Return
+          Merchandise Authorization, so you will only pay for return shipping and insurance fees.
+        </p>
+        <p>
+          Please note that to be eligible for returns, the item(s) must be in their original condition when received,
+          including all product documentation, and shipped within three days.
+        </p>
+        <p>
+          To exchange a product quickly, we recommend applying for a refund and placing a new order. Please allow
+          approximately one week for your refund to be processed after we receive your return.
+        </p>
+        <p>
+          If a package or item delivered to you arrives damaged, please refuse the shipment or contact us (<a
+            href="mailto:aftersales@ipitaka.com"><u>aftersales@ipitaka.com</u></a>) immediately. Please retain all
+          packing
+          materials unless instructed otherwise by PITAKA. Claims for damaged or missing items must be reported
+          immediately or within three days of receipt of your shipment. PITAKA will not be responsible for lost or
+          damaged
+          returned shipments.
+        </p>
+        <p class="text-cyan">
+          Important Notice: engraved items or customized items are not refundable.
+        </p>
+
+        <h3 class="py-8 pt-section-title">HOW TO PREPARE A RETURN OR EXCHANGE?</h3>
+        <p>
+          To claim a return or exchange, please first email us
+          (<a href="mailto:aftersales@ipitaka.com"><u>aftersales@ipitaka.com</u></a>) to file a claim. Please include
+          your PO number, name, address, and phone number (including area code) with the name of the item and a
+          description of the problem.
+        </p>
+        <p>
+          We will evaluate the claim at our discretion within 3-5 business days after receiving your email. If the
+          application meets our manufacturing defects, we will begin to process the claim. You may be requested to get
+          the
+          claimed product or part(s) at the warranty location. Once the product or parts are received with the repair
+          order number, we will refund your processing and repair fees or replace your product at our discretion.
+        </p>
+        <p>
+          If sending a MagEZ Wallet, we recommend using a service like UPS or FedEx, which will give you a tracking
+          number. Once your Wallet is safely in our hands, the warranty process will begin.
+          We recommend that you securely package your items in original packing materials. We are not responsible for
+          lost
+          or stolen articles.
+        </p>
+
+        <h3 class="py-8 pt-section-title">PAYPAL RETURNS</h3>
+        <p>
+          PayPal orders will be credited back to your PayPal account. Please allow up to 1 week for your account to be
+          credited.
+        </p>
+
+        <h3 class="py-8 pt-section-title">CREDIT TO YOUR CHARGE CARD</h3>
+        <p>
+          Credit card purchases will be refunded to the credit card or account used on the original purchase. Please
+          allow
+          up to 1 week from the date that PITAKA has received your return for your account to be credited.
+        </p>
+        <p>
+          You may wish to contact your credit card company on posting guidelines as they can vary.
+        </p>
+        <p>
+          If you made a purchase of US$1000 or higher using a bank wire, and are an International customer, your refund
+          will take approximately three weeks from the date of the return’s receipt.
+        </p>
+        <p>
+          For bank wire purchases under US$1000, please allow 3-4 weeks. Bank wire refunds are posted to the account
+          from
+          which they originated.
+        </p>
+        <h3 class="py-8 pt-section-title">SHIPPING CHARGES</h3>
+        <p>
+          Shipping charges, including special handling and any other related costs, are non-refundable.
+        </p>
+        <p>
+          Please do not use a collect on delivery service.
+        </p>
+        <p>
+          If you receive any portion of your order damaged, please contact us before returning the items. PITAKA will
+          not
+          reimburse you for any unauthorized shipping expenses incurred.
+        </p>
+        <p>
+          Please retain all shipping materials for the courier pick up and inspection.
+        </p>
+        <p>
+          If we request that you return the merchandise to us, we may reimburse you for full or partial return shipping
+          expenses at our discretion.
+        </p>
+        <p>
+          We will not reimburse you for overnight, express, or other specialized services.
+        </p>
+
+        <h3 class="py-8 pt-section-title">CANCELLING OR CHANGING AN ORDER</h3>
+        <p>
+          If you would like to change or cancel an order, please contact us as soon as possible. We will attempt to
+          accommodate order changes to the extent possible before shipping confirmation. Some changes may result in a
+          shipping delay.
+        </p>
+        <p>
+          We cannot accommodate changes or cancellations on special order requests and orders that have already shipped.
+        </p>
+        <p>
+          If your order has already shipped, please contact us to set up a merchandise return once you have received it.
+        </p>
+
+        <h3 class="py-8 pt-section-title">&lsquo;FREEBIE&rsquo; TERMS &amp; CONDITIONS</h3>
+        <p>
+          Free gifts are not for resale and will not be replaced if lost or stolen.
+        </p>
+        <p>
+          Free gifts are provided on an “as is” basis (with its present look or condition) without further warranty.
+          These
+          include but are not limited to, lost, misplaced, destroyed, or stolen free gifts once they are claimed. These
+          gifts are not redeemable for cash and cannot be transferred or exchanged.
+        </p>
+      </div>
+
+      <div class="content-container pt-section-detail" name="_SHIPPING" id="_SHIPPING">
+        <h2 class="py-8 pt-section-title-large fw-400">Shipping</h2>
+
+        <h3 class="py-8 pt-section-title">
+          FREE WORLDWIDE SHIPPING
+        </h3>
+        <p>
+          All orders of $30 and over (including sale and closeout items) qualify for free express shipping, except for
+          the
+          out-of-delivery-area (ODA).
+        </p>
+        <p>
+          All orders use premium express delivery service based on recommendations from our freight forwarder.
+        </p>
+        <p>
+          We dispatch within 24 working hours (pre-sale items excluded) unless in the case of a force majeure. Normally, 
+          the item will ship from a warehouse (US/CA/AU/EU/UK/HK) near to your location, 
+          but it will ship from another warehouse to avoid delays in the case of out-of-stock conditions.
+        </p>
+        <p>
+          Shipping Time: 2-10 business days.
+
+        </p>
+        <p>
+          Please consider due to the recent pandemic conditions, some parcels might experience delays, please contact
+          <a href="mailto:support@ipitaka.com"><u>support@ipitaka.com</u></a> if you have any
+          questions.
+        </p>
+        <p>
+          The customer is responsible for any customs fees, import duties, or taxes imposed by your country’s customs
+          department.
+        </p>
+        <p>
+          Shipping carrier delays, weather delays, or international customs inspection delays are beyond our control.
+        </p>
+        <p>
+          If you do not receive your item on time, please contact us for further assistance.
+        </p>
+
+        <h3 class="py-8 pt-section-title">
+          ODA (OUT-OF-DELIVERY-AREA) AND DELIVERY TO REMOTE AREAS
+        </h3>
+        <p>
+          Additional shipping charges may occur for ODA delivery or delivery to remote areas that are difficult to
+          reach,
+          e.g. islands, ski resorts, military operation areas etc. Transit time for shipments to these regions may be
+          longer.
+        </p>
+        <p>
+          The carrier defines ODA delivery as delivery to a remote area only before shipping. They may contact you with
+          additional charges.
+        </p>
+        <p>
+          Business addresses in the city center of Hong Kong are recommended, as we will use SF Express. You may incur
+          an
+          extra charge of approximately HKD16-20 for areas outside of the city. If this occurs, please contact us.
+        </p>
+
+        <h3 class="py-8 pt-section-title">OTHER:</h3>
+        <ul>
+          <li>
+            1. Customers must first send a clear photo or video of the damaged or defective product and the shipping
+            package before we can consider issuing an RMA. Please use good lighting, and take the picture at a close to
+            medium distance so that we can identify and verify the issue(s).
+          </li>
+          <li>
+            2. Customers need to pay the return shipping fee first. After PITAKA has received the returned product and
+            confirmed it is faulty, the return shipping cost will be refunded based on a valid return receipt of up to a
+            maximum of 50 USD. If our technical team determines the item is not DOA, PITAKA will not compensate for the
+            return shipping fee. Refund requests for a return shipping fee without a valid RMA return receipt slip will
+            not be accepted.
+          </li>
+          <li>
+            3. Product returns must be via one of PITAKA’s approved shipping methods. Our after sales team can provide
+            you with further details.
+          </li>
+        </ul>
+      </div>
+
+      <h3 class="py-8 pt-section-title" name="free_shipping_exclusions" id="free_shipping_exclusions">Free Shipping
+        Exclusions</h3>
+      <p class="pt-section-detail">We do not offer free shipping to the following locations.</p>
+      <p class="pt-section-detail">Shipping fees will be calculated at checkout.</p>
+
+      <h4 class="py-6 pt-section-title-small pt-margin-top-small">Asia</h4>
+      <table class="min-w-full table-auto">
+        <tbody class="bg-gray-200">
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240">Vietnam</td>
+            <td class="px-6 py-2">$10 </td>
+          </tr>
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240">Indonesia</td>
+            <td class="px-6 py-2">$10 </td>
+          </tr>
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240">Brunei</td>
+            <td class="px-6 py-2">$10 </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4 class="py-6 pt-section-title-small">Europe</h4>
+      <table class="min-w-full table-auto">
+        <tbody class="bg-gray-200">
+			<tr class="">
+                <td class="px-6 py-2 items-center" width="240">Iceland</td>
+                <td class="px-6 py-2">$10</td>
+              </tr>
+        </tbody>
+      </table>
+{% comment %}
+      <h4 class="py-6 pt-section-title-small">North America</h4>
+      <table class="min-w-full table-auto">
+        <tbody class="bg-gray-200">
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240" width="240">Canada</td>
+            <td class="px-6 py-2">$10 </td>
+          </tr>
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240">Mexico</td>
+            <td class="px-6 py-2">$15 </td>
+          </tr>
+        </tbody>
+      </table>
+{% endcomment %}
+      <h4 class="py-6 pt-section-title-small">South America</h4>
+      <table class="min-w-full table-auto">
+        <tbody class="bg-gray-200">
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240" width="240">Bolivia</td>
+            <td class="px-6 py-2">$10 </td>
+          </tr>
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240">Paraguay</td>
+            <td class="px-6 py-2">$10 </td>
+          </tr>
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240">Uruguay</td>
+            <td class="px-6 py-2">$10 </td>
+          </tr>
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240">Venezuela</td>
+            <td class="px-6 py-2">$10 </td>
+          </tr>
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240">Colombia</td>
+            <td class="px-6 py-2">$15 </td>
+          </tr>
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240">Ecuador</td>
+            <td class="px-6 py-2">$15 </td>
+          </tr>
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240">Peru</td>
+            <td class="px-6 py-2">$10 </td>
+          </tr>
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240">Chile</td>
+            <td class="px-6 py-2">$10 </td>
+          </tr>
+        </tbody>
+      </table>
+      <h4 class="py-6 pt-section-title-small">Caribbean</h4>
+      <table class="min-w-full table-auto">
+        <tbody class="bg-gray-200">
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240" width="240">Falkland Islands</td>
+            <td class="px-6 py-2">$10 </td>
+          </tr>
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240">Guyana</td>
+            <td class="px-6 py-2">$10 </td>
+          </tr>
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240">Suriname</td>
+            <td class="px-6 py-2">$10 </td>
+          </tr>
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240">Canary Islands</td>
+            <td class="px-6 py-2">$10 </td>
+          </tr>
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240">Caribbean Netherlands</td>
+            <td class="px-6 py-2">$10 </td>
+          </tr>
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240">Netherlands Antilles</td>
+            <td class="px-6 py-2">$15 </td>
+          </tr>
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240">French Guiana</td>
+            <td class="px-6 py-2">$15 </td>
+          </tr>
+        </tbody>
+      </table>
+{% comment %}
+      <h4 class="py-6 pt-section-title-small">Africa</h4>
+      <table class="min-w-full table-auto">
+        <tbody class="bg-gray-200">
+          <tr class="">
+            <td class="px-6 py-2 items-center" width="240" width="240">Morocco</td>
+            <td class="px-6 py-2">$15 </td>
+          </tr>
+        </tbody>
+      </table>
+{% endcomment %}
+      <h2 class="py-8 pt-section-title pt-margin-top-small">Places We Don’t Ship To (but wish we did):</h2>
+      <h4 class="py-6 pt-section-title-small">North America</h4>
+      <ul class="list-disc list-inside">
+        <li>Greenland</li>
+      </ul>
+      <h4 class="py-6 pt-section-title-small">Oceania</h4>
+      <ul class="list-disc list-inside">
+        <li>Papua New Guinea</li>
+        <li>French Polynesia</li>
+        <li>Palau</li>
+      </ul>
+      <h4 class="py-6 pt-section-title-small">Africa</h4>
+      <ul class="list-disc list-inside">
+        <li>Mayotte</li>
+        <li>Cote d'Ivoire </li>
+        <li>Egypt</li>
+        <li>Kenya</li>
+        <li>Tunisia</li>
+        <li>Uganda</li>
+        <li>Central Republic</li>
+        <li>Sudan</li>
+      </ul>
+      <h4 class="py-6 pt-section-title-small">South America</h4>
+      <ul class="list-disc list-inside">
+        <li>Brazil</li>
+        <li>Argentina</li>
+        <li>Uruguay</li>
+        <li>Venezuela</li>
+      </ul>
+      <h4 class="py-6 pt-section-title-small">Europe</h4>
+      <ul class="list-disc list-inside">
+        <li>Aland Islands</li>
+        <li>French Southern Territories</li>
+        <li>Isle Of Man</li>
+        <li>North Macedonia</li>
+        <li>Andorra</li>
+        <li>Gibraltar</li>
+        <li>Kosovo</li>
+        <li>Albania</li>
+        <li>Azerbaijan</li>
+        <li>Ukraine</li>
+        <li>Russia</li>
+      </ul>
+      <h4 class="py-6 pt-section-title-small">Asia</h4>
+      <ul class="list-disc list-inside">
+        <li>Sri Lanka</li>
+        <li>Maldives</li>
+        <li>Uzbekistan</li>
+        <li>North Korea</li>
+        <li>Tajikistan</li>
+        <li>Iran(Islamic Republic of)</li>
+        <li>Syria</li>
+		<li>Kazakhstan</li>
+      </ul>
+      <h4 class="py-6 pt-section-title-small">Caribbean</h4>
+      <ul class="list-disc list-inside">
+        <li>Barbados</li>
+        <li>Aruba</li>
+        <li>St. Barthelemy</li>
+        <li>Guatemala</li>
+        <li>Guadeloupe</li>
+        <li>Bahamas</li>
+        <li>Martinique</li>
+        <li>Jamaica</li>
+        <li>Costa Rica</li>
+        <li>Dominican Republic</li>
+        <li>El Salvador</li>
+        <li>Cuba</li>
+        <li>Trinidad And Tobago</li>
+      </ul>
+    </div>
+  </div>
+</div>
+{{ 'hc-sticky.js' | asset_url | script_tag }}
+<script>
+  $(function () {
+    $("#expand_link").click(function () {
+      const _this = $(this);
+      const link_id = _this.attr("data-target");
+      const link_class = _this.hasClass("has_expand");
+      if (link_class) {
+        _this.removeClass("has_expand").find("a.expand_link_ico").text(" + ");
+        $(chargers_list).addClass("tr_hidden");
+      } else {
+        _this.addClass("has_expand").find("a.expand_link_ico").text(" - ");
+        $(chargers_list).removeClass("tr_hidden");
+      }
+    })
+  })
+
+  function getScrollTop() {
+    var scroll_top = 0;
+    if (document.documentElement && document.documentElement.scrollTop) {
+      scroll_top = document.documentElement.scrollTop;
+    } else if (document.body) {
+      scroll_top = document.body.scrollTop;
+    }
+    return scroll_top;
+  }
+
+  window.onload = function () {
+
+    var itemTop = $(".container").offset().top;
+
+    var detail_top_height = $(".header-wrapper").height() + 10;
+    var Sticky = new hcSticky('#list-title', {
+      stickTo: '.list-box > div:nth-of-type(1)',
+      top: detail_top_height,
+      innerTop: 0,
+      bottomEnd: 0,
+      stickyClass: 'sticky-img',
+    });
+
+    $(".list-item").on('click', function () {
+      var itemIndex = $(this).index();
+      // $(".list-item").removeClass("active");
+      // $(this).addClass("active");
+
+      // $(".content-container").removeClass("active").addClass("hide").eq(itemIndex).removeClass("hide").addClass(
+      //   "active");
+      //   window.scrollTo(0, itemTop);
+      var top_value = $(".content-container").eq(itemIndex).offset().top;
+      setTimeout(function () {
+        window.scrollTo(0, top_value);
+      }, 1500);
+      if (Sticky) {
+        Sticky.reinit();
+      }
+    });
+
+    window.onscroll = function () {
+      $('.list-item').removeClass('active');
+      let scroll_top = getScrollTop();
+      const shipping_height = $("#_SHIPPING").offset().top - 20;
+
+      if (scroll_top >= shipping_height) {
+        $('.list-item').eq(1).addClass('active');
+      } else {
+        $('.list-item').eq(0).addClass('active');
+      }
+    }
+  }
+</script>

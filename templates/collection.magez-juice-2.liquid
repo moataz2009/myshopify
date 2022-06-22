@@ -1,0 +1,416 @@
+{% assign product = all_products[collection.handle] %}
+{% if product.id != '' %}
+{% render 'buy-bar' , product: all_products[collection.handle]%}
+{% endif %}
+<div class="section-default section0 relative">
+  <div class="pt-section-content absolute pt-position-centerX">
+    <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 fw-400 pt-text-center">EFFORTLESSLY ENERGIZED
+    </h3>
+  </div>
+  <picture>
+    <source data-srcset="{{ 'product-section0-juice2.jpg' | asset_url }}" media="(min-width: 769px)">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-section0-juice2-m.jpg' | asset_url }}" alt="MagEZ Juice 2"
+      class="img-responsive width-100 lazyload">
+  </picture>
+</div>
+
+{%- comment -%}
+<div class="section-default pt-video-container">
+  <video loop muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+    x5-video-orientation="portraint" preload="none" autoplay style="object-fit:contain"
+    poster="{{ 'product-magez-juice2_v-cover.jpg' | asset_url }}" class="lazyload">
+    <source src="{{ 'product-magez-juice2_v.mp4' | asset_url }}" type="video/mp4">
+    <source src="{{ 'product-magez-juice2_v.webm' | asset_url }}" type="video/webm">
+  </video>
+</div>
+{%- endcomment -%}
+
+<div class="section-default section2 relative">
+  <div class="pt-section-content absolute pt-position-centerY pt-position-right">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      Charging, Simplified.
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      Use the magnetic wireless charging mount to recharge your device throughout the
+      day while at home or in the office.
+    </p>
+  </div>
+  <picture>
+    <source data-srcset="{{ 'product-section2-juice2.jpg' | asset_url }}" media="(min-width: 769px)">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-section2-juice2-m.jpg' | asset_url }}" alt="MagEZ Juice 2"
+      class="img-responsive width-100 lazyload">
+  </picture>
+</div>
+
+<div class="pt-section section3 pt-flex pt-flex-center">
+  <div id="trigger-video_sec3"></div>
+  <div class="pt-section-content">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      A Magnetic Power Bank<br>with Even More Juice
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      With a 40% larger backup battery than the original MagEZ Juice, the magnetic wireless charger provides your device
+      with a quick power boost. Simply slide out your smartphone with the magnetic power bank to juice up while you're
+      out and about.
+    </p>
+  </div>
+  <video muted playsinline webkit-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true"
+    x5-video-orientation="portraint" preload="none" autoplay style="object-fit:contain" class="lazyload"
+    id="video-sec3">
+    <source src="{{ 'product-section3-juice2_v.mp4' | asset_url }}" type="video/mp4">
+    <source src="{{ 'product-section3-juice2_v.webm' | asset_url }}" type="video/webm">
+  </video>
+</div>
+
+<div class="section-default section4 relative">
+  <div class="xs:hidden flex flex-col w-full pt-12 text-center  " style="background: #1F1F21;">
+    <h3 class="w-11/12 mx-auto pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      Your Ready-to-go<br>
+      Magnetic Power Bank
+    </h3>
+  </div>
+  <div class=" pt-section-content absolute pt-position-centerY pt-position-right">
+    <h3 class="hidden xs:block pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      Your Ready-to-go<br>
+      Magnetic Power Bank
+    </h3>
+    <p class="mt-16 xs:mt-0 pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      Magnetically attach your phone to the charger allowing pass-through charging technology to charge the wireless
+      power bank and your device simultaneously, so it’s always ready when you need it.
+    </p>
+  </div>
+  <picture>
+    <source data-srcset="{{ 'product-section4-juice2.jpg' | asset_url }}" media="(min-width: 769px)">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-section4-juice2-m.jpg' | asset_url }}" alt="MagEZ Juice 2"
+      class="img-responsive width-100 lazyload">
+  </picture>
+</div>
+
+<div class="section-default section5 relative">
+  <div class="xs:hidden flex flex-col w-full pt-12 text-center  " style="background: #1F1F21;">
+    <h3 class="w-11/12 mx-auto pt-section-title text-2xl sm:text-3xl font-bold mb-0">
+      MagEZ Case Compatible
+    </h3>
+  </div>
+  <div class="pt-section-content absolute pt-position-centerY">
+    <h3 class="hidden xs:block pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      MagEZ Case Compatible
+    </h3>
+    <p class="mt-8 xs:mt-0 pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 pt-margin-bottom-small">
+      The magnetic cell phone charger can be used with any smartphone* using a MagEZ Case.
+    </p>
+    <p class="pt-text-small text-cyan">
+      *Not compatible with the HUAWEI P40 Pro, OnePlus 8 Pro, Samsung Galaxy S21 Ultra, Samsung Galaxy S20 Ultra, and
+      Samsung Galaxy Note20 Ultra.
+    </p>
+  </div>
+  <picture>
+    <source data-srcset="{{ 'product-section5-juice2.jpg' | asset_url }}" media="(min-width: 769px)">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-section5-juice2-m.jpg' | asset_url }}" alt="MagEZ Juice 2"
+      class="img-responsive width-100 lazyload">
+  </picture>
+</div>
+
+<div class="section-default section6 relative">
+  <div class="pt-section-content absolute pt-position-bottom pt-position-right">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      Easily Use Your Phone<br>While You Charge
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      The wireless charging pad is mounted at a 45° angle, offering a hands-free view of your mobile, and allowing you
+      to conveniently view notifications while you work.
+    </p>
+  </div>
+  <picture>
+    <source data-srcset="{{ 'product-section6-juice2.jpg' | asset_url }}" media="(min-width: 769px)">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-section6-juice2-m.jpg' | asset_url }}" alt="MagEZ Juice 2"
+      class="img-responsive width-100 lazyload">
+  </picture>
+</div>
+
+<div class="section-default section7 relative">
+  <div class="pt-section-content absolute pt-position-centerY">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      Ergonomically Designed
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      The compact, portable battery fits easily into the palm of your hand, while the sleek aramid texture provides
+      additional grip.
+    </p>
+  </div>
+  <picture>
+    <source data-srcset="{{ 'product-section7-juice2.jpg' | asset_url }}" media="(min-width: 769px)">
+    <img src="{{ placeholder_gif }}" data-src="{{ 'product-section7-juice2-m.jpg' | asset_url }}" alt="MagEZ Juice 2"
+      class="img-responsive width-100 lazyload">
+  </picture>
+</div>
+
+<div class="section-default section8 relative">
+  {% assign color_length = 0 %}
+  {% for color_option in all_products['magez-juice-2'].options_by_name['Color'].values %}
+    {% assign color_length = color_length | plus: 1 %}
+  {% endfor %}
+  {% capture color_size %}
+  {% case color_length %}
+  {% when 1 %}
+  One
+  {% when 2 %}
+  Two
+  {% when 3 %}
+  Three
+  {% when 4 %}
+  Four
+  {% else %}
+  Five
+  {% endcase %}
+  {% endcapture %}
+  <div class="pt-section-content text-center absolute pt-position-centerX">
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      Available in {{color_size}} Unique Colors That Complement Your MagEZ Case
+    </h3>
+    <div class="toggle-btns">
+      {% for color_option in all_products['magez-juice-2'].options_by_name['Color'].values %}
+        {% assign color_name = color_option | handleize %}
+        {% assign color_target = color_name | remove: '-orange-herringbone' | remove: '-twill' | remove: 'black-' | remove: 'rose' | prepend: '#' %}
+        <a href="javascript:;" class="toggle-btn{% if forloop.first == true %} active{% endif %}" data-target="{{color_target}}">
+          {{ color_name | append: '.svg' | asset_url | img_tag: color_option }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="pt-section-container">
+    {% for color_option in all_products['magez-juice-2'].options_by_name['Color'].values %}
+      {% assign color_name = color_option | handleize %}
+      {% assign color_target = color_name | remove: '-orange-herringbone' | remove: '-twill' | remove: 'black-' | remove: 'rose' %}
+      
+      <div class="toggle-image{% if forloop.first == true %} active{% endif %}" id="{{color_target}}">
+        <picture>
+          <source data-srcset="{{ color_target | prepend: 'product-section8-juice2-' | append: '.jpg' | asset_url }}" media="(min-width: 769px)">
+          <img src="{{ placeholder_gif }}" data-src="{{ color_target | prepend: 'product-section8-juice2-' | append: '-m.jpg' | asset_url }}"
+            alt="MagEZ Juice 2" class="img-responsive width-100 lazyload">
+        </picture>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .pt-section-content {
+    max-width: 486px;
+  }
+
+  .pt-section-content.pt-position-centerY {
+    margin-left: 5%;
+  }
+
+  .pt-section-content.pt-position-right {
+    margin-right: 5%;
+  }
+
+  .section0 .pt-section-content {
+    top: 8em;
+  }
+
+  .section-default {
+    min-height: 49vw;
+  }
+
+  .section6.section-default {
+    min-height: 43vw;
+  }
+
+  .section6 .pt-section-content {
+    bottom: 20%;
+  }
+
+  .section3 {
+    background-color: #171719;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 30vw;
+  }
+
+  .section3 video {
+    backdrop-filter: brightness(1);
+    margin-bottom: -1px;
+    max-width: 60%;
+  }
+
+  .toggle-btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+  }
+
+  .toggle-btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 1em;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .toggle-btn.active,
+  .toggle-btn:hover {
+    border: 2px solid #fff;
+  }
+
+  .toggle-btn>img {
+    display: block;
+    width: 100%;
+  }
+
+  .toggle-image {
+    display: none;
+  }
+
+  .toggle-image.active {
+    display: block;
+  }
+
+  @media screen and (min-width:1960px) {
+    .pt-section-content {
+      max-width: 545px;
+    }
+
+    .toggle-btns {
+      margin-top: 2.5em;
+    }
+  }
+
+  @media screen and (max-width:1600px) {
+    .pt-section-content {
+      max-width: 440px;
+      width: 40%;
+      margin: 0 !important;
+    }
+
+    .section0 .pt-section-content {
+      top: 6em;
+    }
+  }
+
+  @media screen and (max-width:1280px) {
+    .pt-section-content {
+      max-width: 425px;
+    }
+
+    .pt-section-content.text-center {
+      width: 60%;
+      max-width: unset;
+    }
+
+    .section0 .pt-section-content,
+    .section8 .pt-section-content {
+      top: 4em;
+    }
+
+    .toggle-btns {
+      margin-top: 1.5em;
+    }
+
+    .toggle-btn {
+      width: 40px;
+      height: 40px;
+      margin: 0 10px;
+    }
+  }
+
+  @media screen and (max-width:1024px) {
+    .section8 .pt-section-content {
+      top: 3em;
+    }
+
+    .toggle-btns {
+      margin-top: 1.5em;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .section-default {
+      min-height: 160vw;
+    }
+
+    .pt-section-content {
+      width: 100% !important;
+      left: 0 !important;
+      top: 10%;
+      transform: none;
+      text-align: center;
+      padding: 0 20%;
+      max-width: unset;
+    }
+
+    .section3 .pt-section-content {
+      padding-top: 5em;
+      padding-bottom: 2em;
+    }
+
+    .section3 video {
+      width: 100%;
+      height: auto;
+      max-width: unset;
+    }
+
+    .section6 .pt-section-content {
+      bottom: unset;
+    }
+
+    .toggle-btns {
+      margin-top: 2.5em;
+    }
+  }
+
+  @media screen and (max-width:414px) {
+    .pt-section-content {
+      padding: 0 10%;
+      top: 4em;
+    }
+
+    .section0 .pt-section-content {
+      top: 12%;
+    }
+  }
+</style>
+
+{{ 'TweenMax.min.js' | asset_url | script_tag }}
+{{ 'ScrollMagic.js' | asset_url | script_tag }}
+{{ 'animation.gsap.min.js' | asset_url | script_tag }}
+
+<script>
+  $(function () {
+    // init controller
+    var controller = new ScrollMagic.Controller();
+
+    function toggleVideo(e, id) {
+      var video = document.querySelector(id);
+      if (e.type == "enter") {
+        video.play();
+      } else {
+        video.pause();
+      }
+    }
+
+    var scene_toggle_sec3 = new ScrollMagic.Scene({
+        triggerElement: "#trigger-video_sec3",
+        offset: -50
+      })
+      .on('enter leave', function (e) {
+        toggleVideo(e, "#video-sec3")
+      })
+      .addTo(controller)
+  });
+</script>
+
+<script>
+  $(function () {
+    $(".toggle-btns").on('click', '.toggle-btn', function () {
+      $(this).addClass('active').siblings().removeClass('active');
+      const target = $(this).data('target');
+      $(target).addClass('active').siblings().removeClass('active');
+    })
+  })
+</script>

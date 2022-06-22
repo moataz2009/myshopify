@@ -1,0 +1,21 @@
+{%- comment -%}
+  链接按钮组件:
+  传入参数（必需）: 
+  link_url：链接地址 
+  link_title：链接文本
+  传入参数（可选）:
+  space_tight：文本与箭头间距true:紧密，默认为宽松
+  target_blank : 添加 target="_blank" 属性
+  bgGold:背景色为金色
+{%- endcomment -%}
+
+<!-- <a class="navLink inline-block max-w-max text-sm sm:text-base font-bold text-cyan leading-tight {% if space_tight %}pr-8{% else %}pr-12{% endif %} bg-right bg-no-repeat"
+  href="{{ link_url }}" {% if target_blank %} target="_blank" {% endif %} >{{link_title}}</a> -->
+
+  <a href="{{ link_url }}" target="_blank" class="inline-block hover:opacity-100">
+    <button
+      class="text-sm sm:text-base rounded-sm px-4 py-2 xl:px-5 xl:py-2.5 font-bold {% if bgGold %}bg-gold{% else %}bg-cyan{% endif %}  hover:bg-white hover:text-black">
+      {{link_title}}
+    </button>
+  </a>
+

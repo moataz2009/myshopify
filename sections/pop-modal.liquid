@@ -1,0 +1,235 @@
+<div class="6th-modal-cover hidden h-screen w-full fixed bg-gray-850 z-10 opacity-90"></div>
+<div id="6th-modal" class="fixed hidden top-0 left-0 w-full h-screen z-20">
+  <div id="trigger-close" class="absolute z-20 right-6 top-12 sm:right-12 md:right-24 md:top-24 cursor-pointer">
+    <span
+      class="flex rounded rounded-full justify-center items-center font-semibold block bg-white text-lg w-8 h-8 text-black text-center">x</span>
+  </div>
+
+  <div class="h-screen w-full flex justify-center items-center overflow-hidden relative">
+    <div class="w-full letter-container flex flex-wrap justify-center">
+      <h3 class="text-2xl sm:text-3xl font-bold mb-10 text-gold text-center toTextTitle">To Dear PITAKA Fans</h3>
+      <div class="envelope-box w-full h-80 sm:h-96 relative animate-bounce">
+        {{'envelope-backend.png' | asset_url | img_tag:'','envelope block max-w-full absolute bottom-0 left-1/2 -translate-x-1/2 transform transition-transform'}}
+        <div
+          class="letter-box bg-white absolute shadow-md h-80 overflow-hidden -bottom-5 sm:bottom-16 left-1/2 transform transition-transform">
+          <div class="letter-bg absolute left-0 top-0 w-full">
+            {{'pitaka-6th-anny-logo.svg' | asset_url | img_tag:'','block w-full h-full opacity-10 object-cover' }}
+          </div>
+          <div class="letter w-full p-8 sm:p-12 z-10 relative">
+            {{'pitaka-6th-anny-logo.svg' | asset_url | img_tag:'','w-3/4 block mb-6' }}
+            {%- comment -%}
+            <h3 class="text-2xl sm:text-3xl font-bold text-black uppercase hidden toText mb-8 sm:mb-10">
+              To Dear<br>
+              PITAKA<br>
+              Fans
+            </h3>
+            {%- endcomment -%}
+            <div class="letter-content text-black">
+              <h4 class="title-head text-sm sm:text-base font-bold text-black mb-4">
+                Dear friends
+              </h4>
+              <p class="text-sm sm:text-base mb-8">
+                On our 6-year anniversary, I’d like to reflect a little on the values and spirit that have driven us to
+                where we are now, and will continue to guide us on into the future. And, of course, I want to pass on my
+                heartfelt thanks to all our loyal, fantastic customers over the years!
+              </p>
+              <p class="text-sm sm:text-base mb-8">
+                My name is James, and as well as being the founder of PITAKA, I’m also a husband and father to a young
+                child. In other words, I know what it’s like to face the demands of a hectic life and busy schedule.
+              </p>
+              <p class="text-sm sm:text-base mb-8">
+                Finding ways to make life easier is at the core of everything we do here at PITAKA. For every product we
+                design and manufacture, our team of designers and engineers constantly seek out the latest materials and
+                processes, to make each detail exactly as it should be. Even the tiniest flaw means a return to the
+                drawing
+                board and a complete redo.
+              </p>
+              <p class="text-sm sm:text-base mb-8">
+                I believe it’s this sense of total commitment to meeting our customers’ needs and reducing life’s
+                inconveniences that has ensured our six years in the industry. This is the kind of commitment that
+                doesn’t
+                end, and I look forward to many more years of improving our products, serving your needs, and making
+                life
+                that little bit better.
+              </p>
+              <p class="text-sm sm:text-base">
+                Thank you again, from me and the whole team at PITAKA!
+              </p>
+
+              <div class="content-end p-6 mt-12 mb-10">
+                <p class="text-sm">
+                  We would like to give back to our customers at the 6th anniversary of PITAKA. We will give US$6 cash
+                  back as long as you place an order on the website, and we will pick five lucky customers and pay what
+                  they purchase. Moreover, we’ve prepared special anniversary gifts. Visit www.ipitaka.com on November
+                  19
+                  to get all the details.
+                </p>
+              </div>
+              <div class="content-btn w-4/5 mx-auto">
+                <a href="/pages/pitaka-6th-anny-event"
+                  class="block w-full py-2 text-center font-bold text-sm text-black">Gifts for You</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{'envelope-front.png' | asset_url | img_tag:'','envelope block absolute bottom-0 left-1/2 -translate-x-1/2 trigger-open cursor-pointer max-w-full transform transition-transform'}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .animate-bounce {
+    animation: bounce 4s infinite;
+  }
+
+  @keyframes bounce {
+
+    0%,
+    100% {
+      transform: translateY(-2%);
+      animationTimingFunction: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+      transform: translateY(0);
+      animationTimingFunction: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  .letter-container {
+    max-width: 600px;
+  }
+
+  .toTextTitle,
+  .toText,
+  .envelope-box,
+  .envelope,
+  .letter-box {
+    transition: all 3s ease-in-out;
+  }
+
+  .toTextTitle.inactive {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+
+  .envelope-box {
+    max-width: 600px;
+  }
+
+  .trigger-open {
+    box-shadow: 0 25px 15px -16px rgb(0 0 0 / 80%);
+  }
+
+  .letter-bg {
+    height: 1700px;
+  }
+
+  .letter-bg img {
+    width: 820%;
+    transform: translateY(-6%);
+    max-width: unset;
+  }
+
+  .text-gold {
+    color: #FCE5BE;
+  }
+
+  .letter-box {
+    width: 600px;
+    transform: scale(0.55) translateX(-50%);
+    transform-origin: 0;
+  }
+
+  .envelope-box.open {
+    box-shadow: none;
+    height: calc(100vh - 12rem);
+    margin-bottom: 4rem;
+    max-width: 600px;
+  }
+
+  .envelope-box.open .letter-box {
+    transform: scale(1) translateX(-50%);
+    top: 0;
+    bottom: unset;
+    height: calc(100vh - 8rem);
+    overflow-y: scroll;
+  }
+
+  .envelope-box.open .toText {
+    display: block;
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background-color: #fff;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+    background-color: #c8c8c8;
+  }
+
+  .envelope-box.open .envelope {
+    transform: translateY(24rem) translateX(-50%);
+    opacity: 0;
+  }
+
+  .letter-content p {
+    line-height: 2.25;
+  }
+
+  .content-end {
+    background-color: rgba(177, 130, 71, 0.2);
+  }
+
+  .content-btn {
+    background-color: #E5D6C2;
+  }
+
+  @media screen and (max-width:767px) {
+    .letter-container {
+      padding: 0 1.5rem;
+    }
+
+    .letter-bg {
+      height: 1960px;
+    }
+
+    .letter-bg img {
+      width: 900%;
+      transform: translate(-17%, -2%);
+      object-position: left;
+    }
+
+    .letter-box {
+      width: 100%;
+      transform: scale(0.8) translateX(-50%);
+    }
+  }
+</style>
+
+<script>
+  $(function () {
+    $('.trigger-open').click(function () {
+      $('.envelope-box').addClass('open').removeClass('animate-bounce');
+      $('.toTextTitle').addClass('inactive');
+    })
+
+    $('#trigger-close').click(function () {
+      $('#6th-modal').hide();
+      $('.6th-modal-cover').hide()
+    })
+  })
+</script>

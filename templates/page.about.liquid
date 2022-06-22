@@ -1,0 +1,185 @@
+<section class="section1 relative bg-black">
+  <picture>
+    <source media="(min-width: 768px)" srcset="{{ 'about-section1.jpg' | asset_url }}">
+    <img srcset="{{ 'about-section1-m.jpg' | asset_url }}" alt="" class="img-responsive width-100">
+  </picture>
+  <div class="pt-section-content pt-padding-medium absolute pt-position-center pt-text-center">
+    <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2 font-upper pt-margin-bottom-small">
+      Alternative Tech Life
+    </h3>
+    <h3 class="pt-section-title text-2xl sm:text-3xl font-bold mb-6">
+      Why is PITAKA alternative?
+    </h3>
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      We consider ourselves 'alternative' for several reasons.
+    </p>
+  </div>
+</section>
+
+<section class="section2 pt-section pt-flex pt-flex-column pt-flex-center bg-black">
+  <div class="pt-section-content width-50 pt-text-center pt-margin-bottom-large">
+    <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+      Firstly, we focus on distinct materials for our accessories and devices.<br>
+      Whether using aramid fiber to create tactile phone cases, or carbon to create a Lifeproof wallet, we offer
+      something beyond standard plastic or silicon.
+    </p>
+  </div>
+  <picture>
+    <img srcset="{{ 'about-section2.jpg' | asset_url }}" alt="" class="img-responsive width-100">
+  </picture>
+</section>
+
+<section class="section3 pt-section bg-black">
+  <div class="pt-section-container pt-flex pt-flex-center pt-flex-between pt-margin-bottom-small">
+    <div class="pt-section-picture width-58">
+      <picture>
+        <source media="(min-width: 768px)" srcset="{{ 'about-section3-1.jpg' | asset_url }}">
+        <img srcset="{{ 'about-section3-1-m.jpg' | asset_url }}" alt="" class="img-responsive width-100">
+      </picture>
+    </div>
+    <div class="pt-section-content width-42 pt-padding-large">
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Secondly, it is our unique perspective on product design.<br>
+        From the MagEZ Series, our magnetic ecosystem to the Air Omni, the only 6-in-1 charging station on the market.
+        All of our products are designed to simplify the user experience while offering unusual and innovative features
+        that don't follow the crowd.
+      </p>
+    </div>
+  </div>
+
+  <div class="pt-section-container pt-flex pt-flex-center pt-flex-between">
+    <div class="pt-section-content width-42 pt-padding-right-large">
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        What we create defines who PITAKA is. Designed for those seeking products that stand out, we offer alternative
+        gadgets that provide a new kind of tech lifestyle. We hope to inspire while having a positive impact on society.
+      </p>
+    </div>
+    <div class="pt-section-picture width-58">
+      <picture>
+        <source media="(min-width: 768px)" srcset="{{ 'about-section3-2.jpg' | asset_url }}">
+        <img srcset="{{ 'about-section3-2-m.jpg' | asset_url }}" alt="" class="img-responsive width-100">
+      </picture>
+    </div>
+  </div>
+</section>
+
+<section class="section4 bg-black">
+  <div class="pt-section-container relative pt-margin-bottom-medium">
+    <div class="pt-section-content width-48 pt-text-center absolute">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2">
+        Our Team
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        Our multi-national team is made up of experts across multiple fields, these include research and development
+        (R&D), marketing, sales, and customer service. Each is dedicated in their own way to making PITAKA a valuable
+        part of modern life.
+      </p>
+    </div>
+    <picture>
+      <img srcset="{{ 'about-section4-1.jpg' | asset_url }}" alt="" class="img-responsive width-100">
+    </picture>
+  </div>
+
+  <div class="pt-section-container pt-flex pt-flex-center">
+    <div class="pt-section-content width-42 pt-padding-large">
+      <h3 class="pt-section-title-large  text-2xl sm:text-3xl font-bold mb-2">
+        Our Technology
+      </h3>
+      <p class="pt-section-detail text-base text-gray-400 mb-8 sm:mb-12 ">
+        We are continually researching, planning, and designing new technologies for our ever-expanding line of
+        products. Our signature aramid Fiber, magnetic ecosystem, and patented Chain-coil<sup>TM</sup> wireless charging
+        are just some ways we can deliver unique and high-quality innovations to your life.
+      </p>
+    </div>
+    <div class="pt-section-picture width-58">
+      <picture>
+        <img srcset="{{ 'about-section4-2.jpg' | asset_url }}" alt="" class="img-responsive width-100">
+      </picture>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .section4 .absolute {
+    left: 50%;
+    top: 5em;
+    transform: translateX(-50%);
+  }
+
+  .section2 picture {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1440px) {
+    .pt-section .pt-section-content.width-50 {
+      width: 58%;
+    }
+    .section1 .pt-section-content{
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .pt-section {
+      padding: 4em 5%;
+    }
+
+    .pt-section .pt-section-content.width-50 {
+      width: 68%;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .pt-section {
+      padding: 3em 7%;
+    }
+
+    .section2 {
+      padding: 0;
+    }
+
+    .section1 .pt-section-content,
+    .section2 .pt-section-content.width-50 {
+      width: 100%;
+      padding: 3em 7% 0;
+    }
+
+    .section3 {
+      padding: 0 7%;
+    }
+
+    .pt-section-container {
+      flex-direction: column;
+      margin: 0;
+    }
+
+    .pt-section-container .pt-section-content {
+      width: 100%;
+      padding: 3em 0;
+      text-align: center;
+      order: 1;
+    }
+
+    .pt-section-container .pt-section-picture {
+      order: 2;
+      width: 100%;
+    }
+
+    .section4 .pt-section-container:last-child {
+      padding-left: 7%;
+    }
+
+    .section4 .pt-section-container:first-child .pt-section-content {
+      transform: none;
+      width: 100%;
+      padding: 3em 7%;
+      position: static;
+    }
+
+    .section4 .pt-section-container:last-child .pt-section-content {
+      padding-right: 7%;
+      text-align: left;
+    }
+  }
+</style>
